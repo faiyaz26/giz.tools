@@ -1,23 +1,44 @@
-'use client';
+"use client";
 
-import { useState, useRef, useCallback } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Copy, Download, RotateCcw, Upload, FileText, GripVertical, X, Plus, Merge, AlertTriangle, CheckCircle, Eye, FileCheck } from 'lucide-react';
-import { toast } from 'sonner';
-import { cn } from '@/lib/utils';
-import { PDFDocument } from 'pdf-lib';
+import { useState, useRef, useCallback } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Copy,
+  Download,
+  RotateCcw,
+  Upload,
+  FileText,
+  GripVertical,
+  X,
+  Plus,
+  Merge,
+  AlertTriangle,
+  CheckCircle,
+  Eye,
+  FileCheck,
+} from "lucide-react";
+import { toast } from "sonner";
+import { cn } from "@/lib/utils";
+import { PDFDocument } from "pdf-lib";
 
-export const metadata = {
-  title: 'PDF Merger - giz.tools',
-  description: 'Merge multiple PDF files into a single document. Reorder pages, preview files, and download the combined PDF. Free online PDF merger with no watermarks.',
-  keywords: 'pdf merger, combine pdf, merge pdf files, pdf joiner, pdf combiner, pdf tools, document merger',
-  openGraph: {
-    title: 'PDF Merger - giz.tools',
-    description: 'Merge multiple PDF files into a single document. Reorder pages, preview files, and download the combined PDF.'
-  }
-};
+// Remove metadata export from client component
+// export const metadata = {
+//   title: 'PDF Merger - giz.tools',
+//   description: 'Merge multiple PDF files into a single document. Reorder pages, preview files, and download the combined PDF. Free online PDF merger with no watermarks.',
+//   keywords: 'pdf merger, combine pdf, merge pdf files, pdf joiner, pdf combiner, pdf tools, document merger',
+//   openGraph: {
+//     title: 'PDF Merger - giz.tools',
+//     description: 'Merge multiple PDF files into a single document. Reorder pages, preview files, and download the combined PDF.'
+//   }
+// };
 
 interface PDFFile {
   id: string;
@@ -42,23 +63,27 @@ function PDFMergerTool() {
 
   // Format file size
   const formatFileSize = (bytes: number): string => {
-    if (bytes === 0) return '0 Bytes';
+    if (bytes === 0) return "0 Bytes";
     const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const sizes = ["Bytes", "KB", "MB", "GB"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
   };
 
   // Load PDF and get page count
-  const loadPDFInfo = async (file: File): Promise<{ pages: number; pdfDoc: PDFDocument }> => {
+  const loadPDFInfo = async (
+    file: File
+  ): Promise<{ pages: number; pdfDoc: PDFDocument }> => {
     try {
       const arrayBuffer = await file.arrayBuffer();
       const pdfDoc = await PDFDocument.load(arrayBuffer);
       const pages = pdfDoc.getPageCount();
       return { pages, pdfDoc };
     } catch (error) {
-      console.error('Error loading PDF:', error);
-      throw new Error('Failed to load PDF. The file might be corrupted or password-protected.');
+      console.error("Error loading PDF:", error);
+      throw new Error(
+        "Failed to load PDF. The file might be corrupted or password-protected."
+      );
     }
   };
 
@@ -68,14 +93,14 @@ function PDFMergerTool() {
 
     const newFiles: PDFFile[] = [];
     const filesToProcess: File[] = [];
-    
+
     Array.from(files).forEach((file) => {
-      if (file.type === 'application/pdf') {
+      if (file.type === "application/pdf") {
         const pdfFile: PDFFile = {
           id: generateId(),
           file,
           name: file.name,
-          size: file.size
+          size: file.size,
         };
         newFiles.push(pdfFile);
         filesToProcess.push(file);
@@ -85,50 +110,57 @@ function PDFMergerTool() {
     });
 
     if (newFiles.length > 0) {
-      setPdfFiles(prev => [...prev, ...newFiles]);
-      
+      setPdfFiles((prev) => [...prev, ...newFiles]);
+
       // Load PDF info for each file
       for (let i = 0; i < newFiles.length; i++) {
         const pdfFile = newFiles[i];
         const file = filesToProcess[i];
-        
-        setLoadingFiles(prev => new Set(prev).add(pdfFile.id));
-        
+
+        setLoadingFiles((prev) => new Set(prev).add(pdfFile.id));
+
         try {
           const { pages, pdfDoc } = await loadPDFInfo(file);
-          
-          setPdfFiles(prev => prev.map(f => 
-            f.id === pdfFile.id 
-              ? { ...f, pages, pdfDoc }
-              : f
-          ));
-          
-          setLoadingFiles(prev => {
+
+          setPdfFiles((prev) =>
+            prev.map((f) => (f.id === pdfFile.id ? { ...f, pages, pdfDoc } : f))
+          );
+
+          setLoadingFiles((prev) => {
             const newSet = new Set(prev);
             newSet.delete(pdfFile.id);
             return newSet;
           });
         } catch (error) {
-          toast.error(`Error loading ${pdfFile.name}: ${error instanceof Error ? error.message : 'Unknown error'}`);
-          setPdfFiles(prev => prev.filter(f => f.id !== pdfFile.id));
-          setLoadingFiles(prev => {
+          toast.error(
+            `Error loading ${pdfFile.name}: ${
+              error instanceof Error ? error.message : "Unknown error"
+            }`
+          );
+          setPdfFiles((prev) => prev.filter((f) => f.id !== pdfFile.id));
+          setLoadingFiles((prev) => {
             const newSet = new Set(prev);
             newSet.delete(pdfFile.id);
             return newSet;
           });
         }
       }
-      
-      toast.success(`Added ${newFiles.length} PDF file${newFiles.length !== 1 ? 's' : ''}`);
+
+      toast.success(
+        `Added ${newFiles.length} PDF file${newFiles.length !== 1 ? "s" : ""}`
+      );
     }
   }, []);
 
   // Handle drag and drop
-  const handleDrop = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    const files = e.dataTransfer.files;
-    handleFileUpload(files);
-  }, [handleFileUpload]);
+  const handleDrop = useCallback(
+    (e: React.DragEvent) => {
+      e.preventDefault();
+      const files = e.dataTransfer.files;
+      handleFileUpload(files);
+    },
+    [handleFileUpload]
+  );
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -138,19 +170,19 @@ function PDFMergerTool() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleFileUpload(e.target.files);
     if (fileInputRef.current) {
-      fileInputRef.current.value = '';
+      fileInputRef.current.value = "";
     }
   };
 
   // Remove file
   const removeFile = (id: string) => {
-    setPdfFiles(prev => prev.filter(file => file.id !== id));
-    setLoadingFiles(prev => {
+    setPdfFiles((prev) => prev.filter((file) => file.id !== id));
+    setLoadingFiles((prev) => {
       const newSet = new Set(prev);
       newSet.delete(id);
       return newSet;
     });
-    toast.success('PDF removed');
+    toast.success("PDF removed");
   };
 
   // Clear all files
@@ -159,9 +191,9 @@ function PDFMergerTool() {
     setLoadingFiles(new Set());
     setMergedPdfUrl(null);
     if (fileInputRef.current) {
-      fileInputRef.current.value = '';
+      fileInputRef.current.value = "";
     }
-    toast.success('All PDFs cleared');
+    toast.success("All PDFs cleared");
   };
 
   // Drag and drop reordering
@@ -175,76 +207,86 @@ function PDFMergerTool() {
 
   const handleDragOverItem = (e: React.DragEvent, index: number) => {
     e.preventDefault();
-    
+
     if (draggedIndex === null || draggedIndex === index) return;
 
     const newFiles = [...pdfFiles];
     const draggedFile = newFiles[draggedIndex];
-    
+
     // Remove dragged item
     newFiles.splice(draggedIndex, 1);
-    
+
     // Insert at new position
     newFiles.splice(index, 0, draggedFile);
-    
+
     setPdfFiles(newFiles);
     setDraggedIndex(index);
   };
 
   // Move file up/down
-  const moveFile = (index: number, direction: 'up' | 'down') => {
-    const newIndex = direction === 'up' ? index - 1 : index + 1;
+  const moveFile = (index: number, direction: "up" | "down") => {
+    const newIndex = direction === "up" ? index - 1 : index + 1;
     if (newIndex < 0 || newIndex >= pdfFiles.length) return;
 
     const newFiles = [...pdfFiles];
-    [newFiles[index], newFiles[newIndex]] = [newFiles[newIndex], newFiles[index]];
+    [newFiles[index], newFiles[newIndex]] = [
+      newFiles[newIndex],
+      newFiles[index],
+    ];
     setPdfFiles(newFiles);
   };
 
   // Merge PDFs using PDF-lib
   const mergePDFs = async () => {
     if (pdfFiles.length < 2) {
-      toast.error('Please add at least 2 PDF files to merge');
+      toast.error("Please add at least 2 PDF files to merge");
       return;
     }
 
     // Check if all PDFs are loaded
-    const unloadedFiles = pdfFiles.filter(file => !file.pdfDoc);
+    const unloadedFiles = pdfFiles.filter((file) => !file.pdfDoc);
     if (unloadedFiles.length > 0) {
-      toast.error('Please wait for all PDFs to finish loading');
+      toast.error("Please wait for all PDFs to finish loading");
       return;
     }
 
     setIsProcessing(true);
-    
+
     try {
       // Create a new PDF document
       const mergedPdf = await PDFDocument.create();
-      
+
       // Copy pages from each PDF in order
       for (const pdfFile of pdfFiles) {
         if (!pdfFile.pdfDoc) continue;
-        
+
         const pageIndices = pdfFile.pdfDoc.getPageIndices();
-        const copiedPages = await mergedPdf.copyPages(pdfFile.pdfDoc, pageIndices);
-        
+        const copiedPages = await mergedPdf.copyPages(
+          pdfFile.pdfDoc,
+          pageIndices
+        );
+
         copiedPages.forEach((page) => {
           mergedPdf.addPage(page);
         });
       }
-      
+
       // Serialize the PDF
       const pdfBytes = await mergedPdf.save();
-      
+
       // Create blob and URL
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const blob = new Blob([pdfBytes], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       setMergedPdfUrl(url);
-      
-      toast.success('PDFs merged successfully!');
+
+      toast.success("PDFs merged successfully!");
     } catch (error) {
-      console.error('Merge error:', error);
-      toast.error(`Failed to merge PDFs: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      console.error("Merge error:", error);
+      toast.error(
+        `Failed to merge PDFs: ${
+          error instanceof Error ? error.message : "Unknown error"
+        }`
+      );
     } finally {
       setIsProcessing(false);
     }
@@ -254,32 +296,39 @@ function PDFMergerTool() {
   const downloadMergedPDF = () => {
     if (!mergedPdfUrl) return;
 
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = mergedPdfUrl;
-    link.download = `merged-document-${new Date().toISOString().split('T')[0]}.pdf`;
+    link.download = `merged-document-${
+      new Date().toISOString().split("T")[0]
+    }.pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    
-    toast.success('Merged PDF downloaded!');
+
+    toast.success("Merged PDF downloaded!");
   };
 
   // Preview PDF (simplified)
   const previewPDF = (file: PDFFile) => {
     const url = URL.createObjectURL(file.file);
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   const totalSize = pdfFiles.reduce((sum, file) => sum + file.size, 0);
   const totalPages = pdfFiles.reduce((sum, file) => sum + (file.pages || 0), 0);
-  const allFilesLoaded = pdfFiles.length > 0 && pdfFiles.every(file => file.pdfDoc);
+  const allFilesLoaded =
+    pdfFiles.length > 0 && pdfFiles.every((file) => file.pdfDoc);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">PDF Merger</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          PDF Merger
+        </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Upload multiple PDF files, reorder them as needed, and merge them into a single document. All processing happens in your browser for complete privacy.
+          Upload multiple PDF files, reorder them as needed, and merge them into
+          a single document. All processing happens in your browser for complete
+          privacy.
         </p>
       </div>
 
@@ -293,7 +342,9 @@ function PDFMergerTool() {
                   <FileText className="h-5 w-5" />
                   <span>PDF Files</span>
                   {pdfFiles.length > 0 && (
-                    <Badge variant="outline">{pdfFiles.length} file{pdfFiles.length !== 1 ? 's' : ''}</Badge>
+                    <Badge variant="outline">
+                      {pdfFiles.length} file{pdfFiles.length !== 1 ? "s" : ""}
+                    </Badge>
                   )}
                 </CardTitle>
                 <div className="flex space-x-2">
@@ -314,7 +365,8 @@ function PDFMergerTool() {
                 </div>
               </div>
               <CardDescription className="dark:text-gray-300">
-                Upload PDF files and reorder them by dragging. The files will be merged in the order shown.
+                Upload PDF files and reorder them by dragging. The files will be
+                merged in the order shown.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -354,7 +406,10 @@ function PDFMergerTool() {
               {pdfFiles.length > 0 && (
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-4">
-                    <span>Drag files to reorder • {pdfFiles.length} files • {formatFileSize(totalSize)}</span>
+                    <span>
+                      Drag files to reorder • {pdfFiles.length} files •{" "}
+                      {formatFileSize(totalSize)}
+                    </span>
                     <Button
                       variant="outline"
                       size="sm"
@@ -383,8 +438,13 @@ function PDFMergerTool() {
                       >
                         {/* Drag Handle */}
                         <div className="flex items-center space-x-2 text-gray-400">
-                          <GripVertical className={cn("h-5 w-5", isLoading && "opacity-50")} />
-                          <Badge variant="outline" className="w-8 h-6 flex items-center justify-center text-xs">
+                          <GripVertical
+                            className={cn("h-5 w-5", isLoading && "opacity-50")}
+                          />
+                          <Badge
+                            variant="outline"
+                            className="w-8 h-6 flex items-center justify-center text-xs"
+                          >
                             {index + 1}
                           </Badge>
                         </div>
@@ -405,8 +465,11 @@ function PDFMergerTool() {
                           </div>
                           <div className="text-sm text-gray-600 dark:text-gray-400">
                             {formatFileSize(file.size)}
-                            {file.pages && ` • ${file.pages} page${file.pages !== 1 ? 's' : ''}`}
-                            {isLoading && ' • Loading...'}
+                            {file.pages &&
+                              ` • ${file.pages} page${
+                                file.pages !== 1 ? "s" : ""
+                              }`}
+                            {isLoading && " • Loading..."}
                           </div>
                         </div>
 
@@ -421,12 +484,12 @@ function PDFMergerTool() {
                           >
                             <Eye className="h-4 w-4" />
                           </Button>
-                          
+
                           <div className="flex flex-col space-y-1">
                             <Button
                               variant="ghost"
                               size="sm"
-                              onClick={() => moveFile(index, 'up')}
+                              onClick={() => moveFile(index, "up")}
                               disabled={index === 0 || isLoading}
                               className="h-6 w-6 p-0"
                               title="Move up"
@@ -436,8 +499,10 @@ function PDFMergerTool() {
                             <Button
                               variant="ghost"
                               size="sm"
-                              onClick={() => moveFile(index, 'down')}
-                              disabled={index === pdfFiles.length - 1 || isLoading}
+                              onClick={() => moveFile(index, "down")}
+                              disabled={
+                                index === pdfFiles.length - 1 || isLoading
+                              }
                               className="h-6 w-6 p-0"
                               title="Move down"
                             >
@@ -494,7 +559,9 @@ function PDFMergerTool() {
             <CardContent className="space-y-4">
               <Button
                 onClick={mergePDFs}
-                disabled={pdfFiles.length < 2 || isProcessing || !allFilesLoaded}
+                disabled={
+                  pdfFiles.length < 2 || isProcessing || !allFilesLoaded
+                }
                 className="w-full"
                 size="lg"
               >
@@ -506,7 +573,8 @@ function PDFMergerTool() {
                 ) : (
                   <>
                     <Merge className="h-4 w-4 mr-2" />
-                    Merge {pdfFiles.length} PDF{pdfFiles.length !== 1 ? 's' : ''}
+                    Merge {pdfFiles.length} PDF
+                    {pdfFiles.length !== 1 ? "s" : ""}
                   </>
                 )}
               </Button>
@@ -543,7 +611,7 @@ function PDFMergerTool() {
                       </span>
                     </div>
                   </div>
-                  
+
                   <Button
                     onClick={downloadMergedPDF}
                     variant="outline"
@@ -565,21 +633,41 @@ function PDFMergerTool() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">Total files:</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">
+                    Total files:
+                  </span>
                   <Badge variant="outline">{pdfFiles.length}</Badge>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">Total pages:</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">
+                    Total pages:
+                  </span>
                   <Badge variant="outline">{totalPages}</Badge>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">Total size:</span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">
+                    Total size:
+                  </span>
                   <Badge variant="outline">{formatFileSize(totalSize)}</Badge>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">Status:</span>
-                  <Badge variant={mergedPdfUrl ? "default" : allFilesLoaded ? "outline" : "secondary"}>
-                    {mergedPdfUrl ? "Merged" : allFilesLoaded ? "Ready to merge" : "Loading..."}
+                  <span className="text-sm text-gray-600 dark:text-gray-400">
+                    Status:
+                  </span>
+                  <Badge
+                    variant={
+                      mergedPdfUrl
+                        ? "default"
+                        : allFilesLoaded
+                        ? "outline"
+                        : "secondary"
+                    }
+                  >
+                    {mergedPdfUrl
+                      ? "Merged"
+                      : allFilesLoaded
+                      ? "Ready to merge"
+                      : "Loading..."}
                   </Badge>
                 </div>
               </CardContent>
@@ -626,12 +714,15 @@ function PDFMergerTool() {
         </CardHeader>
         <CardContent className="prose prose-sm max-w-none">
           <p className="text-gray-600 dark:text-gray-300">
-            This PDF merger tool uses PDF-lib to combine multiple PDF documents into a single file. 
-            All processing happens locally in your browser for maximum privacy and security.
+            This PDF merger tool uses PDF-lib to combine multiple PDF documents
+            into a single file. All processing happens locally in your browser
+            for maximum privacy and security.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-6">
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Features:</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Features:
+              </h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Drag and drop file upload</li>
                 <li>• Reorder files with drag and drop</li>
@@ -642,7 +733,9 @@ function PDFMergerTool() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Supported Files:</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Supported Files:
+              </h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• PDF documents (.pdf)</li>
                 <li>• Any PDF version</li>
@@ -653,7 +746,9 @@ function PDFMergerTool() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Use Cases:</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Use Cases:
+              </h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Combine report chapters</li>
                 <li>• Merge contract documents</li>
@@ -665,10 +760,13 @@ function PDFMergerTool() {
             </div>
           </div>
           <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-            <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">Privacy & Security:</h4>
+            <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">
+              Privacy & Security:
+            </h4>
             <p className="text-blue-800 dark:text-blue-300 text-sm">
-              Your PDF files are processed entirely in your browser using PDF-lib. No files are uploaded to any server, 
-              ensuring complete privacy and security of your documents.
+              Your PDF files are processed entirely in your browser using
+              PDF-lib. No files are uploaded to any server, ensuring complete
+              privacy and security of your documents.
             </p>
           </div>
         </CardContent>
