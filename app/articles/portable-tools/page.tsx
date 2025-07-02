@@ -6,18 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
-export const metadata = {
-  title: 'The Power of Portable Developer Tools: Browser vs Desktop - DevTools Hub',
-  description: 'Discover why browser-based tools like DevTools Hub offer advantages over installed desktop applications. Learn about portability, accessibility, and performance.',
-  keywords: 'browser tools, desktop tools, web applications, developer tools, portable tools, PWA, offline tools',
-  openGraph: {
-    title: 'The Power of Portable Developer Tools: Browser vs Desktop - DevTools Hub',
-    description: 'Discover why browser-based tools like DevTools Hub offer advantages over installed desktop applications.',
-    type: 'article',
-    publishedTime: '2025-05-20T00:00:00Z',
-    authors: ['DevTools Hub Team']
-  }
-};
+// Remove metadata export from client component
+// export const metadata = {...}
 
 export default function PortableToolsArticle() {
   return (

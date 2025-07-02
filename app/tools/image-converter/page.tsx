@@ -13,15 +13,8 @@ import { Copy, Download, RotateCcw, Upload, Image as ImageIcon, Crop, Maximize a
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 
-export const metadata = {
-  title: 'Image Converter - giz.tools',
-  description: 'Convert images between formats, resize, compress, and optimize with quality control. Free online image converter with no watermarks.',
-  keywords: 'image converter, image resize, image compression, jpg to png, png to jpg, webp converter, image optimizer, photo editor',
-  openGraph: {
-    title: 'Image Converter - giz.tools',
-    description: 'Convert images between formats, resize, compress, and optimize with quality control. Free online image converter with no watermarks.'
-  }
-};
+// Remove metadata export from client component
+// export const metadata = {...}
 
 interface ImageFile {
   id: string;

@@ -6,18 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
-export const metadata = {
-  title: 'Why Online Tools Can Be a Privacy Risk (And How We Solve It) - DevTools Hub',
-  description: 'Learn about the privacy concerns with typical online tools and how DevTools Hub protects your data with client-side processing.',
-  keywords: 'privacy, security, client-side processing, data protection, online tools, web security, developer tools',
-  openGraph: {
-    title: 'Why Online Tools Can Be a Privacy Risk (And How We Solve It) - DevTools Hub',
-    description: 'Learn about the privacy concerns with typical online tools and how DevTools Hub protects your data.',
-    type: 'article',
-    publishedTime: '2025-05-15T00:00:00Z',
-    authors: ['DevTools Hub Team']
-  }
-};
+// Remove metadata export from client component
+// export const metadata = {...}
 
 export default function PrivacyConcernsArticle() {
   return (

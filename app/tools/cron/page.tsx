@@ -12,6 +12,9 @@ import { toast } from 'sonner';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
+// Remove metadata export from client component
+// export const metadata = {...}
+
 interface CronField {
   name: string;
   value: string;

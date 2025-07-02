@@ -9,15 +9,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Copy, Share2, RotateCcw, Download, Upload } from 'lucide-react';
 import { toast } from 'sonner';
 
-export const metadata = {
-  title: 'Base64 Encoder/Decoder - DevTools Hub',
-  description: 'Encode and decode Base64 strings with real-time conversion. Share results with others using generated URLs.',
-  keywords: 'base64, encode, decode, converter, online tool, text encoding, binary to text, url safe',
-  openGraph: {
-    title: 'Base64 Encoder/Decoder - DevTools Hub',
-    description: 'Encode and decode Base64 strings with real-time conversion. Share results with others using generated URLs.'
-  }
-};
+// Remove metadata export from client component
+// export const metadata = {...}
 
 function Base64Tool() {
   const [input, setInput] = useState('');
