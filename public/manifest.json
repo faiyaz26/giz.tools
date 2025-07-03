@@ -1,12 +1,15 @@
 {
-  "name": "giz.tools",
+  "name": "giz.tools - Free Online Tools",
   "short_name": "giz.tools",
-  "description": "A collection of essential online tools including image converter, PDF tools, Base64, and more",
+  "description": "Your one-stop shop for essential online tools. Convert images, merge PDFs, encode Base64, decode JWT, format JSON, and more. Privacy-first, client-side processing.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3B82F6",
   "orientation": "portrait-primary",
+  "lang": "en-US",
+  "dir": "ltr",
   "icons": [
     {
       "src": "/icon-192.png",
@@ -21,19 +24,45 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["utilities", "tools", "productivity"],
+  "categories": ["utilities", "tools", "productivity", "developer"],
+  "keywords": ["tools", "utilities", "converter", "encoder", "pdf", "image", "privacy"],
   "screenshots": [
     {
       "src": "/screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "wide"
+      "form_factor": "wide",
+      "label": "giz.tools homepage showing available tools"
     },
     {
       "src": "/screenshot-narrow.png", 
       "sizes": "720x1280",
       "type": "image/png",
-      "form_factor": "narrow"
+      "form_factor": "narrow",
+      "label": "giz.tools mobile view"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Image Converter",
+      "short_name": "Convert",
+      "description": "Convert images between formats",
+      "url": "/tools/image-converter",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "PDF Merger",
+      "short_name": "Merge PDF",
+      "description": "Merge multiple PDFs into one",
+      "url": "/tools/pdf-merger",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Base64 Tool",
+      "short_name": "Base64",
+      "description": "Encode and decode Base64",
+      "url": "/tools/base64",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

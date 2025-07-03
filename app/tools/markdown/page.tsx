@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import {
   Card,
@@ -32,6 +32,7 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { Checkbox } from "@/components/ui/checkbox";
+import { generateToolStructuredData } from "@/lib/metadata";
 
 interface TOCItem {
   id: string;
@@ -390,156 +391,159 @@ That's the basics! Happy writing! ✨`,
   };
 
   // Simple Markdown to HTML converter
-  const convertMarkdownToHTML = (md: string): string => {
-    let html = md;
+  const convertMarkdownToHTML = useCallback(
+    (md: string): string => {
+      let html = md;
 
-    // Headers
-    html = html.replace(/^### (.*$)/gim, "<h3>$1</h3>");
-    html = html.replace(/^## (.*$)/gim, "<h2>$1</h2>");
-    html = html.replace(/^# (.*$)/gim, "<h1>$1</h1>");
-    html = html.replace(/^#### (.*$)/gim, "<h4>$1</h4>");
-    html = html.replace(/^##### (.*$)/gim, "<h5>$1</h5>");
-    html = html.replace(/^###### (.*$)/gim, "<h6>$1</h6>");
+      // Headers
+      html = html.replace(/^### (.*$)/gim, "<h3>$1</h3>");
+      html = html.replace(/^## (.*$)/gim, "<h2>$1</h2>");
+      html = html.replace(/^# (.*$)/gim, "<h1>$1</h1>");
+      html = html.replace(/^#### (.*$)/gim, "<h4>$1</h4>");
+      html = html.replace(/^##### (.*$)/gim, "<h5>$1</h5>");
+      html = html.replace(/^###### (.*$)/gim, "<h6>$1</h6>");
 
-    // Bold
-    html = html.replace(/\*\*(.*)\*\*/gim, "<strong>$1</strong>");
-    html = html.replace(/__(.*?)__/gim, "<strong>$1</strong>");
+      // Bold
+      html = html.replace(/\*\*(.*)\*\*/gim, "<strong>$1</strong>");
+      html = html.replace(/__(.*?)__/gim, "<strong>$1</strong>");
 
-    // Italic
-    html = html.replace(/\*(.*?)\*/gim, "<em>$1</em>");
-    html = html.replace(/_(.*?)_/gim, "<em>$1</em>");
+      // Italic
+      html = html.replace(/\*(.*?)\*/gim, "<em>$1</em>");
+      html = html.replace(/_(.*?)_/gim, "<em>$1</em>");
 
-    // Strikethrough
-    html = html.replace(/~~(.*?)~~/gim, "<del>$1</del>");
+      // Strikethrough
+      html = html.replace(/~~(.*?)~~/gim, "<del>$1</del>");
 
-    // Code blocks
-    if (enableSyntaxHighlight) {
-      html = html.replace(
-        /```(\w+)?\n([\s\S]*?)```/gim,
-        (match, lang, code) => {
-          return `<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto"><code class="language-${
-            lang || "text"
-          }">${code.trim()}</code></pre>`;
-        }
-      );
-    } else {
-      html = html.replace(/```[\s\S]*?```/gim, (match) => {
-        const code = match.replace(/```\w*\n?/g, "").replace(/```$/g, "");
-        return `<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto"><code>${code}</code></pre>`;
-      });
-    }
-
-    // Inline code
-    html = html.replace(
-      /`([^`]+)`/gim,
-      '<code class="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm">$1</code>'
-    );
-
-    // Links
-    html = html.replace(
-      /\[([^\]]+)\]\(([^)]+)\)/gim,
-      '<a href="$2" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>'
-    );
-
-    // Images
-    html = html.replace(
-      /!\[([^\]]*)\]\(([^)]+)\)/gim,
-      '<img src="$2" alt="$1" class="max-w-full h-auto rounded-lg" />'
-    );
-
-    // Task lists
-    if (enableTaskLists) {
-      html = html.replace(
-        /- \[x\] (.*)/gim,
-        '<div class="flex items-center space-x-2"><input type="checkbox" checked disabled class="rounded" /><span class="line-through text-gray-500">$1</span></div>'
-      );
-      html = html.replace(
-        /- \[ \] (.*)/gim,
-        '<div class="flex items-center space-x-2"><input type="checkbox" disabled class="rounded" /><span>$1</span></div>'
-      );
-    }
-
-    // Unordered lists
-    html = html.replace(/^\s*\* (.+)/gim, "<li>$1</li>");
-    html = html.replace(/^\s*- (.+)/gim, "<li>$1</li>");
-    html = html.replace(
-      /(<li>.*<\/li>)/s,
-      '<ul class="list-disc list-inside space-y-1 ml-4">$1</ul>'
-    );
-
-    // Ordered lists
-    html = html.replace(/^\s*\d+\. (.+)/gim, "<li>$1</li>");
-
-    // Tables
-    if (enableTables) {
-      const tableRegex = /(\|.*\|.*\n)+/gim;
-      html = html.replace(tableRegex, (match) => {
-        const rows = match.trim().split("\n");
-        const headerRow = rows[0];
-        const separatorRow = rows[1];
-        const dataRows = rows.slice(2);
-
-        if (!separatorRow || !separatorRow.includes("---")) {
-          return match;
-        }
-
-        const headers = headerRow
-          .split("|")
-          .map((h) => h.trim())
-          .filter((h) => h);
-        const data = dataRows.map((row) =>
-          row
-            .split("|")
-            .map((cell) => cell.trim())
-            .filter((cell) => cell)
+      // Code blocks
+      if (enableSyntaxHighlight) {
+        html = html.replace(
+          /```(\w+)?\n([\s\S]*?)```/gim,
+          (match, lang, code) => {
+            return `<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto"><code class="language-${
+              lang || "text"
+            }">${code.trim()}</code></pre>`;
+          }
         );
-
-        let tableHTML =
-          '<table class="min-w-full border-collapse border border-gray-300 dark:border-gray-600 my-4">';
-        tableHTML += '<thead class="bg-gray-50 dark:bg-gray-800">';
-        tableHTML += "<tr>";
-        headers.forEach((header) => {
-          tableHTML += `<th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left font-semibold">${header}</th>`;
+      } else {
+        html = html.replace(/```[\s\S]*?```/gim, (match) => {
+          const code = match.replace(/```\w*\n?/g, "").replace(/```$/g, "");
+          return `<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto"><code>${code}</code></pre>`;
         });
-        tableHTML += "</tr></thead>";
-        tableHTML += "<tbody>";
-        data.forEach((row) => {
+      }
+
+      // Inline code
+      html = html.replace(
+        /`([^`]+)`/gim,
+        '<code class="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm">$1</code>'
+      );
+
+      // Links
+      html = html.replace(
+        /\[([^\]]+)\]\(([^)]+)\)/gim,
+        '<a href="$2" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>'
+      );
+
+      // Images
+      html = html.replace(
+        /!\[([^\]]*)\]\(([^)]+)\)/gim,
+        '<img src="$2" alt="$1" class="max-w-full h-auto rounded-lg" />'
+      );
+
+      // Task lists
+      if (enableTaskLists) {
+        html = html.replace(
+          /- \[x\] (.*)/gim,
+          '<div class="flex items-center space-x-2"><input type="checkbox" checked disabled class="rounded" /><span class="line-through text-gray-500">$1</span></div>'
+        );
+        html = html.replace(
+          /- \[ \] (.*)/gim,
+          '<div class="flex items-center space-x-2"><input type="checkbox" disabled class="rounded" /><span>$1</span></div>'
+        );
+      }
+
+      // Unordered lists
+      html = html.replace(/^\s*\* (.+)/gim, "<li>$1</li>");
+      html = html.replace(/^\s*- (.+)/gim, "<li>$1</li>");
+      html = html.replace(
+        /(<li>.*<\/li>)/gim,
+        '<ul class="list-disc list-inside space-y-1 ml-4">$1</ul>'
+      );
+
+      // Ordered lists
+      html = html.replace(/^\s*\d+\. (.+)/gim, "<li>$1</li>");
+
+      // Tables
+      if (enableTables) {
+        const tableRegex = /(\|.*\|.*\n)+/gim;
+        html = html.replace(tableRegex, (match) => {
+          const rows = match.trim().split("\n");
+          const headerRow = rows[0];
+          const separatorRow = rows[1];
+          const dataRows = rows.slice(2);
+
+          if (!separatorRow || !separatorRow.includes("---")) {
+            return match;
+          }
+
+          const headers = headerRow
+            .split("|")
+            .map((h) => h.trim())
+            .filter((h) => h);
+          const data = dataRows.map((row) =>
+            row
+              .split("|")
+              .map((cell) => cell.trim())
+              .filter((cell) => cell)
+          );
+
+          let tableHTML =
+            '<table class="min-w-full border-collapse border border-gray-300 dark:border-gray-600 my-4">';
+          tableHTML += '<thead class="bg-gray-50 dark:bg-gray-800">';
           tableHTML += "<tr>";
-          row.forEach((cell) => {
-            tableHTML += `<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${cell}</td>`;
+          headers.forEach((header) => {
+            tableHTML += `<th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left font-semibold">${header}</th>`;
           });
-          tableHTML += "</tr>";
+          tableHTML += "</tr></thead>";
+          tableHTML += "<tbody>";
+          data.forEach((row) => {
+            tableHTML += "<tr>";
+            row.forEach((cell) => {
+              tableHTML += `<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${cell}</td>`;
+            });
+            tableHTML += "</tr>";
+          });
+          tableHTML += "</tbody></table>";
+
+          return tableHTML;
         });
-        tableHTML += "</tbody></table>";
+      }
 
-        return tableHTML;
-      });
-    }
+      // Blockquotes
+      html = html.replace(
+        /^> (.+)/gim,
+        '<blockquote class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-600 dark:text-gray-400 my-4">$1</blockquote>'
+      );
 
-    // Blockquotes
-    html = html.replace(
-      /^> (.+)/gim,
-      '<blockquote class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-600 dark:text-gray-400 my-4">$1</blockquote>'
-    );
+      // Horizontal rules
+      html = html.replace(
+        /^---$/gim,
+        '<hr class="border-gray-300 dark:border-gray-600 my-6" />'
+      );
 
-    // Horizontal rules
-    html = html.replace(
-      /^---$/gim,
-      '<hr class="border-gray-300 dark:border-gray-600 my-6" />'
-    );
+      // Paragraphs
+      html = html.replace(/\n\n/gim, '</p><p class="mb-4">');
+      html = '<p class="mb-4">' + html + "</p>";
 
-    // Paragraphs
-    html = html.replace(/\n\n/gim, '</p><p class="mb-4">');
-    html = '<p class="mb-4">' + html + "</p>";
+      // Line breaks
+      html = html.replace(/\n/gim, "<br />");
 
-    // Line breaks
-    html = html.replace(/\n/gim, "<br />");
+      // Clean up empty paragraphs
+      html = html.replace(/<p class="mb-4"><\/p>/gim, "");
 
-    // Clean up empty paragraphs
-    html = html.replace(/<p class="mb-4"><\/p>/gim, "");
-
-    return html;
-  };
+      return html;
+    },
+    [enableSyntaxHighlight, enableTables, enableTaskLists]
+  );
 
   // Extract table of contents
   const extractTOC = (md: string): TOCItem[] => {
@@ -617,7 +621,13 @@ That's the basics! Happy writing! ✨`,
     setHtml(convertedHTML);
     setToc(extractedTOC);
     setStats(calculatedStats);
-  }, [markdown, enableSyntaxHighlight, enableTables, enableTaskLists]);
+  }, [
+    markdown,
+    enableSyntaxHighlight,
+    enableTables,
+    enableTaskLists,
+    convertMarkdownToHTML,
+  ]);
 
   const copyToClipboard = async (text: string, type: string) => {
     try {
@@ -1377,15 +1387,25 @@ console.log('Code blocks too!');
 }
 
 export default function MarkdownPage() {
+  const structuredData = generateToolStructuredData("/tools/markdown");
+
   return (
-    <Suspense
-      fallback={
-        <div className="flex justify-center py-12">
-          <div className="animate-spin h-8 w-8 border-2 border-blue-600 border-t-transparent rounded-full"></div>
-        </div>
-      }
-    >
-      <MarkdownTool />
-    </Suspense>
+    <>
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      )}
+      <Suspense
+        fallback={
+          <div className="flex justify-center py-12">
+            <div className="animate-spin h-8 w-8 border-2 border-blue-600 border-t-transparent rounded-full"></div>
+          </div>
+        }
+      >
+        <MarkdownTool />
+      </Suspense>
+    </>
   );
 }
