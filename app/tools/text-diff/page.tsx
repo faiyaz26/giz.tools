@@ -1,20 +1,45 @@
-'use client';
+"use client";
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Badge } from '@/components/ui/badge';
-import { Copy, Share2, RotateCcw, Download, Upload, Shuffle, GitCompare, Eye, EyeOff, ArrowLeftRight, FileText, BarChart3 } from 'lucide-react';
-import { toast } from 'sonner';
-import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import {
+  Copy,
+  Share2,
+  RotateCcw,
+  Download,
+  Upload,
+  Shuffle,
+  GitCompare,
+  Eye,
+  EyeOff,
+  ArrowLeftRight,
+  FileText,
+  BarChart3,
+} from "lucide-react";
+import { toast } from "sonner";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 
 interface DiffLine {
-  type: 'added' | 'removed' | 'unchanged' | 'modified';
+  type: "added" | "removed" | "unchanged" | "modified";
   content: string;
   lineNumber?: number;
   originalLineNumber?: number;
@@ -33,13 +58,21 @@ interface DiffStats {
 }
 
 interface SplitViewLine {
-  originalLine?: { content: string; lineNumber: number; type: DiffLine['type'] };
-  modifiedLine?: { content: string; lineNumber: number; type: DiffLine['type'] };
+  originalLine?: {
+    content: string;
+    lineNumber: number;
+    type: DiffLine["type"];
+  };
+  modifiedLine?: {
+    content: string;
+    lineNumber: number;
+    type: DiffLine["type"];
+  };
 }
 
 function TextDiffTool() {
-  const [originalText, setOriginalText] = useState('');
-  const [modifiedText, setModifiedText] = useState('');
+  const [originalText, setOriginalText] = useState("");
+  const [modifiedText, setModifiedText] = useState("");
   const [diffResult, setDiffResult] = useState<DiffLine[]>([]);
   const [splitViewData, setSplitViewData] = useState<SplitViewLine[]>([]);
   const [diffStats, setDiffStats] = useState<DiffStats>({
@@ -50,14 +83,16 @@ function TextDiffTool() {
     unchangedLines: 0,
     addedChars: 0,
     removedChars: 0,
-    similarity: 100
+    similarity: 100,
   });
-  const [diffMode, setDiffMode] = useState<'unified' | 'split' | 'inline'>('unified');
+  const [diffMode, setDiffMode] = useState<"unified" | "split" | "inline">(
+    "unified"
+  );
   const [ignoreWhitespace, setIgnoreWhitespace] = useState(false);
   const [ignoreCase, setIgnoreCase] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
   const [contextLines, setContextLines] = useState(3);
-  
+
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -65,30 +100,30 @@ function TextDiffTool() {
   const encodeForUrl = (text: string): string => {
     try {
       return btoa(unescape(encodeURIComponent(text)))
-        .replace(/\+/g, '-')
-        .replace(/\//g, '_')
-        .replace(/=/g, '');
+        .replace(/\+/g, "-")
+        .replace(/\//g, "_")
+        .replace(/=/g, "");
     } catch {
-      return '';
+      return "";
     }
   };
 
   const decodeFromUrl = (encoded: string): string => {
     try {
-      const padded = encoded + '='.repeat((4 - encoded.length % 4) % 4);
-      const base64 = padded.replace(/-/g, '+').replace(/_/g, '/');
+      const padded = encoded + "=".repeat((4 - (encoded.length % 4)) % 4);
+      const base64 = padded.replace(/-/g, "+").replace(/_/g, "/");
       return decodeURIComponent(escape(atob(base64)));
     } catch {
-      return '';
+      return "";
     }
   };
 
   // Load from URL parameters on mount
   useEffect(() => {
-    const urlOriginal = searchParams.get('original');
-    const urlModified = searchParams.get('modified');
-    const urlMode = searchParams.get('mode');
-    
+    const urlOriginal = searchParams.get("original");
+    const urlModified = searchParams.get("modified");
+    const urlMode = searchParams.get("mode");
+
     if (urlOriginal) {
       const decodedOriginal = decodeFromUrl(urlOriginal);
       if (decodedOriginal) {
@@ -101,7 +136,7 @@ function TextDiffTool() {
         setModifiedText(decodedModified);
       }
     }
-    if (urlMode === 'unified' || urlMode === 'split' || urlMode === 'inline') {
+    if (urlMode === "unified" || urlMode === "split" || urlMode === "inline") {
       setDiffMode(urlMode);
     }
   }, [searchParams]);
@@ -110,7 +145,7 @@ function TextDiffTool() {
   const generateExampleTexts = () => {
     const examples = [
       {
-        title: 'Code Changes',
+        title: "Code Changes",
         original: `function calculateTotal(items) {
   let total = 0;
   for (let i = 0; i < items.length; i++) {
@@ -150,10 +185,10 @@ const cart = [
 const result = calculateTotal(cart);
 console.log(\`Subtotal: $\${result.subtotal.toFixed(2)}\`);
 console.log(\`Tax: $\${result.tax.toFixed(2)}\`);
-console.log(\`Total: $\${result.total.toFixed(2)}\`);`
+console.log(\`Total: $\${result.total.toFixed(2)}\`);`,
       },
       {
-        title: 'Configuration Changes',
+        title: "Configuration Changes",
         original: `{
   "name": "my-app",
   "version": "1.0.0",
@@ -193,10 +228,10 @@ console.log(\`Total: $\${result.total.toFixed(2)}\`);`
     "nodemon": "^2.0.20",
     "webpack": "^5.75.0"
   }
-}`
+}`,
       },
       {
-        title: 'Documentation Updates',
+        title: "Documentation Updates",
         original: `# Project Setup
 
 ## Installation
@@ -255,10 +290,10 @@ The application provides comprehensive functionality for user management, includ
 ### Authentication
 - POST /api/auth/login - User login
 - POST /api/auth/logout - User logout
-- POST /api/auth/refresh - Refresh token`
+- POST /api/auth/refresh - Refresh token`,
       },
       {
-        title: 'Text Content Changes',
+        title: "Text Content Changes",
         original: `The quick brown fox jumps over the lazy dog.
 This is a sample paragraph for testing.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -267,8 +302,8 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
 This is a sample paragraph for testing purposes.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
 Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
-      }
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      },
     ];
 
     const randomExample = examples[Math.floor(Math.random() * examples.length)];
@@ -279,18 +314,18 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
 
   // Simple diff algorithm (Myers algorithm simplified)
   const computeDiff = (original: string, modified: string): DiffLine[] => {
-    let origLines = original.split('\n');
-    let modLines = modified.split('\n');
+    let origLines = original.split("\n");
+    let modLines = modified.split("\n");
 
     // Apply preprocessing options
     if (ignoreWhitespace) {
-      origLines = origLines.map(line => line.trim());
-      modLines = modLines.map(line => line.trim());
+      origLines = origLines.map((line) => line.trim());
+      modLines = modLines.map((line) => line.trim());
     }
 
     if (ignoreCase) {
-      origLines = origLines.map(line => line.toLowerCase());
-      modLines = modLines.map(line => line.toLowerCase());
+      origLines = origLines.map((line) => line.toLowerCase());
+      modLines = modLines.map((line) => line.toLowerCase());
     }
 
     const result: DiffLine[] = [];
@@ -301,26 +336,26 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
       if (origIndex >= origLines.length) {
         // Remaining lines are additions
         result.push({
-          type: 'added',
+          type: "added",
           content: modLines[modIndex],
-          modifiedLineNumber: modIndex + 1
+          modifiedLineNumber: modIndex + 1,
         });
         modIndex++;
       } else if (modIndex >= modLines.length) {
         // Remaining lines are deletions
         result.push({
-          type: 'removed',
+          type: "removed",
           content: origLines[origIndex],
-          originalLineNumber: origIndex + 1
+          originalLineNumber: origIndex + 1,
         });
         origIndex++;
       } else if (origLines[origIndex] === modLines[modIndex]) {
         // Lines are the same
         result.push({
-          type: 'unchanged',
+          type: "unchanged",
           content: origLines[origIndex],
           originalLineNumber: origIndex + 1,
-          modifiedLineNumber: modIndex + 1
+          modifiedLineNumber: modIndex + 1,
         });
         origIndex++;
         modIndex++;
@@ -335,9 +370,9 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
             // Found match, mark intermediate lines as additions
             for (let j = 0; j < i; j++) {
               result.push({
-                type: 'added',
+                type: "added",
                 content: modLines[modIndex + j],
-                modifiedLineNumber: modIndex + j + 1
+                modifiedLineNumber: modIndex + j + 1,
               });
             }
             modIndex += i;
@@ -348,14 +383,18 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
 
         if (!foundMatch) {
           // Check if modified line appears later in original
-          for (let i = 1; i <= lookAhead && origIndex + i < origLines.length; i++) {
+          for (
+            let i = 1;
+            i <= lookAhead && origIndex + i < origLines.length;
+            i++
+          ) {
             if (modLines[modIndex] === origLines[origIndex + i]) {
               // Found match, mark intermediate lines as deletions
               for (let j = 0; j < i; j++) {
                 result.push({
-                  type: 'removed',
+                  type: "removed",
                   content: origLines[origIndex + j],
-                  originalLineNumber: origIndex + j + 1
+                  originalLineNumber: origIndex + j + 1,
                 });
               }
               origIndex += i;
@@ -368,14 +407,14 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
         if (!foundMatch) {
           // No match found, treat as modification
           result.push({
-            type: 'removed',
+            type: "removed",
             content: origLines[origIndex],
-            originalLineNumber: origIndex + 1
+            originalLineNumber: origIndex + 1,
           });
           result.push({
-            type: 'added',
+            type: "added",
             content: modLines[modIndex],
-            modifiedLineNumber: modIndex + 1
+            modifiedLineNumber: modIndex + 1,
           });
           origIndex++;
           modIndex++;
@@ -394,34 +433,34 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
     while (i < diff.length) {
       const currentLine = diff[i];
 
-      if (currentLine.type === 'unchanged') {
+      if (currentLine.type === "unchanged") {
         splitData.push({
           originalLine: {
             content: currentLine.content,
             lineNumber: currentLine.originalLineNumber!,
-            type: 'unchanged'
+            type: "unchanged",
           },
           modifiedLine: {
             content: currentLine.content,
             lineNumber: currentLine.modifiedLineNumber!,
-            type: 'unchanged'
-          }
+            type: "unchanged",
+          },
         });
         i++;
-      } else if (currentLine.type === 'removed') {
+      } else if (currentLine.type === "removed") {
         // Check if next line is an addition (modification)
-        if (i + 1 < diff.length && diff[i + 1].type === 'added') {
+        if (i + 1 < diff.length && diff[i + 1].type === "added") {
           splitData.push({
             originalLine: {
               content: currentLine.content,
               lineNumber: currentLine.originalLineNumber!,
-              type: 'removed'
+              type: "removed",
             },
             modifiedLine: {
               content: diff[i + 1].content,
               lineNumber: diff[i + 1].modifiedLineNumber!,
-              type: 'added'
-            }
+              type: "added",
+            },
           });
           i += 2;
         } else {
@@ -429,18 +468,18 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
             originalLine: {
               content: currentLine.content,
               lineNumber: currentLine.originalLineNumber!,
-              type: 'removed'
-            }
+              type: "removed",
+            },
           });
           i++;
         }
-      } else if (currentLine.type === 'added') {
+      } else if (currentLine.type === "added") {
         splitData.push({
           modifiedLine: {
             content: currentLine.content,
             lineNumber: currentLine.modifiedLineNumber!,
-            type: 'added'
-          }
+            type: "added",
+          },
         });
         i++;
       } else {
@@ -452,24 +491,32 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
   };
 
   // Calculate diff statistics
-  const calculateStats = (diff: DiffLine[], original: string, modified: string): DiffStats => {
-    const addedLines = diff.filter(line => line.type === 'added').length;
-    const removedLines = diff.filter(line => line.type === 'removed').length;
-    const unchangedLines = diff.filter(line => line.type === 'unchanged').length;
+  const calculateStats = (
+    diff: DiffLine[],
+    original: string,
+    modified: string
+  ): DiffStats => {
+    const addedLines = diff.filter((line) => line.type === "added").length;
+    const removedLines = diff.filter((line) => line.type === "removed").length;
+    const unchangedLines = diff.filter((line) => line.type === "unchanged")
+      .length;
     const modifiedLines = addedLines + removedLines;
 
     const addedChars = diff
-      .filter(line => line.type === 'added')
+      .filter((line) => line.type === "added")
       .reduce((sum, line) => sum + line.content.length, 0);
-    
+
     const removedChars = diff
-      .filter(line => line.type === 'removed')
+      .filter((line) => line.type === "removed")
       .reduce((sum, line) => sum + line.content.length, 0);
 
     // Calculate similarity percentage
     const totalChars = Math.max(original.length, modified.length);
     const changedChars = Math.abs(addedChars - removedChars);
-    const similarity = totalChars > 0 ? Math.max(0, 100 - (changedChars / totalChars) * 100) : 100;
+    const similarity =
+      totalChars > 0
+        ? Math.max(0, 100 - (changedChars / totalChars) * 100)
+        : 100;
 
     return {
       totalLines: diff.length,
@@ -479,7 +526,7 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
       unchangedLines,
       addedChars,
       removedChars,
-      similarity
+      similarity,
     };
   };
 
@@ -496,7 +543,7 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
         unchangedLines: 0,
         addedChars: 0,
         removedChars: 0,
-        similarity: 100
+        similarity: 100,
       });
       return;
     }
@@ -504,7 +551,7 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
     const diff = computeDiff(originalText, modifiedText);
     const stats = calculateStats(diff, originalText, modifiedText);
     const splitData = generateSplitViewData(diff);
-    
+
     setDiffResult(diff);
     setDiffStats(stats);
     setSplitViewData(splitData);
@@ -513,23 +560,26 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
   const copyToClipboard = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
-      toast.success('Copied to clipboard!');
+      toast.success("Copied to clipboard!");
     } catch (err) {
-      toast.error('Failed to copy');
+      toast.error("Failed to copy");
     }
   };
 
   const shareResult = () => {
     const url = new URL(window.location.href);
-    url.searchParams.set('original', encodeForUrl(originalText));
-    url.searchParams.set('modified', encodeForUrl(modifiedText));
-    url.searchParams.set('mode', diffMode);
-    
-    navigator.clipboard.writeText(url.toString()).then(() => {
-      toast.success('Shareable URL copied to clipboard!');
-    }).catch(() => {
-      toast.error('Failed to create shareable URL');
-    });
+    url.searchParams.set("original", encodeForUrl(originalText));
+    url.searchParams.set("modified", encodeForUrl(modifiedText));
+    url.searchParams.set("mode", diffMode);
+
+    navigator.clipboard
+      .writeText(url.toString())
+      .then(() => {
+        toast.success("Shareable URL copied to clipboard!");
+      })
+      .catch(() => {
+        toast.error("Failed to create shareable URL");
+      });
   };
 
   const downloadResult = () => {
@@ -541,33 +591,38 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
         ignoreWhitespace,
         ignoreCase,
         showLineNumbers,
-        contextLines
+        contextLines,
       },
       statistics: diffStats,
       diff: diffResult,
-      generatedAt: new Date().toISOString()
+      generatedAt: new Date().toISOString(),
     };
-    
-    const blob = new Blob([JSON.stringify(resultData, null, 2)], { type: 'application/json' });
+
+    const blob = new Blob([JSON.stringify(resultData, null, 2)], {
+      type: "application/json",
+    });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = 'text-diff-result.json';
+    a.download = "text-diff-result.json";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    toast.success('Diff result downloaded!');
+    toast.success("Diff result downloaded!");
   };
 
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>, target: 'original' | 'modified') => {
+  const handleFileUpload = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    target: "original" | "modified"
+  ) => {
     const file = event.target.files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
     reader.onload = (e) => {
       const text = e.target?.result as string;
-      if (target === 'original') {
+      if (target === "original") {
         setOriginalText(text);
       } else {
         setModifiedText(text);
@@ -577,41 +632,41 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
   };
 
   const clearAll = () => {
-    setOriginalText('');
-    setModifiedText('');
+    setOriginalText("");
+    setModifiedText("");
     setDiffResult([]);
     setSplitViewData([]);
-    router.push('/tools/text-diff');
+    router.push("/tools/text-diff");
   };
 
   const swapTexts = () => {
     const temp = originalText;
     setOriginalText(modifiedText);
     setModifiedText(temp);
-    toast.success('Texts swapped!');
+    toast.success("Texts swapped!");
   };
 
-  const getLineClass = (type: DiffLine['type']) => {
+  const getLineClass = (type: DiffLine["type"]) => {
     switch (type) {
-      case 'added':
-        return 'bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500';
-      case 'removed':
-        return 'bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500';
-      case 'modified':
-        return 'bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500';
+      case "added":
+        return "bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500";
+      case "removed":
+        return "bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500";
+      case "modified":
+        return "bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500";
       default:
-        return 'bg-gray-50 dark:bg-slate-900';
+        return "bg-gray-50 dark:bg-slate-900";
     }
   };
 
-  const getLinePrefix = (type: DiffLine['type']) => {
+  const getLinePrefix = (type: DiffLine["type"]) => {
     switch (type) {
-      case 'added':
-        return '+';
-      case 'removed':
-        return '-';
+      case "added":
+        return "+";
+      case "removed":
+        return "-";
       default:
-        return ' ';
+        return " ";
     }
   };
 
@@ -629,10 +684,10 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
               {showLineNumbers && (
                 <div className="flex-shrink-0 w-20 px-2 py-1 text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-slate-700 border-r border-gray-300 dark:border-gray-600">
                   <span className="inline-block w-8 text-right">
-                    {line.originalLineNumber || ''}
+                    {line.originalLineNumber || ""}
                   </span>
                   <span className="inline-block w-8 text-right ml-1">
-                    {line.modifiedLineNumber || ''}
+                    {line.modifiedLineNumber || ""}
                   </span>
                 </div>
               )}
@@ -653,7 +708,9 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
     <div className="grid grid-cols-2 gap-4">
       <div className="font-mono text-sm bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
         <div className="bg-red-100 dark:bg-red-900/30 px-4 py-2 border-b border-gray-300 dark:border-gray-600">
-          <h4 className="font-semibold text-red-700 dark:text-red-300">Original</h4>
+          <h4 className="font-semibold text-red-700 dark:text-red-300">
+            Original
+          </h4>
         </div>
         <div className="max-h-[500px] overflow-auto">
           {splitViewData.length === 0 ? (
@@ -662,24 +719,33 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
             </div>
           ) : (
             splitViewData.map((line, index) => (
-              <div key={index} className={`flex ${line.originalLine ? getLineClass(line.originalLine.type) : 'bg-gray-100 dark:bg-slate-700'}`}>
+              <div
+                key={index}
+                className={`flex ${
+                  line.originalLine
+                    ? getLineClass(line.originalLine.type)
+                    : "bg-gray-100 dark:bg-slate-700"
+                }`}
+              >
                 {showLineNumbers && (
                   <div className="flex-shrink-0 w-12 px-2 py-1 text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-slate-700 border-r border-gray-300 dark:border-gray-600">
-                    {line.originalLine?.lineNumber || ''}
+                    {line.originalLine?.lineNumber || ""}
                   </div>
                 )}
                 <div className="flex-1 px-2 py-1 whitespace-pre-wrap break-all min-h-[1.5rem]">
-                  {line.originalLine?.content || ''}
+                  {line.originalLine?.content || ""}
                 </div>
               </div>
             ))
           )}
         </div>
       </div>
-      
+
       <div className="font-mono text-sm bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
         <div className="bg-green-100 dark:bg-green-900/30 px-4 py-2 border-b border-gray-300 dark:border-gray-600">
-          <h4 className="font-semibold text-green-700 dark:text-green-300">Modified</h4>
+          <h4 className="font-semibold text-green-700 dark:text-green-300">
+            Modified
+          </h4>
         </div>
         <div className="max-h-[500px] overflow-auto">
           {splitViewData.length === 0 ? (
@@ -688,14 +754,21 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
             </div>
           ) : (
             splitViewData.map((line, index) => (
-              <div key={index} className={`flex ${line.modifiedLine ? getLineClass(line.modifiedLine.type) : 'bg-gray-100 dark:bg-slate-700'}`}>
+              <div
+                key={index}
+                className={`flex ${
+                  line.modifiedLine
+                    ? getLineClass(line.modifiedLine.type)
+                    : "bg-gray-100 dark:bg-slate-700"
+                }`}
+              >
                 {showLineNumbers && (
                   <div className="flex-shrink-0 w-12 px-2 py-1 text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-slate-700 border-r border-gray-300 dark:border-gray-600">
-                    {line.modifiedLine?.lineNumber || ''}
+                    {line.modifiedLine?.lineNumber || ""}
                   </div>
                 )}
                 <div className="flex-1 px-2 py-1 whitespace-pre-wrap break-all min-h-[1.5rem]">
-                  {line.modifiedLine?.content || ''}
+                  {line.modifiedLine?.content || ""}
                 </div>
               </div>
             ))
@@ -714,42 +787,57 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
         </div>
       ) : (
         diffResult.map((line, index) => {
-          if (line.type === 'unchanged') {
+          if (line.type === "unchanged") {
             return (
-              <div key={index} className="font-mono text-sm bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
+              <div
+                key={index}
+                className="font-mono text-sm bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden"
+              >
                 <div className="bg-gray-100 dark:bg-slate-700 px-4 py-2 border-b border-gray-300 dark:border-gray-600">
                   <h4 className="font-semibold text-gray-700 dark:text-gray-300">
                     Line {line.originalLineNumber} (unchanged)
                   </h4>
                 </div>
                 <div className="p-4">
-                  <pre className="whitespace-pre-wrap break-all">{line.content}</pre>
+                  <pre className="whitespace-pre-wrap break-all">
+                    {line.content}
+                  </pre>
                 </div>
               </div>
             );
-          } else if (line.type === 'removed') {
+          } else if (line.type === "removed") {
             return (
-              <div key={index} className="font-mono text-sm bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
+              <div
+                key={index}
+                className="font-mono text-sm bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden"
+              >
                 <div className="bg-red-100 dark:bg-red-900/30 px-4 py-2 border-b border-gray-300 dark:border-gray-600">
                   <h4 className="font-semibold text-red-700 dark:text-red-300">
                     - Line {line.originalLineNumber} (removed)
                   </h4>
                 </div>
                 <div className="p-4 bg-red-50 dark:bg-red-900/20">
-                  <pre className="whitespace-pre-wrap break-all">{line.content}</pre>
+                  <pre className="whitespace-pre-wrap break-all">
+                    {line.content}
+                  </pre>
                 </div>
               </div>
             );
-          } else if (line.type === 'added') {
+          } else if (line.type === "added") {
             return (
-              <div key={index} className="font-mono text-sm bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
+              <div
+                key={index}
+                className="font-mono text-sm bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden"
+              >
                 <div className="bg-green-100 dark:bg-green-900/30 px-4 py-2 border-b border-gray-300 dark:border-gray-600">
                   <h4 className="font-semibold text-green-700 dark:text-green-300">
                     + Line {line.modifiedLineNumber} (added)
                   </h4>
                 </div>
                 <div className="p-4 bg-green-50 dark:bg-green-900/20">
-                  <pre className="whitespace-pre-wrap break-all">{line.content}</pre>
+                  <pre className="whitespace-pre-wrap break-all">
+                    {line.content}
+                  </pre>
                 </div>
               </div>
             );
@@ -763,9 +851,13 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Text Diff Checker</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Text Diff Checker
+        </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Compare two text inputs and visualize differences with multiple viewing modes. Perfect for code reviews, document changes, and content comparison.
+          Compare two text inputs and visualize differences with multiple
+          viewing modes. Perfect for code reviews, document changes, and content
+          comparison.
         </p>
       </div>
 
@@ -780,7 +872,10 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
                 <span>Original Text</span>
               </CardTitle>
               <div className="flex space-x-2">
-                <label htmlFor="original-file-upload" className="cursor-pointer">
+                <label
+                  htmlFor="original-file-upload"
+                  className="cursor-pointer"
+                >
                   <Button variant="outline" size="sm" asChild>
                     <span>
                       <Upload className="h-4 w-4 mr-2" />
@@ -792,7 +887,7 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
                   id="original-file-upload"
                   type="file"
                   accept=".txt,.md,.js,.json,.html,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.ts,.jsx,.tsx,.vue,.svelte"
-                  onChange={(e) => handleFileUpload(e, 'original')}
+                  onChange={(e) => handleFileUpload(e, "original")}
                   className="hidden"
                 />
               </div>
@@ -809,7 +904,8 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
               className="min-h-[300px] resize-none font-mono text-sm bg-white dark:bg-slate-900 border-gray-300 dark:border-gray-600"
             />
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-              Lines: {originalText.split('\n').length} | Characters: {originalText.length}
+              Lines: {originalText.split("\n").length} | Characters:{" "}
+              {originalText.length}
             </div>
           </CardContent>
         </Card>
@@ -823,7 +919,10 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
                 <span>Modified Text</span>
               </CardTitle>
               <div className="flex space-x-2">
-                <label htmlFor="modified-file-upload" className="cursor-pointer">
+                <label
+                  htmlFor="modified-file-upload"
+                  className="cursor-pointer"
+                >
                   <Button variant="outline" size="sm" asChild>
                     <span>
                       <Upload className="h-4 w-4 mr-2" />
@@ -835,7 +934,7 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
                   id="modified-file-upload"
                   type="file"
                   accept=".txt,.md,.js,.json,.html,.css,.py,.java,.cpp,.c,.php,.rb,.go,.rs,.ts,.jsx,.tsx,.vue,.svelte"
-                  onChange={(e) => handleFileUpload(e, 'modified')}
+                  onChange={(e) => handleFileUpload(e, "modified")}
                   className="hidden"
                 />
               </div>
@@ -852,7 +951,8 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
               className="min-h-[300px] resize-none font-mono text-sm bg-white dark:bg-slate-900 border-gray-300 dark:border-gray-600"
             />
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-              Lines: {modifiedText.split('\n').length} | Characters: {modifiedText.length}
+              Lines: {modifiedText.split("\n").length} | Characters:{" "}
+              {modifiedText.length}
             </div>
           </CardContent>
         </Card>
@@ -867,7 +967,11 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
               <span>Diff Options</span>
             </CardTitle>
             <div className="flex space-x-2">
-              <Button variant="outline" size="sm" onClick={generateExampleTexts}>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={generateExampleTexts}
+              >
                 <Shuffle className="h-4 w-4 mr-2" />
                 Example
               </Button>
@@ -898,7 +1002,12 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="space-y-2">
               <Label htmlFor="diff-mode">View Mode</Label>
-              <Select value={diffMode} onValueChange={(value) => setDiffMode(value as 'unified' | 'split' | 'inline')}>
+              <Select
+                value={diffMode}
+                onValueChange={(value) =>
+                  setDiffMode(value as "unified" | "split" | "inline")
+                }
+              >
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
@@ -917,9 +1026,14 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
                   <Checkbox
                     id="ignore-whitespace"
                     checked={ignoreWhitespace}
-                    onCheckedChange={setIgnoreWhitespace}
+                    onCheckedChange={(checked) =>
+                      setIgnoreWhitespace(Boolean(checked))
+                    }
                   />
-                  <label htmlFor="ignore-whitespace" className="text-sm cursor-pointer">
+                  <label
+                    htmlFor="ignore-whitespace"
+                    className="text-sm cursor-pointer"
+                  >
                     Ignore whitespace
                   </label>
                 </div>
@@ -927,9 +1041,14 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
                   <Checkbox
                     id="ignore-case"
                     checked={ignoreCase}
-                    onCheckedChange={setIgnoreCase}
+                    onCheckedChange={(checked) =>
+                      setIgnoreCase(Boolean(checked))
+                    }
                   />
-                  <label htmlFor="ignore-case" className="text-sm cursor-pointer">
+                  <label
+                    htmlFor="ignore-case"
+                    className="text-sm cursor-pointer"
+                  >
                     Ignore case
                   </label>
                 </div>
@@ -943,9 +1062,14 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
                   <Checkbox
                     id="show-line-numbers"
                     checked={showLineNumbers}
-                    onCheckedChange={setShowLineNumbers}
+                    onCheckedChange={(checked) =>
+                      setShowLineNumbers(Boolean(checked))
+                    }
                   />
-                  <label htmlFor="show-line-numbers" className="text-sm cursor-pointer">
+                  <label
+                    htmlFor="show-line-numbers"
+                    className="text-sm cursor-pointer"
+                  >
                     Show line numbers
                   </label>
                 </div>
@@ -954,7 +1078,10 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
 
             <div className="space-y-2">
               <Label htmlFor="context-lines">Context Lines</Label>
-              <Select value={contextLines.toString()} onValueChange={(value) => setContextLines(parseInt(value))}>
+              <Select
+                value={contextLines.toString()}
+                onValueChange={(value) => setContextLines(parseInt(value))}
+              >
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
@@ -983,32 +1110,60 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
               <div className="text-center p-3 bg-gray-50 dark:bg-slate-900 rounded-lg">
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">{diffStats.similarity.toFixed(1)}%</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Similarity</div>
+                <div className="text-2xl font-bold text-gray-900 dark:text-white">
+                  {diffStats.similarity.toFixed(1)}%
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Similarity
+                </div>
               </div>
               <div className="text-center p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-green-600 dark:text-green-400">{diffStats.addedLines}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Added</div>
+                <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                  {diffStats.addedLines}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Added
+                </div>
               </div>
               <div className="text-center p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-red-600 dark:text-red-400">{diffStats.removedLines}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Removed</div>
+                <div className="text-2xl font-bold text-red-600 dark:text-red-400">
+                  {diffStats.removedLines}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Removed
+                </div>
               </div>
               <div className="text-center p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{diffStats.unchangedLines}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Unchanged</div>
+                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                  {diffStats.unchangedLines}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Unchanged
+                </div>
               </div>
               <div className="text-center p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{diffStats.totalLines}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Total Lines</div>
+                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                  {diffStats.totalLines}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Total Lines
+                </div>
               </div>
               <div className="text-center p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">+{diffStats.addedChars}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Chars Added</div>
+                <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                  +{diffStats.addedChars}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Chars Added
+                </div>
               </div>
               <div className="text-center p-3 bg-pink-50 dark:bg-pink-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-pink-600 dark:text-pink-400">-{diffStats.removedChars}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Chars Removed</div>
+                <div className="text-2xl font-bold text-pink-600 dark:text-pink-400">
+                  -{diffStats.removedChars}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Chars Removed
+                </div>
               </div>
             </div>
           </CardContent>
@@ -1036,45 +1191,69 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
           </CardDescription>
         </CardHeader>
         <CardContent>
-          {diffMode === 'unified' && renderUnifiedDiff()}
-          {diffMode === 'split' && renderSplitDiff()}
-          {diffMode === 'inline' && renderInlineDiff()}
+          {diffMode === "unified" && renderUnifiedDiff()}
+          {diffMode === "split" && renderSplitDiff()}
+          {diffMode === "inline" && renderInlineDiff()}
         </CardContent>
       </Card>
 
       {/* Info Section */}
       <Card className="mt-8 bg-white dark:bg-slate-800 border-gray-200 dark:border-gray-700">
         <CardHeader>
-          <CardTitle className="dark:text-white">About Text Diff Checker</CardTitle>
+          <CardTitle className="dark:text-white">
+            About Text Diff Checker
+          </CardTitle>
         </CardHeader>
         <CardContent className="prose prose-sm max-w-none">
           <p className="text-gray-600 dark:text-gray-300">
-            Text diff checking is essential for comparing documents, code files, and any text content. 
-            This tool provides multiple viewing modes and options to help you identify changes quickly and accurately.
+            Text diff checking is essential for comparing documents, code files,
+            and any text content. This tool provides multiple viewing modes and
+            options to help you identify changes quickly and accurately.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-6">
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">View Modes:</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                View Modes:
+              </h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                <li>• <strong>Unified:</strong> Traditional diff format with +/- indicators</li>
-                <li>• <strong>Split:</strong> Side-by-side comparison view</li>
-                <li>• <strong>Inline:</strong> Stacked view showing before and after</li>
+                <li>
+                  • <strong>Unified:</strong> Traditional diff format with +/-
+                  indicators
+                </li>
+                <li>
+                  • <strong>Split:</strong> Side-by-side comparison view
+                </li>
+                <li>
+                  • <strong>Inline:</strong> Stacked view showing before and
+                  after
+                </li>
                 <li>• Color-coded changes for easy identification</li>
                 <li>• Line numbers for precise reference</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Options:</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Options:
+              </h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                <li>• <strong>Ignore Whitespace:</strong> Focus on content changes</li>
-                <li>• <strong>Ignore Case:</strong> Case-insensitive comparison</li>
-                <li>• <strong>Context Lines:</strong> Show surrounding unchanged lines</li>
+                <li>
+                  • <strong>Ignore Whitespace:</strong> Focus on content changes
+                </li>
+                <li>
+                  • <strong>Ignore Case:</strong> Case-insensitive comparison
+                </li>
+                <li>
+                  • <strong>Context Lines:</strong> Show surrounding unchanged
+                  lines
+                </li>
                 <li>• File upload support for various formats</li>
                 <li>• Shareable URLs for collaboration</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Use Cases:</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Use Cases:
+              </h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Code review and version comparison</li>
                 <li>• Document revision tracking</li>
@@ -1086,23 +1265,33 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
             </div>
           </div>
           <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-            <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">Legend:</h4>
+            <h4 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">
+              Legend:
+            </h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-green-200 dark:bg-green-800 border-l-4 border-green-500 rounded-sm"></div>
-                <span className="text-blue-800 dark:text-blue-300">Added lines</span>
+                <span className="text-blue-800 dark:text-blue-300">
+                  Added lines
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-red-200 dark:bg-red-800 border-l-4 border-red-500 rounded-sm"></div>
-                <span className="text-blue-800 dark:text-blue-300">Removed lines</span>
+                <span className="text-blue-800 dark:text-blue-300">
+                  Removed lines
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-gray-200 dark:bg-gray-700 rounded-sm"></div>
-                <span className="text-blue-800 dark:text-blue-300">Unchanged lines</span>
+                <span className="text-blue-800 dark:text-blue-300">
+                  Unchanged lines
+                </span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-yellow-200 dark:bg-yellow-800 border-l-4 border-yellow-500 rounded-sm"></div>
-                <span className="text-blue-800 dark:text-blue-300">Modified lines</span>
+                <span className="text-blue-800 dark:text-blue-300">
+                  Modified lines
+                </span>
               </div>
             </div>
           </div>
@@ -1114,7 +1303,13 @@ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
 
 export default function TextDiffPage() {
   return (
-    <Suspense fallback={<div className="flex justify-center py-12"><div className="animate-spin h-8 w-8 border-2 border-blue-600 border-t-transparent rounded-full"></div></div>}>
+    <Suspense
+      fallback={
+        <div className="flex justify-center py-12">
+          <div className="animate-spin h-8 w-8 border-2 border-blue-600 border-t-transparent rounded-full"></div>
+        </div>
+      }
+    >
       <TextDiffTool />
     </Suspense>
   );

@@ -1,15 +1,37 @@
-'use client';
+"use client";
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Badge } from '@/components/ui/badge';
-import { Copy, Share2, RotateCcw, Download, Upload, Shuffle, FileText, Eye, EyeOff, List, Code, Maximize, Minimize, BarChart3, Settings } from 'lucide-react';
-import { toast } from 'sonner';
-import { Checkbox } from '@/components/ui/checkbox';
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import {
+  Copy,
+  Share2,
+  RotateCcw,
+  Download,
+  Upload,
+  Shuffle,
+  FileText,
+  Eye,
+  EyeOff,
+  List,
+  Code,
+  Maximize,
+  Minimize,
+  BarChart3,
+  Settings,
+} from "lucide-react";
+import { toast } from "sonner";
+import { Checkbox } from "@/components/ui/checkbox";
 
 interface TOCItem {
   id: string;
@@ -31,8 +53,8 @@ interface MarkdownStats {
 }
 
 function MarkdownTool() {
-  const [markdown, setMarkdown] = useState('');
-  const [html, setHtml] = useState('');
+  const [markdown, setMarkdown] = useState("");
+  const [html, setHtml] = useState("");
   const [toc, setToc] = useState<TOCItem[]>([]);
   const [stats, setStats] = useState<MarkdownStats>({
     characters: 0,
@@ -44,14 +66,16 @@ function MarkdownTool() {
     links: 0,
     images: 0,
     codeBlocks: 0,
-    tables: 0
+    tables: 0,
   });
-  const [viewMode, setViewMode] = useState<'split' | 'edit' | 'preview'>('split');
+  const [viewMode, setViewMode] = useState<"split" | "edit" | "preview">(
+    "split"
+  );
   const [showTOC, setShowTOC] = useState(true);
   const [enableSyntaxHighlight, setEnableSyntaxHighlight] = useState(true);
   const [enableTables, setEnableTables] = useState(true);
   const [enableTaskLists, setEnableTaskLists] = useState(true);
-  
+
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -59,36 +83,40 @@ function MarkdownTool() {
   const encodeForUrl = (text: string): string => {
     try {
       return btoa(unescape(encodeURIComponent(text)))
-        .replace(/\+/g, '-')
-        .replace(/\//g, '_')
-        .replace(/=/g, '');
+        .replace(/\+/g, "-")
+        .replace(/\//g, "_")
+        .replace(/=/g, "");
     } catch {
-      return '';
+      return "";
     }
   };
 
   const decodeFromUrl = (encoded: string): string => {
     try {
-      const padded = encoded + '='.repeat((4 - encoded.length % 4) % 4);
-      const base64 = padded.replace(/-/g, '+').replace(/_/g, '/');
+      const padded = encoded + "=".repeat((4 - (encoded.length % 4)) % 4);
+      const base64 = padded.replace(/-/g, "+").replace(/_/g, "/");
       return decodeURIComponent(escape(atob(base64)));
     } catch {
-      return '';
+      return "";
     }
   };
 
   // Load from URL parameters on mount
   useEffect(() => {
-    const urlMarkdown = searchParams.get('markdown');
-    const urlViewMode = searchParams.get('view');
-    
+    const urlMarkdown = searchParams.get("markdown");
+    const urlViewMode = searchParams.get("view");
+
     if (urlMarkdown) {
       const decodedMarkdown = decodeFromUrl(urlMarkdown);
       if (decodedMarkdown) {
         setMarkdown(decodedMarkdown);
       }
     }
-    if (urlViewMode === 'split' || urlViewMode === 'edit' || urlViewMode === 'preview') {
+    if (
+      urlViewMode === "split" ||
+      urlViewMode === "edit" ||
+      urlViewMode === "preview"
+    ) {
       setViewMode(urlViewMode);
     }
   }, [searchParams]);
@@ -97,7 +125,7 @@ function MarkdownTool() {
   const generateExampleMarkdown = () => {
     const examples = [
       {
-        title: 'Documentation Example',
+        title: "Documentation Example",
         content: `# Project Documentation
 
 ## Overview
@@ -150,10 +178,10 @@ console.log(greet('World'));
 
 ### Subsection
 
-More content here with \`inline code\` and additional details.`
+More content here with \`inline code\` and additional details.`,
       },
       {
-        title: 'Blog Post Example',
+        title: "Blog Post Example",
         content: `# The Future of Web Development
 
 *Published on January 15, 2024*
@@ -202,10 +230,10 @@ The future looks bright! 🚀
 
 ---
 
-*What are your thoughts on these trends? Share in the comments below.*`
+*What are your thoughts on these trends? Share in the comments below.*`,
       },
       {
-        title: 'README Template',
+        title: "README Template",
         content: `# Project Name
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://example.com)
@@ -270,10 +298,10 @@ See \`contributing.md\` for ways to get started.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)`
+[MIT](https://choosealicense.com/licenses/mit/)`,
       },
       {
-        title: 'Tutorial Example',
+        title: "Tutorial Example",
         content: `# Getting Started with Markdown
 
 ## What is Markdown?
@@ -352,8 +380,8 @@ def hello_world():
 
 ---
 
-That's the basics! Happy writing! ✨`
-      }
+That's the basics! Happy writing! ✨`,
+      },
     ];
 
     const randomExample = examples[Math.floor(Math.random() * examples.length)];
@@ -366,113 +394,149 @@ That's the basics! Happy writing! ✨`
     let html = md;
 
     // Headers
-    html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-    html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
-    html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
-    html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
-    html = html.replace(/^##### (.*$)/gim, '<h5>$1</h5>');
-    html = html.replace(/^###### (.*$)/gim, '<h6>$1</h6>');
+    html = html.replace(/^### (.*$)/gim, "<h3>$1</h3>");
+    html = html.replace(/^## (.*$)/gim, "<h2>$1</h2>");
+    html = html.replace(/^# (.*$)/gim, "<h1>$1</h1>");
+    html = html.replace(/^#### (.*$)/gim, "<h4>$1</h4>");
+    html = html.replace(/^##### (.*$)/gim, "<h5>$1</h5>");
+    html = html.replace(/^###### (.*$)/gim, "<h6>$1</h6>");
 
     // Bold
-    html = html.replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>');
-    html = html.replace(/__(.*?)__/gim, '<strong>$1</strong>');
+    html = html.replace(/\*\*(.*)\*\*/gim, "<strong>$1</strong>");
+    html = html.replace(/__(.*?)__/gim, "<strong>$1</strong>");
 
     // Italic
-    html = html.replace(/\*(.*?)\*/gim, '<em>$1</em>');
-    html = html.replace(/_(.*?)_/gim, '<em>$1</em>');
+    html = html.replace(/\*(.*?)\*/gim, "<em>$1</em>");
+    html = html.replace(/_(.*?)_/gim, "<em>$1</em>");
 
     // Strikethrough
-    html = html.replace(/~~(.*?)~~/gim, '<del>$1</del>');
+    html = html.replace(/~~(.*?)~~/gim, "<del>$1</del>");
 
     // Code blocks
     if (enableSyntaxHighlight) {
-      html = html.replace(/```(\w+)?\n([\s\S]*?)```/gim, (match, lang, code) => {
-        return `<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto"><code class="language-${lang || 'text'}">${code.trim()}</code></pre>`;
-      });
+      html = html.replace(
+        /```(\w+)?\n([\s\S]*?)```/gim,
+        (match, lang, code) => {
+          return `<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto"><code class="language-${
+            lang || "text"
+          }">${code.trim()}</code></pre>`;
+        }
+      );
     } else {
       html = html.replace(/```[\s\S]*?```/gim, (match) => {
-        const code = match.replace(/```\w*\n?/g, '').replace(/```$/g, '');
+        const code = match.replace(/```\w*\n?/g, "").replace(/```$/g, "");
         return `<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto"><code>${code}</code></pre>`;
       });
     }
 
     // Inline code
-    html = html.replace(/`([^`]+)`/gim, '<code class="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm">$1</code>');
+    html = html.replace(
+      /`([^`]+)`/gim,
+      '<code class="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm">$1</code>'
+    );
 
     // Links
-    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>');
+    html = html.replace(
+      /\[([^\]]+)\]\(([^)]+)\)/gim,
+      '<a href="$2" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>'
+    );
 
     // Images
-    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/gim, '<img src="$2" alt="$1" class="max-w-full h-auto rounded-lg" />');
+    html = html.replace(
+      /!\[([^\]]*)\]\(([^)]+)\)/gim,
+      '<img src="$2" alt="$1" class="max-w-full h-auto rounded-lg" />'
+    );
 
     // Task lists
     if (enableTaskLists) {
-      html = html.replace(/- \[x\] (.*)/gim, '<div class="flex items-center space-x-2"><input type="checkbox" checked disabled class="rounded" /><span class="line-through text-gray-500">$1</span></div>');
-      html = html.replace(/- \[ \] (.*)/gim, '<div class="flex items-center space-x-2"><input type="checkbox" disabled class="rounded" /><span>$1</span></div>');
+      html = html.replace(
+        /- \[x\] (.*)/gim,
+        '<div class="flex items-center space-x-2"><input type="checkbox" checked disabled class="rounded" /><span class="line-through text-gray-500">$1</span></div>'
+      );
+      html = html.replace(
+        /- \[ \] (.*)/gim,
+        '<div class="flex items-center space-x-2"><input type="checkbox" disabled class="rounded" /><span>$1</span></div>'
+      );
     }
 
     // Unordered lists
-    html = html.replace(/^\s*\* (.+)/gim, '<li>$1</li>');
-    html = html.replace(/^\s*- (.+)/gim, '<li>$1</li>');
-    html = html.replace(/(<li>.*<\/li>)/s, '<ul class="list-disc list-inside space-y-1 ml-4">$1</ul>');
+    html = html.replace(/^\s*\* (.+)/gim, "<li>$1</li>");
+    html = html.replace(/^\s*- (.+)/gim, "<li>$1</li>");
+    html = html.replace(
+      /(<li>.*<\/li>)/s,
+      '<ul class="list-disc list-inside space-y-1 ml-4">$1</ul>'
+    );
 
     // Ordered lists
-    html = html.replace(/^\s*\d+\. (.+)/gim, '<li>$1</li>');
+    html = html.replace(/^\s*\d+\. (.+)/gim, "<li>$1</li>");
 
     // Tables
     if (enableTables) {
       const tableRegex = /(\|.*\|.*\n)+/gim;
       html = html.replace(tableRegex, (match) => {
-        const rows = match.trim().split('\n');
+        const rows = match.trim().split("\n");
         const headerRow = rows[0];
         const separatorRow = rows[1];
         const dataRows = rows.slice(2);
 
-        if (!separatorRow || !separatorRow.includes('---')) {
+        if (!separatorRow || !separatorRow.includes("---")) {
           return match;
         }
 
-        const headers = headerRow.split('|').map(h => h.trim()).filter(h => h);
-        const data = dataRows.map(row => 
-          row.split('|').map(cell => cell.trim()).filter(cell => cell)
+        const headers = headerRow
+          .split("|")
+          .map((h) => h.trim())
+          .filter((h) => h);
+        const data = dataRows.map((row) =>
+          row
+            .split("|")
+            .map((cell) => cell.trim())
+            .filter((cell) => cell)
         );
 
-        let tableHTML = '<table class="min-w-full border-collapse border border-gray-300 dark:border-gray-600 my-4">';
+        let tableHTML =
+          '<table class="min-w-full border-collapse border border-gray-300 dark:border-gray-600 my-4">';
         tableHTML += '<thead class="bg-gray-50 dark:bg-gray-800">';
-        tableHTML += '<tr>';
-        headers.forEach(header => {
+        tableHTML += "<tr>";
+        headers.forEach((header) => {
           tableHTML += `<th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left font-semibold">${header}</th>`;
         });
-        tableHTML += '</tr></thead>';
-        tableHTML += '<tbody>';
-        data.forEach(row => {
-          tableHTML += '<tr>';
-          row.forEach(cell => {
+        tableHTML += "</tr></thead>";
+        tableHTML += "<tbody>";
+        data.forEach((row) => {
+          tableHTML += "<tr>";
+          row.forEach((cell) => {
             tableHTML += `<td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${cell}</td>`;
           });
-          tableHTML += '</tr>';
+          tableHTML += "</tr>";
         });
-        tableHTML += '</tbody></table>';
+        tableHTML += "</tbody></table>";
 
         return tableHTML;
       });
     }
 
     // Blockquotes
-    html = html.replace(/^> (.+)/gim, '<blockquote class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-600 dark:text-gray-400 my-4">$1</blockquote>');
+    html = html.replace(
+      /^> (.+)/gim,
+      '<blockquote class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-600 dark:text-gray-400 my-4">$1</blockquote>'
+    );
 
     // Horizontal rules
-    html = html.replace(/^---$/gim, '<hr class="border-gray-300 dark:border-gray-600 my-6" />');
+    html = html.replace(
+      /^---$/gim,
+      '<hr class="border-gray-300 dark:border-gray-600 my-6" />'
+    );
 
     // Paragraphs
     html = html.replace(/\n\n/gim, '</p><p class="mb-4">');
-    html = '<p class="mb-4">' + html + '</p>';
+    html = '<p class="mb-4">' + html + "</p>";
 
     // Line breaks
-    html = html.replace(/\n/gim, '<br />');
+    html = html.replace(/\n/gim, "<br />");
 
     // Clean up empty paragraphs
-    html = html.replace(/<p class="mb-4"><\/p>/gim, '');
+    html = html.replace(/<p class="mb-4"><\/p>/gim, "");
 
     return html;
   };
@@ -486,8 +550,11 @@ That's the basics! Happy writing! ✨`
     while ((match = headingRegex.exec(md)) !== null) {
       const level = match[1].length;
       const text = match[2].trim();
-      const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
-      
+      const id = text
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, "")
+        .replace(/\s+/g, "-");
+
       toc.push({ id, text, level });
     }
 
@@ -497,11 +564,12 @@ That's the basics! Happy writing! ✨`
   // Calculate statistics
   const calculateStats = (md: string): MarkdownStats => {
     const characters = md.length;
-    const charactersNoSpaces = md.replace(/\s/g, '').length;
+    const charactersNoSpaces = md.replace(/\s/g, "").length;
     const words = md.trim() ? md.trim().split(/\s+/).length : 0;
-    const lines = md.split('\n').length;
-    const paragraphs = md.split(/\n\s*\n/).filter(p => p.trim().length > 0).length;
-    
+    const lines = md.split("\n").length;
+    const paragraphs = md.split(/\n\s*\n/).filter((p) => p.trim().length > 0)
+      .length;
+
     const headings = (md.match(/^#{1,6}\s+.+$/gm) || []).length;
     const links = (md.match(/\[([^\]]+)\]\(([^)]+)\)/g) || []).length;
     const images = (md.match(/!\[([^\]]*)\]\(([^)]+)\)/g) || []).length;
@@ -518,14 +586,14 @@ That's the basics! Happy writing! ✨`
       links,
       images,
       codeBlocks,
-      tables
+      tables,
     };
   };
 
   // Process markdown
   useEffect(() => {
     if (!markdown.trim()) {
-      setHtml('');
+      setHtml("");
       setToc([]);
       setStats({
         characters: 0,
@@ -537,7 +605,7 @@ That's the basics! Happy writing! ✨`
         links: 0,
         images: 0,
         codeBlocks: 0,
-        tables: 0
+        tables: 0,
       });
       return;
     }
@@ -556,33 +624,36 @@ That's the basics! Happy writing! ✨`
       await navigator.clipboard.writeText(text);
       toast.success(`${type} copied to clipboard!`);
     } catch (err) {
-      toast.error('Failed to copy');
+      toast.error("Failed to copy");
     }
   };
 
   const shareResult = () => {
     const url = new URL(window.location.href);
-    url.searchParams.set('markdown', encodeForUrl(markdown));
-    url.searchParams.set('view', viewMode);
-    
-    navigator.clipboard.writeText(url.toString()).then(() => {
-      toast.success('Shareable URL copied to clipboard!');
-    }).catch(() => {
-      toast.error('Failed to create shareable URL');
-    });
+    url.searchParams.set("markdown", encodeForUrl(markdown));
+    url.searchParams.set("view", viewMode);
+
+    navigator.clipboard
+      .writeText(url.toString())
+      .then(() => {
+        toast.success("Shareable URL copied to clipboard!");
+      })
+      .catch(() => {
+        toast.error("Failed to create shareable URL");
+      });
   };
 
   const downloadMarkdown = () => {
-    const blob = new Blob([markdown], { type: 'text/markdown' });
+    const blob = new Blob([markdown], { type: "text/markdown" });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = 'document.md';
+    a.download = "document.md";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    toast.success('Markdown file downloaded!');
+    toast.success("Markdown file downloaded!");
   };
 
   const downloadHTML = () => {
@@ -613,16 +684,16 @@ That's the basics! Happy writing! ✨`
 </body>
 </html>`;
 
-    const blob = new Blob([fullHTML], { type: 'text/html' });
+    const blob = new Blob([fullHTML], { type: "text/html" });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = 'document.html';
+    a.download = "document.html";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    toast.success('HTML file downloaded!');
+    toast.success("HTML file downloaded!");
   };
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -638,70 +709,77 @@ That's the basics! Happy writing! ✨`
   };
 
   const clearAll = () => {
-    setMarkdown('');
-    setHtml('');
+    setMarkdown("");
+    setHtml("");
     setToc([]);
-    router.push('/tools/markdown');
+    router.push("/tools/markdown");
   };
 
   const insertMarkdown = (syntax: string) => {
-    const textarea = document.querySelector('textarea') as HTMLTextAreaElement;
+    const textarea = document.querySelector("textarea") as HTMLTextAreaElement;
     if (!textarea) return;
 
     const start = textarea.selectionStart;
     const end = textarea.selectionEnd;
     const selectedText = markdown.substring(start, end);
-    
-    let newText = '';
+
+    let newText = "";
     switch (syntax) {
-      case 'bold':
-        newText = `**${selectedText || 'bold text'}**`;
+      case "bold":
+        newText = `**${selectedText || "bold text"}**`;
         break;
-      case 'italic':
-        newText = `*${selectedText || 'italic text'}*`;
+      case "italic":
+        newText = `*${selectedText || "italic text"}*`;
         break;
-      case 'code':
-        newText = `\`${selectedText || 'code'}\``;
+      case "code":
+        newText = `\`${selectedText || "code"}\``;
         break;
-      case 'link':
-        newText = `[${selectedText || 'link text'}](url)`;
+      case "link":
+        newText = `[${selectedText || "link text"}](url)`;
         break;
-      case 'image':
-        newText = `![${selectedText || 'alt text'}](image-url)`;
+      case "image":
+        newText = `![${selectedText || "alt text"}](image-url)`;
         break;
-      case 'header':
-        newText = `## ${selectedText || 'Header'}`;
+      case "header":
+        newText = `## ${selectedText || "Header"}`;
         break;
-      case 'list':
-        newText = `- ${selectedText || 'List item'}`;
+      case "list":
+        newText = `- ${selectedText || "List item"}`;
         break;
-      case 'quote':
-        newText = `> ${selectedText || 'Quote'}`;
+      case "quote":
+        newText = `> ${selectedText || "Quote"}`;
         break;
-      case 'table':
+      case "table":
         newText = `| Header 1 | Header 2 |\n|----------|----------|\n| Cell 1   | Cell 2   |`;
         break;
-      case 'codeblock':
-        newText = `\`\`\`\n${selectedText || 'code'}\n\`\`\``;
+      case "codeblock":
+        newText = `\`\`\`\n${selectedText || "code"}\n\`\`\``;
         break;
     }
 
-    const newMarkdown = markdown.substring(0, start) + newText + markdown.substring(end);
+    const newMarkdown =
+      markdown.substring(0, start) + newText + markdown.substring(end);
     setMarkdown(newMarkdown);
-    
+
     // Focus back to textarea
     setTimeout(() => {
       textarea.focus();
-      textarea.setSelectionRange(start + newText.length, start + newText.length);
+      textarea.setSelectionRange(
+        start + newText.length,
+        start + newText.length
+      );
     }, 0);
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Markdown Preview</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Markdown Preview
+        </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Write Markdown and see a live preview with syntax highlighting, table of contents, and export options.
+          Write Markdown and see a live preview with syntax highlighting, table
+          of contents, and export options.
         </p>
       </div>
 
@@ -710,7 +788,11 @@ That's the basics! Happy writing! ✨`
         <CardContent className="p-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-wrap items-center gap-2">
-              <Button variant="outline" size="sm" onClick={generateExampleMarkdown}>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={generateExampleMarkdown}
+              >
                 <Shuffle className="h-4 w-4 mr-2" />
                 Example
               </Button>
@@ -733,38 +815,83 @@ That's the basics! Happy writing! ✨`
                 <RotateCcw className="h-4 w-4 mr-2" />
                 Clear
               </Button>
-              
+
               <div className="h-6 w-px bg-gray-300 dark:bg-gray-600 mx-2"></div>
-              
+
               {/* Quick Insert Buttons */}
-              <Button variant="ghost" size="sm" onClick={() => insertMarkdown('bold')} title="Bold">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => insertMarkdown("bold")}
+                title="Bold"
+              >
                 <strong>B</strong>
               </Button>
-              <Button variant="ghost" size="sm" onClick={() => insertMarkdown('italic')} title="Italic">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => insertMarkdown("italic")}
+                title="Italic"
+              >
                 <em>I</em>
               </Button>
-              <Button variant="ghost" size="sm" onClick={() => insertMarkdown('code')} title="Inline Code">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => insertMarkdown("code")}
+                title="Inline Code"
+              >
                 <Code className="h-4 w-4" />
               </Button>
-              <Button variant="ghost" size="sm" onClick={() => insertMarkdown('link')} title="Link">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => insertMarkdown("link")}
+                title="Link"
+              >
                 🔗
               </Button>
-              <Button variant="ghost" size="sm" onClick={() => insertMarkdown('image')} title="Image">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => insertMarkdown("image")}
+                title="Image"
+              >
                 🖼️
               </Button>
-              <Button variant="ghost" size="sm" onClick={() => insertMarkdown('header')} title="Header">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => insertMarkdown("header")}
+                title="Header"
+              >
                 H
               </Button>
-              <Button variant="ghost" size="sm" onClick={() => insertMarkdown('list')} title="List">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => insertMarkdown("list")}
+                title="List"
+              >
                 <List className="h-4 w-4" />
               </Button>
-              <Button variant="ghost" size="sm" onClick={() => insertMarkdown('quote')} title="Quote">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => insertMarkdown("quote")}
+                title="Quote"
+              >
                 💬
               </Button>
             </div>
 
             <div className="flex items-center gap-2">
-              <Tabs value={viewMode} onValueChange={(value) => setViewMode(value as 'split' | 'edit' | 'preview')}>
+              <Tabs
+                value={viewMode}
+                onValueChange={(value) =>
+                  setViewMode(value as "split" | "edit" | "preview")
+                }
+              >
                 <TabsList className="grid w-full grid-cols-3">
                   <TabsTrigger value="edit" className="text-xs">
                     <FileText className="h-3 w-3 mr-1" />
@@ -788,10 +915,18 @@ That's the basics! Happy writing! ✨`
       {/* Main Editor and Preview */}
       <div className="grid lg:grid-cols-4 gap-6 mb-8">
         {/* Main Content */}
-        <div className={`${showTOC && toc.length > 0 ? 'lg:col-span-3' : 'lg:col-span-4'}`}>
-          <div className={`grid gap-6 ${viewMode === 'split' ? 'lg:grid-cols-2' : 'grid-cols-1'}`}>
+        <div
+          className={`${
+            showTOC && toc.length > 0 ? "lg:col-span-3" : "lg:col-span-4"
+          }`}
+        >
+          <div
+            className={`grid gap-6 ${
+              viewMode === "split" ? "lg:grid-cols-2" : "grid-cols-1"
+            }`}
+          >
             {/* Editor */}
-            {(viewMode === 'edit' || viewMode === 'split') && (
+            {(viewMode === "edit" || viewMode === "split") && (
               <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-gray-700">
                 <CardHeader>
                   <div className="flex items-center justify-between">
@@ -802,15 +937,29 @@ That's the basics! Happy writing! ✨`
                     <div className="flex space-x-2">
                       {markdown && (
                         <>
-                          <Button variant="outline" size="sm" onClick={() => copyToClipboard(markdown, 'Markdown')}>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() =>
+                              copyToClipboard(markdown, "Markdown")
+                            }
+                          >
                             <Copy className="h-4 w-4 mr-2" />
                             Copy
                           </Button>
-                          <Button variant="outline" size="sm" onClick={downloadMarkdown}>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={downloadMarkdown}
+                          >
                             <Download className="h-4 w-4 mr-2" />
                             .md
                           </Button>
-                          <Button variant="outline" size="sm" onClick={shareResult}>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={shareResult}
+                          >
                             <Share2 className="h-4 w-4 mr-2" />
                             Share
                           </Button>
@@ -844,14 +993,17 @@ console.log('Code blocks too!');
                     className="min-h-[500px] resize-none font-mono text-sm bg-white dark:bg-slate-900 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
                   />
                   <div className="flex justify-between items-center text-xs text-gray-500 dark:text-gray-400 mt-2">
-                    <span>Characters: {stats.characters} | Words: {stats.words} | Lines: {stats.lines}</span>
+                    <span>
+                      Characters: {stats.characters} | Words: {stats.words} |
+                      Lines: {stats.lines}
+                    </span>
                   </div>
                 </CardContent>
               </Card>
             )}
 
             {/* Preview */}
-            {(viewMode === 'preview' || viewMode === 'split') && (
+            {(viewMode === "preview" || viewMode === "split") && (
               <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-gray-700">
                 <CardHeader>
                   <div className="flex items-center justify-between">
@@ -862,11 +1014,19 @@ console.log('Code blocks too!');
                     <div className="flex space-x-2">
                       {html && (
                         <>
-                          <Button variant="outline" size="sm" onClick={() => copyToClipboard(html, 'HTML')}>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => copyToClipboard(html, "HTML")}
+                          >
                             <Copy className="h-4 w-4 mr-2" />
                             HTML
                           </Button>
-                          <Button variant="outline" size="sm" onClick={downloadHTML}>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={downloadHTML}
+                          >
                             <Download className="h-4 w-4 mr-2" />
                             .html
                           </Button>
@@ -881,7 +1041,7 @@ console.log('Code blocks too!');
                 <CardContent>
                   <div className="min-h-[500px] max-h-[600px] overflow-y-auto">
                     {html ? (
-                      <div 
+                      <div
                         className="prose prose-sm max-w-none dark:prose-invert"
                         dangerouslySetInnerHTML={{ __html: html }}
                       />
@@ -913,7 +1073,11 @@ console.log('Code blocks too!');
                     size="sm"
                     onClick={() => setShowTOC(!showTOC)}
                   >
-                    {showTOC ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                    {showTOC ? (
+                      <EyeOff className="h-4 w-4" />
+                    ) : (
+                      <Eye className="h-4 w-4" />
+                    )}
                   </Button>
                 </div>
               </CardHeader>
@@ -924,9 +1088,13 @@ console.log('Code blocks too!');
                       <div
                         key={index}
                         className="text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded px-2 py-1 cursor-pointer"
-                        style={{ paddingLeft: `${(item.level - 1) * 12 + 8}px` }}
+                        style={{
+                          paddingLeft: `${(item.level - 1) * 12 + 8}px`,
+                        }}
                       >
-                        <span className="text-gray-700 dark:text-gray-300">{item.text}</span>
+                        <span className="text-gray-700 dark:text-gray-300">
+                          {item.text}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -953,42 +1121,72 @@ console.log('Code blocks too!');
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <div className="text-center p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.characters}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Characters</div>
+                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                  {stats.characters}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Characters
+                </div>
               </div>
               <div className="text-center p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-green-600 dark:text-green-400">{stats.words}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Words</div>
+                <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                  {stats.words}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Words
+                </div>
               </div>
               <div className="text-center p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{stats.lines}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Lines</div>
+                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                  {stats.lines}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Lines
+                </div>
               </div>
               <div className="text-center p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">{stats.paragraphs}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Paragraphs</div>
+                <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                  {stats.paragraphs}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Paragraphs
+                </div>
               </div>
               <div className="text-center p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-red-600 dark:text-red-400">{stats.headings}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Headings</div>
+                <div className="text-2xl font-bold text-red-600 dark:text-red-400">
+                  {stats.headings}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Headings
+                </div>
               </div>
               <div className="text-center p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg">
-                <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">{stats.links}</div>
-                <div className="text-xs text-gray-600 dark:text-gray-400">Links</div>
+                <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+                  {stats.links}
+                </div>
+                <div className="text-xs text-gray-600 dark:text-gray-400">
+                  Links
+                </div>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-3 gap-4 mt-4">
               <div className="flex justify-between items-center p-2 bg-gray-50 dark:bg-slate-900 rounded">
-                <span className="text-sm text-gray-600 dark:text-gray-400">Images:</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  Images:
+                </span>
                 <Badge variant="outline">{stats.images}</Badge>
               </div>
               <div className="flex justify-between items-center p-2 bg-gray-50 dark:bg-slate-900 rounded">
-                <span className="text-sm text-gray-600 dark:text-gray-400">Code blocks:</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  Code blocks:
+                </span>
                 <Badge variant="outline">{stats.codeBlocks}</Badge>
               </div>
               <div className="flex justify-between items-center p-2 bg-gray-50 dark:bg-slate-900 rounded">
-                <span className="text-sm text-gray-600 dark:text-gray-400">Tables:</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  Tables:
+                </span>
                 <Badge variant="outline">{stats.tables}</Badge>
               </div>
             </div>
@@ -1008,32 +1206,46 @@ console.log('Code blocks too!');
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-4">
-              <h4 className="font-medium text-gray-900 dark:text-white">Preview Options</h4>
+              <h4 className="font-medium text-gray-900 dark:text-white">
+                Preview Options
+              </h4>
               <div className="space-y-3">
                 <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-slate-900 rounded-lg">
                   <div className="flex items-center space-x-3">
                     <Checkbox
                       id="syntax-highlight"
                       checked={enableSyntaxHighlight}
-                      onCheckedChange={setEnableSyntaxHighlight}
+                      onCheckedChange={(checked) =>
+                        setEnableSyntaxHighlight(Boolean(checked))
+                      }
                     />
-                    <label htmlFor="syntax-highlight" className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
+                    <label
+                      htmlFor="syntax-highlight"
+                      className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
+                    >
                       Syntax highlighting
                     </label>
                   </div>
-                  <Badge variant={enableSyntaxHighlight ? "default" : "outline"}>
+                  <Badge
+                    variant={enableSyntaxHighlight ? "default" : "outline"}
+                  >
                     {enableSyntaxHighlight ? "On" : "Off"}
                   </Badge>
                 </div>
-                
+
                 <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-slate-900 rounded-lg">
                   <div className="flex items-center space-x-3">
                     <Checkbox
                       id="tables"
                       checked={enableTables}
-                      onCheckedChange={setEnableTables}
+                      onCheckedChange={(checked) =>
+                        setEnableTables(Boolean(checked))
+                      }
                     />
-                    <label htmlFor="tables" className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
+                    <label
+                      htmlFor="tables"
+                      className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
+                    >
                       Table support
                     </label>
                   </div>
@@ -1041,15 +1253,20 @@ console.log('Code blocks too!');
                     {enableTables ? "On" : "Off"}
                   </Badge>
                 </div>
-                
+
                 <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-slate-900 rounded-lg">
                   <div className="flex items-center space-x-3">
                     <Checkbox
                       id="task-lists"
                       checked={enableTaskLists}
-                      onCheckedChange={setEnableTaskLists}
+                      onCheckedChange={(checked) =>
+                        setEnableTaskLists(Boolean(checked))
+                      }
                     />
-                    <label htmlFor="task-lists" className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer">
+                    <label
+                      htmlFor="task-lists"
+                      className="text-sm text-gray-700 dark:text-gray-300 cursor-pointer"
+                    >
                       Task lists
                     </label>
                   </div>
@@ -1061,13 +1278,25 @@ console.log('Code blocks too!');
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-medium text-gray-900 dark:text-white">Export Options</h4>
+              <h4 className="font-medium text-gray-900 dark:text-white">
+                Export Options
+              </h4>
               <div className="grid grid-cols-2 gap-3">
-                <Button variant="outline" className="w-full" onClick={downloadMarkdown} disabled={!markdown}>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={downloadMarkdown}
+                  disabled={!markdown}
+                >
                   <Download className="h-4 w-4 mr-2" />
                   Download .md
                 </Button>
-                <Button variant="outline" className="w-full" onClick={downloadHTML} disabled={!html}>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={downloadHTML}
+                  disabled={!html}
+                >
                   <Download className="h-4 w-4 mr-2" />
                   Export .html
                 </Button>
@@ -1084,23 +1313,40 @@ console.log('Code blocks too!');
         </CardHeader>
         <CardContent className="prose prose-sm max-w-none">
           <p className="text-gray-600 dark:text-gray-300">
-            Markdown is a lightweight markup language that allows you to format text using simple syntax. 
-            It's widely used for documentation, README files, and content creation.
+            Markdown is a lightweight markup language that allows you to format
+            text using simple syntax. It`&apos;`s widely used for documentation,
+            README files, and content creation.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-6">
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Basic Syntax:</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Basic Syntax:
+              </h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                <li>• <code># Header</code> - Headers</li>
-                <li>• <code>**bold**</code> - Bold text</li>
-                <li>• <code>*italic*</code> - Italic text</li>
-                <li>• <code>`code`</code> - Inline code</li>
-                <li>• <code>- item</code> - Lists</li>
-                <li>• <code>[link](url)</code> - Links</li>
+                <li>
+                  • <code># Header</code> - Headers
+                </li>
+                <li>
+                  • <code>**bold**</code> - Bold text
+                </li>
+                <li>
+                  • <code>*italic*</code> - Italic text
+                </li>
+                <li>
+                  • <code>`code`</code> - Inline code
+                </li>
+                <li>
+                  • <code>- item</code> - Lists
+                </li>
+                <li>
+                  • <code>[link](url)</code> - Links
+                </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Advanced Features:</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Advanced Features:
+              </h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Tables with pipes</li>
                 <li>• Code blocks with syntax highlighting</li>
@@ -1111,7 +1357,9 @@ console.log('Code blocks too!');
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Export Options:</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Export Options:
+              </h4>
               <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
                 <li>• Download as Markdown (.md)</li>
                 <li>• Export as HTML (.html)</li>
@@ -1130,7 +1378,13 @@ console.log('Code blocks too!');
 
 export default function MarkdownPage() {
   return (
-    <Suspense fallback={<div className="flex justify-center py-12"><div className="animate-spin h-8 w-8 border-2 border-blue-600 border-t-transparent rounded-full"></div></div>}>
+    <Suspense
+      fallback={
+        <div className="flex justify-center py-12">
+          <div className="animate-spin h-8 w-8 border-2 border-blue-600 border-t-transparent rounded-full"></div>
+        </div>
+      }
+    >
       <MarkdownTool />
     </Suspense>
   );
