@@ -139,6 +139,34 @@ export const tools: Tool[] = [
     ],
   },
   {
+    name: "Image to PDF",
+    description:
+      "Convert multiple images to a single PDF document. Upload JPG, PNG, GIF, WebP and other formats, reorder them, and create a custom PDF.",
+    href: "/tools/image-to-pdf",
+    icon: FileText,
+    status: "Available",
+    gradient: "from-purple-500 to-pink-500",
+    category: "Documents",
+    features: [
+      "Multiple image formats",
+      "Drag & drop reordering",
+      "Custom page sizes",
+      "Quality control",
+    ],
+    keywords: [
+      "image",
+      "pdf",
+      "convert",
+      "jpg",
+      "png",
+      "gif",
+      "webp",
+      "merge",
+      "combine",
+      "create",
+    ],
+  },
+  {
     name: "Base64 Encoder/Decoder",
     description:
       "Encode and decode Base64 strings with real-time conversion and URL sharing support.",

@@ -288,14 +288,6 @@ export default function PdfToImagePage() {
                   )}
                 </CardTitle>
                 <div className="flex space-x-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => fileInputRef.current?.click()}
-                  >
-                    <Upload className="h-4 w-4 mr-2" />
-                    Upload PDF
-                  </Button>
                   {pdfFile && (
                     <Button variant="outline" size="sm" onClick={clearFile}>
                       <RotateCcw className="h-4 w-4 mr-2" />
