@@ -17,6 +17,7 @@ import {
   MapPin,
   BookOpen,
   FileImage,
+  QrCode,
 } from "lucide-react";
 
 export interface Tool {
@@ -476,6 +477,34 @@ export const tools: Tool[] = [
       "job",
       "task",
       "automation",
+    ],
+  },
+  {
+    name: "QR Code Generator",
+    description:
+      "Generate QR codes from text, URLs, or data with customizable options and shareable links.",
+    href: "/tools/qr-code",
+    icon: QrCode,
+    status: "Available",
+    gradient: "from-purple-500 to-pink-500",
+    category: "Encoding",
+    features: [
+      "Custom text/URL input",
+      "Multiple size options",
+      "Error correction levels",
+      "Shareable URLs",
+    ],
+    keywords: [
+      "qr",
+      "qr code",
+      "generator",
+      "barcode",
+      "scan",
+      "mobile",
+      "share",
+      "url",
+      "text",
+      "encode",
     ],
   },
 ];
