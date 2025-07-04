@@ -1,18 +1,10 @@
 "use client";
 
-import { useState, useRef, useCallback, useEffect } from "react";
-import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
 import {
   Select,
   SelectContent,
@@ -21,482 +13,557 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
   Upload,
   FileText,
-  FileImage,
+  Image as ImageIcon,
   Download,
   RotateCcw,
-  Archive,
+  Settings,
   CheckCircle,
   AlertTriangle,
+  FileCheck,
+  Archive,
 } from "lucide-react";
 import { toast } from "sonner";
-import JSZip from "jszip";
+import { cn } from "@/lib/utils";
 
-// Types
-type ImageFormat = "png" | "jpeg" | "webp";
-type ImageQuality = "low" | "medium" | "high" | "maximum";
+type ImageFormat = "image/png" | "image/jpeg" | "image/webp";
 
-interface ConvertedImage {
-  pageNumber: number;
-  dataUrl: string;
-  blob: Blob;
-  filename: string;
-}
-
-const formatOptions = [
-  { value: "png", label: "PNG", description: "Best quality, larger file size" },
-  {
-    value: "jpeg",
-    label: "JPEG",
-    description: "Good quality, smaller file size",
-  },
-  {
-    value: "webp",
-    label: "WebP",
-    description: "Modern format, excellent compression",
-  },
-];
-
-const qualityOptions = [
-  { value: "low", label: "Low (72 DPI)", scale: 0.5 },
-  { value: "medium", label: "Medium (150 DPI)", scale: 1.0 },
-  { value: "high", label: "High (300 DPI)", scale: 2.0 },
-  { value: "maximum", label: "Maximum (600 DPI)", scale: 4.0 },
-];
-
-// PDF.js types for TypeScript
+// Type definitions for PDF.js loaded from CDN
 declare global {
   interface Window {
     pdfjsLib: any;
   }
 }
 
-export default function PDFToImageConverter() {
+interface PDFDocumentProxy {
+  numPages: number;
+  getPage(pageNumber: number): Promise<any>;
+}
+
+interface RenderTask {
+  promise: Promise<void>;
+}
+
+export default function PdfToImagePage() {
   const [pdfFile, setPdfFile] = useState<File | null>(null);
-  const [convertedImages, setConvertedImages] = useState<ConvertedImage[]>([]);
+  const [imageFormat, setImageFormat] = useState<ImageFormat>("image/png");
+  const [quality, setQuality] = useState(0.92);
+  const [images, setImages] = useState<string[]>([]);
+  const [progress, setProgress] = useState(0);
   const [isConverting, setIsConverting] = useState(false);
-  const [conversionProgress, setConversionProgress] = useState(0);
-  const [selectedFormat, setSelectedFormat] = useState<ImageFormat>("png");
-  const [selectedQuality, setSelectedQuality] = useState<ImageQuality>(
-    "medium"
-  );
-  const [totalPages, setTotalPages] = useState(0);
-  const [pdfjsLoaded, setPdfjsLoaded] = useState(false);
-  const [isLoadingPdfjs, setIsLoadingPdfjs] = useState(false);
+  const [pdfDoc, setPdfDoc] = useState<PDFDocumentProxy | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const jszipRef = useRef<any>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Load PDF.js only when needed
-  const loadPdfjs = useCallback(async () => {
-    if (typeof window === "undefined") return false;
+  // Format file size
+  const formatFileSize = (bytes: number): string => {
+    if (bytes === 0) return "0 Bytes";
+    const k = 1024;
+    const sizes = ["Bytes", "KB", "MB", "GB"];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+  };
 
-    if (window.pdfjsLib) {
-      setPdfjsLoaded(true);
-      return true;
-    }
-
-    setIsLoadingPdfjs(true);
-
-    try {
-      // Load PDF.js library
-      await new Promise<void>((resolve, reject) => {
+  useEffect(() => {
+    // Load PDF.js from CDN
+    const loadPdfJs = async () => {
+      if (typeof window !== "undefined" && !window.pdfjsLib) {
+        // Load PDF.js library
         const script = document.createElement("script");
         script.src =
           "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
-        script.onload = () => resolve();
-        script.onerror = () => reject(new Error("Failed to load PDF.js"));
+        script.async = true;
+        script.onload = () => {
+          if (window.pdfjsLib) {
+            // Set the worker source
+            window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+              "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+          }
+        };
         document.head.appendChild(script);
-      });
-
-      // Setup worker
-      if (window.pdfjsLib) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc =
-          "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
-        setPdfjsLoaded(true);
-        return true;
       }
+    };
 
-      return false;
-    } catch (error) {
-      console.error("Failed to load PDF.js:", error);
-      toast.error("Failed to load PDF.js library");
-      return false;
-    } finally {
-      setIsLoadingPdfjs(false);
-    }
+    loadPdfJs();
+
+    // Dynamically import JSZip on the client side
+    import("jszip").then((zip) => {
+      jszipRef.current = zip.default;
+    });
   }, []);
 
-  const handleFileInputChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.[0];
-      if (file) {
-        if (file.type !== "application/pdf") {
-          toast.error("Please upload a valid PDF file");
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (files && files.length > 0) {
+      await handleFileUpload(files[0]);
+    }
+  };
+
+  const handleFileUpload = async (file: File) => {
+    if (file && file.type === "application/pdf") {
+      setIsLoading(true);
+      setPdfFile(file);
+      setImages([]);
+      setProgress(0);
+
+      try {
+        if (!window.pdfjsLib) {
+          toast.error("PDF.js is still loading. Please try again in a moment.");
           return;
         }
 
-        if (file.size > 50 * 1024 * 1024) {
-          toast.error("File size must be less than 50MB");
-          return;
-        }
-
-        setPdfFile(file);
-        setConvertedImages([]);
-        setTotalPages(0);
-        toast.success("PDF uploaded successfully");
+        const arrayBuffer = await file.arrayBuffer();
+        const loadingTask = window.pdfjsLib.getDocument({ data: arrayBuffer });
+        const pdf = await loadingTask.promise;
+        setPdfDoc(pdf);
+        toast.success(`PDF loaded: ${file.name} (${pdf.numPages} pages)`);
+      } catch (error) {
+        console.error("Error loading PDF:", error);
+        toast.error(
+          "Failed to load PDF file. It might be corrupted or protected."
+        );
+        setPdfFile(null);
+        setPdfDoc(null);
+      } finally {
+        setIsLoading(false);
       }
-    },
-    []
-  );
+    } else {
+      toast.error("Please select a valid PDF file.");
+      setPdfFile(null);
+      setPdfDoc(null);
+    }
+  };
 
-  const convertPDFToImages = async () => {
-    if (!pdfFile) return;
+  // Handle drag and drop
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+      handleFileUpload(files[0]);
+    }
+  };
 
-    // Load PDF.js if not already loaded
-    if (!pdfjsLoaded) {
-      const loaded = await loadPdfjs();
-      if (!loaded) {
-        toast.error("Failed to load PDF.js library");
-        return;
-      }
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+  };
+
+  // Clear file
+  const clearFile = () => {
+    setPdfFile(null);
+    setPdfDoc(null);
+    setImages([]);
+    setProgress(0);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+    toast.success("PDF cleared");
+  };
+
+  const convertPdfToImages = async () => {
+    if (!pdfDoc || !pdfFile) {
+      toast.error("Please load a PDF file first.");
+      return;
     }
 
     setIsConverting(true);
-    setConversionProgress(0);
-    setConvertedImages([]);
+    setProgress(0);
+    setImages([]);
+    const convertedImages: string[] = [];
 
     try {
-      const arrayBuffer = await pdfFile.arrayBuffer();
-      const pdf = await window.pdfjsLib.getDocument({ data: arrayBuffer })
-        .promise;
-      const numPages = pdf.numPages;
-      setTotalPages(numPages);
-
-      const images: ConvertedImage[] = [];
-      const quality = qualityOptions.find((q) => q.value === selectedQuality);
-      const scale = quality?.scale || 1.0;
-
-      for (let pageNum = 1; pageNum <= numPages; pageNum++) {
-        const page = await pdf.getPage(pageNum);
-        const viewport = page.getViewport({ scale });
-
+      for (let i = 1; i <= pdfDoc.numPages; i++) {
+        const page = await pdfDoc.getPage(i);
+        const viewport = page.getViewport({ scale: 2 });
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d");
         canvas.height = viewport.height;
         canvas.width = viewport.width;
 
         if (context) {
-          await page.render({
+          const renderContext = {
             canvasContext: context,
             viewport: viewport,
-          }).promise;
-
-          const blob = await new Promise<Blob>((resolve) => {
-            canvas.toBlob(
-              (blob) => resolve(blob!),
-              `image/${selectedFormat}`,
-              selectedFormat === "jpeg" ? 0.9 : undefined
-            );
-          });
-
-          const dataUrl = canvas.toDataURL(
-            `image/${selectedFormat}`,
-            selectedFormat === "jpeg" ? 0.9 : undefined
-          );
-
-          const filename = `${pdfFile.name.replace(
-            ".pdf",
-            ""
-          )}_page_${pageNum}.${selectedFormat}`;
-
-          images.push({
-            pageNumber: pageNum,
-            dataUrl,
-            blob,
-            filename,
-          });
+          };
+          const renderTask: RenderTask = page.render(renderContext);
+          await renderTask.promise;
+          convertedImages.push(canvas.toDataURL(imageFormat, quality));
         }
 
-        setConversionProgress((pageNum / numPages) * 100);
+        const currentProgress = (i / pdfDoc.numPages) * 100;
+        setProgress(currentProgress);
       }
-
-      setConvertedImages(images);
-      toast.success(
-        `Successfully converted ${numPages} page(s) to ${selectedFormat.toUpperCase()}`
-      );
+      setImages(convertedImages);
+      toast.success(`Successfully converted ${pdfDoc.numPages} pages.`);
     } catch (error) {
       console.error("Error converting PDF:", error);
-      toast.error("Failed to convert PDF to images");
+      toast.error("An error occurred during conversion.");
     } finally {
       setIsConverting(false);
+      setProgress(100);
     }
   };
 
-  const downloadSingleImage = (image: ConvertedImage) => {
-    const link = document.createElement("a");
-    link.href = image.dataUrl;
-    link.download = image.filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const downloadImages = async () => {
+    if (images.length === 0) return;
 
-  const downloadAllAsZip = async () => {
-    if (convertedImages.length === 0) return;
-
-    try {
-      const zip = new JSZip();
-
-      convertedImages.forEach((image) => {
-        zip.file(image.filename, image.blob);
-      });
-
-      const zipBlob = await zip.generateAsync({ type: "blob" });
+    if (images.length === 1) {
       const link = document.createElement("a");
-      link.href = URL.createObjectURL(zipBlob);
-      link.download = `${pdfFile?.name.replace(".pdf", "")}_images.zip`;
+      link.href = images[0];
+      const fileExtension = imageFormat.split("/")[1];
+      link.download = `${
+        pdfFile?.name.replace(".pdf", "") || "image"
+      }.${fileExtension}`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    } else {
+      if (!jszipRef.current) {
+        toast.error(
+          "ZIP library not loaded yet. Please try again in a moment."
+        );
+        return;
+      }
+      const JSZip = jszipRef.current;
+      const zip = new JSZip();
+      images.forEach((imgData, i) => {
+        const fileExtension = imageFormat.split("/")[1];
+        const fileName = `${pdfFile?.name.replace(".pdf", "") || "page"}_${
+          i + 1
+        }.${fileExtension}`;
+        zip.file(fileName, imgData.split(",")[1], { base64: true });
+      });
 
-      toast.success("ZIP file downloaded successfully");
-    } catch (error) {
-      console.error("Error creating ZIP:", error);
-      toast.error("Failed to create ZIP file");
-    }
-  };
-
-  const resetConverter = () => {
-    setPdfFile(null);
-    setConvertedImages([]);
-    setTotalPages(0);
-    setConversionProgress(0);
-    if (fileInputRef.current) {
-      fileInputRef.current.value = "";
+      try {
+        const content = await zip.generateAsync({ type: "blob" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(content);
+        link.download = `${pdfFile?.name.replace(".pdf", "") || "images"}.zip`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(link.href);
+      } catch (error) {
+        console.error("Error creating ZIP file:", error);
+        toast.error("Failed to create ZIP file.");
+      }
     }
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">PDF to Image Converter</h1>
-        <p className="text-gray-600 dark:text-gray-400">
-          Convert PDF pages to images in various formats. Perfect for extracting
-          charts, diagrams, or creating image previews. All processing happens
-          in your browser.
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="text-center mb-8">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          PDF to Image Converter
+        </h1>
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Convert your PDF pages to high-quality images in PNG, JPEG, or WebP
+          format. All processing happens in your browser for complete privacy.
         </p>
       </div>
 
-      <div className="grid gap-6">
+      <div className="grid lg:grid-cols-3 gap-8">
         {/* Upload Section */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Upload className="h-5 w-5" />
-              Upload PDF File
-            </CardTitle>
-            <CardDescription>
-              Select a PDF file to convert to images. Maximum file size: 50MB
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="flex items-center justify-center w-full">
-              <label
-                htmlFor="pdf-upload"
-                className="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
-              >
-                <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                  <FileText className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" />
-                  <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                    <span className="font-semibold">Click to upload</span> or
-                    drag and drop
-                  </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">
-                    PDF files only (MAX. 50MB)
-                  </p>
-                </div>
-                <input
-                  id="pdf-upload"
-                  ref={fileInputRef}
-                  type="file"
-                  className="hidden"
-                  accept=".pdf"
-                  onChange={handleFileInputChange}
-                />
-              </label>
-            </div>
-
-            {pdfFile && (
-              <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <FileText className="h-4 w-4 text-blue-600" />
-                    <span className="text-sm font-medium">{pdfFile.name}</span>
-                    <Badge variant="secondary">
-                      {(pdfFile.size / (1024 * 1024)).toFixed(2)} MB
+        <div className="lg:col-span-2">
+          <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-gray-700">
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <CardTitle className="flex items-center space-x-2 dark:text-white">
+                  <FileText className="h-5 w-5" />
+                  <span>PDF File</span>
+                  {pdfFile && (
+                    <Badge variant="outline">
+                      {pdfDoc?.numPages || 0} page
+                      {pdfDoc?.numPages !== 1 ? "s" : ""}
                     </Badge>
-                  </div>
-                  <Button variant="outline" size="sm" onClick={resetConverter}>
-                    <RotateCcw className="h-4 w-4 mr-2" />
-                    Reset
+                  )}
+                </CardTitle>
+                <div className="flex space-x-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => fileInputRef.current?.click()}
+                  >
+                    <Upload className="h-4 w-4 mr-2" />
+                    Upload PDF
                   </Button>
+                  {pdfFile && (
+                    <Button variant="outline" size="sm" onClick={clearFile}>
+                      <RotateCcw className="h-4 w-4 mr-2" />
+                      Clear
+                    </Button>
+                  )}
                 </div>
               </div>
-            )}
-          </CardContent>
-        </Card>
-
-        {/* Settings Section */}
-        {pdfFile && (
-          <Card>
-            <CardHeader>
-              <CardTitle>Conversion Settings</CardTitle>
-              <CardDescription>
-                Choose output format and quality settings
+              <CardDescription className="dark:text-gray-300">
+                Upload a PDF file to convert its pages to images. Choose your
+                preferred format and quality settings.
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="format-select">Output Format</Label>
-                  <Select
-                    value={selectedFormat}
-                    onValueChange={(value: ImageFormat) =>
-                      setSelectedFormat(value)
-                    }
-                  >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {formatOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          <div>
-                            <div className="font-medium">{option.label}</div>
-                            <div className="text-xs text-gray-500">
-                              {option.description}
-                            </div>
-                          </div>
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+            <CardContent>
+              {/* File Input */}
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="application/pdf"
+                onChange={handleFileChange}
+                className="hidden"
+              />
+
+              {/* Drop Zone */}
+              {!pdfFile && (
+                <div
+                  className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-12 text-center hover:border-blue-400 dark:hover:border-blue-500 transition-colors cursor-pointer"
+                  onDrop={handleDrop}
+                  onDragOver={handleDragOver}
+                  onClick={() => fileInputRef.current?.click()}
+                >
+                  <Upload className="h-12 w-12 mx-auto mb-4 text-gray-400" />
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
+                    Upload PDF File
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                    Drag and drop a PDF file here, or click to browse
+                  </p>
+                  <Button variant="outline">
+                    <Upload className="h-4 w-4 mr-2" />
+                    Choose File
+                  </Button>
                 </div>
+              )}
 
-                <div>
-                  <Label htmlFor="quality-select">Quality</Label>
-                  <Select
-                    value={selectedQuality}
-                    onValueChange={(value: ImageQuality) =>
-                      setSelectedQuality(value)
-                    }
+              {/* File Info */}
+              {pdfFile && (
+                <div className="mb-6">
+                  <div
+                    className={cn(
+                      "flex items-center space-x-4 p-4 bg-gray-50 dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-gray-700",
+                      isLoading && "opacity-75"
+                    )}
                   >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {qualityOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
+                    <div className="flex items-center space-x-2 text-gray-400">
+                      <FileText className="h-5 w-5 text-red-600" />
+                    </div>
 
-              <Button
-                onClick={convertPDFToImages}
-                disabled={isConverting || isLoadingPdfjs}
-                className="w-full"
-                size="lg"
-              >
-                {isConverting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
-                    Converting...
-                  </>
-                ) : isLoadingPdfjs ? (
-                  <>
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current mr-2" />
-                    Loading PDF.js...
-                  </>
-                ) : (
-                  <>
-                    <FileImage className="h-4 w-4 mr-2" />
-                    Convert to Images
-                  </>
-                )}
-              </Button>
-
-              {isConverting && (
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span>Progress</span>
-                    <span>{Math.round(conversionProgress)}%</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center space-x-2 mb-1">
+                        <span className="font-medium text-gray-900 dark:text-white truncate">
+                          {pdfFile.name}
+                        </span>
+                        {isLoading && (
+                          <div className="animate-spin h-4 w-4 border-2 border-blue-600 border-t-transparent rounded-full"></div>
+                        )}
+                        {pdfDoc && (
+                          <FileCheck className="h-4 w-4 text-green-600" />
+                        )}
+                      </div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">
+                        {formatFileSize(pdfFile.size)}
+                        {pdfDoc &&
+                          ` • ${pdfDoc.numPages} page${
+                            pdfDoc.numPages !== 1 ? "s" : ""
+                          }`}
+                        {isLoading && " • Loading..."}
+                      </div>
+                    </div>
                   </div>
-                  <Progress value={conversionProgress} className="w-full" />
+                </div>
+              )}
+
+              {/* Conversion Progress */}
+              {isConverting && (
+                <div className="mb-6">
+                  <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
+                    <span>Converting pages to images...</span>
+                    <span>{Math.round(progress)}%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div
+                      className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                      style={{ width: `${progress}%` }}
+                    ></div>
+                  </div>
+                </div>
+              )}
+
+              {/* Image Gallery */}
+              {images.length > 0 && (
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white">
+                      Converted Images
+                    </h3>
+                    <Button
+                      onClick={downloadImages}
+                      className="flex items-center space-x-2"
+                    >
+                      {images.length > 1 ? (
+                        <>
+                          <Archive className="h-4 w-4" />
+                          <span>Download ZIP</span>
+                        </>
+                      ) : (
+                        <>
+                          <Download className="h-4 w-4" />
+                          <span>Download Image</span>
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {images.map((src, index) => (
+                      <div key={index} className="relative group">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={src}
+                          alt={`Page ${index + 1}`}
+                          className="rounded-lg border border-gray-200 dark:border-gray-700 w-full h-auto hover:shadow-md transition-shadow"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xs text-center py-1 rounded-b-lg">
+                          Page {index + 1}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </CardContent>
           </Card>
-        )}
+        </div>
 
-        {/* Results Section */}
-        {convertedImages.length > 0 && (
-          <Card>
+        {/* Settings Sidebar */}
+        <div className="lg:col-span-1">
+          <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-gray-700">
             <CardHeader>
-              <div className="flex items-center justify-between">
-                <div>
-                  <CardTitle className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
-                    Converted Images
-                  </CardTitle>
-                  <CardDescription>
-                    {convertedImages.length} image(s) ready for download
-                  </CardDescription>
-                </div>
-                {convertedImages.length > 1 && (
-                  <Button onClick={downloadAllAsZip} variant="outline">
-                    <Archive className="h-4 w-4 mr-2" />
-                    Download ZIP
-                  </Button>
-                )}
-              </div>
+              <CardTitle className="flex items-center space-x-2 dark:text-white">
+                <Settings className="h-5 w-5" />
+                <span>Conversion Settings</span>
+              </CardTitle>
+              <CardDescription className="dark:text-gray-300">
+                Configure image format and quality settings
+              </CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {convertedImages.map((image) => (
-                  <div key={image.pageNumber} className="border rounded-lg p-4">
-                    <div className="aspect-square mb-2 bg-gray-100 rounded overflow-hidden">
-                      <Image
-                        src={image.dataUrl}
-                        alt={`Page ${image.pageNumber}`}
-                        width={300}
-                        height={300}
-                        className="w-full h-full object-contain"
-                        unoptimized
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <p className="text-sm font-medium">
-                        Page {image.pageNumber}
-                      </p>
-                      <Button
-                        onClick={() => downloadSingleImage(image)}
-                        size="sm"
-                        className="w-full"
-                      >
-                        <Download className="h-4 w-4 mr-2" />
-                        Download
-                      </Button>
-                    </div>
-                  </div>
-                ))}
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="image-format">Image Format</Label>
+                <Select
+                  value={imageFormat}
+                  onValueChange={(value) =>
+                    setImageFormat(value as ImageFormat)
+                  }
+                >
+                  <SelectTrigger id="image-format">
+                    <SelectValue placeholder="Select format" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="image/png">PNG</SelectItem>
+                    <SelectItem value="image/jpeg">JPEG</SelectItem>
+                    <SelectItem value="image/webp">WebP</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {(imageFormat === "image/jpeg" ||
+                imageFormat === "image/webp") && (
+                <div className="space-y-2">
+                  <Label htmlFor="quality">
+                    Quality ({Math.round(quality * 100)}%)
+                  </Label>
+                  <Input
+                    id="quality"
+                    type="range"
+                    min="0.1"
+                    max="1"
+                    step="0.01"
+                    value={quality}
+                    onChange={(e) => setQuality(parseFloat(e.target.value))}
+                  />
+                </div>
+              )}
+
+              <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                <Button
+                  onClick={convertPdfToImages}
+                  disabled={!pdfFile || isConverting || isLoading}
+                  className="w-full"
+                >
+                  {isConverting ? (
+                    <>
+                      <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full mr-2"></div>
+                      Converting...
+                    </>
+                  ) : (
+                    <>
+                      <ImageIcon className="h-4 w-4 mr-2" />
+                      Convert to Images
+                    </>
+                  )}
+                </Button>
               </div>
             </CardContent>
           </Card>
-        )}
+
+          {/* Info Panel */}
+          {pdfFile && (
+            <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-gray-700 mt-6">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2 dark:text-white">
+                  <FileText className="h-5 w-5" />
+                  <span>File Information</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-400">
+                      File name:
+                    </span>
+                    <span className="font-medium text-gray-900 dark:text-white truncate ml-2">
+                      {pdfFile.name}
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600 dark:text-gray-400">
+                      File size:
+                    </span>
+                    <span className="font-medium text-gray-900 dark:text-white">
+                      {formatFileSize(pdfFile.size)}
+                    </span>
+                  </div>
+                  {pdfDoc && (
+                    <div className="flex justify-between">
+                      <span className="text-gray-600 dark:text-gray-400">
+                        Pages:
+                      </span>
+                      <span className="font-medium text-gray-900 dark:text-white">
+                        {pdfDoc.numPages}
+                      </span>
+                    </div>
+                  )}
+                  {images.length > 0 && (
+                    <div className="flex justify-between">
+                      <span className="text-gray-600 dark:text-gray-400">
+                        Images:
+                      </span>
+                      <span className="font-medium text-gray-900 dark:text-white">
+                        {images.length}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          )}
+        </div>
       </div>
     </div>
   );
