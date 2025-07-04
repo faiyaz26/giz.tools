@@ -18,6 +18,7 @@ import {
   BookOpen,
   FileImage,
   QrCode,
+  KeyRound,
 } from "lucide-react";
 
 export interface Tool {
@@ -505,6 +506,34 @@ export const tools: Tool[] = [
       "url",
       "text",
       "encode",
+    ],
+  },
+  {
+    name: "UUID Generator",
+    description:
+      "Generate unique identifiers in multiple UUID versions including v1, v4, and v7 with bulk generation and shareable links.",
+    href: "/tools/uuid",
+    icon: KeyRound,
+    status: "Available",
+    gradient: "from-emerald-500 to-teal-500",
+    category: "Security",
+    features: [
+      "Multiple UUID versions",
+      "Bulk generation",
+      "Copy to clipboard",
+      "Shareable URLs",
+    ],
+    keywords: [
+      "uuid",
+      "guid",
+      "unique",
+      "identifier",
+      "generate",
+      "v1",
+      "v4",
+      "v7",
+      "random",
+      "security",
     ],
   },
 ];
