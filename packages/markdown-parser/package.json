@@ -1,0 +1,60 @@
+{
+  "name": "@giz-tools/markdown-parser",
+  "version": "1.0.0",
+  "description": "Markdown Parser for Husky CMS - Parse markdown files into structured JSON",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "parse-markdown": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "npm run build && node dist/cli.js",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Tests coming soon\"",
+    "parse:single": "npm run build && node dist/cli.js --file",
+    "parse:batch": "npm run build && node dist/cli.js --batch"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "commander": "^11.1.0",
+    "glob": "^10.3.10",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^20.5.0",
+    "@types/glob": "^8.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "markdown",
+    "parser",
+    "cms",
+    "typescript",
+    "cli",
+    "cheatsheet"
+  ],
+  "author": "Giz Tools",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/giz.tools.git",
+    "directory": "packages/markdown-parser"
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
