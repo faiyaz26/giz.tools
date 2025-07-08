@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import { Navigation } from "@/components/navigation";
@@ -9,6 +9,16 @@ import { CommandPalette } from "@/components/command-palette";
 import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#3B82F6" },
+    { media: "(prefers-color-scheme: dark)", color: "#1E40AF" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://giz.tools"),
@@ -57,11 +67,6 @@ export const metadata: Metadata = {
     telephone: false,
   },
   manifest: "/manifest.json",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#3B82F6" },
-    { media: "(prefers-color-scheme: dark)", color: "#1E40AF" },
-  ],
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
   robots: {
     index: true,
     follow: true,

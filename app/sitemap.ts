@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { tools } from "@/lib/tools-data";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://giz.tools";
 

@@ -13,6 +13,10 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
+  // Turbopack is now stable in Next.js 15
+  turbopack: {
+    // Turbopack configurations (if needed)
+  },
 };
 
 module.exports = nextConfig;
