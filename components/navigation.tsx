@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 const navigation = [
   { name: "Home", href: "/", icon: Home },
   { name: "Tools", href: "/tools", icon: Wrench },
+  { name: "Cheatsheets", href: "/cheatsheets", icon: Code2 },
   { name: "Articles", href: "/articles", icon: BookOpen },
 ];
 
@@ -33,6 +34,8 @@ export function Navigation() {
               const isActive =
                 pathname === item.href ||
                 (item.href === "/tools" && pathname.startsWith("/tools")) ||
+                (item.href === "/cheatsheets" &&
+                  pathname.startsWith("/cheatsheets")) ||
                 (item.href === "/articles" && pathname.startsWith("/articles"));
 
               return (

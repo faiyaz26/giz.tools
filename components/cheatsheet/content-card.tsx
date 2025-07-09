@@ -110,6 +110,9 @@ export const ContentCard: React.FC<ContentCardProps> = ({
                 th() {
                   return null; // Hide table header cells
                 },
+                pre({ children, ...props }) {
+                  return <pre {...props}>{children}</pre>;
+                },
                 code({ className, children, ...props }) {
                   const match = /language-(\w+)/.exec(className || "");
                   const language = match ? match[1] : "";

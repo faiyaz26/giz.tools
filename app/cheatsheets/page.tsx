@@ -100,14 +100,14 @@ const allCheatsheets = [...cheatsheets, ...placeholderCheatsheets];
 
 export default function CheatsheetIndexPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 mb-6">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-500 dark:to-purple-600 mb-6">
             Programming Cheatsheets
           </h1>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
             Quick reference guides for programming languages, tools, and
             technologies. Find syntax, examples, and essential concepts all in
             one place.
@@ -115,22 +115,56 @@ export default function CheatsheetIndexPage() {
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             <Badge
               variant="secondary"
-              className="text-blue-400 border-blue-400/20"
+              className="text-blue-600 border-blue-200 bg-blue-50 dark:text-blue-400 dark:border-blue-400/20 dark:bg-blue-400/10"
             >
               Quick Reference
             </Badge>
             <Badge
               variant="secondary"
-              className="text-green-400 border-green-400/20"
+              className="text-green-600 border-green-200 bg-green-50 dark:text-green-400 dark:border-green-400/20 dark:bg-green-400/10"
             >
               Copy-Paste Ready
             </Badge>
             <Badge
               variant="secondary"
-              className="text-purple-400 border-purple-400/20"
+              className="text-purple-600 border-purple-200 bg-purple-50 dark:text-purple-400 dark:border-purple-400/20 dark:bg-purple-400/10"
             >
               Syntax Highlighting
             </Badge>
+          </div>
+        </div>
+
+        {/* Source Attribution */}
+        <div className="text-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              className="border-gray-300 text-gray-600 hover:text-gray-800 hover:border-gray-400 dark:border-slate-700/50 dark:text-slate-400 dark:hover:text-slate-300 dark:hover:border-slate-600/50"
+            >
+              <a
+                href="https://github.com/Fechin/reference/tree/main"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source Repository
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              className="border-gray-300 text-gray-600 hover:text-gray-800 hover:border-gray-400 dark:border-slate-700/50 dark:text-slate-400 dark:hover:text-slate-300 dark:hover:border-slate-600/50"
+            >
+              <a
+                href="https://cheatsheets.zip/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Alternative Site
+              </a>
+            </Button>
           </div>
         </div>
 
@@ -144,9 +178,9 @@ export default function CheatsheetIndexPage() {
               <Card
                 key={index}
                 className={cn(
-                  "group relative overflow-hidden border-slate-800/50 bg-slate-900/50 backdrop-blur-sm transition-all duration-300 hover:scale-105",
+                  "group relative overflow-hidden border-gray-200 bg-white hover:shadow-xl transition-all duration-300 hover:scale-105 dark:border-slate-800/50 dark:bg-slate-900/50 dark:backdrop-blur-sm",
                   isAvailable
-                    ? "hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10"
+                    ? "hover:border-blue-300 hover:shadow-blue-100/50 dark:hover:border-blue-500/50 dark:hover:shadow-lg dark:hover:shadow-blue-500/10"
                     : "opacity-75"
                 )}
               >
@@ -170,23 +204,23 @@ export default function CheatsheetIndexPage() {
                       variant={isAvailable ? "default" : "secondary"}
                       className={cn(
                         isAvailable
-                          ? "bg-blue-600/20 text-blue-400 border-blue-500/30"
-                          : "bg-slate-700/50 text-slate-400 border-slate-600/30"
+                          ? "bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-600/20 dark:text-blue-400 dark:border-blue-500/30"
+                          : "bg-gray-100 text-gray-600 border-gray-200 dark:bg-slate-700/50 dark:text-slate-400 dark:border-slate-600/30"
                       )}
                     >
                       {sheet.badge}
                     </Badge>
                   </div>
-                  <CardTitle className="text-white group-hover:text-blue-400 transition-colors">
+                  <CardTitle className="text-gray-900 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400">
                     {sheet.title}
                   </CardTitle>
-                  <CardDescription className="text-slate-400 line-clamp-2">
+                  <CardDescription className="text-gray-600 line-clamp-2 dark:text-slate-400">
                     {sheet.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="relative">
                   <div className="space-y-3 mb-6">
-                    <h4 className="text-sm font-medium text-slate-300">
+                    <h4 className="text-sm font-medium text-gray-700 dark:text-slate-300">
                       Key Topics:
                     </h4>
                     <div className="flex flex-wrap gap-1">
@@ -194,7 +228,7 @@ export default function CheatsheetIndexPage() {
                         <Badge
                           key={itemIndex}
                           variant="outline"
-                          className="text-xs text-slate-400 border-slate-700/50"
+                          className="text-xs text-gray-600 border-gray-300 dark:text-slate-400 dark:border-slate-700/50"
                         >
                           {item}
                         </Badge>
@@ -217,25 +251,6 @@ export default function CheatsheetIndexPage() {
               </Card>
             );
           })}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-slate-900/50 border border-slate-800/50 rounded-2xl p-8 backdrop-blur-sm">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Missing a Cheatsheet?
-            </h2>
-            <p className="text-slate-400 mb-6 max-w-lg mx-auto">
-              Can&apos;t find the programming language or tool you&apos;re
-              looking for? Let us know and we&apos;ll add it to our collection.
-            </p>
-            <Button
-              variant="outline"
-              className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10 hover:border-blue-400"
-            >
-              Request Cheatsheet
-            </Button>
-          </div>
         </div>
       </div>
     </div>

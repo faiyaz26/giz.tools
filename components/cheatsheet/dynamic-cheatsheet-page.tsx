@@ -126,6 +126,40 @@ export const DynamicCheatsheetPage: React.FC<DynamicCheatsheetPageProps> = ({ ch
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
       {/* Header */}
       <CheatsheetHeader metadata={cheatsheet.metadata} />
+      
+      {/* Source Attribution */}
+      <div className="text-center mb-8">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className="border-slate-700/50 text-slate-400 hover:text-slate-300 hover:border-slate-600/50"
+          >
+            <a
+              href="https://github.com/Fechin/reference/tree/main"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Source Repository
+            </a>
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className="border-slate-700/50 text-slate-400 hover:text-slate-300 hover:border-slate-600/50"
+          >
+            <a
+              href="https://cheatsheets.zip/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Alternative Site
+            </a>
+          </Button>
+        </div>
+      </div>
         
       {/* Main content */}
       <div className="space-y-12">
