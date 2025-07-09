@@ -14,7 +14,8 @@
     "parser:dev": "npm run dev --workspace=packages/markdown-parser",
     "parser:example": "npm run dev --workspace=packages/markdown-parser -- example",
     "parse:python": "npm run dev --workspace=packages/markdown-parser -- example --pretty",
-    "parse:all-cheatsheets": "npm run dev --workspace=packages/markdown-parser -- batch 'app/cheatsheets/**/*.md' --pretty"
+    "parse:all-cheatsheets": "npm run dev --workspace=packages/markdown-parser -- batch 'app/cheatsheets/**/*.md' --pretty",
+    "parse:individual": "npm run build --workspace=packages/markdown-parser && cd packages/markdown-parser && node dist/cli.js individual \"examples/*.md\" -o ../../public/data/cheatsheets --index-output ../../public/data/cheatsheets-index.json --pretty"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

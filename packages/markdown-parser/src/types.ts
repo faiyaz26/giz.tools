@@ -70,3 +70,24 @@ export interface UnifiedCheatsheetData {
   createdAt: string;
   version: string;
 }
+
+// Individual cheatsheet interfaces
+export interface CheatsheetIndexItem {
+  id: string;
+  name: string;
+  description: string;
+  keywords: string[];
+  categories: string[];
+  status: "Available" | "Coming Soon";
+  gradient: string;
+  badge: string;
+  icon: string;
+  sections: string[];
+  lastUpdated: string;
+}
+
+export interface CheatsheetIndexData {
+  cheatsheets: CheatsheetIndexItem[];
+  createdAt: string;
+  version: string;
+}

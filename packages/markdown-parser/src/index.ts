@@ -15,6 +15,10 @@ export type {
   ParsedContent,
   ParserOptions,
   ParseResult,
+  UnifiedCheatsheetItem,
+  UnifiedCheatsheetData,
+  CheatsheetIndexItem,
+  CheatsheetIndexData,
 } from "./types.js";
 
 // Default export for convenience

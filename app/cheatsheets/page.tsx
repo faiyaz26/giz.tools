@@ -9,58 +9,34 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { getAllCheatsheets } from "@/lib/cheatsheet-data";
+import { getAllCheatsheetsServer } from "@/lib/cheatsheet-data-server";
 import { cn } from "@/lib/utils";
 
-// Load cheatsheets from unified data
-const availableCheatsheets = getAllCheatsheets();
+// Load cheatsheets from the new individual structure
+const availableCheatsheets = getAllCheatsheetsServer();
 
-// Create dynamic cheatsheet list based on unified data
+// Create dynamic cheatsheet list based on index data
 const cheatsheets = availableCheatsheets.map((cheatsheet) => {
   // Determine icon and color based on cheatsheet type
-  const getIcon = (id: string, categories: string[]) => {
-    if (categories.includes("Keyboard Shortcuts")) return Code;
-    if (categories.includes("Programming")) return Code;
-    return BookOpen;
-  };
-
-  const getColor = (id: string) => {
-    switch (id) {
-      case "python":
-        return "from-blue-500 to-indigo-600";
-      case "finder":
-        return "from-blue-500 to-cyan-600";
+  const getIcon = (iconName: string) => {
+    switch (iconName) {
+      case "Code":
+        return Code;
+      case "BookOpen":
+        return BookOpen;
       default:
-        return "from-gray-500 to-gray-600";
+        return Code;
     }
-  };
-
-  const getBadge = (id: string) => {
-    switch (id) {
-      case "python":
-        return "Popular";
-      case "finder":
-        return "New";
-      default:
-        return "Available";
-    }
-  };
-
-  // Extract key topics from sections
-  const getItems = (sections: any[]) => {
-    return sections.slice(0, 5).map((section) => section.title);
   };
 
   return {
-    title: cheatsheet.metadata.title,
-    description:
-      cheatsheet.metadata.intro ||
-      `Quick reference for ${cheatsheet.metadata.title}`,
+    title: cheatsheet.name,
+    description: cheatsheet.description,
     href: `/cheatsheets/${cheatsheet.id}`,
-    icon: getIcon(cheatsheet.id, cheatsheet.metadata.categories),
-    color: getColor(cheatsheet.id),
-    badge: getBadge(cheatsheet.id),
-    items: getItems(cheatsheet.sections),
+    icon: getIcon(cheatsheet.icon),
+    color: cheatsheet.gradient,
+    badge: cheatsheet.badge,
+    items: cheatsheet.sections.slice(0, 5), // Show first 5 sections
   };
 });
 
@@ -224,15 +200,17 @@ export default function CheatsheetIndexPage() {
                       Key Topics:
                     </h4>
                     <div className="flex flex-wrap gap-1">
-                      {sheet.items.slice(0, 5).map((item, itemIndex) => (
-                        <Badge
-                          key={itemIndex}
-                          variant="outline"
-                          className="text-xs text-gray-600 border-gray-300 dark:text-slate-400 dark:border-slate-700/50"
-                        >
-                          {item}
-                        </Badge>
-                      ))}
+                      {sheet.items
+                        .slice(0, 5)
+                        .map((item: string, itemIndex: number) => (
+                          <Badge
+                            key={itemIndex}
+                            variant="outline"
+                            className="text-xs text-gray-600 border-gray-300 dark:text-slate-400 dark:border-slate-700/50"
+                          >
+                            {item}
+                          </Badge>
+                        ))}
                     </div>
                   </div>
                   {isAvailable ? (

@@ -11,9 +11,9 @@ import { ContentCard } from '@/components/cheatsheet/content-card';
 import { ShortcutsCard } from '@/components/cheatsheet/shortcuts-card';
 import {
   parseSpanConfig, 
-  getCheatsheetById,
+  loadCheatsheet,
   type CheatsheetData,
-} from '@/lib/cheatsheet-data';
+} from '@/lib/cheatsheet-data-client';
 
 interface DynamicCheatsheetPageProps {
   cheatsheetId: string;
@@ -23,22 +23,40 @@ export const DynamicCheatsheetPage: React.FC<DynamicCheatsheetPageProps> = ({ ch
   const router = useRouter();
   const [cheatsheet, setCheatsheet] = useState<CheatsheetData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
   // Load cheatsheet data
   useEffect(() => {
-    setIsLoading(true);
-    const loadedCheatsheet = getCheatsheetById(cheatsheetId);
-    setCheatsheet(loadedCheatsheet);
-    setIsLoading(false);
-    
-    if (loadedCheatsheet && loadedCheatsheet.sections.length > 0) {
-      const firstSectionId = loadedCheatsheet.sections[0].title
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^a-z0-9-]/g, '');
-      setActiveSection(firstSectionId);
-    }
+    const loadCheatsheetData = async () => {
+      setIsLoading(true);
+      setNotFound(false);
+      try {
+        const loadedCheatsheet = await loadCheatsheet(cheatsheetId);
+        if (loadedCheatsheet === null) {
+          setNotFound(true);
+          setCheatsheet(null);
+        } else {
+          setCheatsheet(loadedCheatsheet);
+          
+          if (loadedCheatsheet.sections.length > 0) {
+            const firstSectionId = loadedCheatsheet.sections[0].title
+              .toLowerCase()
+              .replace(/\s+/g, '-')
+              .replace(/[^a-z0-9-]/g, '');
+            setActiveSection(firstSectionId);
+          }
+        }
+      } catch (error) {
+        console.error('Error loading cheatsheet:', error);
+        setCheatsheet(null);
+        setNotFound(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadCheatsheetData();
   }, [cheatsheetId]);
 
   // Function to navigate to a section and update URL
@@ -108,15 +126,27 @@ export const DynamicCheatsheetPage: React.FC<DynamicCheatsheetPageProps> = ({ ch
   }
 
   // If the cheatsheet is not found after loading, show an error message
-  if (!cheatsheet) {
+  if (notFound || !cheatsheet) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">Cheatsheet Not Found</h1>
-          <p className="text-slate-400">The requested cheatsheet could not be loaded.</p>
-          <Link href="/cheatsheets">
-            <Button className="mt-4">Back to Cheatsheets</Button>
-          </Link>
+        <div className="text-center max-w-md mx-auto px-4">
+          <div className="text-6xl mb-6">📚</div>
+          <h1 className="text-3xl font-bold text-white mb-4">Cheatsheet Not Found</h1>
+          <p className="text-slate-400 mb-6">
+            The cheatsheet &ldquo;{cheatsheetId}&rdquo; doesn&apos;t exist or couldn&apos;t be loaded.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/cheatsheets">
+              <Button className="w-full sm:w-auto">Browse All Cheatsheets</Button>
+            </Link>
+            <Button 
+              variant="outline" 
+              className="w-full sm:w-auto border-slate-700/50 text-slate-400 hover:text-slate-300 hover:border-slate-600/50"
+              onClick={() => router.back()}
+            >
+              Go Back
+            </Button>
+          </div>
         </div>
       </div>
     );

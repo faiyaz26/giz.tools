@@ -1,4 +1,4 @@
-import { MarkdownDocument, ParserOptions, ParseResult, UnifiedCheatsheetData } from "./types.js";
+import { MarkdownDocument, ParserOptions, ParseResult, UnifiedCheatsheetData, CheatsheetIndexData } from "./types.js";
 /**
  * Markdown Parser for Husky CMS
  * Parses markdown files and converts them to structured JSON format
@@ -69,5 +69,25 @@ export declare class MarkdownParser {
      * Convert unified cheatsheet data to JSON string
      */
     toUnifiedJSON(data: UnifiedCheatsheetData, indent?: number): string;
+    /**
+     * Parse multiple markdown files and create individual JSON files with index
+     */
+    parseIndividual(filePaths: string[], options?: ParserOptions, outputDir?: string, indexOutputPath?: string): Promise<CheatsheetIndexData>;
+    /**
+     * Generate keywords from cheatsheet content
+     */
+    private generateKeywords;
+    /**
+     * Get gradient based on cheatsheet ID
+     */
+    private getGradient;
+    /**
+     * Get badge based on cheatsheet ID
+     */
+    private getBadge;
+    /**
+     * Get icon based on categories
+     */
+    private getIcon;
 }
 //# sourceMappingURL=parser.d.ts.map

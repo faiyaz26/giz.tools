@@ -196,6 +196,53 @@ program
         process.exit(1);
     }
 });
+program
+    .command("individual <pattern>")
+    .description("Parse multiple markdown files and create individual JSON files with index")
+    .option("-o, --output-dir <path>", "Output directory for individual files (defaults to ./public/data/cheatsheets)")
+    .option("--index-output <path>", "Output path for index file (defaults to ./public/data/cheatsheets-index.json)")
+    .option("--no-metadata", "Skip metadata extraction")
+    .option("--no-code-blocks", "Do not preserve code block formatting")
+    .option("--no-span-config", "Do not extract span configuration")
+    .option("--pretty", "Pretty print JSON output")
+    .action(async (pattern, options) => {
+    try {
+        const parser = new MarkdownParser();
+        const parserOptions = {
+            includeMetadata: options.metadata !== false,
+            preserveCodeBlocks: options.codeBlocks !== false,
+            extractSpanConfig: options.spanConfig !== false,
+        };
+        console.log(chalk.blue(`📖 Finding files matching: ${pattern}`));
+        const files = await glob(pattern);
+        if (files.length === 0) {
+            console.log(chalk.yellow(`⚠️ No files found matching pattern: ${pattern}`));
+            return;
+        }
+        console.log(chalk.blue(`📖 Parsing ${files.length} files...`));
+        const outputDir = options.outputDir || "./public/data/cheatsheets";
+        const indexOutput = options.indexOutput || "./public/data/cheatsheets-index.json";
+        // Ensure output directory exists
+        if (!fs.existsSync(outputDir)) {
+            fs.mkdirSync(outputDir, { recursive: true });
+        }
+        const individualData = await parser.parseIndividual(files, parserOptions, outputDir, indexOutput);
+        console.log(chalk.green(`✅ Successfully created individual cheatsheet files in: ${outputDir}`));
+        console.log(chalk.green(`✅ Successfully created index file: ${indexOutput}`));
+        // Print summary
+        console.log(chalk.cyan("\n📊 Summary:"));
+        console.log(`   Total Cheatsheets: ${individualData.cheatsheets.length}`);
+        individualData.cheatsheets.forEach((cheatsheet, index) => {
+            console.log(`   ${index + 1}. ${cheatsheet.name} (${cheatsheet.id}.json)`);
+        });
+        console.log(`   Created: ${individualData.createdAt}`);
+        console.log(`   Version: ${individualData.version}`);
+    }
+    catch (error) {
+        console.error(chalk.red(`❌ Unexpected error: ${error}`));
+        process.exit(1);
+    }
+});
 // Handle case where no command is provided
 if (process.argv.length <= 2) {
     program.help();

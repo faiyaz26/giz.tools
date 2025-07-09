@@ -1,10 +1,10 @@
 import React from "react";
 import { DynamicCheatsheetPage } from "@/components/cheatsheet/dynamic-cheatsheet-page";
-import { getAllCheatsheets } from "@/lib/cheatsheet-data";
+import { getAllCheatsheetsServer } from "@/lib/cheatsheet-data-server";
 
 // Generate static params for all available cheatsheets
 export function generateStaticParams() {
-  const cheatsheets = getAllCheatsheets();
+  const cheatsheets = getAllCheatsheetsServer();
   return cheatsheets.map((cheatsheet) => ({
     id: cheatsheet.id,
   }));

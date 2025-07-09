@@ -1,0 +1,70 @@
+{
+  "cheatsheets": [
+    {
+      "id": "python",
+      "name": "Python",
+      "description": "The [Python](https://www.python.org/) cheat sheet is a one-page reference sheet for the Python 3 programming language.\n",
+      "keywords": [
+        "python",
+        "script",
+        "interpret",
+        "programming",
+        "getting",
+        "started",
+        "built-in",
+        "data",
+        "types",
+        "advanced"
+      ],
+      "categories": ["Programming"],
+      "status": "Available",
+      "gradient": "from-blue-500 to-indigo-600",
+      "badge": "Popular",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Python Built-in Data Types",
+        "Python Advanced Data Types",
+        "Python Strings",
+        "Python F-Strings (Since Python 3.6+)",
+        "Python Lists",
+        "Python Flow control",
+        "Python Loops",
+        "Python Comprehensions",
+        "Python Functions",
+        "Python Modules",
+        "Python File Handling",
+        "Python Classes & Inheritance",
+        "Python Type Hints (Since Python 3.5)",
+        "Python Operators",
+        "Date & Time Handling",
+        "Miscellaneous"
+      ],
+      "lastUpdated": "2025-07-09T13:50:55.198Z"
+    },
+    {
+      "id": "finder",
+      "name": "Finder",
+      "description": "A visual cheat-sheet for the 55 keyboard shortcuts found in Finder. This application is part of MacOS.\n",
+      "keywords": [
+        "finder",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": ["Keyboard Shortcuts"],
+      "status": "Available",
+      "gradient": "from-blue-500 to-cyan-600",
+      "badge": "New",
+      "icon": "Code",
+      "sections": ["Keyboard Shortcuts {.cols-2}", "Also see"],
+      "lastUpdated": "2025-07-09T13:50:55.199Z"
+    }
+  ],
+  "createdAt": "2025-07-09T13:50:55.199Z",
+  "version": "1.0.0"
+}

@@ -1,0 +1,1807 @@
+{
+  "id": "python",
+  "metadata": {
+    "title": "Python",
+    "date": "2020-12-23T18:41:20.000Z",
+    "background": "bg-[#436b97]",
+    "tags": [
+      "script",
+      "interpret"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "The [Python](https://www.python.org/) cheat sheet is a one-page reference sheet for the Python 3 programming language.\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "- [Python](https://www.python.org/) _(python.org)_\n- [Python Document](https://docs.python.org/3/index.html) _(docs.python.org)_\n- [Learn X in Y minutes](https://learnxinyminutes.com/docs/python/) _(learnxinyminutes.com)_\n- [Regex in python](/regex#regex-in-python) _(cheatsheets.zip)_",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Hello World",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hello World",
+              "body": "```python\n>>> print(\"Hello, World!\")\nHello, World!\n```",
+              "footer": "The famous \"Hello World\" program in Python",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```python\nage = 18      # age is of type int\nname = \"John\" # name is now of type str\nprint(name)\n```",
+              "footer": "Python can't declare a variable without assignment.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Data Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Data Types",
+              "body": "|                                    |          |\n| ---------------------------------- | -------- |\n| `str`                              | Text     |\n| `int`, `float`, `complex`          | Numeric  |\n| `list`, `tuple`, `range`           | Sequence |\n| `dict`                             | Mapping  |\n| `set`, `frozenset`                 | Set      |\n| `bool`                             | Boolean  |\n| `bytes`, `bytearray`, `memoryview` | Binary   |\n\nSee: [Data Types](#python-built-in-data-types)",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Slicing String",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Slicing String",
+              "body": "```python\n>>> msg = \"Hello, World!\"\n>>> print(msg[2:5])\nllo\n```",
+              "footer": "See: [Strings](#python-strings)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Lists",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Lists",
+              "body": "```python\nmylist = []\nmylist.append(1)\nmylist.append(2)\nfor item in mylist:\n    print(item) # prints out 1,2\n```",
+              "footer": "See: [Lists](#python-lists)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "If Else",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If Else",
+              "body": "```python\nnum = 200\nif num > 0:\n    print(\"num is greater than 0\")\nelse:\n    print(\"num is not greater than 0\")\n```",
+              "footer": "See: [Flow control](#python-flow-control)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loops",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loops",
+              "body": "```python\nfor item in range(6):\n    if item == 3: break\n    print(item)\nelse:\n    print(\"Finally finished!\")\n```",
+              "footer": "See: [Loops](#python-loops)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "```python\n>>> def my_function():\n...     print(\"Hello from a function\")\n...\n>>> my_function()\nHello from a function\n```",
+              "footer": "See: [Functions](#python-functions)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File Handling",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File Handling",
+              "body": "```python\nwith open(\"myfile.txt\", \"r\", encoding='utf8') as file:\n    for line in file:\n        print(line)\n```",
+              "footer": "See: [File Handling](#python-file-handling)",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arithmetic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arithmetic",
+              "body": "```python\nresult = 10 + 30 # => 40\nresult = 40 - 10 # => 30\nresult = 50 * 5  # => 250\nresult = 16 / 4  # => 4.0 (Float Division)\nresult = 16 // 4 # => 4 (Integer Division)\nresult = 25 % 2  # => 1\nresult = 5 ** 3  # => 125\n```",
+              "footer": "The `/` means quotient of x and y, and the `//` means floored quotient of x and y, also see\n[StackOverflow](https://stackoverflow.com/a/183870/13192320)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Plus-Equals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Plus-Equals",
+              "body": "```python\ncounter = 0\ncounter += 10           # => 10\ncounter = 0\ncounter = counter + 10  # => 10\n\nmessage = \"Part 1.\"\n\n# => Part 1.Part 2.\nmessage += \"Part 2.\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "f-Strings (Python 3.6+)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "f-Strings (Python 3.6+)",
+              "body": "```python\n>>> website = 'cheatsheets.zip'\n>>> f\"Hello, {website}\"\n\"Hello, cheatsheets.zip\"\n\n>>> num = 10\n>>> f'{num} + 10 = {num + 10}'\n'10 + 10 = 20'\n```",
+              "footer": "See: [Python F-Strings](#python-f-strings-since-python-3-6)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Built-in Data Types",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings",
+              "body": "```python\nhello = \"Hello World\"\nhello = 'Hello World'\n\nmulti_string = \"\"\"Multiline Strings\nLorem ipsum dolor sit amet,\nconsectetur adipiscing elit \"\"\"\n```",
+              "footer": "See: [Strings](#python-strings)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Numbers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Numbers",
+              "body": "```python\nx = 1    # int\ny = 2.8  # float\nz = 1j   # complex\n\n>>> print(type(x))\n<class 'int'>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Booleans",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Booleans",
+              "body": "```python\nmy_bool = True\nmy_bool = False\n\nbool(0)     # => False\nbool(1)     # => True\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Lists",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Lists",
+              "body": "```python\nlist1 = [\"apple\", \"banana\", \"cherry\"]\nlist2 = [True, False, False]\nlist3 = [1, 5, 7, 9, 3]\nlist4 = list((1, 5, 7, 9, 3))\n```",
+              "footer": "See: [Lists](#python-lists)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tuple",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tuple",
+              "body": "```python\nmy_tuple = (1, 2, 3)\nmy_tuple = tuple((1, 2, 3))\n\ntupla = (1, 2, 3, 'python')\n\nprint(tupla[0])       # Output: 1\nprint(tupla.count(1)) # Count occurrences\nprint(tupla.index(2)) # Find index\n\ntupla1 = (1, 2, 3)\ntupla2 = ('a', 'b')\n\nlen(tuple) → Returns the number of elements.\nin → Checks if an element exists in the tuple.\nConcatenation (+) → Combines two tuples.\nRepetition (*) → Repeats a tuple.\nSlicing (tuple[start:end]) → Extracts a subtuple.\n\nprint(len(tupla1))       # Output: 3\nprint(2 in tupla1)       # Output: True\nprint(tupla1 + tupla2)   # Output: (1, 2, 3, 'a', 'b')\nprint(tupla1[1:])        # Output: (2, 3)\n\n# unpacking\na, b, c, d = tupla   # Each value goes into a variable\n```",
+              "footer": "Similar to List but immutable",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Set",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Set",
+              "body": "```python\nset1 = {\"a\", \"b\", \"c\"}\nset2 = set((\"a\", \"b\", \"c\"))\n```",
+              "footer": "Set of unique items/objects",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dictionary",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dictionary",
+              "body": "",
+              "footer": "```python {.wrap}\n>>> empty_dict = {}\n>>> a = {\"one\": 1, \"two\": 2, \"three\": 3}\n>>> a[\"one\"]\n1\n>>> a.keys()\ndict_keys(['one', 'two', 'three'])\n>>> a.values()\ndict_values([1, 2, 3])\n>>> a.update({\"four\": 4})\n>>> a.keys()\ndict_keys(['one', 'two', 'three', 'four'])\n>>> a['four']\n4\n```\n\nKey: Value pair, JSON like object",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Casting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Casting",
+              "body": "",
+              "footer": "#### Integers\n\n```python\nx = int(1)   # x will be 1\ny = int(2.8) # y will be 2\nz = int(\"3\") # z will be 3\n```\n\n#### Floats\n\n```python\nx = float(1)     # x will be 1.0\ny = float(2.8)   # y will be 2.8\nz = float(\"3\")   # z will be 3.0\nw = float(\"4.2\") # w will be 4.2\n```\n\n#### Strings\n\n```python\nx = str(\"s1\") # x will be 's1'\ny = str(2)    # y will be '2'\nz = str(3.0)  # z will be '3.0'\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Advanced Data Types",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Heaps",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Heaps",
+              "body": "```python\nimport heapq\n\nmyList = [9, 5, 4, 1, 3, 2]\nheapq.heapify(myList) # turn myList into a Min Heap\nprint(myList)    # => [1, 3, 2, 5, 9, 4]\nprint(myList[0]) # first value is always the smallest in the heap\n\nheapq.heappush(myList, 10) # insert 10\nx = heapq.heappop(myList)  # pop and return smallest item\nprint(x)                   # => 1\n```",
+              "footer": "#### Negate all values to use Min Heap as Max Heap\n\n```python\nmyList = [9, 5, 4, 1, 3, 2]\nmyList = [-val for val in myList] # multiply by -1 to negate\nheapq.heapify(myList)\n\nx = heapq.heappop(myList)\nprint(-x) # => 9 (making sure to multiply by -1 again)\n```\n\nHeaps are binary trees for which every parent node has a value less than or equal to any of its children. Useful for\naccessing min/max value quickly. Time complexity: O(n) for heapify, O(log n) push and pop. See:\n[Heapq](https://docs.python.org/3/library/heapq.html)",
+              "spanConfig": "col-span-2 .row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Stacks and Queues",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Stacks and Queues",
+              "body": "```python\nfrom collections import deque\n\nq = deque()          # empty\nq = deque([1, 2, 3]) # with values\n\nq.append(4)     # append to right side\nq.appendleft(0) # append to left side\nprint(q)    # => deque([0, 1, 2, 3, 4])\n\nx = q.pop() # remove & return from right\ny = q.popleft() # remove & return from left\nprint(x)    # => 4\nprint(y)    # => 0\nprint(q)    # => deque([1, 2, 3])\n\nq.rotate(1) # rotate 1 step to the right\nprint(q)    # => deque([3, 1, 2])\n```",
+              "footer": "Deque is a double-ended queue with O(1) time for append/pop operations from both sides. Used as stacks and queues. See:\n[Deque](https://docs.python.org/3/library/collections.html#collections.deque)",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Strings",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Array-like",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array-like",
+              "body": "```python\n>>> hello = \"Hello, World\"\n>>> print(hello[1])\ne\n>>> print(hello[-1])\nd\n```",
+              "footer": "Get the character at position 1 or last",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Looping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Looping",
+              "body": "```python\n>>> for char in \"foo\":\n...     print(char)\nf\no\no\n```",
+              "footer": "Loop through the letters in the word \"foo\"",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Slicing string",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Slicing string",
+              "body": "```java\n┌───┬───┬───┬───┬───┬───┬───┐\n| m | y | b | a | c | o | n |\n└───┴───┴───┴───┴───┴───┴───┘\n 0   1   2   3   4   5   6   7\n-7  -6  -5  -4  -3  -2  -1\n```",
+              "footer": "#### With a stride\n\n```python\n>>> s = '12345' * 5\n>>> s\n'1234512345123451234512345'\n>>> s[::5]\n'11111'\n>>> s[4::5]\n'55555'\n>>> s[::-5]\n'55555'\n>>> s[::-1]\n'5432154321543215432154321'\n```",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String Length",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String Length",
+              "body": "```python\n>>> hello = \"Hello, World!\"\n>>> print(len(hello))\n13\n```",
+              "footer": "The len() function returns the length of a string",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple copies",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple copies",
+              "body": "```python\n>>> s = '===+'\n>>> n = 8\n>>> s * n\n'===+===+===+===+===+===+===+===+'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check String",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check String",
+              "body": "```python\n>>> s = 'spam'\n>>> s in 'I saw spamalot!'\nTrue\n>>> s not in 'I saw The Holy Grail!'\nTrue\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Concatenates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Concatenates",
+              "body": "```python\n>>> s = 'spam'\n>>> t = 'egg'\n>>> s + t\n'spamegg'\n>>> 'spam' 'egg'\n'spamegg'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Formatting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Formatting",
+              "body": "```python\nname = \"John\"\nprint(\"Hello, %s!\" % name)\n```",
+              "footer": "#### format() Method\n\n```python\ntxt1 = \"My name is {fname}, I'm {age}\".format(fname=\"John\", age=36)\ntxt2 = \"My name is {0}, I'm {1}\".format(\"John\", 36)\ntxt3 = \"My name is {}, I'm {}\".format(\"John\", 36)\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Input",
+              "body": "```python\n>>> name = input(\"Enter your name: \")\nEnter your name: Tom\n>>> name\n'Tom'\n```",
+              "footer": "Get input data from console",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Join",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Join",
+              "body": "```python\n>>> \"#\".join([\"John\", \"Peter\", \"Vicky\"])\n'John#Peter#Vicky'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Endswith",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Endswith",
+              "body": "```python\n>>> \"Hello, world!\".endswith(\"!\")\nTrue\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python F-Strings (Since Python 3.6+)",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "f-Strings usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "f-Strings usage",
+              "body": "```python\n>>> website = 'cheatsheets.zip'\n>>> f\"Hello, {website}\"\n\"Hello, cheatsheets.zip\"\n\n>>> num = 10\n>>> f'{num} + 10 = {num + 10}'\n'10 + 10 = 20'\n\n>>> f\"\"\"He said {\"I'm John\"}\"\"\"\n\"He said I'm John\"\n\n>>> f'5 {\"{stars}\"}'\n'5 {stars}'\n>>> f'{{5}} {\"stars\"}'\n'{5} stars'\n\n>>> name = 'Eric'\n>>> age = 27\n>>> f\"\"\"Hello!\n...     I'm {name}.\n...     I'm {age}.\"\"\"\n\"Hello!\\n    I'm Eric.\\n    I'm 27.\"\n```",
+              "footer": "it is available since Python 3.6, also see:\n[Formatted string literals](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "f-Strings Fill Align",
+          "level": 3,
+          "cards": [
+            {
+              "title": "f-Strings Fill Align",
+              "body": "```python\n>>> f'{\"text\":10}'     # [width]\n'text      '\n>>> f'{\"test\":*>10}'   # fill left\n'******test'\n>>> f'{\"test\":*<10}'   # fill right\n'test******'\n>>> f'{\"test\":*^10}'   # fill center\n'***test***'\n>>> f'{12345:0>10}'    # fill with numbers\n'0000012345'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "f-Strings Type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "f-Strings Type",
+              "body": "```python\n>>> f'{10:b}'        # binary type\n'1010'\n>>> f'{10:o}'        # octal type\n'12'\n>>> f'{200:x}'       # hexadecimal type\n'c8'\n>>> f'{200:X}'\n'C8'\n>>> f'{345600000000:e}' # scientific notation\n'3.456000e+11'\n>>> f'{65:c}'       # character type\n'A'\n>>> f'{10:#b}'      # [type] with notation (base)\n'0b1010'\n>>> f'{10:#o}'\n'0o12'\n>>> f'{10:#x}'\n'0xa'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "F-Strings Others",
+          "level": 3,
+          "cards": [
+            {
+              "title": "F-Strings Others",
+              "body": "```python\n>>> f'{-12345:0=10}'  # negative numbers\n'-000012345'\n>>> f'{12345:010}'    # [0] shortcut (no align)\n'0000012345'\n>>> f'{-12345:010}'\n'-000012345'\n>>> import math       # [.precision]\n>>> math.pi\n3.141592653589793\n>>> f'{math.pi:.2f}'\n'3.14'\n>>> f'{1000000:,.2f}' # [grouping_option]\n'1,000,000.00'\n>>> f'{1000000:_.2f}'\n'1_000_000.00'\n>>> f'{0.25:0%}'      # percentage\n'25.000000%'\n>>> f'{0.25:.0%}'\n'25%'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "F-Strings Sign",
+          "level": 3,
+          "cards": [
+            {
+              "title": "F-Strings Sign",
+              "body": "```python\n>>> f'{12345:+}'      # [sign] (+/-)\n'+12345'\n>>> f'{-12345:+}'\n'-12345'\n>>> f'{-12345:+10}'\n'    -12345'\n>>> f'{-12345:+010}'\n'-000012345'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Lists",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Defining",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Defining",
+              "body": "```python\n>>> li1 = []\n>>> li1\n[]\n>>> li2 = [4, 5, 6]\n>>> li2\n[4, 5, 6]\n>>> li3 = list((1, 2, 3))\n>>> li3\n[1, 2, 3]\n>>> li4 = list(range(1, 11))\n>>> li4\n[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generate",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generate",
+              "body": "```python\n>>> list(filter(lambda x : x % 2 == 1, range(1, 20)))\n[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\n\n>>> [x ** 2 for x in range (1, 11) if  x % 2 == 1]\n[1, 9, 25, 49, 81]\n\n>>> [x for x in [3, 4, 5, 6, 7] if x > 5]\n[6, 7]\n\n>>> list(filter(lambda x: x > 5, [3, 4, 5, 6, 7]))\n[6, 7]\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Append",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Append",
+              "body": "```python\n>>> li = []\n>>> li.append(1)\n>>> li\n[1]\n>>> li.append(2)\n>>> li\n[1, 2]\n>>> li.append(4)\n>>> li\n[1, 2, 4]\n>>> li.append(3)\n>>> li\n[1, 2, 4, 3]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "List Slicing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "List Slicing",
+              "body": "Syntax of list slicing:\n\n```python\na_list[start:end]\na_list[start:end:step]\n```",
+              "footer": "#### Slicing\n\n```python\n>>> a = ['spam', 'egg', 'bacon', 'tomato', 'ham', 'lobster']\n>>> a[2:5]\n['bacon', 'tomato', 'ham']\n>>> a[-5:-2]\n['egg', 'bacon', 'tomato']\n>>> a[1:4]\n['egg', 'bacon', 'tomato']\n```\n\n#### Omitting index\n\n```python\n>>> a[:4]\n['spam', 'egg', 'bacon', 'tomato']\n>>> a[0:4]\n['spam', 'egg', 'bacon', 'tomato']\n>>> a[2:]\n['bacon', 'tomato', 'ham', 'lobster']\n>>> a[2:len(a)]\n['bacon', 'tomato', 'ham', 'lobster']\n>>> a\n['spam', 'egg', 'bacon', 'tomato', 'ham', 'lobster']\n>>> a[:]\n['spam', 'egg', 'bacon', 'tomato', 'ham', 'lobster']\n```\n\n#### With a stride\n\n```python\n['spam', 'egg', 'bacon', 'tomato', 'ham', 'lobster']\n>>> a[0:6:2]\n['spam', 'bacon', 'ham']\n>>> a[1:6:2]\n['egg', 'tomato', 'lobster']\n>>> a[6:0:-2]\n['lobster', 'tomato', 'egg']\n>>> a\n['spam', 'egg', 'bacon', 'tomato', 'ham', 'lobster']\n>>> a[::-1]\n['lobster', 'ham', 'tomato', 'bacon', 'egg', 'spam']\n```",
+              "spanConfig": "col-span-2 .row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Remove",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Remove",
+              "body": "```python\n>>> li = ['bread', 'butter', 'milk']\n>>> li.pop()\n'milk'\n>>> li\n['bread', 'butter']\n>>> del li[0]\n>>> li\n['butter']\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Access",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Access",
+              "body": "```python\n>>> li = ['a', 'b', 'c', 'd']\n>>> li[0]\n'a'\n>>> li[-1]\n'd'\n>>> li[4]\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nIndexError: list index out of range\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Concatenating",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Concatenating",
+              "body": "```python\n>>> odd = [1, 3, 5]\n>>> odd.extend([9, 11, 13])\n>>> odd\n[1, 3, 5, 9, 11, 13]\n>>> odd = [1, 3, 5]\n>>> odd + [9, 11, 13]\n[1, 3, 5, 9, 11, 13]\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sort & Reverse",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sort & Reverse",
+              "body": "```python\n>>> li = [3, 1, 3, 2, 5]\n>>> li.sort()\n>>> li\n[1, 2, 3, 3, 5]\n>>> li.reverse()\n>>> li\n[5, 3, 3, 2, 1]\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Count",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Count",
+              "body": "```python\n>>> li = [3, 1, 3, 2, 5]\n>>> li.count(3)\n2\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repeating",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repeating",
+              "body": "```python\n>>> li = [\"re\"] * 3\n>>> li\n['re', 're', 're']\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Flow control",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic",
+              "body": "```python\nnum = 5\nif num > 10:\n    print(\"num is totally bigger than 10.\")\nelif num < 10:\n    print(\"num is smaller than 10.\")\nelse:\n    print(\"num is indeed 10.\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "One line (ternary operator)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "One line (ternary operator)",
+              "body": "```python\n>>> a = 330\n>>> b = 200\n>>> r = \"a\" if a > b else \"b\"\n>>> print(r)\na\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "else if",
+          "level": 3,
+          "cards": [
+            {
+              "title": "else if",
+              "body": "```python\nvalue = True\nif not value:\n    print(\"Value is False\")\nelif value is None:\n    print(\"Value is None\")\nelse:\n    print(\"Value is True\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "match case",
+          "level": 3,
+          "cards": [
+            {
+              "title": "match case",
+              "body": "```python\nx = 1\nmatch x:\n  case 0:\n    print(\"zero\")\n  case 1:\n    print(\"one\")\n  case _:\n    print(\"multiple\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Loops",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic",
+              "body": "```python\nprimes = [2, 3, 5, 7]\nfor prime in primes:\n    print(prime)\n```",
+              "footer": "Prints: 2 3 5 7",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "With index",
+          "level": 3,
+          "cards": [
+            {
+              "title": "With index",
+              "body": "```python\nanimals = [\"dog\", \"cat\", \"mouse\"]\n# enumerate() adds counter to an iterable\nfor i, value in enumerate(animals):\n    print(i, value)\n```",
+              "footer": "Prints: 0 dog 1 cat 2 mouse",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While",
+              "body": "```python\nx = 0\nwhile x < 4:\n    print(x)\n    x += 1  # Shorthand for x = x + 1\n```",
+              "footer": "Prints: 0 1 2 3",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break",
+              "body": "```python\nx = 0\nfor index in range(10):\n    x = index * 10\n    if index == 5:\n    \tbreak\n    print(x)\n```",
+              "footer": "Prints: 0 10 20 30 40",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Continue",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Continue",
+              "body": "```python\nfor index in range(3, 8):\n    x = index * 10\n    if index == 5:\n    \tcontinue\n    print(x)\n```",
+              "footer": "Prints: 30 40 60 70",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Range",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Range",
+              "body": "```python\nfor i in range(4):\n    print(i) # Prints: 0 1 2 3\n\nfor i in range(4, 8):\n    print(i) # Prints: 4 5 6 7\n\nfor i in range(4, 10, 2):\n    print(i) # Prints: 4 6 8\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "With zip()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "With zip()",
+              "body": "```python\nwords = ['Mon', 'Tue', 'Wed']\nnums = [1, 2, 3]\n# Use zip to pack into a tuple list\nfor w, n in zip(words, nums):\n    print('%d:%s, ' %(n, w))\n```",
+              "footer": "Prints: 1:Mon, 2:Tue, 3:Wed,",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "for/else",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for/else",
+              "body": "```python\nnums = [60, 70, 30, 110, 90]\nfor n in nums:\n    if n > 100:\n        print(\"%d is bigger than 100\" %n)\n        break\nelse:\n    print(\"Not found!\")\n```",
+              "footer": "Also see: [Python Tips](https://book.pythontips.com/en/latest/for_-_else.html)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Over Dictionary",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Over Dictionary",
+              "body": "```python\njohndict = {\n  \"firstname\": \"John\",\n  \"lastname\": \"Doe\",\n  \"age\": 30\n  }\n\nx = johndict.items()\nprint(x)\n\n# Output: dict_items([('firstname', 'John'),\n#                     ('lastname', 'Doe'),\n#                     ('age', 30)])\n\nfor key, value in johndict.items():\n\tprint(f\"{key} : : {value}\")\n\n# Output: firstname : : John\n# Output: lastname : : Doe\n# Output: age : : 30\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Comprehensions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Comprehension List",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comprehension List",
+              "body": "```python\nlanguages = [\"html\", \"go\", \"rust\", \"javascript\", \"python\"]\n\nnewlist = [x for x in languages if \"l\" not in x]\n# add language for language in languages if \"l\" not in language\n\nprint(newlist) #Output : [ 'go', 'rust', 'javascript', 'python']\n\n# List comprehension avoid this :\noldlist = []\nfor x in languages:\n    if  \"l\" not in x:\n        oldlist.append(x)\nprint(oldlist) #Output :  [ 'go', 'rust', 'javascript', 'python']\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comprehension Dictionary",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comprehension Dictionary",
+              "body": "```python\nlanguages = [\"html\", \"go\", \"rust\", \"javascript\", \"python\"]\n\nlanguage_dict = {lang: ('l' not in lang) for lang in languages}\n# Key is the language & bool is Value (no offense for html..)\n\nprint(language_dict)\n# Output: {'html': False, 'go': True, 'rust': True,\n#          'javascript': True, 'python': True}\n\n# Dictionary comprehension avoid this :\n\nlanguage_dict2 = {}\n\nfor e in languages:\n    if \"l\" not in e:\n        language_dict2[e] = True\n    else:\n        language_dict2[e] = False\n\nprint(language_dict2)\n# Output: {'html': False, 'go': True, 'rust': True,\n#          'javascript': True, 'python': True}\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Functions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic",
+              "body": "```python\ndef hello_world():\n    print('Hello, World!')\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Return",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Return",
+              "body": "```python\ndef add(x, y):\n    print(\"x is %s, y is %s\" %(x, y))\n    return x + y\n\nadd(5, 6)    # => 11\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Positional arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Positional arguments",
+              "body": "```python\ndef varargs(*args):\n    return args\n\nvarargs(1, 2, 3)  # => (1, 2, 3)\n```",
+              "footer": "Type of \"args\" is tuple.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keyword arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keyword arguments",
+              "body": "```python\ndef keyword_args(**kwargs):\n    return kwargs\n\n# => {\"big\": \"foot\", \"loch\": \"ness\"}\nkeyword_args(big=\"foot\", loch=\"ness\")\n```",
+              "footer": "Type of \"kwargs\" is dict.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Returning multiple",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Returning multiple",
+              "body": "```python\ndef swap(x, y):\n    return y, x\n\nx = 1\ny = 2\nx, y = swap(x, y)  # => x = 2, y = 1\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Default Value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Default Value",
+              "body": "```python\ndef add(x, y=10):\n    return x + y\n\nadd(5)      # => 15\nadd(5, 20)  # => 25\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Anonymous functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Anonymous functions",
+              "body": "```python\n# => True\n(lambda x: x > 2)(3)\n\n# => 5\n(lambda x, y: x ** 2 + y ** 2)(2, 1)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "@decorator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "@decorator",
+              "body": "```python\n# Modify or extend behavior of function or class method,\n# without changing their actual code.\n\n# Define decorator that will wrap function or method\ndef handle_errors(func):\n    def wrapper(*args, **kwargs):\n        try:\n            return func(*args, **kwargs)\n        except Exception as e:\n            return print(f\"Error :  {e}\")\n    return wrapper\n\n# Decorate function or method\n@handle_errors\ndef divide(a, b):\n    return a / b\n\ndivide(10, 0) # Output : Error : division by zero\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Modules",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Import modules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Import modules",
+              "body": "```python\nimport math\nprint(math.sqrt(16))  # => 4.0\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "From a module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "From a module",
+              "body": "```python\nfrom math import ceil, floor\nprint(ceil(3.7))   # => 4.0\nprint(floor(3.7))  # => 3.0\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Import all",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Import all",
+              "body": "```python\nfrom math import *\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Shorten module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shorten module",
+              "body": "```python\nimport math as m\n\n# => True\nmath.sqrt(16) == m.sqrt(16)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Functions and attributes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions and attributes",
+              "body": "```python\nimport math\ndir(math)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python File Handling",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Read file",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Read file",
+              "body": "",
+              "footer": "#### Line by line\n\n```python\nwith open(\"myfile.txt\") as file:\n    for line in file:\n        print(line)\n```\n\n#### With line number\n\n```python\nfile = open('myfile.txt', 'r')\nfor i, line in enumerate(file, start=1):\n    print(\"Number %s: %s\" % (i, line))\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String",
+              "body": "",
+              "footer": "#### Write a string\n\n```python\ncontents = {\"aa\": 12, \"bb\": 21}\nwith open(\"myfile1.txt\", \"w+\") as file:\n    file.write(str(contents))\n```\n\n#### Read a string\n\n```python\nwith open('myfile1.txt', \"r+\") as file:\n    contents = file.read()\nprint(contents)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Object",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Object",
+              "body": "",
+              "footer": "#### Write an object\n\n```python\ncontents = {\"aa\": 12, \"bb\": 21}\nwith open(\"myfile2.txt\", \"w+\") as file:\n    file.write(json.dumps(contents))\n```\n\n#### Read an object\n\n```python\nwith open('myfile2.txt', \"r+\") as file:\n    contents = json.load(file)\nprint(contents)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Delete a File",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delete a File",
+              "body": "```python\nimport os\nos.remove(\"myfile.txt\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check and Delete",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check and Delete",
+              "body": "```python\nimport os\nif os.path.exists(\"myfile.txt\"):\n    os.remove(\"myfile.txt\")\nelse:\n    print(\"The file does not exist\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Delete Folder",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delete Folder",
+              "body": "```python\nimport os\nos.rmdir(\"myfolder\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Classes & Inheritance",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Defining",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Defining",
+              "body": "```python\nclass MyNewClass:\n    pass\n\n# Class Instantiation\nmy = MyNewClass()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Constructors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Constructors",
+              "body": "```python\nclass Animal:\n    def __init__(self, voice):\n        self.voice = voice\n\ncat = Animal('Meow')\nprint(cat.voice)    # => Meow\n\ndog = Animal('Woof')\nprint(dog.voice)    # => Woof\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Method",
+              "body": "```python\nclass Dog:\n\n    # Method of the class\n    def bark(self):\n        print(\"Ham-Ham\")\n\ncharlie = Dog()\ncharlie.bark()   # => \"Ham-Ham\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Class Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class Variables",
+              "body": "```python\nclass MyClass:\n    class_variable = \"A class variable!\"\n\n# => A class variable!\nprint(MyClass.class_variable)\n\nx = MyClass()\n\n# => A class variable!\nprint(x.class_variable)\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Super() Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Super() Function",
+              "body": "```python\nclass ParentClass:\n    def print_test(self):\n        print(\"Parent Method\")\n\nclass ChildClass(ParentClass):\n    def print_test(self):\n        print(\"Child Method\")\n        # Calls the parent's print_test()\n        super().print_test()\n```",
+              "footer": "```python\n>>> child_instance = ChildClass()\n>>> child_instance.print_test()\nChild Method\nParent Method\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "repr() method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "repr() method",
+              "body": "```python\nclass Employee:\n    def __init__(self, name):\n        self.name = name\n\n    def __repr__(self):\n        return self.name\n\njohn = Employee('John')\nprint(john)  # => John\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "User-defined exceptions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "User-defined exceptions",
+              "body": "```python\nclass CustomError(Exception):\n    pass\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Polymorphism",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Polymorphism",
+              "body": "```python\nclass ParentClass:\n    def print_self(self):\n        print('A')\n\nclass ChildClass(ParentClass):\n    def print_self(self):\n        print('B')\n\nobj_A = ParentClass()\nobj_B = ChildClass()\n\nobj_A.print_self() # => A\nobj_B.print_self() # => B\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Overriding",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Overriding",
+              "body": "```python\nclass ParentClass:\n    def print_self(self):\n        print(\"Parent\")\n\nclass ChildClass(ParentClass):\n    def print_self(self):\n        print(\"Child\")\n\nchild_instance = ChildClass()\nchild_instance.print_self() # => Child\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inheritance",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inheritance",
+              "body": "```python\nclass Animal:\n    def __init__(self, name, legs):\n        self.name = name\n        self.legs = legs\n\nclass Dog(Animal):\n    def sound(self):\n        print(\"Woof!\")\n\nYoki = Dog(\"Yoki\", 4)\nprint(Yoki.name) # => YOKI\nprint(Yoki.legs) # => 4\nYoki.sound()     # => Woof!\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "@staticmethod",
+          "level": 3,
+          "cards": [
+            {
+              "title": "@staticmethod",
+              "body": "```python\nclass MyClass:\n    @staticmethod\n    def greet(name):\n        return f\"Hello, {name}!\"\n\n# No instantiation nedded\n\n# Call via class\nprint(MyClass.greet(\"Alice\"))  # => Hello, Alice!\n\n# Can still call via instance\nobj = MyClass()\nprint(obj.greet(\"Bob\"))        # => Hello, Bob!\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Type Hints (Since Python 3.5)",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Variable & Parameter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variable & Parameter",
+              "body": "```python\nstring: str = \"ha\"\ntimes: int = 3\n\n# wrong hit, but run correctly\nresult: str = 1 + 2\nprint(result)  # => 3\n\ndef say(name: str, start: str = \"Hi\"):\n    return start + \", \" + name\n\nprint(say(\"Python\"))  # => Hi, Python\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Built-in date type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Built-in date type",
+              "body": "```python\nfrom typing import Dict, Tuple, List\n\nbill: Dict[str, float] = {\n    \"apple\": 3.14,\n    \"watermelon\": 15.92,\n    \"pineapple\": 6.53,\n}\ncompleted: Tuple[str] = (\"DONE\",)\nsucceeded: Tuple[int, str] = (1, \"SUCCESS\")\nstatuses: Tuple[str, ...] = (\n    \"DONE\", \"SUCCESS\", \"FAILED\", \"ERROR\",\n)\ncodes: List[int] = (0, 1, -1, -2)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Built-in date type (3.10+)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Built-in date type (3.10+)",
+              "body": "```python\nbill: dict[str, float] = {\n    \"apple\": 3.14,\n    \"watermelon\": 15.92,\n    \"pineapple\": 6.53,\n}\ncompleted: tuple[str] = (\"DONE\",)\nsucceeded: tuple[int, str] = (1, \"SUCCESS\")\nstatuses: tuple[str, ...] = (\n    \"DONE\", \"SUCCESS\", \"FAILED\", \"ERROR\",\n)\ncodes: list[int] = (0, 1, -1, -2)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Positional argument",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Positional argument",
+              "body": "```python\ndef calc_summary(*args: int):\n    return sum(args)\n\nprint(calc_summary(3, 1, 4))  # => 8\n```",
+              "footer": "Indicate all arguments' type is int.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Returned",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Returned",
+              "body": "```python\ndef say_hello(name) -> str:\n    return \"Hello, \" + name\n\nvar = \"Python\"\nprint(say_hello(var))  # => Hello, Python\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Union returned",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Union returned",
+              "body": "```python\nfrom typing import Union\n\ndef resp200(meaningful) -> Union[int, str]:\n    return \"OK\" if meaningful else 200\n```",
+              "footer": "Means returned value type may be int or str.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keyword argument",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keyword argument",
+              "body": "```python\ndef calc_summary(**kwargs: int):\n    return sum(kwargs.values())\n\nprint(calc_summary(a=1, b=2))  # => 3\n```",
+              "footer": "Indicate all parameters' value type is int.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple returns",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple returns",
+              "body": "```python\ndef resp200() -> (int, str):\n    return 200, \"OK\"\n\nreturns = resp200()\nprint(returns)  # => (200, 'OK')\nprint(type(returns))  # tuple\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Union returned (3.10+)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Union returned (3.10+)",
+              "body": "```python\ndef resp200(meaningful) -> int | str:\n    return \"OK\" if meaningful else 200\n```",
+              "footer": "Since Python 3.10",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Property",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Property",
+              "body": "```python\nclass Employee:\n    name: str\n    age: int\n\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n        self.graduated: bool = False\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Self instance",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Self instance",
+              "body": "```python\nclass Employee:\n    name: str\n\n    def set_name(self, name) -> \"Employee\":\n        self.name = name\n        return self\n\n    def copy(self) -> 'Employee':\n        return type(self)(self.name)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Self instance (3.11+)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Self instance (3.11+)",
+              "body": "```python\nfrom typing import Self\n\nclass Employee:\n    name: str\n    age: int\n\n    def set_name(self: Self, name) -> Self:\n        self.name = name\n        return self\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type & Generic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type & Generic",
+              "body": "```python\nfrom typing import TypeVar, Type\n\nT = TypeVar(\"T\")\n\n# \"mapper\" is a type, like int, str, MyClass and so on.\n# \"default\" is an instance of type T, such as 314, \"string\", MyClass() and so on.\n# returned is an instance of type T too.\ndef converter(raw, mapper: Type[T], default: T) -> T:\n    try:\n        return mapper(raw)\n    except:\n        return default\n\nraw: str = input(\"Enter an integer: \")\nresult: int = converter(raw, mapper=int, default=0)\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function",
+              "body": "```python\nfrom typing import TypeVar, Callable, Any\n\nT = TypeVar(\"T\")\n\ndef converter(raw, mapper: Callable[[Any], T], default: T) -> T:\n    try:\n        return mapper(raw)\n    except:\n        return default\n\n# Callable[[Any], ReturnType] means a function declare like:\n# def func(arg: Any) -> ReturnType:\n#     pass\n\n# Callable[[str, int], ReturnType] means a function declare like:\n# def func(string: str, times: int) -> ReturnType:\n#     pass\n\n# Callable[..., ReturnType] means a function declare like:\n# def func(*args, **kwargs) -> ReturnType:\n#     pass\n\ndef is_success(value) -> bool:\n    return value in (0, \"OK\", True, \"success\")\n\nresp = dict(code=0, message=\"OK\", data=[])\nsuccessed: bool = converter(resp[\"message\"], mapper=is_success, default=False)\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Python Operators",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Walrus",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Walrus",
+              "body": "```python\nvalues = [1, \"text\", True, \"\", 2]\ni = 0\n\n# It assigns a value to a variable and compares it in a boolean expression\nwhile (data := values[i]):\n\n    print(data, end=\",\")\n    i = i + 1\n\n# Expected result: 1, \"text\", True\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Date & Time Handling",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Current date and time",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Current date and time",
+              "body": "```python\nimport datetime\n\nnow = datetime.datetime.now()\nprint(now)  # e.g., 2024-04-27 14:35:22.123456\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Creating specific date/time objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Creating specific date/time objects",
+              "body": "```python\nimport datetime\n\n# Create a date object\nd = datetime.date(2024, 4, 27)\nprint(d)  # 2024-04-27\n\n# Create a time object\nt = datetime.time(15, 30, 45)\nprint(t)  # 15:30:45\n\n# Create a datetime object\ndt = datetime.datetime(2024, 4, 27, 15, 30, 45)\nprint(dt)  # 2024-04-27 15:30:45\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Converting between date formats",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Converting between date formats",
+              "body": "```python\nimport datetime\n\n# Convert a string to a datetime object\ndate_str = \"2024-04-27 14:00\"\ndt_obj = datetime.datetime.strptime(date_str, \"%Y-%m-%d %H:%M\")\nprint(dt_obj)  # 2024-04-27 14:00:00\n\n# Convert a datetime object to a string\nformatted_str = dt_obj.strftime(\"%d/%m/%Y %H:%M\")\nprint(formatted_str)  # 27/04/2024 14:00\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Timestamps and Unix time",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Timestamps and Unix time",
+              "body": "```python\nimport datetime\n\n# Get current timestamp\ntimestamp = datetime.datetime.now().timestamp()\nprint(timestamp)  # e.g., 1714188922.123456\n\n# Convert timestamp back to datetime\ndt_from_timestamp = datetime.datetime.fromtimestamp(timestamp)\nprint(dt_from_timestamp)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Date difference and timedelta",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Date difference and timedelta",
+              "body": "```python\nimport datetime\n\ndate1 = datetime.date(2024, 4, 27)\ndate2 = datetime.date(2024, 5, 1)\n\ndelta = date2 - date1\nprint(delta.days)  # 4\n\n# Using timedelta for date arithmetic\nnew_date = date1 + datetime.timedelta(days=10)\nprint(new_date)  # 2024-05-07\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```python\n# This is a single line comments.\n```",
+              "footer": "```python\n\"\"\" Multiline strings can be written\nusing three \"s, and are often used\nas documentation.\n\"\"\"\n```\n```python\n''' Multiline strings can be written\nusing three 's, and are often used\nas documentation.\n'''\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generators",
+              "body": "```python\ndef double_numbers(iterable):\n    for i in iterable:\n        yield i + i\n```",
+              "footer": "Generators help you make lazy code.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generator to list",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generator to list",
+              "body": "```python\nvalues = (-x for x in [1,2,3,4,5])\ngen_to_list = list(values)\n\n# => [-1, -2, -3, -4, -5]\nprint(gen_to_list)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Handle exceptions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Handle exceptions",
+              "body": "```python\ntry:\n    # Use \"raise\" to raise an error\n    raise IndexError(\"This is an index error\")\nexcept IndexError as e:\n    pass                 # Pass is just a no-op. Usually you would do recovery here.\nexcept (TypeError, NameError):\n    pass                 # Multiple exceptions can be handled together, if required.\nelse:                    # Optional clause to the try/except block. Must follow all except blocks\n    print(\"All good!\")   # Runs only if the code in try raises no exceptions\nfinally:                 # Execute under all circumstances\n    print(\"We can clean up resources here\")\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dispatcher Pattern",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dispatcher Pattern",
+              "body": "```python\n# Dispatcher allows dynamic selection and execution of functions based on user input or other runtime conditions\n\ndef add(x, y):\n    return x + y\n\ndef subtract(x, y):\n    return x - y\n\ndef multiply(x, y):\n    return x * y\n\ndef divide(x, y):\n    if y == 0:\n        return 'Error: Division by zero'\n    return x / y\n\n# Dispatcher dictionary: maps operation names to their corresponding functions\noperations = {\n    'add': add,\n    'subtract': subtract,\n    'multiply': multiply,\n    'divide': divide\n}\n\n# Function to dispatch operation based on operation name\n# Common use cases include executing different functions dynamically, such as in calculators, command interpreters, or event handling\ndef dispatcher(operation_name, x, y):\n    func = operations.get(operation_name)\n    if func:\n        return func(x, y)\n    else:\n        return f\"Unknown operation: {operation_name}\"\n\n# Usage examples\nprint(dispatcher('add', 5, 3))        # Output: 8\nprint(dispatcher('multiply', 4, 2))   # Output: 8\nprint(dispatcher('divide', 10, 0))    # Output: Error: Division by zero\nprint(dispatcher('mod', 10, 3))       # Output: Unknown operation: mod\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

@@ -414,5 +414,137 @@ export class MarkdownParser {
     toUnifiedJSON(data, indent = 2) {
         return JSON.stringify(data, null, indent);
     }
+    /**
+     * Parse multiple markdown files and create individual JSON files with index
+     */
+    async parseIndividual(filePaths, options = {}, outputDir = "./public/data/cheatsheets", indexOutputPath = "./public/data/cheatsheets-index.json") {
+        const indexItems = [];
+        for (const filePath of filePaths) {
+            try {
+                const result = await this.parseFile(filePath, options);
+                if (result.success && result.document) {
+                    const fileName = path.basename(filePath, path.extname(filePath));
+                    const cheatsheetId = fileName
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]/g, "-");
+                    // Create individual cheatsheet file
+                    const individualOutputPath = path.join(outputDir, `${cheatsheetId}.json`);
+                    const cheatsheetData = {
+                        id: cheatsheetId,
+                        metadata: result.document.metadata,
+                        sections: result.document.sections,
+                    };
+                    await fs.promises.writeFile(individualOutputPath, JSON.stringify(cheatsheetData, null, 2), "utf-8");
+                    // Create index item
+                    const indexItem = {
+                        id: cheatsheetId,
+                        name: result.document.metadata.title || fileName,
+                        description: result.document.metadata.intro ||
+                            `Quick reference for ${result.document.metadata.title || fileName}`,
+                        keywords: this.generateKeywords(result.document),
+                        categories: result.document.metadata.categories || [],
+                        status: "Available",
+                        gradient: this.getGradient(cheatsheetId),
+                        badge: this.getBadge(cheatsheetId),
+                        icon: this.getIcon(result.document.metadata.categories || []),
+                        sections: result.document.sections.map((section) => section.title),
+                        lastUpdated: new Date().toISOString(),
+                    };
+                    indexItems.push(indexItem);
+                    console.log(`✅ Created ${cheatsheetId}.json`);
+                }
+                else {
+                    console.warn(`Failed to parse ${filePath}: ${result.error}`);
+                }
+            }
+            catch (error) {
+                console.error(`Error processing ${filePath}:`, error);
+            }
+        }
+        // Create index file
+        const indexData = {
+            cheatsheets: indexItems,
+            createdAt: new Date().toISOString(),
+            version: "1.0.0",
+        };
+        await fs.promises.writeFile(indexOutputPath, JSON.stringify(indexData, null, 2), "utf-8");
+        return indexData;
+    }
+    /**
+     * Generate keywords from cheatsheet content
+     */
+    generateKeywords(document) {
+        const keywords = new Set();
+        // Add title words
+        if (document.metadata.title) {
+            document.metadata.title
+                .toLowerCase()
+                .split(/\s+/)
+                .forEach((word) => {
+                if (word && word.length > 2)
+                    keywords.add(word);
+            });
+        }
+        // Add tags
+        if (document.metadata.tags) {
+            document.metadata.tags.forEach((tag) => {
+                if (tag)
+                    keywords.add(tag.toLowerCase());
+            });
+        }
+        // Add categories
+        if (document.metadata.categories) {
+            document.metadata.categories.forEach((category) => {
+                if (category)
+                    keywords.add(category.toLowerCase());
+            });
+        }
+        // Add section titles
+        document.sections.forEach((section) => {
+            if (section.title) {
+                section.title
+                    .toLowerCase()
+                    .split(/\s+/)
+                    .forEach((word) => {
+                    if (word && word.length > 2)
+                        keywords.add(word);
+                });
+            }
+        });
+        return Array.from(keywords).slice(0, 10); // Limit to 10 keywords
+    }
+    /**
+     * Get gradient based on cheatsheet ID
+     */
+    getGradient(id) {
+        const gradients = {
+            python: "from-blue-500 to-indigo-600",
+            finder: "from-blue-500 to-cyan-600",
+            javascript: "from-yellow-500 to-amber-600",
+            react: "from-emerald-500 to-green-600",
+            git: "from-orange-500 to-red-600",
+        };
+        return gradients[id] || "from-gray-500 to-gray-600";
+    }
+    /**
+     * Get badge based on cheatsheet ID
+     */
+    getBadge(id) {
+        const badges = {
+            python: "Popular",
+            finder: "New",
+        };
+        return badges[id] || "Available";
+    }
+    /**
+     * Get icon based on categories
+     */
+    getIcon(categories) {
+        if (categories.includes("Keyboard Shortcuts"))
+            return "Code";
+        if (categories.includes("Programming"))
+            return "Code";
+        return "BookOpen";
+    }
 }
 //# sourceMappingURL=parser.js.map
