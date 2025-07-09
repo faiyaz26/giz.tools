@@ -28,63 +28,11 @@ import finderCheatsheetData from '@/lib/finder-cheatsheet.json';
 const finderCheatsheet: CheatsheetData = finderCheatsheetData as CheatsheetData;
 
 // Component for rendering shortcuts cards
-const ShortcutsCard = ({ card, spanConfig, groupIndex, totalGroups }: { 
+const ShortcutsCard = ({ card, spanConfig }: { 
   card: CheatsheetCard, 
-  spanConfig?: { gridColumn?: string; gridRow?: string; className: string },
-  groupIndex?: number,
-  totalGroups?: number
+  spanConfig?: { gridColumn?: string; gridRow?: string; className: string }
 }) => {
   if (!card.shortcuts || !card.isShortcutsCard) {
-    return null;
-  }
-
-  // If no groupIndex provided, render the full card
-  if (groupIndex === undefined) {
-    return (
-      <Card 
-        className={cn(
-          'bg-card border-border h-fit overflow-hidden transition-all duration-200 hover:shadow-md hover:shadow-primary/20',
-          spanConfig?.className
-        )}
-        style={{
-          gridColumn: spanConfig?.gridColumn,
-          gridRow: spanConfig?.gridRow
-        }}
-      >
-        <CardHeader className="bg-card/50 border-b border-border pb-3">
-          <CardTitle className="text-card-foreground text-lg flex items-center gap-2">
-            <Command className="h-4 w-4 text-blue-500 dark:text-blue-400" />
-            {card.title}
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="pt-4">
-          <div className="space-y-2">
-            {card.shortcuts.map((shortcut, index) => (
-              <div 
-                key={index}
-                className="flex items-center justify-between gap-4 p-3 rounded-lg bg-muted/50 border border-border hover:border-border/80 transition-all duration-200 hover:bg-muted/70"
-              >
-                <div className="flex-shrink-0 min-w-fit">
-                  <KeyboardShortcut shortcut={shortcut.shortcut} />
-                </div>
-                <div className="flex-1 text-right text-muted-foreground text-sm leading-relaxed font-medium">
-                  {shortcut.action}
-                </div>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-    );
-  }
-
-  // Render specific group
-  const shortcutsPerCard = 9;
-  const startIndex = groupIndex * shortcutsPerCard;
-  const endIndex = Math.min(startIndex + shortcutsPerCard, card.shortcuts.length);
-  const groupShortcuts = card.shortcuts.slice(startIndex, endIndex);
-
-  if (groupShortcuts.length === 0) {
     return null;
   }
 
@@ -107,7 +55,7 @@ const ShortcutsCard = ({ card, spanConfig, groupIndex, totalGroups }: {
       </CardHeader>
       <CardContent className="pt-4">
         <div className="space-y-2">
-          {groupShortcuts.map((shortcut, index) => (
+          {card.shortcuts.map((shortcut, index) => (
             <div 
               key={index}
               className="flex items-center justify-between gap-4 p-3 rounded-lg bg-muted/50 border border-border hover:border-border/80 transition-all duration-200 hover:bg-muted/70"
@@ -294,62 +242,26 @@ export default function FinderCheatsheetPage() {
                   <div className={gridClass}
                        style={{ gridAutoRows: 'minmax(200px, auto)' }}>
                     {(() => {
-                      let globalCardIndex = 0;
                       return section.subsections.flatMap((subsection, subsectionIndex) => 
-                        subsection.cards.flatMap((card, cardIndex) => {
+                        subsection.cards.map((card, cardIndex) => {
                           const spanConfig = parseSpanConfig(card.spanConfig);
                           
                           if (card.isShortcutsCard && card.shortcuts) {
-                            // Calculate how many groups we need
-                            const shortcutsPerCard = 9;
-                            const totalGroups = Math.ceil(card.shortcuts.length / shortcutsPerCard);
-                            
-                            // Create an array of group indices and map over them
-                            return Array.from({ length: totalGroups }, (_, groupIndex) => {
-                              globalCardIndex++;
-                              
-                              // Generate more descriptive titles based on shortcut content
-                              let cardTitle = card.title;
-                              if (card.shortcuts && card.shortcuts.length > 0) {
-                                // Look at the first few shortcuts to determine the category
-                                const firstShortcuts = card.shortcuts.slice(0, 3).map(s => s.action.toLowerCase());
-                                
-                                if (firstShortcuts.some(action => action.includes('folder') || action.includes('computer') || action.includes('documents'))) {
-                                  cardTitle = totalGroups > 1 ? `Navigation & Folders ${globalCardIndex}` : 'Navigation & Folders';
-                                } else if (firstShortcuts.some(action => action.includes('view') || action.includes('window') || action.includes('display'))) {
-                                  cardTitle = totalGroups > 1 ? `View & Display ${globalCardIndex}` : 'View & Display';
-                                } else if (firstShortcuts.some(action => action.includes('duplicate') || action.includes('eject') || action.includes('search'))) {
-                                  cardTitle = totalGroups > 1 ? `File Operations ${globalCardIndex}` : 'File Operations';
-                                } else {
-                                  // Fallback to numbered approach
-                                  cardTitle = totalGroups > 1 ? `${card.title} ${globalCardIndex}` : globalCardIndex > 1 ? `${card.title} ${globalCardIndex}` : card.title;
-                                }
-                              } else {
-                                cardTitle = totalGroups > 1 ? `${card.title} ${globalCardIndex}` : globalCardIndex > 1 ? `${card.title} ${globalCardIndex}` : card.title;
-                              }
-                              
-                              return (
-                                <ShortcutsCard 
-                                  key={`${subsectionIndex}-${cardIndex}-${groupIndex}`}
-                                  card={{
-                                    ...card,
-                                    title: cardTitle
-                                  }}
-                                  spanConfig={spanConfig}
-                                  groupIndex={groupIndex}
-                                  totalGroups={totalGroups}
-                                />
-                              );
-                            });
+                            return (
+                              <ShortcutsCard 
+                                key={`${subsectionIndex}-${cardIndex}`}
+                                card={card}
+                                spanConfig={spanConfig}
+                              />
+                            );
                           } else {
-                            globalCardIndex++;
-                            return [
+                            return (
                               <ContentCard 
                                 key={`${subsectionIndex}-${cardIndex}`}
                                 card={card}
                                 spanConfig={spanConfig}
                               />
-                            ];
+                            );
                           }
                         })
                       );
