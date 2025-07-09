@@ -16,6 +16,26 @@ import { loadCheatsheetsIndex } from "@/lib/cheatsheet-data-client";
 import { cn } from "@/lib/utils";
 import { useState, useEffect, useMemo } from "react";
 
+// Function to sanitize section titles by removing markdown annotations
+const sanitizeSectionTitle = (title: string): string => {
+  // Handle null, undefined, or empty strings
+  if (!title || typeof title !== "string") {
+    return "";
+  }
+
+  return title
+    .replace(/\{[^}]*\}/g, "") // Remove {.class-name} style annotations
+    .replace(/\[[^\]]*\]/g, "") // Remove [attribute] style annotations
+    .replace(/#+ ?/g, "") // Remove markdown headers (# ## ###)
+    .replace(/\*\*(.*?)\*\*/g, "$1") // Remove bold markdown (**text**)
+    .replace(/\*(.*?)\*/g, "$1") // Remove italic markdown (*text*)
+    .replace(/`(.*?)`/g, "$1") // Remove inline code markdown (`code`)
+    .replace(/^\s*-\s*/, "") // Remove leading list markers (- )
+    .replace(/^\s*\d+\.\s*/, "") // Remove numbered list markers (1. )
+    .replace(/\s+/g, " ") // Replace multiple spaces with single space
+    .trim(); // Remove leading/trailing whitespace
+};
+
 // Add placeholders for future cheatsheets
 const placeholderCheatsheets = [
   {
@@ -93,7 +113,10 @@ export default function CheatsheetIndexPage() {
         icon: getIcon(cheatsheet.icon),
         color: cheatsheet.gradient,
         badge: cheatsheet.badge,
-        items: cheatsheet.sections.slice(0, 5), // Show first 5 sections
+        items: cheatsheet.sections
+          .slice(0, 5)
+          .map((section: string) => sanitizeSectionTitle(section))
+          .filter((item: string) => item.length > 0), // Remove empty items after sanitization
         keywords: cheatsheet.keywords,
         categories: cheatsheet.categories,
       };
@@ -105,24 +128,29 @@ export default function CheatsheetIndexPage() {
     return [...cheatsheets, ...placeholderCheatsheets];
   }, [cheatsheets]);
 
-  // Filter cheatsheets based on search query
+  // Filter cheatsheets based on search query and sort alphabetically
   const filteredCheatsheets = useMemo(() => {
-    if (!searchQuery.trim()) return allCheatsheets;
+    let results = allCheatsheets;
 
-    const query = searchQuery.toLowerCase();
-    return allCheatsheets.filter((sheet) => {
-      return (
-        sheet.title.toLowerCase().includes(query) ||
-        sheet.description.toLowerCase().includes(query) ||
-        sheet.keywords?.some((keyword: string) =>
-          keyword.toLowerCase().includes(query)
-        ) ||
-        sheet.categories?.some((category: string) =>
-          category.toLowerCase().includes(query)
-        ) ||
-        sheet.items.some((item: string) => item.toLowerCase().includes(query))
-      );
-    });
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      results = allCheatsheets.filter((sheet) => {
+        return (
+          sheet.title.toLowerCase().includes(query) ||
+          sheet.description.toLowerCase().includes(query) ||
+          sheet.keywords?.some((keyword: string) =>
+            keyword.toLowerCase().includes(query)
+          ) ||
+          sheet.categories?.some((category: string) =>
+            category.toLowerCase().includes(query)
+          ) ||
+          sheet.items.some((item: string) => item.toLowerCase().includes(query))
+        );
+      });
+    }
+
+    // Sort alphabetically by title (A-Z)
+    return results.sort((a, b) => a.title.localeCompare(b.title));
   }, [allCheatsheets, searchQuery]);
 
   if (loading) {
