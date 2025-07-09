@@ -18,18 +18,22 @@
     "parse:single": "npm run build && node dist/cli.js --file",
     "parse:batch": "npm run build && node dist/cli.js --batch",
     "parse:unified": "npm run build && node dist/cli.js unified",
-    "parse:individual": "npm run build && node dist/cli.js individual"
+    "parse:individual": "npm run build && node dist/cli.js individual",
+    "parse:github": "npm run build && node dist/cli.js github"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0",
+    "axios": "^1.10.0",
+    "chalk": "^5.3.0",
     "commander": "^11.1.0",
     "glob": "^10.3.10",
-    "chalk": "^5.3.0"
+    "js-yaml": "^4.1.0",
+    "node-fetch": "^3.3.2",
+    "simple-git": "^3.28.0"
   },
   "devDependencies": {
-    "@types/js-yaml": "^4.0.5",
-    "@types/node": "^20.5.0",
     "@types/glob": "^8.1.0",
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^20.19.6",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },

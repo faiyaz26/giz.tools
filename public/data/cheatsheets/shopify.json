@@ -1,0 +1,320 @@
+{
+  "id": "shopify",
+  "metadata": {
+    "title": "Shopify",
+    "date": "2022-11-23T16:23:31.704Z",
+    "background": "bg-[#8bbb55]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 50 keyboard shortcuts found on the Shopify website\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General Shortcuts",
+              "body": "| Shortcut    | Action                  |\n| ----------- | ----------------------- |\n| `?`         | Keyboard help           |\n| `S`         | Focus search bar        |\n| `F`         | Focus filter bar        |\n| `B` `Y` `E` | Log out                 |\n| `M` `E`     | Your profile            |\n| `O` `S`     | Open the store switcher |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`?`",
+                  "action": "Keyboard help"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Focus search bar"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Focus filter bar"
+                },
+                {
+                  "shortcut": "`B` `Y` `E`",
+                  "action": "Log out"
+                },
+                {
+                  "shortcut": "`M` `E`",
+                  "action": "Your profile"
+                },
+                {
+                  "shortcut": "`O` `S`",
+                  "action": "Open the store switcher"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Adding Items",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Adding Items",
+              "body": "| Shortcut | Action         |\n| -------- | -------------- |\n| `A` `P`  | Add product    |\n| `A` `C`  | Add collection |\n| `A` `D`  | Add discount   |\n| `A` `O`  | Add order      |\n| `A` `U`  | Add customer   |\n| `A` `B`  | Add blog post  |\n| `A` `L`  | Add blog       |\n| `A` `G`  | Add page       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`A` `P`",
+                  "action": "Add product"
+                },
+                {
+                  "shortcut": "`A` `C`",
+                  "action": "Add collection"
+                },
+                {
+                  "shortcut": "`A` `D`",
+                  "action": "Add discount"
+                },
+                {
+                  "shortcut": "`A` `O`",
+                  "action": "Add order"
+                },
+                {
+                  "shortcut": "`A` `U`",
+                  "action": "Add customer"
+                },
+                {
+                  "shortcut": "`A` `B`",
+                  "action": "Add blog post"
+                },
+                {
+                  "shortcut": "`A` `L`",
+                  "action": "Add blog"
+                },
+                {
+                  "shortcut": "`A` `G`",
+                  "action": "Add page"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Admin Panel I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Admin Panel I",
+              "body": "| Shortcut    | Action                         |\n| ----------- | ------------------------------ |\n| `G` `H`     | Go to home                     |\n| `G` `P` `P` | Go to products                 |\n| `G` `N`     | Go to analytics                |\n| `G` `D`     | Go to discounts                |\n| `G` `A`     | Go to apps                     |\n| `G` `B` `C` | Go to abandoned checkouts      |\n| `G` `P` `I` | Go to products, inventory      |\n| `G` `P` `G` | Go to products, gift cards     |\n| `G` `W` `B` | Go to online store, blog posts |\n| `G` `W` `T` | Go to online store, themes     |\n| `G` `W` `D` | Go to online store, domains    |\n| `G` `T` `L` | Go to settings, locations      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `H`",
+                  "action": "Go to home"
+                },
+                {
+                  "shortcut": "`G` `P` `P`",
+                  "action": "Go to products"
+                },
+                {
+                  "shortcut": "`G` `N`",
+                  "action": "Go to analytics"
+                },
+                {
+                  "shortcut": "`G` `D`",
+                  "action": "Go to discounts"
+                },
+                {
+                  "shortcut": "`G` `A`",
+                  "action": "Go to apps"
+                },
+                {
+                  "shortcut": "`G` `B` `C`",
+                  "action": "Go to abandoned checkouts"
+                },
+                {
+                  "shortcut": "`G` `P` `I`",
+                  "action": "Go to products, inventory"
+                },
+                {
+                  "shortcut": "`G` `P` `G`",
+                  "action": "Go to products, gift cards"
+                },
+                {
+                  "shortcut": "`G` `W` `B`",
+                  "action": "Go to online store, blog posts"
+                },
+                {
+                  "shortcut": "`G` `W` `T`",
+                  "action": "Go to online store, themes"
+                },
+                {
+                  "shortcut": "`G` `W` `D`",
+                  "action": "Go to online store, domains"
+                },
+                {
+                  "shortcut": "`G` `T` `L`",
+                  "action": "Go to settings, locations"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Admin Panel II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Admin Panel II",
+              "body": "| Shortcut    | Action                         |\n| ----------- | ------------------------------ |\n| `G` `S` `P` | Go to settings, payments       |\n| `G` `S` `S` | Go to settings, shipping       |\n| `G` `S` `N` | Go to settings, notifications  |\n| `G` `S` `F` | Go to settings, files          |\n| `G` `S` `W` | Go to settings, online store   |\n| `G` `S` `L` | Go to settings, sales channels |\n| `G` `O`     | Go to orders                   |\n| `G` `C`     | Go to customers                |\n| `G` `M`     | Go to marketing                |\n| `G` `L`     | Go to sales channels           |\n| `G` `S`     | Go to settings                 |\n| `G` `P` `T` | Go to products, transfers      |\n| `G` `P` `C` | Go to products, collections    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `S` `P`",
+                  "action": "Go to settings, payments"
+                },
+                {
+                  "shortcut": "`G` `S` `S`",
+                  "action": "Go to settings, shipping"
+                },
+                {
+                  "shortcut": "`G` `S` `N`",
+                  "action": "Go to settings, notifications"
+                },
+                {
+                  "shortcut": "`G` `S` `F`",
+                  "action": "Go to settings, files"
+                },
+                {
+                  "shortcut": "`G` `S` `W`",
+                  "action": "Go to settings, online store"
+                },
+                {
+                  "shortcut": "`G` `S` `L`",
+                  "action": "Go to settings, sales channels"
+                },
+                {
+                  "shortcut": "`G` `O`",
+                  "action": "Go to orders"
+                },
+                {
+                  "shortcut": "`G` `C`",
+                  "action": "Go to customers"
+                },
+                {
+                  "shortcut": "`G` `M`",
+                  "action": "Go to marketing"
+                },
+                {
+                  "shortcut": "`G` `L`",
+                  "action": "Go to sales channels"
+                },
+                {
+                  "shortcut": "`G` `S`",
+                  "action": "Go to settings"
+                },
+                {
+                  "shortcut": "`G` `P` `T`",
+                  "action": "Go to products, transfers"
+                },
+                {
+                  "shortcut": "`G` `P` `C`",
+                  "action": "Go to products, collections"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Admin Panel III",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Admin Panel III",
+              "body": "| Shortcut    | Action                        |\n| ----------- | ----------------------------- |\n| `G` `W` `O` | Go to online store, overview  |\n| `G` `W` `P` | Go to online store, pages     |\n| `G` `W` `N` | Go to line store, navigation  |\n| `G` `T` `O` | Go to point of sale, overview |\n| `G` `S` `G` | Go to settings, general       |\n| `G` `S` `C` | Go to settings, checkout      |\n| `G` `S` `X` | Go to settings, taxes         |\n| `G` `S` `I` | Go to settings, gift cards    |\n| `G` `S` `A` | Go to settings, account       |\n| `G` `S` `T` | Go to settings, point of sale |\n| `G` `S` `B` | Go to settings, billing       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `W` `O`",
+                  "action": "Go to online store, overview"
+                },
+                {
+                  "shortcut": "`G` `W` `P`",
+                  "action": "Go to online store, pages"
+                },
+                {
+                  "shortcut": "`G` `W` `N`",
+                  "action": "Go to line store, navigation"
+                },
+                {
+                  "shortcut": "`G` `T` `O`",
+                  "action": "Go to point of sale, overview"
+                },
+                {
+                  "shortcut": "`G` `S` `G`",
+                  "action": "Go to settings, general"
+                },
+                {
+                  "shortcut": "`G` `S` `C`",
+                  "action": "Go to settings, checkout"
+                },
+                {
+                  "shortcut": "`G` `S` `X`",
+                  "action": "Go to settings, taxes"
+                },
+                {
+                  "shortcut": "`G` `S` `I`",
+                  "action": "Go to settings, gift cards"
+                },
+                {
+                  "shortcut": "`G` `S` `A`",
+                  "action": "Go to settings, account"
+                },
+                {
+                  "shortcut": "`G` `S` `T`",
+                  "action": "Go to settings, point of sale"
+                },
+                {
+                  "shortcut": "`G` `S` `B`",
+                  "action": "Go to settings, billing"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Shopify](https://help.shopify.com/en/manual/productivity-tools/keyboard-shortcuts)\n  _(help.shopify.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

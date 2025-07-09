@@ -1,0 +1,636 @@
+{
+  "id": "superhuman",
+  "metadata": {
+    "title": "Superhuman",
+    "date": "2022-11-23T16:23:31.694Z",
+    "background": "bg-[#6bafe2]",
+    "label": "Mac",
+    "tags": [
+      null,
+      "mac"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 105 keyboard shortcuts found in Superhuman. This application is MacOS-only.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Actions",
+              "body": "| Shortcut      | Action              |\n| ------------- | ------------------- |\n| `Cmd` `K`     | Superhuman command  |\n| `/`           | Search              |\n| `Z`           | Undo                |\n| `?`           | Shortcuts           |\n| `X`           | Select conversation |\n| `Shift` `J/K` | Add to selection    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `K`",
+                  "action": "Superhuman command"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Search"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`?`",
+                  "action": "Shortcuts"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Select conversation"
+                },
+                {
+                  "shortcut": "`Shift` `J/K`",
+                  "action": "Add to selection"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Filters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Filters",
+              "body": "| Shortcut    | Action    |\n| ----------- | --------- |\n| `Shift` `U` | Unread    |\n| `Shift` `S` | Starred   |\n| `Shift` `I` | Important |\n| `Shift` `R` | No reply  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `U`",
+                  "action": "Unread"
+                },
+                {
+                  "shortcut": "`Shift` `S`",
+                  "action": "Starred"
+                },
+                {
+                  "shortcut": "`Shift` `I`",
+                  "action": "Important"
+                },
+                {
+                  "shortcut": "`Shift` `R`",
+                  "action": "No reply"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Messages",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Messages",
+              "body": "| Shortcut    | Action                        |\n| ----------- | ----------------------------- |\n| `C`         | Compose                       |\n| `Enter`     | Reply all                     |\n| `R`         | Reply                         |\n| `F`         | Forward                       |\n| `Cmd` `O`   | Open links and attachments    |\n| `Tab`       | Cycle through links and dates |\n| `O`         | Expand message                |\n| `Shift` `O` | Expand all messages           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`C`",
+                  "action": "Compose"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Reply all"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Reply"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Forward"
+                },
+                {
+                  "shortcut": "`Cmd` `O`",
+                  "action": "Open links and attachments"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Cycle through links and dates"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Expand message"
+                },
+                {
+                  "shortcut": "`Shift` `O`",
+                  "action": "Expand all messages"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Conversations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conversations",
+              "body": "| Shortcut    | Action                 |\n| ----------- | ---------------------- |\n| `E`         | Mark done (archive)    |\n| `Shift` `E` | Mark as not done       |\n| `H`         | Remind me (snooze)     |\n| `S`         | Star                   |\n| `U`         | Mark as read or unread |\n| `Shift` `3` | Trash                  |\n| `Shift` `1` | Mark as spam           |\n| `Shift` `M` | Mute                   |\n| `Cmd` `U`   | Unsubscribe            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`E`",
+                  "action": "Mark done (archive)"
+                },
+                {
+                  "shortcut": "`Shift` `E`",
+                  "action": "Mark as not done"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Remind me (snooze)"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Star"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Mark as read or unread"
+                },
+                {
+                  "shortcut": "`Shift` `3`",
+                  "action": "Trash"
+                },
+                {
+                  "shortcut": "`Shift` `1`",
+                  "action": "Mark as spam"
+                },
+                {
+                  "shortcut": "`Shift` `M`",
+                  "action": "Mute"
+                },
+                {
+                  "shortcut": "`Cmd` `U`",
+                  "action": "Unsubscribe"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Folders (Press keys separately)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Folders (Press keys separately)",
+              "body": "| Shortcut | Action                   |\n| -------- | ------------------------ |\n| `G` `I`  | Go to inbox or important |\n| `G` `O`  | Go to other              |\n| `G` `S`  | Go to starred            |\n| `G` `D`  | Go to drafts             |\n| `G` `T`  | Go to sent mail          |\n| `G` `E`  | Go to done               |\n| `G` `H`  | Go to reminders          |\n| `G` `M`  | Go to muted              |\n| `G` `;`  | Go to snippets           |\n| `G` `!`  | Go to spam               |\n| `G` `#`  | Go to trash              |\n| `G` `A`  | Go to all mail           |\n| `G` `L`  | Go to label              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `I`",
+                  "action": "Go to inbox or important"
+                },
+                {
+                  "shortcut": "`G` `O`",
+                  "action": "Go to other"
+                },
+                {
+                  "shortcut": "`G` `S`",
+                  "action": "Go to starred"
+                },
+                {
+                  "shortcut": "`G` `D`",
+                  "action": "Go to drafts"
+                },
+                {
+                  "shortcut": "`G` `T`",
+                  "action": "Go to sent mail"
+                },
+                {
+                  "shortcut": "`G` `E`",
+                  "action": "Go to done"
+                },
+                {
+                  "shortcut": "`G` `H`",
+                  "action": "Go to reminders"
+                },
+                {
+                  "shortcut": "`G` `M`",
+                  "action": "Go to muted"
+                },
+                {
+                  "shortcut": "`G` `;`",
+                  "action": "Go to snippets"
+                },
+                {
+                  "shortcut": "`G` `!`",
+                  "action": "Go to spam"
+                },
+                {
+                  "shortcut": "`G` `#`",
+                  "action": "Go to trash"
+                },
+                {
+                  "shortcut": "`G` `A`",
+                  "action": "Go to all mail"
+                },
+                {
+                  "shortcut": "`G` `L`",
+                  "action": "Go to label"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Format",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Format",
+              "body": "| Shortcut          | Action          |\n| ----------------- | --------------- |\n| `Cmd` `B`         | Bold            |\n| `Cmd` `I`         | Italics         |\n| `Cmd` `U`         | Underline       |\n| `Cmd` `K`         | Hyperlink       |\n| `Cmd` `O`         | Color           |\n| `Cmd` `Shift` `X` | Strikethrough   |\n| `Cmd` `Shift` `7` | Numbers         |\n| `Cmd` `Shift` `8` | Bullets         |\n| `Cmd` `Shift` `9` | Quote           |\n| `Tab`             | Indent list     |\n| `Shift` `Tab`     | Outdent list    |\n| `Cmd` `]`         | Increase indent |\n| `Cmd` `[`         | Decrease indent |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Cmd` `I`",
+                  "action": "Italics"
+                },
+                {
+                  "shortcut": "`Cmd` `U`",
+                  "action": "Underline"
+                },
+                {
+                  "shortcut": "`Cmd` `K`",
+                  "action": "Hyperlink"
+                },
+                {
+                  "shortcut": "`Cmd` `O`",
+                  "action": "Color"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `X`",
+                  "action": "Strikethrough"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `7`",
+                  "action": "Numbers"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `8`",
+                  "action": "Bullets"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `9`",
+                  "action": "Quote"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Indent list"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Outdent list"
+                },
+                {
+                  "shortcut": "`Cmd` `]`",
+                  "action": "Increase indent"
+                },
+                {
+                  "shortcut": "`Cmd` `[`",
+                  "action": "Decrease indent"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Labels",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Labels",
+              "body": "| Shortcut    | Action                 |\n| ----------- | ---------------------- |\n| `L`         | Add or remove a label  |\n| `Y`         | Remove label           |\n| `[`         | Remove label, next     |\n| `]`         | Remove label, previous |\n| `Shift` `Y` | Remove all labels      |\n| `V`         | Move                   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`L`",
+                  "action": "Add or remove a label"
+                },
+                {
+                  "shortcut": "`Y`",
+                  "action": "Remove label"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Remove label, next"
+                },
+                {
+                  "shortcut": "`]`",
+                  "action": "Remove label, previous"
+                },
+                {
+                  "shortcut": "`Shift` `Y`",
+                  "action": "Remove all labels"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Move"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Calendar",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Calendar",
+              "body": "| Shortcut | Action          |\n| -------- | --------------- |\n| `0`      | Toggle calendar |\n| `-`      | Previous day    |\n| `=`      | Next day        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`0`",
+                  "action": "Toggle calendar"
+                },
+                {
+                  "shortcut": "`-`",
+                  "action": "Previous day"
+                },
+                {
+                  "shortcut": "`=`",
+                  "action": "Next day"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut             | Action                        |\n| -------------------- | ----------------------------- |\n| `Up/Down/Left/Right` | Superhuman focus              |\n| `Tab`                | Next split                    |\n| `Shift` `Tab`        | Previous split                |\n| `Enter`              | Open conversation             |\n| `J/K`                | Next or previous conversation |\n| `N/P`                | Next or previous message      |\n| `Space`              | Scroll down                   |\n| `Shift` `Space`      | Scroll up                     |\n| `Cmd` `Up/Down`      | Jump to the top or bottom     |\n| `Cmd` `N`            | New window                    |\n| `Cmd` `T`            | New tab                       |\n| `Cmd` `Shift` `]`    | Next tab                      |\n| `Cmd` `Shift` `[`    | Previous tab                  |\n| `Cmd` `1/2/3`        | Switch tabs                   |\n| `Cmd` `W`            | Close tab                     |\n| `Ctrl` `1/2/3`       | Switch accounts               |\n| `Cmd` `=`            | Increase font size            |\n| `Cmd` `-`            | Decrease font size            |\n| `Cmd` `0`            | Reset font size               |\n| `Ctrl` `/`           | Copy page link                |\n| `Esc`                | Back                          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Up/Down/Left/Right`",
+                  "action": "Superhuman focus"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Next split"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Previous split"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Open conversation"
+                },
+                {
+                  "shortcut": "`J/K`",
+                  "action": "Next or previous conversation"
+                },
+                {
+                  "shortcut": "`N/P`",
+                  "action": "Next or previous message"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Scroll down"
+                },
+                {
+                  "shortcut": "`Shift` `Space`",
+                  "action": "Scroll up"
+                },
+                {
+                  "shortcut": "`Cmd` `Up/Down`",
+                  "action": "Jump to the top or bottom"
+                },
+                {
+                  "shortcut": "`Cmd` `N`",
+                  "action": "New window"
+                },
+                {
+                  "shortcut": "`Cmd` `T`",
+                  "action": "New tab"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `]`",
+                  "action": "Next tab"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `[`",
+                  "action": "Previous tab"
+                },
+                {
+                  "shortcut": "`Cmd` `1/2/3`",
+                  "action": "Switch tabs"
+                },
+                {
+                  "shortcut": "`Cmd` `W`",
+                  "action": "Close tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `1/2/3`",
+                  "action": "Switch accounts"
+                },
+                {
+                  "shortcut": "`Cmd` `=`",
+                  "action": "Increase font size"
+                },
+                {
+                  "shortcut": "`Cmd` `-`",
+                  "action": "Decrease font size"
+                },
+                {
+                  "shortcut": "`Cmd` `0`",
+                  "action": "Reset font size"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Copy page link"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Back"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pop Out Compose",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pop Out Compose",
+              "body": "| Shortcut          | Action                     |\n| ----------------- | -------------------------- |\n| `Cmd` `Shift` `P` | Pop draft in or out        |\n| `Shift` `R`       | Pop out reply              |\n| `Shift` `Enter`   | Pop out reply-all          |\n| `Shift` `C`       | Pop out new message        |\n| `Shift` `F`       | Pop out forward            |\n| `Cmd` `/`         | Pop out a draft and search |\n| `Cmd` `D`         | Switch to or from a draft  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Shift` `P`",
+                  "action": "Pop draft in or out"
+                },
+                {
+                  "shortcut": "`Shift` `R`",
+                  "action": "Pop out reply"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Pop out reply-all"
+                },
+                {
+                  "shortcut": "`Shift` `C`",
+                  "action": "Pop out new message"
+                },
+                {
+                  "shortcut": "`Shift` `F`",
+                  "action": "Pop out forward"
+                },
+                {
+                  "shortcut": "`Cmd` `/`",
+                  "action": "Pop out a draft and search"
+                },
+                {
+                  "shortcut": "`Cmd` `D`",
+                  "action": "Switch to or from a draft"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Compose",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Compose",
+              "body": "| Shortcut              | Action               |\n| --------------------- | -------------------- |\n| `Cmd` `Shift` `O`     | To                   |\n| `Cmd` `Shift` `C`     | CC                   |\n| `Cmd` `Shift` `B`     | BCC                  |\n| `Cmd` `Shift` `F`     | From                 |\n| `Cmd` `Shift` `S`     | Edit subject         |\n| `Cmd` `Shift` `M`     | Edit message         |\n| `Cmd` `Shift` `A`     | Attach               |\n| `Cmd` `Shift` `,`     | Discard draft        |\n| `Cmd` `Shift` `I`     | Move contacts to BCC |\n| `Cmd` `Shift` `H`     | Remind me            |\n| `Cmd` `Shift` `L`     | Send later           |\n| `Cmd` `;`             | Use snippet          |\n| `Cmd` `Enter`         | Send                 |\n| `Cmd` `Shift` `Enter` | Send and mark done   |\n| `Cmd` `Shift` `Z`     | Instant send         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Shift` `O`",
+                  "action": "To"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `C`",
+                  "action": "CC"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `B`",
+                  "action": "BCC"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `F`",
+                  "action": "From"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `S`",
+                  "action": "Edit subject"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `M`",
+                  "action": "Edit message"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `A`",
+                  "action": "Attach"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `,`",
+                  "action": "Discard draft"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `I`",
+                  "action": "Move contacts to BCC"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `H`",
+                  "action": "Remind me"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `L`",
+                  "action": "Send later"
+                },
+                {
+                  "shortcut": "`Cmd` `;`",
+                  "action": "Use snippet"
+                },
+                {
+                  "shortcut": "`Cmd` `Enter`",
+                  "action": "Send"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Enter`",
+                  "action": "Send and mark done"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Z`",
+                  "action": "Instant send"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Superhuman](https://download.superhuman.com/Superhuman%20Keyboard%20Shortcuts.pdf)\n  _(download.superhuman.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

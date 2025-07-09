@@ -1,0 +1,1215 @@
+{
+  "id": "matlab",
+  "metadata": {
+    "title": "MATLAB",
+    "date": "2023-01-03T09:51:44.000Z",
+    "background": "bg-[#692316]",
+    "tags": null,
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This quick reference cheat sheet provides an example introduction to using the [MATLAB](https://mathworks.cn/) scientific computing language to get started quickly\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "MATLAB is short for `matrix laboratory`\n\n- [MATLAB official website](https://www.mathworks.com)",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Matrix and array operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Matrix and array operations",
+              "body": "```matlab\na + 10\n```",
+              "footer": "MATLAB will execute the above statement and return the following results:\n```\nans = 3×3\n11    13    15\n12    14    16\n17    18    20\n```\n```matlab\nsin(a)\n```\nMATLAB will execute the above statement and return the following results:\n```\nans = 3×3\n0.8415    0.1411   -0.9589\n0.9093   -0.7568   -0.2794\n0.6570    0.9894   -0.5440\n```\nTo transpose a matrix, use single quotes (`'`)\n```matlab\na'\n```\n```\nans = 3×3\n1     2     7\n3     4     8\n5     6    10\n```\nPerform standard matrix multiplication using the `*` operator, which computes the inner product between rows and columns\n```matlab\np = a*inv(a)\n```\n```\np = 3×3\n1.0000         0         0\n0    1.0000         0\n0         0    1.0000\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "concatenation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "concatenation",
+              "body": "```matlab\nA = [a,a]\n```",
+              "footer": "```\nA = 3×6\n1     3     5     1     3     5\n2     4     6     2     4     6\n7     8    10     7     8    10\n```\nConcatenating arrays next to each other using commas is called horizontal concatenation. Each array must have the same\nnumber of rows. Likewise, semicolons can be used for vertical concatenation if the arrays have the same number of\ncolumns.\n```matlab\nA = [a; a]\n```\n```\nA = 6×3\n1     3     5\n2     4     6\n7     8    10\n1     3     5\n2     4     6\n7     8    10\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Matrices and arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Matrices and arrays",
+              "body": "To create an array with four elements per row, separate elements with commas (`,`) or spaces\n\n\n\nMATLAB will execute the above statement and return the following results:\n\n```matlab\na = [1 2 3 4]\n```",
+              "footer": "#### Create a matrix with multiple rows\n\n```matlab\na = [1 3 5; 2 4 6; 7 8 10]\n```\n\n```\na = 3×3\n     1     3     5\n     2     4     6\n     7     8    10\n```\n\n#### 5×1 column vector of zeros\n\n```matlab\nz = zeros(5,1)\n```\n\n```\nz = 5×1\n     0\n     0\n     0\n     0\n     0\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Complex number",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Complex number",
+              "body": "```matlab\nsqrt(-1)\n```",
+              "footer": "```\nans = 0.0000 + 1.0000i\n```\nTo represent the imaginary part of a complex number, use i or j.\n```matlab\nc = [3+4i, 4+3j; -i, 10j]\n```\n```\nc = 2×2 complex\n3.0000 + 4.0000i   4.0000 + 3.0000i\n0.0000 - 1.0000i   0.0000 +10.0000i\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Basic knowledge",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Input the command",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Input the command",
+              "body": "| -                                                                               | -                                                                         |\n| ------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |\n| [ans](https://www.mathworks.com/help/matlab/ref/ans.html)                       | Most recently calculated answer                                           |\n| [clc](https://www.mathworks.com/help/matlab/ref/clc.html)                       | Clear the command line window                                             |\n| [diary](https://www.mathworks.com/help/matlab/ref/diary.html)                   | Record the text of the command line window into the log file              |\n| [format](https://www.mathworks.com/help/matlab/ref/format.html)                 | Set the output display format                                             |\n| [home](https://www.mathworks.com/help/matlab/ref/home.html)                     | Send cursor reset                                                         |\n| [iskeyword](https://www.mathworks.com/help/matlab/ref/iskeyword.html)           | Determine if the input is a <span class=\"trademark\">MATLAB</span> keyword |\n| [more](https://www.mathworks.com/help/matlab/ref/more.html)                     | Control paging output in the command line window                          |\n| [commandwindow](https://www.mathworks.com/help/matlab/ref/commandwindow.html)   | Select command window                                                     |\n| [commandhistory](https://www.mathworks.com/help/matlab/ref/commandhistory.html) | Open command history window                                               |",
+              "footer": "#### Objects\n\n| -                                                                          | -                                                |\n| -------------------------------------------------------------------------- | :----------------------------------------------- |\n| [DisplayFormatOptions](https://www.mathworks.com/help/matlab/ref/ans.html) | Output display format in the command line window |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Matrices and Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Matrices and Arrays",
+              "body": "Create and combine arrays\n\n| -                                                                 | -                                                                 |\n| ----------------------------------------------------------------- | :---------------------------------------------------------------- |\n| [zeros](https://www.mathworks.com/help/matlab/ref/zeros.html)     | Create an array of all zeros                                      |\n| [ones](https://www.mathworks.com/help/matlab/ref/ones.html)       | Create an array of all 1s                                         |\n| [rand](https://www.mathworks.com/help/matlab/ref/rand.html)       | Uniformly distributed random numbers                              |\n| [true](https://www.mathworks.com/help/matlab/ref/true.html)       | Logical value 1 (true)                                            |\n| [false](https://www.mathworks.com/help/matlab/ref/false.html)     | logical 0 (false)                                                 |\n| [eye](https://www.mathworks.com/help/matlab/ref/eye.html)         | identity matrix                                                   |\n| [diag](https://www.mathworks.com/help/matlab/ref/diag.html)       | Create a diagonal matrix or get the diagonal elements of a matrix |\n| [blkdiag](https://www.mathworks.com/help/matlab/ref/blkdiag.html) | block diagonal matrix                                             |\n| [cat](https://www.mathworks.com/help/matlab/ref/double.cat.html)  | Concatenate arrays.                                               |\n| [horzcat](https://www.mathworks.com/help/matlab/ref/horzcat.html) | Concatenate arrays horizontally                                   |\n| [vertcat](https://www.mathworks.com/help/matlab/ref/vertcat.html) | Concatenate arrays vertically                                     |\n| [repelem](https://www.mathworks.com/help/matlab/ref/repelem.html) | Repeat array element copy                                         |\n| [repmat](https://www.mathworks.com/help/matlab/ref/repmat.html)   | Repeat array copy                                                 |\n\nCreate grid\n\n| -                                                                     | -                                       |\n| --------------------------------------------------------------------- | :-------------------------------------- |\n| [linspace](https://www.mathworks.com/help/matlab/ref/linspace.html)   | Generate linearly spaced vectors        |\n| [logspace](https://www.mathworks.com/help/matlab/ref/logspace.html)   | Generate logarithmic spaced vectors     |\n| [freqspace](https://www.mathworks.com/help/matlab/ref/freqspace.html) | frequency spacing of frequency response |\n| [meshgrid](https://www.mathworks.com/help/matlab/ref/meshgrid.html)   | 2D and 3D grids                         |\n| [ndgrid](https://www.mathworks.com/help/matlab/ref/ndgrid.html)       | Rectangular grid in N-dimensional space |\n\nDetermine size, shape and order\n\n| -                                                                           | -                                                          |\n| --------------------------------------------------------------------------- | :--------------------------------------------------------- |\n| [length](https://www.mathworks.com/help/matlab/ref/length.html)             | The length of the largest array dimension                  |\n| [size](https://www.mathworks.com/help/matlab/ref/size.html)                 | array size                                                 |\n| [ndims](https://www.mathworks.com/help/matlab/ref/double.ndims.html)        | Number of dimensions of the array                          |\n| [numel](https://www.mathworks.com/help/matlab/ref/double.numel.html)        | the number of array elements                               |\n| [isscalar](https://www.mathworks.com/help/matlab/ref/isscalar.html)         | Determine whether the input is a scalar                    |\n| [issorted](https://www.mathworks.com/help/matlab/ref/issorted.html)         | Determine if the array is sorted                           |\n| [issortedrows](https://www.mathworks.com/help/matlab/ref/issortedrows.html) | Determine whether the rows of a matrix or table are sorted |\n| [isvector](https://www.mathworks.com/help/matlab/ref/isvector.html)         | Determine whether the input is a vector                    |\n| [ismatrix](https://www.mathworks.com/help/matlab/ref/ismatrix.html)         | Determine whether the input is a matrix                    |\n| [isrow](https://www.mathworks.com/help/matlab/ref/isrow.html)               | Determine whether the input is a row vector                |\n| [iscolumn](https://www.mathworks.com/help/matlab/ref/iscolumn.html)         | Determine whether the input is a column vector             |\n| [isempty](https://www.mathworks.com/help/matlab/ref/isempty.html)           | Determine whether the array is empty                       |\n\nRefactor and rearrange\n\n| -                                                                                   | -                                        |\n| ----------------------------------------------------------------------------------- | :--------------------------------------- |\n| [sort](https://www.mathworks.com/help/matlab/ref/sort.html)                         | Sort array                               |\n| elements [sortrows](https://www.mathworks.com/help/matlab/ref/double.sortrows.html) | Sort matrix rows or table rows           |\n| [flip](https://www.mathworks.com/help/matlab/ref/flip.html)                         | Flip the order of elements               |\n| [fliplr](https://www.mathworks.com/help/matlab/ref/fliplr.html)                     | Flip the array from left to right        |\n| [flipud](https://www.mathworks.com/help/matlab/ref/flipud.html)                     | Flip the array from top to bottom        |\n| [rot90](https://www.mathworks.com/help/matlab/ref/rot90.html)                       | Rotate an array by 90 degrees            |\n| [transpose](https://www.mathworks.com/help/matlab/ref/transpose.html)               | Transpose a vector or matrix             |\n| [ctranspose](https://www.mathworks.com/help/matlab/ref/ctranspose.html)             | complex conjugate transpose              |\n| [permute](https://www.mathworks.com/help/matlab/ref/permute.html)                   | permute array dimension                  |\n| [ipermute](https://www.mathworks.com/help/matlab/ref/ipermute.html)                 | Inverse permutation of array dimensions. |\n| [circshift](https://www.mathworks.com/help/matlab/ref/circshift.html)               | Circular shift array                     |\n| [shiftdim](https://www.mathworks.com/help/matlab/ref/shiftdim.html)                 | shift array dimension                    |\n| [reshape](https://www.mathworks.com/help/matlab/ref/reshape.html)                   | Reshape array                            |\n| [squeeze](https://www.mathworks.com/help/matlab/ref/squeeze.html)                   | Remove dimensions of length 1            |\n\nindex\n\n| -                                                                 | -                                                                                    |\n| ----------------------------------------------------------------- | :----------------------------------------------------------------------------------- |\n| [colon](https://www.mathworks.com/help/matlab/ref/colon.html)     | vector creation, array subscript and <code class=\"literal\">for</code> loop iteration |\n| [end](https://www.mathworks.com/help/matlab/ref/end.html)         | Terminate a code block or indicate the maximum array index                           |\n| [ind2sub](https://www.mathworks.com/help/matlab/ref/ind2sub.html) | Convert linear index to subscript                                                    |\n| [sub2ind](https://www.mathworks.com/help/matlab/ref/sub2ind.html) | Convert subscript to linear index                                                    |",
+              "footer": "",
+              "spanConfig": "row-span-5",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Value type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Value type",
+              "body": "Create numeric variables\n\n| -                                                               | -                                |\n| --------------------------------------------------------------- | :------------------------------- |\n| [double](https://www.mathworks.com/help/matlab/ref/double.html) | double precision array           |\n| [single](https://www.mathworks.com/help/matlab/ref/single.html) | single precision array           |\n| [int8](https://www.mathworks.com/help/matlab/ref/int8.html)     | 8-bit signed integer array       |\n| [int16](https://www.mathworks.com/help/matlab/ref/int16.html)   | 16-bit signed integer array      |\n| [int32](https://www.mathworks.com/help/matlab/ref/int32.html)   | 32-bit signed integer array      |\n| [int64](https://www.mathworks.com/help/matlab/ref/int64.html)   | 64-bit signed integer array      |\n| [uint8](https://www.mathworks.com/help/matlab/ref/uint8.html)   | Array of 8-bit unsigned integers |\n| [uint16](https://www.mathworks.com/help/matlab/ref/uint16.html) | 16-bit unsigned integer array    |\n| [uint32](https://www.mathworks.com/help/matlab/ref/uint32.html) | 32-bit unsigned integer array    |\n| [uint64](https://www.mathworks.com/help/matlab/ref/uint64.html) | 64-bit unsigned integer array    |\n\nConvert between numeric types\n\n| -                                                                   | -                                                       |\n| ------------------------------------------------------------------- | :------------------------------------------------------ |\n| [cast](https://www.mathworks.com/help/matlab/ref/cast.html)         | Convert variables to different data types               |\n| [typecast](https://www.mathworks.com/help/matlab/ref/typecast.html) | Convert data types without changing the underlying data |\n\nQuery type and value\n\n| -                                                                      | -                                                     |\n| ---------------------------------------------------------------------- | :---------------------------------------------------- |\n| [allfinite](https://www.mathworks.com/help/matlab/ref/allfinite.html\") | Determine if all array elements are finite            |\n| [anynan](https://www.mathworks.com/help/matlab/ref/anynan.html\")       | Determine if any array element is NaN                 |\n| [isinteger](https://www.mathworks.com/help/matlab/ref/isinteger.html)  | Determine whether the input is an integer array       |\n| [isfloat](https://www.mathworks.com/help/matlab/ref/isfloat.html)      | Determine whether the input is a floating-point array |\n| [isnumeric](https://www.mathworks.com/help/matlab/ref/isnumeric.html)  | Determine whether the input is a numeric array        |\n| [isreal](https://www.mathworks.com/help/matlab/ref/isreal.html)        | Determine whether the array uses complex storage      |\n| [isfinite](https://www.mathworks.com/help/matlab/ref/isfinite.html)    | Determine which array elements are finite             |\n| [isinf](https://www.mathworks.com/help/matlab/ref/isinf.html)          | Determine which array elements are infinite           |\n| [isnan](https://www.mathworks.com/help/matlab/ref/isnan.html)          | Determine which array elements are NaN                |\n\nValue range\n\n| -                                                                   | -                                                                     |\n| ------------------------------------------------------------------- | :-------------------------------------------------------------------- |\n| [eps](https://www.mathworks.com/help/matlab/ref/eps.html)           | Floating point relative precision                                     |\n| [flintmax](https://www.mathworks.com/help/matlab/ref/flintmax.html) | The largest consecutive integer in floating point format              |\n| [Inf](https://www.mathworks.com/help/matlab/ref/inf.html)           | Create an array with all values `Inf`                                 |\n| [intmax](https://www.mathworks.com/help/matlab/ref/intmax.html)     | The maximum value of a specific integer type                          |\n| [intmin](https://www.mathworks.com/help/matlab/ref/intmin.html)     | The minimum value of a specific integer type                          |\n| [NaN](https://www.mathworks.com/help/matlab/ref/nan.html)           | Create an array where all values are <code class=\"literal\">NaN</code> |\n| [realmax](https://www.mathworks.com/help/matlab/ref/realmax.html)   | The largest positive floating point number                            |\n| [realmin](https://www.mathworks.com/help/matlab/ref/realmin.html)   | Minimum standard floating point number                                |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loops and conditional statements",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loops and conditional statements",
+              "body": "| -                                                                                | -                                                                 |\n| -------------------------------------------------------------------------------- | :---------------------------------------------------------------- |\n| [if, elseif, else](https://www.mathworks.com/help/matlab/ref/if.html)            | Execute statement when condition is true                          |\n| [switch, case, otherwise](https://www.mathworks.com/help/matlab/ref/switch.html) | Execute one of multiple sets of statements                        |\n| [for](https://www.mathworks.com/help/matlab/ref/for.html)                        | A `for` loop used to repeat a specified number of times           |\n| [while](https://www.mathworks.com/help/matlab/ref/while.html)                    | A `while` loop that executes repeatedly while a condition is true |\n| [try, catch](https://www.mathworks.com/help/matlab/ref/try.html)                 | Execute the statement and catch the resulting error               |\n| [break](https://www.mathworks.com/help/matlab/ref/break.html)                    | Terminate execution of a for or while loop                        |\n| [return](https://www.mathworks.com/help/matlab/ref/return.html)                  | Return control to the calling script or function                  |\n| [continue](https://www.mathworks.com/help/matlab/ref/continue.html)              | Passes control to the next iteration of a `for` or `while` loop   |\n| [pause](https://www.mathworks.com/help/matlab/ref/pause.html)                    | Temporarily suspend the execution of `MATLAB`                     |\n| [parfor](https://www.mathworks.com/help/matlab/ref/parfor.html)                  | Parallel for loop                                                 |\n| [end](https://www.mathworks.com/help/matlab/ref/end.html)                        | Terminate a code block or indicate the maximum array index        |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array of strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array of strings",
+              "body": "| -                                                                 | -                                                      |\n| ----------------------------------------------------------------- | :----------------------------------------------------- |\n| [string](https://www.mathworks.com/help/matlab/ref/string.html)   | string array                                           |\n| [strings](https://www.mathworks.com/help/matlab/ref/strings.html) | Create a string array that does not contain characters |\n| [join](https://www.mathworks.com/help/matlab/ref/join.html)       | Merge strings                                          |\n| [plus](https://www.mathworks.com/help/matlab/ref/plus.html)       | Add numbers, append strings                            |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Character array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Character array",
+              "body": "| -                                                                 | -                                            |\n| ----------------------------------------------------------------- | :------------------------------------------- |\n| [char](https://www.mathworks.com/help/matlab/ref/char.html)       | character array                              |\n| [cellstr](https://www.mathworks.com/help/matlab/ref/cellstr.html) | Convert to a cell array of character vectors |\n| [blanks](https://www.mathworks.com/help/matlab/ref/blanks.html)   | Create a blank character array               |\n| [newline](https://www.mathworks.com/help/matlab/ref/newline.html) | Create newline                               |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Character or string array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Character or string array",
+              "body": "| -                                                                 | -                                         |\n| ----------------------------------------------------------------- | :---------------------------------------- |\n| [compose](https://www.mathworks.com/help/matlab/ref/compose.html) | Format data into multiple strings         |\n| [sprintf](https://www.mathworks.com/help/matlab/ref/sprintf.html) | Format data as string or character vector |\n| [strcat](https://www.mathworks.com/help/matlab/ref/strcat.html)   | Concatenate strings horizontally          |\n| [append](https://www.mathworks.com/help/matlab/ref/append.html)   | Merge strings                             |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Char or string -convert input arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Char or string -convert input arguments",
+              "body": "| -                                                                                                               | -                                                                                   |\n| --------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |\n| [convertCharsToStrings](https://www.mathworks.com/help/matlab/ref/convertcharstostrings.html)                   | convert character array to string array, other arrays remain unchanged              |\n| [convertStringsToChars](https://www.mathworks.com/help/matlab/ref/convertstringstochars.html)                   | Convert string array to character array, other arrays remain unchanged              |\n| [convertContainedStringsToChars](https://www.mathworks.com/help/matlab/ref/convertcontainedstringstochars.html) | Convert an array of strings at any level of a cell array or structure {.style-list} |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CHAR or STRING -convert between numeric and string",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CHAR or STRING -convert between numeric and string",
+              "body": "| -                                                                       | -                                   |\n| ----------------------------------------------------------------------- | :---------------------------------- |\n| [double](https://www.mathworks.com/help/matlab/ref/double.html)         | double precision array              |\n| [string](https://www.mathworks.com/help/matlab/ref/string.html)         | string array                        |\n| [str2double](https://www.mathworks.com/help/matlab/ref/str2double.html) | Convert a string to a double value  |\n| [num2str](https://www.mathworks.com/help/matlab/ref/num2str.html)       | Convert numbers to character arrays |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Character or string -determine type and attributes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Character or string -determine type and attributes",
+              "body": "Type of data\n\n| -                                                                               | -                                                                    |\n| ------------------------------------------------------------------------------- | :------------------------------------------------------------------- |\n| [ischar](https://www.mathworks.com/help/matlab/ref/ischar.html)                 | Determine whether the input is a character array                     |\n| [iscellstr](https://www.mathworks.com/help/matlab/ref/iscellstr.html)           | Determines if input is a cell array of character vectors             |\n| [isstring](https://www.mathworks.com/help/matlab/ref/isstring.html)             | Determine whether the input is an array of strings                   |\n| [isStringScalar](https://www.mathworks.com/help/matlab/ref/isstringscalar.html) | Determine whether the input is a string array containing one element |\n\nText attribute\n\n| -                                                                     | -                                                                               |\n| --------------------------------------------------------------------- | :------------------------------------------------------------------------------ |\n| [strlength](https://www.mathworks.com/help/matlab/ref/strlength.html) | string length                                                                   |\n| [isstrprop](https://www.mathworks.com/help/matlab/ref/isstrprop.html) | Determine which characters in the input string belong to the specified category |\n| [isletter](https://www.mathworks.com/help/matlab/ref/isletter.html)   | Determine which characters are letters                                          |\n| [isspace](https://www.mathworks.com/help/matlab/ref/isspace.html)     | Determine which characters are whitespace characters                            |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "character or string -find and replace",
+          "level": 3,
+          "cards": [
+            {
+              "title": "character or string -find and replace",
+              "body": "Look up\n\n| -                                                                       | -                                                        |\n| ----------------------------------------------------------------------- | :------------------------------------------------------- |\n| [contains](https://www.mathworks.com/help/matlab/ref/contains.html)     | Determine if there is a pattern in the string            |\n| [matches](https://www.mathworks.com/help/matlab/ref/matches.html)       | Determine if a pattern matches a string                  |\n| [count](https://www.mathworks.com/help/matlab/ref/count.html)           | Count the number of occurrences of a pattern in a string |\n| [endsWith](https://www.mathworks.com/help/matlab/ref/endswith.html)     | Determine if a string ends with a pattern                |\n| [startsWith](https://www.mathworks.com/help/matlab/ref/startswith.html) | Determine whether a string starts with a pattern         |\n| [strfind](https://www.mathworks.com/help/matlab/ref/strfind.html)       | Find a string in other strings                           |\n| [sscanf](https://www.mathworks.com/help/matlab/ref/sscanf.html)         | Read formatted data from a string                        |\n\nreplace\n\n| -                                                                               | -                                               |\n| ------------------------------------------------------------------------------- | :---------------------------------------------- |\n| [replace](https://www.mathworks.com/help/matlab/ref/replace.html)               | Find and replace one or more substrings         |\n| [replaceBetween](https://www.mathworks.com/help/matlab/ref/replacebetween.html) | Replace the substring between the start and end |\n| [strrep](https://www.mathworks.com/help/matlab/ref/strrep.html)                 | Find and replace substring                      |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String matching pattern -build pattern",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String matching pattern -build pattern",
+              "body": "| -                                                                 | -                                       |\n| ----------------------------------------------------------------- | :-------------------------------------- |\n| [pattern](https://www.mathworks.com/help/matlab/ref/pattern.html) | pattern for searching and matching text |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String match pattern -character match pattern",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String match pattern -character match pattern",
+              "body": "| -                                                                                           | -                                               |\n| ------------------------------------------------------------------------------------------- | :---------------------------------------------- |\n| [alphanumericsPattern](https://www.mathworks.com/help/matlab/ref/alphanumericspattern.html) | match alphanumeric characters                   |\n| [characterListPattern](https://www.mathworks.com/help/matlab/ref/characterlistpattern.html) | Match characters in the list                    |\n| [digitsPattern](https://www.mathworks.com/help/matlab/ref/digitspattern.html)               | Match digit characters                          |\n| [lettersPattern](https://www.mathworks.com/help/matlab/ref/letterspattern.html)             | match letter pattern                            |\n| [whitespacePattern](https://www.mathworks.com/help/matlab/ref/whitespacepattern.html)       | match whitespace characters                     |\n| [wildcardPattern](https://www.mathworks.com/help/matlab/ref/wildcardpattern.html)           | Match as few characters of any type as possible |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String matching pattern -pattern search rules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String matching pattern -pattern search rules",
+              "body": "| -                                                                                               | -                                                          |\n| ----------------------------------------------------------------------------------------------- | :--------------------------------------------------------- |\n| [optionalPattern](https://www.mathworks.com/help/matlab/ref/optionalpattern.html)               | Make pattern matching optional                             |\n| [possessivePattern](https://www.mathworks.com/help/matlab/ref/possessivepattern.html)           | Match pattern without backtracking                         |\n| [caseSensitivePattern](https://www.mathworks.com/help/matlab/ref/casesensitivepattern.html)     | Match patterns in a case-sensitive manner                  |\n| [caseInsensitivePattern](https://www.mathworks.com/help/matlab/ref/caseinsensitivepattern.html) | Match patterns in a case-insensitive manner                |\n| [asFewOfPattern](https://www.mathworks.com/help/matlab/ref/asfewofpattern.html)                 | The number of pattern matches should be as few as possible |\n| [asManyOfPattern](https://www.mathworks.com/help/matlab/ref/asmanyofpattern.html)               | Pattern matching as many times as possible                 |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String matching pattern -Boundary pattern",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String matching pattern -Boundary pattern",
+              "body": "| -                                                                                           | -                                                                         |\n| ------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------ |\n| [alphanumericBoundary](https://www.mathworks.com/help/matlab/ref/alphanumericboundary.html) | Matches the boundary between alphanumeric and non-alphanumeric characters |\n| [digitBoundary](https://www.mathworks.com/help/matlab/ref/digitboundary.html)               | Matches the boundary between digit characters and non-digit characters    |\n| [letterBoundary](https://www.mathworks.com/help/matlab/ref/letterboundary.html)             | Matches the boundary between alphabetic and non-alphabetic characters     |\n| [whitespaceBoundary](https://www.mathworks.com/help/matlab/ref/whitespaceboundary.html)     | Matches the boundary between whitespace and non-whitespace characters     |\n| [lineBoundary](https://www.mathworks.com/help/matlab/ref/lineboundary.html)                 | match the beginning or end of a line                                      |\n| [textBoundary](https://www.mathworks.com/help/matlab/ref/textboundary.html)                 | match the beginning or end of the text                                    |\n| [lookAheadBoundary](https://www.mathworks.com/help/matlab/ref/lookaheadboundary.html)       | match the boundary before the specified pattern                           |\n| [lookBehindBoundary](https://www.mathworks.com/help/matlab/ref/lookbehindboundary.html)     | Boundary after matching the specified pattern                             |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String matching pattern -custom pattern display",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String matching pattern -custom pattern display",
+              "body": "| -                                                                             | -                                   |\n| ----------------------------------------------------------------------------- | :---------------------------------- |\n| [maskedPattern](https://www.mathworks.com/help/matlab/ref/maskedpattern.html) | pattern with specified display name |\n| [namedPattern](https://www.mathworks.com/help/matlab/ref/namedpattern.html)   | Specify a named pattern             |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String matching pattern -regular expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String matching pattern -regular expression",
+              "body": "| -                                                                                 | -                                                     |\n| --------------------------------------------------------------------------------- | :---------------------------------------------------- |\n| [regexp](https://www.mathworks.com/help/matlab/ref/regexp.html)                   | match regular expression (case sensitive)             |\n| [regexpi](https://www.mathworks.com/help/matlab/ref/regexpi.html)                 | Match regular expressions (case insensitive)          |\n| [regexprep](https://www.mathworks.com/help/matlab/ref/regexprep.html)             | Replace text using regular expressions                |\n| [regexptranslate](https://www.mathworks.com/help/matlab/ref/regexptranslate.html) | Convert text to regular expressions                   |\n| [regexpPattern](https://www.mathworks.com/help/matlab/ref/regexppattern.html)     | Match the pattern of the specified regular expression |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String matching pattern -join and split",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String matching pattern -join and split",
+              "body": "| -                                                                               | -                                                                     |\n| ------------------------------------------------------------------------------- | :-------------------------------------------------------------------- |\n| [join](https://www.mathworks.com/help/matlab/ref/join.html)                     | Merge strings                                                         |\n| [plus](https://www.mathworks.com/help/matlab/ref/plus.html)                     | Add numbers, append strings                                           |\n| [split](https://www.mathworks.com/help/matlab/ref/split.html)                   | Split string at delimiter                                             |\n| [splitlines](https://www.mathworks.com/help/matlab/ref/splitlines.html)         | Split a string at newlines                                            |\n| [strjoin](https://www.mathworks.com/help/matlab/ref/strjoin.html)               | join the strings in the array                                         |\n| [strsplit](https://www.mathworks.com/help/matlab/ref/strsplit.html)             | Splits a string or character vector at the specified delimiter        |\n| [strtok](https://www.mathworks.com/help/matlab/ref/strtok.html)                 | Selected string part                                                  |\n| [extract](https://www.mathworks.com/help/matlab/ref/extract.html)               | Extract a substring from a string                                     |\n| [extractAfter](https://www.mathworks.com/help/matlab/ref/extractafter.html)     | Extract the substring after the specified position                    |\n| [extractBefore](https://www.mathworks.com/help/matlab/ref/extractbefore.html)   | Extract the substring before the specified position                   |\n| [extractBetween](https://www.mathworks.com/help/matlab/ref/extractbetween.html) | Extract the substring between the starting point and the ending point |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String editing",
+              "body": "| -                                                                               | -                                                                     |\n| ------------------------------------------------------------------------------- | :-------------------------------------------------------------------- |\n| [erase](https://www.mathworks.com/help/matlab/ref/erase.html)                   | Delete a substring in a string                                        |\n| [eraseBetween](https://www.mathworks.com/help/matlab/ref/erasebetween.html)     | Delete the substring between the start and end                        |\n| [extract](https://www.mathworks.com/help/matlab/ref/extract.html)               | Extract a substring from a string                                     |\n| [extractAfter](https://www.mathworks.com/help/matlab/ref/extractafter.html)     | Extract the substring after the specified position                    |\n| [extractBefore](https://www.mathworks.com/help/matlab/ref/extractbefore.html)   | Extract the substring before the specified position                   |\n| [extractBetween](https://www.mathworks.com/help/matlab/ref/extractbetween.html) | Extract the substring between the starting point and the ending point |\n| [insertAfter](https://www.mathworks.com/help/matlab/ref/insertafter.html)       | Insert a string after the specified substring                         |\n| [insertBefore](https://www.mathworks.com/help/matlab/ref/insertbefore.html)     | Insert a string before the specified substring                        |\n| [pad](https://www.mathworks.com/help/matlab/ref/pad.html)                       | Add leading or trailing characters to a string                        |\n| [strip](https://www.mathworks.com/help/matlab/ref/strip.html)                   | Remove leading and trailing characters in a string                    |\n| [lower](https://www.mathworks.com/help/matlab/ref/lower.html)                   | convert string to lowercase                                           |\n| [upper](https://www.mathworks.com/help/matlab/ref/upper.html)                   | convert string to uppercase                                           |\n| [reverse](https://www.mathworks.com/help/matlab/ref/reverse.html)               | Reverse the order of characters in a string                           |\n| [deblank](https://www.mathworks.com/help/matlab/ref/deblank.html)               | Remove trailing blanks at the end of a string                         |\n| [strtrim](https://www.mathworks.com/help/matlab/ref/strtrim.html)               | Remove leading and trailing blanks from a string                      |\n| [strjust](https://www.mathworks.com/help/matlab/ref/strjust.html)               | align string                                                          |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String comparison",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String comparison",
+              "body": "| -                                                                   | -                                                                                           |\n| ------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |\n| [matches](https://www.mathworks.com/help/matlab/ref/matches.html)   | Determine if a pattern matches a string                                                     |\n| [strcmp](https://www.mathworks.com/help/matlab/ref/strcmp.html)     | Compare strings                                                                             |\n| [strcmpi](https://www.mathworks.com/help/matlab/ref/strcmpi.html)   | Compare strings (case insensitive)                                                          |\n| [strncmp](https://www.mathworks.com/help/matlab/ref/strncmp.html)   | compares the first <code class=\"literal\">n</code> characters of a string (case sensitive)   |\n| [strncmpi](https://www.mathworks.com/help/matlab/ref/strncmpi.html) | Compare the first <code class=\"literal\">n</code> characters of a string (case insensitive ) |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic Arithmetic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Arithmetic",
+              "body": "",
+              "footer": "#### Addition\n\n- [+](https://www.mathworks.com/help/matlab/ref/plus.html) Add numbers, append strings\n- [sum](https://www.mathworks.com/help/matlab/ref/sum.html) sum of array elements\n- [cumsum](https://www.mathworks.com/help/matlab/ref/cumsum.html) cumulative sum\n- [movsum](https://www.mathworks.com/help/matlab/ref/movsum.html) moving sum\n\n{.cols-2 .marker-none}\n\n#### Subtraction\n\n- [-](https://www.mathworks.com/help/matlab/ref/minus.html) subtraction\n- [diff](https://www.mathworks.com/help/matlab/ref/diff.html) difference and approximate derivative\n\n{.cols-2 .marker-none}\n\n#### Multiplication\n\n| -                                                                       | -                                   |\n| ----------------------------------------------------------------------- | :---------------------------------- |\n| [.\\*](https://www.mathworks.com/help/matlab/ref/times.html)             | Multiplication                      |\n| [\\*](https://www.mathworks.com/help/matlab/ref/mtimes.html)             | Matrix multiplication               |\n| [prod](https://www.mathworks.com/help/matlab/ref/prod.html)             | product of array elements           |\n| [cumprod](https://www.mathworks.com/help/matlab/ref/cumprod.html)       | cumulative product                  |\n| [pagemtimes](https://www.mathworks.com/help/matlab/ref/pagemtimes.html) | Matrix multiplication by page       |\n| [tensorprod](https://www.mathworks.com/help/matlab/ref/tensorprod.html) | Tensor products between two tensors |\n\n#### Division\n\n| -                                                             | -                                                             |\n| ------------------------------------------------------------- | :------------------------------------------------------------ |\n| [./](https://www.mathworks.com/help/matlab/ref/rdivide.html)  | Array right division                                          |\n| [.\\\\](https://www.mathworks.com/help/matlab/ref/ldivide.html) | Array left division                                           |\n| [/](https://www.mathworks.com/help/matlab/ref/mrdivide.html)  | Solve the system of linear equations xA = B about x           |\n| [\\\\](https://www.mathworks.com/help/matlab/ref/mldivide.html) | Solve the system of linear equations Ax = B with respect to x |\n\n#### Power\n\n- [.^](https://www.mathworks.com/help/matlab/ref/power.html) Element-wise exponentiation\n- [^](https://www.mathworks.com/help/matlab/ref/mpower.html) matrix power\n\n{.cols-2 .marker-none}\n\n#### Transpose\n\n| -                                                                               | -                                   |\n| ------------------------------------------------------------------------------- | :---------------------------------- |\n| [.'](https://www.mathworks.com/help/matlab/ref/transpose.html)                  | Transpose a vector or matrix        |\n| ['](https://www.mathworks.com/help/matlab/ref/ctranspose.html)                  | complex conjugate transpose         |\n| [pagetranspose](https://www.mathworks.com/help/matlab/ref/pagetranspose.html)   | Transpose by page                   |\n| [pagectranspose](https://www.mathworks.com/help/matlab/ref/pagectranspose.html) | Complex conjugate transpose by page |\n\n#### Array notation\n\n- [uminus](https://www.mathworks.com/help/matlab/ref/uminus.html) unary subtraction\n- [uplus](https://www.mathworks.com/help/matlab/ref/uplus.html) unary addition\n\n{.cols-2 .marker-none}",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Modular division and rounding",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Modular division and rounding",
+              "body": "| -                                                                 | -                                           |\n| ----------------------------------------------------------------- | :------------------------------------------ |\n| [mod](https://www.mathworks.com/help/matlab/ref/mod.html)         | Remainder after division (modulo operation) |\n| [rem](https://www.mathworks.com/help/matlab/ref/rem.html)         | Remainder after division                    |\n| [idivide](https://www.mathworks.com/help/matlab/ref/idivide.html) | Divisibility with rounding options          |\n| [ceil](https://www.mathworks.com/help/matlab/ref/ceil.html)       | round towards positive infinity             |\n| [fix](https://www.mathworks.com/help/matlab/ref/fix.html)         | round towards zero                          |\n| [floor](https://www.mathworks.com/help/matlab/ref/floor.html)     | round towards negative infinity             |\n| [round](https://www.mathworks.com/help/matlab/ref/round.html)     | round to the nearest decimal or integer     |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Custom Binary Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom Binary Functions",
+              "body": "| -                                                               | -                                                                             |\n| --------------------------------------------------------------- | :---------------------------------------------------------------------------- |\n| [bsxfun](https://www.mathworks.com/help/matlab/ref/bsxfun.html) | Apply element-wise operations on two arrays (with implicit expansion enabled) |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Relational operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Relational operations",
+              "body": "value comparison\n\n| -                                                                   | -                                                |\n| ------------------------------------------------------------------- | :----------------------------------------------- |\n| [==](https://www.mathworks.com/help/matlab/ref/eq.html)             | Determine equality                               |\n| [>=](https://www.mathworks.com/help/matlab/ref/ge.html)             | Determine greater than or equal to               |\n| [>](https://www.mathworks.com/help/matlab/ref/gt.html)              | Determine greater than                           |\n| [<=](https://www.mathworks.com/help/matlab/ref/le.html)             | Determine less than or equal to                  |\n| [<](https://www.mathworks.com/help/matlab/ref/lt.html)              | Determine less than                              |\n| [~=](https://www.mathworks.com/help/matlab/ref/ne.html)             | Determine Inequality                             |\n| [isequal](https://www.mathworks.com/help/matlab/ref/isequal.html)   | Determine array equality                         |\n| [isequaln](https://www.mathworks.com/help/matlab/ref/isequaln.html) | Test array equality, treat `NaN` values as equal |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logical (Boolean) operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logical (Boolean) operations",
+              "body": "true or false condition\n\n| -                                                                                                     | -                                                           |\n| ----------------------------------------------------------------------------------------------------- | :---------------------------------------------------------- |\n| [Short-circuit &&, \\|\\|](https://www.mathworks.com/help/matlab/ref/logicaloperatorsshortcircuit.html) | Logical operators with short-circuit function               |\n| [&](https://www.mathworks.com/help/matlab/ref/and.html)                                               | Computational logic `AND`                                   |\n| [~](https://www.mathworks.com/help/matlab/ref/not.html)                                               | Computational logic `NOT`                                   |\n| [\\|](https://www.mathworks.com/help/matlab/ref/or.html)                                               | Calculation logic `OR`                                      |\n| [xor](https://www.mathworks.com/help/matlab/ref/xor.html)                                             | Compute logical exclusive `OR`                              |\n| [all](https://www.mathworks.com/help/matlab/ref/all.html)                                             | Determine whether all array elements are non-zero or `true` |\n| [any](https://www.mathworks.com/help/matlab/ref/any.html)                                             | Determine if any array elements are non-zero                |\n| [false](https://www.mathworks.com/help/matlab/ref/false.html)                                         | logical `0` (false)                                         |\n| [find](https://www.mathworks.com/help/matlab/ref/find.html)                                           | Find the index and value of non-zero elements               |\n| [islogical](https://www.mathworks.com/help/matlab/ref/islogical.html)                                 | Determine whether the input is a logical array              |\n| [logical](https://www.mathworks.com/help/matlab/ref/logical.html)                                     | Convert numeric values to logical values                    |\n| [true](https://www.mathworks.com/help/matlab/ref/true.html)                                           | Logical value `1` (true)                                    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Set operation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Set operation",
+              "body": "union, intersection, set relationship\n\n| -                                                                            | -                                                              |\n| ---------------------------------------------------------------------------- | :------------------------------------------------------------- |\n| [intersect](https://www.mathworks.com/help/matlab/ref/double.intersect.html) | Set the intersection of two arrays                             |\n| [ismember](https://www.mathworks.com/help/matlab/ref/double.ismember.html)   | Determine whether an array element is a set array member       |\n| [setdiff](https://www.mathworks.com/help/matlab/ref/double.setdiff.html)     | Set the difference between two arrays                          |\n| [setxor](https://www.mathworks.com/help/matlab/ref/double.setxor.html)       | Set XOR of two arrays                                          |\n| [union](https://www.mathworks.com/help/matlab/ref/double.union.html)         | Set the union of two arrays                                    |\n| [unique](https://www.mathworks.com/help/matlab/ref/double.unique.html)       | Unique value in an array                                       |\n| [ismembertol](https://www.mathworks.com/help/matlab/ref/ismembertol.html)    | set membership within tolerance                                |\n| [uniquetol](https://www.mathworks.com/help/matlab/ref/uniquetol.html)        | unique values within tolerance                                 |\n| [join](https://www.mathworks.com/help/matlab/ref/table.join.html)            | Merge two tables or timetables row by row using a key variable |\n| [innerjoin](https://www.mathworks.com/help/matlab/ref/innerjoin.html)        | Inner join between two tables or timetables                    |\n| [outerjoin](https://www.mathworks.com/help/matlab/ref/outerjoin.html)        | Outer join between two tables or timetables                    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bitwise operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bitwise operations",
+              "body": "set, offset, or compare specific bitfields\n\n| -                                                                     | -                                      |\n| --------------------------------------------------------------------- | :------------------------------------- |\n| [bitand](https://www.mathworks.com/help/matlab/ref/bitand.html)       | Bitwise `AND`                          |\n| [bitor](https://www.mathworks.com/help/matlab/ref/bitor.html)         | Bitwise `OR`                           |\n| [bitxor](https://www.mathworks.com/help/matlab/ref/bitxor.html)       | Bitwise `XOR`                          |\n| [bitcmp](https://www.mathworks.com/help/matlab/ref/bitcmp.html)       | Bitwise complement                     |\n| [bitget](https://www.mathworks.com/help/matlab/ref/bitget.html)       | Get the bit at the specified position  |\n| [bitset](https://www.mathworks.com/help/matlab/ref/bitset.html)       | Set the bit at the specified position  |\n| [bitshift](https://www.mathworks.com/help/matlab/ref/bitshift.html)   | Shift bits by specified number of bits |\n| [swapbytes](https://www.mathworks.com/help/matlab/ref/swapbytes.html) | swap byte order                        |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data import and export",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "text file -read and write table or timetable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "text file -read and write table or timetable",
+              "body": "",
+              "footer": "#### Basic import and export\n\n| -                                                                               | -                                  |\n| ------------------------------------------------------------------------------- | :--------------------------------- |\n| [readtable](https://www.mathworks.com/help/matlab/ref/readtable.html)           | Create a table based on a file     |\n| [writetable](https://www.mathworks.com/help/matlab/ref/writetable.html)         | write table to file                |\n| [readtimetable](https://www.mathworks.com/help/matlab/ref/readtimetable.html)   | Create a timetable based on a file |\n| [writetimetable](https://www.mathworks.com/help/matlab/ref/writetimetable.html) | Write timetable to file            |\n\n#### Define import rules\n\n| -                                                                                                                      | -                                                           |\n| ---------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------- |\n| [detectImportOptions](https://www.mathworks.com/help/matlab/ref/detectimportoptions.html)                              | Generate import options based on file content               |\n| [delimitedTextImportOptions](https://www.mathworks.com/help/matlab/ref/matlab.io.text.delimitedtextimportoptions.html) | Import options object for delimited text                    |\n| [fixedWidthImportOptions](https://www.mathworks.com/help/matlab/ref/matlab.io.text.fixedwidthimportoptions.html)       | Import options object for fixed-width text files            |\n| [xmlImportOptions](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.xmlimportoptions.html)                      | Import options object for XML file                          |\n| [htmlImportOptions](https://www.mathworks.com/help/matlab/ref/matlab.io.html.htmlimportoptions.html)                   | Import options object for HTML files                        |\n| [wordDocumentImportOptions](https://www.mathworks.com/help/matlab/ref/matlab.io.word.worddocumentimportoptions.html)   | `Microsoft Word` file import options object                 |\n| [getvaropts](https://www.mathworks.com/help/matlab/ref/matlab.io.text.delimitedtextimportoptions.getvaropts.html)      | Get variable import options                                 |\n| [setvaropts](https://www.mathworks.com/help/matlab/ref/matlab.io.text.delimitedtextimportoptions.setvaropts.html)      | Set variable import options                                 |\n| [setvartype](https://www.mathworks.com/help/matlab/ref/matlab.io.text.delimitedtextimportoptions.setvartype.html)      | Set variable data type                                      |\n| [preview](https://www.mathworks.com/help/matlab/ref/matlab.io.text.delimitedtextimportoptions.preview.html)            | Preview eight lines of data in the file with import options |\n\n{.style-list}",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Text files -read and write matrices and arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Text files -read and write matrices and arrays",
+              "body": "| -                                                                         | -                                              |\n| ------------------------------------------------------------------------- | :--------------------------------------------- |\n| [readmatrix](https://www.mathworks.com/help/matlab/ref/readmatrix.html)   | Read a matrix from a file                      |\n| [writematrix](https://www.mathworks.com/help/matlab/ref/writematrix.html) | Write matrix to file                           |\n| [readcell](https://www.mathworks.com/help/matlab/ref/readcell.html)       | Read a cell array from a file                  |\n| [writecell](https://www.mathworks.com/help/matlab/ref/writecell.html)     | Write a cell array to a file                   |\n| [readvars](https://www.mathworks.com/help/matlab/ref/readvars.html)       | Read variables from a file                     |\n| [textscan](https://www.mathworks.com/help/matlab/ref/textscan.html)       | Read formatted data from a text file or string |\n| [type](https://www.mathworks.com/help/matlab/ref/type.html)               | Display file content                           |\n| [fileread](https://www.mathworks.com/help/matlab/ref/fileread.html)       | Read file content in text format               |\n| [readlines](https://www.mathworks.com/help/matlab/ref/readlines.html)     | Read lines of a file as an array of strings    |\n| [writelines](https://www.mathworks.com/help/matlab/ref/writelines.html)   | Write text to file                             |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Spreadsheet -Read and Write Table or Timetable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Spreadsheet -Read and Write Table or Timetable",
+              "body": "Basic import and export\n\n| -                                                                               | -                                      |\n| ------------------------------------------------------------------------------- | :------------------------------------- |\n| [readtable](https://www.mathworks.com/help/matlab/ref/readtable.html)           | Create a table from a file             |\n| [writetable](https://www.mathworks.com/help/matlab/ref/writetable.html)         | write table to file                    |\n| [readtimetable](https://www.mathworks.com/help/matlab/ref/readtimetable.html)   | Create a timetable from a file         |\n| [writetimetable](https://www.mathworks.com/help/matlab/ref/writetimetable.html) | Write timetable to file                |\n| [sheetnames](https://www.mathworks.com/help/matlab/ref/sheetnames.html)         | Get sheetnames from a spreadsheet file |\n\n{.style-list}\n\nDefine import rules\n\n| -                                                                                                                         | -                                                        |\n| ------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------- |\n| [detectImportOptions](https://www.mathworks.com/help/matlab/ref/detectimportoptions.html)                                 | Generate import options based on file content            |\n| [spreadsheetImportOptions](https://www.mathworks.com/help/matlab/ref/matlab.io.spreadsheet.spreadsheetimportoptions.html) | Spreadsheet import options object                        |\n| [getvaropts](https://www.mathworks.com/help/matlab/ref/matlab.io.text.delimitedtextimportoptions.getvaropts.html)         | Get variable import options                              |\n| [setvaropts](https://www.mathworks.com/help/matlab/ref/matlab.io.text.delimitedtextimportoptions.setvaropts.html)         | Set variable import options                              |\n| [setvartype](https://www.mathworks.com/help/matlab/ref/matlab.io.text.delimitedtextimportoptions.setvartype.html)         | Set variable data type                                   |\n| [preview](https://www.mathworks.com/help/matlab/ref/matlab.io.text.delimitedtextimportoptions.preview.html)               | Preview eight rows of data in a file with import options |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Spreadsheet -Reading and writing matrices and arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Spreadsheet -Reading and writing matrices and arrays",
+              "body": "| -                                                                         | -                             |\n| ------------------------------------------------------------------------- | :---------------------------- |\n| [readmatrix](https://www.mathworks.com/help/matlab/ref/readmatrix.html)   | Read a matrix from a file     |\n| [writematrix](https://www.mathworks.com/help/matlab/ref/writematrix.html) | Write matrix to file          |\n| [readcell](https://www.mathworks.com/help/matlab/ref/readcell.html)       | Read a cell array from a file |\n| [writecell](https://www.mathworks.com/help/matlab/ref/writecell.html)     | Write a cell array to a file  |\n| [readvars](https://www.mathworks.com/help/matlab/ref/readvars.html)       | Read variables from a file    |\n| [importdata](https://www.mathworks.com/help/matlab/ref/importdata.html)   | Load data from a file         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "images",
+          "level": 3,
+          "cards": [
+            {
+              "title": "images",
+              "body": "| -                                                                 | -                                         |\n| ----------------------------------------------------------------- | :---------------------------------------- |\n| [imfinfo](https://www.mathworks.com/help/matlab/ref/imfinfo.html) | Information about graphics files          |\n| [imread](https://www.mathworks.com/help/matlab/ref/imread.html)   | Reads an image from a graphics file       |\n| [imwrite](https://www.mathworks.com/help/matlab/ref/imwrite.html) | Writes an image to a graphics file        |\n| [Tiff](https://www.mathworks.com/help/matlab/ref/tiff.html)       | MATLAB entry for LibTIFF library routines |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Read or write a NetCDF file",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Read or write a NetCDF file",
+              "body": "| -                                                                             | -                                                              |\n| ----------------------------------------------------------------------------- | :------------------------------------------------------------- |\n| [nccreate](https://www.mathworks.com/help/matlab/ref/nccreate.html)           | Create variables in a NetCDF file                              |\n| [ncdisp](https://www.mathworks.com/help/matlab/ref/ncdisp.html)               | Displays NetCDF data source content in the command line window |\n| [ncinfo](https://www.mathworks.com/help/matlab/ref/ncinfo.html)               | Returns information about a NetCDF data source                 |\n| [ncread](https://www.mathworks.com/help/matlab/ref/ncread.html)               | Read variable data from a NetCDF data source                   |\n| [ncreadatt](https://www.mathworks.com/help/matlab/ref/ncreadatt.html)         | Read attribute values in a NetCDF data source                  |\n| [ncwrite](https://www.mathworks.com/help/matlab/ref/ncwrite.html)             | Write data to a NetCDF file                                    |\n| [ncwriteatt](https://www.mathworks.com/help/matlab/ref/ncwriteatt.html)       | Write attributes to a NetCDF file                              |\n| [ncwriteschema](https://www.mathworks.com/help/matlab/ref/ncwriteschema.html) | Adds a NetCDF schema definition to a NetCDF file               |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "NetCDF library package -library functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "NetCDF library package -library functions",
+              "body": "| -                                                                                                 | -                                                            |\n| ------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |\n| [netcdf.getChunkCache](https://www.mathworks.com/help/matlab/ref/netcdf.getchunkcache.html)       | Retrieves the chunk cache settings for the NetCDF library    |\n| [netcdf.inqLibVers](https://www.mathworks.com/help/matlab/ref/netcdf.inqlibvers.html)             | Returns NetCDF library version information                   |\n| [netcdf.setChunkCache](https://www.mathworks.com/help/matlab/ref/netcdf.setchunkcache.html)       | Sets the default chunk cache settings for the NetCDF library |\n| [netcdf.setDefaultFormat](https://www.mathworks.com/help/matlab/ref/netcdf.setdefaultformat.html) | Change the default netCDF file format                        |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "NetCDF library package -file operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "NetCDF library package -file operations",
+              "body": "| -                                                                                         | -                                                  |\n| ----------------------------------------------------------------------------------------- | :------------------------------------------------- |\n| [netcdf.abort](https://www.mathworks.com/help/matlab/ref/netcdf.abort.html)               | restores the most recent netCDF file definition    |\n| [netcdf.close](https://www.mathworks.com/help/matlab/ref/netcdf.close.html)               | Closes a netCDF file                               |\n| [netcdf.create](https://www.mathworks.com/help/matlab/ref/netcdf.create.html)             | Create a new NetCDF dataset                        |\n| [netcdf.endDef](https://www.mathworks.com/help/matlab/ref/netcdf.enddef.html)             | End netCDF file definition mode                    |\n| [netcdf.inq](https://www.mathworks.com/help/matlab/ref/netcdf.inq.html)                   | returns information about a netCDF file            |\n| [netcdf.inqFormat](https://www.mathworks.com/help/matlab/ref/netcdf.inqformat.html)       | Determines the format of a NetCDF file             |\n| [netcdf.inqGrps](https://www.mathworks.com/help/matlab/ref/netcdf.inqgrps.html)           | Retrieves an array of subgroup IDs                 |\n| [netcdf.inqUnlimDims](https://www.mathworks.com/help/matlab/ref/netcdf.inqunlimdims.html) | Retrieves a list of infinite dimensions in a group |\n| [netcdf.open](https://www.mathworks.com/help/matlab/ref/netcdf.open.html)                 | Open NetCDF data source                            |\n| [netcdf.reDef](https://www.mathworks.com/help/matlab/ref/netcdf.redef.html)               | puts an open netCDF file into definition mode      |\n| [netcdf.setFill](https://www.mathworks.com/help/matlab/ref/netcdf.setfill.html)           | Set netCDF fill mode                               |\n| [netcdf.sync](https://www.mathworks.com/help/matlab/ref/netcdf.sync.html)                 | Synchronize netCDF files to disk                   |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "NetCDF Library Package -Dimensions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "NetCDF Library Package -Dimensions",
+              "body": "| -                                                                                   | -                                          |\n| ----------------------------------------------------------------------------------- | :----------------------------------------- |\n| [netcdf.defdim](https://www.mathworks.com/help/matlab/ref/netcdf.defdim.html)       | Create netCDF dimensions                   |\n| [netcdf.inqDim](https://www.mathworks.com/help/matlab/ref/netcdf.inqdim.html)       | Returns netCDF dimension names and lengths |\n| [netcdf.inqDimID](https://www.mathworks.com/help/matlab/ref/netcdf.inqdimid.html)   | Returns the dimension ID                   |\n| [netcdf.renameDim](https://www.mathworks.com/help/matlab/ref/netcdf.renamedim.html) | Change netCDF dimension names              |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "NetCDF library package -group",
+          "level": 3,
+          "cards": [
+            {
+              "title": "NetCDF library package -group",
+              "body": "| -                                                                                             | -                                                    |\n| --------------------------------------------------------------------------------------------- | :--------------------------------------------------- |\n| [netcdf.defGrp](https://www.mathworks.com/help/matlab/ref/netcdf.defgrp.html)                 | Create groups in a NetCDF file                       |\n| [netcdf.inqDimIDs](https://www.mathworks.com/help/matlab/ref/netcdf.inqdimids.html)           | Retrieves a list of dimension identifiers in a group |\n| [netcdf.inqGrpName](https://www.mathworks.com/help/matlab/ref/netcdf.inqgrpname.html)         | Retrieve group name                                  |\n| [netcdf.inqGrpNameFull](https://www.mathworks.com/help/matlab/ref/netcdf.inqgrpnamefull.html) | the full pathname of the group                       |\n| [netcdf.inqGrpParent](https://www.mathworks.com/help/matlab/ref/netcdf.inqgrpparent.html)     | Retrieves the ID of the parent group.                |\n| [netcdf.inqNcid](https://www.mathworks.com/help/matlab/ref/netcdf.inqncid.html)               | Returns the ID of a named group                      |\n| [netcdf.inqVarIDs](https://www.mathworks.com/help/matlab/ref/netcdf.inqvarids.html)           | IDs of all variables in the group                    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "NetCDF library package -variable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "NetCDF library package -variable",
+              "body": "| -                                                                                                 | -                                                         |\n| ------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |\n| [netcdf.defVarFill](https://www.mathworks.com/help/matlab/ref/netcdf.defvarfill.html)             | Defines the fill parameter for a NetCDF variable          |\n| [netcdf.defVar](https://www.mathworks.com/help/matlab/ref/netcdf.defvar.html)                     | Create a NetCDF variable                                  |\n| [netcdf.defVarChunking](https://www.mathworks.com/help/matlab/ref/netcdf.defvarchunking.html)     | Defines chunking behavior for NetCDF variables            |\n| [netcdf.defVarDeflate](https://www.mathworks.com/help/matlab/ref/netcdf.defvardeflate.html)       | Defines compression parameters for NetCDF variables       |\n| [netcdf.defVarFletcher32](https://www.mathworks.com/help/matlab/ref/netcdf.defvarfletcher32.html) | Defines validation parameters for NetCDF variables        |\n| [netcdf.getVar](https://www.mathworks.com/help/matlab/ref/netcdf.getvar.html)                     | Read data in a NetCDF variable                            |\n| [netcdf.inqVar](https://www.mathworks.com/help/matlab/ref/netcdf.inqvar.html)                     | Information about variables                               |\n| [netcdf.inqVarChunking](https://www.mathworks.com/help/matlab/ref/netcdf.inqvarchunking.html)     | Determines chunking settings for NetCDF variables         |\n| [netcdf.inqVarDeflate](https://www.mathworks.com/help/matlab/ref/netcdf.inqvardeflate.html)       | Determines compression settings for NetCDF variables      |\n| [netcdf.inqVarFill](https://www.mathworks.com/help/matlab/ref/netcdf.inqvarfill.html)             | Determines the fill parameter value for a NetCDF variable |\n| [netcdf.inqVarFletcher32](https://www.mathworks.com/help/matlab/ref/netcdf.inqvarfletcher32.html) | About Fletcher32 checksum settings for NetCDF variables   |\n| [netcdf.inqVarID](https://www.mathworks.com/help/matlab/ref/netcdf.inqvarid.html)                 | Returns the ID associated with the variable name          |\n| [netcdf.putVar](https://www.mathworks.com/help/matlab/ref/netcdf.putvar.html)                     | Writes data to a netCDF variable                          |\n| [netcdf.renameVar](https://www.mathworks.com/help/matlab/ref/netcdf.renamevar.html)               | Change netCDF variable name                               |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "NetCDF library package -properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "NetCDF library package -properties",
+              "body": "| -                                                                                     | -                                           |\n| ------------------------------------------------------------------------------------- | :------------------------------------------ |\n| [netcdf.copyAtt](https://www.mathworks.com/help/matlab/ref/netcdf.copyatt.html)       | Copy an attribute to a new location         |\n| [netcdf.delAtt](https://www.mathworks.com/help/matlab/ref/netcdf.delatt.html)         | Remove netCDF attribute                     |\n| [netcdf.getAtt](https://www.mathworks.com/help/matlab/ref/netcdf.getatt.html)         | Returns the NetCDF attribute                |\n| [netcdf.inqAtt](https://www.mathworks.com/help/matlab/ref/netcdf.inqatt.html)         | Returns information about netCDF attributes |\n| [netcdf.inqAttID](https://www.mathworks.com/help/matlab/ref/netcdf.inqattid.html)     | Returns the ID of a netCDF attribute        |\n| [netcdf.inqAttName](https://www.mathworks.com/help/matlab/ref/netcdf.inqattname.html) | Returns the netCDF attribute name           |\n| [netcdf.putAtt](https://www.mathworks.com/help/matlab/ref/netcdf.putatt.html)         | Write netCDF attributes                     |\n| [netcdf.renameAtt](https://www.mathworks.com/help/matlab/ref/netcdf.renameatt.html)   | Change Attribute Name                       |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "NetCDF library package -user-defined types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "NetCDF library package -user-defined types",
+              "body": "| :-                                                                                      | :-                                                       |\n| :-------------------------------------------------------------------------------------- | :------------------------------------------------------- |\n| [netcdf.defVlen](https://www.mathworks.com/help/matlab/ref/netcdf.defvlen.html)         | Define user-defined variable length array type (NC_VLEN) |\n| [netcdf.inqUserType](https://www.mathworks.com/help/matlab/ref/netcdf.inqusertype.html) | Return information about user-defined type               |\n| [netcdf.inqVlen](https://www.mathworks.com/help/matlab/ref/netcdf.inqvlen.html)         | Return information about user-defined `NC_VLEN` type     |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "NetCDF library package -Utilities",
+          "level": 3,
+          "cards": [
+            {
+              "title": "NetCDF library package -Utilities",
+              "body": "| -                                                                                                 | -                                                       |\n| ------------------------------------------------------------------------------------------------- | :------------------------------------------------------ |\n| [netcdf.getConstant](https://www.mathworks.com/help/matlab/ref/netcdf.getconstant.html)           | returns the value of the named constant                 |\n| [netcdf.getConstantNames](https://www.mathworks.com/help/matlab/ref/netcdf.getconstantnames.html) | returns a list of constants known to the netCDF library |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Read or write HDF5 files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Read or write HDF5 files",
+              "body": "| -                                                                       | -                                 |\n| ----------------------------------------------------------------------- | :-------------------------------- |\n| [h5create](https://www.mathworks.com/help/matlab/ref/h5create.html)     | Create HDF5 dataset               |\n| [h5disp](https://www.mathworks.com/help/matlab/ref/h5disp.html)         | Display the content of HDF5 files |\n| [h5info](https://www.mathworks.com/help/matlab/ref/h5info.html)         | Information about HDF5 files      |\n| [h5read](https://www.mathworks.com/help/matlab/ref/h5read.html)         | Read data from HDF5 dataset       |\n| [h5readatt](https://www.mathworks.com/help/matlab/ref/h5readatt.html)   | Read attributes from HDF5 files   |\n| [h5write](https://www.mathworks.com/help/matlab/ref/h5write.html)       | Write HDF5 dataset                |\n| [h5writeatt](https://www.mathworks.com/help/matlab/ref/h5writeatt.html) | Write HDF5 attributes             |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HDF5 library package",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HDF5 library package",
+              "body": "| -                                                                                           | -                                                                |\n| ------------------------------------------------------------------------------------------- | :--------------------------------------------------------------- |\n| [Library (H5)](https://www.mathworks.com/help/matlab/ref/libraryh5.html)                    | General-purpose functions for use with entire HDF5 library       |\n| [Attribute (H5A)](https://www.mathworks.com/help/matlab/ref/attributeh5a.html)              | Metadata associated with datasets or groups                      |\n| [Dataset (H5D)](https://www.mathworks.com/help/matlab/ref/dataseth5d.html)                  | Multidimensional arrays of data elements and supporting metadata |\n| [Dimension Scale (H5DS)](https://www.mathworks.com/help/matlab/ref/dimensionscaleh5ds.html) | Dimension scale associated with dataset dimensions               |\n| [Error (H5E)](https://www.mathworks.com/help/matlab/ref/errorh5e.html)                      | Error handling                                                   |\n| [File (H5F)](https://www.mathworks.com/help/matlab/ref/fileh5f.html)                        | HDF5 file access                                                 |\n| [Group (H5G)](https://www.mathworks.com/help/matlab/ref/grouph5g.html)                      | Organization of objects in file                                  |\n| [Identifier (H5I)](https://www.mathworks.com/help/matlab/ref/identifierh5i.html)            | HDF5 object identifiers                                          |\n| [Link (H5L)](https://www.mathworks.com/help/matlab/ref/linkh5l.html)                        | Links in HDF5 file                                               |\n| [MATLAB (H5ML)](https://www.mathworks.com/help/matlab/ref/matlabh5ml.html)                  | `MATLAB` utility functions not part of the HDF5 C library        |\n| [Object (H5O)](https://www.mathworks.com/help/matlab/ref/objecth5o.html)                    | Objects in file                                                  |\n| [Property (H5P)](https://www.mathworks.com/help/matlab/ref/propertyh5p.html)                | Object property lists                                            |\n| [Reference (H5R)](https://www.mathworks.com/help/matlab/ref/referenceh5r.html)              | HDF5 references                                                  |\n| [Dataspace (H5S)](https://www.mathworks.com/help/matlab/ref/dataspaceh5s.html)              | Dimensionality of dataset                                        |\n| [Datatype (H5T)](https://www.mathworks.com/help/matlab/ref/datatypeh5t.html)                | Datatype of elements in a dataset                                |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HDF4 Files -Advanced Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HDF4 Files -Advanced Functions",
+              "body": "| -                                                                 | -                                       |\n| ----------------------------------------------------------------- | :-------------------------------------- |\n| [hdfinfo](https://www.mathworks.com/help/matlab/ref/hdfinfo.html) | Information about HDF4 or HDF-EOS files |\n| [hdfread](https://www.mathworks.com/help/matlab/ref/hdfread.html) | Read data from HDF4 or HDF-EOS files    |\n| [imread](https://www.mathworks.com/help/matlab/ref/imread.html)   | Read an image from a graphics file      |\n| [imwrite](https://www.mathworks.com/help/matlab/ref/imwrite.html) | Write image to graphics file            |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Low-level functions -package",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Low-level functions -package",
+              "body": "| -                                                                                         | -                                                                            |\n| ----------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |\n| [matlab.io.hdf4.sd](https://www.mathworks.com/help/matlab/ref/matlab.io.hdf4.sd.html)     | Interact directly with the HDF4 multi-file scientific dataset (SD) interface |\n| [matlab.io.hdfeos.gd](https://www.mathworks.com/help/matlab/ref/matlab.io.hdfeos.gd.html) | Low-level access to HDF-EOS grid data                                        |\n| [matlab.io.hdfeos.sw](https://www.mathworks.com/help/matlab/ref/matlab.io.hdfeos.sw.html) | Low-level access to HDF-EOS segmented files                                  |",
+              "footer": "#### Low Level Functions -Functions\n\n| -                                                                 | -                                                     |\n| ----------------------------------------------------------------- | :---------------------------------------------------- |\n| [hdfan](https://www.mathworks.com/help/matlab/ref/hdfan.html)     | The entry of HDF multi-file annotation (AN) interface |\n| [hdfhx](https://www.mathworks.com/help/matlab/ref/hdfhx.html)     | The entry of HDF external data (HX) interface         |\n| [hdfh](https://www.mathworks.com/help/matlab/ref/hdfh.html)       | The entry of HDF H interface                          |\n| [hdfhd](https://www.mathworks.com/help/matlab/ref/hdfhd.html)     | The entry of HDF HD interface                         |\n| [hdfhe](https://www.mathworks.com/help/matlab/ref/hdfhe.html)     | The entry of HDF HE interface                         |\n| [hdfml](https://www.mathworks.com/help/matlab/ref/hdfml.html)     | Utilities for use with `MATLAB` HDF entry functions   |\n| [hdfpt](https://www.mathworks.com/help/matlab/ref/hdfpt.html)     | Interface of HDF-EOS point object                     |\n| [hdfv](https://www.mathworks.com/help/matlab/ref/hdfv.html)       | The entry of HDF Vgroup (V) interface                 |\n| [hdfvf](https://www.mathworks.com/help/matlab/ref/hdfvf.html)     | The entry of VF function in HDF Vdata interface       |\n| [hdfvh](https://www.mathworks.com/help/matlab/ref/hdfvh.html)     | The entry of VH function in HDF Vdata interface       |\n| [hdfvs](https://www.mathworks.com/help/matlab/ref/hdfvs.html)     | The entry of VS function in HDF Vdata interface       |\n| [hdfdf24](https://www.mathworks.com/help/matlab/ref/hdfdf24.html) | HDF 24-bit raster image (DF24) interface entry        |\n| [hdfdfr8](https://www.mathworks.com/help/matlab/ref/hdfdfr8.html) | HDF 8-bit raster image (DFR8) interface entry         |",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "FITS file -function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "FITS file -function",
+              "body": "| -                                                                     | -                            |\n| --------------------------------------------------------------------- | :--------------------------- |\n| [fitsdisp](https://www.mathworks.com/help/matlab/ref/fitsdisp.html)   | Display FITS metadata        |\n| [fitsinfo](https://www.mathworks.com/help/matlab/ref/fitsinfo.html)   | Information about FITS files |\n| [fitsread](https://www.mathworks.com/help/matlab/ref/fitsread.html)   | Read data in FITS files      |\n| [fitswrite](https://www.mathworks.com/help/matlab/ref/fitswrite.html) | Write image to FITS file     |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "FITS files -file access",
+          "level": 3,
+          "cards": [
+            {
+              "title": "FITS files -file access",
+              "body": "| -                                                                                          | -                         |\n| ------------------------------------------------------------------------------------------ | :------------------------ |\n| [createFile](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.createfile.html)     | Create FITS file          |\n| [openFile](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.openfile.html)         | Open FITS file            |\n| [openDiskFile](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.opendiskfile.html) | Open FITS file            |\n| [closeFile](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.closefile.html)       | Close FITS file           |\n| [deleteFile](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.deletefile.html)     | Delete FITS file          |\n| [fileName](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.filename.html)         | The name of the FITS file |\n| [fileMode](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.filemode.html)         | I/O mode for FITS files   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "FITS files -image processing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "FITS files -image processing",
+              "body": "| -                                                                                      | -                                           |\n| -------------------------------------------------------------------------------------- | :------------------------------------------ |\n| [createImg](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.createimg.html)   | Create FITS image                           |\n| [getImgSize](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getimgsize.html) | image size                                  |\n| [getImgType](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getimgtype.html) | The data type of the image                  |\n| [insertImg](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.insertimg.html)   | Insert a FITS image after the current image |\n| [readImg](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readimg.html)       | read image data                             |\n| [setBscale](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.setbscale.html)   | Reset image scaling                         |\n| [writeImg](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.writeimg.html)     | write FITS image                            |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "FITS file -keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "FITS file -keyword",
+              "body": "| -                                                                                                | -                                               |\n| ------------------------------------------------------------------------------------------------ | :---------------------------------------------- |\n| [readCard](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readcard.html)               | Header record of keywords                       |\n| [readKey](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readkey.html)                 | Keyword                                         |\n| [readKeyCmplx](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readkeycmplx.html)       | A keyword in the form of a complex scalar value |\n| [readKeyDbl](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readkeydbl.html)           | Keyword in the form of double precision value   |\n| [readKeyLongLong](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readkeylonglong.html) | Keyword in the form of `int64`                  |\n| [readKeyLongStr](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readkeylongstr.html)   | long string value                               |\n| [readKeyUnit](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readkeyunit.html)         | The physical unit string in the key             |\n| [readRecord](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readrecord.html)           | Header record specified by number               |\n| [writeComment](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.writecomment.html)       | Write or append COMMENT keyword to CHU          |\n| [writeDate](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.writedate.html)             | Write DATE keyword to CHU                       |\n| [writeKey](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.writekey.html)               | Update or add new keywords to the current HDU   |\n| [writeKeyUnit](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.writekeyunit.html)       | write physical unit string                      |\n| [writeHistory](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.writehistory.html)       | Write or append HISTORY keyword to CHU          |\n| [deleteKey](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.deletekey.html)             | Delete key by name                              |\n| [deleteRecord](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.deleterecord.html)       | Delete keywords by record number                |\n| [getHdrSpace](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.gethdrspace.html)         | The number of keywords in the header            |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "FITS files -Header Data Unit (HDU) access",
+          "level": 3,
+          "cards": [
+            {
+              "title": "FITS files -Header Data Unit (HDU) access",
+              "body": "| -                                                                                            | -                                                                  |\n| -------------------------------------------------------------------------------------------- | :----------------------------------------------------------------- |\n| [copyHDU](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.copyhdu.html)             | Copy current HDU from one file to another                          |\n| [getHDUnum](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.gethdunum.html)         | The number of the current HDU in the FITS file                     |\n| [getHDUtype](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.gethdutype.html)       | current HDU type                                                   |\n| [getNumHDUs](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getnumhdus.html)       | Total number of HDUs in FITS file                                  |\n| [movAbsHDU](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.movabshdu.html)         | Move to Absolute HDU Numbering                                     |\n| [movNamHDU](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.movnamhdu.html)         | Move to the first HDU containing a specific type and keyword value |\n| [movRelHDU](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.movrelhdu.html)         | Move relative amount of HDU from current HDU                       |\n| [writeChecksum](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.writechecksum.html) | Calculate and write the checksum of the current HDU                |\n| [deleteHDU](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.deletehdu.html)         | Delete the current HDU in the FITS file                            |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "FITS files -image compression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "FITS files -image compression",
+              "body": "| -                                                                                                      | -                                                     |\n| ------------------------------------------------------------------------------------------------------ | :---------------------------------------------------- |\n| [imgCompress](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.imgcompress.html)               | Compress HDU from one file to another                 |\n| [isCompressedImg](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.iscompressedimg.html)       | Determine whether the current image is compressed     |\n| [setCompressionType](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.setcompressiontype.html) | Set image compression type                            |\n| [setHCompScale](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.sethcompscale.html)           | Set the scaling parameters of the HCOMPRESS algorithm |\n| [setHCompSmooth](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.sethcompsmooth.html)         | Sets smoothing for images compressed with HCOMPRESS   |\n| [setTileDim](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.settiledim.html)                 | Set tile dimensions                                   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "FITS file -ASCII table and binary table",
+          "level": 3,
+          "cards": [
+            {
+              "title": "FITS file -ASCII table and binary table",
+              "body": "| -                                                                                          | -                                                         |\n| ------------------------------------------------------------------------------------------ | :-------------------------------------------------------- |\n| [createTbl](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.createtbl.html)       | Create a new ASCII or binary table extension              |\n| [insertCol](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.insertcol.html)       | Insert a column into a table                              |\n| [insertRows](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.insertrows.html)     | Insert rows into the table                                |\n| [insertATbl](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.insertatbl.html)     | Insert an ASCII table after the current HDU               |\n| [insertBTbl](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.insertbtbl.html)     | Insert a binary table behind the current HDU              |\n| [deleteCol](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.deletecol.html)       | Delete a column from a table                              |\n| [deleteRows](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.deleterows.html)     | Delete rows from the table                                |\n| [getAColParms](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getacolparms.html) | ASCII table information                                   |\n| [getBColParms](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getbcolparms.html) | binary table information                                  |\n| [getColName](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getcolname.html)     | table column name                                         |\n| [getColType](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getcoltype.html)     | Data type, repeat value, width of scaled column           |\n| [getEqColType](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.geteqcoltype.html) | column data type, repeated value, width                   |\n| [getNumCols](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getnumcols.html)     | The number of columns in the table                        |\n| [getNumRows](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getnumrows.html)     | the number of rows in the table                           |\n| [readATblHdr](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readatblhdr.html)   | Read the header information from the current ASCII table  |\n| [readBTblHdr](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readbtblhdr.html)   | Read the header information from the current binary table |\n| [readCol](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.readcol.html)           | Reads rows of ASCII or binary table columns               |\n| [setTscale](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.settscale.html)       | reset image scaling                                       |\n| [writeCol](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.writecol.html)         | Write elements to an ASCII or binary table column         |",
+              "footer": "",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "FITS files -Utilities",
+          "level": 3,
+          "cards": [
+            {
+              "title": "FITS files -Utilities",
+              "body": "| -                                                                                                  | -                                          |\n| -------------------------------------------------------------------------------------------------- | :----------------------------------------- |\n| [getConstantValue](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getconstantvalue.html) | specify the constant value                 |\n| [getVersion](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getversion.html)             | The revision number of the CFITSIO library |\n| [getOpenFiles](https://www.mathworks.com/help/matlab/ref/matlab.io.fits.getopenfiles.html)         | list of opened FITS files                  |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Stripe interleaved file",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Stripe interleaved file",
+              "body": "| -                                                                               | -                                                  |\n| ------------------------------------------------------------------------------- | :------------------------------------------------- |\n| [multibandread](https://www.mathworks.com/help/matlab/ref/multibandread.html)   | Read a striped interleaved file from a binary file |\n| [multibandwrite](https://www.mathworks.com/help/matlab/ref/multibandwrite.html) | Write strip interleaved data to a file             |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Common Data Format (CDF)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Common Data Format (CDF)",
+              "body": "| -                                                                     | -                                                                      |\n| --------------------------------------------------------------------- | :--------------------------------------------------------------------- |\n| [cdfinfo](https://www.mathworks.com/help/matlab/ref/cdfinfo.html)     | Information on Common Data Format (CDF) files                          |\n| [cdfread](https://www.mathworks.com/help/matlab/ref/cdfread.html)     | Read data in Common Data Format (CDF) files                            |\n| [cdfepoch](https://www.mathworks.com/help/matlab/ref/cdfepoch.html)   | Converts a date literal or date sequence value to a date in CDF format |\n| [todatenum](https://www.mathworks.com/help/matlab/ref/todatenum.html) | Convert CDF epoch objects to `MATLAB` date serial values               |",
+              "footer": "#### Bag\n\n| -                                                               | -                                   |\n| --------------------------------------------------------------- | :---------------------------------- |\n| [cdflib](https://www.mathworks.com/help/matlab/ref/cdflib.html) | Direct interaction with CDF library |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Read video data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Read video data",
+              "body": "| -                                                                                           | -                                                              |\n| ------------------------------------------------------------------------------------------- | :------------------------------------------------------------- |\n| [VideoReader](https://www.mathworks.com/help/matlab/ref/videoreader.html)                   | Create an object to read a video file                          |\n| [read](https://www.mathworks.com/help/matlab/ref/videoreader.read.html)                     | Read one or more video frames                                  |\n| [readFrame](https://www.mathworks.com/help/matlab/ref/videoreader.readframe.html)           | Read the next video frame                                      |\n| [hasFrame](https://www.mathworks.com/help/matlab/ref/videoreader.hasframe.html)             | Determine whether there are video frames available for reading |\n| [getFileFormats](https://www.mathworks.com/help/matlab/ref/videoreader.getfileformats.html) | File formats supported by `VideoReader`                        |\n| [mmfileinfo](https://www.mathworks.com/help/matlab/ref/mmfileinfo.html)                     | Information about multimedia files                             |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Write video data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Write video data",
+              "body": "| -                                                                                     | -                                                             |\n| ------------------------------------------------------------------------------------- | :------------------------------------------------------------ |\n| [VideoWriter](https://www.mathworks.com/help/matlab/ref/videowriter.html)             | Create an object to write a video file                        |\n| [open](https://www.mathworks.com/help/matlab/ref/videowriter.open.html)               | Open a file to write video data                               |\n| [writeVideo](https://www.mathworks.com/help/matlab/ref/videowriter.writevideo.html)   | Write video data to a file                                    |\n| [close](https://www.mathworks.com/help/matlab/ref/videowriter.close.html)             | close the file after writing video data                       |\n| [getProfiles](https://www.mathworks.com/help/matlab/ref/videowriter.getprofiles.html) | Description files and file formats supported by `VideoWriter` |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Read or write audio",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Read or write audio",
+              "body": "| -                                                                       | -                                            |\n| ----------------------------------------------------------------------- | :------------------------------------------- |\n| [audioread](https://www.mathworks.com/help/matlab/ref/audioread.html)   | Read audio files                             |\n| [audiowrite](https://www.mathworks.com/help/matlab/ref/audiowrite.html) | Write audio files                            |\n| [lin2mu](https://www.mathworks.com/help/matlab/ref/lin2mu.html)         | Convert linear audio signal to mu-law        |\n| [mu2lin](https://www.mathworks.com/help/matlab/ref/mu2lin.html)         | Convert mu-law audio signal to linear format |\n| [audioinfo](https://www.mathworks.com/help/matlab/ref/audioinfo.html)   | Information about audio files                |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Play audio",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Play audio",
+              "body": "| -                                                                                       | -                                                                           |\n| --------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------- |\n| [audioplayer](https://www.mathworks.com/help/matlab/ref/audioplayer.html)               | Object for playing audio                                                    |\n| [isplaying](https://www.mathworks.com/help/matlab/ref/audioplayer.isplaying.html)       | Determine whether playback is in progress                                   |\n| [pause](https://www.mathworks.com/help/matlab/ref/audioplayer.pause.html)               | Pause playback or recording                                                 |\n| [play](https://www.mathworks.com/help/matlab/ref/audioplayer.play.html)                 | Play audio from `audioplayer` object                                        |\n| [playblocking](https://www.mathworks.com/help/matlab/ref/audioplayer.playblocking.html) | Play audio in `audioplayer` object, keep control until playback is complete |\n| [resume](https://www.mathworks.com/help/matlab/ref/audioplayer.resume.html)             | Resume playback or recording from the paused state                          |\n| [stop](https://www.mathworks.com/help/matlab/ref/audioplayer.stop.html)                 | Stop playing or recording                                                   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Record audio",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Record audio",
+              "body": "| -                                                                                             | -                                                                                     |\n| --------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| [audiorecorder](https://www.mathworks.com/help/matlab/ref/audiorecorder.html)                 | object for recording audio                                                            |\n| [getaudiodata](https://www.mathworks.com/help/matlab/ref/audiorecorder.getaudiodata.html)     | Store the recorded audio signal in a numeric array                                    |\n| [getplayer](https://www.mathworks.com/help/matlab/ref/audiorecorder.getplayer.html)           | Create an associated `audioplayer` object                                             |\n| [isrecording](https://www.mathworks.com/help/matlab/ref/audiorecorder.isrecording.html)       | Determine if recording is in progress                                                 |\n| [record](https://www.mathworks.com/help/matlab/ref/audiorecorder.record.html)                 | Record audio into `audiorecorder` object                                              |\n| [recordblocking](https://www.mathworks.com/help/matlab/ref/audiorecorder.recordblocking.html) | Record audio into an `audiorecorder` object, keep control until recording is complete |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Play sound",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Play sound",
+              "body": "| -                                                                             | -                                           |\n| ----------------------------------------------------------------------------- | :------------------------------------------ |\n| [audiodevinfo](https://www.mathworks.com/help/matlab/ref/audiodevinfo.html)   | Information about audio devices             |\n| [audiodevreset](https://www.mathworks.com/help/matlab/ref/audiodevreset.html) | Refresh the list of available audio devices |\n| [sound](https://www.mathworks.com/help/matlab/ref/sound.html)                 | Convert signal data matrix to sound         |\n| [soundsc](https://www.mathworks.com/help/matlab/ref/soundsc.html)             | Scale data and play it as sound             |\n| [beep](https://www.mathworks.com/help/matlab/ref/beep.html)                   | generate operating system beep              |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reading and writing XML documents",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reading and writing XML documents",
+              "body": "| -                                                                                                                                         | -                                                           |\n| ----------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------- |\n| [matlab.io.xml.dom.DOMWriter](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.domwriter-class.html)                           | Write serialized XML documents Injector                     |\n| [matlab.io.xml.dom.EntityResolver](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.entityresolver-class.html)                 | Abstract base class of entity resolver                      |\n| [matlab.io.xml.dom.FileWriter](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.filewriter-class.html)                         | Writer for creating text files                              |\n| [matlab.io.xml.dom.Locator](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.locator-class.html)                               | The location of the element in the XML file                 |\n| [matlab.io.xml.dom.Parser](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.parser-class.html)                                 | XML markup parser                                           |\n| [matlab.io.xml.dom.ParserConfiguration](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.parserconfiguration-class.html)       | XML parser options                                          |\n| [matlab.io.xml.dom.ParseError](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.parseerror-class.html)                         | Specified XML tag parsing error                             |\n| [matlab.io.xml.dom.ParseErrorHandler](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.parseerrorhandler-class.html)           | Abstract base class for parse error handlers                |\n| [matlab.io.xml.dom.ParseErrorLocator](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.parseerrorlocator-class.html)           | Specifies location of parse error                           |\n| [matlab.io.xml.dom.ParseErrorSeverity](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.parseerrorseverity-class.html)         | Indicates the severity of XML tag parsing errors enum class |\n| [matlab.io.xml.dom.ResourceIdentifier](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.resourceidentifier-class.html)         | XML resource identifier                                     |\n| [matlab.io.xml.dom.ResourceIdentifierType](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.resourceidentifiertype-class.html) | XML resource identifier type                                |\n| [matlab.io.xml.dom.WriterConfiguration](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.writerconfiguration-class.html)       | XML DOM Writer Options                                      |\n\n{.style-list-arrow}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "W3C DOM",
+          "level": 3,
+          "cards": [
+            {
+              "title": "W3C DOM",
+              "body": "| -                                                                                                                                       | -                                    |\n| --------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------- |\n| [matlab.io.xml.dom.Attr](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.attr-class.html)                                   | Attributes of XML elements           |\n| [matlab.io.xml.dom.CDATASection](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.cdatasection-class.html)                   | CDATA section                        |\n| [matlab.io.xml.dom.Comment](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.comment-class.html)                             | Comments in XML documents            |\n| [matlab.io.xml.dom.Document](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.document-class.html)                           | XML document                         |\n| [matlab.io.xml.dom.DocumentFragment](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.documentfragment-class.html)           | document node group                  |\n| [matlab.io.xml.dom.DocumentType](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.documenttype-class.html)                   | document type                        |\n| [matlab.io.xml.dom.Element](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.element-class.html)                             | element of XML document              |\n| [matlab.io.xml.dom.Entity](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.entity-class.html)                               | Entity defined by document type      |\n| [matlab.io.xml.dom.NamedNodeMap](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.namednodemap-class.html)                   | A set of document nodes with names   |\n| [matlab.io.xml.dom.NodeList](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.nodelist-class.html)                           | document node list                   |\n| [matlab.io.xml.dom.Notation](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.notation-class.html)                           | Notation in document type definition |\n| [matlab.io.xml.dom.ProcessingInstruction](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.processinginstruction-class.html) | XML processing instruction           |\n| [matlab.io.xml.dom.Text](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.text-class.html)                                   | Text in an XML document              |\n| [matlab.io.xml.dom.TypeInfo](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.dom.typeinfo-class.html)                           | schema type information              |\n\n{.style-list-arrow}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "XML Transformation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "XML Transformation",
+              "body": "| -                                                                                                                                                         | -                                             |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------- |\n| [matlab.io.xml.transform.CompiledStylesheet](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.compiledstylesheet-class.html)             | Compiled stylesheet                           |\n| [matlab.io.xml.transform.ResultDocument](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.resultdocument-class.html)                     | Store the transformation result as a document |\n| [matlab.io.xml.transform.ResultString](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.resultstring-class.html)                         | Store the transformation result as a string   |\n| [matlab.io.xml.transform.ResultFile](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.resultfile-class.html)                             | Store the transformation result as a file     |\n| [matlab.io.xml.transform.SourceDocument](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.sourcedocument-class.html)                     | XML source document for transformation        |\n| [matlab.io.xml.transform.SourceFile](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.sourcefile-class.html)                             | XML source file for transformation            |\n| [matlab.io.xml.transform.SourceString](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.sourcestring-class.html)                         | XML source string for transformation string   |\n| [matlab.io.xml.transform.StylesheetSourceDocument](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.stylesheetsourcedocument-class.html) | Stylesheet source for transformation document |\n| [matlab.io.xml.transform.StylesheetSourceFile](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.stylesheetsourcefile-class.html)         | Stylesheet source for transformation document |\n| [matlab.io.xml.transform.StylesheetSourceString](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.stylesheetsourcestring-class.html)     | XSL source string for transformation string   |\n| [matlab.io.xml.transform.Tracer](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.transform.tracer-class.html)                                     | Trace execution of stylesheet                 |\n\n{.style-list-arrow}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "XPath query",
+          "level": 3,
+          "cards": [
+            {
+              "title": "XPath query",
+              "body": "| -                                                                                                                                     | -                                                     |\n| ------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------- |\n| [matlab.io.xml.xpath.CompiledExpression](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.xpath.compiledexpression-class.html) | Compiled XPath expression                             |\n| [matlab.io.xml.xpath.EvalResultType](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.xpath.evalresulttype-class.html)         | The result type of XPath expression calculation       |\n| [matlab.io.xml.xpath.Evaluator](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.xpath.evaluator-class.html)                   | XPath expression evaluator                            |\n| [matlab.io.xml.xpath.PrefixResolver](https://www.mathworks.com/help/matlab/ref/matlab.io.xml.xpath.prefixresolver-class.html)         | For namespace prefix resolver Abstract base class for |\n\n{.style-list-arrow}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "JSON format",
+          "level": 3,
+          "cards": [
+            {
+              "title": "JSON format",
+              "body": "| -                                                                       | -                                                        |\n| ----------------------------------------------------------------------- | :------------------------------------------------------- |\n| [jsondecode](https://www.mathworks.com/help/matlab/ref/jsondecode.html) | Decode text in JSON format                               |\n| [jsonencode](https://www.mathworks.com/help/matlab/ref/jsonencode.html) | Create JSON-formatted text from structured `MATLAB` data |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Workspace variables and MAT-file",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Workspace variables and MAT-file",
+              "body": "| -                                                                                           | -                                                                                 |\n| ------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |\n| [load](https://www.mathworks.com/help/matlab/ref/load.html)                                 | Load file variables into the workspace                                            |\n| [save](https://www.mathworks.com/help/matlab/ref/save.html)                                 | Save workspace variables to a file                                                |\n| [matfile](https://www.mathworks.com/help/matlab/ref/matlab.io.matfile.html)                 | Access and change variables in a MAT-file without loading the file into memory    |\n| [disp](https://www.mathworks.com/help/matlab/ref/disp.html)                                 | Display the value of the variable                                                 |\n| [formattedDisplayText](https://www.mathworks.com/help/matlab/ref/formatteddisplaytext.html) | Capture display output as a string                                                |\n| [who](https://www.mathworks.com/help/matlab/ref/who.html)                                   | List variables in the workspace                                                   |\n| [whos](https://www.mathworks.com/help/matlab/ref/whos.html)                                 | List variables in the workspace with their size and type                          |\n| [clear](https://www.mathworks.com/help/matlab/ref/clear.html)                               | Delete items from the workspace and release system memory                         |\n| [clearvars](https://www.mathworks.com/help/matlab/ref/clearvars.html)                       | Clear variables in memory                                                         |\n| [openvar](https://www.mathworks.com/help/matlab/ref/openvar.html)                           | Open a workspace variable in the variable editor or other graphical editing tools |\n| [Workspace Browser](https://www.mathworks.com/help/matlab/ref/workspace.html)               | Open the Workspace Browser to manage the workspace                                |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Low-level file I/O",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Low-level file I/O",
+              "body": "| -                                                                   | -                                                                    |\n| ------------------------------------------------------------------- | :------------------------------------------------------------------- |\n| [fclose](https://www.mathworks.com/help/matlab/ref/fclose.html)     | close one or all open files                                          |\n| [feof](https://www.mathworks.com/help/matlab/ref/feof.html)         | Detect the end of the file                                           |\n| [ferror](https://www.mathworks.com/help/matlab/ref/ferror.html)     | File I/O error message                                               |\n| [fgetl](https://www.mathworks.com/help/matlab/ref/fgetl.html)       | Read lines in a file and remove line breaks                          |\n| [fgets](https://www.mathworks.com/help/matlab/ref/fgets.html)       | Read lines in a file and keep newlines                               |\n| [fileread](https://www.mathworks.com/help/matlab/ref/fileread.html) | Read file content in text format                                     |\n| [fopen](https://www.mathworks.com/help/matlab/ref/fopen.html)       | Open a file or get information about opening a file                  |\n| [fprintf](https://www.mathworks.com/help/matlab/ref/fprintf.html)   | Write data to a text file                                            |\n| [fread](https://www.mathworks.com/help/matlab/ref/fread.html)       | Read data in binary files                                            |\n| [frewind](https://www.mathworks.com/help/matlab/ref/frewind.html)   | Move the file position indicator to the beginning of the opened file |\n| [fscanf](https://www.mathworks.com/help/matlab/ref/fscanf.html)     | Read the data in the text file                                       |\n| [fseek](https://www.mathworks.com/help/matlab/ref/fseek.html)       | Move to the specified position in the file                           |\n| [ftell](https://www.mathworks.com/help/matlab/ref/ftell.html)       | current location                                                     |\n| [fwrite](https://www.mathworks.com/help/matlab/ref/fwrite.html)     | Write data to a binary file                                          |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Serial and USB Communication -Connection and Configuration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Serial and USB Communication -Connection and Configuration",
+              "body": "| -                                                                                                    | -                                                                                       |\n| ---------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- |\n| [serialportlist](https://www.mathworks.com/help/matlab/ref/serialportlist.html)                      | List of serial ports connected to your system                                           |\n| [serialport](https://www.mathworks.com/help/matlab/ref/serialport.html)                              | Connect to a serial port                                                                |\n| [configureTerminator](https://www.mathworks.com/help/matlab/ref/serialport.configureterminator.html) | Set the terminator for ASCII string communication with the serial port                  |\n| [configureCallback](https://www.mathworks.com/help/matlab/ref/serialport.configurecallback.html)     | Set callback function and trigger conditions for communication with serial port devices |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Serial and USB communication -read and write",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Serial and USB communication -read and write",
+              "body": "| -                                                                                | -                                            |\n| -------------------------------------------------------------------------------- | :------------------------------------------- |\n| [read](https://www.mathworks.com/help/matlab/ref/serialport.read.html)           | Read data from the serial port               |\n| [readline](https://www.mathworks.com/help/matlab/ref/serialport.readline.html)   | Read ASCII string data line from serial port |\n| [write](https://www.mathworks.com/help/matlab/ref/serialport.write.html)         | write data to serial port                    |\n| [writeline](https://www.mathworks.com/help/matlab/ref/serialport.writeline.html) | Write ASCII data line to serial port         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Serial and USB communication -control pins and memory",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Serial and USB communication -control pins and memory",
+              "body": "| -                                                                                      | -                                   |\n| -------------------------------------------------------------------------------------- | :---------------------------------- |\n| [flush](https://www.mathworks.com/help/matlab/ref/serialport.flush.html)               | Clear the serial port device buffer |\n| [getpinstatus](https://www.mathworks.com/help/matlab/ref/serialport.getpinstatus.html) | Get the serial port status          |\n| [setRTS](https://www.mathworks.com/help/matlab/ref/serialport.setrts.html)             | Set the serial port RTS pin         |\n| [setDTR](https://www.mathworks.com/help/matlab/ref/serialport.setdtr.html)             | Set the serial DTR pin              |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "TCP/IP communication -connection and configuration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "TCP/IP communication -connection and configuration",
+              "body": "| -                                                                                                   | -                                                                                         |\n| --------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |\n| [tcpclient](https://www.mathworks.com/help/matlab/ref/tcpclient.html)                               | Create a TCP/IP client connection to a TCP/IP server                                      |\n| [echotcpip](https://www.mathworks.com/help/matlab/ref/echotcpip.html)                               | Start or stop the TCP/IP echo server                                                      |\n| [configureTerminator](https://www.mathworks.com/help/matlab/ref/tcpclient.configureterminator.html) | Set terminator for ASCII string communication with remote host via TCP/IP                 |\n| [configureCallback](https://www.mathworks.com/help/matlab/ref/tcpclient.configurecallback.html)     | Set callback function and trigger condition for communication with remote host via TCP/IP |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "TCP/IP communication -read and write",
+          "level": 3,
+          "cards": [
+            {
+              "title": "TCP/IP communication -read and write",
+              "body": "| -                                                                               | -                                                            |\n| ------------------------------------------------------------------------------- | :----------------------------------------------------------- |\n| [read](https://www.mathworks.com/help/matlab/ref/tcpclient.read.html)           | Read data on a remote host via TCP/IP                        |\n| [readline](https://www.mathworks.com/help/matlab/ref/tcpclient.readline.html)   | Read ASCII string data line from remote host via TCP/IP      |\n| [write](https://www.mathworks.com/help/matlab/ref/tcpclient.write.html)         | Write data to a remote host via TCP/IP                       |\n| [writeline](https://www.mathworks.com/help/matlab/ref/tcpclient.writeline.html) | Write ASCII data line to remote host via TCP/IP              |\n| [flush](https://www.mathworks.com/help/matlab/ref/tcpclient.flush.html)         | Flush buffers for communication with remote hosts via TCP/IP |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bluetooth communication -connection and configuration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bluetooth communication -connection and configuration",
+              "body": "| -                                                                                                   | -                                                                                     |\n| --------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |\n| [bluetoothlist](https://www.mathworks.com/help/matlab/ref/bluetoothlist.html)                       | Scan for nearby `Bluetooth` classic devices                                           |\n| [bluetooth](https://www.mathworks.com/help/matlab/ref/bluetooth.html)                               | Connect to `Bluetooth` classic device                                                 |\n| [configureTerminator](https://www.mathworks.com/help/matlab/ref/bluetooth.configureterminator.html) | Set terminator for ASCII string communication with `Bluetooth` device                 |\n| [configureCallback](https://www.mathworks.com/help/matlab/ref/bluetooth.configurecallback.html)     | Set callback function and trigger condition for communication with `Bluetooth` device |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bluetooth communication -read and write",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bluetooth communication -read and write",
+              "body": "| -                                                                               | -                                                   |\n| ------------------------------------------------------------------------------- | :-------------------------------------------------- |\n| [read](https://www.mathworks.com/help/matlab/ref/bluetooth.read.html)           | Read data from a `Bluetooth` device                 |\n| [readline](https://www.mathworks.com/help/matlab/ref/bluetooth.readline.html)   | Read ASCII string data line from `Bluetooth` device |\n| [write](https://www.mathworks.com/help/matlab/ref/bluetooth.write.html)         | write data to `Bluetooth` device                    |\n| [writeline](https://www.mathworks.com/help/matlab/ref/bluetooth.writeline.html) | Write ASCII data line to `Bluetooth` device         |\n| [flush](https://www.mathworks.com/help/matlab/ref/bluetooth.flush.html)         | Clear `Bluetooth` device buffer                     |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bluetooth Low Energy Communication",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bluetooth Low Energy Communication",
+              "body": "| -                                                                                                            | -                                                                                          |\n| ------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------------- |\n| [blelist](https://www.mathworks.com/help/matlab/ref/blelist.html)                                            | Scan for nearby low energy `Bluetooth` peripherals                                         |\n| [ble](https://www.mathworks.com/help/matlab/ref/ble.html)                                                    | Connect to low energy `Bluetooth` peripherals                                              |\n| [characteristic](https://www.mathworks.com/help/matlab/ref/matlabshared.blelib.characteristic.html)          | Access to characteristics of `Bluetooth` low energy peripherals                            |\n| [descriptor](https://www.mathworks.com/help/matlab/ref/matlabshared.blelib.descriptor.html)                  | Access descriptors on `Bluetooth` low energy peripherals                                   |\n| [read](https://www.mathworks.com/help/matlab/ref/matlabshared.blelib.characteristic.read.html)               | Read characteristic or descriptor data on a `Bluetooth` low energy peripheral device       |\n| [write](https://www.mathworks.com/help/matlab/ref/matlabshared.blelib.characteristic.write.html)             | Write data to a characteristic or descriptor of a `Bluetooth` low energy peripheral device |\n| [subscribe](https://www.mathworks.com/help/matlab/ref/matlabshared.blelib.characteristic.subscribe.html)     | Subscribe to characteristic notifications or instructions                                  |\n| [unsubscribe](https://www.mathworks.com/help/matlab/ref/matlabshared.blelib.characteristic.unsubscribe.html) | Unsubscribe characteristic notifications and instructions                                  |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Web Services",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Web Services",
+              "body": "| -                                                                       | -                                           |\n| ----------------------------------------------------------------------- | :------------------------------------------ |\n| [webread](https://www.mathworks.com/help/matlab/ref/webread.html)       | Read content from RESTful web services      |\n| [webwrite](https://www.mathworks.com/help/matlab/ref/webwrite.html)     | Write data to RESTful web service           |\n| [websave](https://www.mathworks.com/help/matlab/ref/websave.html)       | Save content in RESTful web service to file |\n| [weboptions](https://www.mathworks.com/help/matlab/ref/weboptions.html) | Specify parameters for RESTful web services |\n| [web](https://www.mathworks.com/help/matlab/ref/web.html)               | Open a webpage or file in a browser         |\n| [sendmail](https://www.mathworks.com/help/matlab/ref/sendmail.html)     | Send email to address list                  |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "FTP file operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "FTP file operations",
+              "body": "| -                                                                   | -                                                          |\n| ------------------------------------------------------------------- | :--------------------------------------------------------- |\n| [ftp](https://www.mathworks.com/help/matlab/ref/ftp.html)           | Connect to an FTP server to access its files               |\n| [sftp](https://www.mathworks.com/help/matlab/ref/sftp.html)         | Connection to SFTP server to access its files              |\n| [ascii](https://www.mathworks.com/help/matlab/ref/ftp.ascii.html)   | Set FTP transfer mode to ASCII                             |\n| [binary](https://www.mathworks.com/help/matlab/ref/ftp.binary.html) | Set FTP transfer mode to binary                            |\n| [cd](https://www.mathworks.com/help/matlab/ref/ftp.cd.html)         | Change or view the current folder on an SFTP or FTP server |\n| [close](https://www.mathworks.com/help/matlab/ref/ftp.close.html)   | Close the connection to the SFTP or FTP server             |\n| [delete](https://www.mathworks.com/help/matlab/ref/ftp.delete.html) | Delete files on SFTP or FTP server                         |\n| [dir](https://www.mathworks.com/help/matlab/ref/ftp.dir.html)       | List folder contents on SFTP or FTP server                 |\n| [mget](https://www.mathworks.com/help/matlab/ref/ftp.mget.html)     | Download files from SFTP or FTP server                     |\n| [mkdir](https://www.mathworks.com/help/matlab/ref/ftp.mkdir.html)   | Create a new folder on an SFTP or FTP server               |\n| [mput](https://www.mathworks.com/help/matlab/ref/ftp.mput.html)     | Upload files or folders to SFTP or FTP server              |\n| [rename](https://www.mathworks.com/help/matlab/ref/ftp.rename.html) | Rename a file on an SFTP or FTP server                     |\n| [rmdir](https://www.mathworks.com/help/matlab/ref/ftp.rmdir.html)   | Delete a folder on an SFTP or FTP server                   |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Internet of Things (IoT) Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Internet of Things (IoT) Data",
+              "body": "| -                                                                                 | -                                        |\n| --------------------------------------------------------------------------------- | :--------------------------------------- |\n| [thingSpeakRead](https://www.mathworks.com/help/matlab/ref/thingspeakread.html)   | Read data stored in `ThingSpeak` channel |\n| [thingSpeakWrite](https://www.mathworks.com/help/matlab/ref/thingspeakwrite.html) | write data to `ThingSpeak` channel       |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

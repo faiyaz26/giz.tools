@@ -1,0 +1,536 @@
+{
+  "id": "github",
+  "metadata": {
+    "title": "Github",
+    "date": "2022-11-23T16:23:31.704Z",
+    "background": "bg-[#17191e]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 80 keyboard shortcuts found on Github.com\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Site wide shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Site wide shortcuts",
+              "body": "| Shortcut | Action                                                        |\n| -------- | ------------------------------------------------------------- |\n| `S`      | Focus the search bar                                          |\n| `G` `N`  | Go to your notifications                                      |\n| `H`      | Opens and focuses on a user, issue, or pull request hovercard |\n| `Esc`    | When focused on above, closes hovercard                       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`S`",
+                  "action": "Focus the search bar"
+                },
+                {
+                  "shortcut": "`G` `N`",
+                  "action": "Go to your notifications"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Opens and focuses on a user, issue, or pull request hovercard"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "When focused on above, closes hovercard"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repositories",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repositories",
+              "body": "| Shortcut | Action                      |\n| -------- | --------------------------- |\n| `G` `C`  | Go to the Code tab          |\n| `G` `I`  | Go to the Issues tab        |\n| `G` `P`  | Go to the Pull requests tab |\n| `G` `B`  | Go to the Projects tab      |\n| `G` `W`  | Go to the Wiki tab          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `C`",
+                  "action": "Go to the Code tab"
+                },
+                {
+                  "shortcut": "`G` `I`",
+                  "action": "Go to the Issues tab"
+                },
+                {
+                  "shortcut": "`G` `P`",
+                  "action": "Go to the Pull requests tab"
+                },
+                {
+                  "shortcut": "`G` `B`",
+                  "action": "Go to the Projects tab"
+                },
+                {
+                  "shortcut": "`G` `W`",
+                  "action": "Go to the Wiki tab"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Source code editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Source code editing",
+              "body": "| Shortcut           | Action                         |\n| ------------------ | ------------------------------ |\n| `Ctrl` `F`         | Start searching in file editor |\n| `Ctrl` `G`         | Find next                      |\n| `Ctrl` `Shift` `G` | Find previous                  |\n| `Ctrl` `Shift` `F` | Replace                        |\n| `Ctrl` `Shift` `R` | Replace all                    |\n| `Alt` `G`          | Jump to line                   |\n| `Ctrl` `Z`         | Undo                           |\n| `Ctrl` `Y`         | Redo                           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Start searching in file editor"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Find next"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Find previous"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Replace"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Replace all"
+                },
+                {
+                  "shortcut": "`Alt` `G`",
+                  "action": "Jump to line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Redo"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Source code browsing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Source code browsing",
+              "body": "| Shortcut | Action                             |\n| -------- | ---------------------------------- |\n| `T`      | Activates the file finder          |\n| `L`      | Jump to a line in your code        |\n| `W`      | Switch to a new branch or tag      |\n| `Y`      | Expand a URL to its canonical form |\n| `I`      | Show or hide comments on diffs     |\n| `B`      | Open blame view                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`T`",
+                  "action": "Activates the file finder"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Jump to a line in your code"
+                },
+                {
+                  "shortcut": "`W`",
+                  "action": "Switch to a new branch or tag"
+                },
+                {
+                  "shortcut": "`Y`",
+                  "action": "Expand a URL to its canonical form"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Show or hide comments on diffs"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Open blame view"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "| Shortcut           | Action                                                                       |\n| ------------------ | ---------------------------------------------------------------------------- |\n| `Ctrl` `B`         | Inserts Markdown formatting for bolding text                                 |\n| `Ctrl` `I`         | Inserts Markdown formatting for italicizing text                             |\n| `Ctrl` `K`         | Inserts Markdown formatting for creating a link                              |\n| `Ctrl` `Shift` `P` | Toggles between the Write and Preview comment tabs                           |\n| `Ctrl` `Enter`     | Submits a comment                                                            |\n| `Ctrl` `.`         | Opens saved replies menu and then autofills comment field with a saved reply |\n| `Ctrl` `G`         | Inserts a suggestions                                                        |\n| `R`                | Quote the selected text in your reply                                        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Inserts Markdown formatting for bolding text"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Inserts Markdown formatting for italicizing text"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Inserts Markdown formatting for creating a link"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Toggles between the Write and Preview comment tabs"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Submits a comment"
+                },
+                {
+                  "shortcut": "`Ctrl` `.`",
+                  "action": "Opens saved replies menu and then autofills comment field with a saved reply"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Inserts a suggestions"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Quote the selected text in your reply"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Issue and pull request lists",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Issue and pull request lists",
+              "body": "| Shortcut   | Action                                                      |\n| ---------- | ----------------------------------------------------------- |\n| `C`        | Create an issue                                             |\n| `Ctrl` `/` | Focus your cursor on the issues or pull requests search bar |\n| `U`        | Filter by author                                            |\n| `L`        | Filter by or edit labels                                    |\n| `M`        | Filter by or edit milestones                                |\n| `A`        | Filter by or edit assignee                                  |\n| `O`        | Open issue                                                  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`C`",
+                  "action": "Create an issue"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Focus your cursor on the issues or pull requests search bar"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Filter by author"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Filter by or edit labels"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Filter by or edit milestones"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Filter by or edit assignee"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Open issue"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Issues and pull requests",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Issues and pull requests",
+              "body": "| Shortcut | Action             |\n| -------- | ------------------ |\n| `Q`      | Request a reviewer |\n| `M`      | Set a milestone    |\n| `L`      | Apply a label      |\n| `A`      | Set an assignee    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Q`",
+                  "action": "Request a reviewer"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Set a milestone"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Apply a label"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Set an assignee"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Changes in pull requests",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Changes in pull requests",
+              "body": "| Shortcut               | Action                                                                                 |\n| ---------------------- | -------------------------------------------------------------------------------------- |\n| `C`                    | Open the list of commits in the pull request                                           |\n| `T`                    | Open the list of changed files in the pull request                                     |\n| `J`                    | Move selection down in the list                                                        |\n| `K`                    | Move selection up in the list                                                          |\n| `Ctrl` `Shift` `Enter` | Add a single comment on a pull request diff                                            |\n| `Alt` `(click)`        | Toggle between collapsing and expanding all outdated review comments in a pull request |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`C`",
+                  "action": "Open the list of commits in the pull request"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Open the list of changed files in the pull request"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Move selection down in the list"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Move selection up in the list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Enter`",
+                  "action": "Add a single comment on a pull request diff"
+                },
+                {
+                  "shortcut": "`Alt` `(click)`",
+                  "action": "Toggle between collapsing and expanding all outdated review comments in a pull request"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Project boards",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Project boards",
+              "body": "| Shortcut                 | Action                                             |\n| ------------------------ | -------------------------------------------------- |\n| `Enter/Space`            | Start moving the focused column                    |\n| `Esc`                    | Cancel the move in progress                        |\n| `Enter`                  | Complete the move in progress                      |\n| `Left/H`                 | Move column to the left                            |\n| `Ctrl` `Left/H`          | Move column to the leftmost position               |\n| `Right/L`                | Move column to the right                           |\n| `Ctrl` `Right/L`         | Move column to the rightmost position              |\n| `Enter/Space`            | Start moving the focused card                      |\n| `Esc`                    | Cancel the move in progress                        |\n| `Enter`                  | Complete the move in progress                      |\n| `Down/J`                 | Move card down                                     |\n| `Ctrl` `Down/J`          | Move card to the bottom of the column              |\n| `Up/K`                   | Move card up                                       |\n| `Ctrl` `Up/K`            | Move card to the top of the column                 |\n| `Left/H`                 | Move card to the bottom of the column on the left  |\n| `Shift` `Left/H`         | Move card to the top of the column on the left     |\n| `Ctrl` `Left/H`          | Move card to the bottom of the leftmost column     |\n| `Ctrl` `Shift` `Left/H`  | Move card to the top of the leftmost column        |\n| `Right`                  | Move card to the bottom of the column on the right |\n| `Shift` `Right/L`        | Move card to the top of the column on the right    |\n| `Ctrl` `Right/L`         | Move card to the bottom of the rightmost column    |\n| `Ctrl` `Shift` `Right/L` | Move card to the top of the rightmost column       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Enter/Space`",
+                  "action": "Start moving the focused column"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Cancel the move in progress"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Complete the move in progress"
+                },
+                {
+                  "shortcut": "`Left/H`",
+                  "action": "Move column to the left"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left/H`",
+                  "action": "Move column to the leftmost position"
+                },
+                {
+                  "shortcut": "`Right/L`",
+                  "action": "Move column to the right"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right/L`",
+                  "action": "Move column to the rightmost position"
+                },
+                {
+                  "shortcut": "`Enter/Space`",
+                  "action": "Start moving the focused card"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Cancel the move in progress"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Complete the move in progress"
+                },
+                {
+                  "shortcut": "`Down/J`",
+                  "action": "Move card down"
+                },
+                {
+                  "shortcut": "`Ctrl` `Down/J`",
+                  "action": "Move card to the bottom of the column"
+                },
+                {
+                  "shortcut": "`Up/K`",
+                  "action": "Move card up"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up/K`",
+                  "action": "Move card to the top of the column"
+                },
+                {
+                  "shortcut": "`Left/H`",
+                  "action": "Move card to the bottom of the column on the left"
+                },
+                {
+                  "shortcut": "`Shift` `Left/H`",
+                  "action": "Move card to the top of the column on the left"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left/H`",
+                  "action": "Move card to the bottom of the leftmost column"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Left/H`",
+                  "action": "Move card to the top of the leftmost column"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Move card to the bottom of the column on the right"
+                },
+                {
+                  "shortcut": "`Shift` `Right/L`",
+                  "action": "Move card to the top of the column on the right"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right/L`",
+                  "action": "Move card to the bottom of the rightmost column"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Right/L`",
+                  "action": "Move card to the top of the rightmost column"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Notifications",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Notifications",
+              "body": "| Shortcut    | Action       |\n| ----------- | ------------ |\n| `E/L/Y`     | Mark as read |\n| `Shift` `M` | Mute thread  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`E/L/Y`",
+                  "action": "Mark as read"
+                },
+                {
+                  "shortcut": "`Shift` `M`",
+                  "action": "Mute thread"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Network graph",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Network graph",
+              "body": "| Shortcut          | Action                   |\n| ----------------- | ------------------------ |\n| `Left/H`          | Scroll left              |\n| `Right/L`         | Scroll right             |\n| `Up/K`            | Scroll up                |\n| `Down/J`          | Scroll down              |\n| `Shift` `Left/H`  | Scroll all the way left  |\n| `Shift` `Right/L` | Scroll all the way right |\n| `Shift` `Up/K`    | Scroll all the way up    |\n| `Shift` `Down/J`  | Scroll all the way down  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Left/H`",
+                  "action": "Scroll left"
+                },
+                {
+                  "shortcut": "`Right/L`",
+                  "action": "Scroll right"
+                },
+                {
+                  "shortcut": "`Up/K`",
+                  "action": "Scroll up"
+                },
+                {
+                  "shortcut": "`Down/J`",
+                  "action": "Scroll down"
+                },
+                {
+                  "shortcut": "`Shift` `Left/H`",
+                  "action": "Scroll all the way left"
+                },
+                {
+                  "shortcut": "`Shift` `Right/L`",
+                  "action": "Scroll all the way right"
+                },
+                {
+                  "shortcut": "`Shift` `Up/K`",
+                  "action": "Scroll all the way up"
+                },
+                {
+                  "shortcut": "`Shift` `Down/J`",
+                  "action": "Scroll all the way down"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Github](https://help.github.com/articles/using-keyboard-shortcuts/) _(help.github.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

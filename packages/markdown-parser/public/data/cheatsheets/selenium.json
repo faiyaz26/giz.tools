@@ -1,0 +1,179 @@
+{
+  "id": "selenium",
+  "metadata": {
+    "title": "Selenium",
+    "date": "2024-05-04T19:50:01.000Z",
+    "background": "bg-[#62ae41]",
+    "tags": [
+      "automation",
+      "testing"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This cheat sheet is a crash course for Selenium beginners and help to get the idea about the basic concepts of Selenium.\n"
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Initialize Browser Drivers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Initialize Browser Drivers",
+              "body": "| Browser   | Syntax                                  |\n| --------- | --------------------------------------- |\n| `Chrome`  | WebDriver driver = new ChromeDriver();  |\n| `Edge`    | WebDriver driver = new EdgeDriver();    |\n| `Firefox` | WebDriver driver = new FirefoxDriver(); |\n| `Safari`  | WebDriver driver = new SafariDriver();  |\n\n{.show-header .left-text}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selenium Locators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selenium Locators",
+              "body": "| Locator           | Syntax                                        |\n| ----------------- | --------------------------------------------- |\n| `className`       | driver.findElement(By.className (“key”))      |\n| `cssSelector`     | driver.findElement(By.cssSelector(key\"))      |\n| `id `             | driver.findElement(By.id(key\"))               |\n| `linkText`        | driver.findElement(By.linkText(key\"))         |\n| `name`            | driver.findElement(By.name(“key\"))            |\n| `partialLinkText` | driver.findElement(By.partialLinkText(“key\")) |\n| `tagName `        | driver.findElement(By.tagName (“key”))        |\n| `xpath`           | driver.findElement(By.xpath(“key\"))           |\n\n{.show-header .left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigate to URL",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigate to URL",
+              "body": "",
+              "footer": "```shell script\ndriver.get(\"https://www.example.com\");\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Close all browser windows",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Close all browser windows",
+              "body": "",
+              "footer": "```shell script\ndriver.quit();\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Close the current browser window",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Close the current browser window",
+              "body": "",
+              "footer": "```shell script\ndriver.close();\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Description                     | Syntax                                           |\n| ------------------------------- | ------------------------------------------------ |\n| `Navigate to a new URL`         | driver.navigate().to(\"https://www.newsite.com\"); |\n| `Go forward to the next page`   | driver.navigate().forward();                     |\n| `Go back to the previous page ` | driver.navigate().back();                        |\n| `Refresh the current page`      | driver.navigate().refresh();                     |\n\n{.show-header .left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Frame Handling",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Frame Handling",
+              "body": "| Description                       | Syntax                              |\n| --------------------------------- | ----------------------------------- |\n| `Switch to a frame`               | driver.switchTo().frame(\"frameId\"); |\n| `Switch back to the main content` | driver.switchTo().defaultContent(); |\n\n{.show-header .left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Alerts/Pop-Ups",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Alerts/Pop-Ups",
+              "body": "",
+              "footer": "```shell script\nAlert alert = driver.switchTo().alert();\n\n// Used to click on the ‘OK’ button of the alert.\nalert.accept();\n\n// Used when the ‘Cancel’ button is clicked in the alert box.\nalert.dismiss();\n\n// Used to send text to an alert\nalert.sendKeys(\"text\");\n\n// Used to capture the alert message.\nalert().getText();\n\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mouse and Keyboard Actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mouse and Keyboard Actions",
+              "body": "",
+              "footer": "```shell script\nActions actions = new Actions(driver);\n\n// Shifts the mouse pointer to the center of the element and click on it\nactions.moveToElement(element).click().build().perform();\n\n// Performs double click on the element\nactions.doubleClick(element).perform();\n\n// Drags the element from one point and drops to another\nactions.dragAndDrop(source, target).perform();\n\n// Sends a series of keys to the element\nactions.sendKeys(element, \"text\").perform();\n\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Page Information",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Page Information",
+              "body": "",
+              "footer": "```shell script\n// Get the page title\ndriver.getTitle();\n\n// Get the current page URL\ndriver.getCurrentUrl();\n\n// Get the entire page source code\ndriver.getPageSource();\n\n```",
+              "spanConfig": "col-span-1",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Waits",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Waits",
+              "body": "```\n\n```",
+              "footer": "shell script\n// Implicit Wait :- Once the command is run, Implicit Wait remains for the entire duration for which the browser is open.\ndriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);\n```\n```shell script\n// Fluent Wait :- Fluent Wait in Selenium marks the maximum amount of time for Selenium WebDriver to wait for a certain condition (web element) becomes visible. It also defines how frequently WebDriver will check if the condition appears before throwing the “ElementNotVisibleException”.\nFluentWait wait = new FluentWait(driver);\n//Specify the timeout of the wait\nwait.withTimeout(5000, TimeUnit.MILLISECONDS);\n//Specify polling time\nwait.pollingEvery(250, TimeUnit.MILLISECONDS);\n//Specify what exceptions to ignore\nwait.ignoring(NoSuchElementException.class)\n//This is how we specify the condition to wait on.\nwait.until(ExpectedConditions.alertIsPresent());\n```",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

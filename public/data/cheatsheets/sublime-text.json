@@ -1,0 +1,348 @@
+{
+  "id": "sublime-text",
+  "metadata": {
+    "title": "Sublime Text",
+    "date": "2022-11-23T16:23:31.695Z",
+    "background": "bg-[#e8973e]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 49 keyboard shortcuts found in Sublime Text\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editing",
+              "body": "| Shortcut               | Action                                                                    |\n| ---------------------- | ------------------------------------------------------------------------- |\n| `Ctrl` `X`             | Cut line                                                                  |\n| `Ctrl` `Enter`         | Insert line after                                                         |\n| `Ctrl` `Shift` `Enter` | Insert line before                                                        |\n| `Ctrl` `Shift` `Up`    | Move line/selection up                                                    |\n| `Ctrl` `Shift` `Down`  | Move line/selection down                                                  |\n| `Ctrl` `L`             | Select line - Repeat to select next lines                                 |\n| `Ctrl` `D`             | Select word - Repeat selects other occurrences                            |\n| `Ctrl` `M`             | Jump to closing parentheses - Repeat to jump to opening parentheses       |\n| `Ctrl` `Shift` `M`     | Select all contents of the current parentheses                            |\n| `Ctrl` `Shift` `K`     | Delete line                                                               |\n| `Ctrl` `K, K`          | Delete from cursor to end of line                                         |\n| `Ctrl` `K` `Backspace` | Delete from cursor to start of line                                       |\n| `Ctrl` `]`             | Indent current line(s)                                                    |\n| `Ctrl` `[`             | Un-indent current line(s)                                                 |\n| `Ctrl` `Shift` `D`     | Duplicate line(s)                                                         |\n| `Ctrl` `J`             | Join line below to the end of the current line                            |\n| `Ctrl` `/`             | Comment/un-comment current line                                           |\n| `Ctrl` `Shift` `/`     | Block comment current selection                                           |\n| `Ctrl` `Y`             | Redo, or repeat last keyboard shortcut command                            |\n| `Ctrl` `Shift` `V`     | Paste and indent correctly                                                |\n| `Ctrl` `Space`         | Select next auto-complete suggestion                                      |\n| `Ctrl` `U`             | Soft undo; jumps to your last change before undoing, change when repeated |\n| `Alt` `Shift` `W`      | Wrap selection in HTML tag                                                |\n| `Alt` `.`              | Close current HTML tag                                                    |\n| `Alt` `Q`              | Hard wrap line to ruler column setting                                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Insert line after"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Enter`",
+                  "action": "Insert line before"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Up`",
+                  "action": "Move line/selection up"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Down`",
+                  "action": "Move line/selection down"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Select line - Repeat to select next lines"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Select word - Repeat selects other occurrences"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Jump to closing parentheses - Repeat to jump to opening parentheses"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Select all contents of the current parentheses"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Delete line"
+                },
+                {
+                  "shortcut": "`Ctrl` `K, K`",
+                  "action": "Delete from cursor to end of line"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Backspace`",
+                  "action": "Delete from cursor to start of line"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Indent current line(s)"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Un-indent current line(s)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `D`",
+                  "action": "Duplicate line(s)"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Join line below to the end of the current line"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Comment/un-comment current line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `/`",
+                  "action": "Block comment current selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Redo, or repeat last keyboard shortcut command"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `V`",
+                  "action": "Paste and indent correctly"
+                },
+                {
+                  "shortcut": "`Ctrl` `Space`",
+                  "action": "Select next auto-complete suggestion"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Soft undo; jumps to your last change before undoing, change when repeated"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `W`",
+                  "action": "Wrap selection in HTML tag"
+                },
+                {
+                  "shortcut": "`Alt` `.`",
+                  "action": "Close current HTML tag"
+                },
+                {
+                  "shortcut": "`Alt` `Q`",
+                  "action": "Hard wrap line to ruler column setting"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut   | Action                    |\n| ---------- | ------------------------- |\n| `Ctrl` `P` | Quick-open files by name  |\n| `Ctrl` `R` | Goto symbol               |\n| `Ctrl` `;` | Goto word in current file |\n| `Ctrl` `G` | Goto line in current file |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Quick-open files by name"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Goto symbol"
+                },
+                {
+                  "shortcut": "`Ctrl` `;`",
+                  "action": "Goto word in current file"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Goto line in current file"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "| Shortcut                 | Action                   |\n| ------------------------ | ------------------------ |\n| `Ctrl` `Shift` `P`       | Command prompt           |\n| `Ctrl` `K, B`            | Toggle sidebar           |\n| `Ctrl` `Shift` `Alt` `P` | Show scope in status bar |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Command prompt"
+                },
+                {
+                  "shortcut": "`Ctrl` `K, B`",
+                  "action": "Toggle sidebar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Alt` `P`",
+                  "action": "Show scope in status bar"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find/Replace",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find/Replace",
+              "body": "| Shortcut           | Action        |\n| ------------------ | ------------- |\n| `Ctrl` `F`         | Find          |\n| `Ctrl` `H`         | Replace       |\n| `Ctrl` `Shift` `F` | Find in files |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find"
+                },
+                {
+                  "shortcut": "`Ctrl` `H`",
+                  "action": "Replace"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Find in files"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Split window",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Split window",
+              "body": "| Shortcut             | Action                                           |\n| -------------------- | ------------------------------------------------ |\n| `Alt` `Shift` `1`    | Revert view to single column                     |\n| `Alt` `Shift` `2`    | Split view into two columns                      |\n| `Alt` `Shift` `3`    | Split view into three columns                    |\n| `Alt` `Shift` `4`    | Split view into four columns                     |\n| `Alt` `Shift` `5`    | Set view to grid (4 groups)                      |\n| `Alt` `Shift` `8`    | Split view into two rows                         |\n| `Ctrl` `1-4`         | Jump to group where number is 1-4                |\n| `Ctrl` `Shift` `1-4` | Move file to specified group where number is 1-4 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `Shift` `1`",
+                  "action": "Revert view to single column"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `2`",
+                  "action": "Split view into two columns"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `3`",
+                  "action": "Split view into three columns"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `4`",
+                  "action": "Split view into four columns"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `5`",
+                  "action": "Set view to grid (4 groups)"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `8`",
+                  "action": "Split view into two rows"
+                },
+                {
+                  "shortcut": "`Ctrl` `1-4`",
+                  "action": "Jump to group where number is 1-4"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `1-4`",
+                  "action": "Move file to specified group where number is 1-4"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bookmarks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bookmarks",
+              "body": "| Shortcut            | Action            |\n| ------------------- | ----------------- |\n| `Ctrl` `F2`         | Toggle bookmark   |\n| `F2`                | Next bookmark     |\n| `Shift` `F2`        | Previous bookmark |\n| `Ctrl` `Shift` `F2` | Clear bookmarks   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F2`",
+                  "action": "Toggle bookmark"
+                },
+                {
+                  "shortcut": "`F2`",
+                  "action": "Next bookmark"
+                },
+                {
+                  "shortcut": "`Shift` `F2`",
+                  "action": "Previous bookmark"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F2`",
+                  "action": "Clear bookmarks"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Text manipulation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Text manipulation",
+              "body": "| Shortcut      | Action                 |\n| ------------- | ---------------------- |\n| `Ctrl` `K, U` | Transform to uppercase |\n| `Ctrl` `K, L` | Transform to lowercase |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `K, U`",
+                  "action": "Transform to uppercase"
+                },
+                {
+                  "shortcut": "`Ctrl` `K, L`",
+                  "action": "Transform to lowercase"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Sublime Text](http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html)\n  _(docs.sublimetext.info)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

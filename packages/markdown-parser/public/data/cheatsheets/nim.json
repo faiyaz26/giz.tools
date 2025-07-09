@@ -1,0 +1,1005 @@
+{
+  "id": "nim",
+  "metadata": {
+    "title": "Nim",
+    "date": "2024-05-15T08:03:44.000Z",
+    "background": "bg-[#eed547]",
+    "tags": null,
+    "categories": [
+      "Programming"
+    ],
+    "intro": "The Nim quick reference cheat sheet that aims at providing help on writing basic syntax and methods.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Helloworld.nim",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Helloworld.nim",
+              "body": "```nim\necho \"Hello World!\"\n#---------------------------#\n# This is a comment\necho \"What's your name? \"\nvar name: string = readLine(stdin)\necho \"Hi, \", name, \"!\"\n```",
+              "footer": "#### Compiling and Running\n\n```shell\n$ nim c helloworld.nim\n# if os is windows then\n$ helloworld.exe\n# if os is linux then\n$ ./Hello_World\n# output\nHello, World!\n\n# There is also a possibility\n# to both compile and run the\n# program with just one command.\n# We need to type:\n$ nim c -r helloworld.nim\n\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "comment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "comment",
+              "body": "```nim\n# This is a comment\n\n#[\n  This is a multiline comment.\n  In Nim, multiline comments can be nested, beginning with #[\n  ... and ending with ]#\n]#\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variable declaration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variable declaration",
+              "body": "```nim\nvar\n  letter: char = 'n'\n  lang = \"N\" & \"im\"\n  nLength: int = len(lang)\n  boat: float\n  truth: bool = false\n  b = 7\n  c = -11\n  d = \"Hello\"\n  e = '!'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Let",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Let",
+              "body": "```nim\n# Use let to declare and bind variables\nlet\n  legs = 400\n #legs is immutable.\n  arms = 2_000\n  # are ignored and are useful for long numbers.\n  aboutPi = 3.15\n  let input = readLine(stdin)  # works\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Const",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Const",
+              "body": "```nim\n# Constants are computed at compile\nconst\n  debug = true\n   # performance and is useful in compile time expressions.\n  compileBadCode = false\n```",
+              "footer": "Basic data types",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Integers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Integers",
+              "body": "```nim\nlet\n  a = 11\n  b = 4\n\necho \"a + b = \", a + b\necho \"a - b = \", a - b\necho \"a * b = \", a * b\necho \"a / b = \", a / b\necho \"a div b = \", a div b\necho \"a mod b = \", a mod b\n#output\n#a + b = 15\n#a - b = 7\n#a * b = 44\n#a / b = 2.75\n#a div b = 2\n#a mod b = 3\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Floats",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Floats",
+              "body": "```nim\nlet\n  c = 6.75\n  d = 2.25\n\necho \"c + d = \", c + d\necho \"c - d = \", c - d\necho \"c * d = \", c * d\necho \"c / d = \", c / d\n#output\n#c + d = 9.0\n#c - d = 4.5\n#c * d = 15.1875\n#c / d = 3.0\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings",
+              "body": "```nim\n#Strings can be described\n#as a series of characters.\n#Their content is written between two double quotes (\").\nlet\n  m = \"word\"\n  n = \"A sentence with interpunction.\"\n  o = \"\"\n  p = \"32\"\n  q = \"!\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Characters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Characters",
+              "body": "```nim\n#Characters are single\n#characters. They are\n#written between two single quotes (').\nlet\n  h = 'z'\n  i = '+'\n  j = '2'\n  k = '35' # error\n  l = 'xy' # error\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Special characters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Special characters",
+              "body": "```nim\n#\\n is a newline character\n#\\t is a tab character\n#\\\\ is a backslash (since one \\ is used as the escape character)\n\necho \"some\\nim\\tips\"\necho \"some\\\\nim\\\\tips\"\necho r\"some\\nim\\tips\"\n#output\n#some\n#im\tips\n#some\\nim\\tips\n#some\\nim\\tips\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Boolean",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Boolean",
+              "body": "```nim\n#A boolean (or just bool)\n# data type can only have\n#two values: true or false.\nlet isEmpty = true\nlet isFull = false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Converting floats and integers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Converting floats and integers",
+              "body": "```nim\nlet\n  e = 5\n  f = 23.987\necho e + f   # error\necho float(e)\necho int(f)\n\necho float(e) + f\necho e + int(f)\n#output\n#5.0\n#23\n#28.987\n#28\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String concatenation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String concatenation",
+              "body": "```nim\nvar\n  p = \"abc\"\n  q = \"xy\"\n  r = 'z'\n\np.add(\"def\")\necho \"p is now: \", p\n\nq.add(r)\necho \"q is now: \", q\n\necho \"concat: \", p & q\n\necho \"p is still: \", p\necho \"q is still: \", q\n#output\n#p is now: abcdef\n#q is now: xyz\n#concat: abcdefxyz\n#p is still: abcdef\n#q is still: xyz\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Opatators",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Relational operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Relational operators",
+              "body": "```nim\nlet\n  g = 31\n  h = 99\n\necho \"g is greater than h: \", g > h\necho \"g is smaller than h: \", g < h\necho \"g is equal to h: \", g == h\necho \"g is not equal to h: \", g != h\necho \"g is greater or equal to h: \", g >= h\necho \"g is smaller or equal to h: \", g <= h\n#output\ng is greater than h: false\ng is smaller than h: true\ng is equal to h: false\ng is not equal to h: true\ng is greater or equal to h: false\ng is smaller or equal to h: true\n\n#example\nlet\n  i = 'a'\n  j = 'd'\n  k = 'Z'\n\necho i < j\necho i < k\n\nlet\n  m = \"axyb\"\n  n = \"axyz\"\n  o = \"ba\"\n  p = \"ba \"\n\necho m < n\necho n < o\necho o < p\n#output\n#false\n#true\n#true\n#true\n#true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logical operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logical operators",
+              "body": "```nim\necho \"T and T: \", true and true\necho \"T and F: \", true and false\necho \"F and F: \", false and false\necho \"---\"\necho \"T or T: \", true or true\necho \"T or F: \", true or false\necho \"F or F: \", false or false\necho \"---\"\necho \"T xor T: \", true xor true\necho \"T xor F: \", true xor false\necho \"F xor F: \", false xor false\necho \"---\"\necho \"not T: \", not true\necho \"not F: \", not false\n#output\n#T and T: true\n#T and F: false\n#F and F: false\n\n#T or T: true\n#T or F: true\n#F or F: false\n\n#T xor T: false\n#T xor F: true\n#F xor F: false\n\n#not T: false\n#not F: true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Control flow",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "If statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If statement",
+              "body": "```nim\nlet\n  a = 11\n  b = 22\n  c = 999\n\nif a < b:\n  echo \"a is smaller than b\"\n  if 10*a < b:\n    echo \"not only that, a is *much* smaller than b\"\n\nif b < c:\n  echo \"b is smaller than c\"\n  if 10*b < c:\n    echo \"not only that, b is *much* smaller than c\"\n\nif a+b > c:\n  echo \"a and b are larger than c\"\n  if 1 < 100 and 321 > 123:\n    echo \"did you know that 1 is smaller than 100?\"\n    echo \"and 321 is larger than 123! wow!\"\n#output\n#a is smaller than b\n#b is smaller than c\n#not only that, b is *much* smaller than c\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Case statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Case statement",
+              "body": "```nim\nlet name = readLine(stdin)\ncase name\nof \"\":\n  echo \"Poor soul, you lost your name?\"\nof \"name\":\n  echo \"Very funny, your name is name.\"\nof \"Dave\", \"Frank\":\n  echo \"Cool name!\"\nelse:\n  echo \"Hi, \", name, \"!\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While statement",
+              "body": "```nim\necho \"What's your name? \"\nvar name = readLine(stdin)\nwhile name == \"\":\n  echo \"Please tell me your name: \"\n  name = readLine(stdin) # no `var`, because we do not declare a new variable here\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "For statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For statement",
+              "body": "```nim\necho \"Counting to ten: \"\nfor i in countup(1, 10):\n  echo i\n# --> Outputs 1 2 3 4 5 6 7 8 9 10 on different lines\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Scopes and the block statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scopes and the block statement",
+              "body": "```nim\nwhile false:\n  var x = \"hi\"\necho x # does not work\n#-----------------------#\nblock myblock:\n  var x = \"hi\"\necho x # does not work either\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break statement",
+              "body": "```nim\nblock myblock:\n  echo \"entering block\"\n  while true:\n    echo \"looping\"\n    break # leaves the loop, but not the block\n  echo \"still in block\"\necho \"outside the block\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Continue statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Continue statement",
+              "body": "```nim\nfor i in 1 .. 5:\n  if i <= 3: continue\n  echo i # will only print 4 and 5\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "When statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "When statement",
+              "body": "```nim\nwhen system.hostOS == \"windows\":\n  echo \"running on Windows!\"\nelif system.hostOS == \"linux\":\n  echo \"running on Linux!\"\nelif system.hostOS == \"macosx\":\n  echo \"running on Mac OS X!\"\nelse:\n  echo \"unknown operating system\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Statements and indentation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Statements and indentation",
+              "body": "```nim\n# no indentation needed for single-assignment statement:\nif x: x = false\n\n# indentation needed for nested if statement:\nif x:\n  if y:\n    y = false\n  else:\n    y = true\n\n# indentation needed, because two statements follow the condition:\nif x:\n  x = false\n  y = false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Procedures",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Procedures",
+              "body": "```nim\nproc yes(question: string): bool =\n  echo question, \" (y/n)\"\n  while true:\n    case readLine(stdin)\n    of \"y\", \"Y\", \"yes\", \"Yes\": return true\n    of \"n\", \"N\", \"no\", \"No\": return false\n    else: echo \"Please be clear: yes or no\"\n\nif yes(\"Should I delete all your important files?\"):\n  echo \"I'm sorry Dave, I'm afraid I can't do that.\"\nelse:\n  echo \"I think you know what the problem is just as well as I do.\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Result variable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Result variable",
+              "body": "```nim\nproc sumTillNegative(x: varargs[int]): int =\n  for i in x:\n    if i < 0:\n      return\n    result = result + i\n\necho sumTillNegative() # echoes 0\necho sumTillNegative(3, 4, 5) # echoes 12\necho sumTillNegative(3, 4 , -1 , 6) # echoes 7\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Parameters",
+              "body": "```nim\nproc printSeq(s: seq, nprinted: int = -1) =\n  var nprinted = if nprinted == -1: s.len else: min(nprinted, s.len)\n  for i in 0 ..< nprinted:\n    echo s[i]\n#------------------- #\nproc divmod(a, b: int; res, remainder: var int) =\n  res = a div b        # integer division\n  remainder = a mod b  # integer modulo operation\n\nvar\n  x, y: int\ndivmod(8, 5, x, y) # modifies x and y\necho x\necho y\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Discard statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Discard statement",
+              "body": "```nim\ndiscard yes(\"May I ask a pointless question?\")\n\nproc p(x, y: int): int {.discardable.} =\n  return x + y\n\np(3, 4) # now valid\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Named arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Named arguments",
+              "body": "```nim\nproc createWindow(x, y, width, height: int; title: string;  show: bool): Window = ...\n\nvar w = createWindow(show = true, title = \"My Application\", x = 0, y = 0, height = 600, width = 800)\n\nvar w = createWindow(0, 0, title = \"My Application\",\n                     height = 600, width = 800, true)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Default values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Default values",
+              "body": "```nim\nproc createWindow(x = 0, y = 0, width = 500, height = 700,\n                  title = \"unknown\",\n                  show = true): Window =\n\nvar w = createWindow(title = \"My Application\", height = 600, width = 800)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Overloaded procedures",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Overloaded procedures",
+              "body": "```nim\nproc toString(x: int): string =\n  result =\n    if x < 0: \"negative\"\n    elif x > 0: \"positive\"\n    else: \"zero\"\n\nproc toString(x: bool): string =\n  result =\n    if x: \"yep\"\n    else: \"nope\"\n\nassert toString(13) == \"positive\"\n # calls the toString(x: int) proc\nassert toString(true) == \"yep\"\n # calls the toString(x: bool) proc\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Forward declarations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Forward declarations",
+              "body": "```nim\nproc odd(n: int): bool =\n  assert(n >= 0) # makes sure we don't run into negative recursion\n  if n == 0: false\n  else:\n    n == 1 or even(n-1)\n\nproc even(n: int): bool =\n  assert(n >= 0) # makes sure we don't run into negative recursion\n  if n == 1: false\n  else:\n    n == 0 or odd(n-1)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Iterators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Iterators",
+              "body": "```nim\necho \"Counting to ten: \"\nfor i in countup(1, 10):\n  echo i\n\nproc countup(a, b: int): int =\n  var res = a\n  while res <= b:\n    return res\n    inc(res)\n\niterator countup(a, b: int): int =\n  var res = a\n  while res <= b:\n    yield res\n    inc(res)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type Conversion",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type Conversion",
+              "body": "```nim\nvar\n  x: int32 = 1.int32   # same as calling int32(1)\n  y: int8  = int8('a') # 'a' == 97'i8\n  z: float = 2.5       # int(2.5) rounds down to 2\n  sum: int = int(x) + int(y) + int(z) # sum == 100\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Internal type representation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Internal type representation",
+              "body": "```nim\nvar\n  myBool = true\n  myCharacter = 'n'\n  myString = \"nim\"\n  myInteger = 42\n  myFloat = 3.14\necho myBool, \":\", repr(myBool)\n# --> true:true\necho myCharacter, \":\", repr(myCharacter)\n# --> n:'n'\necho myString, \":\", repr(myString)\n# --> nim:0x10fa8c050\"nim\"\necho myInteger, \":\", repr(myInteger)\n# --> 42:42\necho myFloat, \":\", repr(myFloat)\n# --> 3.14:3.14\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Enumerations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Enumerations",
+              "body": "```nim\ntype\n  Direction = enum\n    north, east, south, west\n\nvar x = south\n# `x` is of type `Direction`; its value is `south`\n#prints \"south\"\necho x\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ordinal types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ordinal types",
+              "body": "| Operation  |                            Comment                            |\n| :--------- | :-----------------------------------------------------------: |\n| ord(x)     | returns the integer value that is used to represent x's value |\n| inc(x)     |                      increments x by one                      |\n| inc(x, n)  |              increments x by n; n is an integer               |\n| dec(x)     |                      decrements x by one                      |\n| dec(x, n)  |              decrements x by n; n is an integer               |\n| succ(x)    |                  returns the successor of x                   |\n| succ(x, n) |                returns the n'th successor of x                |\n| pred(x)    |                 returns the predecessor of x                  |\n| pred(x, n) |               returns the n'th predecessor of x               |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Subranges",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Subranges",
+              "body": "```nim\ntype\n  MySubrange = range[0..5]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sets",
+              "body": "```nim\nvar s: set[int64]\n  # Error: set is too large; use `std/sets` for ordinal types\n  # with more than 2^16 elements\n type\n  CharSet = set[char]\nvar\n  x: CharSet\nx = {'a'..'z', '0'..'9'}\n # This constructs a set that contains the\n # letters from 'a' to 'z' and the digits\n # from '0' to '9'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bit fields",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bit fields",
+              "body": "```nim\ntype\n MyFlag* {.size: sizeof(cint).} = enum\n   A\n   B\n   C\n   D\n MyFlags = set[MyFlag]\n\nproc toNum(f: MyFlags): int = cast[cint](f)\nproc toFlags(v: int): MyFlags = cast[MyFlags](v)\n\nassert toNum({}) == 0\nassert toNum({A}) == 1\nassert toNum({D}) == 8\nassert toNum({A, C}) == 5\nassert toFlags(0) == {}\nassert toFlags(7) == {A, B, C}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays",
+              "body": "```nim\ntype\n  IntArray = array[0..5, int] # an array that is indexed with 0..5\nvar\n  x: IntArray\nx = [1, 2, 3, 4, 5, 6]\nfor i in low(x) .. high(x):\n  echo x[i]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sequences",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sequences",
+              "body": "```nim\nvar\n  x: seq[int] # a reference to a sequence of integers\nx = @[1, 2, 3, 4, 5, 6] # the @ turns the array into a sequence allocated on the heap\nfor value in @[3, 4, 5]:\n  echo value\n# --> 3\n# --> 4\n# --> 5\n\nfor i, value in @[3, 4, 5]:\n  echo \"index: \", $i, \", value:\", $value\n# --> index: 0, value:3\n# --> index: 1, value:4\n# --> index: 2, value:5\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Open arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Open arrays",
+              "body": "```nim\nvar\n  fruits:   seq[string]\n # reference to a sequence of strings that is initialized with '@[]'\n  capitals: array[3, string]\n\n # array of strings with a fixed size\n\ncapitals = [\"New York\", \"London\", \"Berlin\"]\n # array 'capitals' allows assignment of only three elements\nfruits.add(\"Banana\")\n # sequence 'fruits' is dynamically expandable during runtime\nfruits.add(\"Mango\")\n\nproc openArraySize(oa: openArray[string]): int =\n  oa.len\n\nassert openArraySize(fruits) == 2\n  # procedure accepts a sequence as parameter\nassert openArraySize(capitals) == 3\n  # but also an array type\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Varargs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Varargs",
+              "body": "```nim\nproc myWriteln(f: File, a: varargs[string]) =\n  for s in items(a):\n    write(f, s)\n  write(f, \"\\n\")\n\nmyWriteln(stdout, \"abc\", \"def\", \"xyz\")\n# is transformed by the compiler to:\nmyWriteln(stdout, [\"abc\", \"def\", \"xyz\"])\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Slices",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Slices",
+              "body": "```nim\nvar\n  a = \"Nim is a programming language\"\n  b = \"Slices are useless.\"\n\necho a[7 .. 12] # --> 'a prog'\nb[11 .. ^2] = \"useful\"\necho b # --> 'Slices are useful.'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Objects",
+              "body": "```nim\ntype\n  Person = object\n    name: string\n    age: int\n\nvar person1 = Person(name: \"Peter\", age: 30)\n\necho person1.name # \"Peter\"\necho person1.age  # 30\n\nvar person2 = person1 # copy of person 1\n\nperson2.age += 14\n\necho person1.age # 30\necho person2.age # 44\n\n# the order may be changed\nlet person3 = Person(age: 12, name: \"Quentin\")\n\n# not every member needs to be specified\nlet person4 = Person(age: 3)\n# unspecified members will be initialized with their default\n# values. In this case it is the empty string.\ndoAssert person4.name == \"\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tuples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tuples",
+              "body": "```nim\ntype\n  Person = tuple\n    name: string\n    age: int\n\n  PersonX = tuple[name: string, age: int]\n\n  PersonY = (string, int)\n\nvar\n  person: Person\n  personX: PersonX\n  personY: PersonY\n\nperson = (name: \"Peter\", age: 30)\n# Person and PersonX are equivalent\npersonX = person\n\n# Create a tuple with anonymous fields:\npersonY = (\"Peter\", 30)\n\nperson = personY\npersonY = person\n\nperson = (\"Peter\", 30)\n\necho person.name # \"Peter\"\necho person.age  # 30\n\necho person[0] # \"Peter\"\necho person[1] # 30\n\nvar building: tuple[street: string, number: int]\nbuilding = (\"Rue del Percebe\", 13)\necho building.street\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reference and pointer types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reference and pointer types",
+              "body": "```nim\ntype\n  Node = ref object\n    le, ri: Node\n    data: int\n\nvar n = Node(data: 9)\necho n.data\n# no need to write n[].data; in fact n[].data is highly discouraged!\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Procedural type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Procedural type",
+              "body": "```nim\nproc greet(name: string): string =\n  \"Hello, \" & name & \"!\"\n\nproc bye(name: string): string =\n  \"Goodbye, \" & name & \".\"\n\nproc communicate(greeting: proc (x: string): string, name: string) =\n  echo greeting(name)\n\ncommunicate(greet, \"John\")\ncommunicate(bye, \"Mary\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Modules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Modules",
+              "body": "```nim\n# Module A\nvar\n  x*, y: int\n\nproc `*` *(a, b: seq[int]): seq[int] =\n  # allocate a new sequence:\n  newSeq(result, len(a))\n  # multiply two int sequences:\n  for i in 0 ..< len(a): result[i] = a[i] * b[i]\n\nwhen isMainModule:\n  # test the new `*` operator for sequences:\n  assert(@[1, 2, 3] * @[1, 2, 3] == @[1, 4, 9])\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Excluding symbols",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Excluding symbols",
+              "body": "```nim\nimport mymodule except y\n\n# From statement\nfrom mymodule import x, y, z\nfrom mymodule import x, y, z\n\nx()\n  # use x without any qualification\n\n#Include statement\ninclude fileA, fileB, fileC\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inheritance",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inheritance",
+              "body": "```nim\ntype\n  Person = ref object of RootObj\n    name*: string  # the * means that `name` is accessible from other modules\n    age: int       # no * means that the field is hidden from other modules\n\n  Student = ref object of Person # Student inherits from Person\n    id: int                      # with an id field\n\nvar\n  student: Student\n  person: Person\nassert(student of Student) # is true\n# object construction:\nstudent = Student(name: \"Anton\", age: 5, id: 2)\necho student[]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mutually recursive types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutually recursive types",
+              "body": "```nim\ntype\n  Node = ref object\n # a reference to an object with the following field:\n    le, ri: Node\n   # left and right subtrees\n    sym: ref Sym\n  # leaves contain a reference to a Sym\n\n  Sym = object\n    # a symbol\n    name: string\n     # the symbol's name\n    line: int\n   # the line the symbol was declared in\n    code: Node\n    # the symbol's abstract syntax tree\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Object variants",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Object variants",
+              "body": "```nim\n# This is an example how an abstract syntax tree could be modelled in Nim\ntype\n  NodeKind = enum  # the different node types\n    nkInt,          # a leaf with an integer value\n    nkFloat,        # a leaf with a float value\n    nkString,       # a leaf with a string value\n    nkAdd,          # an addition\n    nkSub,          # a subtraction\n    nkIf            # an if statement\n  Node = ref object\n    case kind: NodeKind  # the `kind` field is the discriminator\n    of nkInt: intVal: int\n    of nkFloat: floatVal: float\n    of nkString: strVal: string\n    of nkAdd, nkSub:\n      leftOp, rightOp: Node\n    of nkIf:\n      condition, thenPart, elsePart: Node\n\nvar n = Node(kind: nkFloat, floatVal: 1.0)\n# the following statement raises an `FieldDefect` exception, because\n# n.kind's value does not fit:\nn.strVal = \"\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Method call syntax",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Method call syntax",
+              "body": "```nim\nimport std/strutils\n\necho \"abc\".len # is the same as echo len(\"abc\")\necho \"abc\".toUpperAscii()\necho({'a', 'b', 'c'}.card)\nstdout.writeLine(\"Hallo\") # the same as writeLine(stdout, \"Hallo\")\n##############################\nimport std/[strutils, sequtils]\n\nstdout.writeLine(\"Give a list of numbers (separated by spaces): \")\nstdout.write(stdin.readLine.splitWhitespace.map(parseInt).max.`$`)\nstdout.writeLine(\" is the maximum!\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Properties",
+              "body": "```nim\ntype\n  Socket* = ref object of RootObj\n    h: int # cannot be accessed from the outside of the module due to missing star\n\nproc `host=`*(s: var Socket, value: int) {.inline.} =\n  ## setter of host address\n  s.h = value\n\nproc host*(s: Socket): int {.inline.} =\n  ## getter of host address\n  s.h\n\nvar s: Socket\nnew s\ns.host = 34  # same as `host=`(s, 34)\n\ntype\n  Vector* = object\n    x, y, z: float\n\nproc `[]=`* (v: var Vector, i: int, value: float) =\n  # setter\n  case i\n  of 0: v.x = value\n  of 1: v.y = value\n  of 2: v.z = value\n  else: assert(false)\n\nproc `[]`* (v: Vector, i: int): float =\n  # getter\n  case i\n  of 0: result = v.x\n  of 1: result = v.y\n  of 2: result = v.z\n  else: assert(false)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dynamic dispatch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dynamic dispatch",
+              "body": "```nim\ntype\n  Expression = ref object of RootObj ## abstract base class for an expression\n  Literal = ref object of Expression\n    x: int\n  PlusExpr = ref object of Expression\n    a, b: Expression\n\n# watch out: 'eval' relies on dynamic binding\nmethod eval(e: Expression): int {.base.} =\n  # override this base method\n  quit \"to override!\"\n\nmethod eval(e: Literal): int = e.x\nmethod eval(e: PlusExpr): int = eval(e.a) + eval(e.b)\n\nproc newLit(x: int): Literal = Literal(x: x)\nproc newPlus(a, b: Expression): PlusExpr = PlusExpr(a: a, b: b)\n\necho eval(newPlus(newPlus(newLit(1), newLit(2)), newLit(4)))\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Raise statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Raise statement",
+              "body": "```nim\nvar\n  e: ref OSError\nnew(e)\ne.msg = \"the request to the OS failed\"\nraise e\n\nraise newException(OSError, \"the request to the OS failed\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Try statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Try statement",
+              "body": "```nim\nfrom std/strutils import parseInt\n\n# read the first two lines of a text file that should contain numbers\n# and tries to add them\nvar\n  f: File\nif open(f, \"numbers.txt\"):\n  try:\n    let a = readLine(f)\n    let b = readLine(f)\n    echo \"sum: \", parseInt(a) + parseInt(b)\n  except OverflowDefect:\n    echo \"overflow!\"\n  except ValueError:\n    echo \"could not convert string to integer\"\n  except IOError:\n    echo \"IO error!\"\n  except CatchableError:\n    echo \"Unknown exception!\"\n    # reraise the unknown exception:\n    raise\n  finally:\n    close(f)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Annotating procs with raised exceptions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Annotating procs with raised exceptions",
+              "body": "```nim\nproc complexProc() {.raises: [IOError, ArithmeticDefect].} =\n\nproc simpleProc() {.raises: [].} =\n  ...\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generics",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generics",
+              "body": "```nim\ntype\n  BinaryTree*[T] = ref object # BinaryTree is a generic type with\n                              # generic param `T`\n    le, ri: BinaryTree[T]     # left and right subtrees; may be nil\n    data: T                   # the data stored in a node\n\nproc newNode*[T](data: T): BinaryTree[T] =\n  # constructor for a node\n  new(result)\n  result.data = data\n\nproc add*[T](root: var BinaryTree[T], n: BinaryTree[T]) =\n  # insert a node into the tree\n  if root == nil:\n    root = n\n  else:\n    var it = root\n    while it != nil:\n      # compare the data items; uses the generic `cmp` proc\n      # that works for any type that has a `==` and `<` operator\n      var c = cmp(it.data, n.data)\n      if c < 0:\n        if it.le == nil:\n          it.le = n\n          return\n        it = it.le\n      else:\n        if it.ri == nil:\n          it.ri = n\n          return\n        it = it.ri\n\nproc add*[T](root: var BinaryTree[T], data: T) =\n  # convenience proc:\n  add(root, newNode(data))\n\niterator preorder*[T](root: BinaryTree[T]): T =\n  # Preorder traversal of a binary tree.\n  # This uses an explicit stack (which is more efficient than\n  # a recursive iterator factory).\n  var stack: seq[BinaryTree[T]] = @[root]\n  while stack.len > 0:\n    var n = stack.pop()\n    while n != nil:\n      yield n.data\n      add(stack, n.ri)  # push right subtree onto the stack\n      n = n.le          # and follow the left pointer\n\nvar\n  root: BinaryTree[string] # instantiate a BinaryTree with `string`\nadd(root, newNode(\"hello\")) # instantiates `newNode` and `add`\nadd(root, \"world\")          # instantiates the second `add` proc\nfor str in preorder(root):\n  stdout.writeLine(str)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Templates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Templates",
+              "body": "```nim\ntemplate `!=` (a, b: untyped): untyped =\n  # this definition exists in the System module\n  not (a == b)\n\nassert(5 != 6) # the compiler rewrites that to: assert(not (5 == 6))\n#############################################\nconst\n  debug = true\n\nproc log(msg: string) {.inline.} =\n  if debug: stdout.writeLine(msg)\n\nvar\n  x = 4\nlog(\"x has the value: \" & $x)\n####################################\ntemplate withFile(f: untyped, filename: string, mode: FileMode,\n                  body: untyped) =\n  let fn = filename\n  var f: File\n  if open(f, fn, mode):\n    try:\n      body\n    finally:\n      close(f)\n  else:\n    quit(\"cannot open: \" & fn)\n\nwithFile(txt, \"ttempl3.txt\", fmWrite):\n  txt.writeLine(\"line 1\")\n  txt.writeLine(\"line 2\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Static Arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Static Arguments",
+              "body": "```nim\nimport std/macros\n\nmacro myMacro(arg: static[int]): untyped =\n  echo arg # just an int (7), not `NimNode`\n\nmyMacro(1 + 2 * 3)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Code Blocks as Arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Code Blocks as Arguments",
+              "body": "```nim\necho \"Hello \":\n  let a = \"Wor\"\n  let b = \"ld!\"\n  a & b\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "The Syntax Tree",
+          "level": 3,
+          "cards": [
+            {
+              "title": "The Syntax Tree",
+              "body": "```nim\ndumpTree:\n  var mt: MyType = MyType(a:123.456, b:\"abcdef\")\n\n# output:\n#   StmtList\n#     VarSection\n#       IdentDefs\n#         Ident \"mt\"\n#         Ident \"MyType\"\n#         ObjConstr\n#           Ident \"MyType\"\n#           ExprColonExpr\n#             Ident \"a\"\n#             FloatLit 123.456\n#           ExprColonExpr\n#             Ident \"b\"\n#             StrLit \"abcdef\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Custom Semantic Checking",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom Semantic Checking",
+              "body": "```nim\nmacro myAssert(arg: untyped): untyped =\n  arg.expectKind nnkInfix\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generating Code",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generating Code",
+              "body": "```nim\nimport std/macros\n\ntype\nMyType = object\n  a: float\n  b: string\n\nmacro myMacro(arg: untyped): untyped =\nvar mt: MyType = MyType(a:123.456, b:\"abcdef\")\n\n#\n\nlet mtLit = newLit(mt)\n\nresult = quote do:\n  echo `arg`\n  echo `mtLit`\n\nmyMacro(\"Hallo\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Building Your First Macro",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Building Your First Macro",
+              "body": "```nim\nimport std/macros\n\nmacro myAssert(arg: untyped): untyped =\n  # all node kind identifiers are prefixed with \"nnk\"\n  arg.expectKind nnkInfix\n  arg.expectLen 3\n  # operator as string literal\n  let op  = newLit(\" \" & arg[0].repr & \" \")\n  let lhs = arg[1]\n  let rhs = arg[2]\n\n  result = quote do:\n    if not `arg`:\n      raise newException(AssertionDefect,$`lhs` & `op` & $`rhs`)\n\nlet a = 1\nlet b = 2\n\nmyAssert(a != b)\nmyAssert(a == b)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Nim Cheat sheet](https://narimiran.github.io/nim-basics/) _(https://narimiran.github.io)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

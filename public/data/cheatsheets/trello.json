@@ -1,0 +1,188 @@
+{
+  "id": "trello",
+  "metadata": {
+    "title": "Trello",
+    "date": "2022-11-23T16:23:31.702Z",
+    "background": "bg-[#417eef]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 29 keyboard shortcuts found on Trello\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General I",
+              "body": "| Shortcut             | Action                     |\n| -------------------- | -------------------------- |\n| `Up/Down/Left/Right` | Navigate Cards             |\n| `B`                  | Open Header Boards Menu    |\n| `/`                  | Focus Search Box           |\n| `C`                  | Archive Card               |\n| `D`                  | Due Date                   |\n| `E`                  | Quick Edit Mode            |\n| `Esc`                | Close Menu/Cancel Editing  |\n| `Ctrl` `Enter`       | Save Text                  |\n| `Enter`              | Open Card                  |\n| `F`                  | Open Card Filter Menu      |\n| `L`                  | Label                      |\n| `;`                  | Toggle Label Names         |\n| `M`                  | Add/Remove Members         |\n| `N`                  | Insert New Card            |\n| `,/./</>`            | Move Card to Adjacent List |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Up/Down/Left/Right`",
+                  "action": "Navigate Cards"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Open Header Boards Menu"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Focus Search Box"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Archive Card"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Due Date"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Quick Edit Mode"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close Menu/Cancel Editing"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Save Text"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Open Card"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Open Card Filter Menu"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Label"
+                },
+                {
+                  "shortcut": "`;`",
+                  "action": "Toggle Label Names"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Add/Remove Members"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Insert New Card"
+                },
+                {
+                  "shortcut": "`,/./</>`",
+                  "action": "Move Card to Adjacent List"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General II",
+              "body": "| Shortcut    | Action                |\n| ----------- | --------------------- |\n| `Q`         | My Cards Filter       |\n| `S`         | Watch                 |\n| `Space`     | Assign Self           |\n| `T`         | Edit Title            |\n| `V`         | Vote                  |\n| `W`         | Toggle Board Menu     |\n| `X`         | Clear All Filters     |\n| `?`         | Open Shortcuts Page   |\n| `Shift` `2` | Autocomplete Members  |\n| `Shift` `3` | Autocomplete Labels   |\n| `Shift` `6` | Autocomplete Position |\n| `Ctrl` `C`  | Copy Card             |\n| `Ctrl` `V`  | Paste Card            |\n| `Ctrl` `X`  | Move Card             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Q`",
+                  "action": "My Cards Filter"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Watch"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Assign Self"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Edit Title"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Vote"
+                },
+                {
+                  "shortcut": "`W`",
+                  "action": "Toggle Board Menu"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Clear All Filters"
+                },
+                {
+                  "shortcut": "`?`",
+                  "action": "Open Shortcuts Page"
+                },
+                {
+                  "shortcut": "`Shift` `2`",
+                  "action": "Autocomplete Members"
+                },
+                {
+                  "shortcut": "`Shift` `3`",
+                  "action": "Autocomplete Labels"
+                },
+                {
+                  "shortcut": "`Shift` `6`",
+                  "action": "Autocomplete Position"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy Card"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste Card"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Move Card"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Trello](https://trello.com/shortcuts) _(trello.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

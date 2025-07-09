@@ -1,0 +1,708 @@
+{
+  "id": "figma",
+  "metadata": {
+    "title": "Figma",
+    "date": "2022-11-23T16:23:31.706Z",
+    "background": "bg-[#935aee]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 119 keyboard shortcuts found in Figma\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Essential",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Essential",
+              "body": "| Shortcut   | Action       |\n| ---------- | ------------ |\n| `Ctrl` `\\` | Show/Hide UI |\n| `Ctrl` `C` | Pick Color   |\n| `Ctrl` `/` | Search Menu  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `\\`",
+                  "action": "Show/Hide UI"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Pick Color"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Search Menu"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tools",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tools",
+              "body": "| Shortcut    | Action            |\n| ----------- | ----------------- |\n| `V`         | Move Tool         |\n| `F`         | Frame Tool        |\n| `P`         | Pen Tool          |\n| `Shift` `P` | Pencil Tool       |\n| `T`         | Text Tool         |\n| `R`         | Rectangle Tool    |\n| `O`         | Ellipse Tool      |\n| `L`         | Line Tool         |\n| `Shift` `L` | Arrow Tool        |\n| `C`         | Add/Show Comments |\n| `Ctrl` `C`  | Pick Color        |\n| `S`         | Slice Tool        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`V`",
+                  "action": "Move Tool"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Frame Tool"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Pen Tool"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Pencil Tool"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Text Tool"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Rectangle Tool"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Ellipse Tool"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Line Tool"
+                },
+                {
+                  "shortcut": "`Shift` `L`",
+                  "action": "Arrow Tool"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Add/Show Comments"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Pick Color"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Slice Tool"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View",
+              "body": "| Shortcut         | Action                   |\n| ---------------- | ------------------------ |\n| `Shift` `R`      | Toggle Rulers            |\n| `Ctrl` `Y`       | Show Outlines            |\n| `Ctrl` `P`       | Pixel Preview            |\n| `Ctrl` `G`       | Layout Grids             |\n| `Ctrl` `'`       | Pixel Grid               |\n| `Ctrl` `\\`       | Show/Hide UI             |\n| `Ctrl` `Alt` `\\` | Show Multiplayer Cursors |\n| `Alt` `1`        | Show Layers              |\n| `Alt` `2`        | Show Components          |\n| `Alt` `3`        | Show Team Library        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `R`",
+                  "action": "Toggle Rulers"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Show Outlines"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Pixel Preview"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Layout Grids"
+                },
+                {
+                  "shortcut": "`Ctrl` `'`",
+                  "action": "Pixel Grid"
+                },
+                {
+                  "shortcut": "`Ctrl` `\\`",
+                  "action": "Show/Hide UI"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `\\`",
+                  "action": "Show Multiplayer Cursors"
+                },
+                {
+                  "shortcut": "`Alt` `1`",
+                  "action": "Show Layers"
+                },
+                {
+                  "shortcut": "`Alt` `2`",
+                  "action": "Show Components"
+                },
+                {
+                  "shortcut": "`Alt` `3`",
+                  "action": "Show Team Library"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Zoom",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Zoom",
+              "body": "| Shortcut         | Action                 |\n| ---------------- | ---------------------- |\n| `Space` `(drag)` | Pan                    |\n| `+`              | Zoom In                |\n| `-`              | Zoom Out               |\n| `Shift` `0`      | Zoom to 100%           |\n| `Shift` `1`      | Zoom to Fit            |\n| `Shift` `2`      | Zoom to Selection      |\n| `Shift` `N`      | Zoom to Previous Frame |\n| `N`              | Zoom to Next Frame     |\n| `PgUp`           | Previous Page          |\n| `PgDown`         | Next Page              |\n| `Home`           | Find Previous Frame    |\n| `End`            | Find Next Frame        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Space` `(drag)`",
+                  "action": "Pan"
+                },
+                {
+                  "shortcut": "`+`",
+                  "action": "Zoom In"
+                },
+                {
+                  "shortcut": "`-`",
+                  "action": "Zoom Out"
+                },
+                {
+                  "shortcut": "`Shift` `0`",
+                  "action": "Zoom to 100%"
+                },
+                {
+                  "shortcut": "`Shift` `1`",
+                  "action": "Zoom to Fit"
+                },
+                {
+                  "shortcut": "`Shift` `2`",
+                  "action": "Zoom to Selection"
+                },
+                {
+                  "shortcut": "`Shift` `N`",
+                  "action": "Zoom to Previous Frame"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Zoom to Next Frame"
+                },
+                {
+                  "shortcut": "`PgUp`",
+                  "action": "Previous Page"
+                },
+                {
+                  "shortcut": "`PgDown`",
+                  "action": "Next Page"
+                },
+                {
+                  "shortcut": "`Home`",
+                  "action": "Find Previous Frame"
+                },
+                {
+                  "shortcut": "`End`",
+                  "action": "Find Next Frame"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Text",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Text",
+              "body": "| Shortcut             | Action                |\n| -------------------- | --------------------- |\n| `Ctrl` `B`           | Bold                  |\n| `Ctrl` `I`           | Italic                |\n| `Ctrl` `U`           | Underline             |\n| `Ctrl` `Shift` `V`   | Paste and Match Style |\n| `Ctrl` `Alt` `L`     | Text Alight Left      |\n| `Ctrl` `Alt` `T`     | Text Align Center     |\n| `Ctrl` `Alt` `R`     | Text Align Right      |\n| `Ctrl` `Alt` `J`     | Text Align Justified  |\n| `Ctrl` `Shift` `</>` | Adjust Font Size      |\n| `Alt` `,/.`          | Adjust Letter Spacing |\n| `Alt` `Shift` `</>`  | Adjust Line Height    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Italic"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Underline"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `V`",
+                  "action": "Paste and Match Style"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `L`",
+                  "action": "Text Alight Left"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `T`",
+                  "action": "Text Align Center"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `R`",
+                  "action": "Text Align Right"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `J`",
+                  "action": "Text Align Justified"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `</>`",
+                  "action": "Adjust Font Size"
+                },
+                {
+                  "shortcut": "`Alt` `,/.`",
+                  "action": "Adjust Letter Spacing"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `</>`",
+                  "action": "Adjust Line Height"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Shape",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shape",
+              "body": "| Shortcut            | Action                                             |\n| ------------------- | -------------------------------------------------- |\n| `P`                 | Pen                                                |\n| `Shift` `P`         | Pencil                                             |\n| `B`                 | Paint Bucket (while editing shape)                 |\n| `Ctrl`              | Bend Tool (while editing shape)                    |\n| `Alt` `/`           | Remove Fill                                        |\n| `/`                 | Remove Stroke                                      |\n| `Shift` `X`         | Swap Fill and Stroke                               |\n| `Ctrl` `Shift` `O`  | Outline Stroke                                     |\n| `Ctrl` `E`          | Flatten Selection                                  |\n| `Ctrl` `J`          | Join Selection (after selecting points)            |\n| `Ctrl` `Shift` `J`  | Smooth Join Selection (after selecting points)     |\n| `Shift` `Backspace` | Delete and Heal Selection (after selecting points) |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`P`",
+                  "action": "Pen"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Pencil"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Paint Bucket (while editing shape)"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Bend Tool (while editing shape)"
+                },
+                {
+                  "shortcut": "`Alt` `/`",
+                  "action": "Remove Fill"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Remove Stroke"
+                },
+                {
+                  "shortcut": "`Shift` `X`",
+                  "action": "Swap Fill and Stroke"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `O`",
+                  "action": "Outline Stroke"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Flatten Selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Join Selection (after selecting points)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Smooth Join Selection (after selecting points)"
+                },
+                {
+                  "shortcut": "`Shift` `Backspace`",
+                  "action": "Delete and Heal Selection (after selecting points)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selection",
+              "body": "| Shortcut               | Action                  |\n| ---------------------- | ----------------------- |\n| `Ctrl` `A`             | Select All              |\n| `Ctrl` `Shift` `A`     | Select Inverse          |\n| `Esc`                  | Select None             |\n| `Ctrl` `(click)`       | Deep Select             |\n| `Ctrl` `(right click)` | Select Layer Menu       |\n| `Enter`                | Select Child            |\n| `Shift` `Enter`        | Select Parents          |\n| `Tab`                  | Select Next Sibling     |\n| `Shift` `Tab`          | Select Previous Sibling |\n| `Ctrl` `G`             | Group Selection         |\n| `Ctrl` `Shift` `G`     | Ungroup Selection       |\n| `Ctrl` `Alt` `G`       | Frame Selection         |\n| `Ctrl` `Shift` `H`     | Show/Hide Selection     |\n| `Ctrl` `Shift` `L`     | Lock/Unlock Selection   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select All"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Select Inverse"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Select None"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click)`",
+                  "action": "Deep Select"
+                },
+                {
+                  "shortcut": "`Ctrl` `(right click)`",
+                  "action": "Select Layer Menu"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Select Child"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Select Parents"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Select Next Sibling"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Select Previous Sibling"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Group Selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Ungroup Selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `G`",
+                  "action": "Frame Selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "Show/Hide Selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Lock/Unlock Selection"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cursor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cursor",
+              "body": "| Shortcut               | Action                                                  |\n| ---------------------- | ------------------------------------------------------- |\n| `Alt`                  | Measure to Selection (while pointing)                   |\n| `Alt`                  | Duplicate Selection (while moving)                      |\n| `Ctrl` `(click)`       | Deep Select (while clicking)                            |\n| `Ctrl` `(right click)` | Select Layer Menu (while clicking)                      |\n| `Ctrl` `(drag)`        | Deep Select Within Rectangle (while dragging to select) |\n| `Alt`                  | Resize from Center (while resizing)                     |\n| `Shift`                | Resize Proportionally (while resizing)                  |\n| `Space`                | Move While Resizing                                     |\n| `Ctrl`                 | Ignore Constraints (Frames Only)                        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Measure to Selection (while pointing)"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Duplicate Selection (while moving)"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click)`",
+                  "action": "Deep Select (while clicking)"
+                },
+                {
+                  "shortcut": "`Ctrl` `(right click)`",
+                  "action": "Select Layer Menu (while clicking)"
+                },
+                {
+                  "shortcut": "`Ctrl` `(drag)`",
+                  "action": "Deep Select Within Rectangle (while dragging to select)"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Resize from Center (while resizing)"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Resize Proportionally (while resizing)"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Move While Resizing"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Ignore Constraints (Frames Only)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Edit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Edit",
+              "body": "| Shortcut           | Action                       |\n| ------------------ | ---------------------------- |\n| `Ctrl` `C`         | Copy                         |\n| `Ctrl` `X`         | Cut                          |\n| `Ctrl` `V`         | Paste                        |\n| `Ctrl` `Shift` `V` | Paste Over Selection         |\n| `Ctrl` `D`         | Duplicate Selection in Place |\n| `Ctrl` `R`         | Rename Selection             |\n| `Ctrl` `Shift` `E` | Export                       |\n| `Ctrl` `Alt` `C`   | Copy Properties              |\n| `Ctrl` `Alt` `V`   | Paste Properties             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `V`",
+                  "action": "Paste Over Selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Duplicate Selection in Place"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Rename Selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Export"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `C`",
+                  "action": "Copy Properties"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `V`",
+                  "action": "Paste Properties"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Transform",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transform",
+              "body": "| Shortcut           | Action              |\n| ------------------ | ------------------- |\n| `Shift` `H`        | Flip Horizontal     |\n| `Shift` `V`        | Flip Vertical       |\n| `Ctrl` `M`         | Use as Mask         |\n| `Enter`            | Edit Shape or Image |\n| `Ctrl` `Shift` `K` | Place Image         |\n| `Alt` `(click x2)` | Crop Image          |\n| `1`                | Set Opacity to 10%  |\n| `5`                | Set Opacity to 50%  |\n| `0`                | Set Opacity to 100% |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `H`",
+                  "action": "Flip Horizontal"
+                },
+                {
+                  "shortcut": "`Shift` `V`",
+                  "action": "Flip Vertical"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Use as Mask"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Edit Shape or Image"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Place Image"
+                },
+                {
+                  "shortcut": "`Alt` `(click x2)`",
+                  "action": "Crop Image"
+                },
+                {
+                  "shortcut": "`1`",
+                  "action": "Set Opacity to 10%"
+                },
+                {
+                  "shortcut": "`5`",
+                  "action": "Set Opacity to 50%"
+                },
+                {
+                  "shortcut": "`0`",
+                  "action": "Set Opacity to 100%"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrange",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrange",
+              "body": "| Shortcut         | Action                        |\n| ---------------- | ----------------------------- |\n| `Ctrl` `]`       | Bring Forward                 |\n| `Ctrl` `[`       | Send Backward                 |\n| `Ctrl` `Alt` `]` | Bring to Front                |\n| `Ctrl` `Alt` `[` | Send to Back                  |\n| `Alt` `A`        | Align Left                    |\n| `Alt` `D`        | Align Right                   |\n| `Alt` `W`        | Align Top                     |\n| `Alt` `S`        | Align Bottom                  |\n| `Alt` `H`        | Align Horizontal Centers      |\n| `Alt` `V`        | Align Vertical Centers        |\n| `Ctrl` `Alt` `T` | Tidy Up                       |\n| `Ctrl` `Alt` `H` | Distribute Horizontal Spacing |\n| `Ctrl` `Alt` `V` | Distribute Vertical Spacing   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Bring Forward"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Send Backward"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `]`",
+                  "action": "Bring to Front"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `[`",
+                  "action": "Send to Back"
+                },
+                {
+                  "shortcut": "`Alt` `A`",
+                  "action": "Align Left"
+                },
+                {
+                  "shortcut": "`Alt` `D`",
+                  "action": "Align Right"
+                },
+                {
+                  "shortcut": "`Alt` `W`",
+                  "action": "Align Top"
+                },
+                {
+                  "shortcut": "`Alt` `S`",
+                  "action": "Align Bottom"
+                },
+                {
+                  "shortcut": "`Alt` `H`",
+                  "action": "Align Horizontal Centers"
+                },
+                {
+                  "shortcut": "`Alt` `V`",
+                  "action": "Align Vertical Centers"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `T`",
+                  "action": "Tidy Up"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `H`",
+                  "action": "Distribute Horizontal Spacing"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `V`",
+                  "action": "Distribute Vertical Spacing"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Components",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Components",
+              "body": "| Shortcut           | Action                                               |\n| ------------------ | ---------------------------------------------------- |\n| `Alt` `2`          | Show Components                                      |\n| `Ctrl` `Shift` `O` | Team Library                                         |\n| `Ctrl` `Shift` `K` | Create Component                                     |\n| `Ctrl` `Shift` `B` | Detach Instance                                      |\n| `Alt`              | Swap Component Instance (while dragging from Assets) |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `2`",
+                  "action": "Show Components"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `O`",
+                  "action": "Team Library"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Create Component"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `B`",
+                  "action": "Detach Instance"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Swap Component Instance (while dragging from Assets)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Figma](https://help.figma.com/article/77-keyboard-shortcuts) _(help.figma.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

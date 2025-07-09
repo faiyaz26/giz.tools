@@ -1,0 +1,1164 @@
+{
+  "id": "laravel",
+  "metadata": {
+    "title": "Laravel",
+    "date": "2021-11-09T18:26:55.000Z",
+    "background": "bg-[#e44230]",
+    "label": "PHP",
+    "tags": [
+      "web",
+      "framework",
+      "php"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "[Laravel](https://laravel.com/docs/8.x/) is an expressive and progressive web application framework for PHP. \nThis cheat sheet provides a reference for common commands and features for Laravel 8.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Requirements",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Requirements",
+              "body": "- PHP version >= 7.3\n- BCMath PHP Extension\n- Ctype PHP Extension\n- Fileinfo PHP Extension\n- JSON PHP Extension\n- Mbstring PHP Extension\n- OpenSSL PHP Extension\n- PDO PHP Extension\n- Tokenizer PHP Extension\n- XML PHP Extension\n\nEnsure your web server directs all requests to your application's `public/index.php` file, See:\n[Deployment](#deployment)",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Windows",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Windows",
+              "body": "",
+              "footer": "- #### Install [Docker Desktop](https://www.docker.com/products/docker-desktop)\n- #### Install & enable [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install)\n- #### Ensure that Docker Desktop is [configured to use WSL2](https://docs.docker.com/desktop/windows/wsl/)\n- #### In WSL2 terminal:\n      ```shell\n      $ curl -s https://laravel.build/example-app | bash\n      $ cd example-app\n      $ ./vendor/bin/sail up\n      ```\n  {.marker-timeline}\n\nAccess application via `http://localhost`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mac",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mac",
+              "body": "",
+              "footer": "- #### Install [Docker Desktop](https://www.docker.com/products/docker-desktop)\n- #### In terminal:\n      ```shell\n      $ curl -s https://laravel.build/example-app | bash\n      $ cd example-app\n      $ ./vendor/bin/sail up\n      ```\n  {.marker-timeline}\n\nAccess application via `http://localhost`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Linux",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Linux",
+              "body": "```shell\n$ curl -s https://laravel.build/example-app | bash\n$ cd example-app\n$ ./vendor/bin/sail up\n```",
+              "footer": "Installation via [Composer](https://getcomposer.org)\n```bash\n$ composer create-project laravel/laravel example-app\n$ cd example-app\n$ php artisan serve\n```\nAccess application via `http://localhost`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Configuration",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": ".env",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".env",
+              "body": "```php\nenv('APP_DEBUG');\n\n// with default value\nenv('APP_DEBUG', false);\n```",
+              "footer": "Determine current environment\n```php\nuse Illuminate\\Support\\Facades\\App;\n$environment = App::environment();\n```\nAccessing configuration values using \"dot\" syntax\n```php\n// config/app.php --> ['timezone' => '']\n$value = config('app.timezone');\n// Retrieve a default value if the configuration value does not exist...\n$value = config('app.timezone', 'Asia/Seoul');\n```\nSet configuration values at runtime:\n```php\nconfig(['app.timezone' => 'America/Chicago']);\n```",
+              "spanConfig": "cols-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Debug Mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Debug Mode",
+              "body": "```php\n// .env file\nAPP_ENV=local\nAPP_DEBUG=true\n// ...\n```",
+              "footer": "Turn off (production):\n```php\n// .env file\nAPP_ENV=production\nAPP_DEBUG=false\n// ...\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Maintenance Mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Maintenance Mode",
+              "body": "Temporarily disable application (503 status code)\n\n```bash\nphp artisan down\n```",
+              "footer": "#### Disable maintenance mode\n\n```bash\nphp artisan up\n```\n\n#### Bypass Maintenance Mode\n\n```bash\nphp artisan down --secret=\"1630542a-246b-4b66-afa1-dd72a4c43515\"\n```\n\nVisit your application URL `https://example.com/1630542a-246b-4b66-afa1-dd72a4c43515` to set a cookie and bypass the\nmaintenance screen",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Routing",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Router HTTP Methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Router HTTP Methods",
+              "body": "```php\nRoute::get($uri, $callback);\nRoute::post($uri, $callback);\nRoute::put($uri, $callback);\nRoute::patch($uri, $callback);\nRoute::delete($uri, $callback);\nRoute::options($uri, $callback);\n```",
+              "footer": "Multiple HTTP methods\n```php\nRoute::match(['get', 'post'], '/', function () {\n//\n});\nRoute::any('/', function () {\n//\n});\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic Definition",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Definition",
+              "body": "```php\nuse Illuminate\\Support\\Facades\\Route;\n\n// closure\nRoute::get('/greeting', function () {\n    return 'Hello World';\n});\n\n// controller action\nRoute::get(\n    '/user/profile',\n    [UserProfileController::class, 'show']\n);\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dependency Injection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dependency Injection",
+              "body": "```php\nuse Illuminate\\Http\\Request;\n\nRoute::get('/users', function (Request $request) {\n    // ...\n});\n```",
+              "footer": "Type hint concrete dependencies for auto-injection",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View Routes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View Routes",
+              "body": "```php\n// Argument 1: URI, Argument 2: view name\nRoute::view('/welcome', 'welcome');\n\n// with data\nRoute::view('/welcome', 'welcome', ['name' => 'Taylor']);\n```",
+              "footer": "Route only needs to return a view.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Route Model Binding",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Route Model Binding",
+              "body": "",
+              "footer": "#### Implicit binding\n\nWith closure\n\n```php\nuse App\\Models\\User;\n\nRoute::get('/users/{user}', function (User $user) {\n    return $user->email;\n});\n\n// /user/1 --> User::where('id', '=', 1);\n```\n\nWith controller action\n\n```php\nuse App\\Http\\Controllers\\UserController;\nuse App\\Models\\User;\n\n// Route definition...\nRoute::get('/users/{user}', [UserController::class, 'show']);\n\n// Controller method definition...\npublic function show(User $user)\n{\n    return view('user.profile', ['user' => $user]);\n}\n```\n\nWith custom resolution column\n\n```php\nuse App\\Models\\Post;\n\nRoute::get('/posts/{post:slug}', function (Post $post) {\n    return $post;\n});\n\n// /posts/my-post --> Post::where('slug', '=', 'my-post');\n```\n\nAlways use a different column to resolve\n\n```php\n// in App\\Models\\Post\npublic function getRouteKeyName()\n{\n    return 'slug';\n}\n```\n\nMultiple models - second is child of first\n\n```php\nuse App\\Models\\Post;\nuse App\\Models\\User;\n\nRoute::get('/users/{user}/posts/{post:slug}', function (User $user, Post $post) {\n    return $post;\n});\n```\n\nConvenient way to automatically inject the model instances directly into your routes",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Route Parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Route Parameters",
+              "body": "Capture segments of the URI within your route",
+              "footer": "#### Required parameters\n\n```php\nRoute::get('/user/{id}', function ($id) {\n    return 'User '.$id;\n});\n```\n\nWith dependency injection\n\n```php\nuse Illuminate\\Http\\Request;\n\nRoute::get('/user/{id}', function (Request $request, $id) {\n    return 'User '.$id;\n});\n```\n\n#### Optional Parameters\n\n```php\nRoute::get('/user/{name?}', function ($name = null) {\n    return $name;\n});\n\nRoute::get('/user/{name?}', function ($name = 'John') {\n    return $name;\n});\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Redirect Routes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Redirect Routes",
+              "body": "```php\nRoute::redirect('/here', '/there');\n```",
+              "footer": "Set the status code\n```php\nRoute::redirect('/here', '/there', 301);\n```\nPermanent `301` redirect\n```php\nRoute::permanentRedirect('/here', '/there');\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Regular Expression Constraints",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Regular Expression Constraints",
+              "body": "```php\nRoute::get('/user/{name}', function ($name) {\n    //\n})->where('name', '[A-Za-z]+');\n\nRoute::get('/user/{id}', function ($id) {\n    //\n})->where('id', '[0-9]+');\n\nRoute::get('/user/{id}/{name}', function ($id, $name) {\n    //\n})->where(['id' => '[0-9]+', 'name' => '[a-z]+']);\n```",
+              "footer": "See also: [Regex Cheatsheet](/regex)",
+              "spanConfig": "cols-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Named Routes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Named Routes",
+              "body": "```php\nRoute::get('/user/profile', function () {\n    //\n})->name('profile');\n```",
+              "footer": "See: [Helpers](#helpers-cols-3)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Fallback Routes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Fallback Routes",
+              "body": "```php\nRoute::fallback(function () {\n    //\n});\n```",
+              "footer": "Executed when no other routes match",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Route Groups",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Route Groups",
+              "body": "",
+              "footer": "#### Middleware\n\n```php\nRoute::middleware(['first', 'second'])->group(function () {\n    Route::get('/', function () {\n        // Uses first & second middleware...\n    });\n\n    Route::get('/user/profile', function () {\n        // Uses first & second middleware...\n    });\n});\n```\n\n#### URI Prefixes\n\n```php\nRoute::prefix('admin')->group(function () {\n    Route::get('/users', function () {\n        // Matches The \"/admin/users\" URL\n    });\n});\n```\n\n#### Name Prefix\n\n```php\nRoute::name('admin.')->group(function () {\n    Route::get('/users', function () {\n        // Route assigned name \"admin.users\"...\n    })->name('users');\n});\n```\n\nShare attributes across routes",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Accessing current route",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Accessing current route",
+              "body": "```php\nuse Illuminate\\Support\\Facades\\Route;\n\n// Illuminate\\Routing\\Route\n$route = Route::current();\n\n// string\n$name = Route::currentRouteName();\n\n// string\n$action = Route::currentRouteAction();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Helpers",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "routes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "routes",
+              "body": "",
+              "footer": "#### Named route\n\n```php\n$url = route('profile');\n```\n\nWith parameters\n\n```php\n// Route::get('/user/{id}/profile', /*...*/ )->name('profile);\n\n$url = route('profile', ['id' => 1]);\n\n// /user/1/profile/\n```\n\nWith query string\n\n```php\n// Route::get('/user/{id}/profile', /*...*/ )->name('profile);\n\n$url = route('profile', ['id' => 1, 'photos'=>'yes']);\n\n// /user/1/profile?photos=yes\n```\n\n#### Redirects\n\n```php\n// Generating Redirects...\nreturn redirect()->route('profile');\n```\n\n#### Eloquent Models\n\n```php\necho route('post.show', ['post' => $post]);\n```\n\nThe route helper will automatically extract the model's route key. See [Routing](#routing-cols-4)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "URL Generation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "URL Generation",
+              "body": "Generate arbitrary URLs for your application that will automatically use the scheme (HTTP or HTTPS) and host from the\ncurrent request\n\n```php\n$post = App\\Models\\Post::find(1);\n\necho url(\"/posts/{$post->id}\");\n\n// http://example.com/posts/1\n```",
+              "footer": "#### Current URL\n\n```php\n// Get the current URL without the query string...\necho url()->current();\n\n// Get the current URL including the query string...\necho url()->full();\n\n// Get the full URL for the previous request...\necho url()->previous();\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Named Route URL",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Named Route URL",
+              "body": "```php\n$url = route('profile');\n```",
+              "footer": "See [Named Route](#named-route)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Error Handling",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Error Handling",
+              "body": "```php\npublic function isValid($value)\n{\n    try {\n        // Validate the value...\n    } catch (Throwable $e) {\n        report($e);\n\n        return false;\n    }\n}\n```",
+              "footer": "Report an exception but continue handling the current request",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HTTP Exceptions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HTTP Exceptions",
+              "body": "```php\n// page not found\nabort(404);\n\n// Unauthorized\nabort(401);\n\n// Forbidden\nabort(403);\n\n// Server Error\nabort(500);\n```",
+              "footer": "Generate an HTTP exception response using status code",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Controllers",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic",
+              "body": "```php\nnamespace App\\Http\\Controllers;\n\nuse App\\Http\\Controllers\\Controller;\nuse App\\Models\\User;\n\nclass UserController extends Controller\n{\n    public function show($id)\n    {\n        return view('user.profile', [\n            'user' => User::findOrFail($id)\n        ]);\n    }\n}\n```",
+              "footer": "Define a route for this controller method:\n```php\nuse App\\Http\\Controllers\\UserController;\nRoute::get('/user/{id}', [UserController::class, 'show']);\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Requests",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "CSRF Protection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CSRF Protection",
+              "body": "```php\nRoute::get('/token', function (Request $request) {\n    $token = $request->session()->token();\n\n    $token = csrf_token();\n\n    // ...\n});\n```",
+              "footer": "`POST`, `PUT`, `PATCH`, or `DELETE` forms should include a hidden CSRF `_token` field in the form to validate the\nrequest.\n```html\n<form method=\"POST\" action=\"/profile\">\n@csrf\n<!-- Equivalent to... -->\n<input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token() }}\" />\n</form>\n```\nSee [Forms](#forms-cols-3)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Accessing Request",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Accessing Request",
+              "body": "```php\n// controller action\nclass UserController extends Controller\n{\n    public function store(Request $request)\n    {\n        $name = $request->input('name');\n    }\n}\n\n// closure\nRoute::get('/', function (Request $request) {\n    //\n});\n```",
+              "footer": "[See Routing](#routing)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Path",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Path",
+              "body": "The request's path information\n\n```php\n$uri = $request->path();\n\n// https://example.com/foo/bar --> foo/bar\n```",
+              "footer": "#### Match path to pattern\n\nVerify that the incoming request path matches a given pattern\n\n```php\n// * is wildcard\nif ($request->is('admin/*')) {\n    //\n}\n```\n\nDetermine if the incoming request matches a named route\n\n```php\nif ($request->routeIs('admin.*')) {\n    //\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "URL",
+          "level": 3,
+          "cards": [
+            {
+              "title": "URL",
+              "body": "```php\n// URL without the query string\n$url = $request->url();\n\n// URL including query string\n$urlWithQueryString = $request->fullUrl();\n\n// append data to query string\n$request->fullUrlWithQuery(['type' => 'phone']);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Request Method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Request Method",
+              "body": "```php\n$method = $request->method();\n\n// verify that the HTTP verb matches a given string\nif ($request->isMethod('post')) {\n    //\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Client IP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Client IP",
+              "body": "```php\n$ipAddress = $request->ip();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Headers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Headers",
+              "body": "```php\n$value = $request->header('X-Header-Name');\n\n$value = $request->header('X-Header-Name', 'default value');\n\n// determine if the request contains a given header\nif ($request->hasHeader('X-Header-Name')) {\n    //\n}\n\n// retrieve a bearer token from the Authorization header\n$token = $request->bearerToken();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Content Type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Content Type",
+              "body": "```php\n$contentTypes = $request->getAcceptableContentTypes();\n```",
+              "footer": "Boolean check for content types are accepted by the request\n```php\nif ($request->accepts(['text/html', 'application/json'])) {\n// ...\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Input",
+              "body": "Retrieve all the incoming request's input data as an array\n\n\n\nRetrieve all the incoming request's input data as a collection\n\n\n\nSee [Helpers](#helpers-cols-3)\n\nRetrieve user input (also gets values from query string)\n\n\n\nAccess array inputs\n\n\n\nRetrieve all the input values as an associative array:\n\n\n\nOnly retrieve values from the query string:\n\n\n\nRetrieve all the query string values as an associative array:\n\n```php\n$input = $request->all();\n```",
+              "footer": "#### Boolean Input Values\n\nHelpful for checkbox inputs or other booleans. Return `true` for `1`, `\"1\"`, `true`, `\"true\"`, `\"on\"`, and `\"yes\"`.  \nAll other values will return `false`\n\n```php\n$archived = $request->boolean('archived');\n```",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dynamic Properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dynamic Properties",
+              "body": "```php\n$name = $request->name;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Retrieve Partial Input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Retrieve Partial Input",
+              "body": "```php\n$input = $request->only(['username', 'password']);\n\n$input = $request->only('username', 'password');\n\n$input = $request->except(['credit_card']);\n\n$input = $request->except('credit_card');\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check Existence",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check Existence",
+              "body": "```php\nif ($request->has('name')) {\n    //\n}\n\n// check if ALL values are present\nif ($request->has(['name', 'email'])) {\n    //\n}\n\n// if any values are present\nif ($request->hasAny(['name', 'email'])) {\n    //\n}\n\n// if a file is present on request\nif ($request->hasFile('image')) {\n    //\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Old Input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Old Input",
+              "body": "```php\n$username = $request->old('username');\n```",
+              "footer": "Or use the `old()` helper\n```php\n<input type=\"text\" name=\"username\" value=\"{{ old('username') }}\">\n```\nSee: [Helpers](#helpers-cols-3)\nSee: [Forms](#forms-cols-3)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Uploaded Files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Uploaded Files",
+              "body": "```php\n$file = $request->file('photo');\n\n$file = $request->photo;\n```",
+              "footer": "Get file path or extension\n```php\n$path = $request->photo->path();\n$extension = $request->photo->extension();\n```\nStore uploaded file with a randomly generated filename\n```php\n// path where the file should be stored relative to\n// the filesystem's configured root directory\n$path = $request->photo->store('images');\n// optional 2nd param to specify the filesystem disk\n$path = $request->photo->store('images', 's3');\n```\nStore uploaded file and specify the name\n```php\n$path = $request->photo->storeAs('images', 'filename.jpg');\n$path = $request->photo->storeAs('images', 'filename.jpg', 's3');\n```\nSee More: [Laravel File Storage](https://laravel.com/docs/8.x/filesystem)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Views",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Intro",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Intro",
+              "body": "```html\n<!-- View stored in resources/views/greeting.blade.php -->\n\n<html>\n  <body>\n    <h1>Hello, <?php echo $name; ?></h1>\n  </body>\n</html>\n```",
+              "footer": "Create a view by placing a file with the `.blade.php` extension in the `resources/views` directory.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pass Data to Views",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pass Data to Views",
+              "body": "",
+              "footer": "#### As an array\n\n```php\nreturn view('greetings', ['name' => 'Victoria']);\n```\n\n#### Using with()\n\n```php\nreturn view('greeting')\n            ->with('name', 'Victoria')\n            ->with('occupation', 'Astronaut');\n```\n\nAccess each value using the data's keys\n\n```html\n<html>\n  <body>\n    <h1>Hello, {{ $name }}</h1>\n    <!-- Or -->\n    <h1>Hello, <?php echo $name; ?></h1>\n  </body>\n</html>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "view helper",
+          "level": 3,
+          "cards": [
+            {
+              "title": "view helper",
+              "body": "```php\nRoute::get('/', function () {\n    return view('greeting', ['name' => 'James']);\n});\n```",
+              "footer": "See: [View Routes](#view-routes) and [Helpers](#helpers)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Subdirectories",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Subdirectories",
+              "body": "```php\n// resources/views/admin.profile.blade.php\nreturn view('admin.profile');\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Blade Templates",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Intro",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Intro",
+              "body": "- [Laravel Docs - Blade Templates](https://laravel.com/docs/8.x/blade)\n\nBlade is the templating engine included in Laravel that also allows you to use plain PHP.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Views",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Views",
+              "body": "```php\nRoute::get('/', function () {\n    return view('welcome', ['name' => 'Samantha']);\n});\n```",
+              "footer": "See: [Views](#view-helper)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```html\n{{-- This comment will not be present in the rendered HTML --}}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Directives",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Directives",
+              "body": "",
+              "footer": "#### if Statements\n\n```php\n@if (count($records) === 1)\n    I have one record!\n@elseif (count($records) > 1)\n    I have multiple records!\n@else\n    I don't have any records!\n@endif\n```\n\n#### isset & empty\n\n```php\n@isset($records)\n    // $records is defined and is not null...\n@endisset\n\n@empty($records)\n    // $records is \"empty\"...\n@endempty\n```\n\n#### Authentication\n\n```php\n@auth\n    // The user is authenticated...\n@endauth\n\n@guest\n    // The user is not authenticated...\n@endguest\n```\n\n#### Loops\n\n<!-- prettier-ignore -->\n```html\n@for ($i = 0; $i < 10; $i++)\n    The current value is {{ $i }}\n@endfor\n\n@foreach ($users as $user)\n    <p>This is user {{ $user->id }}</p>\n@endforeach\n\n@forelse ($users as $user)\n    <li>{{ $user->name }}</li>\n@empty\n    <p>No users</p>\n@endforelse\n\n@while (true)\n    <p>I'm looping forever.</p>\n@endwhile\n```\n\nLoop Iteration:\n\n```php\n@foreach ($users as $user)\n    @if ($loop->first)\n        This is the first iteration.\n    @endif\n\n    @if ($loop->last)\n        This is the last iteration.\n    @endif\n\n    <p>This is user {{ $user->id }}</p>\n@endforeach\n```\n\nSee more: [Laravel Loop Variable](https://laravel.com/docs/8.x/blade#the-loop-variable)",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Displaying Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Displaying Data",
+              "body": "```html\nHello, {{ $name }}.\n```",
+              "footer": "Display results of a PHP function:\n```html\nThe current UNIX timestamp is {{ time() }}.\n```\nDisplay data without escaping with `htmlspecialchars`\n```html\nHello, {!! $name !!}.\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Including Subviews",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Including Subviews",
+              "body": "```html\n<div>\n  <!-- resources/views/shared/errors/blade.php -->\n  @include('shared.errors')\n\n  <form>\n    <!-- Form Contents -->\n  </form>\n</div>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Raw PHP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Raw PHP",
+              "body": "```php\n@php\n    $counter = 1;\n@endphp\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Stacks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Stacks",
+              "body": "```html\n<!-- Add to the stack -->\n@push('scripts')\n<script src=\"/example.js\"></script>\n@endpush\n```",
+              "footer": "Render the stack\n```html\n<head>\n<!-- Head Contents -->\n@stack('scripts')\n</head>\n```\nPrepend to the beginning of a stack\n```php\n@push('scripts')\nThis will be second...\n@endpush\n// Later...\n@prepend('scripts')\nThis will be first...\n@endprepend\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Forms",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Intro",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Intro",
+              "body": "- [Laravel Docs - Forms](https://laravel.com/docs/8.x/blade#forms)",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CSRF Field",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CSRF Field",
+              "body": "```html\n<form method=\"POST\" action=\"/profile\">\n  @csrf\n\n  ...\n</form>\n```",
+              "footer": "See: [CSRF Protection](#csrf-protection)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Method Field",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Method Field",
+              "body": "```html\n<form action=\"/post/my-post\" method=\"POST\">\n  @method('PUT')\n\n  ...\n</form>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Validation Errors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Validation Errors",
+              "body": "```html\n<!-- /resources/views/post/create.blade.php -->\n\n<label for=\"title\">Post Title</label>\n\n<input id=\"title\" type=\"text\" class=\"@error('title') is-invalid @enderror\" />\n\n@error('title')\n  <div class=\"alert alert-danger\">{{ $message }}</div>\n@enderror\n```",
+              "footer": "See: [Validation](#validation-cols-3)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repopulating Forms",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repopulating Forms",
+              "body": "```php\n$title = $request->old('title');\n```",
+              "footer": "Or the `old()` helper\n```html\n<input type=\"text\" name=\"title\" value=\"{{ old('title') }}\" />\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Validation",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Intro",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Intro",
+              "body": "- [Laravel Docs - Validation](https://laravel.com/docs/8.x/validation)\n\nIf validation fails, a redirect response to the previous URL will be generated.  \nIf the incoming request is an XHR request, a JSON response with the validation error messages will be returned.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logic",
+              "body": "```php\n// in routes/web.php\nRoute::get('/post/create', [App\\Http\\Controllers\\PostController::class, 'create']);\nRoute::post('/post', [App\\Http\\Controllers\\PostController::class, 'store']);\n\n// in app/Http/Controllers/PostController...\npublic function store(Request $request)\n{\n    $validated = $request->validate([\n        // input name => validation rules\n        'title' => 'required|unique:posts|max:255',\n        'body' => 'required',\n    ]);\n\n    // The blog post is valid...\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Rules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Rules",
+              "body": "Can also be passed as an array\n\n```php\n$validatedData = $request->validate([\n    'title' => ['required', 'unique:posts', 'max:255'],\n    'body' => ['required'],\n]);\n```",
+              "footer": "#### after:date\n\nField must be a value after a given date.\n\n```php\n'start_date' => 'required|date|after:tomorrow'\n```\n\nInstead of a date string, you may specify another field to compare against the date\n\n```php\n'finish_date' => 'required|date|after:start_date'\n```\n\nSee [before:date](#beforedate)\n\n#### after_or_equal:date\n\nField must be a value after or equal to the given date.  \nSee [after:date](#afterdate)\n\n#### before:date\n\nField must be a value preceding the given date.  \nThe name of another field may be supplied as the value of `date`.  \nSee [after:date](#afterdate)\n\n#### alpha_num\n\nField must be entirely alpha-numeric characters\n\n#### boolean\n\nField must be able to be cast as a `boolean`.  \nAccepted input are `true`, `false`, `1`, `0`, `\"1\"`, and `\"0\"`\n\n#### confirmed\n\nField must have a matching field of `{field}_confirmation`.  \nFor example, if the field is password, a matching `password_confirmation` field must be present\n\n#### current_password\n\nField must match the authenticated user's password.\n\n#### date\n\nField must be a valid, non-relative date according to the `strtotime` PHP function.\n\n#### email\n\nField must be formatted as an email address.\n\n#### file\n\nField must be a successfully uploaded file.  \nSee: [Uploaded Files](#uploaded-files)\n\n#### max:value\n\nField must be less than or equal to a maximum value.  \nStrings, numerics, arrays, and files are evaluated like the [size](#sizevalue) rule.\n\n#### min:value\n\nField must have a minimum value.  \nStrings, numerics, arrays, and files are evaluated like the [size](#sizevalue) rule.\n\n#### mimetypes:text/plain,...\n\nFile must match one of the given MIME types:\n\n```php\n'video' => 'mimetypes:video/avi,video/mpeg,video/quicktime'\n```\n\nFile's contents will be read and the framework will attempt to guess the MIME type, regardless of the client's provided\nMIME type.\n\n#### mimes:foo,bar,...\n\nField must have a MIME type corresponding to one of the listed extensions.\n\n```php\n'photo' => 'mimes:jpg,bmp,png'\n```\n\nFile's contents will be read and the framework will attempt to guess the MIME type, regardless of the client's provided\nMIME type.\n\n[Full listing of MIME types & extensions](https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types)\n\n#### nullable\n\nField may be null.\n\n#### numeric\n\nField must be numeric.\n\n#### password\n\nField must match the authenticated user's password.\n\n#### prohibited\n\nField must be empty or not present.\n\n#### prohibited_if:anotherfield,value,...\n\nField must be empty or not present if the _anotherfield_ field is equal to any value.\n\n#### prohibited_unless:anotherfield,value,...\n\nField must be empty or not present unless the _anotherfield_ field is equal to any value.\n\n#### required\n\nField must be present in the input data and not empty.  \nA field is considered \"empty\" if one of the following conditions are true:\n\n- The value is `null`.\n- The value is an empty string.\n- The value is an empty array or empty `Countable` object.\n- The value is an uploaded file with no path.\n\n#### required_with:foo,bar,...\n\nField must be present and not empty, only if any of the other specified fields are present and not empty\n\n#### size:value\n\nField must have a size matching the given value.\n\n- For strings: number of characters\n- For numeric data: integer value (must also have the `numeric` or `integer` rule).\n- For arrays: count of the array\n- For files: file size in kilobytes\n\n```php\n// Validate that a string is exactly 12 characters long...\n'title' => 'size:12';\n// Validate that a provided integer equals 10...\n'seats' => 'integer|size:10';\n// Validate that an array has exactly 5 elements...\n'tags' => 'array|size:5';\n// Validate that an uploaded file is exactly 512 kilobytes...\n'image' => 'file|size:512';\n```\n\n#### unique:table,column\n\nField must not exist within the given database table\n\n#### url\n\nField must be a valid URL\n\n[See all available rules](https://laravel.com/docs/8.x/validation#available-validation-rules)",
+              "spanConfig": "row-span-5",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Validate Passwords",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Validate Passwords",
+              "body": "```php\n$validatedData = $request->validate([\n    'password' => ['required', 'confirmed', Password::min(8)],\n]);\n```",
+              "footer": "`Password` rule object allows you to easily customize the password complexity requirements\n```php\n// Require at least 8 characters...\nPassword::min(8)\n// Require at least one letter...\nPassword::min(8)->letters()\n// Require at least one uppercase and one lowercase letter...\nPassword::min(8)->mixedCase()\n// Require at least one number...\nPassword::min(8)->numbers()\n// Require at least one symbol...\nPassword::min(8)->symbols()\n```\nEnsure a password has not been compromised in a public password data breach leak\n```php\nPassword::min(8)->uncompromised()\n```\n> _Uses the [k-Anonymity](https://en.wikipedia.org/wiki/K-anonymity) model via the\n> [haveibeenpwned.com](https://haveibeenpwned.com) service without sacrificing the user's privacy or security_\nMethods can be chained\n```php\nPassword::min(8)\n->letters()\n->mixedCase()\n->numbers()\n->symbols()\n->uncompromised()\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Display Validation Errors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Display Validation Errors",
+              "body": "```php\n<!-- /resources/views/post/create.blade.php -->\n\n<h1>Create Post</h1>\n\n@if ($errors->any())\n    <div class=\"alert alert-danger\">\n        <ul>\n            @foreach ($errors->all() as $error)\n                <li>{{ $error }}</li>\n            @endforeach\n        </ul>\n    </div>\n@endif\n\n<!-- Create Post Form -->\n```",
+              "footer": "See: [Validation Errors](#validation-errors)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Optional Fields",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Optional Fields",
+              "body": "```php\n// publish_at field may be either null or a valid date representation\n$request->validate([\n    'title' => 'required|unique:posts|max:255',\n    'body' => 'required',\n    'publish_at' => 'nullable|date',\n]);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Validated Input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Validated Input",
+              "body": "Retrieve the request data that underwent validation\n\n\n\nOr with `safe()`, which returns an instance of `Illuminate\\Support\\ValidatedInput`\n\n```php\n$validated = $request->validated();\n```",
+              "footer": "#### Iterate\n\n```php\nforeach ($request->safe() as $key => $value) {\n    //\n}\n```\n\n#### Access as an array\n\n```php\n$validated = $request->safe();\n\n$email = $validated['email'];\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Session",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Intro",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Intro",
+              "body": "- [Laravel Docs - Session](https://laravel.com/docs/8.x/session)\n\nLaravel ships with a variety of session backends that are accessed through a unified API. Memcached, Redis, and database\nsupport is included.",
+              "footer": "#### Configuration\n\nSession configuration is in `config/session.php`.  \nBy default, Laravel is configured to use the file session driver",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check Isset / Exists",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check Isset / Exists",
+              "body": "```php\nif ($request->session()->has('users')) {\n    //\n}\n```",
+              "footer": "Returns `true` if present, even if it's `null`:\n```php\nif ($request->session()->exists('users')) {\n//\n}\n```\nReturns `true` if the item is `null` or is not present:\n```php\nif ($request->session()->missing('users')) {\n//\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Retrieving Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Retrieving Data",
+              "body": "",
+              "footer": "#### Via Request\n\n```php\n// ...\nclass UserController extends Controller\n{\n    public function show(Request $request, $id)\n    {\n        $value = $request->session()->get('key');\n\n        //\n    }\n}\n```\n\nPass a default value as the second argument to use if the key does not exist\n\n```php\n$value = $request->session()->get('key', 'default');\n\n// closure can be passed and executed as a default\n$value = $request->session()->get('key', function () {\n    return 'default';\n});\n```\n\n#### Via session helper\n\n```php\nRoute::get('/home', function () {\n    // Retrieve a piece of data from the session...\n    $value = session('key');\n\n    // Specifying a default value...\n    $value = session('key', 'default');\n\n    // Store a piece of data in the session...\n    session(['key' => 'value']);\n});\n```\n\nSee: [Session Helper]()\n\n#### All Session Data\n\n```php\n$data = $request->session()->all();\n```\n\n#### Retrieve and Delete\n\nRetrieve and delete an item from the session\n\n```php\n$value = $request->session()->pull('key', 'default');\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Store Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Store Data",
+              "body": "```php\n$request->session()->put('key', 'value');\n```",
+              "footer": "Via the global \"session\" helper\n```php\nsession(['key' => 'value']);\n```\nPush a new value onto a session value that is an array\n```php\n// array of team names\n$request->session()->push('user.teams', 'developers');\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Logging",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Configuration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Configuration",
+              "body": "Configuration options for logging behavior is in `config/logging.php`.  \nBy default, Laravel will use the stack channel when logging messages, which aggregates multiple log channels into a\nsingle channel.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Levels",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Levels",
+              "body": "All the log levels defined in the [RFC 5424 specification](https://tools.ietf.org/html/rfc5424) are available:\n\n- emergency\n- alert\n- critical\n- error\n- warning\n- notice\n- info\n- debug",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Log Facade",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Log Facade",
+              "body": "```php\nuse Illuminate\\Support\\Facades\\Log;\n\nLog::emergency($message);\nLog::alert($message);\nLog::critical($message);\nLog::error($message);\nLog::warning($message);\nLog::notice($message);\nLog::info($message);\nLog::debug($message);\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Contextual Info",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Contextual Info",
+              "body": "```php\nuse Illuminate\\Support\\Facades\\Log;\n\nLog::info('User failed to login.', ['id' => $user->id]);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Deployment",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Intro",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Intro",
+              "body": "- [Laravel Docs - Deployment](https://laravel.com/docs/8.x/deployment)\n\nEnsure your web server directs all requests to your application's `public/index.php` file",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Optimization",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Optimization",
+              "body": "",
+              "footer": "#### Composer's autoloader map\n\n```bash\ncomposer install --optimize-autoloader --no-dev\n```\n\n#### Configuration Loading\n\nBe sure that you are only calling the `env` function from within your configuration files.  \nOnce the configuration has been cached, the `.env` file will not be loaded and all calls to the `env` function for\n`.env` variables will return `null`\n\n```bash\nphp artisan config:cache\n```\n\n#### Route Loading\n\n```bash\nphp artisan route:cache\n```\n\n#### View Loading\n\n```bash\nphp artisan view:cache\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Debug Mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Debug Mode",
+              "body": "The debug option in your `config/app.php` determines how much information about an error is actually displayed to the\nuser.  \nBy default, this option is set to the value of the `APP_DEBUG` environment variable in your `.env` file. In your\nproduction environment, this value should always be `false`.  \nIf the `APP_DEBUG` variable is set to `true` in production, you risk exposing sensitive configuration values to end\nusers.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Laravel Docs](https://laravel.com/docs/8.x)\n- [Laracasts](https://laracasts.com/)\n- [Laravel API](https://laravel.com/api/8.x/)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

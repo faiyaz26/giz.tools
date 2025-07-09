@@ -1,0 +1,287 @@
+{
+  "id": "unity-shader-graph",
+  "metadata": {
+    "title": "Unity Shader Graph",
+    "date": "2024-08-10T12:15:05.000Z",
+    "background": "bg-[#7c7c7c]",
+    "label": null,
+    "tags": [
+      "unity",
+      "shader",
+      "computer graphics",
+      "visual effects"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This is a visual cheat-sheet for the Unity Shader Graph. This tool is used to create custom shaders material in Unity, a popular game engine.\n"
+  },
+  "sections": [
+    {
+      "title": "Shader Graph Nodes {.cols-2}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Shader Graph Nodes {.cols-2}",
+          "body": "<code>We are using <yel>**SAIT**</yel> to indicate the output type is \"same as the input type\".</code> {.col-span-2}",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "1. Attributes {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Positioning",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Positioning",
+              "body": "<yel>**Position**</yel> - provides vertex position\n\n- **Inputs**\n\n  - | -   | -         |\n    | --- | --------- |\n    | /   | No inputs |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                        |\n    | --------- | ------------------------ |\n    | `Vector3` | Provides vertex position |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Normal**</yel> - supplies surface normal direction\n\n- **Inputs**\n\n  - | -   | -         |\n    | --- | --------- |\n    | /   | No inputs |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                       |\n    | --------- | ----------------------- |\n    | `Vector3` | Provides surface normal |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**World Position**</yel> - returns the object's world space position\n\n- **Inputs**\n\n  - | -   | -         |\n    | --- | --------- |\n    | /   | No inputs |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                    |\n    | --------- | -------------------- |\n    | `Vector3` | World space position |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Object Position**</yel> - returns the object's local space position\n\n- **Inputs**\n\n  - | -   | -         |\n    | --- | --------- |\n    | /   | No inputs |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                    |\n    | --------- | -------------------- |\n    | `Vector3` | Local space position |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Screen Position**</yel> - returns the object's screen space position\n\n- **Inputs**\n\n  - | -   | -         |\n    | --- | --------- |\n    | /   | No inputs |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                     |\n    | --------- | --------------------- |\n    | `Vector4` | Screen space position |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Camera Position**</yel> - returns the camera's world space position\n\n- **Inputs**\n\n  - | -   | -         |\n    | --- | --------- |\n    | /   | No inputs |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                           |\n    | --------- | --------------------------- |\n    | `Vector3` | Camera world space position |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Timing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Timing",
+              "body": "<yel>**Time**</yel> - outputs various time-related values\n\n- **Inputs**\n\n  - | -   | -         |\n    | --- | --------- |\n    | /   | No inputs |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -       | -                                                                         |\n    | ------- | ------------------------------------------------------------------------- |\n    | `Float` | Time (T) - The total elapsed time since the start of the shader           |\n    | `Float` | Sin Time (T/8π) - A sine wave based on time                               |\n    | `Float` | Cos Time (T/8π) - A cosine wave based on time                             |\n    | `Float` | Delta Time - Time passed between the previous frame and the current frame |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "2. Math Operations {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic Math",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Math",
+              "body": "<yel>**Add**</yel> - adds two values\n\n- **Inputs**\n\n  - | -                     | -            |\n    | --------------------- | ------------ |\n    | `Float` <br> `Vector` | First value  |\n    | `Float` <br> `Vector` | Second value |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -    | -                     |\n    | ---- | --------------------- |\n    | SAIT | Sum of the two inputs |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Subtract**</yel> - subtracts one value from another\n\n- **Inputs**\n\n  - | -                     | -          |\n    | --------------------- | ---------- |\n    | `Float` <br> `Vector` | Minuend    |\n    | `Float` <br> `Vector` | Subtrahend |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -    | -                            |\n    | ---- | ---------------------------- |\n    | SAIT | Difference of the two inputs |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Multiply**</yel> - multiplies two values\n\n- **Inputs**\n\n  - | -                                   | -            |\n    | ----------------------------------- | ------------ |\n    | `Float` <br> `Vector` <br> `Matrix` | First value  |\n    | `Float` <br> `Vector` <br> `Matrix` | Second value |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -    | -                             |\n    | ---- | ----------------------------- |\n    | SAIT | The product of the two inputs |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Advanced Math",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Advanced Math",
+              "body": "<yel>**Power**</yel> - raises input to a power\n\n- **Inputs**\n\n  - | -       | -        |\n    | ------- | -------- |\n    | `Float` | Base     |\n    | `Float` | Exponent |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -       | -                                                  |\n    | ------- | -------------------------------------------------- |\n    | `Float` | Result of base raised to the power of the exponent |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Sqrt**</yel> - square root of input\n\n- **Inputs**\n\n  - | -       | -           |\n    | ------- | ----------- |\n    | `Float` | Input value |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -       | -                        |\n    | ------- | ------------------------ |\n    | `Float` | Square root of the input |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Abs**</yel> - outputs absolute value\n\n- **Inputs**\n\n  - | -                     | -           |\n    | --------------------- | ----------- |\n    | `Float` <br> `Vector` | Input value |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -    | -                           |\n    | ---- | --------------------------- |\n    | SAIT | Absolute value of the input |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Dot Product**</yel> - calculates dot product between two vectors\n\n- **Inputs**\n\n  - | -                        | -             |\n    | ------------------------ | ------------- |\n    | `Vector3` <br> `Vector4` | First vector  |\n    | `Vector3` <br> `Vector4` | Second vector |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -       | -                  |\n    | ------- | ------------------ |\n    | `Float` | Dot product result |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Cross Product**</yel> - calculates cross product between two vectors\n\n- **Inputs**\n\n  - | -         | -             |\n    | --------- | ------------- |\n    | `Vector3` | First vector  |\n    | `Vector3` | Second vector |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                    |\n    | --------- | -------------------- |\n    | `Vector3` | Cross product result |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Trigonometry",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Trigonometry",
+              "body": "<yel>**Sin**</yel> - outputs sine of input\n\n- **Inputs**\n\n  - | -       | -                |\n    | ------- | ---------------- |\n    | `Float` | Input in radians |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -       | -                 |\n    | ------- | ----------------- |\n    | `Float` | Sine of the input |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Cos**</yel> - outputs cosine of input\n\n- **Inputs**\n\n  - | -       | -                |\n    | ------- | ---------------- |\n    | `Float` | Input in radians |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -       | -                   |\n    | ------- | ------------------- |\n    | `Float` | Cosine of the input |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Interpolation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Interpolation",
+              "body": "<yel>**Lerp**</yel> - linear interpolation between two values\n\n- **Inputs**\n\n  - | -                     | -                        |\n    | --------------------- | ------------------------ |\n    | `Float` <br> `Vector` | Start value              |\n    | `Float` <br> `Vector` | End value                |\n    | `Float` <br> `Vector` | Interpolation factor (T) |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -    | -                   |\n    | ---- | ------------------- |\n    | SAIT | Interpolated result |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Step**</yel> - creates a step between two thresholds\n\n- **Inputs**\n\n  - | -                     | -         |\n    | --------------------- | --------- |\n    | `Float` <br> `Vector` | Threshold |\n    | `Float` <br> `Vector` | Input     |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -    | -           |\n    | ---- | ----------- |\n    | SAIT | Step result |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "3. Color Processing {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic Color Manipulation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Color Manipulation",
+              "body": "<yel>**Color**</yel> - provides a constant color value\n\n- **Inputs**\n\n  - | -   | -         |\n    | --- | --------- |\n    | /   | No inputs |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                |\n    | --------- | ---------------- |\n    | `Vector4` | RGBA color value |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Add Color**</yel> - adds two color values\n\n- **Inputs**\n\n  - | -         | -            |\n    | --------- | ------------ |\n    | `Vector4` | First color  |\n    | `Vector4` | Second color |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                     |\n    | --------- | --------------------- |\n    | `Vector4` | Sum of the two colors |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Multiply Color**</yel> - multiplies two color values\n\n- **Inputs**\n\n  - | -         | -            |\n    | --------- | ------------ |\n    | `Vector4` | First color  |\n    | `Vector4` | Second color |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                         |\n    | --------- | ------------------------- |\n    | `Vector4` | Product of the two colors |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Lerp Color**</yel> - interpolates between two colors\n\n- **Inputs**\n\n  - | -         | -                        |\n    | --------- | ------------------------ |\n    | `Vector4` | Start color              |\n    | `Vector4` | End color                |\n    | `Float`   | Interpolation factor (T) |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                  |\n    | --------- | ------------------ |\n    | `Vector4` | Interpolated color |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Color Adjustment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Color Adjustment",
+              "body": "<yel>**Saturation**</yel> - adjusts the saturation of input color\n\n- **Inputs**\n\n  - | -         | -                 |\n    | --------- | ----------------- |\n    | `Vector4` | Input color       |\n    | `Float`   | Saturation factor |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -              |\n    | --------- | -------------- |\n    | `Vector4` | Adjusted color |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Contrast**</yel> - adjusts contrast of input color\n\n- **Inputs**\n\n  - | -         | -               |\n    | --------- | --------------- |\n    | `Vector4` | Input color     |\n    | `Float`   | Contrast factor |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -              |\n    | --------- | -------------- |\n    | `Vector4` | Adjusted color |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Hue**</yel> - shifts the hue of the input color\n\n- **Inputs**\n\n  - | -         | -                |\n    | --------- | ---------------- |\n    | `Vector4` | Input color      |\n    | `Float`   | Hue shift amount |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                      |\n    | --------- | ---------------------- |\n    | `Vector4` | Color with shifted hue |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Invert Colors**</yel> - inverts the input color\n\n- **Inputs**\n\n  - | -         | -           |\n    | --------- | ----------- |\n    | `Vector4` | Input color |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -              |\n    | --------- | -------------- |\n    | `Vector4` | Inverted color |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Replace Color**</yel> - replaces a specific color in the input with a new color\n\n- **Inputs**\n\n  - | -         | -                 |\n    | --------- | ----------------- |\n    | `Vector4` | Input color       |\n    | `Vector4` | Target color      |\n    | `Vector4` | Replacement color |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                          |\n    | --------- | -------------------------- |\n    | `Vector4` | Color with replaced values |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**White Balance**</yel> - adjusts the white balance of input color\n\n- **Inputs**\n\n  - | -         | -                 |\n    | --------- | ----------------- |\n    | `Vector4` | Input color       |\n    | `Float`   | Temperature value |\n    | `Float`   | Tint value        |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -              |\n    | --------- | -------------- |\n    | `Vector4` | Adjusted color |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Channel Operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Channel Operations",
+              "body": "<yel>**Channel Mixer**</yel> - modifies color channels independently\n\n- **Inputs**\n\n  - | -         | -                        |\n    | --------- | ------------------------ |\n    | `Vector4` | Input color              |\n    | `Float`   | Red channel multiplier   |\n    | `Float`   | Green channel multiplier |\n    | `Float`   | Blue channel multiplier  |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -              |\n    | --------- | -------------- |\n    | `Vector4` | Modified color |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "4. Texture Processing {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Sampling",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sampling",
+              "body": "<yel>**Sample Texture**</yel> - retrieves color data from texture\n\n- **Inputs**\n\n  - | -                   | -              |\n    | ------------------- | -------------- |\n    | `Texture (sampler)` | Texture input  |\n    | `Vector2`           | UV coordinates |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                           |\n    | --------- | --------------------------- |\n    | `Vector4` | Color data from the texture |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**UV**</yel> - provides UV coordinates for texture mapping\n\n- **Inputs**\n\n  - | -   | -         |\n    | --- | --------- |\n    | /   | No inputs |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -              |\n    | --------- | -------------- |\n    | `Vector2` | UV coordinates |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Manipulation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Manipulation",
+              "body": "<yel>**Tiling Offset**</yel> - adjusts tiling and offset of texture\n\n- **Inputs**\n\n  - | -         | -             |\n    | --------- | ------------- |\n    | `Vector2` | Tiling values |\n    | `Vector2` | Offset values |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                       |\n    | --------- | ----------------------- |\n    | `Vector2` | Modified UV coordinates |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Distortion**</yel> - warps the surface of the object\n\n- **Inputs**\n\n  - | -         | -                   |\n    | --------- | ------------------- |\n    | `Float`   | Distortion strength |\n    | `Vector2` | UV coordinates      |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                     |\n    | --------- | --------------------- |\n    | `Vector2` | Warped UV coordinates |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Parallax**</yel> - simulates depth using parallax mapping\n\n- **Inputs**\n\n  - | -                 | -              |\n    | ----------------- | -------------- |\n    | Texture (sampler) | Input texture  |\n    | `Vector2`         | UV coordinates |\n    | `Float`           | Depth value    |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                       |\n    | --------- | ----------------------- |\n    | `Vector2` | Adjusted UV coordinates |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "5. Effects {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Visual Effects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Visual Effects",
+              "body": "<yel>**Fresnel Effect**</yel> - creates a glow effect on object edges\n\n- **Inputs**\n\n  - | -         | -                   |\n    | --------- | ------------------- |\n    | `Vector3` | View direction      |\n    | `Float`   | Power of the effect |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -       | -                    |\n    | ------- | -------------------- |\n    | `Float` | Fresnel effect value |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}\n\n<yel>**Dissolve**</yel> - generates a dissolve transition effect\n\n- **Inputs**\n\n  - | -                   | -                  |\n    | ------------------- | ------------------ |\n    | `Texture (sampler)` | Input texture      |\n    | `Float`             | Dissolve threshold |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                      |\n    | --------- | ---------------------- |\n    | `Vector4` | Dissolve effect output |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reflection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reflection",
+              "body": "<yel>**Reflection**</yel> - reflects based on surface normal direction\n\n- **Inputs**\n\n  - | -         | -                  |\n    | --------- | ------------------ |\n    | `Vector3` | Incident direction |\n    | `Vector3` | Surface normal     |\n\n  {.left-text}\n\n- **Outputs**\n\n  - | -         | -                   |\n    | --------- | ------------------- |\n    | `Vector3` | Reflected direction |\n\n  {.left-text}\n\n{.shortcuts .marker-round .cols-2}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Custom Function Node",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Steps to Create a Custom Function Node",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Steps to Create a Custom Function Node",
+              "body": "",
+              "footer": "- **Step 1: Add Custom Function Node in Shader Graph**\n\n  - Right-click in Shader Graph and choose **\"Create Node\"** > **\"Custom Function\"**.\n  - Choose between **\"String\"** (for inline HLSL code) or **\"File\"** (for an external HLSL file).\n\n- **Step 2: Configure the Node in Shader Graph**\n\n  - Set the name of the node.\n  - If using **\"File\"**, ensure the external HLSL file name exactly matches the function name defined in the HLSL file.\n    This ensures the function is correctly referenced in the Shader Graph pipeline.\n\n    <yel>**Example**</yel>: If the file is named `CustomFunction.hlsl`, the function inside it should also be named\n    `CustomFunction`.\n\n- **Step 3: Add Inputs/Outputs in Shader Graph**\n\n  - Define the required `Inputs` and `Outputs` for the custom function in Shader Graph. These will automatically\n    generate ports for you to connect other nodes.\n\n    <yel>**Example**</yel>:\n\n    - **Inputs**: `Float` (time), `Vector3` (position)\n    - **Outputs**: `Vector3` (new position)\n\n    In the custom HLSL code, the `in` and `out` parameters correspond to these inputs and outputs:\n\n    - `in` represents the data coming into the function (e.g., `time`, `position`).\n    - `out` defines the return value (e.g., modified `position`).\n\n- **Step 4: Write HLSL Code**\n\n  - If using the **\"String\"** option:\n\n    - Directly write the HLSL code inside the custom function node editor in Shader Graph.\n    - Ensure that the `in` and `out` parameters match the inputs and outputs you defined in Shader Graph.\n\n    - <yel>**Example of inline code**</yel> (using **\"String\"** mode):\n\n      ```cpp\n      float3 CustomPosition(in float time, in float3 position, out float3 newPosition) {\n        newPosition = position + float3(sin(time), cos(time), 0.0);\n        return newPosition;\n      }\n      ```\n\n  - If using the **\"File\"** option:\n\n    - Write the HLSL code in an external `.hlsl` file and reference the file in Shader Graph.\n\n    - <yel>**Example of an external HLSL file**</yel> (using **\"File\"** mode):\n\n      1. **1. Create an HLSL file** named `CustomPosition.hlsl`.\n\n      2. **2. Write the custom function** inside the file. The `in` and `out` parameters should match the Shader Graph\n         inputs and outputs.\n\n      ```cpp\n      float3 CustomPosition(in float time, in float3 position, out float3 newPosition) {\n        newPosition = position + float3(sin(time), cos(time), 0.0);\n        return newPosition;\n      }\n      ```\n\n      3. **3. Save the file** in your project directory, for example, `Assets/Shaders/CustomPosition.hlsl`.\n\n      4. **4. Link the file** in Shader Graph:\n\n      - In the Custom Function Node, switch to **\"File\"** mode and reference `CustomPosition.hlsl`.\n\n- **Step 5: Use the Node in Shader Graph**\n\n  - Connect the custom function node’s input ports to other nodes, such as `Time` and `Position`, to feed data into the\n    custom function.\n  - Connect the output port to apply the function result in the Shader Graph pipeline.\n\n  - <yel>**Example Pipeline**</yel>:\n\n    - **Inputs**: `Time` (as a float) and `Position` (as a vector)\n    - **Outputs**: `Modified Position` (vector with new position)\n\n    This would make the custom node update an object's position based on time in the shader.\n\n{.marker-timeline .shortcuts}",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see {.cols-1}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see {.cols-1}",
+          "body": "- [Unity Shader Graph documentation](https://docs.unity3d.com/Manual/shader-graph-overview.html) _(docs.unity3d.com)_\n- [Tianle Yuan's Unity Visual Effect notes](https://yuantianle.github.io/11_Game_Development/Unity/) _(yuantianle.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

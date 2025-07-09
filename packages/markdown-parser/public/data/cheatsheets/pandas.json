@@ -1,0 +1,182 @@
+{
+  "id": "pandas",
+  "metadata": {
+    "title": "Pandas",
+    "date": "2024-07-04T00:00:00.000Z",
+    "background": "bg-[#110750]",
+    "tags": [
+      "data analysis",
+      "data manipulation"
+    ],
+    "categories": [
+      "Python"
+    ],
+    "intro": "[Pandas](https://pandas.pydata.org/) is a powerful data analysis and manipulation library for Python. This cheat sheet is a quick reference for Pandas beginners.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "```python\nimport pandas as pd\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Creating DataFrames",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Creating DataFrames",
+              "body": "| -                                                         | -                           |\n| --------------------------------------------------------- | --------------------------- |\n| `pd.DataFrame(data={'col1': [1, 2], 'col2': [3, 4]})`     | From a dictionary           |\n| `pd.DataFrame(data=[{'a': 1, 'b': 2}, {'a': 3, 'b': 4}])` | From a list of dictionaries |\n| `pd.read_csv('file.csv')`                                 | From a CSV file             |\n| `pd.read_excel('file.xlsx')`                              | From an Excel file          |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inspecting Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inspecting Data",
+              "body": "| -               | -                          |\n| --------------- | -------------------------- |\n| `df.head()`     | First 5 rows               |\n| `df.tail()`     | Last 5 rows                |\n| `df.shape`      | Number of rows and columns |\n| `df.info()`     | Info on DataFrame          |\n| `df.describe()` | Summary statistics         |\n| `df.columns`    | Column names               |\n| `df.index`      | Index                      |\n| `df.dtypes`     | Data types of columns      |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selecting Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selecting Data",
+              "body": "| -                      | -                              |\n| ---------------------- | ------------------------------ |\n| `df['col1']`           | Select column                  |\n| `df[['col1', 'col2']]` | Select multiple columns        |\n| `df.loc[0]`            | Select row by index            |\n| `df.loc[:, 'col1']`    | Select all rows for 'col1'     |\n| `df.iloc[0]`           | Select row by position         |\n| `df.iloc[0, 1]`        | Select specific value          |\n| `df[df['col1'] > 2]`   | Select rows based on condition |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Data Cleaning",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Data Cleaning",
+              "body": "| -                                             | -                                    |\n| --------------------------------------------- | ------------------------------------ |\n| `df.dropna()`                                 | Drop rows with any missing values    |\n| `df.dropna(axis=1)`                           | Drop columns with any missing values |\n| `df.fillna(0)`                                | Replace missing values with 0        |\n| `df.drop_duplicates()`                        | Drop duplicate rows                  |\n| `df.rename(columns={'old_name': 'new_name'})` | Rename columns                       |\n| `df.astype('int')`                            | Change data type                     |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Adding/Removing Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Adding/Removing Data",
+              "body": "| -                                      | -                               |\n| -------------------------------------- | ------------------------------- |\n| `df['col3'] = df['col1'] + df['col2']` | Add new column                  |\n| `df.drop('col1', axis=1)`              | Drop column                     |\n| `df.append(new_row)`                   | Add new row                     |\n| `df.insert(2, 'new_col', new_data)`    | Insert new column at position 2 |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Combining Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Combining Data",
+              "body": "| -                                                     | -                       |\n| ----------------------------------------------------- | ----------------------- |\n| `pd.concat([df1, df2])`                               | Concatenate rows        |\n| `pd.concat([df1, df2], axis=1)`                       | Concatenate columns     |\n| `pd.merge(df1, df2, on='key')`                        | Merge DataFrames on key |\n| `pd.merge(df1, df2, left_on='key1', right_on='key2')` | Merge on different keys |\n| `df1.join(df2, lsuffix='_left', rsuffix='_right')`    | Join DataFrames         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Aggregating Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Aggregating Data",
+              "body": "| -                                      | -                         |\n| -------------------------------------- | ------------------------- |\n| `df['col1'].sum()`                     | Sum of values in column   |\n| `df['col1'].mean()`                    | Mean of values in column  |\n| `df['col1'].count()`                   | Count of values in column |\n| `df['col1'].min()`                     | Minimum value in column   |\n| `df['col1'].max()`                     | Maximum value in column   |\n| `df['col1'].std()`                     | Standard deviation        |\n| `df['col1'].var()`                     | Variance                  |\n| `df.groupby('col1').sum()`             | Group by and sum          |\n| `df.groupby('col1').mean()`            | Group by and mean         |\n| `df.groupby(['col1', 'col2']).count()` | Group by multiple columns |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Applying Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Applying Functions",
+              "body": "| -                                    | -                                    |\n| ------------------------------------ | ------------------------------------ |\n| `df.apply(np.sqrt)`                  | Apply function to all values         |\n| `df['col1'].apply(lambda x: x ** 2)` | Apply function to column             |\n| `df.applymap(str)`                   | Apply function to DataFrame elements |\n| `df['col1'].map({'a': 1, 'b': 2})`   | Map values                           |\n| `df['col1'].replace('a', 1)`         | Replace values                       |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Handling Dates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Handling Dates",
+              "body": "| -                                         | -                   |\n| ----------------------------------------- | ------------------- |\n| `df['date'] = pd.to_datetime(df['date'])` | Convert to datetime |\n| `df['year'] = df['date'].dt.year`         | Extract year        |\n| `df['month'] = df['date'].dt.month`       | Extract month       |\n| `df['day'] = df['date'].dt.day`           | Extract day         |\n| `df.set_index('date', inplace=True)`      | Set date as index   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Input/Output",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Input/Output",
+              "body": "| -                                              | -                                    |\n| ---------------------------------------------- | ------------------------------------ |\n| `df.to_csv('file.csv')`                        | Save DataFrame to CSV                |\n| `df = pd.read_csv('file.csv')`                 | Load DataFrame from CSV              |\n| `df.to_excel('file.xlsx')`                     | Save DataFrame to Excel              |\n| `df = pd.read_excel('file.xlsx')`              | Load DataFrame from Excel            |\n| `from sqlalchemy import create_engine`         | Import SQLAlchemy for SQL operations |\n| `engine = create_engine('sqlite:///:memory:')` | Create SQL engine                    |\n| `df.to_sql('table_name', engine)`              | Save to SQL table                    |\n| `df = pd.read_sql('table_name', engine)`       | Load from SQL table                  |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "id": "homebrew",
+  "metadata": {
+    "title": "Homebrew",
+    "date": "2023-04-12T00:00:00.000Z",
+    "background": "bg-[#fbb041]",
+    "tags": [
+      "packages manager",
+      "macos"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "This is a quick reference cheat sheet to getting started with homebrew.",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Install",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Install",
+              "body": "```bash\nxcode-select --install\n```",
+              "footer": "Install Homebrew :\n```bash {.wrap}\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n```\n[Official Website](https://brew.sh/) {.link-arrow}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Commands",
+              "body": "|                            |                                        |\n| -------------------------- | -------------------------------------- |\n| `brew install git`         | Install a package                      |\n| `brew uninstall git`       | Uninstall a package                    |\n| `brew upgrade git`         | Upgrade package                        |\n| `brew unlink git`          | Unlink                                 |\n| `brew link git`            | Link                                   |\n| `brew switch git  1.0.0`   | Switch package version                 |\n| `brew list --versions git` | List the installed versions of package |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Help",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Help",
+              "body": "```bash\nbrew --version\n```",
+              "footer": "Print Help Information\n```bash\nbrew help\n```\nPrint Help Info for a brew command\n```bash\nbrew help <sub-command>\n```\nCheck system for potential problems.\n```bash\nbrew doctor\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Updates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Updates",
+              "body": "```bash\nbrew update\n```",
+              "footer": "Show formulae with an updated version available\n```bash\nbrew outdated\n```\nUpgrade all outdated and unpinned brews\n```bash\nbrew upgrade\n```\nUpgrade only the specified brew\n```bash\nbrew upgrade <formula>\n```\nPrevent the specified formulae from being upgraded\n```bash\nbrew pin <formula>\n```\nAllow the specified formulae to be upgraded.\n```bash\nbrew unpin <formula>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repositories",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repositories",
+              "body": "```bash\nbrew tap\n```",
+              "footer": "Tap a formula repository from Github using https for tap https://github.com/user/homebrew-repo\n```bash\nbrew tap <user/repo>\n```\nTap a formula repository from the specified URL\n```bash\nbrew tap <user/repo> <URL>\n```\nRemove the given tap from the repository\n```bash\nbrew untap <user/repo>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cask",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cask",
+              "body": "```bash\nbrew tap homebrew/cask\n```",
+              "footer": "List all the installed casks .\n```bash\nbrew list --cask\n```\nSearch all known casks based on the substring text.\n```bash\nbrew search <text>\n```\nInstall the given cask.\n```bash\nbrew install --cask <cask>\n```\nReinstalls the given Cask\n```bash\nbrew reinstall --cask <cask>\n```\nUninstall the given cask.\n```bash\nbrew uninstall --cask <cask>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Search, Install, Remove",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Search, Install, Remove",
+              "body": "```bash\nbrew list\n```",
+              "footer": "Display all locally available formulae for brewing.\n```bash\nbrew search\n```\nPerform a substring search of formulae names for brewing.\n```bash\nbrew search <text>\n```\nDisplay information about the formula.\n```bash\nbrew info <formula>\n```\nInstall the formula.\n```bash\nbrew install <formula>\n```\nUninstall the formula.\n```bash\nbrew uninstall <formula>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cleanup",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cleanup",
+              "body": "```bash\nbrew cleanup\n```",
+              "footer": "Remove older versions of specified formula.\n```bash\nbrew cleanup <formula>\n```\nDisplay all formula that will be removed (dry run)\n```bash\nbrew cleanup -n\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

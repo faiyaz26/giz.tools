@@ -1,0 +1,372 @@
+{
+  "id": "typescript",
+  "metadata": {
+    "title": "TypeScript",
+    "date": "2024-05-28T22:12:25.000Z",
+    "background": "bg-[#4476c0]",
+    "tags": [
+      "ts",
+      "web"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "A TypeScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Installing the Compiler",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Installing the Compiler",
+              "body": "```shell\nnpm install typescript --save-dev\nnpm tsc\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Basic DataTypes",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "basic types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "basic types",
+              "body": "```ts\nlet isDone: boolean = false;\nlet age: number = 30;\nlet userName: string = 'John';\nlet list: number[] = [1, 2, 3];\nlet tuple: [string, number] = ['hello', 10];\nlet notSure: any = 4;\nnotSure = 'maybe a string instead';\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "enums",
+          "level": 3,
+          "cards": [
+            {
+              "title": "enums",
+              "body": "```ts\nenum Color {\n  Red,\n  Green,\n  Blue\n}\nlet c: Color = Color.Green;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "interface",
+          "level": 3,
+          "cards": [
+            {
+              "title": "interface",
+              "body": "```ts\ninterface Person {\n  firstName: string;\n  lastName: string;\n  age?: number; // Optional property\n}\n\nfunction greet(person: Person) {\n  return 'Hello, ' + person.firstName + ' ' + person.lastName;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "```ts\nfunction add(x: number, y: number): number {\n  return x + y;\n}\n\nlet myAdd = function (x: number, y: number): number {\n  return x + y;\n};\n\nlet myArrowAdd = (x: number, y: number): number => x + y;\n\nfunction buildName(firstName: string, lastName = 'Smith') {\n  return firstName + ' ' + lastName;\n}\n\nfunction buildFullName(firstName: string, ...restOfName: string[]) {\n  return firstName + ' ' + restOfName.join(' ');\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Classes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Classes",
+              "body": "```ts\nclass Greeter {\n  greeting: string;\n  constructor(message: string) {\n    this.greeting = message;\n  }\n  greet() {\n    return 'Hello, ' + this.greeting;\n  }\n}\n\nlet greeter = new Greeter('world');\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inheritance",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inheritance",
+              "body": "```ts\nclass Animal {\n  move(distance: number = 0) {\n    console.log(`Animal moved ${distance} meters.`);\n  }\n}\n\nclass Dog extends Animal {\n  bark() {\n    console.log('Woof! Woof!');\n  }\n}\n\nconst dog = new Dog();\ndog.bark();\ndog.move(10);\ndog.bark();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generics",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generics",
+              "body": "```ts\nfunction identity<T>(arg: T): T {\n  return arg;\n}\n\nlet output1 = identity<string>('myString');\nlet output2 = identity<number>(42);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type Assertions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type Assertions",
+              "body": "```ts\nlet someValue: any = 'this is a string';\nlet strLength: number = (<string>someValue).length;\n// or\nlet strLength2: number = (someValue as string).length;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Modules",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Export",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Export",
+              "body": "```ts\nexport interface StringValidator {\n  isAcceptable(s: string): boolean;\n}\n\nexport class ZipCodeValidator implements StringValidator {\n  isAcceptable(s: string) {\n    return s.length === 5;\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Import",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Import",
+              "body": "```ts\nimport { ZipCodeValidator } from './ZipCodeValidator';\n\nlet myValidator = new ZipCodeValidator();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Namespaces",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Namespaces",
+              "body": "```ts\nnamespace Validation {\n  export interface StringValidator {\n    isAcceptable(s: string): boolean;\n  }\n\n  export class LettersOnlyValidator implements StringValidator {\n    isAcceptable(s: string) {\n      return /^[A-Za-z]+$/.test(s);\n    }\n  }\n}\n\nlet validator = new Validation.LettersOnlyValidator();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Union and Intersection Types",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Union Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Union Types",
+              "body": "```ts\nfunction padLeft(value: string, padding: string | number) {\n  if (typeof padding === 'number') {\n    return Array(padding + 1).join(' ') + value;\n  }\n  if (typeof padding === 'string') {\n    return padding + value;\n  }\n  throw new Error(`Expected string or number, got '${padding}'.`);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Intersection Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Intersection Types",
+              "body": "```ts\ninterface ErrorHandling {\n  success: boolean;\n  error?: { message: string };\n}\n\ninterface ArtworksData {\n  artworks: { title: string }[];\n}\n\ntype ArtworksResponse = ArtworksData & ErrorHandling;\n\nconst response: ArtworksResponse = {\n  success: true,\n  artworks: [{ title: 'Mona Lisa' }]\n};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Utility Types",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Partial",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Partial",
+              "body": "```ts\ninterface User {\n  id: number;\n  name: string;\n  age: number;\n}\n\nlet partialUser: Partial<User> = {\n  name: 'Alice'\n};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Readonly",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Readonly",
+              "body": "```ts\nlet readonlyUser: Readonly<User> = {\n  id: 1,\n  name: 'Bob',\n  age: 25\n};\n\n// readonlyUser.age = 26; // Error: cannot reassign a readonly property\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pick",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pick",
+              "body": "```ts\ntype UserName = Pick<User, 'name'>;\n\nlet userName: UserName = {\n  name: 'Charlie'\n};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Omit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Omit",
+              "body": "```ts\ntype UserWithoutAge = Omit<User, 'age'>;\n\nlet userWithoutAge: UserWithoutAge = {\n  id: 2,\n  name: 'Dave'\n};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Decorators",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Class Decorator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class Decorator",
+              "body": "```ts\nfunction sealed(constructor: Function) {\n  Object.seal(constructor);\n  Object.seal(constructor.prototype);\n}\n\n@sealed\nclass Greeter {\n  greeting: string;\n  constructor(message: string) {\n    this.greeting = message;\n  }\n  greet() {\n    return 'Hello, ' + this.greeting;\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Method Decorator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Method Decorator",
+              "body": "```ts\nfunction enumerable(value: boolean) {\n  return function (\n    target: any,\n    propertyKey: string,\n    descriptor: PropertyDescriptor\n  ) {\n    descriptor.enumerable = value;\n  };\n}\n\nclass Greeter {\n  greeting: string;\n  constructor(message: string) {\n    this.greeting = message;\n  }\n\n  @enumerable(false)\n  greet() {\n    return 'Hello, ' + this.greeting;\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Async/Await",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Async/Await",
+              "body": "```ts\nasync function fetchData(url: string) {\n  let response = await fetch(url);\n  let data = await response.json();\n  return data;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also read",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also read",
+          "body": "- [TypeScript](https://www.typescriptlang.org/docs/)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

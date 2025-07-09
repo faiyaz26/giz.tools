@@ -1,0 +1,58 @@
+{
+  "id": "sdkman",
+  "metadata": {
+    "title": "SDKMAN!",
+    "date": "2023-12-18T20:25:30.000Z",
+    "background": "bg-[#cf5e3c]",
+    "label": null,
+    "tags": [
+      "command",
+      "software development kits",
+      "sdk"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "This cheatsheet provides the most commonly used SDKMAN! command line instructions\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Installing SDKMAN!",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Installing SDKMAN!",
+              "body": "```\nInstall SDKMAN!\n```",
+              "footer": "shell script\n$ source \"$HOME/.sdkman/bin/sdkman-init.sh\"\n```\nCheck the version\n```shell script\n$ sdk version\n```\nUpdate\n```shell script\n$ sdk update\n```\nHelp\n```shell script\n$ sdk help\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Installing and managing candidates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Installing and managing candidates",
+              "body": "```\nList versions of a candidate\n```",
+              "footer": "shell script\n$ sdk list <candidate>\n```\nInstall a candidate with the latest version\n```shell script\n$ sdk install <candidate>\n```\nInstall a candidate with specific version\n```shell script\n$ sdk install <candidate> <version>\n```\nTemporarily switch between versions\n```shell script\n$ sdk use <candidate> <version>\n```\nPermanently switch to version\n```shell script\n$ sdk default <candidate> <version>\n```\nDisplay specific candidate version in use\n```shell script\n$ sdk current <candidate>\n```\nDisplay all candidates versions in use\n```shell script\n$ sdk current\n```\nRemove a candidate\n```shell script\n$ sdk uninstall <candidate> <version>\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

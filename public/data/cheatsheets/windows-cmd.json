@@ -1,0 +1,167 @@
+{
+  "id": "windows-cmd",
+  "metadata": {},
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic",
+              "body": "| CMD        | Description                                                 |\r\n|:-----------|:------------------------------------------------------------|\r\n| `cls`      | Clears the content of the screen.                           |\r\n| `echo`     | Displays messages or enables/disables command echoing.      |\r\n| `help`     | Provides help information for Windows commands.             |\r\n| `exit`     | Exits the CMD.EXE program (command interpreter).            |\r\n| `date`     | Displays or sets the date.                                  |\r\n| `time`     | Displays or sets the system time.                           |\r\n| `ver`      | Displays the Windows version.                               |\r\n| `dir`      | Displays a list of files and subdir in a directory.         |\r\n| `cd`       | Displays the name of or changes the current directory.      |\r\n| `copy`     | Copies one or more files to another location.               |\r\n| `move`     | Moves files and renames files and directories.              |\r\n| `del`      | Deletes one or more files.                                  |\r\n| `mkdir`    | Creates a directory.                                        |\r\n| `rmdir`    | Removes a directory.                                        |\r\n| `type`     | Displays the contents of a text file.                       |\r\n| `ren`      | Renames a file or files.                                    |\r\n| `start`    | Starts a separate window to run a specified program or cmd. |\r\n| `shutdown` | Allows you to shut down or restart the computer.            |\r\n| `tasklist` | Displays all currently running tasks including services.    |\r\n| `taskkill` | Ends one or more tasks or processes.                        |",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Manage file :",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "File",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File",
+              "body": "| CMD        | Description                                                       |\r\n|:-----------|:------------------------------------------------------------------|\r\n| `attrib`   | Displays or changes file attributes.                              |\r\n| `fc`       | Compares two files and displays the differences between them.     |\r\n| `find`     | Searches for a text string in a file or files.                    |\r\n| `findstr`  | Searches for strings in files.                                    |\r\n| `xcopy`    | Copies files and directory trees.                                 |\r\n| `robocopy` | Robust File Copy for Windows, a more advanced version of `xcopy`. |\r\n| `compact`  | Displays or alters the compression of files on NTFS partitions.   |\r\n| `expand`   | Expands one or more compressed files.                             |\r\n| `replace`  | Replaces files.                                                   |\r\n| `tree`     | Graphically displays the folder structure of a drive or path.     |\r\n| `sort`     | Sorts input.                                                      |\r\n| `more`     | Displays output one screen at a time.                             |\r\n| `print`    | Prints a text file.                                               |\r\n| `cipher`   | Displays or alters the encryption of dir [files] on NTFS parts.   |\r\n| `diskcomp` | Compares the contents of two floppy disks.                        |\r\n| `diskcopy` | Copies the contents of one floppy disk to another.                |\r\n| `format`   | Formats a disk for use with Windows.                              |\r\n| `chkdsk`   | Checks a disk and displays a status report.                       |\r\n| `label`    | Creates, changes, or deletes the volume label of a disk.          |\r\n| `recover`  | Recovers readable information from a bad or defective disk.       |",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "System & Network",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "System",
+          "level": 3,
+          "cards": [
+            {
+              "title": "System",
+              "body": "| CMD           | Description                                                                               |\r\n|:--------------|:------------------------------------------------------------------------------------------|\r\n| `systeminfo`  | Displays detailed configuration information about a computer and its operating system.    |\r\n| `driverquery` | Displays current device driver status and properties.                                     |\r\n| `msinfo32`    | Starts the System Information tool.                                                       |\r\n| `reg`         | Registry Console Tool, used to manage the Windows Registry.                               |\r\n| `sc`          | Displays or configures services (background processes).                                   |\r\n| `taskmgr`     | Starts the Task Manager.                                                                  |\r\n| `wmic`        | Windows Management Instrumentation , used for managing Windows systems.                   |\r\n| `sfc`         | System File Checker, scans and verifies the versions of all protected system files.       |\r\n| `gpupdate`    | Refreshes local and Active Directory-based Group Policy settings.                         |\r\n| `gpresult`    | Displays Group Policy settings and Resultant Set of Policy (RSoP) for a user or computer. |\r\n| `powercfg`    | Configures power settings.                                                                |\r\n| `dxdiag`      | Starts the DirectX Diagnostic Tool.                                                       |\r\n| `msinfo32`    | Starts the Microsoft System Information tool.                                             |\r\n| `perfmon`     | Starts the Performance Monitor.                                                           |\r\n| `rsop`        | Resultant Set of Policy, used to view Group Policy settings.                              |\r\n| `sigverif`    | Starts the File Signature Verification tool.                                              |\r\n| `sysedit`     | Starts the System Configuration Editor.                                                   |\r\n| `syskey`      | Secures the Windows XP account database.                                                  |\r\n| `chgport`     | Displays or changes Com port mappings.                                                    |\r\n| `chgusr`      | Changes the installed user mode.                                                          |",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Network",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Network",
+              "body": "| CMD              | Description                                                                                                                                               |\r\n|:-----------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------|\r\n| `ipconfig`       | Displays all current TCP/IP network configuration values.                                                                                                 |\r\n| `ping`           | Tests network connectivity to a specified host.                                                                                                           |\r\n| `tracert`        | Traces the route taken by packets to a specified destination.                                                                                             |\r\n| `netstat`        | Displays active TCP connections, ports on which the computer is listening.                                                                                |\r\n| `nslookup`       | Displays information that you can use to diagnose Domain Name System (DNS) infrastructure.                                                                |\r\n| `net`            | Manages network resources, services, and user accounts.                                                                                                   |\r\n| `netsh`          | Network Shell, used to configure and monitor network devices.                                                                                             |\r\n| `arp`            | Displays and modifies the IP-to-Physical address translation tables used by the Address Resolution Protocol (ARP).                                        |\r\n| `route`          | Displays and modifies the entries in the local IP routing table.                                                                                          |\r\n| `ftp`            | Starts the File Transfer Protocol (FTP) client.                                                                                                           |\r\n| `telnet`         | Starts the Telnet client.                                                                                                                                 |\r\n| `nbtstat`        | Displays protocol statistics and current TCP/IP connections using NBT (NetBIOS over TCP/IP).                                                              |\r\n| `netuse`         | Displays information about network connections.                                                                                                           |\r\n| `net session`    | Manages server computer connections.                                                                                                                      |\r\n| `net start`      | Starts a network service.                                                                                                                                 |\r\n| `net stop`       | Stops a network service.                                                                                                                                  |\r\n| `net view`       | Displays a list of resources being shared on a specified computer.                                                                                        |\r\n| `net user`       | Manages user accounts.                                                                                                                                    |\r\n| `net localgroup` | Manages local groups.                                                                                                                                     |\r\n| `net share`      | Manages shared resources.                                                                                                                                 |\r\n| `net statistics` | Displays network statistics.                                                                                                                              |",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneouss",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Process Management",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Process Management",
+              "body": "| CMD            | Description                                                  |\r\n|:---------------|:-------------------------------------------------------------| \r\n| `wmic process` | Manages processes using Windows Management Instrumentation . |\r\n| `timeout`      | Waits for specified number of seconds / until a key pressed. |",
+              "footer": "",
+              "spanConfig": "col-span-1",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Disk Management",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Disk Management",
+              "body": "| CMD Command  | Description                         |\r\n|:-------------|:------------------------------------|\r\n| `diskpart`   | Manages disk partitions.            |\r\n| `defrag`     | Defragments a disk.                 |\r\n| `convert`    | Converts a FAT volume to NTFS.      |\r\n| `diskperf`   | Manages disk performance counters.  |",
+              "footer": "",
+              "spanConfig": "col-span-1",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "System Configuration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "System Configuration",
+              "body": "| CMD Command  | Description                                             |\r\n|:-------------|:--------------------------------------------------------|\r\n| `bcdedit`    | Manages the Boot Configuration Data (BCD) store.        |\r\n| `bootcfg`    | Configures, queries, or changes Boot.ini file settings. |\r\n| `msconfig`   | Starts the System Configuration utility.                |\r\n| `regedit`    | Starts the Registry Editor.                             |",
+              "footer": "",
+              "spanConfig": "col-span-1",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Tips & Tricks",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Miscellaneouss Tips & Tricks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Miscellaneouss Tips & Tricks",
+              "body": "| Tip or Trick                                                    | Description                                                                                                                                      |\r\n|:----------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|\r\n| `wmic path SoftwareLicensingService get OA3xOriginalProductKey` | Get your Windows Product key                                                                                                                     |\r\n| `cmd /k`                                                        | Opens the command prompt and executes a specified command, keeping the window open.                                                              |\r\n| `cmd /c`                                                        | Opens the command prompt, executes a specified command, and then closes the window.                                                              |\r\n| `&&`                                                            | Allows you to run multiple commands in sequence. For example, `command1 && command2`.                                                            |\r\n| `\\|\\|`                                                          | Allows you to run a second command only if the first command fails. For example, `command1 `\\|\\|`  command2`.                                    |\r\n| `>`                                                             | Redirects the output of a command to a file, overwriting the file if it already exists. For example, `command > output.txt`.                     |\r\n| `>>`                                                            | Redirects the output of a command to a file, appending the output if the file already exists. For example, `command >> output.txt`.              |\r\n| `\\|`                                                            | Pipes the output of one command to another command. For example, `command1 `\\|` command2`.                                                       | \r\n| `clip`                                                          | Redirects the output of a command to the Windows clipboard. For example, `dir `\\|`  clip`.                                                       |\r\n| `for %i in (*.txt) do echo %i`                                  | Loops through all `.txt` files in the current directory and echoes their names.                                                                  |\r\n| `pushd` and `popd`                                              | `pushd` saves the current directory and then changes to a new directory. `popd` returns to the saved directory.                                  |\r\n| `set`                                                           | Displays, sets, or removes environment variables. For example, `set PATH=C:\\newpath`.                                                            |\r\n| `start \"\" \"C:\\Path\\To\\Program\\program.exe\"`                     | Starts a program without waiting for it to finish.                                                                                               |\r\n| `taskkill /IM \"process.exe\" /F`                                 | Forcefully kills a process by its image name.                                                                                                    |\r\n| `wmic product get name`                                         | Lists all installed software on the system.                                                                                                      |\r\n| `wmic logicaldisk get size,freespace,caption`                   | Displays the size, free space, and caption of all logical disks.                                                                                 |\r\n| `systeminfo` `\\|` `findstr /B /C:\"OS Name\" /C:\"OS Version\"`     | Displays the OS name and version.                                                                                                                |\r\n| `schtasks /query /fo LIST /v`                                   | Lists all scheduled tasks in detail.                                                                                                             |\r\n| `netsh wlan show profiles`                                      | Displays a list of all saved Wi-Fi profiles.                                                                                                     |\r\n| `netsh wlan show profiles name=\"ProfileName\" key=clear`         | Displays the password for a specific Wi-Fi profile.                                                                                              |\r\n| `assoc`                                                         | Displays or modifies file extension associations.                                                                                                |\r\n| `ftype`                                                         | Displays or modifies file types used in file extension associations.                                                                             |\r\n| `driverquery /v`                                                | Lists all installed drivers with detailed information.                                                                                           |\r\n| `powercfg /energy`                                              | Generates a detailed energy report for the system.                                                                                               |\r\n| `powercfg /batteryreport`                                       | Generates a battery life report for laptops.                                                                                                     |\r\n| `robocopy C:\\Source D:\\Destination /MIR`                        | Mirrors a directory from one location to another, including subdirectories and files.                                                            |\r\n| `mklink /D \"C:\\Path\\To\\Link\" \"C:\\Path\\To\\Target\"`               | Creates a symbolic link to a directory.                                                                                                          |\r\n| `mklink /H \"C:\\Path\\To\\Link\" \"C:\\Path\\To\\Target\"`               | Creates a hard link to a file.                                                                                                                   |\r\n| `mklink /J \"C:\\Path\\To\\Link\" \"C:\\Path\\To\\Target\"`               | Creates a directory junction.                                                                                                                    |\r\n| `diskpart /s script.txt`                                        | Runs a DiskPart script to automate disk partitioning tasks.                                                                                      |\r\n| `shutdown /a`                                                   | Aborts a system shutdown.                                                                                                                        |\r\n| `chkdsk /f /r`                                                  | Checks a disk and fixes errors, also recovers readable information from bad sectors.                                                             |\r\n| `sfc /scannow`                                                  | Scans and repairs protected system files.                                                                                                        |\r\n| `DISM /Online /Cleanup-Image /RestoreHealth`                    | Repairs the Windows image using DISM.                                                                                                            |\r\n| `bcdboot C:\\Windows`                                            | Repairs the boot environment by copying boot files from the Windows directory.                                                                   |\r\n| `bootrec /fixmbr`                                               | Repairs the Master Boot Record (MBR).                                                                                                            |\r\n| `bootrec /fixboot`                                              | Writes a new boot sector to the system partition.                                                                                                |\r\n| `bootrec /scanos`                                               | Scans for installations compatible with Windows and displays the entries that are currently not in the Boot Configuration Data store.            |\r\n| `bootrec /rebuildbcd`                                           | Scans for installations compatible with Windows and allows you to select the installations you want to add to the Boot Configuration Data store. |",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Other",
+          "body": "- Also see : [Windows Official Documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

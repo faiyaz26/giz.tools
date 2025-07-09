@@ -1,0 +1,273 @@
+{
+  "id": "json",
+  "metadata": {
+    "title": "JSON",
+    "date": "2021-09-14T18:26:55.000Z",
+    "background": "bg-[#646464]",
+    "tags": [
+      "config",
+      "format"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This is a quick reference cheat sheet for understanding and writing JSON format configuration files.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "[JSON](https://json.org/) is a lightweight text-based open standard designed for human-readable data interchange.\n\n- JSON stands for JavaScript Object Notation\n- JSON is easy to read and write.\n- JSON is language agnostic data-interchange format\n- JSON filename extension is `.json`\n- JSON Internet Media type is `application/json`\n\n{.marker-round}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "```json\n{\n  \"name\": \"Jason\",\n  \"age\": 39,\n  \"height\": 1.92,\n  \"gender\": \"M\",\n  \"salary\": 70000,\n  \"married\": true,\n  \"children\": [\n    { \"name\": \"Tom\", \"age\": 9, \"gender\": \"M\" },\n    { \"name\": \"Ava\", \"age\": 7, \"gender\": \"F\" }\n  ]\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Types",
+              "body": "| Type      | Description                             |\n| --------- | :-------------------------------------- |\n| `Number`  | Double precision floating-point         |\n| `String`  | Series of characters                    |\n| `Boolean` | `true` or `false`                       |\n| `Array`   | Ordered sequence of values              |\n| `Value`   | String, Number, Boolean, null etc       |\n| `Object`  | Unordered collection of key/value pairs |\n| `null`    | Null or Empty                           |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String",
+              "body": "|      |                            |\n| ---- | :------------------------- |\n| `\\\"` | Double quote               |\n| `\\\\` | Backslash                  |\n| `\\/` | Forward slash              |\n| `\\b` | Backspace                  |\n| `\\f` | Form feed                  |\n| `\\n` | Newline                    |\n| `\\r` | Carriage return            |\n| `\\t` | Tab                        |\n| `\\u` | Trailed by four hex digits |",
+              "footer": "#### Examples\n\n```json {.wrap}\n{\n  \"url\": \"https://cheatsheets.zip\",\n  \"msg\": \"Hi,\\n\\\"CheatSheets.zip\\\"\",\n  \"intro\": \"Share quick reference and cheat sheet for developers.\"\n}\n```\n\n#### Invalid String\n\n```json\n{ \"foo\": \"bar\" }\n```\n\nHave to be delimited by double quotes",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Number",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Number",
+              "body": "| Type       | Description                            |\n| ---------- | :------------------------------------- |\n| `Integer`  | Digits 1-9, 0 and positive or negative |\n| `Fraction` | Fractions like 0.3, 3.9                |\n| `Exponent` | Exponent like e, e+, e-, E, E+, E      |",
+              "footer": "#### Examples\n\n```json\n{\n  \"positive\": 12,\n  \"negative\": -1,\n  \"fraction\": 10.25,\n  \"exponent\": 1.0e2,\n  \"zero\": 0\n}\n```\n\n#### Invalid Number\n\n```json\n{ \"foo\": 0xff }\n```\n\nIn JSON you can use only Decimal Literals",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Objects",
+              "body": "```json\n{\n  \"color\": \"Purple\",\n  \"id\": \"210\",\n  \"composition\": {\n    \"R\": 70,\n    \"G\": 39,\n    \"B\": 89\n  },\n  \"empty_object\": {}\n}\n```",
+              "footer": "Multiple key/value pairs separated by a comma",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays",
+              "body": "```json\n[1, 2, 3, 4, 5]\n```",
+              "footer": "Begins with `[` and ends with `]`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array of objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array of objects",
+              "body": "```json\n{\n  \"children\": [\n    { \"name\": \"Jimmy Smith\", \"age\": 15 },\n    { \"name\": \"Sammy Sosa\", \"age\": 12 }\n  ]\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Object of arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Object of arrays",
+              "body": "```json\n{\n  \"attributes\": [\"a1\", \"a2\"],\n  \"methods\": [\"getter\", \"setter\"],\n  \"empty_array\": []\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "2D Array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "2D Array",
+              "body": "```json\n{\n  \"my_sequences\": [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9, 0],\n    [10, 11]\n  ]\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Object of objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Object of objects",
+              "body": "```json\n{\n  \"Mark McGwire\": {\n    \"hr\": 65,\n    \"avg\": 0.278\n  },\n  \"Sammy Sosa\": {\n    \"hr\": 63,\n    \"avg\": 0.288\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Nested",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Nested",
+              "body": "```json\n{\n  \"Jack\": {\n    \"id\": 1,\n    \"name\": \"Franc\",\n    \"salary\": 25000,\n    \"hobby\": [\"a\", \"b\"],\n    \"location\": {\n      \"country\": \"A\",\n      \"city\": \"A-A\"\n    }\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Access JSON in JavaScript",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Access Object",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Access Object",
+              "body": "```javascript\nlet myObject = {\n  name: 'Jason',\n  last: 'Doe',\n  age: 39,\n  gender: 'M',\n  salary: 70000,\n  married: true\n};\n```",
+              "footer": "|                    |           |\n| ------------------ | :-------- |\n| `myObject.name`    | \"Jason\"   |\n| `myObject[\"name\"]` | \"Jason\"   |\n| `myObject.age`     | 39        |\n| `myObject.other`   | undefined |\n| `myObject[0]`      | undefined |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Access Nested",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Access Nested",
+              "body": "```javascript\nlet myObject = {\n  ref: {\n    name: 0,\n    last: 1,\n    age: 2,\n    gender: 3,\n    salary: 4,\n    married: 5\n  },\n  jdoe: ['Jason', 'Doe', 39, 'M', 70000, true],\n  jsmith: ['Tom', 'Smith', 42, 'F', 80000, true]\n};\n```",
+              "footer": "|                          |                          |\n| ------------------------ | :----------------------- |\n| `myObject.ref.age`       | 2                        |\n| `myObject[\"ref\"][\"age\"]` | 2                        |\n| `myObject.jdoe`          | [\"Jason\", \"Doe\", 39 ...] |\n| `myObject.jsmith[3]`     | \"F\"                      |\n| `myObject[1]`            | undefined                |",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Access Array of Objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Access Array of Objects",
+              "body": "```javascript\nlet myArray = [\n  {\n    name: 'Jason',\n    last: 'Doe',\n    age: 39,\n    gender: 'M',\n    salary: 70000,\n    married: true\n  },\n  {\n    name: 'Tom',\n    last: 'Smith',\n    age: 42,\n    gender: 'F',\n    salary: 80000,\n    married: true\n  },\n  {\n    name: 'Amy',\n    last: 'Burnquist',\n    age: 29,\n    gender: 'F',\n    salary: 60000,\n    married: false\n  }\n];\n```",
+              "footer": "|                     |                            |\n| ------------------- | :------------------------- |\n| `myArray[0]`        | `{`\"name\": \"Jason\", ...`}` |\n| `myArray[1].name`   | \"Tom\"                      |\n| `myArray[1][2]`     | 42                         |\n| `myArray[3]`        | undefined                  |\n| `myArray[3].gender` | TypeError: Cannot read...  |",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Access Array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Access Array",
+              "body": "```javascript\nlet myArray = ['Jason', 'Doe', 39, 'M', 70000, true];\n```",
+              "footer": "|              |           |\n| ------------ | :-------- |\n| `myArray[1]` | \"Doe\"     |\n| `myArray[5]` | true      |\n| `myArray[6]` | undefined |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see {.cols-1}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see {.cols-1}",
+          "body": "- [JSON](https://www.json.org/json-en.html) _(json.org)_\n- [JSON Editor Online](http://jsoneditoronline.org/) _(jsoneditoronline.org)_\n- [Convert JSON Array to Markdown Table, CSV and more](https://tableconvert.com/json-to-markdown) _(tableconvert.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

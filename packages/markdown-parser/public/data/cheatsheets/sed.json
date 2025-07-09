@@ -1,0 +1,296 @@
+{
+  "id": "sed",
+  "metadata": {
+    "title": "Sed",
+    "date": "2020-12-27T18:34:08.000Z",
+    "background": "bg-red-400",
+    "tags": [
+      "editor",
+      "replace",
+      "text",
+      "utility"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "[Sed](https://www.gnu.org/software/sed/manual/sed.html) is a stream editor, this sed cheat sheet contains sed commands and some common sed tricks.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Sed Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sed Usage",
+              "body": "```\nWith pipeline\n```",
+              "footer": "shell script\n$ cat report.txt | sed 's/Nick/John/g'\n```\n```shell script\n$ echo '123abc' | sed 's/[0-9]+//g'\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Option Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Option Examples",
+              "body": "| Option | Example                                    | Description                             |\n| ------ | ------------------------------------------ | --------------------------------------- |\n| `-i`   | sed -ibak 's/On/Off/' php.ini              | Backup and modify input file directly   |\n| `-E`   | sed -E 's/[0-9]+//g' input-file            | Use extended regular expressions        |\n| `-n`   | sed -n '3 p' config.conf                   | Suppress default pattern space printing |\n| `-f`   | sed -f script.sed config.conf              | Execute sed script file                 |\n| `-e`   | sed -e 'command1' -e 'command2' input-file | Execute multiple sed commands           |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple commands",
+              "body": "",
+              "footer": "```shell script {.wrap}\n$ echo \"hello world\" | sed -e 's/h/H/g' -e 's/w/W/g'\nHello World\n```\n\nUse `-e` to execute multiple sed commands",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sed script",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sed script",
+              "body": "",
+              "footer": "```shell script\n$ echo 's/h/H/g' >> hello.sed\n$ echo 's/w/W/g' >> hello.sed\n$ echo \"hello world\" | sed -f hello.sed\nHello World\n```\n\nUse `-f` to execute sed script file",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "",
+              "footer": "```shell script\n$ sed 's/old/new/g' file.txt\n$ sed 's/old/new/g' file.txt > new.txt\n\n$ sed 's/old/new/g' -i file.txt\n$ sed 's/old/new/g' -i.backup file.txt\n```\n\nSee: [Sed examples](#sed-examples)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Sed commands",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Commands",
+              "body": "| Command | Example                                | Description                 |\n| ------- | -------------------------------------- | --------------------------- |\n| `p`     | sed -n '1,4 p' input.txt               | Print lines 1-4             |\n| `p`     | sed -n -e '1,4 p' -e '6,7 p' input.txt | Print lines 1-4 and 6-7     |\n| `d`     | sed '1,4 d' input.txt                  | Print lines except 1-4      |\n| `w`     | sed -n '1,4 w output.txt' input.txt    | Write pattern space to file |\n| `a`     | sed '2 a new-line' input.txt           | Append line after           |\n| `i`     | sed '2 i new-line' input.txt           | Insert line before          |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Space commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Space commands",
+              "body": "| Command | Description                                                  |\n| ------- | ------------------------------------------------------------ |\n| `n`     | Print pattern space, empty pattern space, and read next line |\n| `x`     | Swap pattern space with hold space                           |\n| `h`     | Copy pattern space to hold space                             |\n| `H`     | Append pattern space to hold space                           |\n| `g`     | Copy hold space to pattern space                             |\n| `G`     | Append hold space to pattern space                           |\n\nSee also: [File spacing](#file-spacing)",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Flags",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Flags",
+              "body": "",
+              "footer": "```shell script\n$ sed 's/old/new/[flags]' [input-file]\n```\n\n| Flag     | Description                                |\n| -------- | ------------------------------------------ |\n| `g`      | Global substitution                        |\n| `1,2...` | Substitute the nth occurrence              |\n| `p`      | Print only the substituted line            |\n| `w`      | Write only the substituted line to a file  |\n| `I`      | Ignore case while searching                |\n| `e`      | Substitute and execute in the command line |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loops commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loops commands",
+              "body": "| Command   | Description                                                        |\n| --------- | ------------------------------------------------------------------ |\n| `b label` | Branch to a label (for looping)                                    |\n| `t label` | Branch to a label only on successful substitution<br>(for looping) |\n| `:label`  | Label for the b and t commands (for looping)                       |\n| `N`       | Append next line to pattern space                                  |\n| `P`       | Print 1st line in multi-line                                       |\n| `D`       | Delete 1st line in multi-line                                      |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Misc Flags",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc Flags",
+              "body": "| Flag                      | Description                                                                  |\n| ------------------------- | ---------------------------------------------------------------------------- |\n| <code>/ \\| ^ @ ! #</code> | Substitution delimiter can be any character                                  |\n| `&`                       | Gets the matched pattern                                                     |\n| `( ) \\1 \\2 \\3`            | Group using `(` and `)`.<br>Use `\\1`, `\\2` in replacement to refer the group |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Sed examples",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Replacing text",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Replacing text",
+              "body": "```\nReplace only the nth occurrence of a string\n```",
+              "footer": "shell script\n$ sed 's/old/new/2' file.txt\n```\nReplace a string only on the 5th line\n```shell script\n$ sed '5 s/old/new/' file.txt\n```\nReplace \"world\" with \"universe\" but only if the line begins with \"hello\"\n```shell script\n$ sed '/hello/s/world/universe/' file.txt\n```\nRemove \"\\\" from the end of each line\n```shell script\n$ sed 's/\\\\$//' file.txt\n```\nRemove all whitespace from beginning of each line\n```shell script\n$ sed 's/^\\s*//' file.txt\n```\nRemove comments. Even those that are at the end of a line\n```shell script\n$ sed 's/#.*$//' file.txt\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Search for text",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Search for text",
+              "body": "```\nCase insensitive search\n```",
+              "footer": "shell script\n$ sed -n '/hello/Ip' file.txt\n```\nSearch for a string but only output lines that do not match\n```shell script\n$ sed -n '/hello/!p' file.txt\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Appending lines",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Appending lines",
+              "body": "```\nAppend line at the end of the file\n```",
+              "footer": "shell script\n$ sed '$a THE END!' file.txt\n```\nAppend line after every 3rd line starting from line 3\n```shell script\n$ sed '3~3a Some text' file.txt\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Numbering",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Numbering",
+              "body": "```\nNumber line of a file (number on left, right-aligned)\n```",
+              "footer": "shell script\n$ sed = file.txt | sed 'N; s/^/   /; s/ *\\(.\\{6,\\}\\)\\n/\\1  /'\n```\nNumber line of file, but only print numbers if line is not blank\n```shell script\n$ sed '/./=' file.txt | sed '/./N; s/\\n/ /'\n```\nCount lines (emulates \"wc -l\")\n```shell script\n$ sed -n '$='\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Prepending lines",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Prepending lines",
+              "body": "```\nInsert \"Example: \" before each line that contains \"hello\"\n```",
+              "footer": "shell script\n$ sed '/hello/i Example: ' file.txt\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Deleting lines",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Deleting lines",
+              "body": "```\nDelete every 2nd line starting with line 3\n```",
+              "footer": "shell script\n$ sed '3~2d' file.txt\n```\nDelete the last line in file\n```shell script\n$ sed '$d' file.txt\n```\nDelete lines starting with \"Hello\"\n```shell script\n$ sed '/^Hello/d' file.txt\n```\nDelete all empty lines\n```shell script\n$ sed '/^$/d' file.txt\n```\nDelete lines starting with \"#\"\n```shell script\n$ sed '/^#/d' file.txt\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File spacing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File spacing",
+              "body": "```\nDelete all blank lines and double space\n```",
+              "footer": "shell script\n$ sed '/^$/d;G'\n```\nTriple space a file\n```shell script\n$ sed 'G;G'\n```\nUndo double-spacing\n```shell script\n$ sed 'n;d'\n```\nInsert a blank line above line which matches \"regex\"\n```shell script\n$ sed '/regex/{x;p;x;}'\n```\nInsert a blank line below line which matches \"regex\"\n```shell script\n$ sed '/regex/G'\n```\nInsert a blank line around line which matches \"regex\"\n```shell script\n$ sed '/regex/{x;p;x;G;}'\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see {.cols-1}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see {.cols-1}",
+          "body": "- [sed cheatsheet](https://gist.github.com/ssstonebraker/6140154) _(gist.github.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "id": "alan-ai",
+  "metadata": {
+    "title": "Alan AI",
+    "date": "2023-03-03T06:00:00.000Z",
+    "background": "bg-[#4aa181]",
+    "tags": [
+      "AI",
+      "AlanAI",
+      "Prompts",
+      "Tips"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "This cheat sheet covers all major script concepts, client API methods, handlers and other tools to create a multimodal conversational experience with Alan AI"
+  },
+  "sections": [
+    {
+      "title": "Dialog script",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Intents & patterns",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Intents & patterns",
+              "body": "```\nDefine a voice/text command to play a response or perform an action\n```",
+              "footer": "{.wrap}\nintent('pattern'[, 'patternN'], p => { action })\n```\nDefine alternatives\n```{.wrap}\nintent('phrase1|phrase2')\n```\nDefine optional words and phrases\n```{.wrap}\nintent('pattern (optional phrase|)')\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Response functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Response functions",
+              "body": "```\nPlay a response\n```",
+              "footer": "{.wrap}\np.play('pattern')\n```\nDefine voice settings for the assistant reply: `accent (en, fr, de, it, ru, es)`, `gender (male/female)`, `voice type`,\n`speaking pitch`, `speaking rate`\n```{.wrap}\np.play([voice(code, gender, type, pitch, rate), ]'pattern')\n```\nDefine play options: `force:true` (execute if the button is inactive), `activate:true` (activate the button before),\n`deactivate:true` (deactivate the button after)\n```{.wrap}\np.play('pattern'[, opts(options)])\n```\nSend a command to the app\n```{.wrap}\np.play({command:data})\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "User-defined slots",
+          "level": 3,
+          "cards": [
+            {
+              "title": "User-defined slots",
+              "body": "```\nProvide labels to classify or identify the slot values\n```",
+              "footer": "{.wrap}\n$(SLOTNAME value1~label1|value2~label2) => p.SLOTNAME.label\n```\nEnable fuzzy matching to capture similar variants\n```{.wrap}\n$(SLOTNAME~ value1|value2) => p.SLOTNAME.value\n```\nMake a slot optional\n```{.wrap}\n$(SLOTNAME value1|value2|)\n```\nCapture several slot values\n```{.wrap}\nintent('$(SLOTNAME value1|value2) and $(SLOTNAME value1|value2 )') => p.SLOTNAME_ (array), p.SLOTNAME_[0].value, p.SLOTNAME_[1].value\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Predefined slots",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Predefined slots",
+              "body": "```\nCapture time values\n```",
+              "footer": "{.wrap}\n$(TIME) => p.TIME.value, p.TIME.moment\n```\nCapture cardinal numbers\n```{.wrap}\n$(NUMBER) => p.NUMBER.value, p.NUMBER.number\n```\nCapture ordinal numbers\n```{.wrap}\n$(ORDINAL) => p.ORDINAL.value, p.ORDINAL.number\n```\nCapture locations\n```{.wrap}\n$(LOC) => p.LOC.value\n```\nCapture names\n```{.wrap}\n$(NAME) => p.NAME.value\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dynamic slots",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dynamic slots",
+              "body": "```\nDefine a dynamic slot at the dialog session level\n```",
+              "footer": "{.wrap}\np.userData.name = {en: \"value1|value2|value3\"}\n$(SLOTNAME u:name) => p.SLOTNAME.value\n```\nGet data for a dynamic slot with the visual state\n```{.wrap}\nlet name = [\"value1|value2|value3\"]\np.visual.data = {en: name};\n$(SLOTNAME v:name) => p.SLOTNAME.value\n```\nDefine a dynamic slot in a short form\n```{.wrap}\nproject.name = {en: \"value1|value2|value3\"}\n$(p:name) => p.SLOTNAME.value\n```\nDefine labels for dynamic slots: see [User-defined slots](#user-defined-slots).\nEnable fuzzy matching for dynamic slots: see [User-defined slots](#user-defined-slots).\nMake a dynamic slot optional: see [User-defined slots](#user-defined-slots).\nCapture several slot values: see [User-defined slots](#user-defined-slots).",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "RegEx slots",
+          "level": 3,
+          "cards": [
+            {
+              "title": "RegEx slots",
+              "body": "```\nCapture any user’s input\n```",
+              "footer": "{.wrap}\n$(SLOTNAME* .+) => p.SLOTNAME.value\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Contexts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Contexts",
+              "body": "```\nActivate a context\n```",
+              "footer": "{.wrap}\nintent('pattern', p => {..., p.then(contextName)}\n```\nPass data to the context\n```{.wrap}\np.then(contextName, state: {data:yourData}) => p.state.data\n```\nResolve a context\n```{.wrap}\np.resolve([data:yourData])\n```\nReset a context\n```{.wrap}\np.resetContext()\n```\nDefine intents to be matched at any time without switching the current context\n```{.wrap}\nintent(noctx, 'pattern', ...) or noContext(() => {intent(...)})\n```\nPlay a prompt for an expected input\n```{.wrap}\nfallback('pattern1'[, 'patternN'])\n```\nTitle a context\n```{.wrap}\ntitle('contextName')\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Predefined objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Predefined objects",
+              "body": "```\nStore state data to be available globally at the project scope\n```",
+              "footer": "{.wrap}\nproject.info = {data:yourData} => project.info.data\n```\nStore the intent match score\n```{.wrap}\np.score\n```\nStore data to be passed between contexts\n```{.wrap}\np.state.data\n```\nStore visual context data to be passed from the client app with `setVisualState()`\n```{.wrap}\np.visual.data\n```\nStore user-specific state data to be accessible during the dialog session\n```{.wrap}\np.userData.data\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Predefined callbacks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Predefined callbacks",
+              "body": "```\nDefine actions to be performed when the dialog session starts\n```",
+              "footer": "{.wrap}\nonCreateUser((p) => { action })\n```\nDefine actions to be performed when the dialog session ends\n```{.wrap}\nonCleanupUser((p) => { action })\n```\nDefine actions to be performed when the visual state is set\n```{.wrap}\nonVisualState((p, s) => { action })\n```\nDefine actions to be performed when a user event is triggered in the client app: `buttonReady`, `buttonClicked`,\n`micPermissionPrompt`, `micAllowed`, `firstActivate`, `showPopup`, `popupCloseClicked`, `recognized`\n```{.wrap}\nonUserEvent((p, e) => { action })\n```\nDefine actions to be performed when a context is activated\n```{.wrap}\nonEnter((p) => { action })\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Q&A service",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Q&A service",
+              "body": "```\nDefine text corpus to be used by the assistant in the dialog\n```",
+              "footer": "{.wrap}\ncorpus('text')\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Built-in JS libraries",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Built-in JS libraries",
+              "body": "```\nWork with time\n```",
+              "footer": "{.wrap}\nmoment-timezone, luxon\n```\nWork with arrays, numbers, objects, strings and so on\n```{.wrap}\nlodash\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Other",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Other",
+              "body": "```\nWrite info messages to Alan Studio logs\n```",
+              "footer": "{.wrap}\nconsole.log(data)\n```\nWrite error messages to Alan Studio logs\n```{.wrap}\nconsole.error(data)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Client SDK",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Client API methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Client API methods",
+              "body": "```\nSend data or perform actions without a voice/text command\n```",
+              "footer": "{.wrap}\nprojectAPI.method = function(p, param, callback) {\np.userData.data = param.data;\ncallback();\n};\ncallProjectApi(method:string, data:object, callback:function)\n```\nPlay a text message in the client app\n```{.wrap}\nplayText(text:string)\n```\nSend a text message to Alan as the user’s input\n```{.wrap}\nsendText(text:string)\n```\nExecute a command in the client app\n```{.wrap}\nplayCommand(command:object)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Client API methods (continued)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Client API methods (continued)",
+              "body": "```\nDeactivate the Alan button programmatically\n```",
+              "footer": "{.wrap}\ndeactivate()\n```\nCheck the Alan button state\n```{.wrap}\nisActive()\n```\nRemove the Alan button from the parent element, page (supported on Web, Ionic)\n```{.wrap}\nremove()\n```\nCheck the state of the wake word (supported on iOS, Android)\n```{.wrap}\ngetWakewordEnabled()\n```\nSet the state of the wake word (supported on iOS, Android)\n```{.wrap}\nsetWakewordEnabled(enabled:boolean)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Handlers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Handlers",
+              "body": "```\nHandle Alan button state changes\n```",
+              "footer": "{.wrap}\nonButtonState: function (e) { action }\n```\nHandle connection status to the virtual assistant project in the Alan Cloud\n```{.wrap}\nonConnectionStatus: function (e) { action }\n```\nHandle events received from Alan\n```{.wrap}\nonEvent: function (e) { action }\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Alan AI website](https://alan.app)\n- [About the Alan Platform](https://alan.app/platform)\n- [Alan AI documentation](https://alan.app/docs)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

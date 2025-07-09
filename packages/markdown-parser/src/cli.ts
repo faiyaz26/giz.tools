@@ -6,6 +6,7 @@ import * as path from "path";
 import { fileURLToPath } from "url";
 import { glob } from "glob";
 import chalk from "chalk";
+import simpleGit from "simple-git";
 import { MarkdownParser } from "./parser.js";
 import { ParserOptions, CheatsheetIndexData } from "./types.js";
 
@@ -373,6 +374,142 @@ program
         );
       });
       console.log(`   Created: ${individualData.createdAt}`);
+      console.log(`   Version: ${individualData.version}`);
+    } catch (error) {
+      console.error(chalk.red(`❌ Unexpected error: ${error}`));
+      process.exit(1);
+    }
+  });
+
+program
+  .command("github")
+  .description(
+    "Download and parse cheatsheets from Fechin/reference GitHub repository"
+  )
+  .option(
+    "-o, --output-dir <path>",
+    "Output directory for individual files (defaults to ./public/data/cheatsheets)"
+  )
+  .option(
+    "--index-output <path>",
+    "Output path for index file (defaults to ./public/data/cheatsheets-index.json)"
+  )
+  .option(
+    "--temp-dir <path>",
+    "Temporary directory for cloning repo (defaults to ./temp-repo)"
+  )
+  .option("--no-metadata", "Skip metadata extraction")
+  .option("--no-code-blocks", "Do not preserve code block formatting")
+  .option("--no-span-config", "Do not extract span configuration")
+  .option("--pretty", "Pretty print JSON output")
+  .option("--keep-temp", "Keep temporary repository directory after processing")
+  .action(async (options) => {
+    try {
+      const parser = new MarkdownParser();
+      const parserOptions: ParserOptions = {
+        includeMetadata: options.metadata !== false,
+        preserveCodeBlocks: options.codeBlocks !== false,
+        extractSpanConfig: options.spanConfig !== false,
+      };
+
+      const repoUrl = "https://github.com/Fechin/reference.git";
+      const tempDir = options.tempDir || "./temp-repo";
+      const outputDir = options.outputDir || "./public/data/cheatsheets";
+      const indexOutput =
+        options.indexOutput || "./public/data/cheatsheets-index.json";
+      const postsDir = path.join(tempDir, "source", "_posts");
+
+      console.log(chalk.blue(`📥 Cloning repository: ${repoUrl}`));
+
+      // Clean up any existing temp directory
+      if (fs.existsSync(tempDir)) {
+        console.log(
+          chalk.yellow(`🧹 Cleaning up existing temp directory: ${tempDir}`)
+        );
+        fs.rmSync(tempDir, { recursive: true, force: true });
+      }
+
+      // Clone the repository
+      const git = simpleGit();
+      await git.clone(repoUrl, tempDir, ["--depth", "1"]);
+      console.log(chalk.green(`✅ Repository cloned to: ${tempDir}`));
+
+      // Check if posts directory exists
+      if (!fs.existsSync(postsDir)) {
+        console.error(chalk.red(`❌ Posts directory not found: ${postsDir}`));
+        process.exit(1);
+      }
+
+      // Find all markdown files in the posts directory
+      console.log(chalk.blue(`📖 Finding markdown files in: ${postsDir}`));
+      const pattern = path.join(postsDir, "*.md");
+      const files = await glob(pattern);
+
+      if (files.length === 0) {
+        console.log(chalk.yellow(`⚠️ No markdown files found in: ${postsDir}`));
+        return;
+      }
+
+      console.log(chalk.blue(`📖 Found ${files.length} markdown files`));
+
+      // List found files
+      files.forEach((file, index) => {
+        const fileName = path.basename(file);
+        console.log(chalk.gray(`   ${index + 1}. ${fileName}`));
+      });
+
+      // Ensure output directory exists
+      if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+      }
+
+      console.log(chalk.blue(`🔄 Processing files...`));
+
+      // Parse all files and create individual JSON files + index
+      const individualData: CheatsheetIndexData = await parser.parseIndividual(
+        files,
+        parserOptions,
+        outputDir,
+        indexOutput
+      );
+
+      console.log(
+        chalk.green(
+          `✅ Successfully created individual cheatsheet files in: ${outputDir}`
+        )
+      );
+      console.log(
+        chalk.green(`✅ Successfully created index file: ${indexOutput}`)
+      );
+
+      // Clean up temporary directory unless --keep-temp is specified
+      if (!options.keepTemp) {
+        console.log(
+          chalk.yellow(`🧹 Cleaning up temporary directory: ${tempDir}`)
+        );
+        fs.rmSync(tempDir, { recursive: true, force: true });
+      } else {
+        console.log(chalk.blue(`📁 Temporary directory preserved: ${tempDir}`));
+      }
+
+      // Print summary
+      console.log(chalk.cyan("\n📊 Summary:"));
+      console.log(`   Repository: ${repoUrl}`);
+      console.log(`   Total Files Found: ${files.length}`);
+      console.log(
+        `   Total Cheatsheets Processed: ${individualData.cheatsheets.length}`
+      );
+      console.log(`   Output Directory: ${outputDir}`);
+      console.log(`   Index File: ${indexOutput}`);
+
+      console.log(chalk.cyan("\n📋 Processed Cheatsheets:"));
+      individualData.cheatsheets.forEach((cheatsheet, index) => {
+        console.log(
+          `   ${index + 1}. ${cheatsheet.name} (${cheatsheet.id}.json)`
+        );
+      });
+
+      console.log(`\n   Created: ${individualData.createdAt}`);
       console.log(`   Version: ${individualData.version}`);
     } catch (error) {
       console.error(chalk.red(`❌ Unexpected error: ${error}`));

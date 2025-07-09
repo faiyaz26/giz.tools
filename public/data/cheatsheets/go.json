@@ -1,0 +1,1134 @@
+{
+  "id": "go",
+  "metadata": {
+    "title": "Go",
+    "date": "2020-12-17T21:51:44.000Z",
+    "background": "bg-[#4ba4cc]",
+    "tags": [
+      "Go"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This cheat sheet provided basic syntax and methods to help you using [Go](https://go.dev/).\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "hello.go",
+          "level": 3,
+          "cards": [
+            {
+              "title": "hello.go",
+              "body": "```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, world!\")\n}\n```",
+              "footer": "Run directly\n```shell script\n$ go run hello.go\nHello, world!\n```\nOr try it out in the [Go repl](https://repl.it/languages/go)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```go\nvar s1 string\ns1 = \"Learn Go!\"\n\n// declare multiple variables at once\nvar b, c int = 1, 2\nvar d = true\n```",
+              "footer": "Short declaration\n```go\ns1 := \"Learn Go!\"        // string\nb, c := 1, 2             // int\nd := true                // bool\n```\nSee: [Basic types](#go-basic-types)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "```go\npackage main\n\nimport \"fmt\"\n\n// The entry point of the programs\nfunc main() {\n    fmt.Println(\"Hello world!\")\n    say(\"Hello Go!\")\n}\n\nfunc say(message string) {\n    fmt.Println(\"You said: \", message)\n}\n```",
+              "footer": "See: [Functions](#go-functions)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```go\n// Single line comment\n\n/* Multi-\n line comment */\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "If statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If statement",
+              "body": "```go\nif true {\n    fmt.Println(\"Yes!\")\n}\n```",
+              "footer": "See: [Flow control](#go-flow-control)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Basic types",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings",
+              "body": "```go\ns1 := \"Hello\" + \"World\"\n\ns2 := `A \"raw\" string literal\ncan include line breaks.`\n\n// Outputs: 10\nfmt.Println(len(s1))\n\n// Outputs: Hello\nfmt.Println(string(s1[0:5]))\n```",
+              "footer": "Strings are of type `string`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Numbers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Numbers",
+              "body": "```go\nnum := 3         // int\nnum := 3.        // float64\nnum := 3 + 4i    // complex128\nnum := byte('a') // byte (alias: uint8)\n\nvar u uint = 7        // uint (unsigned)\nvar p float32 = 22.7  // 32-bit float\n```",
+              "footer": "#### Operators\n\n```go\nx := 5\nx++\nfmt.Println(\"x + 4 =\", x + 4)\nfmt.Println(\"x * 4 =\", x * 4)\n```\n\nSee: [More Operators](#go-operators-and-punctuation)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Booleans",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Booleans",
+              "body": "```go\nisTrue   := true\nisFalse  := false\n```",
+              "footer": "#### Operators\n\n```go\nfmt.Println(true && true)   // true\nfmt.Println(true && false)  // false\nfmt.Println(true || true)   // true\nfmt.Println(true || false)  // true\nfmt.Println(!true)          // false\n```\n\nSee: [More Operators](#go-operators-and-punctuation)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays",
+              "body": "```go\n┌────┬────┬────┬────┬─────┬─────┐\n| 2  | 3  | 5  | 7  | 11  | 13  |\n└────┴────┴────┴────┴─────┴─────┘\n  0    1    2    3     4     5\n```",
+              "footer": "#### 2d array\n\n```go\nvar twoDimension [2][3]int\nfor i := 0; i < 2; i++ {\n    for j := 0; j < 3; j++ {\n        twoDimension[i][j] = i + j\n    }\n}\n// => 2d:  [[0 1 2] [1 2 3]]\nfmt.Println(\"2d: \", twoDimension)\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pointers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pointers",
+              "body": "```go\nfunc main () {\n  b := *getPointer()\n  fmt.Println(\"Value is\", b)\n}\n```",
+              "footer": "```go\nfunc getPointer () (myPointer *int) {\na := 234\nreturn &a\n}\n```\n```go\na := new(int)\n*a = 234\n```\nSee: [Pointers](https://tour.go.dev/moretypes/1)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Slices",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Slices",
+              "body": "```go\ns := make([]string, 3)\ns[0] = \"a\"\ns[1] = \"b\"\ns = append(s, \"d\")\ns = append(s, \"e\", \"f\")\n\nfmt.Println(s)\nfmt.Println(s[1])\nfmt.Println(len(s))\nfmt.Println(s[1:3])\n\nslice := []int{2, 3, 4}\n```",
+              "footer": "See also: [Slices example](https://gobyexample.com/slices)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Constants",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Constants",
+              "body": "```go\nconst s string = \"constant\"\nconst Phi = 1.618\nconst n = 500000000\nconst d = 3e20 / n\nfmt.Println(d)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type conversions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type conversions",
+              "body": "```go\ni := 90\nf := float64(i)\nu := uint(i)\n\n// Will be equal to the character Z\ns := string(i)\n```",
+              "footer": "#### How to get int string?\n\n```go\ni := 90\n\n// need import \"strconv\"\ns := strconv.Itoa(i)\nfmt.Println(s) // Outputs: 90\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Strings",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Strings function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings function",
+              "body": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\ts \"strings\"\n)\n\nfunc main() {\n    /* Need to import strings as s */\n\tfmt.Println(s.Contains(\"test\", \"e\"))\n\n    /* Build in */\n    fmt.Println(len(\"hello\"))  // => 5\n    // Outputs: 101\n\tfmt.Println(\"hello\"[1])\n    // Outputs: e\n\tfmt.Println(string(\"hello\"[1]))\n\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "fmt.Printf",
+          "level": 3,
+          "cards": [
+            {
+              "title": "fmt.Printf",
+              "body": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n)\n\ntype point struct {\n\tx, y int\n}\n\nfunc main() {\n\tp := point{1, 2}\n\tfmt.Printf(\"%v\\n\", p)                        // => {1 2}\n\tfmt.Printf(\"%+v\\n\", p)                       // => {x:1 y:2}\n\tfmt.Printf(\"%#v\\n\", p)                       // => main.point{x:1, y:2}\n\tfmt.Printf(\"%T\\n\", p)                        // => main.point\n\tfmt.Printf(\"%t\\n\", true)                     // => TRUE\n\tfmt.Printf(\"%d\\n\", 123)                      // => 123\n\tfmt.Printf(\"%b\\n\", 14)                       // => 1110\n\tfmt.Printf(\"%c\\n\", 33)                       // => !\n\tfmt.Printf(\"%x\\n\", 456)                      // => 1c8\n\tfmt.Printf(\"%f\\n\", 78.9)                     // => 78.9\n\tfmt.Printf(\"%e\\n\", 123400000.0)              // => 1.23E+08\n\tfmt.Printf(\"%E\\n\", 123400000.0)              // => 1.23E+08\n\tfmt.Printf(\"%s\\n\", \"\\\"string\\\"\")             // => \"string\"\n\tfmt.Printf(\"%q\\n\", \"\\\"string\\\"\")             // => \"\\\"string\\\"\"\n\tfmt.Printf(\"%x\\n\", \"hex this\")               // => 6.86578E+15\n\tfmt.Printf(\"%p\\n\", &p)                       // => 0xc00002c040\n\tfmt.Printf(\"|%6d|%6d|\\n\", 12, 345)           // => |    12|   345|\n\tfmt.Printf(\"|%6.2f|%6.2f|\\n\", 1.2, 3.45)     // => |  1.20|  3.45|\n\tfmt.Printf(\"|%-6.2f|%-6.2f|\\n\", 1.2, 3.45)   // => |1.20  |3.45  |\n\tfmt.Printf(\"|%6s|%6s|\\n\", \"foo\", \"b\")        // => |   foo|     b|\n\tfmt.Printf(\"|%-6s|%-6s|\\n\", \"foo\", \"b\")      // => |foo   |b     |\n\n\ts := fmt.Sprintf(\"a %s\", \"string\")\n\tfmt.Println(s)\n\n\tfmt.Fprintf(os.Stderr, \"an %s\\n\", \"error\")\n}\n```",
+              "footer": "See also: [fmt](https://go.dev/pkg/fmt/)",
+              "spanConfig": "row-span-2 .col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function examples",
+              "body": "| Example                       | Result      |\n| ----------------------------- | ----------- |\n| Contains(\"test\", \"es\")        | true        |\n| Count(\"test\", \"t\")            | 2           |\n| HasPrefix(\"test\", \"te\")       | true        |\n| HasSuffix(\"test\", \"st\")       | true        |\n| Index(\"test\", \"e\")            | 1           |\n| Join([]string{\"a\", \"b\"}, \"-\") | a-b         |\n| Repeat(\"a\", 5)                | aaaaa       |\n| Replace(\"foo\", \"o\", \"0\", -1)  | f00         |\n| Replace(\"foo\", \"o\", \"0\", 1)   | f0o         |\n| Split(\"a-b-c-d-e\", \"-\")       | [a b c d e] |\n| ToLower(\"TEST\")               | test        |\n| ToUpper(\"test\")               | TEST        |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Flow control",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Conditional",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conditional",
+              "body": "```go\na := 10\n\nif a > 20 {\n    fmt.Println(\">\")\n} else if a < 20 {\n    fmt.Println(\"<\")\n} else {\n    fmt.Println(\"=\")\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Statements in if",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Statements in if",
+              "body": "```go\nx := \"hello go!\"\n\nif count := len(x); count > 0 {\n    fmt.Println(\"Yes\")\n}\n```",
+              "footer": "```go\nif _, err := doThing(); err != nil {\nfmt.Println(\"Uh oh\")\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Switch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Switch",
+              "body": "",
+              "footer": "```go {.wrap}\nx := 42.0\nswitch x {\ncase 0:\ncase 1, 2:\n    fmt.Println(\"Multiple matches\")\ncase 42:   // Don't \"fall through\".\n    fmt.Println(\"reached\")\ncase 43:\n    fmt.Println(\"Unreached\")\ndefault:\n    fmt.Println(\"Optional\")\n}\n```\n\nSee: [Switch](https://github.com/golang/go/wiki/Switch)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "For loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For loop",
+              "body": "```go\nfor i := 0; i <= 10; i++ {\n  fmt.Println(\"i: \", i)\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "For-Range loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For-Range loop",
+              "body": "",
+              "footer": "```go {.wrap}\nnums := []int{2, 3, 4}\nsum := 0\nfor _, num := range nums {\n    sum += num\n}\nfmt.Println(\"sum:\", sum)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While loop",
+              "body": "```go\ni := 1\nfor i <= 3 {\n    fmt.Println(i)\n    i++\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Continue keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Continue keyword",
+              "body": "```go\nfor i := 0; i <= 5; i++ {\n    if i % 2 == 0 {\n        continue\n    }\n    fmt.Println(i)\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break keyword",
+              "body": "```go\nfor {\n    fmt.Println(\"loop\")\n    break\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Structs & Maps",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Defining",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Defining",
+              "body": "```go\npackage main\n\nimport (\n\t\"fmt\"\n)\n\ntype Vertex struct {\n\tX int\n\tY int\n}\n\nfunc main() {\n\tv := Vertex{1, 2}\n\tv.X = 4\n\tfmt.Println(v.X, v.Y) // => 4 2\n}\n```",
+              "footer": "See: [Structs](https://tour.go.dev/moretypes/2)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Literals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Literals",
+              "body": "```go\nv := Vertex{X: 1, Y: 2}\n// Field names can be omitted\nv := Vertex{1, 2}\n// Y is implicit\nv := Vertex{X: 1}\n```",
+              "footer": "You can also put field names.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Maps",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Maps",
+              "body": "```go\nm := make(map[string]int)\nm[\"k1\"] = 7\nm[\"k2\"] = 13\nfmt.Println(m) // => map[k1:7 k2:13]\n\nv1 := m[\"k1\"]\nfmt.Println(v1)     // => 7\nfmt.Println(len(m)) // => 2\n\ndelete(m, \"k2\")\nfmt.Println(m) // => map[k1:7]\n\n_, prs := m[\"k2\"]\nfmt.Println(prs) // => false\n\nn := map[string]int{\"foo\": 1, \"bar\": 2}\nfmt.Println(n) // => map[bar:2 foo:1]\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pointers to structs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pointers to structs",
+              "body": "```go\nv := &Vertex{1, 2}\nv.X = 2\n```",
+              "footer": "Doing `v.X` is the same as doing `(*v).X`, when `v` is a pointer.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Functions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Multiple arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple arguments",
+              "body": "```go\nfunc plus(a int, b int) int {\n    return a + b\n}\nfunc plusPlus(a, b, c int) int {\n    return a + b + c\n}\nfmt.Println(plus(1, 2))\nfmt.Println(plusPlus(1, 2, 3))\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple return",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple return",
+              "body": "```go\nfunc vals() (int, int) {\n    return 3, 7\n}\n\na, b := vals()\nfmt.Println(a)    // => 3\nfmt.Println(b)    // => 7\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function literals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function literals",
+              "body": "```go\nr1, r2 := func() (string, string) {\n    x := []string{\"hello\", \"cheatsheets.zip\"}\n    return x[0], x[1]\n}()\n\n// => hello cheatsheets.zip\nfmt.Println(r1, r2)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Naked returns",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Naked returns",
+              "body": "```go\nfunc split(sum int) (x, y int) {\n  x = sum * 4 / 9\n  y = sum - x\n  return\n}\n\nx, y := split(17)\nfmt.Println(x)   // => 7\nfmt.Println(y)   // => 10\n```",
+              "footer": "Note that using naked returns hurts readability.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variadic functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variadic functions",
+              "body": "```go\nfunc sum(nums ...int) {\n    fmt.Print(nums, \" \")\n    total := 0\n    for _, num := range nums {\n        total += num\n    }\n    fmt.Println(total)\n}\nsum(1, 2)     //=> [1 2] 3\nsum(1, 2, 3)  // => [1 2 3] 6\n\nnums := []int{1, 2, 3, 4}\nsum(nums...)  // => [1 2 3 4] 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "init function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "init function",
+              "body": "```go\nimport --> const --> var --> init()\n```",
+              "footer": "```go\nvar num = setNumber()\nfunc setNumber() int {\nreturn 42\n}\nfunc init() {\nnum = 0\n}\nfunc main() {\nfmt.Println(num) // => 0\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Functions as values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions as values",
+              "body": "```go\nfunc main() {\n    // assign a function to a name\n    add := func(a, b int) int {\n        return a + b\n    }\n    // use the name to call the function\n    fmt.Println(add(3, 4)) // => 7\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Closures 1",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Closures 1",
+              "body": "```go\nfunc scope() func() int{\n    outer_var := 2\n    foo := func() int {return outer_var}\n    return foo\n}\n\n// Outpus: 2\nfmt.Println(scope()())\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Closures 2",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Closures 2",
+              "body": "```go\nfunc outer() (func() int, int) {\n    outer_var := 2\n    inner := func() int {\n        outer_var += 99\n        return outer_var\n    }\n    inner()\n    return inner, outer_var\n}\ninner, val := outer()\nfmt.Println(inner()) // => 200\nfmt.Println(val)     // => 101\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Packages",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Importing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Importing",
+              "body": "```go\nimport \"fmt\"\nimport \"math/rand\"\n```",
+              "footer": "#### Same as\n\n```go\nimport (\n  \"fmt\"        // gives fmt.Println\n  \"math/rand\"  // gives rand.Intn\n)\n```\n\nSee: [Importing](https://tour.go.dev/basics/1)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Aliases",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Aliases",
+              "body": "```go\nimport r \"math/rand\"\n```",
+              "footer": "```go\nimport (\n\"fmt\"\nr \"math/rand\"\n)\n```\n```go\nr.Intn()\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Packages",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Packages",
+              "body": "```go\npackage main\n\n// An internal package may be imported only by another package\n// that is inside the tree rooted at the parent of the internal directory\npackage internal\n```",
+              "footer": "See: [Internal packages](https://go.dev/doc/go1.4#internalpackages)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Exporting names",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Exporting names",
+              "body": "```go\n// Begin with a capital letter\nfunc Hello () {\n  ···\n}\n```",
+              "footer": "See: [Exported names](https://tour.go.dev/basics/3)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Concurrency",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Goroutines",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Goroutines",
+              "body": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"time\"\n)\n\nfunc f(from string) {\n\tfor i := 0; i < 3; i++ {\n\t\tfmt.Println(from, \":\", i)\n\t}\n}\n\nfunc main() {\n\tf(\"direct\")\n\tgo f(\"goroutine\")\n\n\tgo func(msg string) {\n\t\tfmt.Println(msg)\n\t}(\"going\")\n\n\ttime.Sleep(time.Second)\n\tfmt.Println(\"done\")\n}\n```",
+              "footer": "See: [Goroutines](https://tour.go.dev/concurrency/1), [Channels](https://tour.go.dev/concurrency/2)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "WaitGroup",
+          "level": 3,
+          "cards": [
+            {
+              "title": "WaitGroup",
+              "body": "```go\npackage main\n\nimport (\n\t\"fmt\"\n\t\"sync\"\n\t\"time\"\n)\n\nfunc w(id int, wg *sync.WaitGroup) {\n\tdefer wg.Done()\n\tfmt.Printf(\"%d starting\\n\", id)\n\n\ttime.Sleep(time.Second)\n\tfmt.Printf(\"%d done\\n\", id)\n}\n\nfunc main() {\n\tvar wg sync.WaitGroup\n\tfor i := 1; i <= 5; i++ {\n\t\twg.Add(1)\n\t\tgo w(i, &wg)\n\t}\n\twg.Wait()\n}\n```",
+              "footer": "See: [WaitGroup](https://go.dev/pkg/sync/#WaitGroup)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Closing channels",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Closing channels",
+              "body": "```go\nch <- 1\nch <- 2\nch <- 3\nclose(ch) // Closes a channel\n```",
+              "footer": "```go\n// Iterate the channel until closed\nfor i := range ch {\n···\n}\n```\n```go\n// Closed if `ok == false`\nv, ok := <- ch\n```\nSee: [Range and close](https://tour.go.dev/concurrency/4)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Buffered channels",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Buffered channels",
+              "body": "```go\nch := make(chan int, 2)\nch <- 1\nch <- 2\nch <- 3\n// fatal error:\n// all goroutines are asleep - deadlock\n```",
+              "footer": "See: [Buffered channels](https://tour.go.dev/concurrency/3)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Error control",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Deferring functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Deferring functions",
+              "body": "```go\nfunc main() {\n  defer func() {\n    fmt.Println(\"Done\")\n  }()\n  fmt.Println(\"Working...\")\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Lambda defer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Lambda defer",
+              "body": "```go\nfunc main() {\n  var d = int64(0)\n  defer func(d *int64) {\n    fmt.Printf(\"& %v Unix Sec\\n\", *d)\n  }(&d)\n  fmt.Print(\"Done \")\n  d = time.Now().Unix()\n}\n```",
+              "footer": "The defer func uses current value of d, unless we use a pointer to get final value at end of main.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Defer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Defer",
+              "body": "```go\nfunc main() {\n  defer fmt.Println(\"Done\")\n  fmt.Println(\"Working...\")\n}\n```",
+              "footer": "See: [Defer, panic and recover](https://blog.go.dev/defer-panic-and-recover)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Methods {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Receivers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Receivers",
+              "body": "```go\ntype Vertex struct {\n  X, Y float64\n}\n```",
+              "footer": "```go\nfunc (v Vertex) Abs() float64 {\nreturn math.Sqrt(v.X * v.X + v.Y * v.Y)\n}\n```\n```go\nv := Vertex{1, 2}\nv.Abs()\n```\nSee: [Methods](https://tour.go.dev/methods/1)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mutation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutation",
+              "body": "```go\nfunc (v *Vertex) Scale(f float64) {\n  v.X = v.X * f\n  v.Y = v.Y * f\n}\n```",
+              "footer": "```go\nv := Vertex{6, 12}\nv.Scale(0.5)\n// `v` is updated\n```\nSee: [Pointer receivers](https://tour.go.dev/methods/4)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Interfaces {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "A basic interface",
+          "level": 3,
+          "cards": [
+            {
+              "title": "A basic interface",
+              "body": "```go\ntype Shape interface {\n  Area() float64\n  Perimeter() float64\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Struct",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Struct",
+              "body": "```go\ntype Rectangle struct {\n  Length, Width float64\n}\n```",
+              "footer": "Struct `Rectangle` implicitly implements interface `Shape` by implementing all of its methods.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Methods",
+              "body": "```go\nfunc (r Rectangle) Area() float64 {\n  return r.Length * r.Width\n}\n\nfunc (r Rectangle) Perimeter() float64 {\n  return 2 * (r.Length + r.Width)\n}\n```",
+              "footer": "The methods defined in `Shape` are implemented in `Rectangle`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Interface example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Interface example",
+              "body": "",
+              "footer": "```go {.wrap}\nfunc main() {\n  var r Shape = Rectangle{Length: 3, Width: 4}\n  fmt.Printf(\"Type of r: %T, Area: %v, Perimeter: %v.\", r, r.Area(), r.Perimeter())\n}\n\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go generics {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "example 1",
+          "level": 3,
+          "cards": [
+            {
+              "title": "example 1",
+              "body": "```go\n// comparable represents types that can be compared.\ntype comparable interface {\n\tint | float64 | string\n}\n\n// Max returns the maximum of two comparable values.\nfunc Max[T comparable](a, b T) T {\n\tif a > b {\n\t\treturn a\n\t}\n\treturn b\n}\n\nfunc main() {\n\t// Find the maximum of two integers.\n\tmaxInt := Max(10, 20)\n\tfmt.Println(\"Max integer:\", maxInt)\n\n\t// Find the maximum of two floats.\n\tmaxFloat := Max(3.14, 2.71)\n\tfmt.Println(\"Max float:\", maxFloat)\n\n\t// Find the maximum of two strings.\n\tmaxString := Max(\"apple\", \"banana\")\n\tfmt.Println(\"Max string:\", maxString)\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "example 2",
+          "level": 3,
+          "cards": [
+            {
+              "title": "example 2",
+              "body": "```go\n// Pair[T, U] represents a generic pair of values.\ntype Pair[T, U any] struct {\n\tFirst  T\n\tSecond U\n}\n\nfunc main() {\n\tpair := Pair[int, string]{First: 42, Second: \"hello\"}\n\n\tfmt.Println(\"First:\", pair.First)\n\tfmt.Println(\"Second:\", pair.Second)\n\n\t// Print the types of the values in the pair.\n\tfmt.Println(\"Type of First:\", reflect.TypeOf(pair.First))\n\tfmt.Println(\"Type of Second:\", reflect.TypeOf(pair.Second))\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go File I/O {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Reading a File",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reading a File",
+              "body": "```go\ndata, err := os.ReadFile(\"file.txt\")\nif err != nil {\n    log.Fatal(err)\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Writing to a File",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Writing to a File",
+              "body": "```go\nerr := os.WriteFile(\"file.txt\", []byte(\"Hello, Go!\"), 0644)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Testing {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Unit Test",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Unit Test",
+              "body": "```go\nfunc TestAdd(t *testing.T) {\n    result := add(2, 3)\n    if result != 5 {\n        t.Errorf(\"Expected 5, got %d\", result)\n    }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Unit Test",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Unit Test",
+              "body": "```go\nfunc BenchmarkAdd(b *testing.B) {\n    for i := 0; i < b.N; i++ {\n        add(1, 2)\n    }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go JSON Handling {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "JSON Encoding",
+          "level": 3,
+          "cards": [
+            {
+              "title": "JSON Encoding",
+              "body": "```go\ndata, _ := json.Marshal(person)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "JSON Decoding",
+          "level": 3,
+          "cards": [
+            {
+              "title": "JSON Decoding",
+              "body": "```go\njson.Unmarshal(data, &person)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Go Server {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "net/http (Standard Library)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "net/http (Standard Library)",
+              "body": "```go\npackage main\n\nimport (\n    \"fmt\"\n    \"net/http\"\n)\n\nfunc handler(w http.ResponseWriter, r *http.Request) {\n    fmt.Fprint(w, \"Hello from net/http!\")\n}\n\nfunc main() {\n\n    http.HandleFunc(\"/\", handler)\n\n    http.ListenAndServe(\":8080\", nil)\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "gorilla/mux",
+          "level": 3,
+          "cards": [
+            {
+              "title": "gorilla/mux",
+              "body": "```go\npackage main\n\nimport (\n    \"fmt\"\n    \"net/http\"\n    \"github.com/gorilla/mux\"\n)\n\nfunc main() {\n\n    r := mux.NewRouter()\n\n    r.HandleFunc(\"/\", func(w http.ResponseWriter, r *http.Request) {\n        fmt.Fprint(w, \"Hello from Gorilla Mux!\")\n    })\n\n    http.ListenAndServe(\":8081\", r)\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "chi",
+          "level": 3,
+          "cards": [
+            {
+              "title": "chi",
+              "body": "```go\npackage main\n\nimport (\n    \"fmt\"\n    \"net/http\"\n    \"github.com/go-chi/chi/v5\"\n)\n\nfunc main() {\n\n    r := chi.NewRouter()\n\n    r.Get(\"/\", func(w http.ResponseWriter, r *http.Request) {\n        fmt.Fprint(w, \"Hello from Chi!\")\n    })\n\n    http.ListenAndServe(\":8082\", r)\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "gin",
+          "level": 3,
+          "cards": [
+            {
+              "title": "gin",
+              "body": "```go\npackage main\n\nimport (\n    \"github.com/gin-gonic/gin\"\n)\n\nfunc main() {\n\n    r := gin.Default()\n\n    r.GET(\"/\", func(c *gin.Context) {\n        c.String(200, \"Hello from Gin!\")\n    })\n\n    r.Run(\":8083\")\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "fiber",
+          "level": 3,
+          "cards": [
+            {
+              "title": "fiber",
+              "body": "```go\npackage main\n\nimport (\n    \"github.com/gofiber/fiber/v3\"\n)\n\nfunc main() {\n\n    app := fiber.New()\n\n    app.Get(\"/\", func(c *fiber.Ctx) error {\n        return c.SendString(\"Hello from Fiber!\")\n    })\n\n    app.Listen(\":8084\")\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "beego",
+          "level": 3,
+          "cards": [
+            {
+              "title": "beego",
+              "body": "```go\npackage main\n\nimport (\n    \"github.com/beego/beego/v2/server/web\"\n)\n\nfunc main() {\n\n    web.Get(\"/\", func(ctx *web.Context) {\n        ctx.Output.Body([]byte(\"Hello from Beego!\"))\n    })\n\n    web.Run()\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Keywords",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keywords",
+              "body": "- `break`\n- `default`\n- `func`\n- `interface`\n- `select`\n- `case`\n- `defer`\n- `go`\n- `map`\n- `struct`\n- `chan`\n- `else`\n- `goto`\n- `package`\n- `switch`\n- `const`\n- `fallthrough`\n- `if`\n- `range`\n- `type`\n- `continue`\n- `for`\n- `import`\n- `return`\n- `var`\n- `iota`\n\n{.cols-3 .marker-none}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Operators and punctuation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operators and punctuation",
+              "body": "|                 |                 |                  |                  |                   |      |       |     |     |\n| --------------- | --------------- | ---------------- | ---------------- | ----------------- | ---- | ----- | --- | --- |\n| `+`             | `&`             | `+=`             | `&=`             | `&&`              | `==` | `!=`  | `(` | `)` |\n| `-`             | <code>\\|</code> | `-=`             | <code>\\|=</code> | <code>\\|\\|</code> | `<`  | `<=`  | `[` | `]` |\n| <code>\\*</code> | `^`             | <code>\\*=</code> | `^=`             | `<-`              | `>`  | `>=`  | `{` | `}` |\n| `/`             | `<<`            | `/=`             | `<<=`            | `++`              | `=`  | `:=`  | `,` | `;` |\n| `%`             | `>>`            | `%=`             | `>>=`            | `--`              | `!`  | `...` | `.` | `:` |\n|                 | `&^`            | `&^=`            |                  |                   |      |       |     |     |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see {.cols-1}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see {.cols-1}",
+          "body": "- [Devhints](https://devhints.io/go) _(devhints.io)_\n- [A tour of Go](https://tour.go.dev/welcome/1) _(tour.go.dev)_\n- [Go wiki](https://github.com/golang/go/wiki/) _(github.com)_\n- [Effective Go](https://go.dev/doc/effective_go) _(go.dev)_\n- [Go by Example](https://gobyexample.com/) _(gobyexample.com)_\n- [Awesome Go](https://awesome-go.com/) _(awesome-go.com)_\n- [JustForFunc Youtube](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw) _(youtube.com)_\n- [Style Guide](https://github.com/golang/go/wiki/CodeReviewComments) _(github.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

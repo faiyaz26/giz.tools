@@ -1,0 +1,336 @@
+{
+  "id": "toml",
+  "metadata": {
+    "title": "TOML",
+    "date": "2020-12-29T20:36:35.000Z",
+    "background": "bg-[#848484]",
+    "tags": [
+      "config",
+      "format"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This is a quick reference cheat sheet to the TOML format configuration file syntax.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "[TOML](https://toml.io/en/) is a minimal configuration file format that's easy to read due to obvious semantics.\n\n- [Document](https://toml.io/en/latest) _(toml.io)_\n- [Learn X in Y minutes](https://learnxinyminutes.com/docs/toml/) _(learnxinyminutes.com)_",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "```toml\nbool = true\ndate = 2006-05-27T07:32:00Z\nstring = \"hello\"\nnumber = 42\nfloat = 3.14\nscientificNotation = 1e+12\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```yaml\n# A single line comment example\n\n# block level comment example\n# comment line 1\n# comment line 2\n# comment line 3\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Integer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Integer",
+              "body": "```toml\nint1 = +42\nint2 = 0\nint3 = -21\nintegerRange = 64\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Float",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Float",
+              "body": "```toml\nfloat2 = 3.1415\nfloat4 = 5e+22\nfloat7 = 6.626e-34\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Boolean",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Boolean",
+              "body": "```toml\nbool1 = true\nbool2 = false\nboolMustBeLowercase = true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Datetime",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Datetime",
+              "body": "```toml\ndate1 = 1989-05-27T07:32:00Z\ndate2 = 1989-05-26T15:32:00-07:00\ndate3 = 1989-05-27T07:32:00\ndate4 = 1989-05-27\ntime1 = 07:32:00\ntime2 = 00:32:00.999999\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String",
+              "body": "```toml\nstr1 = \"I'm a string.\"\nstr2 = \"You can \\\"quote\\\" me.\"\nstr3 = \"Name\\tJos\\u00E9\\nLoc\\tSF.\"\n```",
+              "footer": "See: [Strings](#toml-strings)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Table",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Table",
+              "body": "```toml\n[owner]\nname = \"Tom Preston-Werner\"\ndob = 1979-05-27T07:32:00-08:00\n```",
+              "footer": "See: [Tables](#toml-tables)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array",
+              "body": "```toml\narray1 = [1, 2, 3]\narray2 = [\"Commas\", \"are\", \"delimiter\"]\narray3 = [8001, 8001, 8002]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Friendly Array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Friendly Array",
+              "body": "```toml\narray1 = [ \"Don't mix\", \"different\", \"types\" ]\narray2 = [ [ 1.2, 2.4 ], [\"all\", 'strings', \"\"\"are the same\"\"\", '''type'''] ]\narray3 = [\n  \"Whitespace\", \"is\",\n  \"ignored\"\n]\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "TOML Strings",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Multiline String",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiline String",
+              "body": "```toml\nmultiLineString = \"\"\"\nMulti-line basic strings are surrounded\nby three quotation marks on each side\nand allow newlines.\n\"\"\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Literal String",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Literal String",
+              "body": "",
+              "footer": "```toml {.wrap}\npath = 'C:\\Users\\nodejs\\templates'\npath2 = '\\\\User\\admin$\\system32'\nquoted = 'Tom \"Dubs\" Preston-Werner'\nregex = '<\\i\\c*\\s*>'\n```\n\nSurrounded by single quotes. Escaping are not allowed.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "MultiLine Literal String",
+          "level": 3,
+          "cards": [
+            {
+              "title": "MultiLine Literal String",
+              "body": "```toml\nre = '''\\d{2} apps is t[wo]o many'''\nlines = '''\nThe first newline is\ntrimmed in raw strings.\nAll other whitespace\nis preserved.\n'''\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "TOML Tables",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic",
+              "body": "```toml\n[name]\nfoo = 1\nbar = 2\n```",
+              "footer": "`foo` and `bar` are keys in the table called `name`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Nested",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Nested",
+              "body": "```toml\n[table1]\n\tfoo = \"bar\"\n\n[table1.nested_table]\n\tbaz = \"bat\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array-like",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array-like",
+              "body": "```toml\n[[comments]]\nauthor = \"Nate\"\ntext = \"Great Article!\"\n\n[[comments]]\nauthor = \"Anonymous\"\ntext = \"Love it!\"\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json\n{\n  \"comments\": [\n    {\n      \"author\": \"Nate\",\n      \"text\": \"Great Article!\"\n    },\n    {\n      \"author\": \"Anonymous\",\n      \"text\": \"Love It!\"\n    }\n  ]\n}\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dot separated",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dot separated",
+              "body": "```toml\n[dog.\"tater.man\"]\ntype = \"pug\"\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json\n{\n  \"dog\": {\n    \"tater.man\": {\n      \"type\": \"pug\"\n    }\n  }\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multi-nested",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multi-nested",
+              "body": "```toml\n[foo.bar.baz]\nbat = \"hi\"\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json\n{\n  \"foo\": {\n    \"bar\": {\n      \"baz\": {\n        \"bat\": \"hi\"\n      }\n    }\n  }\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ignore whitespace",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ignore whitespace",
+              "body": "```toml\n[a.b.c]          # this is best practice\n[ d.e.f ]        # same as [d.e.f]\n[ g .  h  .i ]   # same as [g.h.i]\n[ j . \"ʞ\" .'l' ] # same as [j.\"ʞ\".'l']\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inline Table",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inline Table",
+              "body": "```toml\nname = { first = \"Tom\", last = \"Preston-Werner\" }\npoint = { x = 1, y = 2 }\nanimal = { type.name = \"pug\" }\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

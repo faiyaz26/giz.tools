@@ -1,0 +1,164 @@
+{
+  "id": "spotify",
+  "metadata": {
+    "title": "Spotify",
+    "date": "2022-11-23T16:23:31.699Z",
+    "background": "bg-[#65d46e]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 23 keyboard shortcuts found in Spotify\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General I",
+              "body": "| Shortcut         | Action                  |\n| ---------------- | ----------------------- |\n| `Ctrl` `N`       | Create new playlist     |\n| `Ctrl` `X`       | Cut                     |\n| `Ctrl` `C`       | Copy                    |\n| `Ctrl` `Alt` `C` | Copy (alternative link) |\n| `Ctrl` `V`       | Paste                   |\n| `Del`            | Delete                  |\n| `Ctrl` `A`       | Select all              |\n| `Space`          | Play/pause              |\n| `Ctrl` `Right`   | Next track              |\n| `Ctrl` `Left`    | Previous track          |\n| `Ctrl` `Up`      | Volume up               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Create new playlist"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `C`",
+                  "action": "Copy (alternative link)"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Del`",
+                  "action": "Delete"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Play/pause"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right`",
+                  "action": "Next track"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left`",
+                  "action": "Previous track"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up`",
+                  "action": "Volume up"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General II",
+              "body": "| Shortcut              | Action                          |\n| --------------------- | ------------------------------- |\n| `Ctrl` `Down`         | Volume down                     |\n| `Ctrl` `Shift` `Down` | Mute                            |\n| `Ctrl` `Shift` `Up`   | Max volume                      |\n| `F1`                  | Show help                       |\n| `Ctrl` `F`            | Filter (in Songs and Playlists) |\n| `Ctrl` `L`            | Give focus to search field      |\n| `Alt` `Left`          | Go back                         |\n| `Alt` `Right`         | Go forward                      |\n| `Enter`               | Play selected row               |\n| `Ctrl` `P`            | Preferences                     |\n| `Ctrl` `Shift` `W`    | Logout active user              |\n| `Alt` `F4`            | Quit                            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Down`",
+                  "action": "Volume down"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Down`",
+                  "action": "Mute"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Up`",
+                  "action": "Max volume"
+                },
+                {
+                  "shortcut": "`F1`",
+                  "action": "Show help"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Filter (in Songs and Playlists)"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Give focus to search field"
+                },
+                {
+                  "shortcut": "`Alt` `Left`",
+                  "action": "Go back"
+                },
+                {
+                  "shortcut": "`Alt` `Right`",
+                  "action": "Go forward"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Play selected row"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Preferences"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `W`",
+                  "action": "Logout active user"
+                },
+                {
+                  "shortcut": "`Alt` `F4`",
+                  "action": "Quit"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Spotify](https://support.spotify.com/is/using_spotify/system_settings/keyboard-shortcuts/)\n  _(support.spotify.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

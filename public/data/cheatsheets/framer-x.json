@@ -1,0 +1,348 @@
+{
+  "id": "framer-x",
+  "metadata": {
+    "title": "Framer X",
+    "date": "2022-11-23T16:23:31.701Z",
+    "background": "bg-[#2151ed]",
+    "label": "Mac",
+    "tags": [
+      null,
+      "mac"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 45 keyboard shortcuts found in Framer X. This application is MacOS-only.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Tools",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tools",
+              "body": "| Shortcut | Action     |\n| -------- | ---------- |\n| `F`      | Frame      |\n| `U`      | Round      |\n| `T`      | Text       |\n| `S`      | Stack      |\n| `L`      | Link       |\n| `Space`  | Pan Canvas |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F`",
+                  "action": "Frame"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Round"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Text"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Stack"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Link"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Pan Canvas"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Graphics",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Graphics",
+              "body": "| Shortcut          | Action    |\n| ----------------- | --------- |\n| `G`               | Graphic   |\n| `P`               | Path      |\n| `R`               | Rectangle |\n| `O`               | Oval      |\n| `V`               | Vector    |\n| `Cmd` `G`         | Group     |\n| `Cmd` `Shift` `G` | Ungroup   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G`",
+                  "action": "Graphic"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Path"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Rectangle"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Oval"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Vector"
+                },
+                {
+                  "shortcut": "`Cmd` `G`",
+                  "action": "Group"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `G`",
+                  "action": "Ungroup"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Layout",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Layout",
+              "body": "| Shortcut            | Action         |\n| ------------------- | -------------- |\n| `Cmd` `Enter`       | Add Frame      |\n| `Cmd` `Opt` `Enter` | Add Stack      |\n| `Cmd` `Del`         | Remove Wrapper |\n| `Cmd` `Opt` `Up`    | Move Forward   |\n| `Cmd` `Opt` `Down`  | Move Backward  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Enter`",
+                  "action": "Add Frame"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Enter`",
+                  "action": "Add Stack"
+                },
+                {
+                  "shortcut": "`Cmd` `Del`",
+                  "action": "Remove Wrapper"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Up`",
+                  "action": "Move Forward"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Down`",
+                  "action": "Move Backward"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Components",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Components",
+              "body": "| Shortcut          | Action             |\n| ----------------- | ------------------ |\n| `Cmd` `K`         | Create from Design |\n| `Cmd` `Shift` `K` | Create from Code   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `K`",
+                  "action": "Create from Design"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `K`",
+                  "action": "Create from Code"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Text",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Text",
+              "body": "| Shortcut  | Action          |\n| --------- | --------------- |\n| `Cmd` `B` | Bold            |\n| `Cmd` `I` | Italic          |\n| `Cmd` `U` | Underline       |\n| `Cmd` `T` | Select Typeface |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Cmd` `I`",
+                  "action": "Italic"
+                },
+                {
+                  "shortcut": "`Cmd` `U`",
+                  "action": "Underline"
+                },
+                {
+                  "shortcut": "`Cmd` `T`",
+                  "action": "Select Typeface"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editing",
+              "body": "| Shortcut                 | Action              |\n| ------------------------ | ------------------- |\n| `Cmd` `(arrows)`         | Object Size         |\n| `Cmd` `Shift` `(arrows)` | Object Size by 10px |\n| `0-9`                    | Opacity             |\n| `Opt`                    | Show Distance       |\n| `Cmd` `D`                | Duplicate in Place  |\n| `Cmd` `Opt` `C`          | Copy Style          |\n| `Cmd` `Opt` `V`          | Paste Style         |\n| `Ctrl` `C`               | Color Picker        |\n| `Cmd` `A`                | Select All Layers   |\n| `Cmd` `Shift` `A`        | Select All Siblings |\n| `Cmd` `Opt` `A`          | Select All Children |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `(arrows)`",
+                  "action": "Object Size"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `(arrows)`",
+                  "action": "Object Size by 10px"
+                },
+                {
+                  "shortcut": "`0-9`",
+                  "action": "Opacity"
+                },
+                {
+                  "shortcut": "`Opt`",
+                  "action": "Show Distance"
+                },
+                {
+                  "shortcut": "`Cmd` `D`",
+                  "action": "Duplicate in Place"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `C`",
+                  "action": "Copy Style"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `V`",
+                  "action": "Paste Style"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Color Picker"
+                },
+                {
+                  "shortcut": "`Cmd` `A`",
+                  "action": "Select All Layers"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `A`",
+                  "action": "Select All Siblings"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `A`",
+                  "action": "Select All Children"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View",
+              "body": "| Shortcut   | Action                |\n| ---------- | --------------------- |\n| `Z`        | Zoom                  |\n| `Cmd` `+`  | Zoom In               |\n| `Cmd` `-`  | Zoom Out              |\n| `Cmd` `1`  | Zoom to Fit           |\n| `Cmd` `2`  | Zoom to Fit Selection |\n| `Cmd` `0`  | Zoom to 100%          |\n| `Ctrl` `R` | Show Rulers           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Z`",
+                  "action": "Zoom"
+                },
+                {
+                  "shortcut": "`Cmd` `+`",
+                  "action": "Zoom In"
+                },
+                {
+                  "shortcut": "`Cmd` `-`",
+                  "action": "Zoom Out"
+                },
+                {
+                  "shortcut": "`Cmd` `1`",
+                  "action": "Zoom to Fit"
+                },
+                {
+                  "shortcut": "`Cmd` `2`",
+                  "action": "Zoom to Fit Selection"
+                },
+                {
+                  "shortcut": "`Cmd` `0`",
+                  "action": "Zoom to 100%"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Show Rulers"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Window",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Window",
+              "body": "| Shortcut          | Action   |\n| ----------------- | -------- |\n| `Cmd` `M`         | Minimize |\n| `Cmd` `Shift` `1` | Welcome  |\n| `Cmd` `P`         | Preview  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `M`",
+                  "action": "Minimize"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `1`",
+                  "action": "Welcome"
+                },
+                {
+                  "shortcut": "`Cmd` `P`",
+                  "action": "Preview"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Framer X](https://www.framer.com/support/using-framer-x/shortcuts/) _(www.framer.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

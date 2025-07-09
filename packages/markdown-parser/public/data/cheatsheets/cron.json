@@ -1,0 +1,149 @@
+{
+  "id": "cron",
+  "metadata": {
+    "title": "Cron",
+    "date": "2020-12-16T18:28:43.000Z",
+    "background": "bg-red-500",
+    "tags": [
+      "schedule",
+      "crontab",
+      "time"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "[Cron](https://en.wikipedia.org/wiki/Cron) is most suitable for scheduling repetitive tasks. Scheduling one-time tasks can be accomplished using the associated at utility.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Crontab Format {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Format",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Format",
+              "body": "```\nMin  Hour Day  Mon  Weekday\n```",
+              "footer": "```\n*    *    *    *    *  command to be executed\n```\n```\n┬    ┬    ┬    ┬    ┬\n│    │    │    │    └─  Day of Week   (0=Sun .. 6=Sat)\n│    │    │    └──────  Month         (1..12)\n│    │    └───────────  Day of Month  (1..31)\n│    └────────────────  Hour          (0..23)\n└─────────────────────  Minute        (0..59)\n```\n| Field        | Range  | Special characters |\n| ------------ | ------ | ------------------ |\n| Minute       | 0 - 59 | , - \\* /           |\n| Hour         | 0 - 23 | , - \\* /           |\n| Day of Month | 1 - 31 | , - \\* ? / L W     |\n| Month        | 1 - 12 | , - \\* /           |\n| Day of Week  | 0 - 6  | , - \\* ? / L #     |\n{.show-header}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "| Example        | Description                                                        |\n| -------------- |--------------------------------------------------------------------|\n| `*/15 * * * *` | Every 15 mins                                                      |\n| `0 * * * *`    | Every hour                                                         |\n| `0 */2 * * *`  | Every 2 hours                                                      |\n| `15 2 * * *`   | At 2:15AM (of every day)                                           |\n| `15 2 * * ?`   | At 2:15AM (of every day)                                           |\n| `10 9 * * 5`   | At 9:10AM (of every Friday)                                        |\n| `0 0 * * 0`    | At 12:00 AM, only on Sunday                                        |\n| `15 2 * * 1L`  | At 2:15am on the last monday of every month                        |\n| `15 0 * * 4#2` | At 00:15am on the second thursday of every month                   |\n| `0 0 1 * *`    | At 12:00 AM, on day 1 of the month (1st of month / monthly)        |\n| `0 0 1 1 *`    | At 12:00 AM, on day 1 of the month, only in January (1st of month) |\n| `@reboot`      | Every reboot <br>_(non-standard)_                                  |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cron Generator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cron Generator",
+              "body": "<widget name=\"cron\"/>",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Special strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Special strings",
+              "body": "| Special String | Meaning                                              |\n| -------------- | ---------------------------------------------------- |\n| @reboot        | Run once, at system startup _(non-standard)_         |\n| @yearly        | Run once every year, \"0 0 1 1 \\*\" _(non-standard)_   |\n| @annually      | (same as @yearly) _(non-standard)_                   |\n| @monthly       | Run once every month, \"0 0 1 \\* \\*\" _(non-standard)_ |\n| @weekly        | Run once every week, \"0 0 \\* \\* 0\" _(non-standard)_  |\n| @daily         | Run once each day, \"0 0 \\* \\* \\*\" _(non-standard)_   |\n| @midnight      | (same as @daily) _(non-standard)_                    |\n| @hourly        | Run once an hour, \"0 \\* \\* \\* \\*\" _(non-standard)_   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Crontab command",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Crontab command",
+              "body": "| -            | -                                                                       |\n| ------------ | ----------------------------------------------------------------------- |\n| `crontab -e` | Edit or create a crontab file if doesn’t already exist.                 |\n| `crontab -l` | Display the crontab file.                                               |\n| `crontab -r` | Remove the crontab file.                                                |\n| `crontab -v` | Display the last time you edited your crontab file.<br>_(non-standard)_ |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`crontab -e`",
+                  "action": "Edit or create a crontab file if doesn’t already exist."
+                },
+                {
+                  "shortcut": "`crontab -l`",
+                  "action": "Display the crontab file."
+                },
+                {
+                  "shortcut": "`crontab -r`",
+                  "action": "Remove the crontab file."
+                },
+                {
+                  "shortcut": "`crontab -v`",
+                  "action": "Display the last time you edited your crontab file.<br>_(non-standard)_"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Special characters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Special characters",
+              "body": "| Special Character   | Description                                                                                                                                          |\n| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `Asterik(*)`        | Matches all values in the field or any possible value.                                                                                               |\n| `Hyphen(-)`         | Used to define a range.Ex: 1-5 in 5th field(Day Of Week) Every Weekday i.e., Monday to Friday                                                        |\n| `Slash (/)`         | 1st field(Minute) /15 meaning every fifteen minute or increment of range.                                                                            |\n| `Comma (,)`         | Used to separate items.Ex: 2,6,8 in 2nd fields(Hour) executes at 2am,6am and 8am                                                                     |\n| `L`                 | It is allowed only for Day of Month or Day Of Week field, 2L in Day of week indicates Last tuesday of every month                                    |\n| `Hash (#)`          | It is allowed only for Day Of Week field, which must be followed within range of 1 to 5. For example, 4#1 means \"The first Thursday\" of given month. |\n| `Question mark (?)` | Can be instead of '\\*' and allowed for Day of Month and Day Of Week. Usage is restricted to either Day of Month or Day Of Week in a cron expression. |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see {.cols-1}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see {.cols-1}",
+          "body": "- [Devhints](https://devhints.io/cron) _(devhints.io)_\n- [Crontab Generator](https://crontab-generator.org/) _(crontab-generator.org)_\n- [Crontab guru](https://crontab.guru/) _(crontab.guru)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

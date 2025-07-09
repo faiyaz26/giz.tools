@@ -1,0 +1,572 @@
+{
+  "id": "gimp",
+  "metadata": {
+    "title": "GIMP",
+    "date": "2022-11-23T16:23:31.696Z",
+    "background": "bg-[#554f42]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 97 keyboard shortcuts found in GIMP\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Toolbox",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Toolbox",
+              "body": "| Shortcut    | Action           |\n| ----------- | ---------------- |\n| `R`         | Rectangle select |\n| `E`         | Ellipse select   |\n| `F`         | Free select      |\n| `U`         | Fuzzy select     |\n| `Shift` `O` | Select by color  |\n| `I`         | Scissors         |\n| `B`         | Paths            |\n| `O`         | Color picker     |\n| `M`         | Move             |\n| `Shift` `C` | Crop and resize  |\n| `Shift` `R` | Rotate           |\n| `Shift` `T` | Scale            |\n| `Shift` `S` | Shear            |\n| `Shift` `P` | Perspective      |\n| `Shift` `F` | Flip             |\n| `T`         | Text             |\n| `Shift` `B` | Bucket fill      |\n| `L`         | Blend            |\n| `N`         | Pencil           |\n| `P`         | Paintbrush       |\n| `Shift` `E` | Eraser           |\n| `A`         | Airbrush         |\n| `K`         | Ink              |\n| `C`         | Clone            |\n| `V`         | Convolve         |\n| `S`         | Smudge           |\n| `Shift` `D` | Dodge or burn    |\n| `X`         | Swap colors      |\n| `D`         | Default colors   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`R`",
+                  "action": "Rectangle select"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Ellipse select"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Free select"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Fuzzy select"
+                },
+                {
+                  "shortcut": "`Shift` `O`",
+                  "action": "Select by color"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Scissors"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Paths"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Color picker"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Move"
+                },
+                {
+                  "shortcut": "`Shift` `C`",
+                  "action": "Crop and resize"
+                },
+                {
+                  "shortcut": "`Shift` `R`",
+                  "action": "Rotate"
+                },
+                {
+                  "shortcut": "`Shift` `T`",
+                  "action": "Scale"
+                },
+                {
+                  "shortcut": "`Shift` `S`",
+                  "action": "Shear"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Perspective"
+                },
+                {
+                  "shortcut": "`Shift` `F`",
+                  "action": "Flip"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Text"
+                },
+                {
+                  "shortcut": "`Shift` `B`",
+                  "action": "Bucket fill"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Blend"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Pencil"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Paintbrush"
+                },
+                {
+                  "shortcut": "`Shift` `E`",
+                  "action": "Eraser"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Airbrush"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Ink"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Clone"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Convolve"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Smudge"
+                },
+                {
+                  "shortcut": "`Shift` `D`",
+                  "action": "Dodge or burn"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Swap colors"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Default colors"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File",
+              "body": "| Shortcut         | Action                      |\n| ---------------- | --------------------------- |\n| `Ctrl` `N`       | New image                   |\n| `Ctrl` `O`       | Open image                  |\n| `Ctrl` `Alt` `N` | Open image as new layer     |\n| `Ctrl` `D`       | Duplicate image             |\n| `Ctrl` `1-0`     | Open recent image 1-10      |\n| `Ctrl` `S`       | Save image                  |\n| `Ctrl` `S`       | Save image under a new name |\n| `Ctrl` `Q`       | Quit                        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New image"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open image"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `N`",
+                  "action": "Open image as new layer"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Duplicate image"
+                },
+                {
+                  "shortcut": "`Ctrl` `1-0`",
+                  "action": "Open recent image 1-10"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save image"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save image under a new name"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Quit"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dialogs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dialogs",
+              "body": "| Shortcut            | Action                              |\n| ------------------- | ----------------------------------- |\n| `Ctrl` `L`          | Layers                              |\n| `Ctrl` `Shift` `B`  | Brushes                             |\n| `Ctrl` `Shift` `P`  | Patterns                            |\n| `Ctrl` `G`          | Gradients                           |\n| `Ctrl` `Shift` `T`  | Tool options                        |\n| `Ctrl` `P`          | Palettes                            |\n| `Ctrl` `Shift` `I`  | Info window                         |\n| `Ctrl` `Shift` `N`  | Navigation window                   |\n| `Tab`               | Jump to next widget                 |\n| `Shift` `Tab`       | Jump to previous widget             |\n| `Enter`             | Set the new value                   |\n| `Space`             | Activate the current button or list |\n| `Ctrl` `Alt` `PgUp` | In a multi-tab dialog, switch tabs  |\n| `Shift` `L`         | Open location                       |\n| `Alt` `Up`          | Up folder                           |\n| `Alt` `Down`        | Down folder                         |\n| `Alt` `Home`        | Home folder                         |\n| `Esc`               | Close dialog                        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Layers"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `B`",
+                  "action": "Brushes"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Patterns"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Gradients"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Tool options"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Palettes"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `I`",
+                  "action": "Info window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Navigation window"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Jump to next widget"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Jump to previous widget"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Set the new value"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Activate the current button or list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `PgUp`",
+                  "action": "In a multi-tab dialog, switch tabs"
+                },
+                {
+                  "shortcut": "`Shift` `L`",
+                  "action": "Open location"
+                },
+                {
+                  "shortcut": "`Alt` `Up`",
+                  "action": "Up folder"
+                },
+                {
+                  "shortcut": "`Alt` `Down`",
+                  "action": "Down folder"
+                },
+                {
+                  "shortcut": "`Alt` `Home`",
+                  "action": "Home folder"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close dialog"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View",
+              "body": "| Shortcut           | Action                |\n| ------------------ | --------------------- |\n| `F10`              | Main menu             |\n| `Shift` `F10`      | Drop-down menu        |\n| `F11`              | Toggle fullscreen     |\n| `Shift` `Q`        | Toggle quickmask      |\n| `Ctrl` `W`         | Close document window |\n| `+`                | Zoom in               |\n| `-`                | Zoom out              |\n| `1`                | Zoom 1:1              |\n| `Ctrl` `E`         | Shrink wrap           |\n| `Ctrl` `Shift` `E` | Fit image in window   |\n| `Ctrl` `Shift` `R` | Toggle rulers         |\n| `Ctrl` `Shift` `T` | Toggle guides         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F10`",
+                  "action": "Main menu"
+                },
+                {
+                  "shortcut": "`Shift` `F10`",
+                  "action": "Drop-down menu"
+                },
+                {
+                  "shortcut": "`F11`",
+                  "action": "Toggle fullscreen"
+                },
+                {
+                  "shortcut": "`Shift` `Q`",
+                  "action": "Toggle quickmask"
+                },
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close document window"
+                },
+                {
+                  "shortcut": "`+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`1`",
+                  "action": "Zoom 1:1"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Shrink wrap"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Fit image in window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Toggle rulers"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Toggle guides"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Layers",
+              "body": "| Shortcut   | Action                 |\n| ---------- | ---------------------- |\n| `PgUp`     | Select the layer above |\n| `PgDn`     | Select the layer below |\n| `Home`     | Select the first layer |\n| `End`      | Select the last layer  |\n| `Ctrl` `M` | Merge visible layers   |\n| `Ctrl` `H` | Anchor layer           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`PgUp`",
+                  "action": "Select the layer above"
+                },
+                {
+                  "shortcut": "`PgDn`",
+                  "action": "Select the layer below"
+                },
+                {
+                  "shortcut": "`Home`",
+                  "action": "Select the first layer"
+                },
+                {
+                  "shortcut": "`End`",
+                  "action": "Select the last layer"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Merge visible layers"
+                },
+                {
+                  "shortcut": "`Ctrl` `H`",
+                  "action": "Anchor layer"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Edit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Edit",
+              "body": "| Shortcut           | Action                     |\n| ------------------ | -------------------------- |\n| `Ctrl` `Z`         | Undo                       |\n| `Ctrl` `Y`         | Redo                       |\n| `Ctrl` `C`         | Copy selection             |\n| `Ctrl` `X`         | Cut selection              |\n| `Ctrl` `Shift` `C` | Copy visible               |\n| `Ctrl` `Shift` `V` | Paste as new image         |\n| `Ctrl` `V`         | Paste clipboard            |\n| `Ctrl` `K`         | Clears selection           |\n| `Ctrl` `Shift` `C` | Named copy selection       |\n| `Ctrl` `Shift` `X` | Named cut selection        |\n| `Ctrl` `Shift` `V` | Named paste clipboard      |\n| `Ctrl` `,`         | Fill with foreground color |\n| `Ctrl` `.`         | Fill with background color |\n| `Ctrl` `;`         | Fill with pattern          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Copy visible"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `V`",
+                  "action": "Paste as new image"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste clipboard"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Clears selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Named copy selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "Named cut selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `V`",
+                  "action": "Named paste clipboard"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Fill with foreground color"
+                },
+                {
+                  "shortcut": "`Ctrl` `.`",
+                  "action": "Fill with background color"
+                },
+                {
+                  "shortcut": "`Ctrl` `;`",
+                  "action": "Fill with pattern"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selections",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selections",
+              "body": "| Shortcut           | Action            |\n| ------------------ | ----------------- |\n| `Ctrl` `T`         | Toggle selections |\n| `Ctrl` `A`         | Select all        |\n| `Ctrl` `Shift` `A` | Select none       |\n| `Ctrl` `I`         | Invert selection  |\n| `Ctrl` `Shift` `L` | Float selection   |\n| `Shift` `V`        | Path to selection |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Toggle selections"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Select none"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Invert selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Float selection"
+                },
+                {
+                  "shortcut": "`Shift` `V`",
+                  "action": "Path to selection"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Plug-Ins",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Plug-Ins",
+              "body": "| Shortcut           | Action              |\n| ------------------ | ------------------- |\n| `Ctrl` `F`         | Repeat last plug-in |\n| `Ctrl` `Shift` `F` | Reshow last plug-in |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Repeat last plug-in"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Reshow last plug-in"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Help",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Help",
+              "body": "| Shortcut     | Action       |\n| ------------ | ------------ |\n| `F1`         | Help         |\n| `Shift` `F1` | Context help |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F1`",
+                  "action": "Help"
+                },
+                {
+                  "shortcut": "`Shift` `F1`",
+                  "action": "Context help"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for GIMP](https://www.gimpusers.com/gimp/hotkeys) _(www.gimpusers.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

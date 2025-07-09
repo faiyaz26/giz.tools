@@ -1,0 +1,312 @@
+{
+  "id": "quip",
+  "metadata": {
+    "title": "Quip.com",
+    "date": "2022-11-23T16:23:31.697Z",
+    "background": "bg-[#e4795b]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 52 keyboard shortcuts found in Quip\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Anywhere",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Anywhere",
+              "body": "| Shortcut                  | Action                                                      |\n| ------------------------- | ----------------------------------------------------------- |\n| <code>\\`</code>           | Toggle styles between different types of headings and lists |\n| `Tab`                     | Indent a list item                                          |\n| `Shift` `Tab`             | De-indent a list item                                       |\n| `Shift` `Enter`           | Add a single space between lines                            |\n| `Esc`                     | Stop editing                                                |\n| `Ctrl` `/`                | List all keyboard shortcuts                                 |\n| `Ctrl` `Alt` `Shift` `N`  | Create a new ...                                            |\n| `Ctrl` `Alt` `N`          | Create a new document                                       |\n| `Ctrl` `Alt` `M`          | Create a new message                                        |\n| `Ctrl` `Shift` `D`        | Go to the desktop                                           |\n| `Ctrl` `Alt` `O`          | Search for a document, folder, or conversation              |\n| `Ctrl` `Alt` `Left/Right` | Move between tabs in the desktop app                        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "<code>\\`</code>",
+                  "action": "Toggle styles between different types of headings and lists"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Indent a list item"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "De-indent a list item"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Add a single space between lines"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Stop editing"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "List all keyboard shortcuts"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `N`",
+                  "action": "Create a new ..."
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `N`",
+                  "action": "Create a new document"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `M`",
+                  "action": "Create a new message"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `D`",
+                  "action": "Go to the desktop"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `O`",
+                  "action": "Search for a document, folder, or conversation"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Left/Right`",
+                  "action": "Move between tabs in the desktop app"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Style Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Style Shortcuts",
+              "body": "| Shortcut           | Action                                   |\n| ------------------ | ---------------------------------------- |\n| `Ctrl` `B`         | Bold the selected text                   |\n| `Ctrl` `I`         | Italicize the selected text              |\n| `Ctrl` `U`         | Underline the selected text              |\n| `Ctrl` `Shift` `X` | Strikethrough the selected text          |\n| `Ctrl` `Shift` `K` | Monospace (code style) the selected text |\n| `Ctrl` `Alt` `0`   | Paragraph (normal text style)            |\n| `Ctrl` `Alt` `1`   | Large heading style                      |\n| `Ctrl` `Alt` `2`   | Medium heading style                     |\n| `Ctrl` `Alt` `3`   | Small heading style                      |\n| `Ctrl` `Shift` `L` | Bulleted list style                      |\n| `Ctrl` `Alt` `K`   | Code block style                         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bold the selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Italicize the selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Underline the selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "Strikethrough the selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Monospace (code style) the selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `0`",
+                  "action": "Paragraph (normal text style)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `1`",
+                  "action": "Large heading style"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `2`",
+                  "action": "Medium heading style"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `3`",
+                  "action": "Small heading style"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Bulleted list style"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `K`",
+                  "action": "Code block style"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editing Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editing Shortcuts",
+              "body": "| Shortcut            | Action                         |\n| ------------------- | ------------------------------ |\n| `Ctrl` `Alt` `Up`   | Move a list item up one line   |\n| `Ctrl` `Alt` `Down` | Move a list item down one line |\n| `Ctrl` `Enter`      | Check a list item              |\n| `Ctrl` `Z`          | Undo                           |\n| `Ctrl` `Shift` `Z`  | Redo                           |\n| `Ctrl` `X`          | Cut                            |\n| `Ctrl` `C`          | Copy                           |\n| `Ctrl` `V`          | Paste                          |\n| `Ctrl` `P`          | Print document                 |\n| `Ctrl` `K`          | Insert link                    |\n| `Ctrl` `N`          | Next line                      |\n| `Ctrl` `P`          | Previous line                  |\n| `Ctrl` `Alt` `C`    | Hide or show conversation      |\n| `Ctrl` `Shift` `C`  | Add a comment                  |\n| `Ctrl` `Alt` `S`    | Finish edit session            |\n| `Ctrl` `Shift` `A`  | Create an anchor link          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Alt` `Up`",
+                  "action": "Move a list item up one line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Down`",
+                  "action": "Move a list item down one line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Check a list item"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Print document"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Insert link"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Next line"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Previous line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `C`",
+                  "action": "Hide or show conversation"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Add a comment"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `S`",
+                  "action": "Finish edit session"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Create an anchor link"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Spreadsheets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Spreadsheets",
+              "body": "| Shortcut                  | Action                                                       |\n| ------------------------- | ------------------------------------------------------------ |\n| `Ctrl` `(arrows)`         | Move to the edge of dat or the next non-empty cell           |\n| `Ctrl` `Shift` `(arrows)` | Expand select to the edge of data or the next non-empty cell |\n| `Shift` `Space`           | Select row                                                   |\n| `Ctrl` `Space`            | Select column                                                |\n| `Ctrl` `Enter`            | Fill selection with entered text                             |\n| `Ctrl` `D`                | Fill down in selection                                       |\n| `Ctrl` `R`                | Fill right in selection                                      |\n| `Ctrl` `Backspace`        | Scroll focused cell into view                                |\n| `Ctrl` `I`                | Insert above or in front of selected rows or columns         |\n| `Ctrl` `-`                | Remove selected rows or columns                              |\n| `Ctrl` `;`                | Insert current time                                          |\n| `Ctrl` `:`                | Insert today's date                                          |\n| `Alt` `Enter`             | Hard return within a cell                                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `(arrows)`",
+                  "action": "Move to the edge of dat or the next non-empty cell"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `(arrows)`",
+                  "action": "Expand select to the edge of data or the next non-empty cell"
+                },
+                {
+                  "shortcut": "`Shift` `Space`",
+                  "action": "Select row"
+                },
+                {
+                  "shortcut": "`Ctrl` `Space`",
+                  "action": "Select column"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Fill selection with entered text"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Fill down in selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Fill right in selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Backspace`",
+                  "action": "Scroll focused cell into view"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Insert above or in front of selected rows or columns"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Remove selected rows or columns"
+                },
+                {
+                  "shortcut": "`Ctrl` `;`",
+                  "action": "Insert current time"
+                },
+                {
+                  "shortcut": "`Ctrl` `:`",
+                  "action": "Insert today's date"
+                },
+                {
+                  "shortcut": "`Alt` `Enter`",
+                  "action": "Hard return within a cell"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Quip](https://www.quipsupport.com/hc/en-us/articles/210436306-What-are-Quip-s-keyboard-shortcuts-)\n  _(www.quipsupport.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

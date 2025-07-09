@@ -1,0 +1,855 @@
+{
+  "id": "regex",
+  "metadata": {
+    "title": "RegEX",
+    "date": "2020-11-25T18:28:43.000Z",
+    "background": "bg-[#e56d2d]",
+    "tags": [
+      "regular expression",
+      "regexp",
+      "pattern"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "This is a quick cheat sheet to getting started with regular expressions.\n\n- [Regex in Python](#regex-in-python) _(cheatsheets.zip)_\n- [Regex in JavaScript](#regex-in-javascript) _(cheatsheets.zip)_\n- [Regex in PHP](#regex-in-php) _(cheatsheets.zip)_\n- [Regex in Java](#regex-in-java) _(cheatsheets.zip)_\n- [Regex in MySQL](#regex-in-mysql) _(cheatsheets.zip)_\n- [Regex in Vim](/vim#search-and-replace) _(cheatsheets.zip)_\n- [Regex in Emacs](/emacs#search) _(cheatsheets.zip)_\n- [Online regex tester](https://regex101.com/) _(regex101.com)_\n\n{.cols-2 .marker-round}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Character Classes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Character Classes",
+              "body": "| Pattern       | Description                                                                |\n| ------------- | :------------------------------------------------------------------------- |\n| `[abc]`       | A single character of: <yel>a</yel>, <yel>b</yel> or <yel>c</yel>          |\n| `[^abc]`      | A character except: <yel>a</yel>, <yel>b</yel> or <yel>c</yel>             |\n| `[a-z]`       | A character in the range: <yel>a-z</yel>                                   |\n| `[^a-z]`      | A character not in the range: <red>a-z</red>                               |\n| `[0-9]`       | A digit in the range: <yel>0-9</yel>                                       |\n| `[a-zA-Z]`    | A character in the range: <yel>a-z</yel> or <yel>A-Z</yel>                 |\n| `[a-zA-Z0-9]` | A character in the range: <yel>a-z</yel>, <yel>A-Z</yel> or <yel>0-9</yel> |\n\n{.style-list}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Quantifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Quantifiers",
+              "body": "| Pattern  | Description           |\n| -------- | :-------------------- |\n| `a?`     | Zero or one of a      |\n| `a*`     | Zero or more of a     |\n| `a+`     | One or more of a      |\n| `[0-9]+` | One or more of 0-9    |\n| `a{3}`   | Exactly 3 of a        |\n| `a{3,}`  | 3 or more of a        |\n| `a{3,6}` | Between 3 and 6 of a  |\n| `a*`     | Greedy quantifier     |\n| `a*?`    | Lazy quantifier       |\n| `a*+`    | Possessive quantifier |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Common Metacharacters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Common Metacharacters",
+              "body": "| Pattern | Description                                                  |\n| ------- | :----------------------------------------------------------- | -------------------------------------------- |\n| `^`     | Matches the start of a string.                               |\n| `{`     | Starts a quantifier for the number of occurrences.           |\n| `+`     | Matches one or more of the preceding element.                |\n| `<`     | Not a standard regex meta character (commonly used in HTML). |\n| `[`     | Starts a character class.                                    |\n| `*`     | Matches zero or more of the preceding element.               |\n| `)`     | Ends a capturing group.                                      |\n| `>`     | Not a standard regex meta character (commonly used in HTML). |\n| `.`     | Matches any character except a newline.                      |\n| `(`     | Starts a capturing group.                                    |\n| `       | `                                                            | Acts as a logical OR within a regex pattern. |\n| `$`     | Matches the end of a string.                                 |\n| `\\`     | Escapes a meta character, giving it literal meaning.         |\n| `?`     | Matches zero or one of the preceding element.                |\n\n{.cols-3 .marker-none}\n\nEscape these special characters with `\\`",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Meta Sequences",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Meta Sequences",
+              "body": "| Pattern      | Description                                                 |\n| ------------ | :---------------------------------------------------------- |\n| `.`          | Any single character                                        |\n| `\\s`         | Any whitespace character                                    |\n| `\\S`         | Any non-whitespace character                                |\n| `\\d`         | Any digit, Same as [0-9]                                    |\n| `\\D`         | Any non-digit, Same as [^0-9]                               |\n| `\\w`         | Any word character                                          |\n| `\\W`         | Any non-word character                                      |\n| `\\X`         | Any Unicode sequences, linebreaks included                  |\n| `\\C`         | Match one data unit                                         |\n| `\\R`         | Unicode newlines                                            |\n| `\\v`         | Vertical whitespace character                               |\n| `\\V`         | Negation of \\v - anything except newlines and vertical tabs |\n| `\\h`         | Horizontal whitespace character                             |\n| `\\H`         | Negation of \\h                                              |\n| `\\K`         | Reset match                                                 |\n| `\\n`         | Match nth subpattern                                        |\n| `\\pX`        | Unicode property X                                          |\n| `\\p{...}`    | Unicode property or script category                         |\n| `\\PX`        | Negation of \\pX                                             |\n| `\\P{...}`    | Negation of \\p                                              |\n| `\\Q...\\E`    | Quote; treat as literals                                    |\n| `\\k<name>`   | Match subpattern `name`                                     |\n| `\\k'name'`   | Match subpattern `name`                                     |\n| `\\k{name}`   | Match subpattern `name`                                     |\n| `\\gn`        | Match nth subpattern                                        |\n| `\\g{n}`      | Match nth subpattern                                        |\n| `\\g<n>`      | Recurse nth capture group                                   |\n| `\\g'n'`      | Recurses nth capture group.                                 |\n| `\\g{-n}`     | Match nth relative previous subpattern                      |\n| `\\g<+n>`     | Recurse nth relative upcoming subpattern                    |\n| `\\g'+n'`     | Match nth relative upcoming subpattern                      |\n| `\\g'letter'` | Recurse named capture group `letter`                        |\n| `\\g{letter}` | Match previously-named capture group `letter`               |\n| `\\g<letter>` | Recurses named capture group `letter`                       |\n| `\\xYY`       | Hex character YY                                            |\n| `\\x{YYYY}`   | Hex character YYYY                                          |\n| `\\ddd`       | Octal character ddd                                         |\n| `\\cY`        | Control character Y                                         |\n| `[\\b]`       | Backspace character                                         |\n| `\\`          | Makes any character literal                                 |",
+              "footer": "",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Anchors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Anchors",
+              "body": "| Pattern | Description            |\n| ------- | :--------------------- |\n| `\\G`    | Start of match         |\n| `^`     | Start of string        |\n| `$`     | End of string          |\n| `\\A`    | Start of string        |\n| `\\Z`    | End of string          |\n| `\\z`    | Absolute end of string |\n| `\\b`    | A word boundary        |\n| `\\B`    | Non-word boundary      |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Substitution",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Substitution",
+              "body": "| Pattern    | Description                     |\n| ---------- | :------------------------------ |\n| `\\0`       | Complete match contents         |\n| `\\1`       | Contents in capture group 1     |\n| `$1`       | Contents in capture group 1     |\n| `${foo}`   | Contents in capture group `foo` |\n| `\\x20`     | Hexadecimal replacement values  |\n| `\\x{06fa}` | Hexadecimal replacement values  |\n| `\\t`       | Tab                             |\n| `\\r`       | Carriage return                 |\n| `\\n`       | Newline                         |\n| `\\f`       | Form-feed                       |\n| `\\U`       | Uppercase Transformation        |\n| `\\L`       | Lowercase Transformation        |\n| `\\E`       | Terminate any Transformation    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Group Constructs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Group Constructs",
+              "body": "| Pattern               | Description                           |\n| --------------------- | :------------------------------------ |\n| `(...)`               | Capture everything enclosed           |\n| <code>(a\\|b)</code>   | Match either a or b                   |\n| `(?:...)`             | Match everything enclosed             |\n| `(?>...)`             | Atomic group (non-capturing)          |\n| <code>(?\\|...)</code> | Duplicate subpattern group number     |\n| `(?#...)`             | Comment                               |\n| `(?'name'...)`        | Named Capturing Group                 |\n| `(?<name>...)`        | Named Capturing Group                 |\n| `(?P<name>...)`       | Named Capturing Group                 |\n| `(?imsxXU)`           | Inline modifiers                      |\n| `(?(DEFINE)...)`      | Pre-define patterns before using them |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Assertions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Assertions",
+              "body": "| -                               | -                               |\n| ------------------------------- | :------------------------------ |\n| <code>(?(1)yes\\|no)</code>      | Conditional statement           |\n| <code>(?(R)yes\\|no)</code>      | Conditional statement           |\n| <code>(?(R#)yes\\|no)</code>     | Recursive Conditional statement |\n| <code>(?(R&name\\yes\\|no)</code> | Conditional statement           |\n| <code>(?(?=...)yes\\|no)</code>  | Lookahead conditional           |\n| <code>(?(?<=...)yes\\|no)</code> | Lookbehind conditional          |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Lookarounds",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Lookarounds",
+              "body": "| -          | -                   |\n| ---------- | :------------------ |\n| `(?=...)`  | Positive Lookahead  |\n| `(?!...)`  | Negative Lookahead  |\n| `(?<=...)` | Positive Lookbehind |\n| `(?<!...)` | Negative Lookbehind |\n\nLookaround lets you match a group before (lookbehind) or after (lookahead) your main pattern without including it in the\nresult.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Flags/Modifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Flags/Modifiers",
+              "body": "| Pattern | Description           |\n| ------- | :-------------------- |\n| `g`     | Global                |\n| `m`     | Multiline             |\n| `i`     | Case insensitive      |\n| `x`     | Ignore whitespace     |\n| `s`     | Single line           |\n| `u`     | Unicode               |\n| `X`     | eXtended              |\n| `U`     | Ungreedy              |\n| `A`     | Anchor                |\n| `J`     | Duplicate group names |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Recurse",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Recurse",
+              "body": "| -           | -                                 |\n| ----------- | :-------------------------------- |\n| `(?R)`      | Recurse entire pattern            |\n| `(?1)`      | Recurse first subpattern          |\n| `(?+1)`     | Recurse first relative subpattern |\n| `(?&name)`  | Recurse subpattern `name`         |\n| `(?P=name)` | Match subpattern `name`           |\n| `(?P>name)` | Recurse subpattern `name`         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "POSIX Character Classes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "POSIX Character Classes",
+              "body": "| Character Class | Same as                                            | Meaning                        |\n| --------------- | -------------------------------------------------- | :----------------------------- |\n| `[[:alnum:]]`   | `[0-9A-Za-z]`                                      | Letters and digits             |\n| `[[:alpha:]]`   | `[A-Za-z]`                                         | Letters                        |\n| `[[:ascii:]]`   | `[\\x00-\\x7F]`                                      | ASCII codes 0-127              |\n| `[[:blank:]]`   | `[\\t ]`                                            | Space or tab only              |\n| `[[:cntrl:]]`   | `[\\x00-\\x1F\\x7F]`                                  | Control characters             |\n| `[[:digit:]]`   | `[0-9]`                                            | Decimal digits                 |\n| `[[:graph:]]`   | `[[:alnum:][:punct:]]`                             | Visible characters (not space) |\n| `[[:lower:]]`   | `[a-z]`                                            | Lowercase letters              |\n| `[[:print:]]`   | `[ -~] == [ [:graph:]]`                            | Visible characters             |\n| `[[:punct:]]`   | <code>[!\"#$%&’()\\*+,-./:;<=>?@[]^\\_\\`{\\|}~]</code> | Visible punctuation characters |\n| `[[:space:]]`   | <code>[\\t\\n\\v\\f\\r ]</code>                         | Whitespace                     |\n| `[[:upper:]]`   | `[A-Z]`                                            | Uppercase letters              |\n| `[[:word:]]`    | `[0-9A-Za-z_]`                                     | Word characters                |\n| `[[:xdigit:]]`  | `[0-9A-Fa-f]`                                      | Hexadecimal digits             |\n| `[[:<:]]`       | `[\\b(?=\\w)]`                                       | Start of word                  |\n| `[[:>:]]`       | `[\\b(?<=\\w)]`                                      | End of word                    |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Control verb",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Control verb",
+              "body": "| -                      | -                     |\n| ---------------------- | :-------------------- |\n| `(*ACCEPT)`            | Control verb          |\n| `(*FAIL)`              | Control verb          |\n| `(*MARK:NAME)`         | Control verb          |\n| `(*COMMIT)`            | Control verb          |\n| `(*PRUNE)`             | Control verb          |\n| `(*SKIP)`              | Control verb          |\n| `(*THEN)`              | Control verb          |\n| `(*UTF)`               | Pattern modifier      |\n| `(*UTF8)`              | Pattern modifier      |\n| `(*UTF16)`             | Pattern modifier      |\n| `(*UTF32)`             | Pattern modifier      |\n| `(*UCP)`               | Pattern modifier      |\n| `(*CR)`                | Line break modifier   |\n| `(*LF)`                | Line break modifier   |\n| `(*CRLF)`              | Line break modifier   |\n| `(*ANYCRLF)`           | Line break modifier   |\n| `(*ANY)`               | Line break modifier   |\n| `\\R`                   | Line break modifier   |\n| `(*BSR_ANYCRLF)`       | Line break modifier   |\n| `(*BSR_UNICODE)`       | Line break modifier   |\n| `(*LIMIT_MATCH=x)`     | Regex engine modifier |\n| `(*LIMIT_RECURSION=d)` | Regex engine modifier |\n| `(*NO_AUTO_POSSESS)`   | Regex engine modifier |\n| `(*NO_START_OPT)`      | Regex engine modifier |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Regex examples{.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Characters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Characters",
+              "body": "| Pattern        | Matches                                                   |\n| -------------- | :-------------------------------------------------------- |\n| `ring        ` | Match <yel>ring</yel> sp<yel>ring</yel>board etc.         |\n| `.           ` | Match <yel>a</yel>, <yel>9</yel>, <yel>+</yel> etc.       |\n| `h.o         ` | Match <yel>hoo</yel>, <yel>h2o</yel>, <yel>h/o</yel> etc. |\n| `ring\\?      ` | Match <yel>ring?</yel>                                    |\n| `\\(quiet\\)   ` | Match <yel>(quiet)</yel>                                  |\n| `c:\\\\windows ` | Match <yel>c:\\windows</yel>                               |\n\nUse `\\` to search for these special characters: <br> `[ \\ ^ $ . | ? * + ( ) { }`",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Alternatives",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Alternatives",
+              "body": "| Pattern                   | Matches                                    |\n| ------------------------- | :----------------------------------------- |\n| <code>cat\\|dog</code>     | Match <yel>cat</yel> or <yel>dog</yel>     |\n| <code>id\\|identity</code> | Match <yel>id</yel> or <yel>id</yel>entity |\n| <code>identity\\|id</code> | Match <yel>id</yel> or <yel>identity</yel> |\n\nOrder longer to shorter when alternatives overlap",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Character classes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Character classes",
+              "body": "| Pattern           | Matches                                                                |\n| ----------------- | :--------------------------------------------------------------------- |\n| `[aeiou]`         | Match any vowel                                                        |\n| `[^aeiou]`        | Match a NON vowel                                                      |\n| `r[iau]ng`        | Match <yel>ring</yel>, w<yel>rang</yel>le, sp<yel>rung</yel>, etc.     |\n| `gr[ae]y`         | Match <yel>gray</yel> or <yel>grey</yel>                               |\n| `[a-zA-Z0-9]`     | Match any letter or digit                                              |\n| `[\\u3a00-\\ufa99]` | Match any [Unicode Hàn (中文)](https://unicode.org/charts/unihan.html) |\n\nIn `[ ]` always escape `. \\ ]` and sometimes `^ - .`",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Shorthand classes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shorthand classes",
+              "body": "| Pattern          | Meaning                                               |\n| ---------------- | :---------------------------------------------------- |\n| `\\w            ` | \"Word\" character <br>_(letter, digit, or underscore)_ |\n| `\\d            ` | Digit                                                 |\n| `\\s            ` | Whitespace <br>_(space, tab, vtab, newline)_          |\n| `\\W, \\D, or \\S ` | Not word, digit, or whitespace                        |\n| `[\\D\\S]        ` | Means not digit or whitespace, both match             |\n| `[^\\d\\s]       ` | Disallow digit and whitespace                         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Occurrences",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Occurrences",
+              "body": "| Pattern             | Matches                                                            |\n| ------------------- | :----------------------------------------------------------------- |\n| `colou?r`           | Match <yel>color</yel> or <yel>colour</yel>                        |\n| `[BW]ill[ieamy's]*` | Match <yel>Bill</yel>, <yel>Willy</yel>, <yel>William's</yel> etc. |\n| `[a-zA-Z]+`         | Match 1 or more letters                                            |\n| `\\d{3}-\\d{2}-\\d{4}` | Match a SSN                                                        |\n| `[a-z]\\w{1,7}`      | Match a UW NetID                                                   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Greedy versus lazy",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Greedy versus lazy",
+              "body": "| Pattern                  | Meaning                                                 |\n| ------------------------ | :------------------------------------------------------ |\n| `*  + {n,}`<br>_greedy_  | Match as much as possible                               |\n| `<.+>   `                | Finds 1 big match in <yel>\\<b>bold\\<\\/b></yel>          |\n| `*?  +? {n,}?`<br>_lazy_ | Match as little as possible                             |\n| `<.+?>`                  | Finds 2 matches in \\<<yel>b</yel>>bold\\<<yel>\\/b</yel>> |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Scope",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scope",
+              "body": "| Pattern            | Meaning                                                                                 |\n| ------------------ | :-------------------------------------------------------------------------------------- |\n| `\\b              ` | \"Word\" edge (next to non \"word\" character)                                              |\n| `\\bring          ` | Word starts with \"ring\", ex <yel>ringtone</yel>                                         |\n| `ring\\b          ` | Word ends with \"ring\", ex <yel>spring</yel>                                             |\n| `\\b9\\b           ` | Match single digit <yel>9</yel>, not <red>19</red>, <red>91</red>, <red>99</red>, etc.. |\n| `\\b[a-zA-Z]{6}\\b ` | Match 6-letter words                                                                    |\n| `\\B              ` | Not word edge                                                                           |\n| `\\Bring\\B        ` | Match <yel>springs</yel> and <yel>wringer</yel>                                         |\n| `^\\d*$           ` | Entire string must be digits                                                            |\n| `^[a-zA-Z]{4,20}$` | String must have 4-20 letters                                                           |\n| `^[A-Z]          ` | String must begin with capital letter                                                   |\n| `[\\.!?\"')]$      ` | String must end with terminal puncutation                                               |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Modifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Modifiers",
+              "body": "| Pattern              | Meaning                                                  |\n| -------------------- | :------------------------------------------------------- |\n| `(?i)`[a-z]\\*`(?-i)` | Ignore case ON / OFF                                     |\n| `(?s)`.\\*`(?-s)`     | Match multiple lines (causes . to match newline)         |\n| `(?m)`^.\\*;$`(?-m)`  | <yel>^</yel> & <yel>$</yel> match lines not whole string |\n| `(?x)`               | #free-spacing mode, this EOL comment ignored             |\n| `(?-x)`              | free-spacing mode OFF                                    |\n| /regex/`ismx`        | Modify mode for entire string                            |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Groups",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Groups",
+              "body": "| Pattern                   | Meaning                                     |\n| ------------------------- | :------------------------------------------ |\n| <code>(in\\|out)put</code> | Match <yel>input</yel> or <yel>output</yel> |\n| `\\d{5}(-\\d{4})?`          | US zip code _(\"+ 4\" optional)_              |\n\nParser tries EACH alternative if match fails after group. <br> Can lead to catastrophic backtracking.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Back references",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Back references",
+              "body": "| Pattern                  | Matches                                                                     |\n| ------------------------ | :-------------------------------------------------------------------------- |\n| `(to) (be) or not \\1 \\2` | Match <yel>to be or not to be</yel>                                         |\n| `([^\\s])\\1{2}`           | Match non-space, then same twice more &nbsp; <yel>aaa</yel>, <yel>...</yel> |\n| `\\b(\\w+)\\s+\\1\\b`         | Match doubled words                                                         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Non-capturing group",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Non-capturing group",
+              "body": "| Pattern                        | Meaning                            |\n| ------------------------------ | :--------------------------------- |\n| <code>on(?:click\\|load)</code> | Faster than: <br>`on(click\\|load)` |\n\nUse non-capturing or atomic groups when possible",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Atomic groups",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Atomic groups",
+              "body": "| Pattern                           | Meaning                                          |\n| --------------------------------- | :----------------------------------------------- |\n| <code>(?>red\\|green\\|blue)</code> | Faster than non-capturing                        |\n| <code>(?>id\\|identity)\\b</code>   | Match <yel>id</yel>, but not <red>id</red>entity |\n\n\"id\" matches, but `\\b` fails after atomic group, parser doesn't backtrack into group to retry 'identity'\n\nIf alternatives overlap, order longer to shorter.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Lookaround",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Lookaround",
+              "body": "| Pattern                 | Meaning                                                               |\n| ----------------------- | :-------------------------------------------------------------------- |\n| `(?= )`                 | Lookahead, if you can find ahead                                      |\n| `(?! )`                 | Lookahead,if you can not find ahead                                   |\n| `(?<= )`                | Lookbehind, if you can find behind                                    |\n| `(?<! )`                | Lookbehind, if you can NOT find behind                                |\n| `\\b\\w+?(?=ing\\b)`       | Match <yel>warbl</yel>ing, <yel>str</yel>ing, <yel>fish</yel>ing, ... |\n| `\\b(?!\\w+ing\\b)\\w+\\b`   | Words NOT ending in <red>ing</red>                                    |\n| `(?<=\\bpre).*?\\b `      | Match pre<yel>tend</yel>, pre<yel>sent</yel>, pre<yel>fix</yel>, ...  |\n| `\\b\\w{3}(?<!pre)\\w*?\\b` | Words NOT starting with <red>pre</red>                                |\n| `\\b\\w+(?<!ing)\\b`       | Match words NOT ending in <red>ing</red>                              |",
+              "footer": "",
+              "spanConfig": "row-span-2 .col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "If-then-else",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If-then-else",
+              "body": "```regex\nM(?(?=.*?\\bher\\b)s|r)\\.\n```",
+              "footer": "requires lookaround for IF condition",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "RegEx in Python",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Getting started",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting started",
+              "body": "```python\nimport re\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "",
+              "footer": "#### re.search()\n\n```python\n>>> sentence = 'This is a sample string'\n>>> bool(re.search(r'this', sentence, flags=re.I))\nTrue\n>>> bool(re.search(r'xyz', sentence))\nFalse\n```\n\n#### re.findall()\n\n```python\n>>> re.findall(r'\\bs?pare?\\b', 'par spar apparent spare part pare')\n['par', 'spar', 'spare', 'pare']\n>>> re.findall(r'\\b0*[1-9]\\d{2,}\\b', '0501 035 154 12 26 98234')\n['0501', '154', '98234']\n```\n\n#### re.finditer()\n\n```python\n>>> m_iter = re.finditer(r'[0-9]+', '45 349 651 593 4 204')\n>>> [m[0] for m in m_iter if int(m[0]) < 350]\n['45', '349', '4', '204']\n```\n\n#### re.split()\n\n```python\n>>> re.split(r'\\d+', 'Sample123string42with777numbers')\n['Sample', 'string', 'with', 'numbers']\n```\n\n#### re.sub()\n\n```python\n>>> ip_lines = \"catapults\\nconcatenate\\ncat\"\n>>> print(re.sub(r'^', r'* ', ip_lines, flags=re.M))\n* catapults\n* concatenate\n* cat\n```\n\n#### re.compile()\n\n```python\n>>> pet = re.compile(r'dog')\n>>> type(pet)\n<class '_sre.SRE_Pattern'>\n>>> bool(pet.search('They bought a dog'))\nTrue\n>>> bool(pet.search('A cat crossed their path'))\nFalse\n```",
+              "spanConfig": "col-span-2 .row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "| Function      | Description                                                       |\n| ------------- | :---------------------------------------------------------------- |\n| `re.findall`  | Returns a list containing all matches                             |\n| `re.finditer` | Return an iterable of match objects (one for each match)          |\n| `re.search`   | Returns a Match object if there is a match anywhere in the string |\n| `re.split`    | Returns a list where the string has been split at each match      |\n| `re.sub`      | Replaces one or many matches with a string                        |\n| `re.compile`  | Compile a regular expression pattern for later use                |\n| `re.escape`   | Return string with all non-alphanumerics backslashed              |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Flags",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Flags",
+              "body": "| -      | -               | -                                            |\n| ------ | --------------- | :------------------------------------------- |\n| `re.I` | `re.IGNORECASE` | Ignore case                                  |\n| `re.M` | `re.MULTILINE`  | Multiline                                    |\n| `re.L` | `re.LOCALE`     | Make `\\w`,`\\b`,`\\s` _locale dependent_       |\n| `re.S` | `re.DOTALL`     | Dot matches all _(including newline)_        |\n| `re.U` | `re.UNICODE`    | Make `\\w`,`\\b`,`\\d`,`\\s` _unicode dependent_ |\n| `re.X` | `re.VERBOSE`    | Readable style                               |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Regex in JavaScript",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "test()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "test()",
+              "body": "```javascript\nlet textA = 'I like APPles very much';\nlet textB = 'I like APPles';\nlet regex = /apples$/i;\n\n// Output: false\nconsole.log(regex.test(textA));\n\n// Output: true\nconsole.log(regex.test(textB));\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "search()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "search()",
+              "body": "```javascript\nlet text = 'I like APPles very much';\nlet regexA = /apples/;\nlet regexB = /apples/i;\n\n// Output: -1\nconsole.log(text.search(regexA));\n\n// Output: 7\nconsole.log(text.search(regexB));\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "exec()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "exec()",
+              "body": "```javascript\nlet text = 'Do you like apples?';\nlet regex = /apples/;\n\n// Output: apples\nconsole.log(regex.exec(text)[0]);\n\n// Output: Do you like apples?\nconsole.log(regex.exec(text).input);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "match()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "match()",
+              "body": "```javascript\nlet text = 'Here are apples and apPleS';\nlet regex = /apples/gi;\n\n// Output: [ \"apples\", \"apPleS\" ]\nconsole.log(text.match(regex));\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "split()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "split()",
+              "body": "```javascript\nlet text = 'This 593 string will be brok294en at places where d1gits are.';\nlet regex = /\\d+/g;\n\n// Output: [ \"This \", \" string will be brok\", \"en at places where d\", \"gits are.\" ]\nconsole.log(text.split(regex));\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "matchAll()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "matchAll()",
+              "body": "```javascript\nlet regex = /t(e)(st(\\d?))/g;\nlet text = 'test1test2';\nlet array = [...text.matchAll(regex)];\n\n// Output: [\"test1\", \"e\", \"st1\", \"1\"]\nconsole.log(array[0]);\n\n// Output: [\"test2\", \"e\", \"st2\", \"2\"]\nconsole.log(array[1]);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "replace()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "replace()",
+              "body": "",
+              "footer": "```javascript {.wrap}\nlet text = 'Do you like aPPles?';\nlet regex = /apples/i;\n\n// Output: Do you like mangoes?\nlet result = text.replace(regex, 'mangoes');\nconsole.log(result);\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "replaceAll()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "replaceAll()",
+              "body": "```javascript\nlet regex = /apples/gi;\nlet text = 'Here are apples and apPleS';\n\n// Output: Here are mangoes and mangoes\nlet result = text.replaceAll(regex, 'mangoes');\nconsole.log(result);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Regex in PHP",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "| -                         | -                                                                |\n| ------------------------- | :--------------------------------------------------------------- |\n| `preg_match()`            | Performs a regex match                                           |\n| `preg_match_all()`        | Perform a global regular expression match                        |\n| `preg_replace_callback()` | Perform a regular expression search and replace using a callback |\n| `preg_replace()`          | Perform a regular expression search and replace                  |\n| `preg_split()`            | Splits a string by regex pattern                                 |\n| `preg_grep()`             | Returns array entries that match a pattern                       |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "preg_replace",
+          "level": 3,
+          "cards": [
+            {
+              "title": "preg_replace",
+              "body": "",
+              "footer": "```php {.wrap}\n$str = \"Visit Microsoft!\";\n$regex = \"/microsoft/i\";\n\n// Output: Visit CheatSheets!\necho preg_replace($regex, \"CheatSheets\", $str);\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "preg_match",
+          "level": 3,
+          "cards": [
+            {
+              "title": "preg_match",
+              "body": "```php\n$str = \"Visit CheatSheets\";\n$regex = \"#cheatsheets#i\";\n\n// Output: 1\necho preg_match($regex, $str);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "preg_matchall",
+          "level": 3,
+          "cards": [
+            {
+              "title": "preg_matchall",
+              "body": "```php\n$regex = \"/[a-zA-Z]+ (\\d+)/\";\n$input_str = \"June 24, August 13, and December 30\";\nif (preg_match_all($regex, $input_str, $matches_out)) {\n\n    // Output: 2\n    echo count($matches_out);\n\n    // Output: 3\n    echo count($matches_out[0]);\n\n    // Output: Array(\"June 24\", \"August 13\", \"December 30\")\n    print_r($matches_out[0]);\n\n    // Output: Array(\"24\", \"13\", \"30\")\n    print_r($matches_out[1]);\n}\n```",
+              "footer": "",
+              "spanConfig": "col-span-2 .row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "preg_grep",
+          "level": 3,
+          "cards": [
+            {
+              "title": "preg_grep",
+              "body": "```php\n$arr = [\"Jane\", \"jane\", \"Joan\", \"JANE\"];\n$regex = \"/Jane/\";\n\n// Output: Jane\necho preg_grep($regex, $arr);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "preg_split",
+          "level": 3,
+          "cards": [
+            {
+              "title": "preg_split",
+              "body": "```php\n$str = \"Jane\\tKate\\nLucy Marion\";\n$regex = \"@\\s@\";\n\n// Output: Array(\"Jane\", \"Kate\", \"Lucy\", \"Marion\")\nprint_r(preg_split($regex, $str));\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Regex in Java",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Styles",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Styles",
+              "body": "",
+              "footer": "#### First way\n\n```java\nPattern p = Pattern.compile(\".s\", Pattern.CASE_INSENSITIVE);\nMatcher m = p.matcher(\"aS\");\nboolean s1 = m.matches();\nSystem.out.println(s1);   // Outputs: true\n```\n\n#### Second way\n\n```java\nboolean s2 = Pattern.compile(\"[0-9]+\").matcher(\"123\").matches();\nSystem.out.println(s2);   // Outputs: true\n```\n\n#### Third way\n\n```java\nboolean s3 = Pattern.matches(\".s\", \"XXXX\");\nSystem.out.println(s3);   // Outputs: false\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pattern Fields",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pattern Fields",
+              "body": "| -                  | -                               |\n| ------------------ | :------------------------------ |\n| `CANON_EQ`         | Canonical equivalence           |\n| `CASE_INSENSITIVE` | Case-insensitive matching       |\n| `COMMENTS`         | Permits whitespace and comments |\n| `DOTALL`           | Dotall mode                     |\n| `MULTILINE`        | Multiline mode                  |\n| `UNICODE_CASE`     | Unicode-aware case folding      |\n| `UNIX_LINES`       | Unix lines mode                 |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Methods",
+              "body": "",
+              "footer": "#### Pattern\n\n- Pattern compile(String regex [, int flags])\n- boolean matches([String regex, ] CharSequence input)\n- String[] split(String regex [, int limit])\n- String quote(String s)\n\n#### Matcher\n\n- int start([int group | String name])\n- int end([int group | String name])\n- boolean find([int start])\n- String group([int group | String name])\n- Matcher reset()\n\n#### String\n\n- boolean matches(String regex)\n- String replaceAll(String regex, String replacement)\n- String[] split(String regex[, int limit])\n\nThere are more methods ...",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "```java\nString regex = \"[A-Z\\n]{5}$\";\nString str = \"I like APP\\nLE\";\n\nPattern p = Pattern.compile(regex, Pattern.MULTILINE);\nMatcher m = p.matcher(str);\n\n// Outputs: I like Apple!\nSystem.out.println(m.replaceAll(\"pple!\"));\n```",
+              "footer": "Array of all matches:\n```java\nString str = \"She sells seashells by the Seashore\";\nString regex = \"\\\\w*se\\\\w*\";\nPattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);\nMatcher m = p.matcher(str);\nList<String> matches = new ArrayList<>();\nwhile (m.find()) {\nmatches.add(m.group());\n}\n// Outputs: [sells, seashells, Seashore]\nSystem.out.println(matches);\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Regex in MySQL {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "| Name               | Description                                                              |\n| ------------------ | :----------------------------------------------------------------------- |\n| `REGEXP          ` | Whether string matches regex                                             |\n| `REGEXP_INSTR()  ` | Starting index of substring matching regex <br>_(NOTE: Only MySQL 8.0+)_ |\n| `REGEXP_LIKE()   ` | Whether string matches regex <br>_(NOTE: Only MySQL 8.0+)_               |\n| `REGEXP_REPLACE()` | Replace substrings matching regex <br>_(NOTE: Only MySQL 8.0+)_          |\n| `REGEXP_SUBSTR() ` | Return substring matching regex <br>_(NOTE: Only MySQL 8.0+)_            |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "REGEXP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "REGEXP",
+              "body": "```sql {.wrap}\nexpr REGEXP pat\n```",
+              "footer": "#### Examples\n\n```sql\nmysql> SELECT 'abc' REGEXP '^[a-d]';\n1\nmysql> SELECT name FROM cities WHERE name REGEXP '^A';\nmysql> SELECT name FROM cities WHERE name NOT REGEXP '^A';\nmysql> SELECT name FROM cities WHERE name REGEXP 'A|B|R';\nmysql> SELECT 'a' REGEXP 'A', 'a' REGEXP BINARY 'A';\n1   0\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "REGEXP_REPLACE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "REGEXP_REPLACE",
+              "body": "```{.wrap}\nREGEXP_REPLACE(expr, pat, repl[, pos[, occurrence[, match_type]]])\n```",
+              "footer": "#### Examples\n\n```sql\nmysql> SELECT REGEXP_REPLACE('a b c', 'b', 'X');\na X c\nmysql> SELECT REGEXP_REPLACE('abc ghi', '[a-z]+', 'X', 1, 2);\nabc X\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "REGEXP_SUBSTR",
+          "level": 3,
+          "cards": [
+            {
+              "title": "REGEXP_SUBSTR",
+              "body": "```{.wrap}\nREGEXP_SUBSTR(expr, pat[, pos[, occurrence[, match_type]]])\n```",
+              "footer": "#### Examples\n\n```sql\nmysql> SELECT REGEXP_SUBSTR('abc def ghi', '[a-z]+');\nabc\nmysql> SELECT REGEXP_SUBSTR('abc def ghi', '[a-z]+', 1, 3);\nghi\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "REGEXP_LIKE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "REGEXP_LIKE",
+              "body": "```\nREGEXP_LIKE(expr, pat[, match_type])\n```",
+              "footer": "#### Examples\n\n```sql\nmysql> SELECT regexp_like('aba', 'b+')\n1\nmysql> SELECT regexp_like('aba', 'b{2}')\n0\nmysql> # i: case-insensitive\nmysql> SELECT regexp_like('Abba', 'ABBA', 'i');\n1\nmysql> # m: multi-line\nmysql> SELECT regexp_like('a\\nb\\nc', '^b$', 'm');\n1\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "REGEXP_INSTR",
+          "level": 3,
+          "cards": [
+            {
+              "title": "REGEXP_INSTR",
+              "body": "```{.wrap}\nREGEXP_INSTR(expr, pat[, pos[, occurrence[, return_option[, match_type]]]])\n```",
+              "footer": "#### Examples\n\n```sql\nmysql> SELECT regexp_instr('aa aaa aaaa', 'a{3}');\n2\nmysql> SELECT regexp_instr('abba', 'b{2}', 2);\n2\nmysql> SELECT regexp_instr('abbabba', 'b{2}', 1, 2);\n5\nmysql> SELECT regexp_instr('abbabba', 'b{2}', 1, 3, 1);\n7\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

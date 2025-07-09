@@ -1,0 +1,422 @@
+{
+  "id": "chatgpt",
+  "metadata": {
+    "title": "ChatGPT",
+    "date": "2023-02-09T10:28:43.000Z",
+    "background": "bg-[#4aa181]",
+    "tags": [
+      "AI",
+      "OpenAI",
+      "Prompts",
+      "Tips"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "This cheat sheet lists out prompts and tips from all over the world on how to use ChatGPT effectively",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Terminology",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Terminology",
+              "body": "- Prompt: input text that guides an AI model’s response.\n- Tokens: the smallest units of text processed by an AI model.\n- Token Limit: the max number of tokens an AI model can process in one request.\n- Artificial intelligence (AI): machines that imitate human intelligence.\n- AI Model: a program trained on datasets to recognize patterns and make decisions without human intervention.\n- Large language model (LLM): a transformer-based AI model trained on large text datasets to understand and generate\n  human-like language.\n- Hallucination: when an AI model generates responses that are false or misleading but presented as fact.\n- Jailbreak: exploiting AI model vulnerabilities to bypass ethical guidelines and perform restricted actions.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tips",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tips",
+              "body": "```\n- Restructure text to eliminate filler words that don’t add meaning:\n```",
+              "footer": "{.wrap}\nExample: “provide a breakdown\" -> \"provide sales breakdown”.\n```\n- Do not explicitly refer to the item being processed unless addressing a specific part of it as what you provide will\ntypically speak for itself:\n```{.wrap}\nExample: “Filter this piece of text\" -> \"Filter text”\n```\n- Do not explicitly ask the AI for help:\n```{.wrap}\nExample: “can you help me x”.\n```\n- Do not explicitly reference yourself unless clarifying multiple entities:\n```{.wrap}\nExample: \"do X for me\".\nExample: ”I want to x”.\n```\n- Do not be polite to the AI:\n```{.wrap}\nExample: \"please do X\".\nExample: “thanks”.\n```\nPrompt Clarity\n- Consider breaking up complex ideas into granular bullet points to improve clarity, avoid searching for text, and\neliminate comma lists and conjunctions (e.g., and).\n- Avoid vague or close ended questions.\n```{.wrap}\nExample: “Do you think our site is good\" -> \"Explain flaws in the designs of each webpage”\n```\n- Ensure prompts are specific\n```{.wrap}\nExample: “explain our sales\" -> \"explain a breakdown of our sales performance for the last quarter”.\n```\nResponse Refinement\n- If the AI model misunderstands your request then specify the intended action.\n- Provide sufficient context so the AI model can understand the scenario.\nPrivacy And Security\n- Never share sensitive information with AI model's as you can't be certain how it's stored, whether it will be shared,\nof if a data breach may occur.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Prompt Engineering",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Prompt Frameworks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Prompt Frameworks",
+              "body": "```\nGeneral Purpose\n[role] [task] [tone] [format] [restriction]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Role",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Role",
+              "body": "Standard\n\n- Act as [occupation]\n\nCommon Standard Roles\n\n- Personal Coach\n- Consultant\n- Entrepreneur\n- Proofreader\n- Therapist\n\nAlso See\n\n- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts) _(github.com)_\n\nRoleplay\n\n- Act as [figure] with [appearance] [personality] [behaviour examples] [lore] in [scenario]",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Task",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Task",
+              "body": "[verb] [task] [specifics]",
+              "footer": "#### 5W1H Questions\n\nWho\n\n- Who is X?\n- Who is [involved | affected | responsible] for X?\n- Who should I contact for help with X?\n\nWhat\n\n- [What is | define | explain | describe] X?\n- What does X do?\n- What did [entity | text] mean by [quote]?\n- What events led up to [event]?\n- What [assumptions | risks | constraints] exist for X?\n- What are the critical features of X?\n- [What is done well? what can be improved?]\n- What is the best way to do X?\n- What are the top 5 X?\n\nWhen\n\n- When [did | will] [entity | event] occur?\n- When is X due?\n- When is the best time to initiate X?\n\nWhere\n\n- Where did [entity | event] happen?\n- [Where to find X? | where to find resources about X? | suggest websites about X]\n\nWhy\n\n- Why did [entity] choose [approach]?\n- Why [did | will] [event] occur?\n- Why is [approach] being implemented?\n- Why might X succeed or fail?\n- Why is [solution] preferable to [alternative]?\n- Why is it important?\n\nHow\n\n- How to do X?\n- How does X work?\n- How does X do Y?\n- How to measure [metric] accurately?\n\n#### Utility\n\nGenerate And Expand Content\n\n- Write [content type] to [entity] about [topic] should cover [aspects] **_(Content type examples: article, description, documentation, dummy data, email, resume, essay, guide, outline, program, recipe, SEO keywords, story, social media post, study plan, title, video script)_**\n- Generate random [names | numbers | words | ideas | X] matching [criteria]\n- [Continue | expand]\n- Create image of X\n\nSummarize And Outline\n\n- [Summarise | write key takeaways | write main points | write main lesson | highlight important info]\n- [Shorten | write concise]\n- Create outline\n\nModify And Refine Text\n\n- [Write better | improve]\n- Paraphrase\n- Correct spelling, grammar, punctuation errors\n- Change [narrative voice A] to [narrative voice B]\n\nExplain And Teach\n\n- [Explain | elaborate]\n- Explain [how to do | each step of] X\n- Explain what X does\n- Explain X [in simple terms | like I’m 5]; Simplify X\n- Teach me about [topic | subject]\n- Provide [example | analogy]\n\nOrganize And Structure\n\n- Sort X by [key] in [order] **_(Sort order examples: alphabetical, chronological, ascending, descending, lexicographical, custom)_**\n- Categorize\n\nPlan And Strategize\n\n- Plan [strategy for | goals and steps to achieve | milestones for | roadmap for] X\n- Create [schedule | timeline] for X\n\nRecommend And Advise\n\n- Recommend [media type] [on | similar to] [topic]\n- Recommend [gift ideas | thing] for [entity | occasion]\n- Recommend improvements\n- Provide advice for [situation]\n- Give feedback on idea for X\n\nAnalyze And Compare\n\n- Extract [themes | keywords | info] about X\n- Identify [similarities | differences] between X and Y\n- Analyse the [sentiment | tone] of X\n- Identify gaps in X\n- Evaluate [strengths and weaknesses | pros and cons] of X\n- Is X [comparison operator] Y? **_(Can be abstractly expressed as a sentence like \"is an apple bigger than a walnut\"?)_**\n- Reverse engineer X\n\nTranslate And Convert\n\n- Translate [human language A] into [human language B]\n- Translate [programming language A] into [programming language B]\n- Translate into emojis\n- Convert [unit A] to [unit B]\n- Reformat as [output format]\n\nFilter And Choose\n\n- Filter X where [condition]\n- Exclude X where [condition]\n- Choose best from [options]\n- Choose [top | lowest | first | last | random] [quantity] from [options]\n\nReal-Time Lookup And Verify\n\n- Get up-to-date [facts | news | data] on X\n- Is this true?\n- Find [sources | references | citations] for X\n\nEngagement And Trivia\n\n- Give questions about X\n\nChat Memory\n\n- What did you mean by X?\n- What was said earlier about X?\n- Use earlier context to do X\n\n#### Conditional Clauses\n\n- [Verb] [item number]\n- [Verb] the [first | last | random] [quantity] of X\n- [Verb] the [first | last | random] [quantity] of X where [condition]\n- [Verb] X where [condition]\n- [Verb] X where not [condition]\n\n#### Database CRUD Operations\n\nCreate\n\n- [Write content about X|suggest ideas about X|suggest titles about X]\n- Write content about X in the style of [style]\n- Write better\n- Write email to [entity] about X\n- [Continue|expand]\n- [Explain how to do X|create roadmap for X]\n- [Suggest best practices for X|suggest improvements|what am I doing right?|what am I doing wrong?]\n- Show list of emojis about X\n- [Create|generate|imagine] image about X\n\nRead\n\n- [Summarise|write concise main points]\n- [Explain|elaborate]\n- Explain what [entity|text] meant by X\n- Identify themes in X\n- Write outline about X\n- Extract keywords\n- Get up-to-date [facts|news|data] on X\n- Is this true?\n- Suggest [media] [about|similar to] X\n- Pick best from [options]\n\nUpdate\n\n- For all X do [action]\n- For X do [action] if matching [criteria]\n- Reformat everything as [format]\n\nDelete\n\n- Delete [quantity] of X matching [criteria]\n- Delete everything except X\n- Delete [item] [number]\n- Delete duplicate items from X\n\nCompare\n\n- Identify [simlarities|diffirences] between X and Y\n- Identify gaps in X\n- Evaluate pros and cons of X\n- X [comparison operator] Y. It could be abstractly expressed as \"are apples bigger than walnuts?\"\n\nFilter\n\n- Filter X by [criteria]\n- Exclude X by [criteria]. Everything is excluded by default.\n\nSelect\n\n- Select [quantity] of X based on [criteria|randomly]\n\nSimplify\n\n- Explain X like I’m 5\n- Explain in simple terms\n\nSort\n\n- Sort X by [key] in [alphabetical|chronological|ascending|descending|lexicographical|custom] order\n\nTranslate\n\n- Translate into [language]. For programming languages it's specifically called transpile",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tone",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tone",
+              "body": "Using [tone] tone\n\nFormality\n\n- Formal\n- Informal\n\nDirectness\n\n- Direct\n- Indirect\n\nPositive Tones\n\n- Optimistic\n- Appreciative\n- Assertive\n- Calm\n- Confident\n- Encouraging\n- Friendly\n- Humorous\n- Inspirational\n\nNegative Tones\n\n- Pessimistic\n- Accusatory\n- Concerned\n- Critical\n- Regretful\n- Sarcastic\n- Urgent",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Format",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Format",
+              "body": "In [format]\n\nPresentation\n\n- Plain text\n- Bullet point list\n- Numbered list\n- Check list\n\nCode\n\n- Code\n\nProcess\n\n- Step-by-step instructions\n\nResponse\n\n- Question and answer\n- Dialogue\n\nCreative\n\n- Poetry\n- Music lyrics\n- Script\n- Comic strip dialogue\n- Poetry\n- Music lyrics\n- Riddle\n\nGame\n\n- Quiz\n- RPG\n- Choose-Your-Own-Adventure",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Restriction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Restriction",
+              "body": "But [restriction]\n\nLength Constraints\n\n- Concise\n- In N words\n- In N sentences\n\nLanguage Constraints\n\n- No jargon or technical terms\n\nStructural Constraints\n\n- Show N options\n- No examples\n- No headers\n- No pretext titles\n\nContent Constraints\n\n- Don't change the wording\n- Permit [minor | major] edits\n- Use pop culture references\n- Ensure goals align with SMART criteria\n- Only show [changed | unchanged] content",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Examples",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Job",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Job",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nSuggest catchy names for bakery business\n```\nInterview Questions\n```{.wrap}\nSuggest common software engineer interview questions\n```\nCreate Course Outline\n```{.wrap}\nCreate course outline on web development for beginners\n```\n```{.wrap}\nCreate training program outline for customer service workshop\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Relationship",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Relationship",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nSuggest gift ideas for clients who work as flourists\n```\n```{.wrap}\nSuggest gift ideas for my wife who loves steampunk art and crafts, mystery sci-fi, journalling\n```\n```{.wrap}\nSuggest creative ideas for 10 year old’s birthday\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Competition",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Competition",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nRandomly select 5 email addresses from this list\n```\n```{.wrap}\nSelect top 3 records with the shortest lap times from this list\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Programming",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Programming",
+              "body": "```\nCreate Regular Expressions\n```",
+              "footer": "{.wrap}\nCreate regex to match all email addresses in list\n```\n```{.wrap}\nCreate regex to match all words that start with \"ban\"\n```\n```{.wrap}\nCreate regex to match 8-digit password\n```\nExplain Code\n```{.wrap}\nExplain why code not working\n```\n```{.wrap}\nExplain what code does\n```\n```{.wrap}\nExplain how to make a HTTP request in javascript\n```\nUpdate Code\n```{.wrap}\nAdd code comments\n```\n```{.wrap}\nAdd class \"header\" to header tag\n```\n```{.wrap}\nUpdate CSS to change font color to blue\n```\nTranspile\n```{.wrap}\nTranslate code to Python\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Email",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Email",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nWrite email sequence for our new customer onboarding process\n```\n```{.wrap}\nWrite email to inform staff of elevator maintenance on 23 June 2025, elevators unavailable for 24 hours, apologise for inconvenience\n```\n```{.wrap}\nSuggest response to message asking about project status\n```\nFormat Email\n```{.wrap}\nProofread and format email\n```\nEmail Marketing\n```{.wrap}\nSuggest tips to increase open and click-through rates for my email campaigns\n```\n```{.wrap}\nSuggest ways to make my email content more engaging and relevant to my subscribers\n```\nExtract Data\n```{.wrap}\nExtract all email addresses in text\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Spreadsheet",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Spreadsheet",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nGenerate spreadsheet dummy data as a placeholder\n```\n```{.wrap}\nCreate macro to calculate average of cells B1 to B10 and insert result in cell C1\n```\nExplain Something\n```{.wrap}\nExplain formula =SUM(A1:A10) in simple terms\n```\n```{.wrap}\nSuggest tips to improve spreadsheet efficiency\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Social Media",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Social Media",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nSuggest climate change post ideas to engage my followers\n```\n```{.wrap}\nGenerate hashtags and caption for a picture of scenic sunset\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reading",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reading",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nWrite concise main points\n```\nTranslate\n```{.wrap}\nTranslate to spanish\n```\nRecommendations\n```{.wrap}\nRecommend books similar to Hunger Games\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Design",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Design",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nSuggest eye-catching thumbnail designs for youtube video on healthy eating\n```\nAesthetic Pairings\n```{.wrap}\nSuggest font pairing for travel blog header design\n```\n```{.wrap}\nSuggest color palette for wedding photography website\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Data Analysis",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Data Analysis",
+              "body": "```\nData Filtering\n```",
+              "footer": "{.wrap}\nFilter list based on [condition]\n```\nData Presentation\n```{.wrap}\nCreate table from data\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Paid Ads",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Paid Ads",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nSuggest ad copy for travel company\n```\n```{.wrap}\nCreate headlines, body text, and calls to action for new fitness program ad\n```\nAd Targeting\n```{.wrap}\nRecommend target Facebook audience for clothing line ad campaign\n```\nAd Technical Support\n```{.wrap}\nReview tag manager code for errors\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Amazon FBA",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Amazon FBA",
+              "body": "```\nCommunication\n```",
+              "footer": "{.wrap}\nRewrite appeal letter to make it more persuasive\n```\n```{.wrap}\nWrite effective email to reach out to potential suppliers\n```\nProduct Strategy\n```{.wrap}\nSuggest items that would make a good bundle for our customers\n```\n```{.wrap}\nOrganize product and pricing information into a neat and manageable spreadsheet\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Writing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Writing",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nSuggest titles for article 10 options\n```\n```{.wrap}\nSuggest domain name for gardening blog\n```\nContent Creation\n```{.wrap}\nCreate outline for essay on exercise\n```\n```{.wrap}\nSuggest ideas for blog on sustainable fashion\n```\n```{.wrap}\nCreate blog post on financial planning\n```\n```{.wrap}\nExpand jazz music sentence\n```\nEditing And Formatting\n```{.wrap}\nChange report tone to conversational\n```\n```{.wrap}\nProofread article\n```\n```{.wrap}\nFormat headings for blog post\n```\nEvaluation\n```{.wrap}\nCheck for bias\n```\n```{.wrap}\nCheck for plagiarism\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Teacher",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Teacher",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nSuggest ideas for history assignment on American Revolution\n```\n```{.wrap}\nDivide list of 30 students into groups of 6\n```\n```{.wrap}\nCreate grading curve for class based on their test scores\n```\n```{.wrap}\nGrade history essay and provide feedback on any areas for improvement\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "YouTube",
+          "level": 3,
+          "cards": [
+            {
+              "title": "YouTube",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nConvert youtube cooking video into blog post with headings and bullet points\n```\n```{.wrap}\nCreate outline for a video about the benefits of meditation\n```\n```{.wrap}\nSuggest thumbnail ideas for video on \"DIY home decor\"\n```\n```{.wrap}\nSuggest fashion video ideas for individual episodes\n```\nAnalyse\n```{.wrap}\nWhat is the script tone for environmental issues video\n```\nCommunication\n```{.wrap}\nCreate thoughtful and polite response to negative comment on youtube video\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Research",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Research",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nProvide key details about printing press invention\n```\n```{.wrap}\nResearch olympic games history\n```\n```{.wrap}\nProvide key details about French Revolution\n```\n```{.wrap}\nExplain history of Byzantine Empire\n```\nScience Reseearch\n```{.wrap}\nExplain quantum computing in simple terms\n```\n```{.wrap}\nExplain rocket science like i'm five\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SEO",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SEO",
+              "body": "```\n\n```",
+              "footer": "{.wrap}\nGenerate list of keywords targeting multiple geographic locations\n```\n```{.wrap}\nGenerate list of keyword synonyms for [topic]\n```\nContent Optimization\n```{.wrap}\nFind opportunities for internal linking related to [topic]\n```\n```{.wrap}\nResearch industry-specific terminology for use in [topic] content\n```\n```{.wrap}\nFind best time to publish content related to [topic]\n```\nLink Building\n```{.wrap}\nFind authoritative websites to acquire backlinks for [topic] content\n```\n```{.wrap}\nResearch best external linking strategies for [topic]\n```\nTools\n```{.wrap}\nFind most popular tools used for [topic] seo\n```\nTactics\n```{.wrap}\nResearch best tactics for [topic] mobile optimization\n```\n```{.wrap}\nWhat are the best tactics for [topic] international seo?\n```\nCompetitors\n```{.wrap}\nResearch competitor strategies related to [topic]\n```\n```{.wrap}\nWhat are the best affiliate marketing websites for [topic]?\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Roleplay",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Roleplay",
+              "body": "",
+              "footer": "Simulate Character\n\n```{.wrap}\nAct as William Shakespeare\n\nAppearance:\n- Period attire\n- Ruffled collar\n- Quill in hand\n\nPersonality:\n- Poetic\n- Introspective\n- Eloquent\n\nBehaviour Examples:\n- Frequently quotes iambic pentameter\n- Engages in deep discussions about the nature of the human condition\n- Enjoys referencing classical mythology\n\nLore:\n- Grew up in Stratford-upon-Avon and later moved to London\n- Famous for his tragedies, comedies, and historical plays\n\nScenario:\n-\tNight of a grand performance at the Globe Theatre.\n-\tLead actor is missing and staff are concerned about how to achieve the performance.\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Any Suggestions?",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Any Suggestions?",
+          "body": "- [💡 I Got an IDEA](https://github.com/Fechin/reference/blob/main/source/_posts/chatgpt.md)\n\n<style>\nem { font-size: 0.785em; }\nstrong {font-weight: 400;}\nul.collapsible > li > pre { padding-left: 0; padding-right: 0; font-size: 0.925em;}\n</style>",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

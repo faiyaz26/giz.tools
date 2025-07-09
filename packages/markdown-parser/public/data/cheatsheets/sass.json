@@ -1,0 +1,491 @@
+{
+  "id": "sass",
+  "metadata": {
+    "title": "Sass",
+    "date": "2020-12-20T22:15:43.000Z",
+    "background": "bg-[#ba6993]",
+    "label": "CSS",
+    "tags": [
+      "css"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Sass Basics",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "- [Documentation](https://sass-lang.com/documentation) _(sass-lang.com)_\n- [Learn X in Y minutes](https://learnxinyminutes.com/docs/sass/) _(learnxinyminutes.com)_",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```scss\n$defaultLinkColor: #46eac2;\n\na {\n  color: $defaultLinkColor;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String interpolation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String interpolation",
+              "body": "```scss\n$wk: -webkit-;\n\n.rounded-box {\n  #{$wk}border-radius: 4px;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```scss\n/*\n Block comments\n Block comments\n Block comments\n*/\n\n// Line comments\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mixins",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mixins",
+              "body": "```scss\n@mixin heading-font {\n  font-family: sans-serif;\n  font-weight: bold;\n}\nh1 {\n  @include heading-font;\n}\n```",
+              "footer": "See: [Mixins](#sass-mixins)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Nesting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Nesting",
+              "body": "```scss\n.markdown-body {\n  a {\n    color: blue;\n    &:hover {\n      color: red;\n    }\n  }\n}\n```",
+              "footer": "#### to properties\n\n```scss\ntext: {\n  // like text-align: center\n  align: center;\n  // like text-transform: uppercase\n  transform: uppercase;\n}\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extend",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extend",
+              "body": "```scss\n.button {\n    ···\n}\n```",
+              "footer": "```scss\n.push-button {\n@extend .button;\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "@import",
+          "level": 3,
+          "cards": [
+            {
+              "title": "@import",
+              "body": "```scss\n@import './other_sass_file';\n@import '/code', 'lists';\n\n// Plain CSS @imports\n@import 'theme.css';\n@import url(theme);\n```",
+              "footer": "The `.sass` or `.sass` extension is optional.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Sass Mixins",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Parameters",
+              "body": "```scss\n@mixin font-size($n) {\n  font-size: $n * 1.2em;\n}\n```",
+              "footer": "```scss\nbody {\n@include font-size(2);\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Default values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Default values",
+              "body": "```scss\n@mixin pad($n: 10px) {\n  padding: $n;\n}\n```",
+              "footer": "```scss\nbody {\n@include pad(15px);\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Default variable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Default variable",
+              "body": "```scss\n$default-padding: 10px;\n\n@mixin pad($n: $default-padding) {\n  padding: $n;\n}\n\nbody {\n  @include pad(15px);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Sass Color functions {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "rgba",
+          "level": 3,
+          "cards": [
+            {
+              "title": "rgba",
+              "body": "```scss\nrgb(100, 120, 140)\nrgba(100, 120, 140, .5)\nrgba($color, .5)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mixing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mixing",
+              "body": "```scss\nmix($a, $b, 10%)   // 10% a, 90% b\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Modifying HSLA",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Modifying HSLA",
+              "body": "```scss\ndarken($color, 5%)\nlighten($color, 5%)\n```",
+              "footer": "```scss\nsaturate($color, 5%)\ndesaturate($color, 5%)\ngrayscale($color)\n```\n```scss\nadjust-hue($color, 15deg)\ncomplement($color)    // like adjust-hue(_, 180deg)\ninvert($color)\n```\n```scss\nfade-in($color, .5)   // aka opacify()\nfade-out($color, .5)  // aka transparentize()\nrgba($color, .5)      // sets alpha to .5\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Getting individual values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting individual values",
+              "body": "",
+              "footer": "#### HSLA\n\n```scss\nhue($color)         // 0deg..360deg\nsaturation($color)  // 0%..100%\nlightness($color)   // 0%..100%\nalpha($color)       // 0..1 (aka opacity())\n```\n\n#### RGB\n\n```scss\nred($color)         // 0..255\ngreen($color)\nblue($color)\n```\n\nSee: [hue()](http://sass-lang.com/documentation/Sass/Script/Functions.html#hue-instance_method),\n[red()](http://sass-lang.com/documentation/Sass/Script/Functions.html#red-instance_method)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Adjustments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Adjustments",
+              "body": "```scss\n// Changes by fixed amounts\nadjust-color($color, $blue: 5)\nadjust-color($color, $lightness: -30%) // darken(_, 30%)\nadjust-color($color, $alpha: -0.4)     // fade-out(_, .4)\nadjust-color($color, $hue: 30deg)      // adjust-hue(_, 15deg)\n```",
+              "footer": "```scss\n// Changes via percentage\nscale-color($color, $lightness: 50%)\n```\n```scss\n// Changes one property completely\nchange-color($color, $hue: 180deg)\nchange-color($color, $blue: 250)\n```\nSupported: `$red`, `$green`, `$blue`, `$hue`, `$saturation`, `$lightness`, `$alpha`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Sass Other functions {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings",
+              "body": "```scss\nunquote('hello')\nquote(hello)\n```",
+              "footer": "```scss\nto-upper-case(hello)\nto-lower-case(hello)\n```\n```scss\nstr-length(hello world)\nstr-slice(hello, 2, 5)     // \"ello\" - it's 1-based, not 0-based\nstr-insert(\"abcd\", \"X\", 1) // \"Xabcd\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Units",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Units",
+              "body": "```scss\nunit(3em)        // 'em'\nunitless(100px)  // false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Numbers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Numbers",
+              "body": "```scss\nfloor(3.5)\nceil(3.5)\nround(3.5)\nabs(3.5)\n```",
+              "footer": "```scss\nmin(1, 2, 3)\nmax(1, 2, 3)\n```\n```scss\npercentage(.5)   // 50%\nrandom(3)        // 0..3\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Misc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc",
+              "body": "```scss\nvariable-exists(red)    // checks for $red\nmixin-exists(red-text)  // checks for @mixin red-text\nfunction-exists(redify)\n```",
+              "footer": "```scss\nglobal-variable-exists(red)\n```\n```scss\nselector-append('.menu', 'li', 'a')   // .menu li a\nselector-nest('.menu', '&:hover li')  // .menu:hover li\nselector-extend(...)\nselector-parse(...)\nselector-replace(...)\nselector-unify(...)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Sass Feature checks {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Feature check",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Feature check",
+              "body": "```scss\nfeature-exists(global-variable-shadowing)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Features",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Features",
+              "body": "- global-variable-shadowing\n- extend-selector-pseudoclass\n- units-level-3\n- at-error",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Sass Loops",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "For loops",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For loops",
+              "body": "```scss\n@for $i from 1 through 4 {\n  .item-#{$i} {\n    left: 20px * $i;\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Each loops (simple)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Each loops (simple)",
+              "body": "```scss\n$menu-items: home about contact;\n\n@each $item in $menu-items {\n  .photo-#{$item} {\n    background: url('#{$item}.jpg');\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Each loops (nested)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Each loops (nested)",
+              "body": "```scss\n$backgrounds: (home, 'home.jpg'), (about, 'about.jpg');\n\n@each $id, $image in $backgrounds {\n  .photo-#{$id} {\n    background: url($image);\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While loops",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While loops",
+              "body": "```scss\n$i: 6;\n@while $i > 0 {\n  .item-#{$i} {\n    width: 2em * $i;\n  }\n  $i: $i - 2;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Sass Other features",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Conditionals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conditionals",
+              "body": "```scss\n@if $position == 'left' {\n  position: absolute;\n  left: 0;\n} @else if $position == 'right' {\n  position: absolute;\n  right: 0;\n} @else {\n  position: static;\n}\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Interpolation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Interpolation",
+              "body": "```scss\n.#{$klass} { ... }      // Class\ncall($function-name)    // Functions\n\n@media #{$tablet}\nfont: #{$size}/#{$line-height}\nurl(\"#{$background}.jpg\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Lists",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Lists",
+              "body": "```scss\n$list: (a b c);\n\nnth($list, 1)  // starts with 1\nlength($list)\n\n@each $item in $list { ... }\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Maps",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Maps",
+              "body": "```scss\n$map: (key1: value1, key2: value2, key3: value3);\n\nmap-get($map, key1)\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

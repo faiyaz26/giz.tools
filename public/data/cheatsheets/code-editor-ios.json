@@ -1,0 +1,244 @@
+{
+  "id": "code-editor-ios",
+  "metadata": {
+    "title": "Code Editor for iOS",
+    "date": "2022-11-23T16:23:31.697Z",
+    "background": "bg-[#4880c2]",
+    "label": "Mac",
+    "tags": [
+      null,
+      "mac"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 43 keyboard shortcuts found in the Code Editor for iOS app. This application is MacOS-only.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General Shortcuts I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General Shortcuts I",
+              "body": "| Shortcut          | Action                                                        |\n| ----------------- | ------------------------------------------------------------- |\n| `Esc`             | Show completions                                              |\n| `Tab`             | Insert indent, depending on the preferences of tabs or spaces |\n| `Cmd` `N`         | New document tab                                              |\n| `Cmd` `W`         | Close tab                                                     |\n| `Cmd` `S`         | Save                                                          |\n| `Cmd` `Z`         | Undo                                                          |\n| `Cmd` `Shift` `Z` | Redo                                                          |\n| `Cmd` `A`         | Select all                                                    |\n| `Cmd` `X`         | Cut                                                           |\n| `Cmd` `C`         | Copy                                                          |\n| `Cmd` `V`         | Paste                                                         |\n| `Cmd` `F`         | Find                                                          |\n| `Cmd` `G`         | Find next                                                     |\n| `Cmd` `Shift` `G` | Find previous                                                 |\n| `Cmd` `/`         | Toggle comment                                                |\n| `Cmd` `[`         | Indent selection                                              |\n| `Cmd` `]`         | Dedent selection                                              |\n| `Cmd` `Shift` `[` | Move to previous tab                                          |\n| `Cmd` `Shift` `]` | Move to next tab                                              |\n| `Cmd` `4`         | Toggle preview, in editor only                                |\n| `Cmd` `K`         | Clear scrollback, in terminal and playgrounds only            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Show completions"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Insert indent, depending on the preferences of tabs or spaces"
+                },
+                {
+                  "shortcut": "`Cmd` `N`",
+                  "action": "New document tab"
+                },
+                {
+                  "shortcut": "`Cmd` `W`",
+                  "action": "Close tab"
+                },
+                {
+                  "shortcut": "`Cmd` `S`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`Cmd` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Z`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Cmd` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Cmd` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Cmd` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Cmd` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Cmd` `F`",
+                  "action": "Find"
+                },
+                {
+                  "shortcut": "`Cmd` `G`",
+                  "action": "Find next"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `G`",
+                  "action": "Find previous"
+                },
+                {
+                  "shortcut": "`Cmd` `/`",
+                  "action": "Toggle comment"
+                },
+                {
+                  "shortcut": "`Cmd` `[`",
+                  "action": "Indent selection"
+                },
+                {
+                  "shortcut": "`Cmd` `]`",
+                  "action": "Dedent selection"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `[`",
+                  "action": "Move to previous tab"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `]`",
+                  "action": "Move to next tab"
+                },
+                {
+                  "shortcut": "`Cmd` `4`",
+                  "action": "Toggle preview, in editor only"
+                },
+                {
+                  "shortcut": "`Cmd` `K`",
+                  "action": "Clear scrollback, in terminal and playgrounds only"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General Shortcuts II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General Shortcuts II",
+              "body": "| Shortcut                    | Action                                      |\n| --------------------------- | ------------------------------------------- |\n| `Cmd` `R`                   | Reload, in preview only                     |\n| `Cmd` `Left`                | Back, in preview only                       |\n| `Cmd` `Right`               | Forward, in preview only                    |\n| `Shift` `Left`              | Select the previous character               |\n| `Shift` `Right`             | Select the next character                   |\n| `Cmd` `Left`                | Move to the beginning of the current line   |\n| `Cmd` `Right`               | Move to the end of the current line         |\n| `Cmd` `Shift` `Left`        | Select to the beginning of the current line |\n| `Cmd` `Shift` `Right`       | Select to the end of the current line       |\n| `Opt` `Left`                | Move to the beginning of the current word   |\n| `Opt` `Right`               | Move to the end of the current word         |\n| `Opt` `Shift` `Left`        | Select to the beginning of the current word |\n| `Opt` `Shift` `Right`       | Select to the end of the current word       |\n| `Cmd` `Del`                 | Delete to the beginning of the current line |\n| `Cmd` `Opt` `Del`           | Delete to the beginning of the current word |\n| `Cmd` `Del (forward)`       | Delete to the end of the current line       |\n| `Cmd` `Opt` `Del (forward)` | Delete to the end of the current word       |\n| `Ctrl` `A`                  | Move to the beginning of the current line   |\n| `Ctrl` `Shift` `A`          | Select to the beginning of the current line |\n| `Ctrl` `E`                  | Move to the end of the current line         |\n| `Ctrl` `Shift` `E`          | Select to the end of the current line       |\n| `Ctrl` `K`                  | Delete to the end of the current line       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `R`",
+                  "action": "Reload, in preview only"
+                },
+                {
+                  "shortcut": "`Cmd` `Left`",
+                  "action": "Back, in preview only"
+                },
+                {
+                  "shortcut": "`Cmd` `Right`",
+                  "action": "Forward, in preview only"
+                },
+                {
+                  "shortcut": "`Shift` `Left`",
+                  "action": "Select the previous character"
+                },
+                {
+                  "shortcut": "`Shift` `Right`",
+                  "action": "Select the next character"
+                },
+                {
+                  "shortcut": "`Cmd` `Left`",
+                  "action": "Move to the beginning of the current line"
+                },
+                {
+                  "shortcut": "`Cmd` `Right`",
+                  "action": "Move to the end of the current line"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Left`",
+                  "action": "Select to the beginning of the current line"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Right`",
+                  "action": "Select to the end of the current line"
+                },
+                {
+                  "shortcut": "`Opt` `Left`",
+                  "action": "Move to the beginning of the current word"
+                },
+                {
+                  "shortcut": "`Opt` `Right`",
+                  "action": "Move to the end of the current word"
+                },
+                {
+                  "shortcut": "`Opt` `Shift` `Left`",
+                  "action": "Select to the beginning of the current word"
+                },
+                {
+                  "shortcut": "`Opt` `Shift` `Right`",
+                  "action": "Select to the end of the current word"
+                },
+                {
+                  "shortcut": "`Cmd` `Del`",
+                  "action": "Delete to the beginning of the current line"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Del`",
+                  "action": "Delete to the beginning of the current word"
+                },
+                {
+                  "shortcut": "`Cmd` `Del (forward)`",
+                  "action": "Delete to the end of the current line"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Del (forward)`",
+                  "action": "Delete to the end of the current word"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Move to the beginning of the current line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Select to the beginning of the current line"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Move to the end of the current line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Select to the end of the current line"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Delete to the end of the current line"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for the Code Editor iOS app](https://library.panic.com/code-editor/shortcut-keys/)\n  _(library.panic.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "id": "cs",
+  "metadata": {
+    "title": "C#",
+    "date": "2021-12-14T12:22:00.000Z",
+    "background": "bg-[#8c4c8a]",
+    "tags": [
+      "object-oriented",
+      "class"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "C# quick reference cheat sheet that provides basic syntax and methods.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Hello.cs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hello.cs",
+              "body": "```cs\nclass Hello {\n  // main method\n  static void Main(string[] args)\n  {\n    // Output: Hello, world!\n    Console.WriteLine(\"Hello, world!\");\n  }\n}\n```",
+              "footer": "Creates a project directory for new console application\n```cs\n$ dotnet new console\n```\nLists all the applications templates\n```cs\n$ dotnet new list\n```\nCompiling and running (make sure you are in the project directory)\n```shell script\n$ dotnet run\nHello, world!\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```cs\nint intNum = 9;\nlong longNum = 9999999;\nfloat floatNum = 9.99F;\ndouble doubleNum = 99.999;\ndecimal decimalNum = 99.9999M;\nchar letter = 'D';\nbool @bool = true;\nstring site = \"cheatsheets.zip\";\n\nvar num = 999;\nvar str = \"999\";\nvar bo = false;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Primitive Data Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Primitive Data Types",
+              "body": "| Data Type | Size             | Range                     |\n| --------- | ---------------- | ------------------------- |\n| `int`     | 4 bytes          | -2^31^ ^to^ 2^31^-1       |\n| `long`    | 8 bytes          | -2^63^ ^to^ 2^63^-1       |\n| `float`   | 4 bytes          | 6 ^to^ 7 decimal digits   |\n| `double`  | 8 bytes          | 15 decimal digits         |\n| `decimal` | 16 bytes         | 28 ^to^ 29 decimal digits |\n| `char`    | 2 bytes          | 0 ^to^ 65535              |\n| `bool`    | 1 bit            | true / false              |\n| `string`  | 2 bytes per char | _N/A_                     |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```cs\n// Single-line comment\n\n/* Multi-line\n   comment */\n\n// TODO: Adds comment to a task list in Visual Studio\n\n/// Single-line comment used for documentation\n\n/** Multi-line comment\n    used for documentation **/\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings",
+              "body": "```cs\nstring first = \"John\";\nstring last = \"Doe\";\n\n// string concatenation\nstring name = first + \" \" + last;\nConsole.WriteLine(name); // => John Doe\n```",
+              "footer": "See: [Strings](#c-strings)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "User Input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "User Input",
+              "body": "```cs\nConsole.WriteLine(\"Enter number:\");\nif(int.TryParse(Console.ReadLine(),out int input))\n{\n  // Input validated\n  Console.WriteLine($\"You entered {input}\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Conditionals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conditionals",
+              "body": "```cs\nint j = 10;\n\nif (j == 10) {\n  Console.WriteLine(\"I get printed\");\n} else if (j > 10) {\n  Console.WriteLine(\"I don't\");\n} else {\n  Console.WriteLine(\"I also don't\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays",
+              "body": "```cs\nchar[] chars = new char[10];\nchars[0] = 'a';\nchars[1] = 'b';\n\nstring[] letters = {\"A\", \"B\", \"C\"};\nint[] mylist = {100, 200};\nbool[] answers = {true, false};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loops",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loops",
+              "body": "```cs\nint[] numbers = {1, 2, 3, 4, 5};\n\nfor(int i = 0; i < numbers.Length; i++) {\n  Console.WriteLine(numbers[i]);\n}\n```",
+              "footer": "```cs\nforeach(int num in numbers) {\nConsole.WriteLine(num);\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "C# Strings",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "String concatenation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String concatenation",
+              "body": "```cs\nstring first = \"John\";\nstring last = \"Doe\";\n\nstring name = first + \" \" + last;\nConsole.WriteLine(name); // => John Doe\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String interpolation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String interpolation",
+              "body": "```cs\nstring first = \"John\";\nstring last = \"Doe\";\n\nstring name = $\"{first} {last}\";\nConsole.WriteLine(name); // => John Doe\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String Members",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String Members",
+              "body": "| Member     | Description                                                                                                                          |\n| ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |\n| Length     | A property that returns the length of the string.                                                                                    |\n| Compare()  | A static method that compares two strings.                                                                                           |\n| Contains() | Determines if the string contains a specific substring.                                                                              |\n| Equals()   | Determines if the two strings have the same character data.                                                                          |\n| Format()   | Formats a string via the {0} notation and by using other primitives.                                                                 |\n| Trim()     | Removes all instances of specific characters from trailing and leading characters. Defaults to removing leading and trailing spaces. |\n| Split()    | Removes the provided character and creates an array out of the remaining characters on either side.                                  |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Verbatim strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Verbatim strings",
+              "body": "",
+              "footer": "```cs {.wrap}\nstring longString = @\"I can type any characters in here !#@$%^&*()__+ '' \\n \\t except double quotes and I will be taken literally. I even work with multiple lines.\";\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Member Example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Member Example",
+              "body": "```cs\n// Using property of System.String\nstring lengthOfString = \"How long?\";\nlengthOfString.Length           // => 9\n\n// Using methods of System.String\nlengthOfString.Contains(\"How\"); // => true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Misc",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General .NET Terms",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General .NET Terms",
+              "body": "| Term                          | Definition                                                                                                                                                                                         |\n| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| Runtime                       | A collection of services that are required to execute a given compiled unit of code.                                                                                                               |\n| Common Language Runtime (CLR) | Primarily locates, loads, and managed .NET objects. The CLR also handles memory management, application hosting, coordination of threads, performing security checks, and other low-level details. |\n| Managed code                  | Code that compiles and runs on .NET runtime. C#/F#/VB are examples.                                                                                                                                |\n| Unmanaged code                | Code that compiles straight to machine code and cannot be directly hosted by the .NET runtime. Contains no free memory management, garbage collection, etc. DLLs created from C/C++ are examples.  |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

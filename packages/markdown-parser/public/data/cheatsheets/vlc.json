@@ -1,0 +1,416 @@
+{
+  "id": "vlc",
+  "metadata": {
+    "title": "VLC Player",
+    "date": "2022-11-23T16:23:31.696Z",
+    "background": "bg-[#e7792e]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 82 keyboard shortcuts found in VLC Player\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General I",
+              "body": "| Shortcut             | Action                    |\n| -------------------- | ------------------------- |\n| `F`                  | Fullscreen                |\n| `Esc`                | Leave fullscreen          |\n| `Space`              | Play/Pause                |\n| `]`                  | Pause only                |\n| `[`                  | Play only                 |\n| `+`                  | Faster                    |\n| `-`                  | Slower                    |\n| `=`                  | Normal rate               |\n| `N`                  | Next                      |\n| `P`                  | Previous                  |\n| `S`                  | Stop                      |\n| `T`                  | Position                  |\n| `Shift` `Left`       | Very short backwards jump |\n| `Shift` `Right`      | Very short forwards jump  |\n| `Alt` `Left`         | Short backwards jump      |\n| `Alt` `Right`        | Short forwards jump       |\n| `Ctrl` `Left`        | Medium backwards jump     |\n| `Ctrl` `Right`       | Medium forwards jump      |\n| `Ctrl` `Alt` `Left`  | Long backwards jump       |\n| `Ctrl` `Alt` `Right` | Long forwards jump        |\n| `E`                  | Next frame                |\n| `Enter`              | Activate                  |\n| `Up`                 | Navigate up               |\n| `Down`               | Navigate down             |\n| `Left`               | Navigate left             |\n| `Right`              | Navigate right            |\n| `Shift` `M`          | Go to the DVD menu        |\n| `Shift` `O`          | Select previous DVD title |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F`",
+                  "action": "Fullscreen"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Leave fullscreen"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Play/Pause"
+                },
+                {
+                  "shortcut": "`]`",
+                  "action": "Pause only"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Play only"
+                },
+                {
+                  "shortcut": "`+`",
+                  "action": "Faster"
+                },
+                {
+                  "shortcut": "`-`",
+                  "action": "Slower"
+                },
+                {
+                  "shortcut": "`=`",
+                  "action": "Normal rate"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Next"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Previous"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Stop"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Position"
+                },
+                {
+                  "shortcut": "`Shift` `Left`",
+                  "action": "Very short backwards jump"
+                },
+                {
+                  "shortcut": "`Shift` `Right`",
+                  "action": "Very short forwards jump"
+                },
+                {
+                  "shortcut": "`Alt` `Left`",
+                  "action": "Short backwards jump"
+                },
+                {
+                  "shortcut": "`Alt` `Right`",
+                  "action": "Short forwards jump"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left`",
+                  "action": "Medium backwards jump"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right`",
+                  "action": "Medium forwards jump"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Left`",
+                  "action": "Long backwards jump"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Right`",
+                  "action": "Long forwards jump"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Next frame"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Activate"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Navigate up"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Navigate down"
+                },
+                {
+                  "shortcut": "`Left`",
+                  "action": "Navigate left"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Navigate right"
+                },
+                {
+                  "shortcut": "`Shift` `M`",
+                  "action": "Go to the DVD menu"
+                },
+                {
+                  "shortcut": "`Shift` `O`",
+                  "action": "Select previous DVD title"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General II",
+              "body": "| Shortcut          | Action                         |\n| ----------------- | ------------------------------ |\n| `Shift` `B`       | Select next DVD title          |\n| `Shift` `P`       | Select previous DVD chapter    |\n| `Shift` `N`       | Select next DVD chapter        |\n| `Ctrl` `Q`        | Quit                           |\n| `Ctrl` `Up`       | Volume up                      |\n| `Ctrl` `Down`     | Volume down                    |\n| `M`               | Mute                           |\n| `H`               | Subtitle delay up              |\n| `G`               | Subtitle delay down            |\n| `K`               | Audio delay up                 |\n| `J`               | Audio delay down               |\n| `B`               | Cycle audio track              |\n| `Shift` `A`       | Cycle through audio devices    |\n| `V`               | Cycle subtitle track           |\n| `A`               | Cycle source aspect ratio      |\n| `C`               | Cycle video crop               |\n| `O`               | Toggle autoscaling             |\n| `Alt` `O`         | Increase scale factor          |\n| `Shift` `Alt` `O` | Decrease scale factor          |\n| `D`               | Cycle deinterlace modes        |\n| `I`               | Show interface                 |\n| `Shift` `I`       | Hide interface                 |\n| `Shift` `S`       | Take video snapshot            |\n| `Shift` `G`       | Go back in browsing history    |\n| `Shift` `H`       | Go forward in browsing history |\n| `Shift` `R`       | Record                         |\n| `Shift` `D`       | Dump                           |\n| `Z`               | Zoom                           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `B`",
+                  "action": "Select next DVD title"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Select previous DVD chapter"
+                },
+                {
+                  "shortcut": "`Shift` `N`",
+                  "action": "Select next DVD chapter"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Quit"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up`",
+                  "action": "Volume up"
+                },
+                {
+                  "shortcut": "`Ctrl` `Down`",
+                  "action": "Volume down"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Mute"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Subtitle delay up"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Subtitle delay down"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Audio delay up"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Audio delay down"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Cycle audio track"
+                },
+                {
+                  "shortcut": "`Shift` `A`",
+                  "action": "Cycle through audio devices"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Cycle subtitle track"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Cycle source aspect ratio"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Cycle video crop"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Toggle autoscaling"
+                },
+                {
+                  "shortcut": "`Alt` `O`",
+                  "action": "Increase scale factor"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `O`",
+                  "action": "Decrease scale factor"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Cycle deinterlace modes"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Show interface"
+                },
+                {
+                  "shortcut": "`Shift` `I`",
+                  "action": "Hide interface"
+                },
+                {
+                  "shortcut": "`Shift` `S`",
+                  "action": "Take video snapshot"
+                },
+                {
+                  "shortcut": "`Shift` `G`",
+                  "action": "Go back in browsing history"
+                },
+                {
+                  "shortcut": "`Shift` `H`",
+                  "action": "Go forward in browsing history"
+                },
+                {
+                  "shortcut": "`Shift` `R`",
+                  "action": "Record"
+                },
+                {
+                  "shortcut": "`Shift` `D`",
+                  "action": "Dump"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Zoom"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General III",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General III",
+              "body": "| Shortcut              | Action                           |\n| --------------------- | -------------------------------- |\n| `Shift` `Z`           | Un-Zoom                          |\n| `W`                   | Toggle wallpaper mode            |\n| `Alt` `Shift` `M`     | Display OSD menu on top          |\n| `Alt` `Ctrl` `M`      | Do not display OSD menu          |\n| `Alt` `Shift` `Right` | Highlight widget on the right    |\n| `Alt` `Shift` `Left`  | Highlight widget on the left     |\n| `Alt` `Shift` `Up`    | Highlight widget on top          |\n| `Alt` `Shift` `Down`  | Highlight widget on bottom       |\n| `Alt` `Shift` `Enter` | Select current widget            |\n| `Alt` `R`             | Crop one pixel from the top      |\n| `Alt` `Shift` `R`     | Uncrop one pixel from the top    |\n| `Alt` `D`             | Crop one pixel from the left     |\n| `Alt` `Shift` `D`     | Uncrop one pixel from the left   |\n| `Alt` `C`             | Crop one pixel from the bottom   |\n| `Alt` `Shift` `C`     | Uncrop one pixel from the bottom |\n| `Alt` `F`             | Crop one pixel from the right    |\n| `Alt` `Shift` `F`     | Uncrop one pixel from the right  |\n| `R`                   | Random                           |\n| `L`                   | Normal/Repeat/Loop               |\n| `Ctrl` `1`            | 1:4 Quarter                      |\n| `Ctrl` `2`            | 1:2 Half                         |\n| `Ctrl` `3`            | 1:1 Original                     |\n| `Ctrl` `4`            | 2:1 Double                       |\n| `3`                   | Very short jump length (integer) |\n| `Ctrl` `F1-F10`       | Set playlist bookmark 1-10       |\n| `F1-F10`              | Play playlist bookmark 1-10      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `Z`",
+                  "action": "Un-Zoom"
+                },
+                {
+                  "shortcut": "`W`",
+                  "action": "Toggle wallpaper mode"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `M`",
+                  "action": "Display OSD menu on top"
+                },
+                {
+                  "shortcut": "`Alt` `Ctrl` `M`",
+                  "action": "Do not display OSD menu"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Right`",
+                  "action": "Highlight widget on the right"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Left`",
+                  "action": "Highlight widget on the left"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Up`",
+                  "action": "Highlight widget on top"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Down`",
+                  "action": "Highlight widget on bottom"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Enter`",
+                  "action": "Select current widget"
+                },
+                {
+                  "shortcut": "`Alt` `R`",
+                  "action": "Crop one pixel from the top"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `R`",
+                  "action": "Uncrop one pixel from the top"
+                },
+                {
+                  "shortcut": "`Alt` `D`",
+                  "action": "Crop one pixel from the left"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `D`",
+                  "action": "Uncrop one pixel from the left"
+                },
+                {
+                  "shortcut": "`Alt` `C`",
+                  "action": "Crop one pixel from the bottom"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `C`",
+                  "action": "Uncrop one pixel from the bottom"
+                },
+                {
+                  "shortcut": "`Alt` `F`",
+                  "action": "Crop one pixel from the right"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `F`",
+                  "action": "Uncrop one pixel from the right"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Random"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Normal/Repeat/Loop"
+                },
+                {
+                  "shortcut": "`Ctrl` `1`",
+                  "action": "1:4 Quarter"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "1:2 Half"
+                },
+                {
+                  "shortcut": "`Ctrl` `3`",
+                  "action": "1:1 Original"
+                },
+                {
+                  "shortcut": "`Ctrl` `4`",
+                  "action": "2:1 Double"
+                },
+                {
+                  "shortcut": "`3`",
+                  "action": "Very short jump length (integer)"
+                },
+                {
+                  "shortcut": "`Ctrl` `F1-F10`",
+                  "action": "Set playlist bookmark 1-10"
+                },
+                {
+                  "shortcut": "`F1-F10`",
+                  "action": "Play playlist bookmark 1-10"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for VLC](https://wiki.videolan.org/hotkeys_table/) _(wiki.videolan.org)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

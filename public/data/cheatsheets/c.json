@@ -1,0 +1,1006 @@
+{
+  "id": "c",
+  "metadata": {
+    "title": "C",
+    "date": "2022-12-30T09:51:44.000Z",
+    "background": "bg-[#2a338a]",
+    "tags": null,
+    "categories": [
+      "Programming"
+    ],
+    "intro": "C quick reference cheat sheet that provides basic syntax and methods.\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "hello.c",
+          "level": 3,
+          "cards": [
+            {
+              "title": "hello.c",
+              "body": "```c\n#include <stdio.h>\n\nint main(void) {\n  printf(\"Hello World!\\n\");\n\n  return 0;\n}\n```",
+              "footer": "Compile `hello.c` file with `gcc`\n```bash\n$ gcc -Wall -g hello.c -o hello\n```\nRun the compiled binary `hello`\n```bash\n$ ./hello\n```\nOutput => Hello World!",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```c\nint myNum = 15;\n\nint myNum2; // do not assign, then assign\nmyNum2 = 15;\n\nint myNum3 = 15; // myNum3 is 15\nmyNum3 = 10;     // myNum3 is now 10\n\nfloat myFloat = 5.99; // floating point number\nchar myLetter = 'D';  // character\n\nint x = 5;\nint y = 6;\nint sum = x + y; // add variables to sum\n\n// declare multiple variables\nint a = 5, b = 6, c = 50;\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Constants",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Constants",
+              "body": "```c\nconst int minutesPerHour = 60;\nconst float PI = 3.14;\n```",
+              "footer": "Best Practices\n```c\nconst int BIRTHYEAR = 1980;\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comment",
+              "body": "```c\n// this is a comment\nprintf(\"Hello World!\\n\"); // Can comment anywhere in file\n\n/*Multi-line comment, print Hello World!\nto the screen, it's awesome */\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Print text",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Print text",
+              "body": "```c\nprintf(\"I am learning C.\\n\");\nint testInteger = 5;\nprintf(\"Number = %d\\n\", testInteger);\n\nfloat f = 5.99; // floating point number\nprintf(\"Value = %f\\n\", f);\n\nshort a = 0b1010110; // binary number\nint b = 02713; // octal number\nlong c = 0X1DAB83; // hexadecimal number\n\n// output in octal form\nprintf(\"a=%ho, b=%o, c=%lo\\n\", a, b, c);\n// output => a=126, b=2713, c=7325603\n\n// Output in decimal form\nprintf(\"a=%hd, b=%d, c=%ld\\n\", a, b, c);\n// output => a=86, b=1483, c=1944451\n\n// output in hexadecimal form (letter lowercase)\nprintf(\"a=%hx, b=%x, c=%lx\\n\", a, b, c);\n// output => a=56, b=5cb, c=1dab83\n\n// Output in hexadecimal (capital letters)\nprintf(\"a=%hX, b=%X, c=%lX\\n\", a, b, c);\n// output => a=56, b=5CB, c=1DAB83\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Control the number of spaces",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Control the number of spaces",
+              "body": "```c\nint a1 = 20, a2 = 345, a3 = 700;\nint b1 = 56720, b2 = 9999, b3 = 20098;\nint c1 = 233, c2 = 205, c3 = 1;\nint d1 = 34, d2 = 0, d3 = 23;\n\nprintf(\"%-9d %-9d %-9d\\n\", a1, a2, a3);\nprintf(\"%-9d %-9d %-9d\\n\", b1, b2, b3);\nprintf(\"%-9d %-9d %-9d\\n\", c1, c2, c3);\nprintf(\"%-9d %-9d %-9d\\n\", d1, d2, d3);\n```",
+              "footer": "output result\n```bash\n20        345       700\n56720     9999      20098\n233       205       1\n34        0         23\n```\nIn `%-9d`, `d` means to output in `10` base, `9` means to occupy at least `9` characters width, and the width is not\nenough to fill with spaces, `-` means left alignment",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings",
+              "body": "```c\nchar greetings[] = \"Hello World!\";\nprintf(\"%s\", greetings);\n```",
+              "footer": "Access string\n```c\nchar greetings[] = \"Hello World!\";\nprintf(\"%c\", greetings[0]);\n```\nModify string\n```c\nchar greetings[] = \"Hello World!\";\ngreetings[0] = 'J';\nprintf(\"%s\", greetings);\n// prints \"Jello World!\"\n```\nAnother way to create a string\n```c\nchar greetings[] = {'H','e','l','l','\\0'};\nprintf(\"%s\", greetings);\n// print \"Hell!\"\n```\nCreating String using character pointer (String Literals)\n```c\nchar *greetings = \"Hello\";\nprintf(\"%s\", greetings);\n// print \"Hello!\"\n```\n**NOTE**: String literals might be stored in read-only section of memory. Modifying a string literal invokes undefined\nbehavior. You can't modify it!\n`C` **does not** have a String type, use `char` type and create an `array` of characters",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Condition",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Condition",
+              "body": "```c\nint time = 20;\nif (time < 18) {\n  printf(\"Goodbye!\\n\");\n} else {\n  printf(\"Good evening!\\n\");\n}\n// Output -> \"Good evening!\"\nint time = 22;\nif (time < 10) {\n  printf(\"Good morning!\\n\");\n} else if (time < 20) {\n  printf(\"Goodbye!\\n\");\n} else {\n  printf(\"Good evening!\\n\");\n}\n// Output -> \"Good evening!\"\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ternary operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ternary operator",
+              "body": "```c\nint age = 20;\n(age > 19) ? printf(\"Adult\\n\") : printf(\"Teenager\\n\");\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Switch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Switch",
+              "body": "```c\nint day = 4;\n\nswitch (day) {\n  case 3: printf(\"Wednesday\\n\"); break;\n  case 4: printf(\"Thursday\\n\"); break;\n  default:\n    printf(\"Weekend!\\n\");\n}\n// output -> \"Thursday\" (day 4)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While Loop",
+              "body": "```c\nint i = 0;\n\nwhile (i < 5) {\n  printf(\"%d\\n\", i);\n  i++;\n}\n```",
+              "footer": "**NOTE**: Don't forget to increment the variable used in the condition, otherwise the loop will never end and become an\n\"infinite loop\"!",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Do/While Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Do/While Loop",
+              "body": "```c\nint i = 0;\n\ndo {\n  printf(\"%d\\n\", i);\n  i++;\n} while (i < 5);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "For Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For Loop",
+              "body": "```c\nfor (int i = 0; i < 5; i++) {\n  printf(\"%d\\n\", i);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break out of the loop Break/Continue",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break out of the loop Break/Continue",
+              "body": "```c\nfor (int i = 0; i < 10; i++) {\n  if (i == 4) {\n    break;\n  }\n  printf(\"%d\\n\", i);\n}\n```",
+              "footer": "Break out of the loop when `i` is equal to `4`\n```c\nfor (int i = 0; i < 10; i++) {\nif (i == 4) {\ncontinue;\n}\nprintf(\"%d\\n\", i);\n}\n```\nExample to skip the value of `4`",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While Break Example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While Break Example",
+              "body": "```c\nint i = 0;\n\nwhile (i < 10) {\n  if (i == 4) {\n    break;\n  }\n  printf(\"%d\\n\", i);\n\n  i++;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While continue example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While continue example",
+              "body": "```c\nint i = 0;\n\nwhile (i < 10) {\n  i++;\n\n  if (i == 4) {\n    continue;\n  }\n  printf(\"%d\\n\", i);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays",
+              "body": "```c\nint myNumbers[] = {25, 50, 75, 100};\n\nprintf(\"%d\", myNumbers[0]);\n// output 25\n```",
+              "footer": "Change array elements\n```c\nint myNumbers[] = {25, 50, 75, 100};\nmyNumbers[0] = 33;\nprintf(\"%d\", myNumbers[0]);\n```\nLoop through the array\n```c\nint myNumbers[] = {25, 50, 75, 100};\nint i;\nfor (i = 0; i < 4; i++) {\nprintf(\"%d\\n\", myNumbers[i]);\n}\n```\nSet array size\n```c\n// Declare an array of four integers:\nint myNumbers[4];\n// add element\nmyNumbers[0] = 25;\nmyNumbers[1] = 50;\nmyNumbers[2] = 75;\nmyNumbers[3] = 100;\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Enumeration Enum",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Enumeration Enum",
+              "body": "```c\nenum week { Mon = 1, Tues, Wed, Thurs, Fri, Sat, Sun };\n```",
+              "footer": "Define enum variable\n```c\nenum week a, b, c;\nenum week { Mon = 1, Tues, Wed, Thurs, Fri, Sat, Sun } a, b, c;\n```\nWith an enumeration variable, you can assign the value in the list to it\n```c\nenum week { Mon = 1, Tues, Wed, Thurs, Fri, Sat, Sun };\nenum week a = Mon, b = Wed, c = Sat;\n// or\nenum week{ Mon = 1, Tues, Wed, Thurs, Fri, Sat, Sun } a = Mon, b = Wed, c = Sat;\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Enumerate sample applications",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Enumerate sample applications",
+              "body": "```c\nenum week {Mon = 1, Tues, Wed, Thurs} day;\n\nscanf(\"%d\", &day);\n\nswitch(day) {\n  case Mon: puts(\"Monday\"); break;\n  case Tues: puts(\"Tuesday\"); break;\n  case Wed: puts(\"Wednesday\"); break;\n  case Thurs: puts(\"Thursday\"); break;\n  default: puts(\"Error!\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "User input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "User input",
+              "body": "```c\n// Create an integer variable to store the number we got from the user\nint myNum;\n\n// Ask the user to enter a number\nprintf(\"Enter a number: \");\n\n// Get and save the number entered by the user\nscanf(\"%d\", &myNum);\n\n// Output the number entered by the user\nprintf(\"The number you entered: %d\\n\", myNum);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "User input string",
+          "level": 3,
+          "cards": [
+            {
+              "title": "User input string",
+              "body": "```c\n// create a string\nchar firstName[30];\n// Ask the user to enter some text\nprintf(\"Enter your name: \");\n// get and save the text\nscanf(\"%s\", &firstName);\n// output text\nprintf(\"Hello %s.\\n\", firstName);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "memory address",
+          "level": 3,
+          "cards": [
+            {
+              "title": "memory address",
+              "body": "```c\nint myAge = 43;\n\nprintf(\"%p\", &myAge);\n// Output: 0x7ffe5367e044\n```",
+              "footer": "To access it, use the reference operator (`&`)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "create pointer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "create pointer",
+              "body": "```c\nint myAge = 43; // an int variable\nprintf(\"%d\\n\", myAge); // output the value of myAge(43)\n\n// Output the memory address of myAge (0x7ffe5367e044)\nprintf(\"%p\\n\", &myAge);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "pointer variable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "pointer variable",
+              "body": "```c\nint myAge = 43; // an int variable\nint*ptr = &myAge; // pointer variable named ptr, used to store the address of myAge\n\nprintf(\"%d\\n\", myAge); // print the value of myAge (43)\n\nprintf(\"%p\\n\", &myAge); // output the memory address of myAge (0x7ffe5367e044)\nprintf(\"%p\\n\", ptr); // use the pointer (0x7ffe5367e044) to output the memory address of myAge\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dereference",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dereference",
+              "body": "```c\nint myAge = 43; // variable declaration\nint*ptr = &myAge; // pointer declaration\n\n// Reference: output myAge with a pointer\n// memory address (0x7ffe5367e044)\nprintf(\"%p\\n\", ptr);\n// dereference: output the value of myAge with a pointer (43)\nprintf(\"%d\\n\", *ptr);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Operators",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Arithmetic Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arithmetic Operators",
+              "body": "```c\nint myNum = 100 + 50;\nint sum1 = 100 + 50; // 150 (100 + 50)\nint sum2 = sum1 + 250; // 400 (150 + 250)\nint sum3 = sum2 + sum2; // 800 (400 + 400)\n```",
+              "footer": "| Operator | Name      | Example |\n| -------- | --------- | ------- |\n| `+`      | Add       | `x + y` |\n| `-`      | Subtract  | `x - y` |\n| `*`      | Multiply  | `x * y` |\n| `/`      | Divide    | `x / y` |\n| `%`      | Modulo    | `x % y` |\n| `++`     | Increment | `++x`   |\n| `--`     | Decrement | `--x`   |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Assignment operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Assignment operator",
+              "body": "| Example              | As                        |\n| -------------------- | ------------------------- |\n| x `=` 5              | x `=` 5                   |\n| x `+=` 3             | x `=` x `+` 3             |\n| x `-=` 3             | x `=` x `-` 3             |\n| x `*=` 3             | x `=` x `*` 3             |\n| x `/=` 3             | x `=` x `/` 3             |\n| x `%=` 3             | x `=` x `%` 3             |\n| x `&=` 3             | x `=` x `&` 3             |\n| x <code>\\|=</code> 3 | x `=` x <code>\\|</code> 3 |\n| x `^=` 3             | x `=` x `^` 3             |\n| x `>>=` 3            | x `=` x `>>` 3            |\n| x `<<=` 3            | x `=` x `<<` 3            |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comparison Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comparison Operators",
+              "body": "```c\nint x = 5;\nint y = 3;\n\nprintf(\"%d\", x > y);\n// returns 1 (true) because 5 is greater than 3\n```",
+              "footer": "| Symbol | Name                     | Example  |\n| ------ | ------------------------ | -------- |\n| `==`   | equals                   | x `==` y |\n| `!=`   | not equal to             | x `!=` y |\n| `>`    | greater than             | x `>` y  |\n| `<`    | less than                | x `<` y  |\n| `>=`   | greater than or equal to | x `>=` y |\n| `<=`   | less than or equal to    | x `<=` y |\nComparison operators are used to compare two values",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logical Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logical Operators",
+              "body": "| Symbol            | Name          | Description                                   | Example                       |\n| ----------------- | ------------- | --------------------------------------------- | ----------------------------- |\n| `&&`              | `and` logical | returns true if both statements are true      | `x < 5 && x < 10`             |\n| <code>\\|\\|</code> | `or` logical  | returns true if one of the statements is true | <code>x < 5 \\|\\| x < 4</code> |\n| `!`               | `not` logical | Invert result, return false if true           | `!(x < 5 && x < 10)`          |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Operator Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operator Examples",
+              "body": "```c\nunsigned int a = 60; /*60 = 0011 1100 */\nunsigned int b = 13; /*13 = 0000 1101 */\nint c = 0;\n\nc = a & b; /*12 = 0000 1100 */\nprintf(\"Line 1 -the value of c is %d\\n\", c);\n\nc = a | b; /*61 = 0011 1101 */\nprintf(\"Line 2 -the value of c is %d\\n\", c);\nc = a ^ b; /*49 = 0011 0001 */\nprintf(\"Line 3 -the value of c is %d\\n\", c);\nc = ~a; /*-61 = 1100 0011 */\nprintf(\"Line 4 -The value of c is %d\\n\", c);\nc = a << 2; /*240 = 1111 0000 */\nprintf(\"Line 5 -the value of c is %d\\n\", c);\nc = a >> 2; /*15 = 0000 1111 */\nprintf(\"Line 6 -The value of c is %d\\n\", c);\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bitwise operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bitwise operators",
+              "body": "| Operator        | Description                                                     | Instance                                              |\n| :-------------- | :-------------------------------------------------------------- | :---------------------------------------------------- |\n| `&`             | Bitwise AND operation, \"AND\" operation by binary digits         | `(A & B)` will get `12` which is 0000 1100            |\n| <code>\\|</code> | Bitwise OR operator, \"or\" operation by binary digit             | <code>(A \\| B)</code> will get`61` which is 0011 1101 |\n| `^`             | XOR operator, perform \"XOR\" operation by binary digits          | `(A ^ B)` will get `49` which is 0011 0001            |\n| `~`             | Inversion operator, perform \"inversion\" operation by binary bit | `(~A)` will get `-61` which is 1100 0011              |\n| `<<`            | binary left shift operator                                      | `A << 2` will get `240` which is 1111 0000            |\n| `>>`            | binary right shift operator                                     | `A >> 2` will get `15` which is 0000 1111             |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data Types",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic data types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic data types",
+              "body": "| Data Type            | Size             | Range                              | Description                         |\n| -------------------- | ---------------- | ---------------------------------- | :---------------------------------- |\n| `char`               | 1 byte           | `−128` ~ `127`                     | single character/alphanumeric/ASCII |\n| `signed char`        | 1 byte           | `−128` ~ `127`                     |                                     |\n| `unsigned char`      | 1 byte           | `0` ~ `255`                        |                                     |\n| `int`                | `2` to `4` bytes | `−32,768` ~ `32,767`               | store integers                      |\n| `signed int`         | 2 bytes          | `−32,768` ~ `32,767`               |                                     |\n| `unsigned int`       | 2 bytes          | `0` ~ `65,535`                     |                                     |\n| `short int`          | 2 bytes          | `−32,768` ~ `32,767`               |                                     |\n| `signed short int`   | 2 bytes          | `−32,768` ~ `32,767`               |                                     |\n| `unsigned short int` | 2 bytes          | `0` ~ `65,535`                     |                                     |\n| `long int`           | 4 bytes          | `-2,147,483,648` ~ `2,147,483,647` |                                     |\n| `signed long int`    | 4 bytes          | `-2,147,483,648` ~ `2,147,483,647` |                                     |\n| `unsigned long int`  | 4 bytes          | `0` ~ `4,294,967,295`              |                                     |\n| `float`              | 4 bytes          | `3.4E-38` ~ `3.4E+38`              |                                     |\n| `double`             | 8 bytes          | `1.7E-308` ~ `1.7E+308`            |                                     |\n| `long double`        | 10 bytes         | `3.4E-4932` ~ `1.1E+4932`          |                                     |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Data types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Data types",
+              "body": "```c\n// create variables\nint myNum = 5; // integer\nfloat myFloatNum = 5.99; // floating point number\nchar myLetter = 'D'; // string\n// High precision floating point data or numbers\ndouble myDouble = 3.2325467;\n// print output variables\nprintf(\"%d\\n\", myNum);\nprintf(\"%f\\n\", myFloatNum);\nprintf(\"%c\\n\", myLetter);\nprintf(\"%lf\\n\", myDouble);\n```",
+              "footer": "| Data Type | Description                          |\n| :-------- | :----------------------------------- |\n| `char`    | character type                       |\n| `short`   | short integer                        |\n| `int`     | integer type                         |\n| `long`    | long integer                         |\n| `float`   | single-precision floating-point type |\n| `double`  | double-precision floating-point type |\n| `void`    | no type                              |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic format specifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic format specifiers",
+              "body": "| Format Specifier | Data Type                                             |\n| ---------------- | :---------------------------------------------------- |\n| `%d` or `%i`     | `int` integer                                         |\n| `%f`             | `float` single-precision decimal type                 |\n| `%lf`            | `double` high precision floating point data or number |\n| `%c`             | `char` character                                      |\n| `%s`             | for `strings` strings                                 |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Separate base format specifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Separate base format specifiers",
+              "body": "| Format      | Short         | Int         | Long          |\n| ----------- | ------------- | ----------- | :------------ |\n| Octal       | `%ho`         | `%o`        | `%lo`         |\n| Decimal     | `%hd`         | `%d`        | `%ld`         |\n| Hexadecimal | `%hx` / `%hX` | `%x` / `%X` | `%lx` / `%lX` |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Data format example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Data format example",
+              "body": "```c\nint myNum = 5;\nfloat myFloatNum = 5.99; // floating point number\nchar myLetter = 'D';     // string\n// print output variables\nprintf(\"%d\\n\", myNum);\nprintf(\"%f\\n\", myFloatNum);\nprintf(\"%c\\n\", myLetter);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "C Preprocessor",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Preprocessor Directives",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Preprocessor Directives",
+              "body": "```c\n// replace all MAX_ARRAY_LENGTH with 20\n#define MAX_ARRAY_LENGTH 20\n// Get stdio.h from the system library\n#include <stdio.h>\n// Get myheader.h in the local directory\n#include \"myheader.h\"\n#undef FILE_SIZE\n#define FILE_SIZE 42 // undefine and define to 42\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Predefined macros",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Predefined macros",
+              "body": "| Macro      | Description                                                           |\n| ---------- | :-------------------------------------------------------------------- |\n| `__DATE__` | The current date, a character constant in the format \"MMM DD YYYY\"    |\n| `__TIME__` | The current time, a character constant in the format \"HH:MM:SS\"       |\n| `__FILE__` | This will contain the current filename, a string constant             |\n| `__LINE__` | This will contain the current line number, a decimal constant         |\n| `__STDC__` | Defined as `1` when the compiler compiles against the `ANSI` standard |\n\n{.show-header}\n\n`ANSI C` defines a number of macros that you can use, but you cannot directly modify these predefined macros",
+              "footer": "#### Predefined macro example\n\n```c\n#include <stdio.h>\n\nint main(void) {\n  printf(\"File: %s\\n\", __FILE__);\n  printf(\"Date: %s\\n\", __DATE__);\n  printf(\"Time: %s\\n\", __TIME__);\n  printf(\"Line: %d\\n\", __LINE__);\n  printf(\"ANSI: %d\\n\", __STDC__);\n}\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Macro continuation operator (\\\\)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Macro continuation operator (\\\\)",
+              "body": "```c\n#define message_for(a, b) \\\n    printf(#a \" and \" #b \": We love you!\\n\")\n```",
+              "footer": "If the macro is too long to fit on a single line, use the macro continuation operator `\\`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String Constantization Operator (#)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String Constantization Operator (#)",
+              "body": "```c\n#include <stdio.h>\n\n#define message_for(a, b) \\\n  printf(#a \" and \" #b \": We love you!\\n\")\n\nint main(void) {\n  message_for(Carole, Debra);\n\n  return 0;\n}\n```",
+              "footer": "When the above code is compiled and executed, it produces the following result:\n```\nCarole and Debra: We love you!\n```\nWhen you need to convert a macro parameter to a string constant, use the string constant operator `#`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "tag paste operator (##)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "tag paste operator (##)",
+              "body": "```c\n#include <stdio.h>\n\n#define tokenpaster(n) printf (\"Token \" #n \" = %d\\n\", token##n)\n\nint main(void) {\n  int token34 = 40;\n  tokenpaster(34);\n\n  return 0;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "defined() operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "defined() operator",
+              "body": "```c\n#include <stdio.h>\n\n#if !defined (MESSAGE)\n   #define MESSAGE \"You wish!\"\n#endif\n\nint main(void) {\n  printf(\"Here is the message: %s\\n\", MESSAGE);\n\n  return 0;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Parameterized macros",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Parameterized macros",
+              "body": "```c\nint square(int x) {\n  return x * x;\n}\n```",
+              "footer": "The macro rewrites the above code as follows:\n```c\n```\nNo spaces are allowed between the macro name and the opening parenthesis\n```c\nint main(void) {\nprintf(\"Max between 20 and 10 is %d\\n\", MAX(10, 20));\nreturn 0;\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "C Function",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Function declaration and definition",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function declaration and definition",
+              "body": "```c\nint main(void) {\n  printf(\"Hello World!\\n\");\n\n  return 0;\n}\n```",
+              "footer": "The function consists of two parts\n```c\nvoid myFunction() { // declaration declaration\n// function body (code to be executed) (definition)\n}\n```\n- `Declaration` declares the function name, return type and parameters _(if any)_\n- `Definition` function body _(code to execute)_\n```c\n// function declaration\nvoid myFunction();\n// main method\nint main() {\nmyFunction(); // --> call the function\nreturn 0;\n}\nvoid myFunction() {// Function definition\nprintf(\"Good evening!\\n\");\n}\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Call function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Call function",
+              "body": "```c\n// create function\nvoid myFunction() {\n  printf(\"Good evening!\\n\");\n}\n\nint main() {\n  myFunction(); // call the function\n  myFunction(); // can be called multiple times\n\n  return 0;\n}\n// Output -> \"Good evening!\"\n// Output -> \"Good evening!\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function parameters",
+              "body": "```c\nvoid myFunction(char name[]) {\n  printf(\"Hello %s\\n\", name);\n}\n\nint main() {\n  myFunction(\"Liam\");\n  myFunction(\"Jenny\");\n\n  return 0;\n}\n// Hello Liam\n// Hello Jenny\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple parameters",
+              "body": "```c\nvoid myFunction(char name[], int age) {\n  printf(\"Hi %s, you are %d years old.\\n\",name,age);\n}\nint main() {\n  myFunction(\"Liam\", 3);\n  myFunction(\"Jenny\", 14);\n\n  return 0;\n}\n// Hi Liam you are 3 years old.\n// Hi Jenny you are 14 years old.\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Return value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Return value",
+              "body": "```c\nint myFunction(int x) {\n  return 5 + x;\n}\n\nint main() {\n  printf(\"Result: %d\\n\", myFunction(3));\n  return 0;\n}\n// output 8 (5 + 3)\n```",
+              "footer": "Two parameters\n```c\nint myFunction(int x, int y) {\nreturn x + y;\n}\nint main() {\nprintf(\"Result: %d\\n\", myFunction(5, 3));\n// store the result in a variable\nint result = myFunction(5, 3);\nprintf(\"Result = %d\\n\", result);\nreturn 0;\n}\n// result: 8 (5 + 3)\n// result = 8 (5 + 3)\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Recursive example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Recursive example",
+              "body": "```c\nint sum(int k);\n\nint main() {\n  int result = sum(10);\n  printf(\"%d\\n\", result);\n\n  return 0;\n}\n\nint sum(int k) {\n  if (k > 0) {\n    return k + sum(k -1);\n  } else {\n    return 0;\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mathematical functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mathematical functions",
+              "body": "```c\n#include <math.h>\n\nvoid main(void) {\n  printf(\"%f\\n\", sqrt(16)); // square root\n  printf(\"%f\\n\", ceil(1.4)); // round up (round)\n  printf(\"%f\\n\", floor(1.4)); // round down (round)\n  printf(\"%f\\n\", pow(4, 3)); // x(4) to the power of y(3)\n}\n```",
+              "footer": "- `abs(x)` absolute value\n- `acos(x)` arc cosine value\n- `asin(x)` arc sine\n- `atan(x)` arc tangent\n- `cbrt(x)` cube root\n- `cos(x)` cosine\n- the value of `exp(x)` Ex\n- `sin(x)` the sine of x\n- tangent of `tan(x)` angle",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "C Structures",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Create structure",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create structure",
+              "body": "```c\nstruct MyStructure { // structure declaration\n  int myNum; // member (int variable)\n  char myLetter; // member (char variable)\n}; // end the structure with a semicolon\n```",
+              "footer": "Create a struct variable called `s1`\n```c{7}\nstruct myStructure {\nint myNum;\nchar myLetter;\n};\nint main() {\nstruct myStructure s1;\nreturn 0;\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Strings in the structure",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings in the structure",
+              "body": "",
+              "footer": "```c{9}\nstruct myStructure {\n  int myNum;\n  char myLetter;\n  char myString[30]; // String\n};\n\nint main() {\n  struct myStructure s1;\n  strcpy(s1. myString, \"Some text\");\n  // print value\n  printf(\"My string: %s\\n\", s1.myString);\n\n  return 0;\n}\n```\n\nAssigning values to strings using the `strcpy` function",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Accessing structure members",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Accessing structure members",
+              "body": "```\nCreate different structure variables\n```",
+              "footer": "c\nstruct myStructure s1;\nstruct myStructure s2;\n// Assign values ​​to different structure variables\ns1.myNum = 13;\ns1.myLetter = 'B';\ns2.myNum = 20;\ns2.myLetter = 'C';\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Copy structure",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Copy structure",
+              "body": "",
+              "footer": "```c{6}\nstruct myStructure s1 = {\n  13, 'B', \"Some text\"\n};\n\nstruct myStructure s2;\ns2 = s1;\n```\n\nIn the example, the value of `s1` is copied to `s2`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Modify value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Modify value",
+              "body": "",
+              "footer": "```c{6,7}\n// Create a struct variable and assign it a value\nstruct myStructure s1 = {\n  13, 'B'\n};\n// modify the value\ns1.myNum = 30;\ns1.myLetter = 'C';\n// print value\nprintf(\"%d %c\",\n    s1.myNum,\n    s1.myLetter);\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "File Processing",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "File processing function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File processing function",
+              "body": "| Function    | Description                                       |\n| ----------- | :------------------------------------------------ |\n| `fopen()`   | `open` a new or existing file                     |\n| `fprintf()` | write data to `file`                              |\n| `fscanf()`  | `read` data from a file                           |\n| `fputc()`   | write a character to `file`                       |\n| `fgetc()`   | `read` a character from a file                    |\n| `fclose()`  | `close` the file                                  |\n| `fseek()`   | set the file pointer to `the given position`      |\n| `fputw()`   | Write an integer `to` a file                      |\n| `fgetw()`   | `read` an integer from a file                     |\n| `ftell()`   | returns the current `position`                    |\n| `rewind()`  | set the file pointer to the beginning of the file |\n\n{.show-header}\n\nThere are many functions in the C library to `open`/`read`/`write`/`search` and `close` files",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Open mode parameter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Open mode parameter",
+              "body": "| Mode  | Description                                                                                                 |\n| ----- | :---------------------------------------------------------------------------------------------------------- |\n| `r`   | Open a text file in `read` mode, allowing the file to be read                                               |\n| `w`   | Open a text file in `write` mode, allowing writing to the file                                              |\n| `a`   | Open a text file in `append` mode<br /><small>If the file does not exist, a new one will be created</small> |\n| `r+`  | Open a text file in `read-write` mode, allowing reading and writing of the file                             |\n| `w+`  | Open a text file in `read-write` mode, allowing reading and writing of the file                             |\n| `a+`  | Open a text file in `read-write` mode, allowing reading and writing of the file                             |\n| `rb`  | Open a binary file in `read` mode                                                                           |\n| `wb`  | Open binary file in `write` mode                                                                            |\n| `ab`  | Open a binary file in `append` mode                                                                         |\n| `rb+` | open binary file in `read-write` mode                                                                       |\n| `wb+` | Open binary file in `read-write` mode                                                                       |\n| `ab+` | open binary file in `read-write` mode                                                                       |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Open the file: fopen()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Open the file: fopen()",
+              "body": "",
+              "footer": "```c{6}\n#include <stdio.h>\n\nvoid main() {\n  FILE *fp;\n  char ch;\n\n  fp = fopen(\"file_handle.c\", \"r\");\n\n  while (1) {\n    ch = fgetc(fp);\n    if (ch == EOF)\n      break;\n    printf(\"%c\", ch);\n  }\n  fclose(fp);\n}\n```\n\nAfter performing all operations on the file, the file must be closed with `fclose()`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Write to file: fprintf()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Write to file: fprintf()",
+              "body": "",
+              "footer": "```c{7}\n#include <stdio.h>\n\nvoid main() {\n  FILE *fp;\n  fp = fopen(\"file.txt\", \"w\"); // open the file\n\n  // write data to file\n  fprintf(fp, \"Hello file for fprintf..\\n\");\n  fclose(fp); // close the file\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Read the file: fscanf()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Read the file: fscanf()",
+              "body": "",
+              "footer": "```c{6}\n#include <stdio.h>\n\nvoid main() {\n  FILE *fp;\n\n  char buff[255]; // Create a char array to store file data\n  fp = fopen(\"file.txt\", \"r\");\n\n  while(fscanf(fp, \"%s\", buff) != EOF) {\n    printf(\"%s \", buff);\n  }\n  fclose(fp);\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Write to file: fputc()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Write to file: fputc()",
+              "body": "",
+              "footer": "```c{6}\n#include <stdio.h>\n\nvoid main() {\n  FILE *fp;\n  fp = fopen(\"file1.txt\", \"w\"); // open the file\n  fputc('a',fp); // write a single character to the file\n  fclose(fp); // close the file\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Read the file: fgetc()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Read the file: fgetc()",
+              "body": "",
+              "footer": "```c{8}\n#include <stdio.h>\n#include <conio.h>\n\nvoid main() {\n  FILE *fp;\n  char c;\n\n  clrscr();\n\n  fp = fopen(\"myfile.txt\", \"r\");\n\n  while( (c = fgetc(fp) ) != EOF) {\n    printf(\"%c\", c);\n  }\n  fclose(fp);\n\n  getch();\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Write to file: fputs()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Write to file: fputs()",
+              "body": "",
+              "footer": "```c {8}\n#include<stdio.h>\n#include<conio.h>\n\nvoid main() {\n  FILE *fp;\n\n  clrscr();\n\n  fp = fopen(\"myfile2.txt\",\"w\");\n  fputs(\"hello c programming\",fp);\n  fclose(fp);\n\n  getch();\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Read files: fgets()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Read files: fgets()",
+              "body": "",
+              "footer": "```c {10}\n#include<stdio.h>\n#include<conio.h>\n\nvoid main() {\n  FILE *fp;\n  char text[300];\n\n  clrscr();\n\n  fp = fopen(\"myfile2.txt\", \"r\");\n  printf(\"%s\", fgets(text, 200, fp));\n  fclose(fp);\n\n  getch();\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "fseek()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "fseek()",
+              "body": "",
+              "footer": "```c{8}\n#include <stdio.h>\n\nvoid main(void) {\n  FILE *fp;\n\n  fp = fopen(\"myfile.txt\",\"w+\");\n  fputs(\"This is Book\", fp);\n\n  // Set file pointer to the given position\n  fseek(fp, 7, SEEK_SET);\n\n  fputs(\"Kenny Wong\", fp);\n  fclose(fp);\n}\n```\n\nSet the file pointer to the given position",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "rewind()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "rewind()",
+              "body": "",
+              "footer": "```c{11}\n#include <stdio.h>\n#include <conio.h>\n\nvoid main() {\n  FILE *fp;\n  char c;\n\n  clrscr();\n\n  fp = fopen(\"file.txt\", \"r\");\n\n  while( (c = fgetc(fp) ) != EOF) {\n    printf(\"%c\", c);\n  }\n\n  rewind(fp); // move the file pointer to the beginning of the file\n\n  while( (c = fgetc(fp) ) != EOF) {\n    printf(\"%c\", c);\n  }\n  fclose(fp);\n\n  getch();\n}\n// output\n// Hello World! Hello World!\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ftell()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ftell()",
+              "body": "",
+              "footer": "```c{11}\n#include <stdio.h>\n#include <conio.h>\n\nvoid main () {\n   FILE *fp;\n   int length;\n\n   clrscr();\n\n   fp = fopen(\"file.txt\", \"r\");\n\n   fseek(fp, 0, SEEK_END);\n   length = ftell(fp); // return current position\n   fclose(fp);\n\n   printf(\"File size: %d bytes\", length);\n\n   getch();\n}\n// output\n// file size: 18 bytes\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

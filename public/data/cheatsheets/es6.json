@@ -1,0 +1,694 @@
+{
+  "id": "es6",
+  "metadata": {
+    "title": "ES6",
+    "date": "2023-01-08T18:26:55.000Z",
+    "background": "bg-[#edc545]",
+    "tags": [
+      "config",
+      "format"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "A quick reference cheatsheet of what's new in JavaScript for ES2015, ES2016, ES2017, ES2018 and beyond\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Block-scoped",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Block-scoped",
+              "body": "",
+              "footer": "#### Let\n\n```js{2,4}\nfunction fn () {\n  let x = 0\n  if (true) {\n    let x = 1 // only inside this `if`\n  }\n}\n```\n\n#### Const\n\n```js\nconst a = 1;\n```\n\n`let` is the new `var`. Constants (`const`) work just like `let`, but cannot be reassigned. See:\n[Let and const](https://babeljs.io/learn-es2015/#let--const)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Template Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Template Strings",
+              "body": "",
+              "footer": "#### Interpolation\n\n```js\nconst message = `Hello ${name}`;\n```\n\n#### Multi-line string\n\n```js\nconst str = `\nhello\nthe world\n`;\n```\n\nTemplates and multiline strings. See: [template strings](https://babeljs.io/learn-es2015/#template-strings)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Binary and octal literals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Binary and octal literals",
+              "body": "```js\nlet bin = 0b1010010;\nlet oct = 0o755;\n```",
+              "footer": "See: [Binary and Octal Literals](https://babeljs.io/learn-es2015/#binary-and-octal-literals)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Exponential Operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Exponential Operator",
+              "body": "",
+              "footer": "```js {1}\nconst byte = 2 ** 8;\n```\n\nSame as: Math.pow(2, 8)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "New library additions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "New library additions",
+              "body": "",
+              "footer": "#### New string methods\n\n```js\n'hello'.repeat(3);\n'hello'.includes('ll');\n'hello'.startsWith('he');\n'hello'.padStart(8); // \"hello\"\n'hello'.padEnd(8); // \"hello\"\n'hello'.padEnd(8, '!'); // hello!!!\n'\\u1E9B\\u0323'.normalize('NFC');\n```\n\n#### New Number Methods\n\n```js\nNumber.EPSILON;\nNumber.isInteger(Infinity); // false\nNumber.isNaN('NaN'); // false\n```\n\n#### New Math methods\n\n```js\nMath.acosh(3); // 1.762747174039086\nMath.hypot(3, 4); // 5\nMath.imul(Math.pow(2, 32) - 1, Math.pow(2, 32) - 2); // 2\n```\n\n#### New Array methods\n\n```js\n//return a real array\nArray.from(document.querySelectorAll('*'));\n//similar to new Array(...), but without the special single-argument behavior\nArray.of(1, 2, 3);\n```\n\nSee: [New library additions](https://babeljs.io/learn-es2015/#math--number--string--object-apis)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "kind",
+          "level": 3,
+          "cards": [
+            {
+              "title": "kind",
+              "body": "```js\nclass Circle extends Shape {\n```",
+              "footer": "#### Constructor\n\n```js {1}\nconstructor (radius) {\n  this.radius = radius\n}\n```\n\n#### method\n\n```js {1}\ngetArea () {\n  return Math.PI *2 *this.radius\n}\n```\n\n#### Call the superclass method\n\n```js {2}\nexpand(n) {\n  return super.expand(n) *Math.PI\n}\n```\n\n#### Static methods\n\n```js {1}\nstatic createFromDiameter(diameter) {\n  return new Circle(diameter /2)\n}\n```\n\nSyntactic sugar for prototypes. See: [classes](https://babeljs.io/learn-es2015/#classes)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Private class",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Private class",
+              "body": "The javascript default field is public (`public`), if you need to indicate private, you can use (`#`)\n\n```js\nclass Dog {\n  #name;\n  constructor(name) {\n    this.#name = name;\n  }\n  printName() {\n    // Only private fields can be called inside the class\n    console.log(`Your name is ${this.#name}`);\n  }\n}\n\nconst dog = new Dog('putty');\n//console.log(this.#name)\n//Private identifiers are not allowed outside class bodies.\ndog.printName();\n```",
+              "footer": "#### Static private class\n\n```js\nclass ClassWithPrivate {\n  static #privateStaticField;\n  static #privateStaticFieldWithInitializer = 42;\n\n  static #privateStaticMethod() {\n    // …\n  }\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Promises",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "make the commitment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "make the commitment",
+              "body": "",
+              "footer": "```js {1}\nnew Promise((resolve, reject) => {\n  if (ok) {\n    resolve(result);\n  } else {\n    reject(error);\n  }\n});\n```\n\nfor asynchronous programming. See: [Promises](https://babeljs.io/learn-es2015/#promises)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Using Promises",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using Promises",
+              "body": "",
+              "footer": "```js{2,3}\npromise\n  .then((result) => { ··· })\n  .catch((error) => { ··· })\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Using Promises in finally",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using Promises in finally",
+              "body": "",
+              "footer": "```js {4}\npromise\n  .then((result) => { ··· })\n  .catch((error) => { ··· })\n  .finally(() => {\n    /*logic independent of success/error */\n  })\n```\n\nThe handler is called when the promise is fulfilled or rejected",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Promise function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Promise function",
+              "body": "```js\nPromise.all(···)\nPromise.race(···)\nPromise.reject(···)\nPromise.resolve(···)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Async-await",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Async-await",
+              "body": "",
+              "footer": "```js{2,3}\nasync function run () {\n  const user = await getUser()\n  const tweets = await getTweets(user)\n  return [user, tweets]\n}\n```\n\n`async` functions are another way to use functions. See:\n[Async Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Destructuring",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Destructuring assignment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Destructuring assignment",
+              "body": "",
+              "footer": "#### Arrays\n\n```js {1}\nconst [first, last] = ['Nikola', 'Tesla'];\n```\n\n#### Objects\n\n```js {1}\nlet { title, author } = {\n  title: 'The Silkworm',\n  author: 'R. Galbraith'\n};\n```\n\nSupports matching arrays and objects. See: [Destructuring](https://babeljs.io/learn-es2015/#destructuring)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Defaults",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Defaults",
+              "body": "```js\nconst scores = [22, 33];\nconst [math = 50, sci = 50, arts = 50] = scores;\n```",
+              "footer": "```js\n//Result:\n//math === 22, sci === 33, arts === 50\n```\nA default value can be assigned when destructuring an array or object",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function parameters",
+              "body": "```\n\n```",
+              "footer": "js\ngreet({ name: 'Larry', greeting: 'Ahoy' });\n```\nDestructuring of objects and arrays can also be done in function parameters",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Defaults",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Defaults",
+              "body": "```\n\n```",
+              "footer": "js\ngreet(); // Hi Rauno!\ngreet({ name: 'Larry' }); // Hi Larry!\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reassign keys",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reassign keys",
+              "body": "```\n\n```",
+              "footer": "js\nprintCoordinates({ left: 25, top: 90 });\n```\nThis example assigns `x` to the value of the `left` key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loop",
+              "body": "",
+              "footer": "```js {1}\nfor (let {title, artist} of songs) {\n  ···\n}\n```\n\nAssignment expressions also work in loops",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Object Deconstruction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Object Deconstruction",
+              "body": "",
+              "footer": "```js {1}\nconst { id, ...detail } = song;\n```\n\nUse the `rest(...)` operator to extract some keys individually and the rest of the keys in the object",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Spread Operator {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Object Extensions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Object Extensions",
+              "body": "",
+              "footer": "#### with object extensions\n\n```js {2}\nconst options = {\n  ...defaults,\n  visible: true\n};\n```\n\n#### No object extension\n\n```js\nconst options = Object.assign({}, defaults, { visible: true });\n```\n\nThe object spread operator allows you to build new objects from other objects. See:\n[Object Spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array Expansion",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array Expansion",
+              "body": "",
+              "footer": "#### with array extension\n\n```js{2,3}\nconst users = [\n  ...admins,\n  ...editors,\n  'rstacruz'\n]\n```\n\n#### No array expansion\n\n```js\nconst users = admins.concat(editors).concat(['rstacruz']);\n```\n\nThe spread operator allows you to build new arrays in the same way. See:\n[Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Functions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Function parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function parameters",
+              "body": "",
+              "footer": "#### Default parameters\n\n```js {1}\nfunction greet(name = 'Jerry') {\n  return `Hello ${name}`;\n}\n```\n\n#### Rest parameters\n\n```js {1}\nfunction fn(x, ...y) {\n  // y is an array\n  return x * y.length;\n}\n```\n\n#### Extensions\n\n```js {1}\nfn(...[1, 2, 3]);\n//same as fn(1, 2, 3)\n```\n\nDefault (default), rest, spread (extension). See:\n[function parameters](https://babeljs.io/learn-es2015/#default--rest--spread)",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrow function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrow function",
+              "body": "",
+              "footer": "#### Arrow functions\n\n```js {1}\nsetTimeout(() => {\n  ···\n})\n```\n\n#### with parameters\n\n```js {1}\nreadFile('text.txt', (err, data) => {\n  ...\n})\n```\n\n#### implicit return\n\n```js{1,4,5,6}\narr.map(n => n*2)\n//no curly braces = implicit return\n//Same as: arr.map(function (n) { return n*2 })\narr.map(n => ({\n  result: n*2\n}))\n//Implicitly returning an object requires parentheses around the object\n```\n\nLike a function, but preserves `this`. See: [Arrow functions](https://babeljs.io/learn-es2015/#arrows-and-lexical-this)",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Parameter setting default value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Parameter setting default value",
+              "body": "```js\nfunction log(x, y = 'World') {\n  console.log(x, y);\n}\n\nlog('Hello'); // Hello World\nlog('Hello', 'China'); // Hello China\nlog('Hello', ''); // Hello\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Used in conjunction with destructuring assignment defaults",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Used in conjunction with destructuring assignment defaults",
+              "body": "```js\nfunction foo({ x, y = 5 } = {}) {\n  console.log(x, y);\n}\n\nfoo(); // undefined 5\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "name attribute",
+          "level": 3,
+          "cards": [
+            {
+              "title": "name attribute",
+              "body": "```js\nfunction foo() {}\nfoo.name; // \"foo\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "length property",
+          "level": 3,
+          "cards": [
+            {
+              "title": "length property",
+              "body": "```js\nfunction foo(a, b) {}\nfoo.length; // 2\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Objects",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Shorthand Syntax",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shorthand Syntax",
+              "body": "```js\nmodule.exports = { hello, bye };\n```",
+              "footer": "same below:\n```js\nmodule.exports = {\nhello: hello,\nbye: bye\n};\n```\nSee: [Object Literals Enhanced](https://babeljs.io/learn-es2015/#enhanced-object-literals)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "method",
+              "body": "",
+              "footer": "```js {2}\nconst App = {\n  start() {\n    console.log('running');\n  }\n};\n//Same as: App = { start: function () {···} }\n```\n\nSee: [Object Literals Enhanced](https://babeljs.io/learn-es2015/#enhanced-object-literals)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Getters and setters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getters and setters",
+              "body": "",
+              "footer": "```js{2,5}\nconst App = {\n  get closed () {\n    return this.status === 'closed'\n  },\n  set closed (value) {\n    this.status = value ? 'closed' : 'open'\n  }\n}\n```\n\nSee: [Object Literals Enhanced](https://babeljs.io/learn-es2015/#enhanced-object-literals)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Computed property name",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Computed property name",
+              "body": "",
+              "footer": "```js {3}\nlet event = 'click';\nlet handlers = {\n  [`on${event}`]: true\n};\n//Same as: handlers = { 'onclick': true }\n```\n\nSee: [Object Literals Enhanced](https://babeljs.io/learn-es2015/#enhanced-object-literals)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extract value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extract value",
+              "body": "",
+              "footer": "```js{3,5}\nconst fatherJS = { age: 57, name: \"Zhang San\" }\nObject.values(fatherJS)\n//[57, \"Zhang San\"]\nObject.entries(fatherJS)\n//[[\"age\", 57], [\"name\", \"Zhang San\"]]\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Modules module",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Imports import",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Imports import",
+              "body": "```js\nimport 'helpers';\n//aka: require('···')\n```",
+              "footer": "```js\nimport Express from 'express';\n//aka: const Express = require('···').default || require('···')\n```\n```js\nimport { indent } from 'helpers';\n//aka: const indent = require('···').indent\n```\n```js\nimport * as Helpers from 'helpers';\n//aka: const Helpers = require('···')\n```\n```js\nimport { indentSpaces as indent } from 'helpers';\n//aka: const indent = require('···').indentSpaces\n```\n`import` is the new `require()`. See: [Module imports](https://babeljs.io/learn-es2015/#modules)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Exports export",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Exports export",
+              "body": "```js\nexport default function () { ··· }\n//aka: module.exports.default = ···\n```",
+              "footer": "```js\nexport function mymethod () { ··· }\n//aka: module.exports.mymethod = ···\n```\n```js\nexport const pi = 3.14159;\n//aka: module.exports.pi = ···\n```\n```js\nconst firstName = 'Michael';\nconst lastName = 'Jackson';\nconst year = 1958;\nexport { firstName, lastName, year };\n```\n```js\nexport * from 'lib/math';\n```\n`export` is the new `module.exports`. See: [Module exports](https://babeljs.io/learn-es2015/#modules)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "`as` keyword renaming",
+          "level": 3,
+          "cards": [
+            {
+              "title": "`as` keyword renaming",
+              "body": "",
+              "footer": "```js{2,8,12-14}\nimport {\n  lastName as surname // import rename\n} from './profile.js';\n\nfunction v1() { ... }\nfunction v2() { ... }\n\nexport { v1 as default };\n//Equivalent to export default v1;\n\nexport {\n  v1 as streamV1, // export rename\n  v2 as streamV2, // export rename\n  v2 as streamLatestVersion // export rename\n};\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dynamically load modules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dynamically load modules",
+              "body": "```js\nbutton.addEventListener('click', (event) => {\n  import('./dialogBox.js')\n    .then((dialogBox) => {\n      dialogBox.open();\n    })\n    .catch((error) => {\n      /*Error handling */\n    });\n});\n```",
+              "footer": "[ES2020 Proposal](https://github.com/tc39/proposal-dynamic-import) introduce `import()` function",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "import() allows module paths to be dynamically generated",
+          "level": 3,
+          "cards": [
+            {
+              "title": "import() allows module paths to be dynamically generated",
+              "body": "```js\nconst main = document.querySelector('main');\n\nimport(`./modules/${someVariable}.js`)\n  .then((module) => {\n    module.loadPageInto(main);\n  })\n  .catch((err) => {\n    main.textContent = err.message;\n  });\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "import.meta",
+          "level": 3,
+          "cards": [
+            {
+              "title": "import.meta",
+              "body": "```js\nnew URL('data.txt', import.meta.url);\n```",
+              "footer": "In the Node.js environment, `import.meta.url` always returns a local path, that is, a string of the `file:URL` protocol,\nsuch as `file:/// home/user/foo.js`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Import Assertions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Import Assertions",
+              "body": "",
+              "footer": "#### static import\n\n```js\nimport json from './package.json' assert { type: 'json' };\n//Import all objects in the json file\n```\n\n#### Dynamic Import\n\n```js\nconst json = await import('./package.json', { assert: { type: 'json' } });\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Generators",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Generator function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generator function",
+              "body": "```js\nfunction* idMaker() {\n  let id = 0;\n  while (true) {\n    yield id++;\n  }\n}\n```",
+              "footer": "```js\nlet gen = idMaker();\ngen.next().value; // → 0\ngen.next().value; // → 1\ngen.next().value; // → 2\n```\nit's complicated. See: [Generators](https://babeljs.io/learn-es2015/#generators)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "For..of + iterator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For..of + iterator",
+              "body": "```js\nlet fibonacci = {\n  [Symbol.iterator]() {\n    let pre = 0,\n      cur = 1;\n    return {\n      next() {\n        [pre, cur] = [cur, pre + cur];\n        return { done: false, value: cur };\n      }\n    };\n  }\n};\n\nfor (var n of fibonacci) {\n  // truncate sequence at 1000\n  if (n > 1000) break;\n  console.log(n);\n}\n```",
+              "footer": "For iterating over generators and arrays. See: [For..of iteration](https://babeljs.io/learn-es2015/#iterators--forof)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Relationship with Iterator interface",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Relationship with Iterator interface",
+              "body": "```js\nvar gen = {};\ngen[Symbol.iterator] = function* () {\n  yield 1;\n  yield 2;\n  yield 3;\n};\n\n[...gen]; // => [1, 2, 3]\n```",
+              "footer": "The `Generator` function is assigned to the `Symbol.iterator` property, so that the `gen` object has the `Iterator`\ninterface, which can be traversed by the `...` operator",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Symbol.iterator property",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Symbol.iterator property",
+              "body": "```js\nfunction* gen() {\n  /*some code */\n}\nvar g = gen();\n\ng[Symbol.iterator]() === g; // true\n```",
+              "footer": "`gen` is a `Generator` function, calling it will generate a traverser object `g`. Its `Symbol.iterator` property, which\nis also an iterator object generation function, returns itself after execution",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "see also",
+      "level": 2,
+      "cards": [
+        {
+          "title": "see also",
+          "body": "- [Learn ES2015](https://babeljs.io/docs/en/learn/)_(babeljs.io)_\n- [ECMAScript 6 Features Overview](https://github.com/lukehoban/es6features#readme) _(github.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

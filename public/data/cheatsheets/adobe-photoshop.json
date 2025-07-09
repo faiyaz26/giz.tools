@@ -1,0 +1,1524 @@
+{
+  "id": "adobe-photoshop",
+  "metadata": {
+    "title": "Adobe Photoshop",
+    "date": "2022-11-23T16:23:31.706Z",
+    "background": "bg-[#071c25]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 283 keyboard shortcuts found in Adobe Photoshop\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Popular shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Popular shortcuts",
+              "body": "| Shortcut           | Action                                                         |\n| ------------------ | -------------------------------------------------------------- |\n| `Ctrl` `T`         | Free transform                                                 |\n| `[`                | Decrease brush size                                            |\n| `]`                | Increase brush size                                            |\n| `Shift` `[`        | Decrease brush hardness                                        |\n| `Shift` `]`        | Increase brush hardness                                        |\n| `D`                | Default foreground/background colors                           |\n| `X`                | Switch foreground/background colors                            |\n| `Ctrl` `J`         | New layer via copy                                             |\n| `Ctrl` `Shift` `J` | New layer via cut                                              |\n| `Esc`              | Cancel any modal dialog window (including the Start Workspace) |\n| `Enter`            | Select the first edit field of the tool bar                    |\n| `Tab`              | Navigate between fields                                        |\n| `Shift` `Tab`      | Navigate between fields in the opposite direction              |\n| `Alt`              | Change cancel to reset                                         |\n| `Ctrl` `F`         | Invoke the search experience                                   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Free transform"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Decrease brush size"
+                },
+                {
+                  "shortcut": "`]`",
+                  "action": "Increase brush size"
+                },
+                {
+                  "shortcut": "`Shift` `[`",
+                  "action": "Decrease brush hardness"
+                },
+                {
+                  "shortcut": "`Shift` `]`",
+                  "action": "Increase brush hardness"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Default foreground/background colors"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Switch foreground/background colors"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "New layer via copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "New layer via cut"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Cancel any modal dialog window (including the Start Workspace)"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Select the first edit field of the tool bar"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Navigate between fields"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Navigate between fields in the opposite direction"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Change cancel to reset"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Invoke the search experience"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use function keys",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use function keys",
+              "body": "| Shortcut     | Action                  |\n| ------------ | ----------------------- |\n| `F1`         | Start help              |\n| `F2`         | Cut                     |\n| `F3`         | Copy                    |\n| `F4`         | Paste                   |\n| `F5`         | Show/hide brush panel   |\n| `F6`         | Show/hide color panel   |\n| `F7`         | Show/hide layers panel  |\n| `F8`         | Show/hide info panel    |\n| `F9`         | Show/hide actions panel |\n| `F12`        | Revert                  |\n| `Shift` `F5` | Fill                    |\n| `Shift` `F6` | Feather selection       |\n| `Shift` `F7` | Inverse selection       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F1`",
+                  "action": "Start help"
+                },
+                {
+                  "shortcut": "`F2`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`F3`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`F4`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`F5`",
+                  "action": "Show/hide brush panel"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Show/hide color panel"
+                },
+                {
+                  "shortcut": "`F7`",
+                  "action": "Show/hide layers panel"
+                },
+                {
+                  "shortcut": "`F8`",
+                  "action": "Show/hide info panel"
+                },
+                {
+                  "shortcut": "`F9`",
+                  "action": "Show/hide actions panel"
+                },
+                {
+                  "shortcut": "`F12`",
+                  "action": "Revert"
+                },
+                {
+                  "shortcut": "`Shift` `F5`",
+                  "action": "Fill"
+                },
+                {
+                  "shortcut": "`Shift` `F6`",
+                  "action": "Feather selection"
+                },
+                {
+                  "shortcut": "`Shift` `F7`",
+                  "action": "Inverse selection"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Select tools",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Select tools",
+              "body": "| Shortcut    | Action                                                                                          |\n| ----------- | ----------------------------------------------------------------------------------------------- |\n| `V`         | Move tool                                                                                       |\n| `M`         | Rectangular marquee tool                                                                        |\n| `L`         | Lasso tool                                                                                      |\n| `W`         | Magic wand tool > quick selection tool                                                          |\n| `C`         | Crop tool > slice tool > slice select tool                                                      |\n| `I`         | Eyedropper tool > ruler tool > note tool                                                        |\n| `J`         | Spot healing brush tool > healing brush tool > patch tool > red eye tool                        |\n| `B`         | Brush tool > pencil tool > color replacement tool > mixer brush tool                            |\n| `S`         | Clone stamp tool > pattern stamp tool                                                           |\n| `Y`         | History brush tool > Art history brush tool                                                     |\n| `E`         | Eraser tool > background eraser tool > magic eraser tool                                        |\n| `G`         | Gradient tool > paint bucket tool                                                               |\n| `O`         | Dodge tool > burn tool > sponge tool                                                            |\n| `P`         | Pen tool > freeform pen tool                                                                    |\n| `T`         | Horizontal type tool > vertical type tool > horizontal type mask tool > vertical type mask tool |\n| `A`         | Path selection tool > direct selection tool                                                     |\n| `U`         | Rectangle tool > rounded rectangle tool > ellipse tool > polygon tool > line tool               |\n| `H`         | Hand tool                                                                                       |\n| `R`         | Rotate view tool                                                                                |\n| `Z`         | Zoom tool                                                                                       |\n| `D`         | Default foreground/background colors                                                            |\n| `X`         | Switch foreground/background colors                                                             |\n| `Q`         | Toggle standard/quick mask modes                                                                |\n| `J`         | Content-aware move tool                                                                         |\n| `C`         | Perspective crop tool                                                                           |\n| `V`         | Artboard tool                                                                                   |\n| `R`         | Rotate view tool                                                                                |\n| `/`         | Toggle preserve transparency                                                                    |\n| `,`         | Previous brush                                                                                  |\n| `.`         | Next brush                                                                                      |\n| `Shift` `,` | First brush                                                                                     |\n| `Shift` `.` | Last brush                                                                                      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`V`",
+                  "action": "Move tool"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Rectangular marquee tool"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Lasso tool"
+                },
+                {
+                  "shortcut": "`W`",
+                  "action": "Magic wand tool > quick selection tool"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Crop tool > slice tool > slice select tool"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Eyedropper tool > ruler tool > note tool"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Spot healing brush tool > healing brush tool > patch tool > red eye tool"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Brush tool > pencil tool > color replacement tool > mixer brush tool"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Clone stamp tool > pattern stamp tool"
+                },
+                {
+                  "shortcut": "`Y`",
+                  "action": "History brush tool > Art history brush tool"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Eraser tool > background eraser tool > magic eraser tool"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Gradient tool > paint bucket tool"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Dodge tool > burn tool > sponge tool"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Pen tool > freeform pen tool"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Horizontal type tool > vertical type tool > horizontal type mask tool > vertical type mask tool"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Path selection tool > direct selection tool"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Rectangle tool > rounded rectangle tool > ellipse tool > polygon tool > line tool"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Hand tool"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Rotate view tool"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Zoom tool"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Default foreground/background colors"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Switch foreground/background colors"
+                },
+                {
+                  "shortcut": "`Q`",
+                  "action": "Toggle standard/quick mask modes"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Content-aware move tool"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Perspective crop tool"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Artboard tool"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Rotate view tool"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Toggle preserve transparency"
+                },
+                {
+                  "shortcut": "`,`",
+                  "action": "Previous brush"
+                },
+                {
+                  "shortcut": "`.`",
+                  "action": "Next brush"
+                },
+                {
+                  "shortcut": "`Shift` `,`",
+                  "action": "First brush"
+                },
+                {
+                  "shortcut": "`Shift` `.`",
+                  "action": "Last brush"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View images",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View images",
+              "body": "| Shortcut             | Action                                                                                   |\n| -------------------- | ---------------------------------------------------------------------------------------- |\n| `Ctrl` `Tab`         | Cycle through open documents                                                             |\n| `Ctrl` `Shift` `Tab` | Switch to previous document                                                              |\n| `Ctrl` `Shift` `W`   | Close a file in Photoshop and open Bridge                                                |\n| `F`                  | Toggle forward between Standard screen > Full screen with menu bar > Full screen modes   |\n| `Shift` `F`          | Toggle backwards between Standard screen > Full screen with menu bar > Full screen modes |\n| `Space` `F`          | Toggle forward canvas color                                                              |\n| `Shift` `Space` `F`  | Toggle backwards canvas color                                                            |\n| `Space`              | Switch to hand tool (when not in text-edit mode)                                         |\n| `Ctrl` `Space`       | Switch to zoom in tool                                                                   |\n| `Alt` `Space`        | Switch to zoom out tool                                                                  |\n| `Shift` `Enter`      | Apply zoom percentage, and keep zoom percentage box active                               |\n| `PgUp/PgDn`          | Scroll up or down 1 screen                                                               |\n| `Shift` `PgUp/PgDn`  | Scroll up or down 10 units                                                               |\n| `Home`               | Move view to upper-left corner                                                           |\n| `End`                | Move view to lower-right corner                                                          |\n| `\\`                  | Toggle layer mask on/off as rubylith (layer mask must be selected)                       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Cycle through open documents"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Tab`",
+                  "action": "Switch to previous document"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `W`",
+                  "action": "Close a file in Photoshop and open Bridge"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Toggle forward between Standard screen > Full screen with menu bar > Full screen modes"
+                },
+                {
+                  "shortcut": "`Shift` `F`",
+                  "action": "Toggle backwards between Standard screen > Full screen with menu bar > Full screen modes"
+                },
+                {
+                  "shortcut": "`Space` `F`",
+                  "action": "Toggle forward canvas color"
+                },
+                {
+                  "shortcut": "`Shift` `Space` `F`",
+                  "action": "Toggle backwards canvas color"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Switch to hand tool (when not in text-edit mode)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Space`",
+                  "action": "Switch to zoom in tool"
+                },
+                {
+                  "shortcut": "`Alt` `Space`",
+                  "action": "Switch to zoom out tool"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Apply zoom percentage, and keep zoom percentage box active"
+                },
+                {
+                  "shortcut": "`PgUp/PgDn`",
+                  "action": "Scroll up or down 1 screen"
+                },
+                {
+                  "shortcut": "`Shift` `PgUp/PgDn`",
+                  "action": "Scroll up or down 10 units"
+                },
+                {
+                  "shortcut": "`Home`",
+                  "action": "Move view to upper-left corner"
+                },
+                {
+                  "shortcut": "`End`",
+                  "action": "Move view to lower-right corner"
+                },
+                {
+                  "shortcut": "`\\`",
+                  "action": "Toggle layer mask on/off as rubylith (layer mask must be selected)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use Puppet Warp",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use Puppet Warp",
+              "body": "| Shortcut   | Action                   |\n| ---------- | ------------------------ |\n| `Esc`      | Cancel completely        |\n| `Ctrl` `Z` | Undo last pin adjustment |\n| `Ctrl` `A` | Select all pins          |\n| `Ctrl` `D` | Deselect all pins        |\n| `H`        | Temporarily hide pins    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Cancel completely"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo last pin adjustment"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all pins"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Deselect all pins"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Temporarily hide pins"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use Refine Edge",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use Refine Edge",
+              "body": "| Shortcut         | Action                                                  |\n| ---------------- | ------------------------------------------------------- |\n| `Ctrl` `Alt` `R` | Open the Refine Edge dialog box                         |\n| `F`              | Cycle forward through preview modes                     |\n| `Shift` `F`      | Cycle backwards through preview modes                   |\n| `X`              | Toggle between original image and selection preview     |\n| `P`              | Toggle between original selection and refined version   |\n| `J`              | Toggle radius preview on and off                        |\n| `Shift` `E`      | Toggle between Refine Radius and Erase Refinement tools |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Alt` `R`",
+                  "action": "Open the Refine Edge dialog box"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Cycle forward through preview modes"
+                },
+                {
+                  "shortcut": "`Shift` `F`",
+                  "action": "Cycle backwards through preview modes"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Toggle between original image and selection preview"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Toggle between original selection and refined version"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Toggle radius preview on and off"
+                },
+                {
+                  "shortcut": "`Shift` `E`",
+                  "action": "Toggle between Refine Radius and Erase Refinement tools"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use the Filter Gallery",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use the Filter Gallery",
+              "body": "| Shortcut           | Action                          |\n| ------------------ | ------------------------------- |\n| `Ctrl` `Alt` `F`   | Reapply last-used filter        |\n| `Ctrl`             | Change Cancel button to Default |\n| `Alt`              | Change Cancel button to Reset   |\n| `Ctrl` `Z`         | Undo/Redo                       |\n| `Ctrl` `Shift` `Z` | Step forward                    |\n| `Ctrl` `Alt` `Z`   | Step backward                   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Alt` `F`",
+                  "action": "Reapply last-used filter"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Change Cancel button to Default"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Change Cancel button to Reset"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo/Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Step forward"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Z`",
+                  "action": "Step backward"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use the Liquify filter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use the Liquify filter",
+              "body": "| Shortcut       | Action                                                           |\n| -------------- | ---------------------------------------------------------------- |\n| `W`            | Forward warp tool                                                |\n| `R`            | Reconstruct tool                                                 |\n| `C`            | Twirl clockwise tool                                             |\n| `S`            | Pucker tool                                                      |\n| `B`            | Bloat tool                                                       |\n| `O`            | Push left tool                                                   |\n| `M`            | Mirror tool                                                      |\n| `T`            | Turbulence tool                                                  |\n| `F`            | Freeze mask tool                                                 |\n| `D`            | Thaw mask tool                                                   |\n| `Alt` `(tool)` | Reverse direction for Bloat, Pucker, Push Left, and Mirror tools |\n| `Tab`          | Cycle through controls on right from top                         |\n| `Shift` `Tab`  | Cycle through controls on right from bottom                      |\n| `Alt`          | Change cancel to reset                                           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`W`",
+                  "action": "Forward warp tool"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Reconstruct tool"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Twirl clockwise tool"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Pucker tool"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Bloat tool"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Push left tool"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Mirror tool"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Turbulence tool"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Freeze mask tool"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Thaw mask tool"
+                },
+                {
+                  "shortcut": "`Alt` `(tool)`",
+                  "action": "Reverse direction for Bloat, Pucker, Push Left, and Mirror tools"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Cycle through controls on right from top"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Cycle through controls on right from bottom"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Change cancel to reset"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use Vanishing Point",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use Vanishing Point",
+              "body": "| Shortcut           | Action                                               |\n| ------------------ | ---------------------------------------------------- |\n| `X`                | Zoom 2x (temporary)                                  |\n| `Ctrl` `+`         | Zoom in                                              |\n| `Ctrl` `-`         | Zoom out                                             |\n| `Ctrl` `0`         | Fit in view                                          |\n| `Ctrl` `Z`         | Undo last action                                     |\n| `Ctrl` `Shift` `Z` | Redo last action                                     |\n| `Ctrl` `D`         | Deselect all                                         |\n| `Ctrl` `H`         | Hide selection and panes                             |\n| `Arrows`           | Move selection 1 pixel                               |\n| `Shift` `Arrows`   | Move selection 10 pixels                             |\n| `Ctrl` `C`         | Copy                                                 |\n| `Ctrl` `V`         | Paste                                                |\n| `Ctrl` `Shift` `T` | Repeat last duplicate and move                       |\n| `Ctrl` `Alt` `T`   | Create floating selection from the current selection |\n| `Alt` `Shift`      | Constrain selection to a 15 degree rotation          |\n| `Backspace`        | Delete last node while creating plane                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`X`",
+                  "action": "Zoom 2x (temporary)"
+                },
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Fit in view"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo last action"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo last action"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Deselect all"
+                },
+                {
+                  "shortcut": "`Ctrl` `H`",
+                  "action": "Hide selection and panes"
+                },
+                {
+                  "shortcut": "`Arrows`",
+                  "action": "Move selection 1 pixel"
+                },
+                {
+                  "shortcut": "`Shift` `Arrows`",
+                  "action": "Move selection 10 pixels"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Repeat last duplicate and move"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `T`",
+                  "action": "Create floating selection from the current selection"
+                },
+                {
+                  "shortcut": "`Alt` `Shift`",
+                  "action": "Constrain selection to a 15 degree rotation"
+                },
+                {
+                  "shortcut": "`Backspace`",
+                  "action": "Delete last node while creating plane"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use the Camera Raw dialog box",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use the Camera Raw dialog box",
+              "body": "| Shortcut                 | Action                                                                                             |\n| ------------------------ | -------------------------------------------------------------------------------------------------- |\n| `Z`                      | Zoom tool                                                                                          |\n| `H`                      | Hand tool                                                                                          |\n| `I`                      | White balance tool                                                                                 |\n| `S`                      | Color sampler tool                                                                                 |\n| `C`                      | Crop tool                                                                                          |\n| `A`                      | Straighten tool                                                                                    |\n| `B`                      | Spot removal tool                                                                                  |\n| `E`                      | Red eye removal tool                                                                               |\n| `Ctrl` `Alt` `1`         | Basic panel                                                                                        |\n| `Ctrl` `Alt` `2`         | Tone curve panel                                                                                   |\n| `Ctrl` `Alt` `3`         | Detail panel                                                                                       |\n| `Ctrl` `Alt` `4`         | HSL/Greyscale panel                                                                                |\n| `Ctrl` `Alt` `5`         | Split toning panel                                                                                 |\n| `Ctrl` `Alt` `6`         | Lens corrections panel                                                                             |\n| `Ctrl` `Alt` `7`         | Camera calibration panel                                                                           |\n| `Ctrl` `Alt` `8`         | Presets panel                                                                                      |\n| `Ctrl` `Alt` `9`         | Open snapshots panel                                                                               |\n| `Ctrl` `Alt` `Shift` `T` | Parametric curve targeted adjustment tool                                                          |\n| `Ctrl` `Alt` `Shift` `H` | Hue targeted adjustment tool                                                                       |\n| `Ctrl` `Alt` `Shift` `S` | Saturation targeted adjustment tool                                                                |\n| `Ctrl` `Alt` `Shift` `L` | Luminance targeted adjustment tool                                                                 |\n| `Ctrl` `Alt` `Shift` `G` | Grayscale mix targeted adjustment tool                                                             |\n| `T`                      | Last-used targeted adjustment tool                                                                 |\n| `K`                      | Adjustment brush tool                                                                              |\n| `G`                      | Graduated filter tool                                                                              |\n| `Alt`                    | Temporarily switch from Add to Erase mode for the Adjustment brush tool, or from Erase to Add mode |\n| `Alt` `]/[`              | Increase/decrease temporary adjustment brush tool size                                             |\n| `Alt` `Shift` `]/[`      | Increase/decrease temporary adjustment brush tool feather                                          |\n| `Alt` `=/-`              | Increase/decrease temporary adjustment brush tool size flow in increments of 10                    |\n| `N`                      | Switch to New mode from Add or Erase mode of the Adjustment Brush tool or Graduated filter         |\n| `M`                      | Toggle Auto Mask for Adjustment Brush tool                                                         |\n| `Y`                      | Toggle Show Mask for Adjustment Brush tool                                                         |\n| `V`                      | Toggle pins for Adjustment Brush tool                                                              |\n| `L`                      | Rotate image left                                                                                  |\n| `R`                      | Rotate image right                                                                                 |\n| `Ctrl`                   | Temporarily switch to zoom in tool                                                                 |\n| `Alt`                    | Temporarily switch to zoom out tool and change the image open button to open copy                  |\n| `P`                      | Toggle preview                                                                                     |\n| `F`                      | Full screen mode                                                                                   |\n| `Shift`                  | Temporarily activate the White Balance tool and change the open image button to open object        |\n| `Arrows`                 | Move selected point in curves panel 1 pixel                                                        |\n| `Shift` `Arrows`         | Move selected point in curves panel 10 pixels                                                      |\n| `Ctrl` `R`               | Open selected images in Camera Raw dialog box from Bridge                                          |\n| `O`                      | Highlight clipping warning                                                                         |\n| `U`                      | Shadows clipping warning                                                                           |\n| `Ctrl` `1-5`             | Add 1-5 star rating (filmstrip mode)                                                               |\n| `Ctrl` `./,`             | Increase/decrease rating (filmstrip mode)                                                          |\n| `Ctrl` `6`               | Add red label (filmstrip mode)                                                                     |\n| `Ctrl` `7`               | Add yellow label (filmstrip mode)                                                                  |\n| `Ctrl` `8`               | Add green label (filmstrip mode)                                                                   |\n| `Ctrl` `9`               | Add blue label (filmstrip mode)                                                                    |\n| `Ctrl` `Shift` `0`       | Add purple label (filmstrip mode)                                                                  |\n| `Ctrl` `K`               | Camera Raw preferences                                                                             |\n| `Ctrl` `Alt`             | Delete Adobe Camera Raw preferences (on open)                                                      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Z`",
+                  "action": "Zoom tool"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Hand tool"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "White balance tool"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Color sampler tool"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Crop tool"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Straighten tool"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Spot removal tool"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Red eye removal tool"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `1`",
+                  "action": "Basic panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `2`",
+                  "action": "Tone curve panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `3`",
+                  "action": "Detail panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `4`",
+                  "action": "HSL/Greyscale panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `5`",
+                  "action": "Split toning panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `6`",
+                  "action": "Lens corrections panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `7`",
+                  "action": "Camera calibration panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `8`",
+                  "action": "Presets panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `9`",
+                  "action": "Open snapshots panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `T`",
+                  "action": "Parametric curve targeted adjustment tool"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `H`",
+                  "action": "Hue targeted adjustment tool"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `S`",
+                  "action": "Saturation targeted adjustment tool"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `L`",
+                  "action": "Luminance targeted adjustment tool"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `G`",
+                  "action": "Grayscale mix targeted adjustment tool"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Last-used targeted adjustment tool"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Adjustment brush tool"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Graduated filter tool"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Temporarily switch from Add to Erase mode for the Adjustment brush tool, or from Erase to Add mode"
+                },
+                {
+                  "shortcut": "`Alt` `]/[`",
+                  "action": "Increase/decrease temporary adjustment brush tool size"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `]/[`",
+                  "action": "Increase/decrease temporary adjustment brush tool feather"
+                },
+                {
+                  "shortcut": "`Alt` `=/-`",
+                  "action": "Increase/decrease temporary adjustment brush tool size flow in increments of 10"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Switch to New mode from Add or Erase mode of the Adjustment Brush tool or Graduated filter"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Toggle Auto Mask for Adjustment Brush tool"
+                },
+                {
+                  "shortcut": "`Y`",
+                  "action": "Toggle Show Mask for Adjustment Brush tool"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Toggle pins for Adjustment Brush tool"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Rotate image left"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Rotate image right"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Temporarily switch to zoom in tool"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Temporarily switch to zoom out tool and change the image open button to open copy"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Toggle preview"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Full screen mode"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Temporarily activate the White Balance tool and change the open image button to open object"
+                },
+                {
+                  "shortcut": "`Arrows`",
+                  "action": "Move selected point in curves panel 1 pixel"
+                },
+                {
+                  "shortcut": "`Shift` `Arrows`",
+                  "action": "Move selected point in curves panel 10 pixels"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Open selected images in Camera Raw dialog box from Bridge"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Highlight clipping warning"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Shadows clipping warning"
+                },
+                {
+                  "shortcut": "`Ctrl` `1-5`",
+                  "action": "Add 1-5 star rating (filmstrip mode)"
+                },
+                {
+                  "shortcut": "`Ctrl` `./,`",
+                  "action": "Increase/decrease rating (filmstrip mode)"
+                },
+                {
+                  "shortcut": "`Ctrl` `6`",
+                  "action": "Add red label (filmstrip mode)"
+                },
+                {
+                  "shortcut": "`Ctrl` `7`",
+                  "action": "Add yellow label (filmstrip mode)"
+                },
+                {
+                  "shortcut": "`Ctrl` `8`",
+                  "action": "Add green label (filmstrip mode)"
+                },
+                {
+                  "shortcut": "`Ctrl` `9`",
+                  "action": "Add blue label (filmstrip mode)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `0`",
+                  "action": "Add purple label (filmstrip mode)"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Camera Raw preferences"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt`",
+                  "action": "Delete Adobe Camera Raw preferences (on open)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use the Black-and-White dialog box",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use the Black-and-White dialog box",
+              "body": "| Shortcut                 | Action                                  |\n| ------------------------ | --------------------------------------- |\n| `Ctrl` `Shift` `Alt` `B` | Open the Black-and-White dialog box     |\n| `Up/Down`                | Increase/decrease selected value by 1%  |\n| `Shift` `Up/Down`        | Increase/decrease selected value by 10% |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `Alt` `B`",
+                  "action": "Open the Black-and-White dialog box"
+                },
+                {
+                  "shortcut": "`Up/Down`",
+                  "action": "Increase/decrease selected value by 1%"
+                },
+                {
+                  "shortcut": "`Shift` `Up/Down`",
+                  "action": "Increase/decrease selected value by 10%"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use Curves",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use Curves",
+              "body": "| Shortcut         | Action                                 |\n| ---------------- | -------------------------------------- |\n| `Ctrl` `M`       | Open the Curves dialog box             |\n| `+`              | Select next point on the curve         |\n| `-`              | Select the previous point on the curve |\n| `Ctrl` `D`       | Deselect a point                       |\n| `Del`            | Delete a point on the curve            |\n| `Arrows`         | Move the selected point 1 pixel        |\n| `Shift` `Arrows` | Move the selected point 10 pixels      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Open the Curves dialog box"
+                },
+                {
+                  "shortcut": "`+`",
+                  "action": "Select next point on the curve"
+                },
+                {
+                  "shortcut": "`-`",
+                  "action": "Select the previous point on the curve"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Deselect a point"
+                },
+                {
+                  "shortcut": "`Del`",
+                  "action": "Delete a point on the curve"
+                },
+                {
+                  "shortcut": "`Arrows`",
+                  "action": "Move the selected point 1 pixel"
+                },
+                {
+                  "shortcut": "`Shift` `Arrows`",
+                  "action": "Move the selected point 10 pixels"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Transform selections, selection borders, and paths",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transform selections, selection borders, and paths",
+              "body": "| Shortcut                 | Action                              |\n| ------------------------ | ----------------------------------- |\n| `Alt`                    | Transform from center or reflect    |\n| `Shift`                  | Constrain                           |\n| `Ctrl`                   | Distort                             |\n| `Enter`                  | Apply                               |\n| `Ctrl` `.`               | Cancel                              |\n| `Ctrl` `Alt` `T`         | Free transform with duplicate data  |\n| `Ctrl` `Shift` `Alt` `T` | Transform again with duplicate data |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Transform from center or reflect"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Constrain"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Distort"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Apply"
+                },
+                {
+                  "shortcut": "`Ctrl` `.`",
+                  "action": "Cancel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `T`",
+                  "action": "Free transform with duplicate data"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Alt` `T`",
+                  "action": "Transform again with duplicate data"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Edit paths",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Edit paths",
+              "body": "| Shortcut | Action                                                                                                                  |\n| -------- | ----------------------------------------------------------------------------------------------------------------------- |\n| `Ctrl`   | Switch from path selection, pen, add anchor point, delete anchor point, or convert point tools to direct selection tool |\n| `Alt`    | Switch from pen tool to freeform pen tool to convert point tool when pointer is over anchor or direction point          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Switch from path selection, pen, add anchor point, delete anchor point, or convert point tools to direct selection tool"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Switch from pen tool to freeform pen tool to convert point tool when pointer is over anchor or direction point"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use for painting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use for painting",
+              "body": "| Shortcut                 | Action                                               |\n| ------------------------ | ---------------------------------------------------- |\n| `Alt` `Shift` `0-9`      | Mixer brush changes mix setting                      |\n| `0-9`                    | Mixer brush changes wet setting                      |\n| `00`                     | Mixer brush changes wet and mix to zero              |\n| `Shift` `+/-`            | Cycle through blending modes                         |\n| `Backspace`              | Open fill dialog box on background or standard layer |\n| `Alt` `Backspace`        | Fill with foreground color                           |\n| `Ctrl` `Backspace`       | Fill with background color                           |\n| `Ctrl` `Alt` `Backspace` | Fill from history                                    |\n| `Shift` `Backspace`      | Displays fill dialog box                             |\n| `/`                      | Lock transparent pixels on/off                       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `Shift` `0-9`",
+                  "action": "Mixer brush changes mix setting"
+                },
+                {
+                  "shortcut": "`0-9`",
+                  "action": "Mixer brush changes wet setting"
+                },
+                {
+                  "shortcut": "`00`",
+                  "action": "Mixer brush changes wet and mix to zero"
+                },
+                {
+                  "shortcut": "`Shift` `+/-`",
+                  "action": "Cycle through blending modes"
+                },
+                {
+                  "shortcut": "`Backspace`",
+                  "action": "Open fill dialog box on background or standard layer"
+                },
+                {
+                  "shortcut": "`Alt` `Backspace`",
+                  "action": "Fill with foreground color"
+                },
+                {
+                  "shortcut": "`Ctrl` `Backspace`",
+                  "action": "Fill with background color"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Backspace`",
+                  "action": "Fill from history"
+                },
+                {
+                  "shortcut": "`Shift` `Backspace`",
+                  "action": "Displays fill dialog box"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Lock transparent pixels on/off"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use for blending modes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use for blending modes",
+              "body": "| Shortcut          | Action                                                                        |\n| ----------------- | ----------------------------------------------------------------------------- |\n| `Ctrl` `-/+`      | Cycle through blending modes                                                  |\n| `Shift` `Alt` `N` | Normal                                                                        |\n| `Shift` `Alt` `I` | Dissolve                                                                      |\n| `Shift` `Alt` `Q` | Behind (brush tool only)                                                      |\n| `Shift` `Alt` `R` | Clear (brush tool only)                                                       |\n| `Shift` `Alt` `K` | Darken                                                                        |\n| `Shift` `Alt` `M` | Multiply                                                                      |\n| `Shift` `Alt` `B` | Color burn                                                                    |\n| `Shift` `Alt` `A` | Linear burn                                                                   |\n| `Shift` `Alt` `G` | Lighten                                                                       |\n| `Shift` `Alt` `S` | Screen                                                                        |\n| `Shift` `Alt` `D` | Color dodge                                                                   |\n| `Shift` `Alt` `W` | Linear dodge                                                                  |\n| `Shift` `Alt` `O` | Overlay                                                                       |\n| `Shift` `Alt` `F` | Soft light                                                                    |\n| `Shift` `Alt` `H` | Hard light                                                                    |\n| `Shift` `Alt` `V` | Vivid light                                                                   |\n| `Shift` `Alt` `J` | Linear light                                                                  |\n| `Shift` `Alt` `Z` | Pin light                                                                     |\n| `Shift` `Alt` `L` | Hard mix                                                                      |\n| `Shift` `Alt` `E` | Difference                                                                    |\n| `Shift` `Alt` `X` | Exclusion                                                                     |\n| `Shift` `Alt` `U` | Hue                                                                           |\n| `Shift` `Alt` `T` | Saturation                                                                    |\n| `Shift` `Alt` `C` | Color                                                                         |\n| `Shift` `Alt` `Y` | Luminosity                                                                    |\n| `Shift` `Alt` `N` | Set blending mode to Threshold for bitmap images, Normal for all other images |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `-/+`",
+                  "action": "Cycle through blending modes"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `N`",
+                  "action": "Normal"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `I`",
+                  "action": "Dissolve"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `Q`",
+                  "action": "Behind (brush tool only)"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `R`",
+                  "action": "Clear (brush tool only)"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `K`",
+                  "action": "Darken"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `M`",
+                  "action": "Multiply"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `B`",
+                  "action": "Color burn"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `A`",
+                  "action": "Linear burn"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `G`",
+                  "action": "Lighten"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `S`",
+                  "action": "Screen"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `D`",
+                  "action": "Color dodge"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `W`",
+                  "action": "Linear dodge"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `O`",
+                  "action": "Overlay"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `F`",
+                  "action": "Soft light"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `H`",
+                  "action": "Hard light"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `V`",
+                  "action": "Vivid light"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `J`",
+                  "action": "Linear light"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `Z`",
+                  "action": "Pin light"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `L`",
+                  "action": "Hard mix"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `E`",
+                  "action": "Difference"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `X`",
+                  "action": "Exclusion"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `U`",
+                  "action": "Hue"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `T`",
+                  "action": "Saturation"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `C`",
+                  "action": "Color"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `Y`",
+                  "action": "Luminosity"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `N`",
+                  "action": "Set blending mode to Threshold for bitmap images, Normal for all other images"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Format type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Format type",
+              "body": "| Shortcut                 | Action                                                             |\n| ------------------------ | ------------------------------------------------------------------ |\n| `Ctrl` `Shift` `L/C/R`   | Align left, center, or right                                       |\n| `Ctrl` `Shift` `X`       | Choose 100% horizontal scale                                       |\n| `Ctrl` `Shift` `Alt` `X` | Choose 100% vertical scale                                         |\n| `Ctrl` `Shift` `Alt` `A` | Choose auto leading                                                |\n| `Ctrl` `Shift` `Q`       | Choose 0 for tracking                                              |\n| `Ctrl` `Shift` `J`       | Justify paragraph, left aligns last line                           |\n| `Ctrl` `Shift` `F`       | Justify paragraph, justifies all                                   |\n| `Ctrl` `Shift` `Alt` `H` | Toggle paragraph hyphenation on/off                                |\n| `Ctrl` `Shift` `Alt` `T` | Toggle single/every-line composer on/off                           |\n| `Ctrl` `Shift` `</>`     | Decrease or increase type size of selected text 2 points or pixels |\n| `Alt` `Up/Down`          | Decrease or increase leading 2 points or pixels                    |\n| `Shift` `Alt` `Up/Down`  | Decrease or increase baseline shift 2 points or pixels             |\n| `Alt` `Left/Right`       | Decrease or increase kerning/tracking 20/1000 ems                  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `L/C/R`",
+                  "action": "Align left, center, or right"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "Choose 100% horizontal scale"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Alt` `X`",
+                  "action": "Choose 100% vertical scale"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Alt` `A`",
+                  "action": "Choose auto leading"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Q`",
+                  "action": "Choose 0 for tracking"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Justify paragraph, left aligns last line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Justify paragraph, justifies all"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Alt` `H`",
+                  "action": "Toggle paragraph hyphenation on/off"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Alt` `T`",
+                  "action": "Toggle single/every-line composer on/off"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `</>`",
+                  "action": "Decrease or increase type size of selected text 2 points or pixels"
+                },
+                {
+                  "shortcut": "`Alt` `Up/Down`",
+                  "action": "Decrease or increase leading 2 points or pixels"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `Up/Down`",
+                  "action": "Decrease or increase baseline shift 2 points or pixels"
+                },
+                {
+                  "shortcut": "`Alt` `Left/Right`",
+                  "action": "Decrease or increase kerning/tracking 20/1000 ems"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use panels",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use panels",
+              "body": "| Shortcut          | Action                                                  |\n| ----------------- | ------------------------------------------------------- |\n| `Shift` `Enter`   | Apply value and keep text box active                    |\n| `Tab`             | Show/Hide all panels                                    |\n| `Shift` `Tab`     | Show/Hide all panels except the toolbox and options bar |\n| `Enter`           | Highlight options bar (select tool first)               |\n| `Shift` `Up/Down` | Increase/decrease selected values by 10                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Apply value and keep text box active"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Show/Hide all panels"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Show/Hide all panels except the toolbox and options bar"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Highlight options bar (select tool first)"
+                },
+                {
+                  "shortcut": "`Shift` `Up/Down`",
+                  "action": "Increase/decrease selected values by 10"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use adjustment layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use adjustment layers",
+              "body": "| Shortcut    | Action                                  |\n| ----------- | --------------------------------------- |\n| `Alt` `3`   | Choose red channel for adjustment       |\n| `Alt` `4`   | Choose green channel for adjustment     |\n| `Alt` `5`   | Choose blue channel for adjustment      |\n| `Alt` `2`   | Choose composite channel for adjustment |\n| `Backspace` | Delete adjustment layer                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `3`",
+                  "action": "Choose red channel for adjustment"
+                },
+                {
+                  "shortcut": "`Alt` `4`",
+                  "action": "Choose green channel for adjustment"
+                },
+                {
+                  "shortcut": "`Alt` `5`",
+                  "action": "Choose blue channel for adjustment"
+                },
+                {
+                  "shortcut": "`Alt` `2`",
+                  "action": "Choose composite channel for adjustment"
+                },
+                {
+                  "shortcut": "`Backspace`",
+                  "action": "Delete adjustment layer"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use the Brush panel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use the Brush panel",
+              "body": "| Shortcut          | Action                                 |\n| ----------------- | -------------------------------------- |\n| `,/.`             | Select previous/next brush size        |\n| `Shift` `,/.`     | Select first/last brush                |\n| `Caps Lock`       | Display precise cross hair for brushes |\n| `Shift` `Alt` `P` | Toggle airbrush option                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`,/.`",
+                  "action": "Select previous/next brush size"
+                },
+                {
+                  "shortcut": "`Shift` `,/.`",
+                  "action": "Select first/last brush"
+                },
+                {
+                  "shortcut": "`Caps Lock`",
+                  "action": "Display precise cross hair for brushes"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `P`",
+                  "action": "Toggle airbrush option"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use the Clone Source panel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use the Clone Source panel",
+              "body": "| Shortcut                 | Action                                       |\n| ------------------------ | -------------------------------------------- |\n| `Alt` `Shift`            | Show Clone Source (overlays iamge)           |\n| `Alt` `Shift` `(arrows)` | Nudge Clone Source                           |\n| `Alt` `Shift` `</>`      | Rotate Clone Source                          |\n| `Alt` `Shift` `[/]`      | Scale (increase or reduce size) Clone Source |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `Shift`",
+                  "action": "Show Clone Source (overlays iamge)"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `(arrows)`",
+                  "action": "Nudge Clone Source"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `</>`",
+                  "action": "Rotate Clone Source"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `[/]`",
+                  "action": "Scale (increase or reduce size) Clone Source"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use the Layers panel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use the Layers panel",
+              "body": "| Shortcut                 | Action                                                          |\n| ------------------------ | --------------------------------------------------------------- |\n| `Ctrl` `Shift` `N`       | New layer                                                       |\n| `Ctrl` `J`               | New layer via copy                                              |\n| `Ctrl` `Shift` `J`       | New layer via cut                                               |\n| `Ctrl` `G`               | Group layers                                                    |\n| `Ctrl` `Shift` `G`       | Ungroup layers                                                  |\n| `Ctrl` `Alt` `G`         | Create/release clipping mask                                    |\n| `Ctrl` `Alt` `A`         | Select all layers                                               |\n| `Ctrl` `Shift` `E`       | Merge visible layers                                            |\n| `Alt` `.`                | Select top layer                                                |\n| `Alt` `.`                | Select bottom layer                                             |\n| `Shift` `Alt` `[/]`      | Add to layer selection in Layers panel                          |\n| `Alt` `[/]`              | Select next layer down/up                                       |\n| `Ctrl` `[/]`             | Move target layer down/up                                       |\n| `Ctrl` `Shift` `Alt` `E` | Merge a copy of all visible layers into target layer            |\n| `Ctrl` `E`               | Merge layers (while layers are highlighted)                     |\n| `Ctrl` `Shift` `[/]`     | Move layer to bottom or top                                     |\n| `/`                      | Toggle lock transparency for target layer, or last applied lock |\n| `\\`                      | Toggle rubylith mode for layer mask on/off                      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "New layer"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "New layer via copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "New layer via cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Group layers"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Ungroup layers"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `G`",
+                  "action": "Create/release clipping mask"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `A`",
+                  "action": "Select all layers"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Merge visible layers"
+                },
+                {
+                  "shortcut": "`Alt` `.`",
+                  "action": "Select top layer"
+                },
+                {
+                  "shortcut": "`Alt` `.`",
+                  "action": "Select bottom layer"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `[/]`",
+                  "action": "Add to layer selection in Layers panel"
+                },
+                {
+                  "shortcut": "`Alt` `[/]`",
+                  "action": "Select next layer down/up"
+                },
+                {
+                  "shortcut": "`Ctrl` `[/]`",
+                  "action": "Move target layer down/up"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Alt` `E`",
+                  "action": "Merge a copy of all visible layers into target layer"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Merge layers (while layers are highlighted)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `[/]`",
+                  "action": "Move layer to bottom or top"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Toggle lock transparency for target layer, or last applied lock"
+                },
+                {
+                  "shortcut": "`\\`",
+                  "action": "Toggle rubylith mode for layer mask on/off"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Adobe Photoshop](https://helpx.adobe.com/photoshop/using/default-keyboard-shortcuts.html)\n  _(helpx.adobe.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "id": "unreal-engine",
+  "metadata": {
+    "title": "Unreal Engine",
+    "date": "2024-10-24T21:12:26.000Z",
+    "tags": [
+      "unreal",
+      "engine"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for many keyboard shortcuts found in Unreal Engine 5"
+  },
+  "sections": [
+    {
+      "title": "Level Editor",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Viewport Transformation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Viewport Transformation",
+              "body": "| Shortcut    | Action                      |\n| ----------- | --------------------------- |\n| `W`         | Translate                   |\n| `E`         | Rotate                      |\n| `R`         | Scale                       |\n| `Space Bar` | Toggle Transform Mode       |\n| `[`         | Decrease Position Grid Size |\n| `]`         | Increase Position Grid Size |\n| `Shift` `[` | Decrease Rotation Grid Size |\n| `Shift` `]` | Increase Rotation Grid Size |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`W`",
+                  "action": "Translate"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Rotate"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Scale"
+                },
+                {
+                  "shortcut": "`Space Bar`",
+                  "action": "Toggle Transform Mode"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Decrease Position Grid Size"
+                },
+                {
+                  "shortcut": "`]`",
+                  "action": "Increase Position Grid Size"
+                },
+                {
+                  "shortcut": "`Shift` `[`",
+                  "action": "Decrease Rotation Grid Size"
+                },
+                {
+                  "shortcut": "`Shift` `]`",
+                  "action": "Increase Rotation Grid Size"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View Modes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View Modes",
+              "body": "| Shortcut  | Action            |\n| --------- | ----------------- |\n| `Alt` `2` | Wireframe         |\n| `Alt` `3` | Unlit             |\n| `Alt` `4` | Lit               |\n| `Alt` `5` | Detail Lighting   |\n| `Alt` `6` | Lighting Only     |\n| `Alt` `7` | Light Complexity  |\n| `Alt` `8` | Shader Complexity |\n| `Alt` `0` | Lightmap Density  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `2`",
+                  "action": "Wireframe"
+                },
+                {
+                  "shortcut": "`Alt` `3`",
+                  "action": "Unlit"
+                },
+                {
+                  "shortcut": "`Alt` `4`",
+                  "action": "Lit"
+                },
+                {
+                  "shortcut": "`Alt` `5`",
+                  "action": "Detail Lighting"
+                },
+                {
+                  "shortcut": "`Alt` `6`",
+                  "action": "Lighting Only"
+                },
+                {
+                  "shortcut": "`Alt` `7`",
+                  "action": "Light Complexity"
+                },
+                {
+                  "shortcut": "`Alt` `8`",
+                  "action": "Shader Complexity"
+                },
+                {
+                  "shortcut": "`Alt` `0`",
+                  "action": "Lightmap Density"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Level Editor General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Level Editor General",
+              "body": "| Shortcut           | Action                       |\n| ------------------ | ---------------------------- |\n| `Esc`              | Deselect All                 |\n| `H`                | Hide Selected                |\n| `Ctrl` `H`         | Unhide All                   |\n| `F`                | Focus on Actor               |\n| `F9`               | Screenshot                   |\n| `F11`              | Immersive Mode               |\n| `G`                | Game View                    |\n| `T`                | Toggle Translucent Selection |\n| `(right click)`    | Asset Menu                   |\n| `Ctrl` `E`         | Edit Selected Asset          |\n| `Ctrl` `P`         | Open Asset                   |\n| `P`                | Toggle Navmesh               |\n| `Ctrl` `Shift` `,` | Profile GPU                  |\n| `Ctrl` `Shift` `H` | Toggle FPS                   |\n| `~`                | Command Console              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Deselect All"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Hide Selected"
+                },
+                {
+                  "shortcut": "`Ctrl` `H`",
+                  "action": "Unhide All"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Focus on Actor"
+                },
+                {
+                  "shortcut": "`F9`",
+                  "action": "Screenshot"
+                },
+                {
+                  "shortcut": "`F11`",
+                  "action": "Immersive Mode"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Game View"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Toggle Translucent Selection"
+                },
+                {
+                  "shortcut": "`(right click)`",
+                  "action": "Asset Menu"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Edit Selected Asset"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Open Asset"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Toggle Navmesh"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `,`",
+                  "action": "Profile GPU"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "Toggle FPS"
+                },
+                {
+                  "shortcut": "`~`",
+                  "action": "Command Console"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Camera Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Camera Navigation",
+              "body": "| Shortcut     | Action           |\n| ------------ | ---------------- |\n| `Alt` `G`    | Perspective View |\n| `Alt` `H`    | Front View       |\n| `Alt` `J`    | Top View         |\n| `Alt` `K`    | Side View        |\n| `Ctrl` `0-9` | Set Bookmark     |\n| `0-9`        | Jump to Bookmark |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `G`",
+                  "action": "Perspective View"
+                },
+                {
+                  "shortcut": "`Alt` `H`",
+                  "action": "Front View"
+                },
+                {
+                  "shortcut": "`Alt` `J`",
+                  "action": "Top View"
+                },
+                {
+                  "shortcut": "`Alt` `K`",
+                  "action": "Side View"
+                },
+                {
+                  "shortcut": "`Ctrl` `0-9`",
+                  "action": "Set Bookmark"
+                },
+                {
+                  "shortcut": "`0-9`",
+                  "action": "Jump to Bookmark"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editing Modes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editing Modes",
+              "body": "| Shortcut    | Action             |\n| ----------- | ------------------ |\n| `Shift` `1` | Selection Mode     |\n| `Shift` `2` | Landscape Mode     |\n| `Shift` `3` | Foliage Mode       |\n| `Shift` `4` | Modeling Mode      |\n| `Shift` `5` | Brush Editing Mode |\n| `Shift` `6` | Animation Mode     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `1`",
+                  "action": "Selection Mode"
+                },
+                {
+                  "shortcut": "`Shift` `2`",
+                  "action": "Landscape Mode"
+                },
+                {
+                  "shortcut": "`Shift` `3`",
+                  "action": "Foliage Mode"
+                },
+                {
+                  "shortcut": "`Shift` `4`",
+                  "action": "Modeling Mode"
+                },
+                {
+                  "shortcut": "`Shift` `5`",
+                  "action": "Brush Editing Mode"
+                },
+                {
+                  "shortcut": "`Shift` `6`",
+                  "action": "Animation Mode"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Snapping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Snapping",
+              "body": "| Shortcut      | Action               |\n| ------------- | -------------------- |\n| `End`         | Snap to Floor        |\n| `Alt` `End`   | Snap Pivot to Floor  |\n| `Shift` `End` | Snap Bounds to Floor |\n| `Ctrl` `End`  | Snap to World Grid   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`End`",
+                  "action": "Snap to Floor"
+                },
+                {
+                  "shortcut": "`Alt` `End`",
+                  "action": "Snap Pivot to Floor"
+                },
+                {
+                  "shortcut": "`Shift` `End`",
+                  "action": "Snap Bounds to Floor"
+                },
+                {
+                  "shortcut": "`Ctrl` `End`",
+                  "action": "Snap to World Grid"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Play in Editor (PIE)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Play in Editor (PIE)",
+              "body": "| Shortcut  | Action            |\n| --------- | ----------------- |\n| `Alt` `P` | Start PIE Session |\n| `Pause`   | Pause             |\n| `F8    `  | Eject from Player |\n| `Esc`     | Stop PIE Session  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `P`",
+                  "action": "Start PIE Session"
+                },
+                {
+                  "shortcut": "`Pause`",
+                  "action": "Pause"
+                },
+                {
+                  "shortcut": "`F8    `",
+                  "action": "Eject from Player"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Stop PIE Session"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Content Browser",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Content Browser",
+              "body": "Note: You need to select assets first for these shortcuts to work\n\n| Shortcut          | Action           |\n| ----------------- | ---------------- |\n| `Alt` `Shift` `A` | Audit Assets     |\n| `Alt` `Shift` `R` | Reference Viewer |\n| `Alt` `Shift` `M` | Size Map         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `Shift` `A`",
+                  "action": "Audit Assets"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `R`",
+                  "action": "Reference Viewer"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `M`",
+                  "action": "Size Map"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Asset Editors",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Blueprints",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Blueprints",
+              "body": "| Shortcut            | Action                          |\n| ------------------- | ------------------------------- |\n| `B`                 | Add Branch                      |\n| `S`                 | Add Sequence                    |\n| `D`                 | Add Delay                       |\n| `F`                 | Add For Each Loop               |\n| `G`                 | Add Gate                        |\n| `M`                 | Add Multi Gate                  |\n| `O`                 | Add Do Once                     |\n| `N`                 | Add Do N                        |\n| `C`                 | Add Comment                     |\n| `F7`                | Compile Blueprint               |\n| `F9`                | Add Breakpoint to selected node |\n| `Ctrl` `Shift` `F9` | Remove all Breakpoints          |\n| `Home`              | Zoom to selected node           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`B`",
+                  "action": "Add Branch"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Add Sequence"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Add Delay"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Add For Each Loop"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Add Gate"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Add Multi Gate"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Add Do Once"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Add Do N"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Add Comment"
+                },
+                {
+                  "shortcut": "`F7`",
+                  "action": "Compile Blueprint"
+                },
+                {
+                  "shortcut": "`F9`",
+                  "action": "Add Breakpoint to selected node"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F9`",
+                  "action": "Remove all Breakpoints"
+                },
+                {
+                  "shortcut": "`Home`",
+                  "action": "Zoom to selected node"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Asset Editor Viewports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Asset Editor Viewports",
+              "body": "Used in the viewport for the Mesh Editor, Material Editor, Blueprint Editor, etc.\n\n| Shortcut | Action                 |\n| -------- | ---------------------- |\n| `I`      | Toggle Environment     |\n| `O`      | Toggle Floor           |\n| `P`      | Toggle Post Processing |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`I`",
+                  "action": "Toggle Environment"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Toggle Floor"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Toggle Post Processing"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Static Meshes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Static Meshes",
+              "body": "| Shortcut   | Action                    |\n| ---------- | ------------------------- |\n| `Ctrl` `N` | Show Nanite Fallback Mesh |\n| `Alt` `N`  | Toggle Normals            |\n| `Alt` `S`  | Toggle Sockets            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Show Nanite Fallback Mesh"
+                },
+                {
+                  "shortcut": "`Alt` `N`",
+                  "action": "Toggle Normals"
+                },
+                {
+                  "shortcut": "`Alt` `S`",
+                  "action": "Toggle Sockets"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Your own Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Shortcut Settings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shortcut Settings",
+              "body": "- Click on the `Edit` Menu\n\n- Open `Editor Preferences`\n\n- Under \"General\" (the first section), find `Editor Shortcuts`\n\n- Here you can modify all of the above shortcuts, as well as many more!",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Unreal Engine Blog: Designer's Guide to Shortcuts](https://www.unrealengine.com/en-US/tech-blog/designer-s-guide-to-unreal-engine-keyboard-shortcuts)\n  _(www.unrealengine.com)_\n- [Unreal Developer Community: Unexplored Shortcuts](https://dev.epicgames.com/community/learning/tutorials/yp8j/the-unexplored-unreal-engine-keyboard-shortucts)\n  _(dev.epicgames.com)_\n- [Unreal Engine Editor Hotkey Cheat Sheet](https://uecasts.com/resources/unreal-engine-5-editor-hotkeys-cheat-sheet)\n  _(uecasts.com)_\n- [Unreal Engine Actor Snapping Shortcuts](https://unrealdirective.com/tips/actor-snapping-shortcuts)\n  _(unrealdirective.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

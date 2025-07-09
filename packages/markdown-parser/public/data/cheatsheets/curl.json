@@ -1,0 +1,399 @@
+{
+  "id": "curl",
+  "metadata": {
+    "title": "Curl",
+    "date": "2023-01-03T15:18:34.000Z",
+    "background": "bg-slate-600",
+    "tags": [
+      "url",
+      "request"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "This [Curl](https://github.com/curl/curl) cheat sheet contains commands and examples of some common Curl tricks.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "`Curl` is a tool for transferring data between servers, supporting protocols, including:\n\n- HTTP\n- HTTPS\n- FTP\n- IMAP\n- LDAP\n- POP3\n- SCP\n- SFTP\n- SMB\n- SMTP\n- etc...\n\n{.cols-3 .marker-none}\n\n- [Curl GitHub source repository](https://github.com/curl/curl) _(github.com)_\n- [Curl Official Website](https://curl.se/) _(curl.se)_",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Options",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Options",
+              "body": "```bash\n-o <file>    # --output: write to file\n-u user:pass # --user: authentication\n```",
+              "footer": "```bash\n-v   # --verbose: Make curl verbose during operation\n-vv  # more verbose\n-s   # --silent: don't show progress meter or errors\n-S   # --show-error: When used with --silent (-sS), show errors but no progress meter\n```\n```bash\n-i  # --include: include HTTP headers in the output\n-I  # --head: header only\n```",
+              "spanConfig": "col-span-2 row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Request",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Request",
+              "body": "```bash\n-X POST # --request\n-L # If the page redirects, follow the link\n-F # --form: HTTP POST data for multipart/form-data\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "data",
+              "body": "```bash\n# --data: HTTP post data\n# URL encoding (eg, status=\"Hello\")\n-d 'data'\n\n# --data pass file\n-d @file\n\n# --get: send -d data via get\n-G\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Header information Headers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Header information Headers",
+              "body": "```bash\n-A <str>      # --user-agent\n\n-b name=val   # --cookie\n\n-b, --cookie FILE           # Load cookies from the specified file for the URL\n-c, --cookie-jar FILE       # Save cookies to the specified file from the URL\n\n-H \"X-Foo: y\" # --header\n\n--compressed  # use deflate/gzip\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SSL",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SSL",
+              "body": "```bash\n--cacert <file>\n    --capath <dir>\n```",
+              "footer": "#### Install\n\n```bash\napk add --update curl # install in alpine linux\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Example {.cols-6}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "CURL GET/HEAD",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CURL GET/HEAD",
+              "body": "| command                                                               | description                         |\n| :-------------------------------------------------------------------- | :---------------------------------- |\n| `curl -I https://cheatsheets.zip`                                     | `curl` sends a request              |\n| `curl -v -I https://cheatsheets.zip`                                  | `curl` request with details         |\n| `curl -X GET https://cheatsheets.zip`                                 | use explicit http method for `curl` |\n| `curl --noproxy 127.0.0.1 http://www.stackoverflow.com`               | `curl` without http proxy           |\n| `curl --connect-timeout 10 -I -k https://cheatsheets.zip`             | `curl` has no timeout by default    |\n| `curl --verbose --header \"Host: www.mytest.com:8182\" cheatsheets.zip` | `curl` get extra header             |\n| `curl -k -v https://www.google.com`                                   | `curl` get response with headers    |",
+              "footer": "",
+              "spanConfig": "col-span-4 .row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple file upload",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple file upload",
+              "body": "```bash\n$ curl -v --include \\\n--form key1=value1 \\\n    --form upload=@localfilename URL\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Prettify json output for curl response",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Prettify json output for curl response",
+              "body": "```bash\n$ curl -XGET http://${elasticsearch_ip}:9200/_cluster/nodes | python -m json.tool\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CURL POST",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CURL POST",
+              "body": "| command                                                                     | description         |\n| :-------------------------------------------------------------------------- | :------------------ |\n| `curl -d \"name=username&password=123456\" <URL>`                             | `curl` send request |\n| `curl <URL> -H \"content-type: application/json\" -d \"{ \\\"woof\\\": \\\"bark\\\"}\"` | `curl` sends json   |",
+              "footer": "",
+              "spanConfig": "col-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CURL script install rvm",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CURL script install rvm",
+              "body": "```shell\ncurl -sSL https://get.rvm.io | bash\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CURL Advanced",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CURL Advanced",
+              "body": "| command                                                                                     | description                    |\n| :------------------------------------------------------------------------------------------ | :----------------------------- |\n| `curl -L -s http://ipecho.net/plain, curl -L -s http://whatismijnip.nl`                     | get my public `IP`             |\n| `curl -u $username:$password http://repo.dennyzhang.com/README.txt`                         | `curl` with credentials        |\n| `curl -v -F key1=value1 -F upload=@localfilename <URL>`                                     | `curl` upload                  |\n| `curl -k -v --http2 https://www.google.com/`                                                | use http2 curl                 |\n| `curl -T cryptopp552.zip -u test:test ftp://10.32.99.187/`                                  | curl `ftp` upload              |\n| `curl -u test:test ftp://10.32.99.187/cryptopp552.zip -o cryptopp552.zip`                   | curl `ftp` download            |\n| `curl -v -u admin:admin123 --upload-file package1.zip http://mysever:8081/dir/package1.zip` | upload with credentials `curl` |",
+              "footer": "",
+              "spanConfig": "col-span-6",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check website response time",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check website response time",
+              "body": "```shell\ncurl -s -w \\\n'\\nLookup time:\\t%{time_namelookup}\\nConnect time:\\t%{time_connect}\\nAppCon time:\\t%{time_appconnect}\\nRedirect time:\\t%{time_redirect}\\nPreXfer time:\\t%{time_pretransfer }\\nStartXfer time:\\t%{time_starttransfer}\\n\\nTotal time:\\t%{time_total}\\n' \\\n     -o /dev/null https://www.google.com\n```",
+              "footer": "",
+              "spanConfig": "col-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use Curl to check if a remote resource is available",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use Curl to check if a remote resource is available",
+              "body": "```bash\ncurl -o /dev/null --silent -Iw \"%{http_code}\" https://example.com/my.remote.tarball.gz\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Downloading file",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Downloading file",
+              "body": "```bash\ncurl https://example.com | \\\ngrep --only-matching 'src=\"[^\"]*.[png]\"' | \\\ncut -d \\\" -f2 | \\\nwhile read i; do curl https://example.com/\"${i}\" \\\n-o \"${i##*/}\"; done\n```",
+              "footer": "Download all PNG files from the site (using GNU grep)",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Download the file, save the file without changing its name",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Download the file, save the file without changing its name",
+              "body": "```bash\ncurl --remote-name \"https://example.com/linux-distro.iso\"\n```",
+              "footer": "Rename file\n```bash\ncurl --remote-name \"http://example.com/index.html\" --output foo.html\n```",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "continue partial download",
+          "level": 3,
+          "cards": [
+            {
+              "title": "continue partial download",
+              "body": "```bash\ncurl --remote-name --continue-at -\"https://example.com/linux-distro.iso\"\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Download files from multiple domains",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Download files from multiple domains",
+              "body": "```bash\ncurl \"https://www.{example,w3,iana}.org/index.html\" --output \"file_#1.html\"\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Download a series of files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Download a series of files",
+              "body": "```bash\ncurl \"https://{foo,bar}.com/file_[1-4].webp\" --output \"#1_#2.webp\"\n```",
+              "footer": "Download a series of files (output `foo_file1.webp`, `foo_file2.webp...bar_file1_webp`, etc.)",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Redirect output to file",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Redirect output to file",
+              "body": "```bash\n$ curl http://url/file > file\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic Authentication",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Authentication",
+              "body": "```bash\n$ curl --user username:password http://example.com/\n$ curl -u username:password http://example.com/\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Write to file instead of stdout",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Write to file instead of stdout",
+              "body": "```bash\n$ curl -o file http://url/file\n$ curl --output file http://url/file\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Download header information",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Download header information",
+              "body": "```bash\n$ curl -I url\n# display header information\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Write output to a file named remote_file",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Write output to a file named remote_file",
+              "body": "```bash\n$ curl -o file http://url/file\n$ curl --output file http://url/file\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Execute remote script",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Execute remote script",
+              "body": "```bash\n$ curl -s http://url/myscript.sh\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Configuration file",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Configuration file",
+              "body": "```bash\ncurl -K file\n# read configuration from file\ncurl --config file\n$HOME/.curlrc # default configuration file on UNIX-like systems\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

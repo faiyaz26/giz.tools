@@ -1,0 +1,384 @@
+{
+  "id": "google-drive",
+  "metadata": {
+    "title": "Google Drive",
+    "date": "2022-11-23T16:23:31.701Z",
+    "background": "bg-[#479b61]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 54 keyboard shortcuts found in Google Drive on the web\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Navigation and views",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation and views",
+              "body": "| Shortcut | Action                                     |\n| -------- | ------------------------------------------ |\n| `G` `N`  | Go to navigation panel (folders list)      |\n| `G` `L`  | Go to items view                           |\n| `V`      | Switch between grid and list in items view |\n| `G` `D`  | Go to details pane                         |\n| `G` `T`  | Go to top of application (Google bar)      |\n| `G` `A`  | Go to download status                      |\n| `G` `U`  | Go to upload status                        |\n| `D`      | Show or hide details pane                  |\n| `I`      | Show or hide activity pane                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `N`",
+                  "action": "Go to navigation panel (folders list)"
+                },
+                {
+                  "shortcut": "`G` `L`",
+                  "action": "Go to items view"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Switch between grid and list in items view"
+                },
+                {
+                  "shortcut": "`G` `D`",
+                  "action": "Go to details pane"
+                },
+                {
+                  "shortcut": "`G` `T`",
+                  "action": "Go to top of application (Google bar)"
+                },
+                {
+                  "shortcut": "`G` `A`",
+                  "action": "Go to download status"
+                },
+                {
+                  "shortcut": "`G` `U`",
+                  "action": "Go to upload status"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Show or hide details pane"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Show or hide activity pane"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Select items",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Select items",
+              "body": "| Shortcut        | Action                        |\n| --------------- | ----------------------------- |\n| `X`             | Select or deselect item       |\n| `J/Down`        | Select next item down         |\n| `K/Up`          | Select next item up           |\n| `H/Left`        | Select next item to the left  |\n| `L/Right`       | Select next item to the right |\n| `Shift` `Down`  | Extend selection down         |\n| `Shift` `Up`    | Extend selection up           |\n| `Shift` `Left`  | Extend selection left         |\n| `Shift` `Right` | Extend selection right        |\n| `Shift` `A`     | Select all visible items      |\n| `Shift` `N`     | Clear all selections          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`X`",
+                  "action": "Select or deselect item"
+                },
+                {
+                  "shortcut": "`J/Down`",
+                  "action": "Select next item down"
+                },
+                {
+                  "shortcut": "`K/Up`",
+                  "action": "Select next item up"
+                },
+                {
+                  "shortcut": "`H/Left`",
+                  "action": "Select next item to the left"
+                },
+                {
+                  "shortcut": "`L/Right`",
+                  "action": "Select next item to the right"
+                },
+                {
+                  "shortcut": "`Shift` `Down`",
+                  "action": "Extend selection down"
+                },
+                {
+                  "shortcut": "`Shift` `Up`",
+                  "action": "Extend selection up"
+                },
+                {
+                  "shortcut": "`Shift` `Left`",
+                  "action": "Extend selection left"
+                },
+                {
+                  "shortcut": "`Shift` `Right`",
+                  "action": "Extend selection right"
+                },
+                {
+                  "shortcut": "`Shift` `A`",
+                  "action": "Select all visible items"
+                },
+                {
+                  "shortcut": "`Shift` `N`",
+                  "action": "Clear all selections"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Move between items",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Move between items",
+              "body": "| Shortcut       | Action                                |\n| -------------- | ------------------------------------- |\n| `Ctrl` `Down`  | Move down without changing selection  |\n| `Ctrl` `Up`    | Move up without changing selection    |\n| `Ctrl` `Left`  | Move left without changing selection  |\n| `Ctrl` `Right` | Move right without changing selection |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Down`",
+                  "action": "Move down without changing selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up`",
+                  "action": "Move up without changing selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left`",
+                  "action": "Move left without changing selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right`",
+                  "action": "Move right without changing selection"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Take action on selected items",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Take action on selected items",
+              "body": "| Shortcut           | Action                                     |\n| ------------------ | ------------------------------------------ |\n| `Enter`            | Open selected item                         |\n| `N`                | Rename selected item                       |\n| `.`                | Share selected items                       |\n| `Z`                | Move selected items to new folder          |\n| `S`                | Star or unstar selected items              |\n| `Shift` `Z`        | Add selected items to an additional folder |\n| `Delete`           | Remove selected items                      |\n| `Ctrl` `Z`         | Undo last action                           |\n| `Ctrl` `Shift` `Z` | Redo last undone action                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Open selected item"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Rename selected item"
+                },
+                {
+                  "shortcut": "`.`",
+                  "action": "Share selected items"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Move selected items to new folder"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Star or unstar selected items"
+                },
+                {
+                  "shortcut": "`Shift` `Z`",
+                  "action": "Add selected items to an additional folder"
+                },
+                {
+                  "shortcut": "`Delete`",
+                  "action": "Remove selected items"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo last action"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo last undone action"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Create new items",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create new items",
+              "body": "| Shortcut    | Action       |\n| ----------- | ------------ |\n| `Shift` `T` | Document     |\n| `Shift` `P` | Presentation |\n| `Shift` `S` | Spreadsheet  |\n| `Shift` `D` | Drawing      |\n| `Shift` `F` | Folder       |\n| `Shift` `O` | Form         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `T`",
+                  "action": "Document"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Presentation"
+                },
+                {
+                  "shortcut": "`Shift` `S`",
+                  "action": "Spreadsheet"
+                },
+                {
+                  "shortcut": "`Shift` `D`",
+                  "action": "Drawing"
+                },
+                {
+                  "shortcut": "`Shift` `F`",
+                  "action": "Folder"
+                },
+                {
+                  "shortcut": "`Shift` `O`",
+                  "action": "Form"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Open menus",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Open menus",
+              "body": "| Shortcut | Action                      |\n| -------- | --------------------------- |\n| `C`      | Create menu                 |\n| `A`      | More actions menu           |\n| `F`      | Current folder actions menu |\n| `R`      | Sort menu                   |\n| `T`      | Settings menu               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`C`",
+                  "action": "Create menu"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "More actions menu"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Current folder actions menu"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Sort menu"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Settings menu"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Application actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Application actions",
+              "body": "| Shortcut    | Action                          |\n| ----------- | ------------------------------- |\n| `Shift` `/` | Display keyboard shortcuts list |\n| `Q` `Q`     | Choose next visual density      |\n| `Ctrl` `F`  | Find/find next                  |\n| `Ctrl` `P`  | Print                           |\n| `M`         | Show last message               |\n| `/`         | Search your drive               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `/`",
+                  "action": "Display keyboard shortcuts list"
+                },
+                {
+                  "shortcut": "`Q` `Q`",
+                  "action": "Choose next visual density"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find/find next"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Print"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Show last message"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Search your drive"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Preview mode actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Preview mode actions",
+              "body": "| Shortcut | Action     |\n| -------- | ---------- |\n| `Esc`    | Close      |\n| `Space`  | Play/pause |\n| `+/=`    | Zoom in    |\n| `-`      | Zoom out   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Play/pause"
+                },
+                {
+                  "shortcut": "`+/=`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`-`",
+                  "action": "Zoom out"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Google Drive](https://support.google.com/drive/answer/2563044?hl=en) _(support.google.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "id": "pm2",
+  "metadata": {
+    "title": "PM2",
+    "date": "2022-11-25T18:10:00.000Z",
+    "background": "bg-[#230769]",
+    "tags": [
+      "process"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "[PM2] is a daemon process manager that will help you manage and keep your application online. Getting started with PM2 is straightforward, it is offered as a simple and intuitive CLI.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Install",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Install",
+              "body": "```\nOR\n```",
+              "footer": "shell script\n$ yarn global add pm2\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Start an app",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Start an app",
+              "body": "```\nOr start any other application easily\n```",
+              "footer": "shell script\n$ pm2 start bashscript.sh\n$ pm2 start python-app.py --watch\n$ pm2 start binary-file -- --port 1520\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Some options you can pass to the CLI",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Some options you can pass to the CLI",
+              "body": "```\nWatch and Restart app when files change\n```",
+              "footer": "shell script\n--watch\n```\nSet memory threshold for app reload\n```shell script\n--max-memory-restart <200MB>\n```\nSpecify log file\n```shell script\n--log <log_path>\n```\nPass extra arguments to the script\n```shell script\n-- arg1 arg2 arg3\n```\nDelay between automatic restarts\n```shell script\n--restart-delay <delay in ms>\n```\nPrefix logs with time\n```shell script\n--time\n```\nDo not auto restart app\n```shell script\n--no-autorestart\n```\nSpecify cron for forced restart\n```shell script\n--cron <cron_pattern>\n```\nAttach to application log\n```shell script\n--no-daemon\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Managing processes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Managing processes",
+              "body": "Managing application state is simple here are the commands\n\n```shell script\n$ pm2 restart app_name\n$ pm2 reload app_name\n$ pm2 stop app_name\n$ pm2 delete app_name\n```",
+              "footer": "#### Instead of app_name you can pass\n\n- `all` to act on all processes\n- `id` to act on a specific process id",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check status, logs, metrics",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check status, logs, metrics",
+              "body": "```\nTo display logs in realtime\n```",
+              "footer": "shell script\n$ pm2 logs\n```\nTo dig in older logs\n```shell script\n$ pm2 logs --lines 200\n```\nHere is a realtime dashboard that fits directly into your terminal\n```shell script\n$ pm2 monit\n```\nWeb based dashboard, cross servers with diagnostic system\n```shell script\n$ pm2 plus\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cluster mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cluster mode",
+              "body": "",
+              "footer": "For Node.js applications, PM2 includes an automatic load balancer that will share all HTTP[s]/Websocket/TCP/UDP\nconnections between each spawned processes.\n\nTo start an application in Cluster mode\n\n```shell script\n$ pm2 start app.js -i max\n```\n\nRead more about cluster mode [here](https://pm2.keymetrics.io/docs/usage/quick-start/).",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ecosystem File",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ecosystem File",
+              "body": "```\nThis will generate an ecosystem.config.js file\n```",
+              "footer": "module.exports = {\napps : [{\nname: \"app\",\nscript: \"./app.js\",\nenv: {\nNODE_ENV: \"development\",\n},\nenv_production: {\nNODE_ENV: \"production\",\n}\n}, {\nname: 'worker',\nscript: 'worker.js'\n}]\n}\n```\nAnd start it easily\n```shell script\n$ pm2 start ecosystem.config.js\n```\nRead more about application declaration [here](https://pm2.keymetrics.io/docs/usage/application-declaration/)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Setup startup script",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Setup startup script",
+              "body": "",
+              "footer": "Restarting PM2 with the processes you manage on server boot/reboot is critical. To solve this, just run this command to\ngenerate an active startup script\n\n```shell script\n$ pm2 save\n```\n\nRead more about startup script generator [here](https://pm2.keymetrics.io/docs/usage/startup/)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Restart application on changes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Restart application on changes",
+              "body": "```\n$ cd /path/to/my/app\n$ pm2 start env.js --watch --ignore-watch=\"node_modules\"\n```",
+              "footer": "This will watch & restart the app on any file change from the current directory + all subfolders and it will ignore any\nchanges in the node_modules folder `--ignore-watch=\"node_modules\"`.\nYou can then use `pm2 logs` to check for restarted app logs.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CheatSheet",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CheatSheet",
+              "body": "```\nCluster mode\n```",
+              "footer": "shell script\n$ pm2 start app.js -i 0        # Will start maximum processes with LB depending on available CPUs\n$ pm2 start app.js -i max      # Same as above, but deprecated.\n$ pm2 scale app +3             # Scales `app` up by 3 workers\n$ pm2 scale app 2              # Scales `app` up or down to 2 workers total\n```\nListing\n```shell script\n$ pm2 list               # Display all processes status\n$ pm2 jlist              # Print process list in raw JSON\n$ pm2 prettylist         # Print process list in beautified JSON\n$ pm2 describe 0         # Display all information about a specific process\n$ pm2 monit              # Monitor all processes\n```\nLogs\n```shell script\n$ pm2 logs [--raw]       # Display all processes logs in streaming\n$ pm2 flush              # Empty all log files\n$ pm2 reloadLogs         # Reload all logs\n```\nActions\n```shell script\n$ pm2 stop all           # Stop all processes\n$ pm2 restart all        # Restart all processes\n$ pm2 reload all         # Will 0s downtime reload (for NETWORKED apps)\n$ pm2 stop 0             # Stop specific process id\n$ pm2 restart 0          # Restart specific process id\n$ pm2 delete 0           # Will remove process from pm2 list\n$ pm2 delete all         # Will remove all processes from pm2 list\n```\nMisc\n```shell script\n$ pm2 reset <process>    # Reset meta data (restarted time...)\n$ pm2 updatePM2          # Update in memory pm2\n$ pm2 ping               # Ensure pm2 daemon has been launched\n$ pm2 sendSignal SIGUSR2 my-app # Send system signal to script\n$ pm2 start app.js --no-daemon\n$ pm2 start app.js --no-vizion\n$ pm2 start app.js --no-autorestart\n```",
+              "spanConfig": "row-span-2 .col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Updating PM2",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Updating PM2",
+              "body": "```\nThen update the in-memory PM2\n```",
+              "footer": "shell script\n$ pm2 update\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [QUICK START](https://pm2.keymetrics.io/docs/usage/quick-start/) _(pm2.keymetrics.io)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

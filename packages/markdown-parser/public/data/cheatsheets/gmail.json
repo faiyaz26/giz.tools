@@ -1,0 +1,528 @@
+{
+  "id": "gmail",
+  "metadata": {
+    "title": "Gmail",
+    "date": "2022-11-23T16:23:31.699Z",
+    "background": "bg-[#d8503f]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 90 keyboard shortcuts found on Gmail\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Compose and Chat",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Compose and Chat",
+              "body": "| Shortcut           | Action                                   |\n| ------------------ | ---------------------------------------- |\n| `P`                | Previous message in an open conversation |\n| `N`                | Next message in an open conversation     |\n| `Shift` `Esc`      | Focus main window                        |\n| `Esc`              | Focus latest chat or compose             |\n| `Ctrl` `.`         | Advance to the next chat or compose      |\n| `Ctrl` `,`         | Advance to the previous chat or compose  |\n| `Ctrl` `Enter`     | Send                                     |\n| `Ctrl` `Shift` `C` | Add cc recipients                        |\n| `Ctrl` `Shift` `B` | Add bcc recipients                       |\n| `Ctrl` `Shift` `F` | Access custom from                       |\n| `Ctrl` `K`         | Insert a link                            |\n| `Cmd` `;`          | Go to next misspelled word (Mac only)    |\n| `Ctrl` `M`         | Open spelling suggestions                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`P`",
+                  "action": "Previous message in an open conversation"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Next message in an open conversation"
+                },
+                {
+                  "shortcut": "`Shift` `Esc`",
+                  "action": "Focus main window"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Focus latest chat or compose"
+                },
+                {
+                  "shortcut": "`Ctrl` `.`",
+                  "action": "Advance to the next chat or compose"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Advance to the previous chat or compose"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Send"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Add cc recipients"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `B`",
+                  "action": "Add bcc recipients"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Access custom from"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Insert a link"
+                },
+                {
+                  "shortcut": "`Cmd` `;`",
+                  "action": "Go to next misspelled word (Mac only)"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Open spelling suggestions"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Formatting Text",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Formatting Text",
+              "body": "| Shortcut           | Action             |\n| ------------------ | ------------------ |\n| `Ctrl` `Shift` `5` | Previous font      |\n| `Ctrl` `Shift` `6` | Next font          |\n| `Ctrl` `Shift` `-` | Decrease font size |\n| `Ctrl` `Shift` `+` | Increase font size |\n| `Ctrl` `B`         | Bold               |\n| `Ctrl` `I`         | Italics            |\n| `Ctrl` `U`         | Underline          |\n| `Ctrl` `Shift` `7` | Numbered list      |\n| `Ctrl` `Shift` `8` | Bulleted list      |\n| `Ctrl` `Shift` `9` | Quote              |\n| `Ctrl` `[`         | Indent less        |\n| `Ctrl` `]`         | Indent more        |\n| `Ctrl` `Shift` `L` | Align left         |\n| `Ctrl` `Shift` `E` | Align center       |\n| `Ctrl` `Shift` `R` | Align right        |\n| `Ctrl` `\\`         | Remove formatting  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `5`",
+                  "action": "Previous font"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `6`",
+                  "action": "Next font"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `-`",
+                  "action": "Decrease font size"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `+`",
+                  "action": "Increase font size"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Italics"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Underline"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `7`",
+                  "action": "Numbered list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `8`",
+                  "action": "Bulleted list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `9`",
+                  "action": "Quote"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Indent less"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Indent more"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Align left"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Align center"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Align right"
+                },
+                {
+                  "shortcut": "`Ctrl` `\\`",
+                  "action": "Remove formatting"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Actions",
+              "body": "| Shortcut    | Action                                          |\n| ----------- | ----------------------------------------------- |\n| `,`         | Move focus to toolbar                           |\n| `X`         | Select conversation                             |\n| `S`         | Toggle star or rotate among superstars          |\n| `E`         | Archive                                         |\n| `M`         | Mute conversation                               |\n| `Shift` `1` | Report as spam                                  |\n| `Shift` `3` | Delete                                          |\n| `R`         | Reply                                           |\n| `Shift` `R` | Reply in a new window                           |\n| `A`         | Reply all                                       |\n| `Shift` `A` | Reply all in a new window                       |\n| `F`         | Forward                                         |\n| `Shift` `F` | Forward in a new window                         |\n| `Shift` `N` | Update conversation                             |\n| `]/[`       | Archive conversation and go to previous or next |\n| `Z`         | Undo last action                                |\n| `Shift` `I` | Mark as read                                    |\n| `Shift` `U` | Mark as unread                                  |\n| `Shift` `-` | Mark unread from the selected message           |\n| `=`         | Mark as important                               |\n| `-`         | Mark as not important                           |\n| `B`         | Snooze                                          |\n| `;`         | Expand entire conversation                      |\n| `Shift` `;` | Collapse entire conversation                    |\n| `Shift` `T` | Add conversation to tasks                       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`,`",
+                  "action": "Move focus to toolbar"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Select conversation"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Toggle star or rotate among superstars"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Archive"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Mute conversation"
+                },
+                {
+                  "shortcut": "`Shift` `1`",
+                  "action": "Report as spam"
+                },
+                {
+                  "shortcut": "`Shift` `3`",
+                  "action": "Delete"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Reply"
+                },
+                {
+                  "shortcut": "`Shift` `R`",
+                  "action": "Reply in a new window"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Reply all"
+                },
+                {
+                  "shortcut": "`Shift` `A`",
+                  "action": "Reply all in a new window"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Forward"
+                },
+                {
+                  "shortcut": "`Shift` `F`",
+                  "action": "Forward in a new window"
+                },
+                {
+                  "shortcut": "`Shift` `N`",
+                  "action": "Update conversation"
+                },
+                {
+                  "shortcut": "`]/[`",
+                  "action": "Archive conversation and go to previous or next"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Undo last action"
+                },
+                {
+                  "shortcut": "`Shift` `I`",
+                  "action": "Mark as read"
+                },
+                {
+                  "shortcut": "`Shift` `U`",
+                  "action": "Mark as unread"
+                },
+                {
+                  "shortcut": "`Shift` `-`",
+                  "action": "Mark unread from the selected message"
+                },
+                {
+                  "shortcut": "`=`",
+                  "action": "Mark as important"
+                },
+                {
+                  "shortcut": "`-`",
+                  "action": "Mark as not important"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Snooze"
+                },
+                {
+                  "shortcut": "`;`",
+                  "action": "Expand entire conversation"
+                },
+                {
+                  "shortcut": "`Shift` `;`",
+                  "action": "Collapse entire conversation"
+                },
+                {
+                  "shortcut": "`Shift` `T`",
+                  "action": "Add conversation to tasks"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Hangouts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hangouts",
+              "body": "| Shortcut | Action                         |\n| -------- | ------------------------------ |\n| `H` `M`  | Show menu                      |\n| `H` `A`  | Show archived hangouts         |\n| `H` `I`  | Show hangout requests          |\n| `H` `C`  | Focus on the conversation list |\n| `H` `P`  | Open phone                     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`H` `M`",
+                  "action": "Show menu"
+                },
+                {
+                  "shortcut": "`H` `A`",
+                  "action": "Show archived hangouts"
+                },
+                {
+                  "shortcut": "`H` `I`",
+                  "action": "Show hangout requests"
+                },
+                {
+                  "shortcut": "`H` `C`",
+                  "action": "Focus on the conversation list"
+                },
+                {
+                  "shortcut": "`H` `P`",
+                  "action": "Open phone"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Jumping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Jumping",
+              "body": "| Shortcut           | Action                                                              |\n| ------------------ | ------------------------------------------------------------------- |\n| `G` `I`            | Go to inbox                                                         |\n| `G` `S`            | Go to starred conversations                                         |\n| `G` `B`            | Go to snoozed conversations                                         |\n| `G` `T`            | Go to sent messages                                                 |\n| `S` `D`            | Go to drafts                                                        |\n| `G` `A`            | Go to all mail                                                      |\n| `Ctrl` `Alt` `,/.` | Switch between the calendar, keep, and tasks sidebar and your inbox |\n| `G` `K`            | Go to tasks                                                         |\n| `G` `L`            | Go to label                                                         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `I`",
+                  "action": "Go to inbox"
+                },
+                {
+                  "shortcut": "`G` `S`",
+                  "action": "Go to starred conversations"
+                },
+                {
+                  "shortcut": "`G` `B`",
+                  "action": "Go to snoozed conversations"
+                },
+                {
+                  "shortcut": "`G` `T`",
+                  "action": "Go to sent messages"
+                },
+                {
+                  "shortcut": "`S` `D`",
+                  "action": "Go to drafts"
+                },
+                {
+                  "shortcut": "`G` `A`",
+                  "action": "Go to all mail"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `,/.`",
+                  "action": "Switch between the calendar, keep, and tasks sidebar and your inbox"
+                },
+                {
+                  "shortcut": "`G` `K`",
+                  "action": "Go to tasks"
+                },
+                {
+                  "shortcut": "`G` `L`",
+                  "action": "Go to label"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Threadlist Selection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Threadlist Selection",
+              "body": "| Shortcut        | Action                         |\n| --------------- | ------------------------------ |\n| `Shift` `8` `A` | Select all conversations       |\n| `Shift` `8` `N` | Deselect all conversations     |\n| `Shift` `8` `R` | Select read conversations      |\n| `Shift` `8` `U` | Select unread conversations    |\n| `Shift` `8` `S` | Select starred conversations   |\n| `Shift` `8` `T` | Select unstarred conversations |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `8` `A`",
+                  "action": "Select all conversations"
+                },
+                {
+                  "shortcut": "`Shift` `8` `N`",
+                  "action": "Deselect all conversations"
+                },
+                {
+                  "shortcut": "`Shift` `8` `R`",
+                  "action": "Select read conversations"
+                },
+                {
+                  "shortcut": "`Shift` `8` `U`",
+                  "action": "Select unread conversations"
+                },
+                {
+                  "shortcut": "`Shift` `8` `S`",
+                  "action": "Select starred conversations"
+                },
+                {
+                  "shortcut": "`Shift` `8` `T`",
+                  "action": "Select unstarred conversations"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut                | Action                       |\n| ----------------------- | ---------------------------- |\n| `G` `N`                 | Go to next page              |\n| `G` `P`                 | Go to previous page          |\n| `U`                     | Back to threadlist           |\n| `K`                     | Newer conversation           |\n| `J`                     | Older conversation           |\n| `Enter`                 | Open conversation            |\n| <code>\\`</code>         | Go to next inbox section     |\n| `Shift` <code>\\`</code> | Go to previous inbox section |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `N`",
+                  "action": "Go to next page"
+                },
+                {
+                  "shortcut": "`G` `P`",
+                  "action": "Go to previous page"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Back to threadlist"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Newer conversation"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Older conversation"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Open conversation"
+                },
+                {
+                  "shortcut": "<code>\\`</code>",
+                  "action": "Go to next inbox section"
+                },
+                {
+                  "shortcut": "`Shift` <code>\\`</code>",
+                  "action": "Go to previous inbox section"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Application",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Application",
+              "body": "| Shortcut | Action                      |\n| -------- | --------------------------- |\n| `C`      | Compose                     |\n| `D`      | Compose in a new tab        |\n| `/`      | Search mail                 |\n| `G`      | Search chat contacts        |\n| `.`      | Open more actions menu      |\n| `V`      | Open move to menu           |\n| `L`      | Open label as menu          |\n| `?`      | Open keyboard shortcut help |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`C`",
+                  "action": "Compose"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Compose in a new tab"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Search mail"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Search chat contacts"
+                },
+                {
+                  "shortcut": "`.`",
+                  "action": "Open more actions menu"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Open move to menu"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Open label as menu"
+                },
+                {
+                  "shortcut": "`?`",
+                  "action": "Open keyboard shortcut help"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Gmail](https://support.google.com/mail/answer/6594?hl=en) _(support.google.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

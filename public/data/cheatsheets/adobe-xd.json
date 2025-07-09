@@ -1,0 +1,652 @@
+{
+  "id": "adobe-xd",
+  "metadata": {
+    "title": "Adobe XD",
+    "date": "2022-11-23T16:23:31.703Z",
+    "background": "bg-[#400835]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 97 keyboard shortcuts found in Adobe XD\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Keys for Edit menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Edit menu",
+              "body": "| Shortcut           | Action                                                               |\n| ------------------ | -------------------------------------------------------------------- |\n| `Ctrl` `Z`         | Undo                                                                 |\n| `Ctrl` `Shift` `Z` | Redo                                                                 |\n| `Ctrl` `X`         | Cut                                                                  |\n| `Ctrl` `C`         | Copy                                                                 |\n| `Ctrl` `V`         | Paste                                                                |\n| `Ctrl` `Alt` `V`   | Paste Appearance (Design mode) or Paste Interaction (Prototype mode) |\n| `Ctrl` `D`         | Duplicate                                                            |\n| `Del`              | Delete                                                               |\n| `Ctrl` `A`         | Select All                                                           |\n| `Ctrl` `Shift` `A` | Deselect All                                                         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `V`",
+                  "action": "Paste Appearance (Design mode) or Paste Interaction (Prototype mode)"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Duplicate"
+                },
+                {
+                  "shortcut": "`Del`",
+                  "action": "Delete"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select All"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Deselect All"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for File menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for File menu",
+              "body": "| Shortcut           | Action          |\n| ------------------ | --------------- |\n| `Ctrl` `N`         | New             |\n| `Ctrl` `Shift` `O` | Open...         |\n| `Alt` `F4`         | Close           |\n| `Ctrl` `S`         | Save...         |\n| `Ctrl` `Shift` `S` | Save As...      |\n| `Ctrl` `Shift` `E` | Export Batch    |\n| `Ctrl` `E`         | Export Selected |\n| `Ctrl` `Shift` `I` | Import          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `O`",
+                  "action": "Open..."
+                },
+                {
+                  "shortcut": "`Alt` `F4`",
+                  "action": "Close"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save..."
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Save As..."
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Export Batch"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Export Selected"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `I`",
+                  "action": "Import"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Pen/Path",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Pen/Path",
+              "body": "| Shortcut         | Action                   |\n| ---------------- | ------------------------ |\n| `P`              | Switch to Pen tool       |\n| `Alt`            | Asymmetric control point |\n| `Shift`          | Snap control point angle |\n| `Shift`          | Snap anchor point angle  |\n| `Ctrl` `Alt` `U` | Add                      |\n| `Ctrl` `Alt` `S` | Subtract                 |\n| `Ctrl` `Alt` `I` | Intersect                |\n| `Ctrl` `Alt` `X` | Exclude overlap          |\n| `Ctrl` `8`       | Convert to path          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`P`",
+                  "action": "Switch to Pen tool"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Asymmetric control point"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Snap control point angle"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Snap anchor point angle"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `U`",
+                  "action": "Add"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `S`",
+                  "action": "Subtract"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `I`",
+                  "action": "Intersect"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `X`",
+                  "action": "Exclude overlap"
+                },
+                {
+                  "shortcut": "`Ctrl` `8`",
+                  "action": "Convert to path"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Layers (Objects), Groups, and Artboards",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Layers (Objects), Groups, and Artboards",
+              "body": "| Shortcut           | Action                    |\n| ------------------ | ------------------------- |\n| `Ctrl` `G`         | Group layers              |\n| `Ctrl` `Shift` `G` | Ungroup layers            |\n| `Ctrl` `K`         | Make component            |\n| `Ctrl` `L`         | Lock/Unlock layer         |\n| `Ctrl` `,`         | Hide/Show layer           |\n| `Ctrl` `Shift` `M` | Mask with shape           |\n| `Ctrl` `R`         | Make repeat grid          |\n| `1-9`              | Change layer opacity      |\n| `Ctrl` `;`         | Show/Hide artboard guides |\n| `Ctrl` `Shift` `;` | Lock artboard guides      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Group layers"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Ungroup layers"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Make component"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Lock/Unlock layer"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Hide/Show layer"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Mask with shape"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Make repeat grid"
+                },
+                {
+                  "shortcut": "`1-9`",
+                  "action": "Change layer opacity"
+                },
+                {
+                  "shortcut": "`Ctrl` `;`",
+                  "action": "Show/Hide artboard guides"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `;`",
+                  "action": "Lock artboard guides"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Align",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Align",
+              "body": "| Shortcut               | Action                |\n| ---------------------- | --------------------- |\n| `Ctrl` `Shift` `Left`  | Left                  |\n| `Shift` `C`            | Center (horizontally) |\n| `Ctrl` `Shift` `Right` | Right                 |\n| `Ctrl` `Shift` `Up`    | Top                   |\n| `Shift` `M`            | Middle (vertically)   |\n| `Ctrl` `Shift` `Down`  | Bottom                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `Left`",
+                  "action": "Left"
+                },
+                {
+                  "shortcut": "`Shift` `C`",
+                  "action": "Center (horizontally)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Right`",
+                  "action": "Right"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Up`",
+                  "action": "Top"
+                },
+                {
+                  "shortcut": "`Shift` `M`",
+                  "action": "Middle (vertically)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Down`",
+                  "action": "Bottom"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Arrange",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Arrange",
+              "body": "| Shortcut           | Action         |\n| ------------------ | -------------- |\n| `Ctrl` `Shift` `]` | Bring to front |\n| `Ctrl` `]`         | Bring forward  |\n| `Ctrl` `[`         | Send backward  |\n| `Ctrl` `Shift` `[` | Send to back   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `]`",
+                  "action": "Bring to front"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Bring forward"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Send backward"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `[`",
+                  "action": "Send to back"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Distribute",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Distribute",
+              "body": "| Shortcut           | Action     |\n| ------------------ | ---------- |\n| `Ctrl` `Shift` `H` | Horizontal |\n| `Ctrl` `Shift` `V` | Vertical   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "Horizontal"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `V`",
+                  "action": "Vertical"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Text",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Text",
+              "body": "| Shortcut           | Action             |\n| ------------------ | ------------------ |\n| `Ctrl` `B`         | Bold               |\n| `Ctrl` `I`         | Italic             |\n| `Ctrl` `Shift` `.` | Increase font size |\n| `Ctrl` `Shift` `,` | Decrease font size |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Italic"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `.`",
+                  "action": "Increase font size"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `,`",
+                  "action": "Decrease font size"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Operations menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Operations menu",
+              "body": "| Shortcut      | Action                                   |\n| ------------- | ---------------------------------------- |\n| `Alt`         | From center                              |\n| `Shift`       | Constrain                                |\n| `Enter`       | Edit text                                |\n| `Shift`       | Constrain rotate (15 deg)                |\n| `Shift`       | Line constrain rotate (45 deg)           |\n| `Shift` `Alt` | Constrain from center                    |\n| `Ctrl`        | Direct select                            |\n| `Ctrl` `Tab`  | Switch between Design and Prototype mode |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt`",
+                  "action": "From center"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Constrain"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Edit text"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Constrain rotate (15 deg)"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Line constrain rotate (45 deg)"
+                },
+                {
+                  "shortcut": "`Shift` `Alt`",
+                  "action": "Constrain from center"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Direct select"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Switch between Design and Prototype mode"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Tools menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Tools menu",
+              "body": "| Shortcut   | Action            |\n| ---------- | ----------------- |\n| `V`        | Select            |\n| `R`        | Rectangle         |\n| `E`        | Ellipse           |\n| `Y`        | Polygon           |\n| `L`        | Line              |\n| `P`        | Pen               |\n| `T`        | Text              |\n| `A`        | Artboard          |\n| `Z`        | Zoom              |\n| `Ctrl` `3` | Zoom to selection |\n| `I`        | Eyedropper        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`V`",
+                  "action": "Select"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Rectangle"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Ellipse"
+                },
+                {
+                  "shortcut": "`Y`",
+                  "action": "Polygon"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Line"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Pen"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Text"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Artboard"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Zoom"
+                },
+                {
+                  "shortcut": "`Ctrl` `3`",
+                  "action": "Zoom to selection"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Eyedropper"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Interface and Viewing Options",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Interface and Viewing Options",
+              "body": "| Shortcut           | Action                                        |\n| ------------------ | --------------------------------------------- |\n| `Ctrl` `+`         | Zoom in                                       |\n| `Ctrl` `-`         | Zoom out                                      |\n| `Ctrl` `0`         | Zoom to fit                                   |\n| `Ctrl` `1`         | Zoom to 100%                                  |\n| `Ctrl` `2`         | Zoom to 200%                                  |\n| `Space`            | Pan                                           |\n| `Ctrl` `Shift` `Y` | Assets                                        |\n| `Ctrl` `Y`         | Layers                                        |\n| `Ctrl` `Shift` `'` | Show layout grid                              |\n| `Ctrl` `'`         | Show square grid                              |\n| `Ctrl` `Tab`       | Switch between Design and Prototype mode      |\n| `Up/Down`          | Increase or decrease a value in a field by 1  |\n| `Shift` `Up/Down`  | Increase or decrease a value in a field by 10 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Zoom to fit"
+                },
+                {
+                  "shortcut": "`Ctrl` `1`",
+                  "action": "Zoom to 100%"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Zoom to 200%"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Pan"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Y`",
+                  "action": "Assets"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Layers"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `'`",
+                  "action": "Show layout grid"
+                },
+                {
+                  "shortcut": "`Ctrl` `'`",
+                  "action": "Show square grid"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Switch between Design and Prototype mode"
+                },
+                {
+                  "shortcut": "`Up/Down`",
+                  "action": "Increase or decrease a value in a field by 1"
+                },
+                {
+                  "shortcut": "`Shift` `Up/Down`",
+                  "action": "Increase or decrease a value in a field by 10"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Design Specs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Design Specs",
+              "body": "| Shortcut           | Action                                     |\n| ------------------ | ------------------------------------------ |\n| `Ctrl` `+/-`       | Zoom                                       |\n| `Ctrl` `0`         | Reset zoom                                 |\n| `(arrows)`         | Pan                                        |\n| `Shift` `(arrows)` | Faster pan                                 |\n| `Esc`              | Go from Spec view to UX flow view          |\n| `Esc`              | Remove focus from artboard in UX flow view |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `+/-`",
+                  "action": "Zoom"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Reset zoom"
+                },
+                {
+                  "shortcut": "`(arrows)`",
+                  "action": "Pan"
+                },
+                {
+                  "shortcut": "`Shift` `(arrows)`",
+                  "action": "Faster pan"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Go from Spec view to UX flow view"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Remove focus from artboard in UX flow view"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Vector Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Vector Editing",
+              "body": "| Shortcut | Action                               |\n| -------- | ------------------------------------ |\n| `Enter`  | Start editing selected vector object |\n| `Esc`    | Stop editing selected vector object  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Start editing selected vector object"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Stop editing selected vector object"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys for Prototyping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys for Prototyping",
+              "body": "| Shortcut           | Action                                            |\n| ------------------ | ------------------------------------------------- |\n| `Ctrl` `A`         | See all connections in prototype mode             |\n| `Ctrl` `Enter`     | Preview                                           |\n| `Ctrl` `Shift` `E` | Share prototype online                            |\n| `Left/Right`       | Navigate artboards in preview or shared prototype |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "See all connections in prototype mode"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Preview"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Share prototype online"
+                },
+                {
+                  "shortcut": "`Left/Right`",
+                  "action": "Navigate artboards in preview or shared prototype"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Adobe XD](https://helpx.adobe.com/xd/help/keyboard-shortcuts.html) _(helpx.adobe.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

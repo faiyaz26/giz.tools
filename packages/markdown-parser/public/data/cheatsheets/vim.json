@@ -1,0 +1,1479 @@
+{
+  "id": "vim",
+  "metadata": {
+    "title": "Vim",
+    "date": "2020-11-25T18:28:43.000Z",
+    "background": "bg-[#46933f]",
+    "tags": [
+      "vi",
+      "text",
+      "editor",
+      "terminal",
+      "shortcut"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "A useful collection of [Vim](http://www.vim.org/) 8.2 quick reference cheat sheets to help you learn vim editor faster.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Motion Diagrams",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Motion Diagrams",
+              "body": "```bash\n▼/▶ Cursor   ▽/▷ Target\n```",
+              "footer": "#### Left-right motions\n\n```bash\n┌───────────── |\n├───────────── 0      $ ──────────────┐\n│  ┌────────── ^      fe ────────┐    │\n│  │  ┌─────── Fo     te ───────┐│    │\n│  │  │┌────── To     30| ───┐  ││    │\n│  │  ││ ┌──── ge     w ───┐ │  ││    │\n│  │  ││ │ ┌── b      e ─┐ │ │  ││    │\n│  │  ││ │ │  ┌h      l┐ │ │ │  ││    │\n▽  ▽  ▽▽ ▽ ▽  ▽▼      ▼▽ ▽ ▽ ▽  ▽▽    ▽\n   echo \"A cheatsheet from quickref.me\"\n```\n\n#### Up-down motions\n\n```bash\n                 - SCREEN 1 START\n   ┌─┬─────────▷ #!/usr/bin/python\n   │ │     ┌───▷\n   │ │     │     print(\"Hello\")\n   │ │     { } ▶ print(\"Vim\")\n   │ │       │   print(\"!\")\n   │ │       └─▷\n   │ │ ┌───┬───▷ print(\"Welcome\")\nG gg H M L k j ▶ print(\"to\")\n│        │   └─▷ print(\"cheatsheets.zip\")\n│        │       print(\"/vim\")\n│        │\n│        └─────▷\n│                - SCREEN 1 END\n└──────────────▷ print(\"SCREEN 2\")\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Motions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Motions",
+              "body": "| Shortcut                       | Description       |\n| ------------------------------ | :---------------- |\n| `h` _\\|_ `j` _\\|_ `k` _\\|_ `l` | Arrow keys        |\n| `<C-u>` _/_ `<C-d>`            | Half-page up/down |\n| `<C-b>` _/_ `<C-f>`            | Page up/down      |\n\n{.shortcuts}",
+              "footer": "#### Words{.left-text}\n\n| Shortcut     | Description               |\n| ------------ | :------------------------ |\n| `b` _/_ `w`  | Previous/Next word        |\n| `ge` _/_ `e` | Previous/Next end of word |\n\n{.shortcuts}\n\n#### Line\n\n| Shortcut             | Description                 |\n| -------------------- | :-------------------------- |\n| `0` _(zero)_ _/_ `$` | Start/End of line           |\n| `^`                  | Start of line _(non-blank)_ |\n\n{.shortcuts}\n\n#### Character\n\n| Shortcut                            | Description                         |\n| ----------------------------------- | :---------------------------------- |\n| `Fe` _/_ `fe`                       | Move to previous/next `e`           |\n| `To` _/_ `to`                       | Move before/after previous/next `o` |\n| <code>\\|</code>_/_ <code>n\\|</code> | Go to first/`n`th column            |\n\n{.shortcuts}\n\n#### Document\n\n| Shortcut       | Description              |\n| -------------- | :----------------------- |\n| `gg` _/_ `G`   | First/Last line          |\n| `:n` _\\|_ `nG` | Go to line `n`           |\n| `}` _/_ `{`    | Next/Previous empty line |\n\n{.shortcuts}\n\n#### Window\n\n| Shortcut               | Description                 |\n| ---------------------- | :-------------------------- |\n| `H` _/_ `M` _/_ `L`    | Top/Middle/Bottom screen    |\n| `zt` _/_ `zz` _/_ `zb` | Top/Center/Bottom this line |\n\n{.shortcuts}",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`b` _/_ `w`",
+                  "action": "Previous/Next word"
+                },
+                {
+                  "shortcut": "`ge` _/_ `e`",
+                  "action": "Previous/Next end of word"
+                },
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`0` _(zero)_ _/_ `$`",
+                  "action": "Start/End of line"
+                },
+                {
+                  "shortcut": "`^`",
+                  "action": "Start of line _(non-blank)_"
+                },
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`Fe` _/_ `fe`",
+                  "action": "Move to previous/next `e`"
+                },
+                {
+                  "shortcut": "`To` _/_ `to`",
+                  "action": "Move before/after previous/next `o`"
+                },
+                {
+                  "shortcut": "<code>\\",
+                  "action": "</code>_/_ <code>n\\"
+                },
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`gg` _/_ `G`",
+                  "action": "First/Last line"
+                },
+                {
+                  "shortcut": "`:n` _\\",
+                  "action": "_ `nG`"
+                },
+                {
+                  "shortcut": "`}` _/_ `{`",
+                  "action": "Next/Previous empty line"
+                },
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`H` _/_ `M` _/_ `L`",
+                  "action": "Top/Middle/Bottom screen"
+                },
+                {
+                  "shortcut": "`zt` _/_ `zz` _/_ `zb`",
+                  "action": "Top/Center/Bottom this line"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Insert Mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Insert Mode",
+              "body": "| Shortcut               | Description                   |\n| ---------------------- | :---------------------------- |\n| `i` _/_ `a`            | Insert before/after cursor    |\n| `I` _/_ `A`            | Insert start/end of line      |\n| `o` _/_ `O` _(letter)_ | Insert new line below/above   |\n| `s` _/_ `S`            | Delete char/line and insert   |\n| `C` _/_ `cc`           | Change to end of/current line |\n| `gi`                   | Insert at last insert point   |\n| `Esc` _\\|_ `<C-[>`     | Exit insert mode              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`i` _/_ `a`",
+                  "action": "Insert before/after cursor"
+                },
+                {
+                  "shortcut": "`I` _/_ `A`",
+                  "action": "Insert start/end of line"
+                },
+                {
+                  "shortcut": "`o` _/_ `O` _(letter)_",
+                  "action": "Insert new line below/above"
+                },
+                {
+                  "shortcut": "`s` _/_ `S`",
+                  "action": "Delete char/line and insert"
+                },
+                {
+                  "shortcut": "`C` _/_ `cc`",
+                  "action": "Change to end of/current line"
+                },
+                {
+                  "shortcut": "`gi`",
+                  "action": "Insert at last insert point"
+                },
+                {
+                  "shortcut": "`Esc` _\\",
+                  "action": "_ `<C-[>`"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Saving and Exiting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Saving and Exiting",
+              "body": "| Shortcut                  | Description             |\n| ------------------------- | :---------------------- |\n| `:w`                      | Save                    |\n| `:q`                      | Close file              |\n| `:wq` _\\|_ `:x` _\\|_ `ZZ` | Save and quit           |\n| `:wqa`                    | Save and quit all files |\n| `:q!` _\\|_ `ZQ`           | Force quit              |\n| `:qa`                     | Close all files         |\n| `:qa!`                    | Force quit all files    |\n| `:w` now.txt              | Write to `now.txt`      |\n| `:sav` new.txt            | Save and edit `new.txt` |\n| `:w` !sudo tee %          | Write to readonly file  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`:w`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`:q`",
+                  "action": "Close file"
+                },
+                {
+                  "shortcut": "`:wq` _\\",
+                  "action": "_ `:x` _\\"
+                },
+                {
+                  "shortcut": "`:wqa`",
+                  "action": "Save and quit all files"
+                },
+                {
+                  "shortcut": "`:q!` _\\",
+                  "action": "_ `ZQ`"
+                },
+                {
+                  "shortcut": "`:qa`",
+                  "action": "Close all files"
+                },
+                {
+                  "shortcut": "`:qa!`",
+                  "action": "Force quit all files"
+                },
+                {
+                  "shortcut": "`:w` now.txt",
+                  "action": "Write to `now.txt`"
+                },
+                {
+                  "shortcut": "`:sav` new.txt",
+                  "action": "Save and edit `new.txt`"
+                },
+                {
+                  "shortcut": "`:w` !sudo tee %",
+                  "action": "Write to readonly file"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Normal Mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Normal Mode",
+              "body": "| Shortcut              | Description                  |\n| --------------------- | :--------------------------- |\n| `r`                   | Replace one character        |\n| `R`                   | Enter Replace mode           |\n| `u` _/_ `3u`          | Undo changes `1` / `3` times |\n| `U`                   | Undo changes on one line     |\n| `J`                   | Join with next line          |\n| `<C-r>` _/_ 5 `<C-r>` | Redo changes `1` / `5` times |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`r`",
+                  "action": "Replace one character"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Enter Replace mode"
+                },
+                {
+                  "shortcut": "`u` _/_ `3u`",
+                  "action": "Undo changes `1` / `3` times"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Undo changes on one line"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Join with next line"
+                },
+                {
+                  "shortcut": "`<C-r>` _/_ 5 `<C-r>`",
+                  "action": "Redo changes `1` / `5` times"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cut and paste",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cut and paste",
+              "body": "| Shortcut         | Description                   |\n| ---------------- | :---------------------------- |\n| `x`              | Delete character _(Cut)_      |\n| `p` _/_ `P`      | Paste after/before            |\n| `xp`             | Swap two characters           |\n| `D`              | Delete to end of line _(Cut)_ |\n| `dw`             | Delete word _(Cut)_           |\n| `dd`             | Delete line _(Cut)_           |\n| `ddp`            | Swap two lines                |\n| `yy`             | Yank line _(Copy)_            |\n| `\"*p` _\\|_ `\"+p` | Paste from system clipboard   |\n| `\"*y` _\\|_ `\"+y` | Paste to system clipboard     |\n\n{.shortcuts}",
+              "footer": "#### In visual mode\n\n| Shortcut     | Description              |\n| ------------ | :----------------------- |\n| `d` _\\|_ `x` | Delete selection _(Cut)_ |\n| `s`          | Replace selection        |\n| `y`          | Yank selection _(Copy)_  |\n\n{.shortcuts}",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`d` _\\",
+                  "action": "_ `x`"
+                },
+                {
+                  "shortcut": "`s`",
+                  "action": "Replace selection"
+                },
+                {
+                  "shortcut": "`y`",
+                  "action": "Yank selection _(Copy)_"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repeating",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repeating",
+              "body": "| Shortcut | Description                                 |\n| -------- | :------------------------------------------ |\n| `.`      | Repeat last command                         |\n| `;`      | Repeat latest `f`, `t`, `F` or `T`          |\n| `,`      | Repeat latest `f`, `t`, `F` or `T` reversed |\n| `&`      | Repeat last `:s`                            |\n| `@:`     | Repeat a command-line command               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`.`",
+                  "action": "Repeat last command"
+                },
+                {
+                  "shortcut": "`;`",
+                  "action": "Repeat latest `f`, `t`, `F` or `T`"
+                },
+                {
+                  "shortcut": "`,`",
+                  "action": "Repeat latest `f`, `t`, `F` or `T` reversed"
+                },
+                {
+                  "shortcut": "`&`",
+                  "action": "Repeat last `:s`"
+                },
+                {
+                  "shortcut": "`@:`",
+                  "action": "Repeat a command-line command"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Visual mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Visual mode",
+              "body": "| Shortcut    | Description             |\n| ----------- | :---------------------- |\n| `v`         | Enter visual mode       |\n| `V`         | Enter visual line mode  |\n| `<C-v>`     | Enter visual block mode |\n| `ggVG`      | Select all text         |\n| `>` _/_ `<` | Shift text right/left   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`v`",
+                  "action": "Enter visual mode"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Enter visual line mode"
+                },
+                {
+                  "shortcut": "`<C-v>`",
+                  "action": "Enter visual block mode"
+                },
+                {
+                  "shortcut": "`ggVG`",
+                  "action": "Select all text"
+                },
+                {
+                  "shortcut": "`>` _/_ `<`",
+                  "action": "Shift text right/left"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Macros",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Macros",
+              "body": "| -     | -                     |\n| ----- | :-------------------- |\n| `qi`  | Record macro `i`      |\n| `q`   | Stop recording macro  |\n| `@i`  | Run macro `i`         |\n| `7@i` | Run macro `i` 7 times |\n| `@@`  | Repeat last macro     |\n\n{.shortcuts}\n\nYou can save macro for any letters not just `i`",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`qi`",
+                  "action": "Record macro `i`"
+                },
+                {
+                  "shortcut": "`q`",
+                  "action": "Stop recording macro"
+                },
+                {
+                  "shortcut": "`@i`",
+                  "action": "Run macro `i`"
+                },
+                {
+                  "shortcut": "`7@i`",
+                  "action": "Run macro `i` 7 times"
+                },
+                {
+                  "shortcut": "`@@`",
+                  "action": "Repeat last macro"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Vim Operators",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Usage",
+              "body": "| Shortcut | Description  |\n| -------- | :----------- |\n| `d`      | <yel>w</yel> |\n| Operator | Motion       |\n\nCombine [operators](#available-operators) with [motions](#motions) to use them",
+              "footer": "",
+              "spanConfig": "secondary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Available Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Available Operators",
+              "body": "| Shortcut | Description                     |\n| -------- | :------------------------------ |\n| `d`      | Delete                          |\n| `y`      | Yank _(copy)_                   |\n| `c`      | Change _(delete then insert)_   |\n| `p`      | Paste                           |\n| `=`      | Formats code                    |\n| `g~`     | Toggle case                     |\n| `gU`     | Uppercase                       |\n| `gu`     | Lowercase                       |\n| `>`      | Indent right                    |\n| `<`      | Indent left                     |\n| `!`      | Filter through external program |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "| Combination          | Description                           |\n| -------------------- | :------------------------------------ |\n| `d`<yel>d</yel>      | Delete current line                   |\n| `d`<yel>j</yel>      | Delete two lines                      |\n| `d`<yel>w</yel>      | Delete to next word                   |\n| `d`<yel>b</yel>      | Delete to beginning of word           |\n| `d`<yel>fa</yel>     | Delete until `a` char                 |\n| `d`<yel>/hello</yel> | Delete until `hello`                  |\n| `c`<yel>c</yel>      | Change current line, synonym with `S` |\n| `y`<yel>y</yel>      | Copy current line                     |\n| `>`<yel>j</yel>      | Indent 2 lines                        |\n| gg`d`<yel>G</yel>    | Delete a complete document            |\n| gg`=`<yel>G</yel>    | Indent a complete document            |\n| gg`y`<yel>G</yel>    | Copy a whole document                 |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Counts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Counts",
+              "body": "```\n[count] <operator> <motion>\n<operator> [count] <motion>\n```",
+              "footer": "| Combination      | Description                |\n| ---------------- | :------------------------- |\n| 2`d`<yel>d</yel> | Delete `2` lines           |\n| 6`y`<yel>y</yel> | Copy `6` lines             |\n| `d`3<yel>w</yel> | Delete `3` words           |\n| `d`5<yel>j</yel> | Delete `5` lines downwards |\n| `>`4<yel>k</yel> | Indent `4` lines upwards   |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Vim Text objects",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Usage",
+              "body": "<!-- Confusing and should be fixed -->\n\n| Shortcut |              Description               | -            |\n| -------- | :------------------------------------: | :----------- |\n| `v`      |     <pur>i</pur> _/_ <pur>a</pur>      | <yel>p</yel> |\n| Operator | <pur>i</pur>nner _/_ <pur>a</pur>round | Text object  |\n\nOperate with an [operator](#available-operators) inner or around text blocks",
+              "footer": "",
+              "spanConfig": "secondary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Text objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Text objects",
+              "body": "| Shortcut                                             | Description                            |\n| ---------------------------------------------------- | :------------------------------------- |\n| <yel>p</yel>                                         | Paragraph                              |\n| <yel>w</yel>                                         | Word                                   |\n| <yel>W</yel>                                         | WORD <br/>_(surrounded by whitespace)_ |\n| <yel>s</yel>                                         | Sentence                               |\n| <yel>[</yel> <yel>(</yel> <yel>{</yel> <yel>\\<</yel> | A [], (), or {} block                  |\n| <yel>]</yel> <yel>)</yel> <yel>}</yel> <yel>\\></yel> | A [], (), or {} block                  |\n| <yel>'</yel> <yel>\"</yel> <yel>\\`</yel>              | A quoted string                        |\n| <yel>b</yel>                                         | A block [(                             |\n| <yel>B</yel>                                         | A block in [{                          |\n| <yel>t</yel>                                         | A HTML tag block                       |\n\nSee `:help text-objects`",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Delete",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delete",
+              "body": "| Shortcut                    | Description                           |\n| --------------------------- | :------------------------------------ |\n| `d`<pur>i</pur><yel>w</yel> | Delete inner word                     |\n| `d`<pur>i</pur><yel>s</yel> | Delete inner sentence                 |\n| `d`<pur>i</pur><yel>\"</yel> | Delete in quotes                      |\n| `d`<pur>a</pur><yel>\"</yel> | Delete in quotes _(including quotes)_ |\n| `d`<pur>i</pur><yel>p</yel> | Delete a paragraph                    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selections",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selections",
+              "body": "| Shortcut                                            | Description                               |\n| --------------------------------------------------- | :---------------------------------------- |\n| `v`<pur>i</pur><yel>\"</yel>                         | Select inner quotes \"`...`{.underline}\"   |\n| `v`<pur>a</pur><yel>\"</yel>                         | Select quotes `\"...\"`{.underline}         |\n| `v`<pur>i</pur><yel>[</yel>                         | Select inner brackets [`...`{.underline}] |\n| `v`<pur>a</pur><yel>[</yel>                         | Select brackets `[...]`{.underline}       |\n| `v`<pur>i</pur><yel>w</yel>                         | Select inner word                         |\n| `v`<pur>i</pur><yel>p</yel>                         | Select inner paragraph                    |\n| `v`<pur>i</pur><yel>p</yel><pur>i</pur><yel>p</yel> | Select more paragraph                     |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Misc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc",
+              "body": "| Shortcut                    | Description                          |\n| --------------------------- | :----------------------------------- |\n| `c`<pur>i</pur><yel>w</yel> | Change inner word                    |\n| `c`<pur>i</pur><yel>\"</yel> | Change inner quotes                  |\n| `c`<pur>i</pur><yel>t</yel> | Change inner tags (HTML)             |\n| `c`<pur>i</pur><yel>p</yel> | Change inner paragraph               |\n| `y`<pur>i</pur><yel>p</yel> | Yank inner paragraph                 |\n| `y`<pur>a</pur><yel>p</yel> | Yank paragraph _(including newline)_ |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Vim Multiple files",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Buffers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Buffers",
+              "body": "| -          | -                                |\n| ---------- | :------------------------------- |\n| `:e file`  | Edit a file in a new buffer      |\n| `:bn`      | Go to the next buffer            |\n| `:bp`      | Go to the previous buffer        |\n| `:bd`      | Remove file from buffer list     |\n| `:b 5`     | Open buffer #5                   |\n| `:b file`  | Go to a buffer by file           |\n| `:ls`      | List all open buffers            |\n| `:sp file` | Open and split window            |\n| `:vs file` | Open and vertically split window |\n| `:hid`     | Hide this buffer                 |\n| `:wn`      | Write file and move to next      |\n| `:tab ba`  | Edit all buffers as tabs         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Windows",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Windows",
+              "body": "| -                       | -                           |\n| ----------------------- | :-------------------------- |\n| `<C-w>` `s`             | Split window                |\n| `<C-w>` `v`             | Split window vertically     |\n| `<C-w>` `w`             | Switch windows              |\n| `<C-w>` `q`             | Quit a window               |\n| `<C-w>` `T`             | Break out into a new tab    |\n| `<C-w>` `x`             | Swap current with next      |\n| `<C-w>` `-` _/_ `+`     | Decrease/Increase height    |\n| `<C-w>` `<` _/_ `>`     | Decrease/Increase width     |\n| `<C-w>` <code>\\|</code> | Max out the width           |\n| `<C-w>` `_`             | Max out the height          |\n| `<C-w>` `=`             | Equally high and wide       |\n| `<C-w>` `h` _/_ `l`     | Go to the left/right window |\n| `<C-w>` `j` _/_ `k`     | Go to the up/down window    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`<C-w>` `s`",
+                  "action": "Split window"
+                },
+                {
+                  "shortcut": "`<C-w>` `v`",
+                  "action": "Split window vertically"
+                },
+                {
+                  "shortcut": "`<C-w>` `w`",
+                  "action": "Switch windows"
+                },
+                {
+                  "shortcut": "`<C-w>` `q`",
+                  "action": "Quit a window"
+                },
+                {
+                  "shortcut": "`<C-w>` `T`",
+                  "action": "Break out into a new tab"
+                },
+                {
+                  "shortcut": "`<C-w>` `x`",
+                  "action": "Swap current with next"
+                },
+                {
+                  "shortcut": "`<C-w>` `-` _/_ `+`",
+                  "action": "Decrease/Increase height"
+                },
+                {
+                  "shortcut": "`<C-w>` `<` _/_ `>`",
+                  "action": "Decrease/Increase width"
+                },
+                {
+                  "shortcut": "`<C-w>` <code>\\",
+                  "action": "</code>"
+                },
+                {
+                  "shortcut": "`<C-w>` `_`",
+                  "action": "Max out the height"
+                },
+                {
+                  "shortcut": "`<C-w>` `=`",
+                  "action": "Equally high and wide"
+                },
+                {
+                  "shortcut": "`<C-w>` `h` _/_ `l`",
+                  "action": "Go to the left/right window"
+                },
+                {
+                  "shortcut": "`<C-w>` `j` _/_ `k`",
+                  "action": "Go to the up/down window"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tabs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tabs",
+              "body": "| Shortcut       | Description                       |\n| -------------- | :-------------------------------- |\n| `:tabe [file]` | <yel>E</yel>dit file in a new tab |\n| `:tabf [file]` | Open if exists in new tab         |\n| `:tabc`        | <yel>C</yel>lose current tab      |\n| `:tabo`        | Close <yel>o</yel>ther tabs       |\n| `:tabs`        | List all <yel>tabs</yel>          |\n| `:tabr`        | Go to fi<yel>r</yel>st tab        |\n| `:tabl`        | Go to <yel>l</yel>ast tab         |\n| `:tabm 0`      | <yel>M</yel>ove to position `0`   |\n| `:tabn`        | Go to <yel>n</yel>ext tab         |\n| `:tabp`        | Go to <yel>p</yel>revious tab     |",
+              "footer": "#### Normal mode\n\n| Shortcut | Description                   |\n| -------- | :---------------------------- |\n| `gt`     | Go to <yel>n</yel>ext tab     |\n| `gT`     | Go to <yel>p</yel>revious tab |\n| `2gt`    | Go to tab number `2`          |\n\n{.shortcuts}",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`gt`",
+                  "action": "Go to <yel>n</yel>ext tab"
+                },
+                {
+                  "shortcut": "`gT`",
+                  "action": "Go to <yel>p</yel>revious tab"
+                },
+                {
+                  "shortcut": "`2gt`",
+                  "action": "Go to tab number `2`"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Vim Search and Replace",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Search",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Search",
+              "body": "| -        | -                                   |\n| -------- | :---------------------------------- |\n| `/foo`   | Search forward                      |\n| `/foo\\c` | Search forward _(case insensitive)_ |\n| `?foo`   | Search backward                     |\n| `/\\v\\d+` | Search with [regex](/regex)         |\n| `n`      | Next matching search pattern        |\n| `N`      | Previous match                      |\n| `*`      | Search for current word forward     |\n| `#`      | Search for current word backward    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`/foo`",
+                  "action": "Search forward"
+                },
+                {
+                  "shortcut": "`/foo\\c`",
+                  "action": "Search forward _(case insensitive)_"
+                },
+                {
+                  "shortcut": "`?foo`",
+                  "action": "Search backward"
+                },
+                {
+                  "shortcut": "`/\\v\\d+`",
+                  "action": "Search with [regex](/regex)"
+                },
+                {
+                  "shortcut": "`n`",
+                  "action": "Next matching search pattern"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Previous match"
+                },
+                {
+                  "shortcut": "`*`",
+                  "action": "Search for current word forward"
+                },
+                {
+                  "shortcut": "`#`",
+                  "action": "Search for current word backward"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Replace LINE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Replace LINE",
+              "body": "```vim\n:[range]s/{pattern}/{str}/[flags]\n```",
+              "footer": "|                   |                                  |\n| ----------------- | :------------------------------- |\n| `:s/old/new`      | Replace first                    |\n| `:s/old/new/g`    | Replace all                      |\n| `:s/\\vold/new/g`  | Replace all with [regex](/regex) |\n| `:s/old/new/gc`   | replace all _(Confirm)_          |\n| `:s/old/new/i`    | Ignore case replace first        |\n| `:2,6s/old/new/g` | Replace between lines `2`-`6`    |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Replace FILE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Replace FILE",
+              "body": "```vim\n:%s/{pattern}/{str}/[flags]\n```",
+              "footer": "|                   |                                  |\n| ----------------- | :------------------------------- |\n| `:%s/old/new`     | Replace first                    |\n| `:%s/old/new/g`   | Replace all                      |\n| `:%s/old/new/gc`  | Replace all _(Confirm)_          |\n| `:%s/old/new/gi`  | Replace all _(ignore case)_      |\n| `:%s/\\vold/new/g` | Replace all with [regex](/regex) |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ranges",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ranges",
+              "body": "| -       | -                 |\n| ------- | :---------------- |\n| `%`     | Entire file       |\n| `’<,’>` | Current selection |\n| `5`     | Line `5`          |\n| `5,10`  | Lines `5` to `10` |\n| `$`     | Last line         |\n| `2,$`   | Lines `2` to Last |\n| `.`     | Current line      |\n| `,3`    | Next `3` lines    |\n| `-3,`   | Forward `3` lines |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Global command",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Global command",
+              "body": "```vim\n:[range]g/{pattern}/[command]\n```",
+              "footer": "|              |                                    |\n| ------------ | :--------------------------------- |\n| `:g/foo/d`   | Delete lines containing `foo`      |\n| `:g!/foo/d`  | Delete lines not containing `foo`  |\n| `:g/^\\s*$/d` | Delete all blank lines             |\n| `:g/foo/t$`  | Copy lines containing `foo` to EOF |\n| `:g/foo/m$`  | Move lines containing `foo` to EOF |\n| `:g/^/m0`    | Reverse a file                     |\n| `:g/^/t.`    | Duplicate every line               |",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inverse :g",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inverse :g",
+              "body": "```vim\n:[range]v/{pattern}/[command]\n```",
+              "footer": "|            |                                                            |\n| ---------- | :--------------------------------------------------------- |\n| `:v/foo/d` | Delete lines not containing `foo`<br/>_(also `:g!/foo/d`)_ |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Flags",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Flags",
+              "body": "| -   | -                         |\n| --- | :------------------------ |\n| `g` | Replace all occurrences   |\n| `i` | Ignore case               |\n| `I` | Don't ignore case         |\n| `c` | Confirm each substitution |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Substitute expression (magic)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Substitute expression (magic)",
+              "body": "| -             | -                                |\n| ------------- | :------------------------------- |\n| `&` _\\|_ `\\0` | Replace with the whole matched   |\n| `\\1`...`\\9`   | Replace with the group 0-9       |\n| `\\u`          | Uppercase next letter            |\n| `\\U`          | Uppercase following characters   |\n| `\\l`          | Lowercase next letter            |\n| `\\L`          | Lowercase following characters   |\n| `\\e`          | End of `\\u`, `\\U`, `\\l` and `\\L` |\n| `\\E`          | End of `\\u`, `\\U`, `\\l` and `\\L` |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "",
+              "footer": "```c {.wrap}\n:s/a\\|b/xxx\\0xxx/g\t\t         # Modifies \"a b\"      to \"xxxaxxx xxxbxxx\"\n:s/test/\\U& file/                # Modifies \"test\"     to \"TEST FILE\"\n:s/\\(test\\)/\\U\\1\\e file/         # Modifies \"test\"     to \"TEST file\"\n:s/\\v([abc])([efg])/\\2\\1/g\t     # Modifies \"af fa bg\" to \"fa fa gb\"\n:s/\\v\\w+/\\u\\0/g\t\t             # Modifies \"bla bla\"  to \"Bla Bla\"\n:s/\\v([ab])|([cd])/\\1x/g         # Modifies \"a b c d\"  to \"ax bx x x\"\n:%s/.*/\\L&/                      # Modifies \"HTML\"     to \"html\"\n:s/\\v<(.)(\\w*)/\\u\\1\\L\\2/g        # Make every first letter of a word uppercase\n:%s/^\\(.*\\)\\n\\1/\\1/              # Remove duplicate lines\n:%s/<\\/\\=\\(\\w\\+\\)\\>/\\U&/g        # Convert HTML-Tags to uppercase\n:g/^pattern/s/$/mytext           # Find and append text to the end\n:g/pattern/norm! @i              # Run a macro on matching lines\n/^\\(.*\\)\\(\\r\\?\\n\\1\\)\\+$          # View the duplicates lines\n/\\v^(.*)(\\r?\\n\\1)+$              # View the duplicates lines (very magic)\n:v/./,/./-j                      # Compress blank lines into a blank line\n:g/<p1>/,/<p2>/d                 # Delete inclusively from <p1> to <p2>\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Vimdiff",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Usage",
+              "body": "",
+              "footer": "```shell script\n\n$ vimdiff file1 file2 [file3]\n$ vim -d file1 file2 [file3]\n```",
+              "spanConfig": "secondary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editing",
+              "body": "```\n:[range]diffget [bufspec]\n:[range]diffput [bufspec]\n```",
+              "footer": "| Shortcut            | Description             |\n| ------------------- | :---------------------- |\n| `do` _/_ `:diffget` | Obtain (get) difference |\n| `dp` _/_ `:diffput` | Put difference          |\n| `:dif`              | Re-scan differences     |\n| `:diffo`            | Switch off diff mode    |\n| `:1,$+1diffget`     | Get all differences     |\n| `ZQ`                | Quit without changes    |\n{.shortcuts}\nSee: [Ranges](#ranges)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`do` _/_ `:diffget`",
+                  "action": "Obtain (get) difference"
+                },
+                {
+                  "shortcut": "`dp` _/_ `:diffput`",
+                  "action": "Put difference"
+                },
+                {
+                  "shortcut": "`:dif`",
+                  "action": "Re-scan differences"
+                },
+                {
+                  "shortcut": "`:diffo`",
+                  "action": "Switch off diff mode"
+                },
+                {
+                  "shortcut": "`:1,$+1diffget`",
+                  "action": "Get all differences"
+                },
+                {
+                  "shortcut": "`ZQ`",
+                  "action": "Quit without changes"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Folds",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Folds",
+              "body": "| Shortcut      | Description                  |\n| ------------- | :--------------------------- |\n| `zo` _/_ `zO` | Open                         |\n| `zc` _/_ `zC` | Close                        |\n| `za` _/_ `zA` | Toggle                       |\n| `zv`          | Open folds for this line     |\n| `zM`          | Close all                    |\n| `zR`          | Open all                     |\n| `zm`          | Fold more _(foldlevel += 1)_ |\n| `zr`          | Fold less _(foldlevel -= 1)_ |\n| `zx`          | Update folds                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`zo` _/_ `zO`",
+                  "action": "Open"
+                },
+                {
+                  "shortcut": "`zc` _/_ `zC`",
+                  "action": "Close"
+                },
+                {
+                  "shortcut": "`za` _/_ `zA`",
+                  "action": "Toggle"
+                },
+                {
+                  "shortcut": "`zv`",
+                  "action": "Open folds for this line"
+                },
+                {
+                  "shortcut": "`zM`",
+                  "action": "Close all"
+                },
+                {
+                  "shortcut": "`zR`",
+                  "action": "Open all"
+                },
+                {
+                  "shortcut": "`zm`",
+                  "action": "Fold more _(foldlevel += 1)_"
+                },
+                {
+                  "shortcut": "`zr`",
+                  "action": "Fold less _(foldlevel -= 1)_"
+                },
+                {
+                  "shortcut": "`zx`",
+                  "action": "Update folds"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Jumping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Jumping",
+              "body": "<br>\n\n| Shortcut | Description         |\n| -------- | :------------------ |\n| `]c`     | Next difference     |\n| `[c`     | Previous difference |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`]c`",
+                  "action": "Next difference"
+                },
+                {
+                  "shortcut": "`[c`",
+                  "action": "Previous difference"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Case",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Case",
+              "body": "| Shortcut       | Description             |\n| -------------- | :---------------------- |\n| `vU`           | _Uppercase_ character   |\n| `vu`           | _Lowercase_ character   |\n| `~`            | _Toggle case_ character |\n| `viw` `U`      | _Uppercase_ word        |\n| `viw` `u`      | _Lowercase_ word        |\n| `viw` `~`      | _Toggle case_ word      |\n| `VU` _/_ `gUU` | _Uppercase_ line        |\n| `Vu` _/_ `guu` | _Lowercase_ line        |\n| `V~` _/_ `g~~` | _Toggle case_ line      |\n| `gggUG`        | _Uppercase_ all text    |\n| `ggguG`        | _Lowercase_ all text    |\n| `ggg~G`        | _Toggle case_ all text  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`vU`",
+                  "action": "_Uppercase_ character"
+                },
+                {
+                  "shortcut": "`vu`",
+                  "action": "_Lowercase_ character"
+                },
+                {
+                  "shortcut": "`~`",
+                  "action": "_Toggle case_ character"
+                },
+                {
+                  "shortcut": "`viw` `U`",
+                  "action": "_Uppercase_ word"
+                },
+                {
+                  "shortcut": "`viw` `u`",
+                  "action": "_Lowercase_ word"
+                },
+                {
+                  "shortcut": "`viw` `~`",
+                  "action": "_Toggle case_ word"
+                },
+                {
+                  "shortcut": "`VU` _/_ `gUU`",
+                  "action": "_Uppercase_ line"
+                },
+                {
+                  "shortcut": "`Vu` _/_ `guu`",
+                  "action": "_Lowercase_ line"
+                },
+                {
+                  "shortcut": "`V~` _/_ `g~~`",
+                  "action": "_Toggle case_ line"
+                },
+                {
+                  "shortcut": "`gggUG`",
+                  "action": "_Uppercase_ all text"
+                },
+                {
+                  "shortcut": "`ggguG`",
+                  "action": "_Lowercase_ all text"
+                },
+                {
+                  "shortcut": "`ggg~G`",
+                  "action": "_Toggle case_ all text"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Jumping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Jumping",
+              "body": "| Shortcut | Description              |\n| -------- | :----------------------- |\n| `<C-o>`  | Go back to previous      |\n| `<C-i>`  | Go forward               |\n| `gf`     | Go to file in cursor     |\n| `ga`     | Display hex, ascii value |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`<C-o>`",
+                  "action": "Go back to previous"
+                },
+                {
+                  "shortcut": "`<C-i>`",
+                  "action": "Go forward"
+                },
+                {
+                  "shortcut": "`gf`",
+                  "action": "Go to file in cursor"
+                },
+                {
+                  "shortcut": "`ga`",
+                  "action": "Display hex, ascii value"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Misc command-lines",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc command-lines",
+              "body": "| -              | -                                          |\n| -------------- | :----------------------------------------- |\n| `:h`           | Help open help view                        |\n| `:edit!`       | Reload current file                        |\n| `:2,8m0`       | Move lines `2`-`8` to `0`                  |\n| `:noh`         | Clear search highlights                    |\n| `:sort`        | Sort lines                                 |\n| `:ter`         | Open a terminal window                     |\n| `:set paste`   | Enable Insert Paste sub-mode               |\n| `:set nopaste` | disable Insert Paste sub-mode              |\n| `:cq`          | Exiting with an error<br/>_(aborting Git)_ |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigating",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigating",
+              "body": "| Shortcut       | Description               |\n| -------------- | :------------------------ |\n| `%`            | Nearest/matching `{[()]}` |\n| `[(` _\\|_ `[{` | Previous `(` or `{`       |\n| `])` _\\|_ `]{` | Next `)` or `}`           |\n| `[m`           | Previous method start     |\n| `[M`           | Previous method end       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`%`",
+                  "action": "Nearest/matching `{[()]}`"
+                },
+                {
+                  "shortcut": "`[(` _\\",
+                  "action": "_ `[{`"
+                },
+                {
+                  "shortcut": "`])` _\\",
+                  "action": "_ `]{`"
+                },
+                {
+                  "shortcut": "`[m`",
+                  "action": "Previous method start"
+                },
+                {
+                  "shortcut": "`[M`",
+                  "action": "Previous method end"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Counters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Counters",
+              "body": "| Shortcut | Description     |\n| -------- | :-------------- |\n| `<C-a>`  | Increase number |\n| `<C-x>`  | Decrease number |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`<C-a>`",
+                  "action": "Increase number"
+                },
+                {
+                  "shortcut": "`<C-x>`",
+                  "action": "Decrease number"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tags",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tags",
+              "body": "| Shortcut             | Description                                     |\n| -------------------- | :---------------------------------------------- |\n| `:tag Classname`     | Jump to first definition of Classname           |\n| `<C-]>`              | Jump to definition                              |\n| `g]`                 | See all definitions                             |\n| `<C-t>`              | Go back to last tag                             |\n| `<C-o> <C-i>`        | Back/forward                                    |\n| `:tselect Classname` | Find definitions of Classname                   |\n| `:tjump Classname`   | Find definitions of Classname (auto-select 1st) |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2 .col-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`:tag Classname`",
+                  "action": "Jump to first definition of Classname"
+                },
+                {
+                  "shortcut": "`<C-]>`",
+                  "action": "Jump to definition"
+                },
+                {
+                  "shortcut": "`g]`",
+                  "action": "See all definitions"
+                },
+                {
+                  "shortcut": "`<C-t>`",
+                  "action": "Go back to last tag"
+                },
+                {
+                  "shortcut": "`<C-o> <C-i>`",
+                  "action": "Back/forward"
+                },
+                {
+                  "shortcut": "`:tselect Classname`",
+                  "action": "Find definitions of Classname"
+                },
+                {
+                  "shortcut": "`:tjump Classname`",
+                  "action": "Find definitions of Classname (auto-select 1st)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Formatting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Formatting",
+              "body": "| -       | -                                |\n| ------- | -------------------------------- |\n| `:ce 8` | Center lines between `8` columns |\n| `:ri 4` | Right-align lines at `4` columns |\n| `:le`   | Left-align lines                 |\n\nSee `:help formatting`",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Marks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Marks",
+              "body": "| Shortcut            | Description                                          |\n| ------------------- | :--------------------------------------------------- |\n| <code>\\`^</code>    | Last position of cursor in insert mode               |\n| <code>\\`.</code>    | Last change in current buffer                        |\n| <code>\\`\"</code>    | Last exited current buffer                           |\n| <code>\\`0</code>    | In last file edited                                  |\n| <code>''</code>     | Back to line in current buffer where jumped from     |\n| <code>\\`\\`</code>   | Back to position in current buffer where jumped from |\n| <code>\\`[</code>    | To beginning of previously changed or yanked text    |\n| <code>\\`]</code>    | To end of previously changed or yanked text          |\n| <code>\\`&lt;</code> | To beginning of last visual selection                |\n| <code>\\`&gt;</code> | To end of last visual selection                      |\n| `ma`                | Mark this cursor position as `a`                     |\n| <code>\\`a</code>    | Jump to the cursor position `a`                      |\n| `'a`                | Jump to the beginning of the line with position `a`  |\n| <code>d'a</code>    | Delete from current line to line of mark `a`         |\n| <code>d\\`a</code>   | Delete from current position to position of mark `a` |\n| <code>c'a</code>    | Change text from current line to line of `a`         |\n| <code>y\\`a</code>   | Yank text from current position to position of `a`   |\n| `:marks`            | List all current marks                               |\n| `:delm a`           | Delete mark `a`                                      |\n| `:delm a-d`         | Delete marks `a`, `b`, `c`, `d`                      |\n| `:delm abc`         | Delete marks `a`, `b`, `c`                           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "col-span-2 .row-span-4",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "<code>\\`^</code>",
+                  "action": "Last position of cursor in insert mode"
+                },
+                {
+                  "shortcut": "<code>\\`.</code>",
+                  "action": "Last change in current buffer"
+                },
+                {
+                  "shortcut": "<code>\\`\"</code>",
+                  "action": "Last exited current buffer"
+                },
+                {
+                  "shortcut": "<code>\\`0</code>",
+                  "action": "In last file edited"
+                },
+                {
+                  "shortcut": "<code>''</code>",
+                  "action": "Back to line in current buffer where jumped from"
+                },
+                {
+                  "shortcut": "<code>\\`\\`</code>",
+                  "action": "Back to position in current buffer where jumped from"
+                },
+                {
+                  "shortcut": "<code>\\`[</code>",
+                  "action": "To beginning of previously changed or yanked text"
+                },
+                {
+                  "shortcut": "<code>\\`]</code>",
+                  "action": "To end of previously changed or yanked text"
+                },
+                {
+                  "shortcut": "<code>\\`&lt;</code>",
+                  "action": "To beginning of last visual selection"
+                },
+                {
+                  "shortcut": "<code>\\`&gt;</code>",
+                  "action": "To end of last visual selection"
+                },
+                {
+                  "shortcut": "`ma`",
+                  "action": "Mark this cursor position as `a`"
+                },
+                {
+                  "shortcut": "<code>\\`a</code>",
+                  "action": "Jump to the cursor position `a`"
+                },
+                {
+                  "shortcut": "`'a`",
+                  "action": "Jump to the beginning of the line with position `a`"
+                },
+                {
+                  "shortcut": "<code>d'a</code>",
+                  "action": "Delete from current line to line of mark `a`"
+                },
+                {
+                  "shortcut": "<code>d\\`a</code>",
+                  "action": "Delete from current position to position of mark `a`"
+                },
+                {
+                  "shortcut": "<code>c'a</code>",
+                  "action": "Change text from current line to line of `a`"
+                },
+                {
+                  "shortcut": "<code>y\\`a</code>",
+                  "action": "Yank text from current position to position of `a`"
+                },
+                {
+                  "shortcut": "`:marks`",
+                  "action": "List all current marks"
+                },
+                {
+                  "shortcut": "`:delm a`",
+                  "action": "Delete mark `a`"
+                },
+                {
+                  "shortcut": "`:delm a-d`",
+                  "action": "Delete marks `a`, `b`, `c`, `d`"
+                },
+                {
+                  "shortcut": "`:delm abc`",
+                  "action": "Delete marks `a`, `b`, `c`"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Calculator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Calculator",
+              "body": "| Shortcut         | Description      |\n| ---------------- | :--------------- |\n| `<C-r>` `=` 7\\*7 | Shows the result |\n| `<C-r>` `=` 10/2 | Shows the result |\n\n{.shortcuts}\n\nDo this in INSERT mode",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`<C-r>` `=` 7\\*7",
+                  "action": "Shows the result"
+                },
+                {
+                  "shortcut": "`<C-r>` `=` 10/2",
+                  "action": "Shows the result"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Shell",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shell",
+              "body": "| -            | -                              |\n| ------------ | :----------------------------- |\n| `:!<shell>`  | Interpret Shell Command        |\n| `:r!<shell>` | Read in output of shell        |\n| `:r!date`    | Insert date                    |\n| `:!!date`    | Replace current line with date |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Command line",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Command line",
+              "body": "| Shortcut     | Description                               |\n| ------------ | :---------------------------------------- |\n| `<C-r><C-w>` | Insert current word into the command line |\n| `<C-r>\"`     | Paste from \" register                     |\n| `<C-x><C-f>` | Auto-completion of path in insert mode    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcut",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`<C-r><C-w>`",
+                  "action": "Insert current word into the command line"
+                },
+                {
+                  "shortcut": "`<C-r>\"`",
+                  "action": "Paste from \" register"
+                },
+                {
+                  "shortcut": "`<C-x><C-f>`",
+                  "action": "Auto-completion of path in insert mode"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tricks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tricks",
+              "body": "```\nTo number the lines in the file\n```",
+              "footer": "shell script\n:%!cat -n\n```\nCopy whole doc to clipboard\n```shell script\n:%w !pbcopy            # Mac OS X\n:%w !xclip -i -sel c   # GNU/Linux\n:%w !xsel -i -b        # GNU/Linux\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Devhints](https://devhints.io/vim) _(devhints.io)_\n- [Vim cheatsheet](https://vim.rtorr.com/) _(vim.rotrr.com)_\n- [Vim documentation](http://vimdoc.sourceforge.net/htmldoc/) _(vimdoc.sourceforge.net)_\n- [Interactive Vim tutorial](http://openvim.com/) _(openvim.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

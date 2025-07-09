@@ -1,0 +1,1632 @@
+{
+  "id": "javascript",
+  "metadata": {
+    "title": "JavaScript",
+    "date": "2020-12-24T17:12:25.000Z",
+    "background": "bg-[#ebd94e]",
+    "tags": [
+      "js",
+      "web"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "A JavaScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "JavaScript is a lightweight, interpreted programming language.\n\n- [JSON cheatsheet](/json) _(cheatsheets.zip)_\n- [Regex in JavaScript](/regex#regex-in-javascript) _(cheatsheets.zip)_",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Console",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Console",
+              "body": "```javascript\n// => Hello world!\nconsole.log('Hello world!');\n\n// => Hello CheatSheets.zip\nconsole.warn('hello %s', 'CheatSheets.zip');\n\n// Prints error message to stderr\nconsole.error(new Error('Oops!'));\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Numbers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Numbers",
+              "body": "```javascript\nlet amount = 6;\nlet price = 4.99;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```javascript\nlet x = null;\nlet name = 'Tammy';\nconst found = false;\n\n// => Tammy, false, null\nconsole.log(name, found, x);\n\nvar a;\nconsole.log(a); // => undefined\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings",
+              "body": "```javascript\nlet single = 'Wheres my bandit hat?';\nlet double = 'Wheres my bandit hat?';\n\n// => 21\nconsole.log(single.length);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arithmetic Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arithmetic Operators",
+              "body": "```javascript\n5 + 5 = 10     // Addition\n10 - 5 = 5     // Subtraction\n5 * 10 = 50    // Multiplication\n10 / 5 = 2     // Division\n10 % 5 = 0     // Modulo\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```javascript\n// This line will denote a comment\n\n/*\nThe below configuration must be\nchanged before deployment.\n*/\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Assignment Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Assignment Operators",
+              "body": "```javascript\nlet number = 100;\n\n// Both statements will add 10\nnumber = number + 10;\nnumber += 10;\n\nconsole.log(number);\n// => 120\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String Interpolation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String Interpolation",
+              "body": "```javascript\nlet age = 7;\n\n// String concatenation\n'Tommy is ' + age + ' years old.';\n\n// String interpolation\n`Tommy is ${age} years old.`;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "let Keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "let Keyword",
+              "body": "```javascript\nlet count;\nconsole.log(count); // => undefined\ncount = 10;\nconsole.log(count); // => 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "const Keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "const Keyword",
+              "body": "```javascript\nconst numberOfColumns = 4;\n\n// TypeError: Assignment to constant...\nnumberOfColumns = 8;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Conditionals",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "if Statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "if Statement",
+              "body": "```javascript\nconst isMailSent = true;\n\nif (isMailSent) {\n  console.log('Mail sent to recipient');\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ternary Operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ternary Operator",
+              "body": "```javascript\nvar x = 1;\n\n// => true\nresult = x == 1 ? true : false;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operators",
+              "body": "```javascript\ntrue || false; // true\n10 > 5 || 10 > 20; // true\nfalse || false; // false\n10 > 100 || 10 > 20; // false\n```",
+              "footer": "#### Logical Operator &&\n\n```javascript\ntrue && true; // true\n1 > 2 && 2 > 1; // false\ntrue && false; // false\n4 === 4 && 3 > 1; // true\n```\n\n#### Comparison Operators\n\n```javascript\n1 > 3; // false\n3 > 1; // true\n250 >= 250; // true\n1 === 1; // true\n1 === 2; // false\n1 === '1'; // false\n```\n\n#### Logical Operator !\n\n```javascript\nlet lateToWork = true;\nlet oppositeValue = !lateToWork;\n\n// => false\nconsole.log(oppositeValue);\n```\n\n#### Nullish coalescing operator ??\n\n```javascript\nnull ?? 'I win'; //  'I win'\nundefined ?? 'Me too'; //  'Me too'\n\nfalse ?? 'I lose'; //  false\n0 ?? 'I lose again'; //  0\n'' ?? 'Damn it'; //  ''\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "else if",
+          "level": 3,
+          "cards": [
+            {
+              "title": "else if",
+              "body": "```javascript\nconst size = 10;\n\nif (size > 100) {\n  console.log('Big');\n} else if (size > 20) {\n  console.log('Medium');\n} else if (size > 4) {\n  console.log('Small');\n} else {\n  console.log('Tiny');\n}\n// Print: Small\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "switch Statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "switch Statement",
+              "body": "```javascript\nconst food = 'salad';\n\nswitch (food) {\n  case 'oyster':\n    console.log('The taste of the sea');\n    break;\n  case 'pizza':\n    console.log('A delicious pie');\n    break;\n  default:\n    console.log('Enjoy your meal');\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "== vs ===",
+          "level": 3,
+          "cards": [
+            {
+              "title": "== vs ===",
+              "body": "```javascript\n0 == false; // true\n0 === false; // false, different type\n1 == '1'; // true,  automatic type conversion\n1 === '1'; // false, different type\nnull == undefined; // true\nnull === undefined; // false\n'0' == false; // true\n'0' === false; // false\n```",
+              "footer": "The `==` just check the value, `===` check both the value and the type.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Functions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "```javascript\n// Defining the function:\nfunction sum(num1, num2) {\n  return num1 + num2;\n}\n\n// Calling the function:\nsum(3, 6); // 9\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Anonymous Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Anonymous Functions",
+              "body": "```javascript\n// Named function\nfunction rocketToMars() {\n  return 'BOOM!';\n}\n\n// Anonymous function\nconst rocketToMars = function () {\n  return 'BOOM!';\n};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrow Functions (ES6)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrow Functions (ES6)",
+              "body": "",
+              "footer": "#### With two arguments\n\n```javascript\nconst sum = (param1, param2) => {\n  return param1 + param2;\n};\nconsole.log(sum(2, 5)); // => 7\n```\n\n#### With no arguments\n\n```javascript\nconst printHello = () => {\n  console.log('hello');\n};\nprintHello(); // => hello\n```\n\n#### With a single argument\n\n```javascript\nconst checkWeight = (weight) => {\n  console.log(`Weight : ${weight}`);\n};\ncheckWeight(25); // => Weight : 25\n```\n\n#### Concise arrow functions\n\n```javascript\nconst multiply = (a, b) => a * b;\n// => 60\nconsole.log(multiply(2, 30));\n```\n\n[Arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) available\nstarting ES2015",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "return Keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "return Keyword",
+              "body": "```javascript\n// With return\nfunction sum(num1, num2) {\n  return num1 + num2;\n}\n\n// The function doesn't output the sum\nfunction sum(num1, num2) {\n  num1 + num2;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Calling Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Calling Functions",
+              "body": "```javascript\n// Defining the function\nfunction sum(num1, num2) {\n  return num1 + num2;\n}\n\n// Calling the function\nsum(2, 4); // 6\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function Expressions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function Expressions",
+              "body": "```javascript\nconst dog = function () {\n  return 'Woof!';\n};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function Parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function Parameters",
+              "body": "```javascript\n// The parameter is name\nfunction sayHello(name) {\n  return `Hello, ${name}!`;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function Declaration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function Declaration",
+              "body": "```javascript\nfunction add(num1, num2) {\n  return num1 + num2;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Scope",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Scope",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scope",
+              "body": "```javascript\nfunction myFunction() {\n  var pizzaName = 'Margarita';\n  // Code here can use pizzaName\n}\n\n// Code here can't use pizzaName\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Block Scoped Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Block Scoped Variables",
+              "body": "```javascript\nconst isLoggedIn = true;\n\nif (isLoggedIn == true) {\n  const statusMessage = 'Logged in.';\n}\n\n// Uncaught ReferenceError...\nconsole.log(statusMessage);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Global Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Global Variables",
+              "body": "```javascript\n// Variable declared globally\nconst color = 'blue';\n\nfunction printColor() {\n  console.log(color);\n}\n\nprintColor(); // => blue\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "let vs var",
+          "level": 3,
+          "cards": [
+            {
+              "title": "let vs var",
+              "body": "```javascript\nfor (let i = 0; i < 3; i++) {\n  // This is the Max Scope for 'let'\n  // i accessible ✔️\n}\n// i not accessible ❌\n```",
+              "footer": "```javascript\nfor (var i = 0; i < 3; i++) {\n// i accessible ✔️\n}\n// i accessible ✔️\n```\n`var` is scoped to the nearest function block, and `let` is scoped to the nearest enclosing block.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loops with closures",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loops with closures",
+              "body": "```\n\n```",
+              "footer": "javascript{.wrap}\n// Prints 0, 1 and 2, as expected.\nfor (let j = 0; j < 3; j++) {\nsetTimeout(_ => console.log(j), 10);\n}\n```\nThe variable has its own copy using `let`, and the variable has shared copy using `var`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Arrays",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays",
+              "body": "```javascript\nconst fruits = ['apple', 'orange', 'banana'];\n\n// Different data types\nconst data = [1, 'chicken', false];\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Property .length",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Property .length",
+              "body": "```javascript\nconst numbers = [1, 2, 3, 4];\n\nnumbers.length; // 4\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Index",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Index",
+              "body": "```javascript\n// Accessing an array element\nconst myArray = [100, 200, 300];\n\nconsole.log(myArray[0]); // 100\nconsole.log(myArray[1]); // 200\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mutable chart",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutable chart",
+              "body": "|           | add | remove | start | end |\n| :-------- | :-: | :----: | :---: | :-: |\n| `push`    | ✔  |        |       | ✔  |\n| `pop`     |     |   ✔   |       | ✔  |\n| `unshift` | ✔  |        |  ✔   |     |\n| `shift`   |     |   ✔   |  ✔   |     |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array.push()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array.push()",
+              "body": "```javascript\n// Adding a single element:\nconst cart = ['apple', 'orange'];\ncart.push('pear');\n\n// Adding multiple elements:\nconst numbers = [1, 2];\nnumbers.push(3, 4, 5);\n```",
+              "footer": "Add items to the end and returns the new array length.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array.pop()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array.pop()",
+              "body": "```javascript\nconst fruits = ['apple', 'orange', 'banana'];\n\nconst fruit = fruits.pop(); // 'banana'\nconsole.log(fruits); // [\"apple\", \"orange\"]\n```",
+              "footer": "Remove an item from the end and returns the removed item.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array.shift()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array.shift()",
+              "body": "```javascript\nlet cats = ['Bob', 'Willy', 'Mini'];\n\ncats.shift(); // ['Willy', 'Mini']\n```",
+              "footer": "Remove an item from the beginning and returns the removed item.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array.unshift()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array.unshift()",
+              "body": "```javascript\nlet cats = ['Bob'];\n\n// => ['Willy', 'Bob']\ncats.unshift('Willy');\n\n// => ['Puff', 'George', 'Willy', 'Bob']\ncats.unshift('Puff', 'George');\n```",
+              "footer": "Add items to the beginning and returns the new array length.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array.concat()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array.concat()",
+              "body": "```javascript\nconst numbers = [3, 2, 1];\nconst newFirstNumber = 4;\n\n// => [ 4, 3, 2, 1 ]\n[newFirstNumber].concat(numbers);\n\n// => [ 3, 2, 1, 4 ]\nnumbers.concat(newFirstNumber);\n```",
+              "footer": "If you want to avoid mutating your original array, you can use concat.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Set",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Create Set",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create Set",
+              "body": "```javascript\n// Empty Set Object\nconst emptySet = new Set();\n\n// Set Object with values\nconst setObj = new Set([1, true, 'hi']);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Add",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Add",
+              "body": "```javascript\nconst emptySet = new Set();\n\n// add values\nemptySet.add('a'); // 'a'\nemptySet.add(1); // 'a', 1\nemptySet.add(true); // 'a', 1, true\nemptySet.add('a'); // 'a', 1, true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Delete",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delete",
+              "body": "```javascript\nconst emptySet = new Set([1, true, 'a']);\n\n// delete values\nemptySet.delete('a'); // 1, true\nemptySet.delete(true); // 1\nemptySet.delete(1); //\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Has",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Has",
+              "body": "```javascript\nconst setObj = new Set([1, true, 'a']);\n\n// returns true or false\nsetObj.has('a'); // true\nsetObj.has(1); // true\nsetObj.has(false); // false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Clear",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Clear",
+              "body": "```javascript\nconst setObj = new Set([1, true, 'a']);\n\n// clears the set\nconsole.log(setObj); // 1, true, 'a'\nsetObj.clear(); //\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Size",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Size",
+              "body": "```javascript\nconst setObj = new Set([1, true, 'a']);\n\nconsoloe.log(setObj.size); // 3\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ForEach",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ForEach",
+              "body": "```javascript\nconst setObj = new Set([1, true, 'a']);\n\nsetObj.forEach(function (value) {\n  console.log(value);\n});\n\n// 1\n// true\n// 'a'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Loops",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "While Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While Loop",
+              "body": "```javascript\nwhile (condition) {\n  // code block to be executed\n}\n\nlet i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reverse Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reverse Loop",
+              "body": "```javascript\nconst fruits = ['apple', 'orange', 'banana'];\n\nfor (let i = fruits.length - 1; i >= 0; i--) {\n  console.log(`${i}. ${fruits[i]}`);\n}\n\n// => 2. banana\n// => 1. orange\n// => 0. apple\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Do…While Statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Do…While Statement",
+              "body": "```javascript\nx = 0;\ni = 0;\n\ndo {\n  x = x + i;\n  console.log(x);\n  i++;\n} while (i < 5);\n// => 0 1 3 6 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "For Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For Loop",
+              "body": "```javascript\nfor (let i = 0; i < 4; i += 1) {\n  console.log(i);\n}\n\n// => 0, 1, 2, 3\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Looping Through Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Looping Through Arrays",
+              "body": "```javascript\nfor (let i = 0; i < array.length; i++) {\n  console.log(array[i]);\n}\n\n// => Every item in the array\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break",
+              "body": "```javascript\nfor (let i = 0; i < 99; i += 1) {\n  if (i > 5) {\n    break;\n  }\n  console.log(i);\n}\n// => 0 1 2 3 4 5\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Continue",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Continue",
+              "body": "```javascript\nfor (i = 0; i < 10; i++) {\n  if (i === 3) {\n    continue;\n  }\n  text += 'The number is ' + i + '<br>';\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Nested",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Nested",
+              "body": "```javascript\nfor (let i = 0; i < 2; i += 1) {\n  for (let j = 0; j < 3; j += 1) {\n    console.log(`${i}-${j}`);\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "for...in loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for...in loop",
+              "body": "```javascript\nconst fruits = ['apple', 'orange', 'banana'];\n\nfor (let index in fruits) {\n  console.log(index);\n}\n// => 0\n// => 1\n// => 2\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "for...of loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for...of loop",
+              "body": "```javascript\nconst fruits = ['apple', 'orange', 'banana'];\n\nfor (let fruit of fruits) {\n  console.log(fruit);\n}\n// => apple\n// => orange\n// => banana\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Iterators {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Functions Assigned to Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions Assigned to Variables",
+              "body": "```javascript\nlet plusFive = (number) => {\n  return number + 5;\n};\n// f is assigned the value of plusFive\nlet f = plusFive;\n\nplusFive(3); // 8\n// Since f has a function value, it can be invoked.\nf(9); // 14\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Callback Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Callback Functions",
+              "body": "```javascript\nconst isEven = (n) => {\n  return n % 2 == 0;\n};\n\nlet printMsg = (evenFunc, num) => {\n  const isNumEven = evenFunc(num);\n  console.log(`${num} is an even number: ${isNumEven}.`);\n};\n\n// Pass in isEven as the callback function\nprintMsg(isEven, 4);\n// => 4 is an even number: True.\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array.reduce()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array.reduce()",
+              "body": "```javascript\nconst numbers = [1, 2, 3, 4];\n\nconst sum = numbers.reduce((accumulator, curVal) => {\n  return accumulator + curVal;\n});\n\nconsole.log(sum); // 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array.map()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array.map()",
+              "body": "```javascript\nconst members = ['Taylor', 'Donald', 'Don', 'Natasha', 'Bobby'];\n\nconst announcements = members.map((member) => {\n  return member + ' joined the contest.';\n});\n\nconsole.log(announcements);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array.forEach()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array.forEach()",
+              "body": "```javascript\nconst numbers = [28, 77, 45, 99, 27];\n\nnumbers.forEach((number) => {\n  console.log(number);\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array.filter()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array.filter()",
+              "body": "```javascript\nconst randomNumbers = [4, 11, 42, 14, 39];\nconst filteredArray = randomNumbers.filter((n) => {\n  return n > 5;\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Objects {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Accessing Properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Accessing Properties",
+              "body": "```javascript\nconst apple = {\n  color: 'Green',\n  price: { bulk: '$3/kg', smallQty: '$4/kg' }\n};\nconsole.log(apple.color); // => Green\nconsole.log(apple.price.bulk); // => $3/kg\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Naming Properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Naming Properties",
+              "body": "```javascript\n// Example of invalid key names\nconst trainSchedule = {\n  // Invalid because of the space between words.\n  platform num: 10,\n  // Expressions cannot be keys.\n  40 - 10 + 2: 30,\n  // A + sign is invalid unless it is enclosed in quotations.\n  +compartment: 'C'\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Non-existent properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Non-existent properties",
+              "body": "```javascript\nconst classElection = {\n  date: 'January 12'\n};\n\nconsole.log(classElection.place); // undefined\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mutable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutable",
+              "body": "```javascript\nconst student = {\n  name: 'Sheldon',\n  score: 100,\n  grade: 'A'\n};\n\nconsole.log(student);\n// { name: 'Sheldon', score: 100, grade: 'A' }\n\ndelete student.score;\nstudent.grade = 'F';\nconsole.log(student);\n// { name: 'Sheldon', grade: 'F' }\n\nstudent = {};\n// TypeError: Assignment to constant variable.\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Assignment shorthand syntax",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Assignment shorthand syntax",
+              "body": "```javascript\nconst person = {\n  name: 'Tom',\n  age: '22'\n};\nconst { name, age } = person;\nconsole.log(name); // 'Tom'\nconsole.log(age); // '22'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Delete operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delete operator",
+              "body": "```javascript\nconst person = {\n  firstName: 'Matilda',\n  age: 27,\n  hobby: 'knitting',\n  goal: 'learning JavaScript'\n};\n\ndelete person.hobby; // or delete person[hobby];\n\nconsole.log(person);\n/*\n{\n  firstName: \"Matilda\"\n  age: 27\n  goal: \"learning JavaScript\"\n}\n*/\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Objects as arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Objects as arguments",
+              "body": "```javascript\nconst origNum = 8;\nconst origObj = { color: 'blue' };\n\nconst changeItUp = (num, obj) => {\n  num = 7;\n  obj.color = 'red';\n};\n\nchangeItUp(origNum, origObj);\n\n// Will output 8 since integers are passed by value.\nconsole.log(origNum);\n\n// Will output 'red' since objects are passed\n// by reference and are therefore mutable.\nconsole.log(origObj.color);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Shorthand object creation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shorthand object creation",
+              "body": "```javascript\nconst activity = 'Surfing';\nconst beach = { activity };\nconsole.log(beach); // { activity: 'Surfing' }\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "this Keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "this Keyword",
+              "body": "```javascript\nconst cat = {\n  name: 'Pipey',\n  age: 8,\n  whatName() {\n    return this.name;\n  }\n};\nconsole.log(cat.whatName()); // => Pipey\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Factory functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Factory functions",
+              "body": "```javascript\n// A factory function that accepts 'name',\n// 'age', and 'breed' parameters to return\n// a customized dog object.\nconst dogFactory = (name, age, breed) => {\n  return {\n    name: name,\n    age: age,\n    breed: breed,\n    bark() {\n      console.log('Woof!');\n    }\n  };\n};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Object methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Object methods",
+              "body": "```javascript\nconst engine = {\n  // method shorthand, with one argument\n  start(adverb) {\n    console.log(`The engine starts up ${adverb}...`);\n  },\n  // anonymous arrow function expression with no arguments\n  sputter: () => {\n    console.log('The engine sputters...');\n  }\n};\n\nengine.start('noisily');\nengine.sputter();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Getters and setters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getters and setters",
+              "body": "```javascript\nconst myCat = {\n  _name: 'Dottie',\n  get name() {\n    return this._name;\n  },\n  set name(newName) {\n    this._name = newName;\n  }\n};\n\n// Reference invokes the getter\nconsole.log(myCat.name);\n\n// Assignment invokes the setter\nmyCat.name = 'Yankee';\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Classes",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Static Methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Static Methods",
+              "body": "```javascript\nclass Dog {\n  constructor(name) {\n    this._name = name;\n  }\n\n  introduce() {\n    console.log('This is ' + this._name + ' !');\n  }\n\n  // A static method\n  static bark() {\n    console.log('Woof!');\n  }\n}\n\nconst myDog = new Dog('Buster');\nmyDog.introduce();\n\n// Calling the static method\nDog.bark();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Class",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class",
+              "body": "```javascript\nclass Song {\n  constructor() {\n    this.title;\n    this.author;\n  }\n\n  play() {\n    console.log('Song playing!');\n  }\n}\n\nconst mySong = new Song();\nmySong.play();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Class Constructor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class Constructor",
+              "body": "```javascript\nclass Song {\n  constructor(title, artist) {\n    this.title = title;\n    this.artist = artist;\n  }\n}\n\nconst mySong = new Song('Bohemian Rhapsody', 'Queen');\nconsole.log(mySong.title);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Class Methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class Methods",
+              "body": "```javascript\nclass Song {\n  play() {\n    console.log('Playing!');\n  }\n\n  stop() {\n    console.log('Stopping!');\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "extends",
+          "level": 3,
+          "cards": [
+            {
+              "title": "extends",
+              "body": "```javascript\n// Parent class\nclass Media {\n  constructor(info) {\n    this.publishDate = info.publishDate;\n    this.name = info.name;\n  }\n}\n\n// Child class\nclass Song extends Media {\n  constructor(songData) {\n    super(songData);\n    this.artist = songData.artist;\n  }\n}\n\nconst mySong = new Song({\n  artist: 'Queen',\n  name: 'Bohemian Rhapsody',\n  publishDate: 1975\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Modules {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Export",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Export",
+              "body": "```javascript\n// myMath.js\n\n// Default export\nexport default function add(x, y) {\n  return x + y;\n}\n\n// Normal export\nexport function subtract(x, y) {\n  return x - y;\n}\n\n// Multiple exports\nfunction multiply(x, y) {\n  return x * y;\n}\nfunction duplicate(x) {\n  return x * 2;\n}\nexport { multiply, duplicate };\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Import",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Import",
+              "body": "```javascript\n// main.js\nimport add, { subtract, multiply, duplicate } from './myMath.js';\n\nconsole.log(add(6, 2)); // 8\nconsole.log(subtract(6, 2)) // 4\nconsole.log(multiply(6, 2)); // 12\nconsole.log(duplicate(5)) // 10\n\n// index.html\n<script type=\"module\" src=\"main.js\"></script>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Export Module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Export Module",
+              "body": "```javascript\n// myMath.js\n\nfunction add(x, y) {\n  return x + y;\n}\nfunction subtract(x, y) {\n  return x - y;\n}\nfunction multiply(x, y) {\n  return x * y;\n}\nfunction duplicate(x) {\n  return x * 2;\n}\n\n// Multiple exports in node.js\nmodule.exports = {\n  add,\n  subtract,\n  multiply,\n  duplicate\n};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Require Module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Require Module",
+              "body": "```javascript\n// main.js\nconst myMath = require('./myMath.js');\n\nconsole.log(myMath.add(6, 2)); // 8\nconsole.log(myMath.subtract(6, 2)); // 4\nconsole.log(myMath.multiply(6, 2)); // 12\nconsole.log(myMath.duplicate(5)); // 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Promises {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Promise states",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Promise states",
+              "body": "```javascript\nconst promise = new Promise((resolve, reject) => {\n  const res = true;\n  // An asynchronous operation.\n  if (res) {\n    resolve('Resolved!');\n  } else {\n    reject(Error('Error'));\n  }\n});\n\npromise.then(\n  (res) => console.log(res),\n  (err) => console.error(err)\n);\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Executor function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Executor function",
+              "body": "```javascript\nconst executorFn = (resolve, reject) => {\n  resolve('Resolved!');\n};\n\nconst promise = new Promise(executorFn);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "setTimeout()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "setTimeout()",
+              "body": "```javascript\nconst loginAlert = () => {\n  console.log('Login');\n};\n\nsetTimeout(loginAlert, 6000);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".then() method",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".then() method",
+              "body": "```javascript\nconst promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('Result');\n  }, 200);\n});\n\npromise.then(\n  (res) => {\n    console.log(res);\n  },\n  (err) => {\n    console.error(err);\n  }\n);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Promise.catch()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Promise.catch()",
+              "body": "```javascript\nconst promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    reject(Error('Promise Rejected Unconditionally.'));\n  }, 1000);\n});\n\npromise.then((res) => {\n  console.log(value);\n});\n\npromise.catch((err) => {\n  console.error(err);\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Promise.all()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Promise.all()",
+              "body": "```javascript\nconst promise1 = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve(3);\n  }, 300);\n});\nconst promise2 = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve(2);\n  }, 200);\n});\n\nPromise.all([promise1, promise2]).then((res) => {\n  console.log(res[0]);\n  console.log(res[1]);\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Promise.allSettled()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Promise.allSettled()",
+              "body": "```javascript\nconst promise1 = Promise.resolve(3);\nconst promise2 = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    reject(2);\n  }, 100);\n});\n\nPromise.allSettled([promise1, promise2]).then((res) => {\n  console.log(res[0].status);\n  console.log(res[1].status);\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Avoiding nested Promise and .then()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Avoiding nested Promise and .then()",
+              "body": "```javascript\nconst promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('*');\n  }, 1000);\n});\n\nconst twoStars = (star) => {\n  return star + star;\n};\n\nconst oneDot = (star) => {\n  return star + '.';\n};\n\nconst print = (val) => {\n  console.log(val);\n};\n\n// Chaining them all together\npromise.then(twoStars).then(oneDot).then(print);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Creating",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Creating",
+              "body": "```javascript\nconst executorFn = (resolve, reject) => {\n  console.log('The executor function of the promise!');\n};\n\nconst promise = new Promise(executorFn);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Chaining multiple .then()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Chaining multiple .then()",
+              "body": "```javascript\nconst promise = new Promise((resolve) =>\n  setTimeout(() => resolve('dAlan'), 100)\n);\n\npromise\n  .then((res) => {\n    return res === 'Alan'\n      ? Promise.resolve('Hey Alan!')\n      : Promise.reject('Who are you?');\n  })\n  .then(\n    (res) => {\n      console.log(res);\n    },\n    (err) => {\n      console.error(err);\n    }\n  );\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Fake http Request with Promise",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Fake http Request with Promise",
+              "body": "```javascript\nconst mock = (success, timeout = 1000) => {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      if (success) {\n        resolve({ status: 200, data: {} });\n      } else {\n        reject({ message: 'Error' });\n      }\n    }, timeout);\n  });\n};\nconst someEvent = async () => {\n  try {\n    await mock(true, 1000);\n  } catch (e) {\n    console.log(e.message);\n  }\n};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Async-Await {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Asynchronous",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Asynchronous",
+              "body": "```javascript\nfunction helloWorld() {\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      resolve('Hello World!');\n    }, 2000);\n  });\n}\n\nconst msg = async function () {\n  //Async Function Expression\n  const msg = await helloWorld();\n  console.log('Message:', msg);\n};\n\nconst msg1 = async () => {\n  //Async Arrow Function\n  const msg = await helloWorld();\n  console.log('Message:', msg);\n};\n\nmsg(); // Message: Hello World! <-- after 2 seconds\nmsg1(); // Message: Hello World! <-- after 2 seconds\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Resolving Promises",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Resolving Promises",
+              "body": "```javascript\nlet pro1 = Promise.resolve(5);\nlet pro2 = 44;\nlet pro3 = new Promise(function (resolve, reject) {\n  setTimeout(resolve, 100, 'foo');\n});\n\nPromise.all([pro1, pro2, pro3]).then(function (values) {\n  console.log(values);\n});\n// expected => Array [5, 44, \"foo\"]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Async Await Promises",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Async Await Promises",
+              "body": "```javascript\nfunction helloWorld() {\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      resolve('Hello World!');\n    }, 2000);\n  });\n}\n\nasync function msg() {\n  const msg = await helloWorld();\n  console.log('Message:', msg);\n}\n\nmsg(); // Message: Hello World! <-- after 2 seconds\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Error Handling",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Error Handling",
+              "body": "```javascript\nlet json = '{ \"age\": 30 }'; // incomplete data\n\ntry {\n  let user = JSON.parse(json); // <-- no errors\n  console.log(user.name); // no name!\n} catch (e) {\n  console.error('Invalid JSON data!');\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Aysnc await operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Aysnc await operator",
+              "body": "```javascript\nfunction helloWorld() {\n  return new Promise((resolve) => {\n    setTimeout(() => {\n      resolve('Hello World!');\n    }, 2000);\n  });\n}\n\nasync function msg() {\n  const msg = await helloWorld();\n  console.log('Message:', msg);\n}\n\nmsg(); // Message: Hello World! <-- after 2 seconds\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JavaScript Requests",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "JSON",
+          "level": 3,
+          "cards": [
+            {
+              "title": "JSON",
+              "body": "```json\nconst jsonObj = {\n  \"name\": \"Rick\",\n  \"id\": \"11A\",\n  \"level\": 4\n};\n```",
+              "footer": "Also see: [JSON cheatsheet](/json)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "XMLHttpRequest",
+          "level": 3,
+          "cards": [
+            {
+              "title": "XMLHttpRequest",
+              "body": "```javascript\nconst xhr = new XMLHttpRequest();\nxhr.open('GET', 'mysite.com/getjson');\n```",
+              "footer": "`XMLHttpRequest` is a browser-level API that enables the client to script data transfers via JavaScript, NOT part of the\nJavaScript language.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GET",
+              "body": "```javascript\nconst req = new XMLHttpRequest();\nreq.responseType = 'json';\nreq.open('GET', '/getdata?id=65');\nreq.onload = () => {\n  console.log(xhr.response);\n};\n\nreq.send();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "POST",
+          "level": 3,
+          "cards": [
+            {
+              "title": "POST",
+              "body": "```javascript\nconst data = {\n  fish: 'Salmon',\n  weight: '1.5 KG',\n  units: 5\n};\nconst xhr = new XMLHttpRequest();\nxhr.open('POST', '/inventory/add');\nxhr.responseType = 'json';\nxhr.send(JSON.stringify(data));\n\nxhr.onload = () => {\n  console.log(xhr.response);\n};\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "fetch api",
+          "level": 3,
+          "cards": [
+            {
+              "title": "fetch api",
+              "body": "```javascript\nfetch(url, {\n    method: 'POST',\n    headers: {\n      'Content-type': 'application/json',\n      'apikey': apiKey\n    },\n    body: data\n  }).then(response => {\n    if (response.ok) {\n      return response.json();\n    }\n    throw new Error('Request failed!');\n  }, networkError => {\n    console.log(networkError.message)\n  })\n}\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "JSON Formatted",
+          "level": 3,
+          "cards": [
+            {
+              "title": "JSON Formatted",
+              "body": "```javascript\nfetch('url-that-returns-JSON')\n  .then((response) => response.json())\n  .then((jsonResponse) => {\n    console.log(jsonResponse);\n  });\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "promise url parameter fetch api",
+          "level": 3,
+          "cards": [
+            {
+              "title": "promise url parameter fetch api",
+              "body": "```javascript\nfetch('url')\n.then(\n  response  => {\n    console.log(response);\n  },\n rejection => {\n    console.error(rejection.message);\n);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Fetch API Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Fetch API Function",
+              "body": "```javascript\nfetch('https://api-xxx.com/endpoint', {\n  method: 'POST',\n  body: JSON.stringify({ id: '200' })\n})\n  .then(\n    (response) => {\n      if (response.ok) {\n        return response.json();\n      }\n      throw new Error('Request failed!');\n    },\n    (networkError) => {\n      console.log(networkError.message);\n    }\n  )\n  .then((jsonResponse) => {\n    console.log(jsonResponse);\n  });\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "async await syntax",
+          "level": 3,
+          "cards": [
+            {
+              "title": "async await syntax",
+              "body": "```javascript\nconst getSuggestions = async () => {\n  const wordQuery = inputField.value;\n  const endpoint = `${url}${queryParams}${wordQuery}`;\n  try {\n    const response = await fetch(endpoint, { cache: 'no-cache' });\n    if (response.ok) {\n      const jsonResponse = await response.json();\n    }\n  } catch (error) {\n    console.log(error);\n  }\n};\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

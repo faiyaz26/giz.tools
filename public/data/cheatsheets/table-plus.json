@@ -1,0 +1,224 @@
+{
+  "id": "table-plus",
+  "metadata": {
+    "title": "TablePlus",
+    "date": "2022-11-23T16:23:31.706Z",
+    "background": "bg-[#ecc550]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 34 keyboard shortcuts found in TablePlus\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Global",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Global",
+              "body": "| Shortcut           | Action                |\n| ------------------ | --------------------- |\n| `Ctrl` `N`         | Open a new connection |\n| `Ctrl` `Q`         | Quit app              |\n| `Ctrl` `Shift` `O` | Open SQL file         |\n| `Ctrl` `,`         | Open Preferences      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Open a new connection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Quit app"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `O`",
+                  "action": "Open SQL file"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Open Preferences"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Workspace",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Workspace",
+              "body": "| Shortcut               | Action                         |\n| ---------------------- | ------------------------------ |\n| `Ctrl` `W`             | Close a tab/window             |\n| `Ctrl` `S`             | Commit the changes             |\n| `Ctrl` `T`             | Open a new tab                 |\n| `Ctrl` `L`             | Open plugin manager            |\n| `Ctrl` `.`             | Run custom script              |\n| `Ctrl` `R`             | Reload workspace               |\n| `Ctrl` `[`             | Navigate to left tab           |\n| `Ctrl` `]`             | Navigate to right tab          |\n| `Ctrl` `Shift` `[`     | Navigate to left Pane          |\n| `Ctrl` `Shift` `]`     | Navigate to right Pane         |\n| `Ctrl` `D`             | Split Pane horizontally        |\n| `Ctrl` `1-9`           | Navigate to number tab         |\n| `Ctrl` `K`             | Switch database                |\n| `Ctrl` `Shift` `K`     | Switch connection              |\n| `Ctrl` `I`             | Indent selected SQL Code       |\n| `Ctrl` `E`             | Execute SQL Code               |\n| `Ctrl` `O`             | Open file SQL                  |\n| `Ctrl` `Shift` `Enter` | Uglify selected SQL statements |\n| `Ctrl` `\\`             | Comment/Uncomment lines of SQL |\n| `Ctrl` `Z`             | Undo                           |\n| `Ctrl` `Shift` `Z`     | Redo                           |\n| `Ctrl` `P`             | Open anything                  |\n| `Ctrl` `E`             | Open SQL Query                 |\n| `Ctrl` `(click)`       | Open item in new tab           |\n| `Tab`                  | Move focus while editing       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close a tab/window"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Commit the changes"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Open a new tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Open plugin manager"
+                },
+                {
+                  "shortcut": "`Ctrl` `.`",
+                  "action": "Run custom script"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Reload workspace"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Navigate to left tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Navigate to right tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `[`",
+                  "action": "Navigate to left Pane"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `]`",
+                  "action": "Navigate to right Pane"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Split Pane horizontally"
+                },
+                {
+                  "shortcut": "`Ctrl` `1-9`",
+                  "action": "Navigate to number tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Switch database"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Switch connection"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Indent selected SQL Code"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Execute SQL Code"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open file SQL"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Enter`",
+                  "action": "Uglify selected SQL statements"
+                },
+                {
+                  "shortcut": "`Ctrl` `\\`",
+                  "action": "Comment/Uncomment lines of SQL"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Open anything"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Open SQL Query"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click)`",
+                  "action": "Open item in new tab"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Move focus while editing"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Table Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Table Data",
+              "body": "| Shortcut         | Action                              |\n| ---------------- | ----------------------------------- |\n| `Space`          | Toggle row detail when row selected |\n| `Ctrl` `C`       | Copy rows                           |\n| `Ctrl` `V`       | Paste rows                          |\n| `Ctrl` `Alt` `I` | Insert a new row                    |\n| `Tab`            | Move focus while editing            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Space`",
+                  "action": "Toggle row detail when row selected"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy rows"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste rows"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `I`",
+                  "action": "Insert a new row"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Move focus while editing"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for TablePlus app](https://tableplus.com/blog/2018/02/shortcut-keys.html) _(tableplus.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

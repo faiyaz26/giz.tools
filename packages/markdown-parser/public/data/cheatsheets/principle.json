@@ -1,0 +1,240 @@
+{
+  "id": "principle",
+  "metadata": {
+    "title": "Principle",
+    "date": "2022-11-23T16:23:31.698Z",
+    "background": "bg-[#b245c6]",
+    "label": "Mac",
+    "tags": [
+      null,
+      "mac"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 30 keyboard shortcuts found in Principle. This application is MacOS-only.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Layers",
+              "body": "| Shortcut          | Action                   |\n| ----------------- | ------------------------ |\n| `R`               | Add rectangle            |\n| `Opt` `R`         | Add rectangle as a child |\n| `T`               | Add text                 |\n| `Opt` `T`         | Add text as a child      |\n| `A`               | Add artboard             |\n| `Cmd` `G`         | Group                    |\n| `Cmd` `Shift` `G` | Ungroup                  |\n| `Cmd` `]`         | Bring forward            |\n| `Cmd` `Shift` `]` | Bring to front           |\n| `Cmd` `[`         | Send backward            |\n| `Cmd` `Shift` `[` | Send to back             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`R`",
+                  "action": "Add rectangle"
+                },
+                {
+                  "shortcut": "`Opt` `R`",
+                  "action": "Add rectangle as a child"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Add text"
+                },
+                {
+                  "shortcut": "`Opt` `T`",
+                  "action": "Add text as a child"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Add artboard"
+                },
+                {
+                  "shortcut": "`Cmd` `G`",
+                  "action": "Group"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `G`",
+                  "action": "Ungroup"
+                },
+                {
+                  "shortcut": "`Cmd` `]`",
+                  "action": "Bring forward"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `]`",
+                  "action": "Bring to front"
+                },
+                {
+                  "shortcut": "`Cmd` `[`",
+                  "action": "Send backward"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `[`",
+                  "action": "Send to back"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editing",
+              "body": "| Shortcut           | Action       |\n| ------------------ | ------------ |\n| `(arrows)`         | Nudge        |\n| `Shift` `(arrows)` | Large nudge  |\n| `Cmd` `D`          | Duplicate    |\n| `Cmd` `R`          | Rename layer |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`(arrows)`",
+                  "action": "Nudge"
+                },
+                {
+                  "shortcut": "`Shift` `(arrows)`",
+                  "action": "Large nudge"
+                },
+                {
+                  "shortcut": "`Cmd` `D`",
+                  "action": "Duplicate"
+                },
+                {
+                  "shortcut": "`Cmd` `R`",
+                  "action": "Rename layer"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Canvas Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Canvas Navigation",
+              "body": "| Shortcut         | Action              |\n| ---------------- | ------------------- |\n| `Space` `(drag)` | Pan                 |\n| `Cmd` `=`        | Zoom in             |\n| `Cmd` `-`        | Zoom out            |\n| `Cmd` `1`        | Zoom all            |\n| `Cmd` `2`        | Zoom selection      |\n| `Cmd` `3`        | Center selection    |\n| `Cmd` `0`        | Zoom to actual size |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Space` `(drag)`",
+                  "action": "Pan"
+                },
+                {
+                  "shortcut": "`Cmd` `=`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Cmd` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Cmd` `1`",
+                  "action": "Zoom all"
+                },
+                {
+                  "shortcut": "`Cmd` `2`",
+                  "action": "Zoom selection"
+                },
+                {
+                  "shortcut": "`Cmd` `3`",
+                  "action": "Center selection"
+                },
+                {
+                  "shortcut": "`Cmd` `0`",
+                  "action": "Zoom to actual size"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selection",
+              "body": "| Shortcut      | Action                  |\n| ------------- | ----------------------- |\n| `Esc`         | Select parent           |\n| `Enter`       | Select child            |\n| `Tab`         | Select next sibling     |\n| `Shift` `Tab` | Select previous sibling |\n| `Cmd` `A`     | Select all siblings     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Select parent"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Select child"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Select next sibling"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Select previous sibling"
+                },
+                {
+                  "shortcut": "`Cmd` `A`",
+                  "action": "Select all siblings"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Preview",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Preview",
+              "body": "| Shortcut         | Action                               |\n| ---------------- | ------------------------------------ |\n| `W`              | Rewind prototype                     |\n| `Ctrl` `V`       | Start recording video                |\n| `Ctrl` `Opt` `V` | Start recording video without cursor |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`W`",
+                  "action": "Rewind prototype"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Start recording video"
+                },
+                {
+                  "shortcut": "`Ctrl` `Opt` `V`",
+                  "action": "Start recording video without cursor"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Principle](https://principleformac.com/docs.html#shortcuts) _(principleformac.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

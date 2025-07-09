@@ -1,0 +1,480 @@
+{
+  "id": "mitmproxy",
+  "metadata": {
+    "title": "Mitmproxy",
+    "date": "2020-12-22T20:10:08.000Z",
+    "background": "bg-[#d86138]",
+    "tags": [
+      "capture",
+      "traffic",
+      "network",
+      "utility"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "[mitmproxy](https://mitmproxy.org/) is a free and open source interactive HTTPS proxy. This is a quick reference cheat sheet to the mitmproxy.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Usage",
+              "body": "| Option | Example                                            | Description                               |\n| ------ | -------------------------------------------------- | ----------------------------------------- |\n| `-p`   | mitmproxy -p 8001                                  | Start proxy on port 8001                  |\n| `-m`   | mitmproxy -p 8001 -m reverse:http://127.0.0.1:4000 | Reverse proxy on port 8001 to port 4000   |\n| `-w`   | mitmproxy -p 8001 -w traffic.mitm                  | Stream flows to file as they arrive       |\n| `-r`   | mitmproxy -r traffic.mitm                          | Read flows from file                      |\n| `-C`   | mitmproxy -C traffic.mitm                          | Replay client requests from a saved file  |\n| `-S`   | mitmproxy -S traffic.mitm                          | Replay server responses from a saved file |\n| `-s`   | mitmproxy -s myScript.py                           | Execute a script                          |\n| `-h`   | mitmproxy -h                                       | mitmproxy quick help                      |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Movement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Movement",
+              "body": "```\nk                 Ctrl b\n        ▲                   ▲▲\n        │                   ││\nh ◀ ─── + ─── ▶ l           ││ page\n        │                   ││\n        ▼                   ▼▼\n        j             Ctrl f / Space\n```",
+              "footer": "| -                    | -                     |\n| -------------------- | --------------------- |\n| `h`, `j`, `k` ,`l`   | Left, Down, Up, Right |\n| `Ctrl` `b`           | Page up               |\n| `Space` / `Ctrl` `f` | Page down             |\n| `g` / `G`            | Go to beginning / end |\n| `Arrows`             | Up, Down, Left, Right |\n{.shortcuts}",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`h`, `j`, `k` ,`l`",
+                  "action": "Left, Down, Up, Right"
+                },
+                {
+                  "shortcut": "`Ctrl` `b`",
+                  "action": "Page up"
+                },
+                {
+                  "shortcut": "`Space` / `Ctrl` `f`",
+                  "action": "Page down"
+                },
+                {
+                  "shortcut": "`g` / `G`",
+                  "action": "Go to beginning / end"
+                },
+                {
+                  "shortcut": "`Arrows`",
+                  "action": "Up, Down, Left, Right"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Copy to Clipboard",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Copy to Clipboard",
+              "body": "```\n:export.clip format flow\n```",
+              "footer": "Example:\n| Description                    | Command Example                    |\n| ------------------------------ | ---------------------------------- |\n| 1. Copy as a curl command      | `:export.clip curl @focus`         |\n| 2. Copy as a httpie            | `:export.clip httpie @focus`       |\n| 2. Copy as a raw               | `:export.clip raw @focus`          |\n| 2. Copy as a raw HTTP request  | `:export.clip raw_request @focus`  |\n| 2. Copy as a raw HTTP response | `:export.clip raw_response @focus` |\n{.style-list}\nExport a flow to the system clipboard.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Save to File",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Save to File",
+              "body": "```\n:export.file format flow path\n```",
+              "footer": "Example:\n| Description                  | Command Example                                    |\n| ---------------------------- | -------------------------------------------------- |\n| 1. Export to /tmp/a.curl     | `:export.file curl @focus /tmp/a.curl`             |\n| 2. Export to /tmp/a.httpie   | `:export.file httpie @focus /tmp/a.httpie`         |\n| 2. Export to /tmp/a.raw      | `:export.file raw @focus  /tmp/a.raw`              |\n| 2. Export to /tmp/a.request  | `:export.file raw_request @focus /tmp/a.request`   |\n| 2. Export to /tmp/a.response | `:export.file raw_response @focus /tmp/a.response` |\n{.style-list}\nExport a flow to the system clipboard.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Common Keybindings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Common Keybindings",
+              "body": "| -       | -                |\n| ------- | ---------------- |\n| `q`     | Back / Exit      |\n| `z`     | Clear flow list  |\n| `:`     | Command prompt   |\n| `E`     | View event log   |\n| `O`     | View options     |\n| `r`     | Replay this flow |\n| `Tab`   | Next             |\n| `Enter` | Select           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`q`",
+                  "action": "Back / Exit"
+                },
+                {
+                  "shortcut": "`z`",
+                  "action": "Clear flow list"
+                },
+                {
+                  "shortcut": "`:`",
+                  "action": "Command prompt"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "View event log"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "View options"
+                },
+                {
+                  "shortcut": "`r`",
+                  "action": "Replay this flow"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Next"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Select"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Global Keybindings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Global Keybindings",
+              "body": "| -              | -                         |\n| -------------- | ------------------------- |\n| `-`            | Cycle to next layout      |\n| `?`            | View help                 |\n| `B`            | Start an attached browser |\n| `C`            | View commands             |\n| `I`            | Toggle intercept          |\n| `K`            | View key bindings         |\n| `P`            | View flow details         |\n| `Q`            | Exit immediately          |\n| `W`            | Stream to file            |\n| `i`            | Set intercept             |\n| `Ctrl` `right` | Focus next layout pane    |\n| `Shift` `tab`  | Focus next layout pane    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`-`",
+                  "action": "Cycle to next layout"
+                },
+                {
+                  "shortcut": "`?`",
+                  "action": "View help"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Start an attached browser"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "View commands"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Toggle intercept"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "View key bindings"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "View flow details"
+                },
+                {
+                  "shortcut": "`Q`",
+                  "action": "Exit immediately"
+                },
+                {
+                  "shortcut": "`W`",
+                  "action": "Stream to file"
+                },
+                {
+                  "shortcut": "`i`",
+                  "action": "Set intercept"
+                },
+                {
+                  "shortcut": "`Ctrl` `right`",
+                  "action": "Focus next layout pane"
+                },
+                {
+                  "shortcut": "`Shift` `tab`",
+                  "action": "Focus next layout pane"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Flow (View)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Flow (View)",
+              "body": "| -               | -                            |\n| --------------- | ---------------------------- |\n| `A`             | Resume all intercepted flows |\n| `D`             | Duplicate flow               |\n| `F`             | Set focus follow             |\n| `L`             | Load flows from file         |\n| `M`             | Toggle viewing marked flows  |\n| `S`             | Start server replay          |\n| `U`             | Un-set all marks             |\n| `V`             | Revert changes to this flow  |\n| `X`             | Kill this flow               |\n| `Z`             | Purge all flows not showing  |\n| `a`             | Resume this intercepted flow |\n| `b`             | Save response body to file   |\n| `d`             | Delete flow from view        |\n| `e`             | Export this flow to file     |\n| `f`             | Set view filter              |\n| `m`             | Toggle mark on this flow     |\n| `n`             | Create a new flow            |\n| `o`             | Set flow list order          |\n| `r`             | Replay this flow             |\n| `v`             | Reverse flow list order      |\n| `w`             | Save listed flows to file    |\n| <code>\\|</code> | Run a script on this flow    |\n| `Ctrl` `l`      | Send cuts to clipboard       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Resume all intercepted flows"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Duplicate flow"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Set focus follow"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Load flows from file"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Toggle viewing marked flows"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Start server replay"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Un-set all marks"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Revert changes to this flow"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Kill this flow"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Purge all flows not showing"
+                },
+                {
+                  "shortcut": "`a`",
+                  "action": "Resume this intercepted flow"
+                },
+                {
+                  "shortcut": "`b`",
+                  "action": "Save response body to file"
+                },
+                {
+                  "shortcut": "`d`",
+                  "action": "Delete flow from view"
+                },
+                {
+                  "shortcut": "`e`",
+                  "action": "Export this flow to file"
+                },
+                {
+                  "shortcut": "`f`",
+                  "action": "Set view filter"
+                },
+                {
+                  "shortcut": "`m`",
+                  "action": "Toggle mark on this flow"
+                },
+                {
+                  "shortcut": "`n`",
+                  "action": "Create a new flow"
+                },
+                {
+                  "shortcut": "`o`",
+                  "action": "Set flow list order"
+                },
+                {
+                  "shortcut": "`r`",
+                  "action": "Replay this flow"
+                },
+                {
+                  "shortcut": "`v`",
+                  "action": "Reverse flow list order"
+                },
+                {
+                  "shortcut": "`w`",
+                  "action": "Save listed flows to file"
+                },
+                {
+                  "shortcut": "<code>\\",
+                  "action": "</code>"
+                },
+                {
+                  "shortcut": "`Ctrl` `l`",
+                  "action": "Send cuts to clipboard"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Mitmproxy Filter",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Filter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Filter",
+              "body": "| -   | -                                     |\n| --- | ------------------------------------- |\n| `f` | Set view filter _(on flow view page)_ |\n\n{.shortcuts}\n\n- [RegEX cheatsheet](/regex) _(cheatsheets.zip)_\n\nThe regex are Python-style, it can be specified as quoted strings",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`f`",
+                  "action": "Set view filter _(on flow view page)_"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operators",
+              "body": "| -       | -         |\n| ------- | --------- | --- |\n| `!`     | unary not |\n| `&`     | and       |\n| `       | `         | or  |\n| `(...)` | grouping  |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Expressions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Expressions",
+              "body": "| -              | -                                                          |\n| -------------- | ---------------------------------------------------------- |\n| `~a`           | Match asset in response: CSS, Javascript, Flash, images.   |\n| `~b` `regex`   | Body                                                       |\n| `~bq` `regex`  | Request body                                               |\n| `~bs` `regex`  | Response body                                              |\n| `~c` `int`     | HTTP response code                                         |\n| `~d` `regex`   | Domain                                                     |\n| `~dst` `regex` | Match destination address                                  |\n| `~e`           | Match error                                                |\n| `~h` `regex`   | Header                                                     |\n| `~hq` `regex`  | Request header                                             |\n| `~hs` `regex`  | Response header                                            |\n| `~http`        | Match HTTP flows                                           |\n| `~m` `regex`   | Method                                                     |\n| `~marked`      | Match marked flows                                         |\n| `~q`           | Match request with no response                             |\n| `~s`           | Match response                                             |\n| `~src` `regex` | Match source address                                       |\n| `~t` `regex`   | Content-type header                                        |\n| `~tcp`         | Match TCP flows                                            |\n| `~tq` `regex`  | Request Content-Type header                                |\n| `~ts` `regex`  | Response Content-Type header                               |\n| `~u` `regex`   | URL                                                        |\n| `~websocket`   | Match WebSocket flows (and HTTP-WebSocket handshake flows) |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Flow selectors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Flow selectors",
+              "body": "Expressions\n\n| -           | -                          |\n| ----------- | -------------------------- |\n| `@all     ` | All flows                  |\n| `@focus   ` | The currently focused flow |\n| `@shown   ` | All flows currently shown  |\n| `@hidden  ` | All flows currently hidden |\n| `@marked  ` | All marked flows           |\n| `@unmarked` | All unmarked flows         |\n\nmitmproxy has a set of convenient flow selectors that operate on the current view",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "```\ngoogle\\.com\n```",
+              "footer": "Requests whose body contains the string \"test\"\n```\n~q ~b test\n```\nAnything but requests with a text/html content type:\n```\n!(~q & ~t \"text/html\")\n```\nReplace entire GET string in a request (quotes required to make it work):\n```\n\":~q ~m GET:.*:/replacement.html\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Mitmproxy Scripts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Custom response",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom response",
+              "body": "```python\nfrom mitmproxy import http\n\ndef request(flow: http.HTTPFlow) -> None:\n    if flow.request.pretty_url == \"http://example.com/path\":\n        flow.response = http.HTTPResponse.make(\n            200,  # (optional) status code\n            b\"Hello World\",  # (optional) content\n            {\"Content-Type\": \"text/html\"}  # (optional) headers\n        )\n```",
+              "footer": "Send a reply from the proxy without sending any data to the remote server",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Add header",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Add header",
+              "body": "```python\nclass AddHeader:\n    def __init__(self):\n        self.num = 0\n\n    def response(self, flow):\n        self.num = self.num + 1\n        flow.response.headers[\"count\"] = str(self.num)\n\naddons = [\n    AddHeader()\n]\n```",
+              "footer": "Add an HTTP header to each response",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [mitmproxy addons](https://github.com/mitmproxy/mitmproxy/tree/master/examples/addons) _(github.com)_\n- [mitmproxy docs](https://docs.mitmproxy.org/) _(mitmproxy.org)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "id": "audacity",
+  "metadata": {
+    "title": "Audacity",
+    "date": "2022-11-23T16:23:31.701Z",
+    "background": "bg-[#0000e1]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 135 default keyboard shortcuts found in Audacity\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "File Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File Menu",
+              "body": "| Shortcut           | Action          |\n| ------------------ | --------------- |\n| `Ctrl` `N`         | New             |\n| `Ctrl` `O`         | Open            |\n| `Ctrl` `W`         | Close           |\n| `Ctrl` `Q`         | Exit            |\n| `Ctrl` `S`         | Save project    |\n| `Ctrl` `Shift` `E` | Export audio    |\n| `Ctrl` `Shift` `L` | Export multiple |\n| `Ctrl` `Shift` `I` | Import audio    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open"
+                },
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Exit"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save project"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Export audio"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Export multiple"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `I`",
+                  "action": "Import audio"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Edit Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Edit Menu",
+              "body": "| Shortcut           | Action                           |\n| ------------------ | -------------------------------- |\n| `Ctrl` `Z`         | Undo                             |\n| `Ctrl` `Y`         | Redo                             |\n| `Ctrl` `X`         | Cut                              |\n| `Ctrl` `K`         | Delete                           |\n| `Ctrl` `C`         | Copy                             |\n| `Ctrl` `V`         | Paste                            |\n| `Ctrl` `D`         | Duplicate                        |\n| `Ctrl` `P`         | Preferences                      |\n| `Ctrl` `Alt` `X`   | Split cut                        |\n| `Ctrl` `Alt` `K`   | Split delete                     |\n| `Ctrl` `L`         | Silence audio                    |\n| `Ctrl` `T`         | Trim audio                       |\n| `Ctrl` `Alt` `I`   | Split new                        |\n| `Ctrl` `J`         | Join                             |\n| `Ctrl` `Shift` `J` | Detach at silences               |\n| `Ctrl` `B`         | Add label at selection           |\n| `Ctrl` `M`         | Add label at playback position   |\n| `Ctrl` `Alt` `V`   | Paste text to new label          |\n| `Alt` `X`          | Cut labeled audio                |\n| `Alt` `K`          | Delete labeled audio             |\n| `Alt` `Shift` `X`  | Split cut labeled audio          |\n| `Alt` `Shift` `K`  | Split delete labeled audio       |\n| `Alt` `L`          | Silence labeled audio            |\n| `Alt` `Shift` `C`  | Copy labeled audio               |\n| `Alt` `I`          | Split labeled audio              |\n| `Alt` `J`          | Join labeled audio               |\n| `Alt` `Shift` `J`  | Detach labeled audio at silences |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Delete"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Duplicate"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Preferences"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `X`",
+                  "action": "Split cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `K`",
+                  "action": "Split delete"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Silence audio"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Trim audio"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `I`",
+                  "action": "Split new"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Join"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Detach at silences"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Add label at selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Add label at playback position"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `V`",
+                  "action": "Paste text to new label"
+                },
+                {
+                  "shortcut": "`Alt` `X`",
+                  "action": "Cut labeled audio"
+                },
+                {
+                  "shortcut": "`Alt` `K`",
+                  "action": "Delete labeled audio"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `X`",
+                  "action": "Split cut labeled audio"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `K`",
+                  "action": "Split delete labeled audio"
+                },
+                {
+                  "shortcut": "`Alt` `L`",
+                  "action": "Silence labeled audio"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `C`",
+                  "action": "Copy labeled audio"
+                },
+                {
+                  "shortcut": "`Alt` `I`",
+                  "action": "Split labeled audio"
+                },
+                {
+                  "shortcut": "`Alt` `J`",
+                  "action": "Join labeled audio"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `J`",
+                  "action": "Detach labeled audio at silences"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extra Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extra Menu",
+              "body": "| Shortcut               | Action                                 |\n| ---------------------- | -------------------------------------- |\n| `F11`                  | Toggle full screen                     |\n| `1`                    | Play one second                        |\n| `B`                    | Play to selection                      |\n| `Shift` `F5`           | Play before selection start            |\n| `Shift` `F6`           | Play after selection start             |\n| `Shift` `F7`           | Play before selection end              |\n| `Shift` `F8`           | Play after selection end               |\n| `Ctrl` `Shift` `F5`    | Play before and after selection start  |\n| `Ctrl` `Shift` `F7`    | Play before and after selection end    |\n| `C`                    | Play cut preview                       |\n| `F1`                   | Selection tool                         |\n| `F2`                   | Envelope tool                          |\n| `F3`                   | Draw tool                              |\n| `F4`                   | Zoom tool                              |\n| `F5`                   | Time shift tool                        |\n| `F6`                   | Multi tool                             |\n| `A`                    | Previous tool                          |\n| `D`                    | Next tool                              |\n| `Backspace`            | Delete                                 |\n| `Alt` `Left`           | Move to previous label                 |\n| `Alt` `Right`          | Move to next label                     |\n| `Left`                 | Short seek left during playback        |\n| `Right`                | Short seek right during playback       |\n| `Shift` `Left`         | Long seek left during playback         |\n| `Shift` `Right`        | Long seek right during playback        |\n| `Shift` `I`            | Change recording device                |\n| `Shift` `O`            | Change playback device                 |\n| `Shift` `H`            | Change audio host                      |\n| `Shift` `N`            | Change recording channels              |\n| `Shift` `Home`         | Selection to start                     |\n| `Shift` `End`          | Selection to end                       |\n| `Shift` `Left`         | Selection extend left                  |\n| `Shift` `Right`        | Selection extend right                 |\n| `Ctrl` `Shift` `Right` | Selection contract left                |\n| `Ctrl` `Shift` `Left`  | Selection contract right               |\n| `Ctrl` `Shift` `F6`    | Move backwards from toolbars to tracks |\n| `Ctrl` `F6`            | Move forward from toolbars to tracks   |\n| `Up`                   | Move focus to previous track           |\n| `Down`                 | Move focus to next track               |\n| `Ctrl` `Home`          | Move focus to first track              |\n| `Ctrl` `End`           | Move focus to last track               |\n| `Shift` `Up`           | Move focus to previous and select      |\n| `Shift` `Down`         | Move focus to next and select          |\n| `Enter`                | Toggle focused track                   |\n| `Left`                 | Cursor left                            |\n| `Right`                | Cursor right                           |\n| `,`                    | Cursor short jump left                 |\n| `.`                    | Cursor short jump right                |\n| `Shift` `,`            | Cursor long jump left                  |\n| `Shift` `.`            | Cursor long jump right                 |\n| `Shift` `P`            | Change pan on focused track            |\n| `Alt` `Shift` `Left`   | Pan left on focused track              |\n| `Alt` `Shift` `Right`  | Pan right on focused track             |\n| `Shift` `G`            | Change gain on focused track           |\n| `Alt` `Shift` `Up`     | Increase gain on focused track         |\n| `Alt` `Shift` `Down`   | Decrease gain on focused track         |\n| `Shift` `U`            | Mute or unmute focused track           |\n| `Shift` `S`            | Solo or unsolo focused track           |\n| `Shift` `C`            | Close focused track                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F11`",
+                  "action": "Toggle full screen"
+                },
+                {
+                  "shortcut": "`1`",
+                  "action": "Play one second"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Play to selection"
+                },
+                {
+                  "shortcut": "`Shift` `F5`",
+                  "action": "Play before selection start"
+                },
+                {
+                  "shortcut": "`Shift` `F6`",
+                  "action": "Play after selection start"
+                },
+                {
+                  "shortcut": "`Shift` `F7`",
+                  "action": "Play before selection end"
+                },
+                {
+                  "shortcut": "`Shift` `F8`",
+                  "action": "Play after selection end"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F5`",
+                  "action": "Play before and after selection start"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F7`",
+                  "action": "Play before and after selection end"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Play cut preview"
+                },
+                {
+                  "shortcut": "`F1`",
+                  "action": "Selection tool"
+                },
+                {
+                  "shortcut": "`F2`",
+                  "action": "Envelope tool"
+                },
+                {
+                  "shortcut": "`F3`",
+                  "action": "Draw tool"
+                },
+                {
+                  "shortcut": "`F4`",
+                  "action": "Zoom tool"
+                },
+                {
+                  "shortcut": "`F5`",
+                  "action": "Time shift tool"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Multi tool"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Previous tool"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Next tool"
+                },
+                {
+                  "shortcut": "`Backspace`",
+                  "action": "Delete"
+                },
+                {
+                  "shortcut": "`Alt` `Left`",
+                  "action": "Move to previous label"
+                },
+                {
+                  "shortcut": "`Alt` `Right`",
+                  "action": "Move to next label"
+                },
+                {
+                  "shortcut": "`Left`",
+                  "action": "Short seek left during playback"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Short seek right during playback"
+                },
+                {
+                  "shortcut": "`Shift` `Left`",
+                  "action": "Long seek left during playback"
+                },
+                {
+                  "shortcut": "`Shift` `Right`",
+                  "action": "Long seek right during playback"
+                },
+                {
+                  "shortcut": "`Shift` `I`",
+                  "action": "Change recording device"
+                },
+                {
+                  "shortcut": "`Shift` `O`",
+                  "action": "Change playback device"
+                },
+                {
+                  "shortcut": "`Shift` `H`",
+                  "action": "Change audio host"
+                },
+                {
+                  "shortcut": "`Shift` `N`",
+                  "action": "Change recording channels"
+                },
+                {
+                  "shortcut": "`Shift` `Home`",
+                  "action": "Selection to start"
+                },
+                {
+                  "shortcut": "`Shift` `End`",
+                  "action": "Selection to end"
+                },
+                {
+                  "shortcut": "`Shift` `Left`",
+                  "action": "Selection extend left"
+                },
+                {
+                  "shortcut": "`Shift` `Right`",
+                  "action": "Selection extend right"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Right`",
+                  "action": "Selection contract left"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Left`",
+                  "action": "Selection contract right"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F6`",
+                  "action": "Move backwards from toolbars to tracks"
+                },
+                {
+                  "shortcut": "`Ctrl` `F6`",
+                  "action": "Move forward from toolbars to tracks"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Move focus to previous track"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Move focus to next track"
+                },
+                {
+                  "shortcut": "`Ctrl` `Home`",
+                  "action": "Move focus to first track"
+                },
+                {
+                  "shortcut": "`Ctrl` `End`",
+                  "action": "Move focus to last track"
+                },
+                {
+                  "shortcut": "`Shift` `Up`",
+                  "action": "Move focus to previous and select"
+                },
+                {
+                  "shortcut": "`Shift` `Down`",
+                  "action": "Move focus to next and select"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Toggle focused track"
+                },
+                {
+                  "shortcut": "`Left`",
+                  "action": "Cursor left"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Cursor right"
+                },
+                {
+                  "shortcut": "`,`",
+                  "action": "Cursor short jump left"
+                },
+                {
+                  "shortcut": "`.`",
+                  "action": "Cursor short jump right"
+                },
+                {
+                  "shortcut": "`Shift` `,`",
+                  "action": "Cursor long jump left"
+                },
+                {
+                  "shortcut": "`Shift` `.`",
+                  "action": "Cursor long jump right"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Change pan on focused track"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Left`",
+                  "action": "Pan left on focused track"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Right`",
+                  "action": "Pan right on focused track"
+                },
+                {
+                  "shortcut": "`Shift` `G`",
+                  "action": "Change gain on focused track"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Up`",
+                  "action": "Increase gain on focused track"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Down`",
+                  "action": "Decrease gain on focused track"
+                },
+                {
+                  "shortcut": "`Shift` `U`",
+                  "action": "Mute or unmute focused track"
+                },
+                {
+                  "shortcut": "`Shift` `S`",
+                  "action": "Solo or unsolo focused track"
+                },
+                {
+                  "shortcut": "`Shift` `C`",
+                  "action": "Close focused track"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Select Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Select Menu",
+              "body": "| Shortcut           | Action                           |\n| ------------------ | -------------------------------- |\n| `Ctrl` `A`         | Select all                       |\n| `Ctrl` `Shift` `A` | Select none                      |\n| `Z`                | Select at zero crossings         |\n| `Ctrl` `Shift` `K` | Select in all tracks             |\n| `Ctrl` `Shift` `Y` | Select in all sync-locked tracks |\n| `[`                | Left at playback position        |\n| `]`                | Right at playback position       |\n| `Shift` `J`        | Track start to cursor            |\n| `Shift` `K`        | Cursor to track end              |\n| `Q`                | Toggle spectral selection        |\n| `Ctrl` `Alt` `P`   | Previous clip                    |\n| `Ctrl` `Alt` `N`   | Next clip                        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Select none"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Select at zero crossings"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Select in all tracks"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Y`",
+                  "action": "Select in all sync-locked tracks"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Left at playback position"
+                },
+                {
+                  "shortcut": "`]`",
+                  "action": "Right at playback position"
+                },
+                {
+                  "shortcut": "`Shift` `J`",
+                  "action": "Track start to cursor"
+                },
+                {
+                  "shortcut": "`Shift` `K`",
+                  "action": "Cursor to track end"
+                },
+                {
+                  "shortcut": "`Q`",
+                  "action": "Toggle spectral selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `P`",
+                  "action": "Previous clip"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `N`",
+                  "action": "Next clip"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View Menu",
+              "body": "| Shortcut           | Action                  |\n| ------------------ | ----------------------- |\n| `Ctrl` `1`         | Zoom in                 |\n| `Ctrl` `2`         | Zoom normal             |\n| `Ctrl` `3`         | Zoom out                |\n| `Ctrl` `E`         | Zoom to selection       |\n| `Shift` `Z`        | Zoom toggle             |\n| `Ctrl` `F`         | Fit to width            |\n| `Ctrl` `Shift` `F` | Fit to height           |\n| `Ctrl` `Shift` `C` | Collapse all tracks     |\n| `Ctrl` `Shift` `X` | Expand collapsed tracks |\n| `Ctrl` `[`         | Skip to selection start |\n| `Ctrl` `]`         | Skip to selection end   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `1`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Zoom normal"
+                },
+                {
+                  "shortcut": "`Ctrl` `3`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Zoom to selection"
+                },
+                {
+                  "shortcut": "`Shift` `Z`",
+                  "action": "Zoom toggle"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Fit to width"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Fit to height"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Collapse all tracks"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "Expand collapsed tracks"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Skip to selection start"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Skip to selection end"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Transport Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transport Menu",
+              "body": "| Shortcut        | Action                      |\n| --------------- | --------------------------- |\n| `Space`         | Play or stop                |\n| `X`             | Play or stop and set cursor |\n| `Shift` `Space` | Loop play                   |\n| `P`             | Pause                       |\n| `R`             | Record                      |\n| `Shift` `R`     | Record new track            |\n| `Shift` `T`     | Timer record...             |\n| `Shift` `D`     | Punch and roll record       |\n| `P`             | Pause                       |\n| `J`             | Cursor to track start       |\n| `K`             | Cursor to track end         |\n| `Home`          | Cursor to project start     |\n| `End`           | Cursor to project end       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Space`",
+                  "action": "Play or stop"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Play or stop and set cursor"
+                },
+                {
+                  "shortcut": "`Shift` `Space`",
+                  "action": "Loop play"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Pause"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Record"
+                },
+                {
+                  "shortcut": "`Shift` `R`",
+                  "action": "Record new track"
+                },
+                {
+                  "shortcut": "`Shift` `T`",
+                  "action": "Timer record..."
+                },
+                {
+                  "shortcut": "`Shift` `D`",
+                  "action": "Punch and roll record"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Pause"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Cursor to track start"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Cursor to track end"
+                },
+                {
+                  "shortcut": "`Home`",
+                  "action": "Cursor to project start"
+                },
+                {
+                  "shortcut": "`End`",
+                  "action": "Cursor to project end"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tracks Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tracks Menu",
+              "body": "| Shortcut           | Action                      |\n| ------------------ | --------------------------- |\n| `Ctrl` `Shift` `N` | Add new mono track          |\n| `Ctrl` `Shift` `M` | Mix and render to new track |\n| `Ctrl` `U`         | Mute all tracks             |\n| `Ctrl` `Shift` `U` | Unmute all tracks           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Add new mono track"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Mix and render to new track"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Mute all tracks"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `U`",
+                  "action": "Unmute all tracks"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Effect Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Effect Menu",
+              "body": "| Shortcut   | Action             |\n| ---------- | ------------------ |\n| `Ctrl` `R` | Repeat last effect |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Repeat last effect"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Audacity](https://manual.audacityteam.org/man/keyboard_shortcut_reference.html)\n  _(manual.audacityteam.org)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

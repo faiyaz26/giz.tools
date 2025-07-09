@@ -1,0 +1,196 @@
+{
+  "id": "apex-legends",
+  "metadata": {
+    "title": "Apex Legends",
+    "date": "2022-11-23T16:23:31.706Z",
+    "background": "bg-[#a74145]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 27 default keyboard shortcuts found in Apex Legends\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Movement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Movement",
+              "body": "| Shortcut     | Action         |\n| ------------ | -------------- |\n| `W`          | Move forward   |\n| `S`          | Move back      |\n| `A`          | Move left      |\n| `D`          | Move right     |\n| `Left Shift` | Sprint         |\n| `Space`      | Jump           |\n| `C`          | Toggle crouch  |\n| `Left Ctrl`  | Hold to crouch |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`W`",
+                  "action": "Move forward"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Move back"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Move left"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Move right"
+                },
+                {
+                  "shortcut": "`Left Shift`",
+                  "action": "Sprint"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Jump"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Toggle crouch"
+                },
+                {
+                  "shortcut": "`Left Ctrl`",
+                  "action": "Hold to crouch"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Weapons and Abilities",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Weapons and Abilities",
+              "body": "| Shortcut | Action                    |\n| -------- | ------------------------- |\n| `Q`      | Tactical ability          |\n| `Z`      | Ultimate ability          |\n| `E`      | Interact or pickup        |\n| `X`      | Alternate interact        |\n| `Tab`    | Toggle inventory          |\n| `M`      | Toggle map                |\n| `B`      | Toggle fire mode          |\n| `V`      | Melee                     |\n| `R`      | Reload                    |\n| `1`      | Equip first weapon        |\n| `2`      | Equip second weapon       |\n| `3`      | Holster weapons           |\n| `G`      | Equip grenade             |\n| `4`      | Use selected health item  |\n| `H`      | Toggle Gibraltar's shield |\n| `N`      | Inspect weapon            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Q`",
+                  "action": "Tactical ability"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Ultimate ability"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Interact or pickup"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Alternate interact"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Toggle inventory"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Toggle map"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Toggle fire mode"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Melee"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Reload"
+                },
+                {
+                  "shortcut": "`1`",
+                  "action": "Equip first weapon"
+                },
+                {
+                  "shortcut": "`2`",
+                  "action": "Equip second weapon"
+                },
+                {
+                  "shortcut": "`3`",
+                  "action": "Holster weapons"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Equip grenade"
+                },
+                {
+                  "shortcut": "`4`",
+                  "action": "Use selected health item"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Toggle Gibraltar's shield"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Inspect weapon"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Communication",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Communication",
+              "body": "| Shortcut | Action                   |\n| -------- | ------------------------ |\n| `F`      | Ping enemy here          |\n| `T`      | Hold to use push to talk |\n| `Enter`  | Message team             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F`",
+                  "action": "Ping enemy here"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Hold to use push to talk"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Message team"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Apex Legends](https://www.metabomb.net/off-meta/gameplay-guides/apex-legends-controls-pc-playstation-4xbox-one)\n  _(www.metabomb.net)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

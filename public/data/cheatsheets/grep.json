@@ -1,0 +1,149 @@
+{
+  "id": "grep",
+  "metadata": {
+    "title": "Grep",
+    "date": "2020-11-25T18:28:43.000Z",
+    "background": "bg-indigo-400",
+    "tags": [
+      "egrep",
+      "search",
+      "pattern",
+      "text"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "This cheat sheet is intended to be a quick reminder for the main concepts involved in using the command line program grep and assumes you already understand its usage.",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started {.cols-5}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Usage",
+              "body": "```\nSearch for an exact string in file:\n```",
+              "footer": "shell script\n$ grep [options] search_string path/to/file\n```\nPrint lines in myfile.txt containing the string \"mellon\"\n```shell script\n$ grep 'mellon' myfile.txt\n```\nWildcards are accepted in filename.",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Option examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Option examples",
+              "body": "| Option | Example                                   | Operation                                            |\n| ------ | ----------------------------------------- | ---------------------------------------------------- |\n| `-i`   | grep -i ^DA demo.txt                      | Forgets about case sensitivity                       |\n| `-w`   | grep -w \"of\" demo.txt                     | Search only for the full word                        |\n| `-A`   | grep -A 3 'Exception' error.log           | Display 3 lines after matching string                |\n| `-B`   | grep -B 4 'Exception' error.log           | Display 4 lines before matching string               |\n| `-C`   | grep -C 5 'Exception' error.log           | Display 5 lines around matching string               |\n| `-r`   | grep -r 'cheatsheets.zip' /var/log/nginx/ | Recursive search _(within subdirs)_                  |\n| `-v`   | grep -v 'warning' /var/log/syslog         | Return all lines which don't match the pattern       |\n| `-e`   | grep -e '^al' filename                    | Use regex _(lines starting with 'al')_               |\n| `-E`   | grep -E 'ja(s\\|cks)on' filename           | Extended regex _(lines containing jason or jackson)_ |\n| `-c`   | grep -c 'error' /var/log/syslog           | Count the number of matches                          |\n| `-l`   | grep -l 'robot' /var/log/\\*               | Print the name of the file(s) of matches             |\n| `-o`   | grep -o search_string filename            | Only show the matching part of the string            |\n| `-n`   | grep -n \"go\" demo.txt                     | Show the line numbers of the matches                 |",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Grep regular expressions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Refer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Refer",
+              "body": "- [Regex syntax](/regex) _(cheatsheets.zip)_\n- [Regex examples](/regex#regex-examples) _(cheatsheets.zip)_\n\nPlease refer to the full version of the regex cheat sheet for more complex requirements.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Wildcards",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Wildcards",
+              "body": "| -               | -                                      |\n| --------------- | -------------------------------------- |\n| .               | Any character.                         |\n| `?            ` | Optional and can only occur once.      |\n| `*            ` | Optional and can occur more than once. |\n| `+            ` | Required and can occur more than once. |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Quantifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Quantifiers",
+              "body": "| -               | -                                            |\n| --------------- | -------------------------------------------- |\n| `{n}          ` | Previous item appears exactly n times.       |\n| `{n,}         ` | Previous item appears n times or more.       |\n| `{,m}         ` | Previous item appears n times maximum.       |\n| `{n,m}        ` | Previous item appears between n and m times. |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "POSIX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "POSIX",
+              "body": "| -               | -                                         |\n| --------------- | ----------------------------------------- |\n| `[:alpha:]   `  | Any lower and upper case letter.          |\n| `[:digit:]   `  | Any number.                               |\n| `[:alnum:]   `  | Any lower and upper case letter or digit. |\n| `[:space:]    ` | Any whites­pace.                          |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Character",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Character",
+              "body": "| -               | -                                         |\n| --------------- | ----------------------------------------- |\n| `[A-Z­a-z]    ` | Any lower and upper case letter.          |\n| `[0-9]        ` | Any number.                               |\n| `[0-9­A-Z­a-z]` | Any lower and upper case letter or digit. |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Position",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Position",
+              "body": "|      |                    |\n| ---- | ------------------ |\n| `^ ` | Beginning of line. |\n| `$ ` | End of line.       |\n| `^$` | Empty line.        |\n| `\\<` | Start of word.     |\n| `\\>` | End of word.       |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

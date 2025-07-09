@@ -1,0 +1,1318 @@
+{
+  "id": "css3",
+  "metadata": {
+    "title": "CSS 3",
+    "date": "2020-12-25T20:22:47.000Z",
+    "background": "bg-[#3473b5]",
+    "tags": [
+      "web",
+      "css",
+      "style"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This is a quick reference cheat sheet for CSS goodness, listing selector syntax, properties, units and other useful bits of information.\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "CSS is rich in capabilities and is more than simply laying out pages.",
+              "footer": "#### External stylesheet\n\n```html {.wrap}\n<link href=\"./path/to/stylesheet/style.css\" rel=\"stylesheet\" type=\"text/css\" />\n```\n\n#### Internal stylesheet\n\n```html\n<style>\n  body {\n    background-color: linen;\n  }\n</style>\n```\n\n#### Inline styles\n\n```html {.wrap}\n<h2 style=\"text-align: center;\">Centered text</h2>\n\n<p style=\"color: blue; font-size: 18px;\">Blue, 18-point text</p>\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Add class",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Add class",
+              "body": "```html\n<div class=\"classname\"></div>\n<div class=\"class1 classn ...\"></div>\n```",
+              "footer": "Support multiple classes on one element.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "!important",
+          "level": 3,
+          "cards": [
+            {
+              "title": "!important",
+              "body": "```css\n.post-title {\n  color: blue !important;\n}\n```",
+              "footer": "Overrides all previous styling rules.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selector",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selector",
+              "body": "```css\nh1 {\n}\n#job-title {\n}\ndiv.hero {\n}\ndiv > p {\n}\n```",
+              "footer": "See: [Selectors](#css-selectors)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Text color",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Text color",
+              "body": "```css\ncolor: #2a2aff;\ncolor: green;\ncolor: rgb(34, 12, 64, 0.6);\ncolor: hsla(30 100% 50% / 0.6);\n```",
+              "footer": "See: [Colors](#css-colors)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Background",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Background",
+              "body": "```css\nbackground-color: blue;\nbackground-image: url('nyan-cat.gif');\nbackground-image: url('../image.png');\n```",
+              "footer": "See: [Backgrounds](#css-backgrounds)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Font",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Font",
+              "body": "```css\n.page-title {\n  font-weight: bold;\n  font-size: 30px;\n  font-family: 'Courier New';\n}\n```",
+              "footer": "See: [Fonts](#css-fonts)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Position",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Position",
+              "body": "```css\n.box {\n  position: relative;\n  top: 20px;\n  left: 20px;\n}\n```",
+              "footer": "See also: [Position](https://learn-the-web.algonquindesign.ca/topics/css-layout-cheat-sheet/)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Animation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Animation",
+              "body": "```css\nanimation: 300ms linear 0s infinite;\n\nanimation: bounce 300ms linear infinite;\n```",
+              "footer": "See: [Animation](#css-animation)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comment",
+              "body": "```css\n/* This is a single line comment */\n\n/* This is a \n   multi-line comment */\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Flex layout",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Flex layout",
+              "body": "```css\ndiv {\n  display: flex;\n  justify-content: center;\n}\ndiv {\n  display: flex;\n  justify-content: flex-start;\n}\n```",
+              "footer": "See: [Flexbox](#css-flexbox) | [Flex Tricks](#css-flexbox-tricks)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Grid layout",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Grid layout",
+              "body": "```css\n#container {\n  display: grid;\n  grid: repeat(2, 60px) / auto-flow 80px;\n}\n\n#container > div {\n  background-color: #8ca0ff;\n  width: 50px;\n  height: 50px;\n}\n```",
+              "footer": "See: [Grid Layout](#css-grid-layout)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variable & Counter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variable & Counter",
+              "body": "```css\ncounter-set: subsection;\ncounter-increment: subsection;\ncounter-reset: subsection 0;\n\n:root {\n  --bg-color: brown;\n}\nelement {\n  background-color: var(--bg-color);\n}\n```",
+              "footer": "See: [Dynamic content](#css-dynamic-content)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSS Selectors",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "",
+              "footer": "#### Groups Selector\n\n```css\nh1,\nh2 {\n  color: red;\n}\n```\n\n#### Chaining Selector\n\n```css\nh3.section-heading {\n  color: blue;\n}\n```\n\n#### Attribute Selector\n\n```css\ndiv[attribute='SomeValue'] {\n  background-color: red;\n}\n```\n\n#### First Child Selector\n\n```css\np:first-child {\n  font-weight: bold;\n}\n```\n\n#### No Children Selector\n\n```css\n.box:empty {\n  background: lime;\n  height: 80px;\n  width: 80px;\n}\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic",
+              "body": "|              |                             |\n| ------------ | --------------------------- |\n| `*`          | All elements                |\n| `div`        | All div tags                |\n| `.classname` | All elements with class     |\n| `#idname`    | Element with ID             |\n| `div,p`      | All divs and paragraphs     |\n| `#idname *`  | All elements inside #idname |\n\nSee also: [Type](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors) /\n[Class](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors) /\n[ID](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors) /\n[Universal](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors) selectors",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Combinators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Combinators",
+              "body": "| Selector        | Description                           |\n| --------------- | ------------------------------------- |\n| `div.classname` | Div with certain classname            |\n| `div#idname`    | Div with certain ID                   |\n| `div p`         | Paragraphs inside divs                |\n| `div > p`       | All p tags<br>_one level deep in div_ |\n| `div + p`       | P tags immediately after div          |\n| `div ~ p`       | P tags preceded by div                |\n\nSee also: [Adjacent](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) /\n[Sibling](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator) /\n[Child](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) selectors",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Attribute selectors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Attribute selectors",
+              "body": "|                      |                                    |\n| -------------------- | ---------------------------------- | ---------------------------- |\n| `a[target]`          | With a <yel>target</yel> attribute |\n| `a[target=\"_blank\"]` | Open in new tab                    |\n| `a[href^=\"/index\"]`  | Starts with <yel>/index</yel>      |\n| `[class              | =\"chair\"]`                         | Starts with <yel>chair</yel> |\n| `[class*=\"chair\"]`   | containing <yel>chair</yel>        |\n| `[title~=\"chair\"]`   | Contains the word <yel>chair</yel> |\n| `a[href$=\".doc\"]`    | Ends with <yel>.doc</yel>          |\n| `[type=\"button\"]`    | Specified type                     |\n\nSee also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "User action pseudo classes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "User action pseudo classes",
+              "body": "|              |                         |\n| ------------ | ----------------------- |\n| `a:link    ` | Link in normal state    |\n| `a:active  ` | Link in clicked state   |\n| `a:hover   ` | Link with mouse over it |\n| `a:visited ` | Visited link            |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pseudo classes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pseudo classes",
+              "body": "|                   |                                                                                         |\n| ----------------- | --------------------------------------------------------------------------------------- |\n| `p::after`        | Add content after p                                                                     |\n| `p::before`       | Add content before p                                                                    |\n| `p::first-letter` | First letter in p                                                                       |\n| `p::first-line`   | First line in p                                                                         |\n| `::selection`     | Selected by user                                                                        |\n| `::placeholder`   | [Placeholder](https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder) attribute |\n| `:root`           | Documents root element                                                                  |\n| `:target`         | Highlight active anchor                                                                 |\n| `div:empty`       | Element with no children                                                                |\n| `p:lang(en)`      | P with en language attribute                                                            |\n| `:not(span)`      | Element that's not a span                                                               |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Input pseudo classes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Input pseudo classes",
+              "body": "|                       |                                                                                             |\n| --------------------- | ------------------------------------------------------------------------------------------- |\n| `input:checked`       | Checked inputs                                                                              |\n| `input:disabled`      | Disabled inputs                                                                             |\n| `input:enabled`       | Enabled inputs                                                                              |\n| `input:focus`         | Input has focus                                                                             |\n| `input:in-range`      | Value in range                                                                              |\n| `input:out-of-range`  | Input value out of range                                                                    |\n| `input:valid`         | Input with valid value                                                                      |\n| `input:invalid`       | Input with invalid value                                                                    |\n| `input:optional`      | No required attribute                                                                       |\n| `input:required`      | Input with required attribute                                                               |\n| `input:read-only`     | With readonly attribute                                                                     |\n| `input:read-write`    | No readonly attribute                                                                       |\n| `input:indeterminate` | With [indeterminate](https://developer.mozilla.org/en-US/docs/Web/CSS/:indeterminate) state |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Structural pseudo classes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Structural pseudo classes",
+              "body": "|                         |                            |\n| ----------------------- | -------------------------- |\n| `p:first-child`         | First child                |\n| `p:last-child`          | Last child                 |\n| `p:first-of-type`       | First of some type         |\n| `p:last-of-type`        | Last of some type          |\n| `p:nth-child(2)`        | Second child of its parent |\n| `p:nth-child(3n42)`     | Nth-child (an + b) formula |\n| `p:nth-last-child(2)`   | Second child from behind   |\n| `p:nth-of-type(2)`      | Second p of its parent     |\n| `p:nth-last-of-type(2)` | ...from behind             |\n| `p:only-of-type`        | Unique of its parent       |\n| `p:only-child`          | Only child of its parent   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSS Fonts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Properties",
+              "body": "| Property          | Description     |\n| ----------------- | --------------- |\n| `font-family:`    | \\<font> <fontN> |\n| `font-size:`      | \\<size>         |\n| `letter-spacing:` | \\<size>         |\n| `line-height:`    | \\<number>       |\n\n| `font-weight:` | \\<number> / bold / normal | | `font-style:` | italic / normal | | `text-decoration:` | underline /\nnone |\n\n| `text-align:` | left / right<br>center / justify | | `text-transform:` | capitalize / uppercase / lowercase |\n{.left-text}\n\nSee also: [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)",
+              "footer": "",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Shorthand",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shorthand",
+              "body": "|         | style    | weight | size (required) |     | line-height | family            |\n| ------- | -------- | ------ | --------------- | --- | ----------- | ----------------- |\n| `font:` | `italic` | `400`  | `14px`          | `/` | `1.5`       | `sans-serif`      |\n|         | style    | weight | size (required) |     | line-height | family (required) |",
+              "footer": "",
+              "spanConfig": "secondary .col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Example",
+              "body": "```css\nfont-family: Arial, sans-serif;\nfont-size: 12pt;\nletter-spacing: 0.02em;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Case",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Case",
+              "body": "```css\n/* Hello */\ntext-transform: capitalize;\n\n/* HELLO */\ntext-transform: uppercase;\n\n/* hello */\ntext-transform: lowercase;\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "@font-face",
+          "level": 3,
+          "cards": [
+            {
+              "title": "@font-face",
+              "body": "```css\n@font-face {\n  font-family: 'Glegoo';\n  src: url('../Glegoo.woff');\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSS Colors",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Named color",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Named color",
+              "body": "```css\ncolor: red;\ncolor: orange;\ncolor: tan;\ncolor: rebeccapurple;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Hexadecimal color",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hexadecimal color",
+              "body": "```css\ncolor: #090;\ncolor: #009900;\ncolor: #090a;\ncolor: #009900aa;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "rgb() Colors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "rgb() Colors",
+              "body": "```css\ncolor: rgb(34, 12, 64, 0.6);\ncolor: rgba(34, 12, 64, 0.6);\ncolor: rgb(34 12 64 / 0.6);\ncolor: rgba(34 12 64 / 0.3);\ncolor: rgb(34 12 64 / 60%);\ncolor: rgba(34.6 12 64 / 30%);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HSL Colors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HSL Colors",
+              "body": "```css\ncolor: hsl(30, 100%, 50%, 0.6);\ncolor: hsla(30, 100%, 50%, 0.6);\ncolor: hsl(30 100% 50% / 0.6);\ncolor: hsla(30 100% 50% / 0.6);\ncolor: hsl(30 100% 50% / 60%);\ncolor: hsla(30.2 100% 50% / 60%);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Other",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Other",
+              "body": "```css\ncolor: inherit;\ncolor: initial;\ncolor: unset;\ncolor: transparent;\n\ncolor: currentcolor; /* keyword */\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSS Backgrounds",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Properties",
+              "body": "| Property      | Description   |\n| ------------- | ------------- |\n| `background:` | _(Shorthand)_ |\n\n| `background-color:` | See: [Colors](#css-colors) | | `background-image:` | url(...) | | `background-position:` |\nleft/center/right<br/>top/center/bottom | | `background-size:` | cover X Y | | `background-clip:` |\nborder-box<br/>padding-box<br/>content-box | | `background-repeat:` | no-repeat<br/>repeat-x<br/>repeat-y | |\n`background-attachment:` | scroll/fixed/local | {.left-text}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Shorthand",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shorthand",
+              "body": "|               | color  | image        | positionX | positionY |     | size           | repeat      | attachment |\n| ------------- | ------ | ------------ | --------- | --------- | --- | -------------- | ----------- | ---------- |\n| `background:` | `#ff0` | `url(a.jpg)` | `left`    | `top`     | `/` | `100px` `auto` | `no-repeat` | `fixed;`   |\n| `background:` | `#abc` | `url(b.png)` | `center`  | `center`  | `/` | `cover`        | `repeat-x`  | `local;`   |\n|               | color  | image        | posX      | posY      |     | size           | repeat      | attach..   |",
+              "footer": "",
+              "spanConfig": "secondary .col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "",
+              "footer": "```css {.wrap}\nbackground: url(img_man.jpg) no-repeat center;\n\nbackground:\n  url(img_flwr.gif) right bottom no-repeat,\n  url(paper.gif) left top repeat;\n\nbackground: rgb(2, 0, 36);\nbackground: linear-gradient(\n  90deg,\n  rgba(2, 0, 36, 1) 0%,\n  rgba(13, 232, 230, 1) 35%,\n  rgba(0, 212, 255, 1) 100%\n);\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSS The Box Model",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Maximums/Minimums",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Maximums/Minimums",
+              "body": "```css\n.column {\n  max-width: 200px;\n  width: 500px;\n}\n```",
+              "footer": "See also: [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) /\n[min-width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) /\n[max-height](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height) /\n[min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Margin / Padding",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Margin / Padding",
+              "body": "```css\n.block-one {\n  margin: 20px;\n  padding: 10px;\n}\n```",
+              "footer": "See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) /\n[Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Box-sizing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Box-sizing",
+              "body": "```css\n.container {\n  box-sizing: border-box;\n}\n```",
+              "footer": "See also: [Box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/Box-sizing)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Visibility",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Visibility",
+              "body": "```css\n.invisible-elements {\n  visibility: hidden;\n}\n```",
+              "footer": "See also: [Visibility](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Auto keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Auto keyword",
+              "body": "```css\ndiv {\n  margin: auto;\n}\n```",
+              "footer": "See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Overflow",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Overflow",
+              "body": "```css\n.small-block {\n  overflow: scroll;\n}\n```",
+              "footer": "See also: [Overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSS Animation {.cols-5}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Shorthand",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shorthand",
+              "body": "|              | name     | duration | timing-function | delay   | count      | direction           | fill-mode | play-state |\n| ------------ | -------- | -------- | --------------- | ------- | ---------- | ------------------- | --------- | ---------- |\n| `animation:` | `bounce` | `300ms`  | `linear`        | `100ms` | `infinite` | `alternate-reverse` | `both`    | `reverse`  |\n|              | name     | duration | timing-function | delay   | count      | direction           | fill-mode | play-state |",
+              "footer": "",
+              "spanConfig": "col-span-5 .secondary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Properties",
+              "body": "| Property                     | Value                                                  |\n| ---------------------------- | ------------------------------------------------------ |\n| `animation:`                 | _(shorthand)_                                          |\n| `animation-name:`            | \\<name>                                                |\n| `animation-duration:`        | \\<time>ms                                              |\n| `animation-timing-function:` | ease / linear / ease-in / ease-out / ease-in-out       |\n| `animation-delay:`           | \\<time>ms                                              |\n| `animation-iteration-count:` | infinite / \\<number>                                   |\n| `animation-direction:`       | normal / reverse / alternate / alternate-reverse       |\n| `animation-fill-mode:`       | none / forwards / backwards / both / initial / inherit |\n| `animation-play-state:`      | normal / reverse / alternate / alternate-reverse       |\n\n{.left-text}\n\nSee also: [Animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)",
+              "footer": "",
+              "spanConfig": "row-span-2 .col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Example",
+              "body": "```css\n/* @keyframes duration | timing-function | delay |\n   iteration-count | direction | fill-mode | play-state | name */\nanimation: 3s ease-in 1s 2 reverse both paused slidein;\n\n/* @keyframes duration | timing-function | delay | name */\nanimation: 3s linear 1s slidein;\n\n/* @keyframes duration | name */\nanimation: 3s slidein;\n\nanimation: 4s linear 0s infinite alternate move_eye;\nanimation: bounce 300ms linear 0s infinite normal;\nanimation: bounce 300ms linear infinite;\nanimation: bounce 300ms linear infinite alternate-reverse;\nanimation: bounce 300ms linear 2s infinite alternate-reverse forwards normal;\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Javascript Event",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Javascript Event",
+              "body": "```js\n.one('webkitAnimationEnd oanimationend msAnimationEnd animationend')\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSS Flexbox {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Simple example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Simple example",
+              "body": "```css\n.container {\n  display: flex;\n}\n```",
+              "footer": "```css\n.container > div {\nflex: 1 1 auto;\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Container",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Container",
+              "body": "```css\ndisplay: flex;\ndisplay: inline-flex;\n```",
+              "footer": "```css\nflex-direction: row; /* ltr - default */\nflex-direction: row-reverse; /* rtl */\nflex-direction: column; /* top-bottom */\nflex-direction: column-reverse; /* bottom-top */\n```\n```css\nflex-wrap: nowrap; /* one-line */\nflex-wrap: wrap; /* multi-line */\n```\n```css\nalign-items: flex-start; /* vertical-align to top */\nalign-items: flex-end; /* vertical-align to bottom */\nalign-items: center; /* vertical-align to center */\nalign-items: stretch; /* same height on all (default) */\n```\n```css\njustify-content: flex-start; /* [xxx        ] */\njustify-content: center; /* [    xxx    ] */\njustify-content: flex-end; /* [        xxx] */\njustify-content: space-between; /* [x    x    x] */\njustify-content: space-around; /* [ x   x   x ] */\njustify-content: space-evenly; /* [  x  x  x  ] */\n```\n}",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Child",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Child",
+              "body": "```css\n/* This: */\nflex: 1 0 auto;\n\n/* Is equivalent to this: */\nflex-grow: 1;\nflex-shrink: 0;\nflex-basis: auto;\n```",
+              "footer": "```css\norder: 1;\n```\n```css\nalign-self: flex-start; /* left */\nmargin-left: auto; /* right */\n```\n}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSS Flexbox Tricks",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Vertical center",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Vertical center",
+              "body": "```css\n.container {\n  display: flex;\n}\n\n.container > div {\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Vertical center (2)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Vertical center (2)",
+              "body": "```css\n.container {\n  display: flex;\n\n  /* vertical */\n  align-items: center;\n\n  /* horizontal */\n  justify-content: center;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reordering",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reordering",
+              "body": "```css\n.container > .top {\n  order: 1;\n}\n\n.container > .bottom {\n  order: 2;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mobile layout",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mobile layout",
+              "body": "```css\n.container {\n  display: flex;\n  flex-direction: column;\n}\n\n.container > .top {\n  flex: 0 0 100px;\n}\n\n.container > .content {\n  flex: 1 0 auto;\n}\n```",
+              "footer": "A fixed-height top bar and a dynamic-height content area.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Table-like",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Table-like",
+              "body": "```css\n.container {\n  display: flex;\n}\n\n/* the 'px' values here are just suggested percentages */\n.container > .checkbox {\n  flex: 1 0 20px;\n}\n.container > .subject {\n  flex: 1 0 400px;\n}\n.container > .date {\n  flex: 1 0 120px;\n}\n```",
+              "footer": "This creates columns that have different widths, but size accordingly according to the circumstances.",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Vertical",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Vertical",
+              "body": "```css\n.container {\n  align-items: center;\n}\n```",
+              "footer": "Vertically-center all items.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Left and right",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Left and right",
+              "body": "```css\n.menu > .left {\n  align-self: flex-start;\n}\n.menu > .right {\n  align-self: flex-end;\n}\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSS Grid Layout",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Grid Template Columns",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Grid Template Columns",
+              "body": "```css\n#grid-container {\n  display: grid;\n  width: 100px;\n  grid-template-columns: 20px 20% 60%;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "fr Relative Unit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "fr Relative Unit",
+              "body": "```css\n.grid {\n  display: grid;\n  width: 100px;\n  grid-template-columns: 1fr 60px 1fr;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Grid Gap",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Grid Gap",
+              "body": "```css\n/*The distance between rows is 20px*/\n/*The distance between columns is 10px*/\n#grid-container {\n  display: grid;\n  grid-gap: 20px 10px;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CSS Block Level Grid",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CSS Block Level Grid",
+              "body": "```css\n#grid-container {\n  display: block;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CSS grid-row",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CSS grid-row",
+              "body": "CSS syntax:\n\n- grid-row: grid-row-start / grid-row-end;",
+              "footer": "#### Example\n\n```css\n.item {\n  grid-row: 1 / span 2;\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CSS Inline Level Grid",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CSS Inline Level Grid",
+              "body": "```css\n#grid-container {\n  display: inline-grid;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "minmax() Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "minmax() Function",
+              "body": "",
+              "footer": "```css {.wrap}\n.grid {\n  display: grid;\n  grid-template-columns: 100px minmax(100px, 500px) 100px;\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "grid-row-start & grid-row-end",
+          "level": 3,
+          "cards": [
+            {
+              "title": "grid-row-start & grid-row-end",
+              "body": "CSS syntax:\n\n- grid-row-start: auto|row-line;<br>\n- grid-row-end: auto|row-line|span n;",
+              "footer": "#### Example\n\n```css\ngrid-row-start: 2;\ngrid-row-end: span 2;\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CSS grid-row-gap",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CSS grid-row-gap",
+              "body": "```css\ngrid-row-gap: length;\n```",
+              "footer": "Any legal length value, like px or %. 0 is the default value",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CSS grid-area",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CSS grid-area",
+              "body": "```css\n.item1 {\n  grid-area: 2 / 1 / span 2 / span 3;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Justify Items",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Justify Items",
+              "body": "```css\n#container {\n  display: grid;\n  justify-items: center;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr 1fr 1fr;\n  grid-gap: 10px;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CSS grid-template-areas",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CSS grid-template-areas",
+              "body": "```css\n.item {\n  grid-area: nav;\n}\n.grid-container {\n  display: grid;\n  grid-template-areas:\n    'nav nav . .'\n    'nav nav . .';\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Justify Self",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Justify Self",
+              "body": "```css\n#grid-container {\n  display: grid;\n  justify-items: start;\n}\n\n.grid-items {\n  justify-self: end;\n}\n```",
+              "footer": "The grid items are positioned to the right (end) of the row.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Align Items",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Align Items",
+              "body": "```css\n#container {\n  display: grid;\n  align-items: start;\n  grid-template-columns: 1fr;\n  grid-template-rows: 1fr 1fr 1fr;\n  grid-gap: 10px;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSS Dynamic Content",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Variable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variable",
+              "body": "```css\n:root {\n  --first-color: #16f;\n  --second-color: #ff7;\n}\n```",
+              "footer": "Variable Usage\n```css\nbackground-color: var(--first-color);\ncolor: var(--second-color);\n}\n```\nSee also: [CSS Variable](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Counter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Counter",
+              "body": "```css\n/* Set \"my-counter\" to 0 */\ncounter-set: my-counter;\n```",
+              "footer": "```css\n/* Increment \"my-counter\" by 1 */\ncounter-increment: my-counter;\n```\n```css\n/* Decrement \"my-counter\" by 1 */\ncounter-increment: my-counter -1;\n```\n```css\n/* Reset \"my-counter\" to 0 */\ncounter-reset: my-counter;\n```\nSee also: [Counter set](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-set)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Using counters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using counters",
+              "body": "```css\nbody {\n  counter-reset: section;\n}\n\nh3::before {\n  counter-increment: section;\n  content: 'Section.' counter(section);\n}\n```",
+              "footer": "```css\nol {\ncounter-reset: section;\nlist-marker-type: none;\n}\nli::before {\ncounter-increment: section;\ncontent: counters(section, '.') ' ';\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Css 3 tricks",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Scrollbar smooth",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scrollbar smooth",
+              "body": "```css\nhtml {\n  scroll-behavior: smooth;\n}\n```",
+              "footer": "[Click me](#css-getting-started), the page will scroll smoothly to Getting started",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Modern CSS",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "container queries(size)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "container queries(size)",
+              "body": "```css\n.element-wrap {\n  container: element / inline-size;\n}\n@container element (min-inline-size: 300px) {\n  .element {\n    display: flex;\n    gap: 1rem;\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "container qeries(style)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "container qeries(style)",
+              "body": "```css\n.container {\n  --variant: 1;\n\n  &.variant2 {\n    --variant: 2;\n  }\n}\n\n@container style(--variant: 1) {\n  button {\n  } /* You can't style .container, but can select inside it */\n  .other-things {\n  }\n}\n\n@container style(--variant: 2) {\n  button {\n  }\n  .whatever {\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "container units",
+          "level": 3,
+          "cards": [
+            {
+              "title": "container units",
+              "body": "```css\n.card {\n  padding: 5cqi;\n  font-size: 4cqi;\n  border: 1cqi solid brown;\n  height: 100%;\n}\n\nh2 {\n  font-size: 10cqi;\n  margin-block: 0 3cqi;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "the :has() pseudo selector",
+          "level": 3,
+          "cards": [
+            {
+              "title": "the :has() pseudo selector",
+              "body": "```css\nfigure:has(figcaption) {\n  border: 1px solid black;\n  padding: 0.5rem;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "nesting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "nesting",
+              "body": "```css\n.cards {\n  .card {\n    & .card-description {\n      color: blue;\n    }\n    & .card-title {\n      color: red;\n    }\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "scoping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "scoping",
+              "body": "```css\n@scope {\n  :scope {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 1rem;\n    padding: 1rem;\n    border: 1px solid black;\n  }\n  .card {\n    padding: 1rem;\n    border: 1px solid black;\n    background: lightgray;\n    h2 {\n      margin: 0 0 1rem 0;\n    }\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "cascade layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "cascade layers",
+              "body": "```css\n/* Specify the order to apply styles in cascade */\n@layer legacyCard, newCard;\n\n/* Imagine you have a lot of styles */\n@layer newCard {\n  .card {\n    background-color: red;\n  }\n}\n@layer legacyCard {\n  .card {\n    background-color: green;\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "logical properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "logical properties",
+              "body": "```css\nbutton {\n  background-color: #4caf50;\n  border: none;\n  color: white;\n  padding: 0.5rem 1.5rem;\n  text-decoration: none;\n  font: inherit;\n  border-radius: 4px;\n  .icon {\n    position: relative;\n    top: 0.125em;\n    fill: white;\n    width: 1em;\n    aspect-ratio: 1;\n    margin-inline-end: 0.25rem;\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "p3 colors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "p3 colors",
+              "body": "```html\n<div class=\"container\">\n  <div class=\"swatch\">\n    <style contenteditable>\n      @scope {\n        :scope {\n          background-color: color(display-p3 1 0.5 0);\n        }\n      }\n    </style>\n  </div>\n  <div class=\"swatch\">\n    <style contenteditable>\n      @scope {\n        :scope {\n          background-color: oklch(61.88% 0.286 342.4);\n        }\n      }\n    </style>\n  </div>\n  <div class=\"swatch\">\n    <style contenteditable>\n      @scope {\n        :scope {\n          background-color: oklab(0.73 0.15 0.16);\n        }\n      }\n    </style>\n  </div>\n\n  <div class=\"swatch\">\n    <style contenteditable>\n      @scope {\n        :scope {\n          background-image: linear-gradient(to right in oklch, red, blue);\n        }\n      }\n    </style>\n  </div>\n\n  <div class=\"swatch\">\n    <style contenteditable>\n      @scope {\n        :scope {\n          background-image: linear-gradient(to right in oklab, red, blue);\n        }\n      }\n    </style>\n  </div>\n\n  <div class=\"swatch\">\n    <style contenteditable>\n      @scope {\n        :scope {\n          background-image: linear-gradient(to right in srgb, red, blue);\n        }\n      }\n    </style>\n  </div>\n</div>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "color mixing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "color mixing",
+              "body": "```css\n.swatch {\n  color: white;\n  width: 100px;\n  aspect-ratio: 1;\n  display: grid;\n  place-items: center;\n  text-align: center;\n\n  &:nth-child(1) {\n    background-color: var(--bg);\n  }\n  &:nth-child(2) {\n    background-color: color-mix(in oklch, var(--bg), black 30%);\n  }\n  &:nth-child(3) {\n    background-color: color-mix(in oklch, var(--bg), white 30%);\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "margin trim",
+          "level": 3,
+          "cards": [
+            {
+              "title": "margin trim",
+              "body": "```css\n.container {\n  /* prevent \"extra\" margin at the end of the element */\n  margin-trim: block-end;\n\n  /* an element like this might be the culprit, but it could be anything */\n  > p {\n    margin-block-end: 1rem;\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "text wrapping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "text wrapping",
+              "body": "```css\n.balance {\n  text-wrap: balance;\n}\n.pretty {\n  text-wrap: pretty;\n}\n\nhtml {\n  font-family: system-ui, sans-serif;\n}\n\nmain {\n  max-inline-size: 60ch;\n  margin-inline: auto;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "subgrid",
+          "level": 3,
+          "cards": [
+            {
+              "title": "subgrid",
+              "body": "```css\n.grid {\n  display: grid;\n  grid-template-columns: repeat(9, 1fr);\n  grid-template-rows: repeat(4, minmax(100px, auto));\n}\n\n.item {\n  display: grid;\n  grid-column: 2 / 7;\n  grid-row: 2 / 4;\n  grid-template-columns: subgrid;\n  grid-template-rows: repeat(3, 80px);\n}\n\n.subitem {\n  grid-column: 3 / 6;\n  grid-row: 1 / 3;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see {.cols-1}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see {.cols-1}",
+          "body": "- [frontendmasters.com ](https://frontendmasters.com/blog/what-you-need-to-know-about-modern-css-spring-2024-edition/)\n- [CSS selectors cheatsheet](https://frontend30.com/css-selectors-cheatsheet/) _(frontend30.com)_\n- [MDN: Using CSS flexbox](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)\n- [Ultimate flexbox cheatsheet](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)\n- [GRID: A simple visual cheatsheet](http://grid.malven.co/)\n- [CSS Tricks: A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)\n- [Browser support](https://caniuse.com/#feat=css-grid)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

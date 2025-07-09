@@ -1,0 +1,1047 @@
+{
+  "id": "bash",
+  "metadata": {
+    "title": "Bash",
+    "date": "2020-11-25T18:28:43.000Z",
+    "background": "bg-[#3e4548]",
+    "tags": [
+      "shell",
+      "sh",
+      "echo",
+      "script",
+      "linux"
+    ],
+    "categories": [
+      "Programming",
+      "Operating System"
+    ],
+    "intro": "This is a quick reference cheat sheet to getting started with linux bash shell scripting.",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "hello.sh",
+          "level": 3,
+          "cards": [
+            {
+              "title": "hello.sh",
+              "body": "```bash\n#!/bin/bash\n\nVAR=\"world\"\necho \"Hello $VAR!\" # => Hello world!\n```",
+              "footer": "Execute the script\n```shell script\n$ bash hello.sh\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```bash\nNAME=\"John\"\n\necho ${NAME}    # => John (Variables)\necho $NAME      # => John (Variables)\necho \"$NAME\"    # => John (Variables)\necho '$NAME'    # => $NAME (Exact string)\necho \"${NAME}!\" # => John! (Variables)\n\nNAME = \"John\"   # => Error (about space)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```bash\n# This is an inline Bash comment.\n```",
+              "footer": "```bash\n: '\nThis is a\nvery neat comment\nin bash\n'\n```\nMulti-line comments use `:'` to open and `'` to close",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arguments",
+              "body": "| Expression  | Description                           |\n| ----------- | ------------------------------------- |\n| `$1` … `$9` | Parameter 1 ... 9                     |\n| `$0`        | Name of the script itself             |\n| `$1`        | First argument                        |\n| `${10}`     | Positional parameter 10               |\n| `$#`        | Number of arguments                   |\n| `$$`        | Process id of the shell               |\n| `$*`        | All arguments                         |\n| `$@`        | All arguments, starting from first    |\n| `$-`        | Current options                       |\n| `$_`        | Last argument of the previous command |\n\nSee: [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables)",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "```bash\nget_name() {\n    echo \"John\"\n}\n\necho \"You are $(get_name)\"\n```",
+              "footer": "See: [Functions](#bash-functions)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Conditionals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conditionals",
+              "body": "```bash\nif [[ -z \"$string\" ]]; then\n    echo \"String is empty\"\nelif [[ -n \"$string\" ]]; then\n    echo \"String is not empty\"\nfi\n```",
+              "footer": "See: [Conditionals](#bash-conditionals)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Brace expansion",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Brace expansion",
+              "body": "```bash\necho {A,B}.js\n```",
+              "footer": "| Expression | Description         |\n| ---------- | ------------------- |\n| `{A,B}`    | Same as `A B`       |\n| `{A,B}.js` | Same as `A.js B.js` |\n| `{1..5}`   | Same as `1 2 3 4 5` |\nSee: [Brace expansion](http://wiki.bash-hackers.org/syntax/expansion/brace)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Shell execution",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shell execution",
+              "body": "```bash\n# => I'm in /path/of/current\necho \"I'm in $(PWD)\"\n\n# Same as:\necho \"I'm in `pwd`\"\n```",
+              "footer": "See: [Command substitution](http://wiki.bash-hackers.org/syntax/expansion/cmdsubst)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Bash Parameter expansions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Syntax",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Syntax",
+              "body": "| Code              | Description         |\n| ----------------- | ------------------- |\n| `${FOO%suffix}`   | Remove suffix       |\n| `${FOO#prefix}`   | Remove prefix       |\n| `${FOO%%suffix}`  | Remove long suffix  |\n| `${FOO##prefix}`  | Remove long prefix  |\n| `${FOO/from/to}`  | Replace first match |\n| `${FOO//from/to}` | Replace all         |\n| `${FOO/%from/to}` | Replace suffix      |\n| `${FOO/#from/to}` | Replace prefix      |",
+              "footer": "#### Substrings\n\n| Expression      | Description                    |\n| --------------- | ------------------------------ |\n| `${FOO:0:3}`    | Substring _(position, length)_ |\n| `${FOO:(-3):3}` | Substring from the right       |\n\n#### Length\n\n| Expression | Description      |\n| ---------- | ---------------- |\n| `${#FOO}`  | Length of `$FOO` |\n\n#### Default values\n\n| Expression        | Description                              |\n| ----------------- | ---------------------------------------- |\n| `${FOO:-val}`     | `$FOO`, or `val` if unset                |\n| `${FOO:=val}`     | Set `$FOO` to `val` if unset             |\n| `${FOO:+val}`     | `val` if `$FOO` is set                   |\n| `${FOO:?message}` | Show message and exit if `$FOO` is unset |",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Substitution",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Substitution",
+              "body": "```bash\necho ${food:-Cake}  #=> $food or \"Cake\"\n```",
+              "footer": "```bash\nSTR=\"/path/to/foo.cpp\"\necho ${STR%.cpp}    # /path/to/foo\necho ${STR%.cpp}.o  # /path/to/foo.o\necho ${STR%/*}      # /path/to\necho ${STR##*.}     # cpp (extension)\necho ${STR##*/}     # foo.cpp (basepath)\necho ${STR#*/}      # path/to/foo.cpp\necho ${STR##*/}     # foo.cpp\necho ${STR/foo/bar} # /path/to/bar.cpp\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Slicing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Slicing",
+              "body": "```bash\nname=\"John\"\necho ${name}           # => John\necho ${name:0:2}       # => Jo\necho ${name::2}        # => Jo\necho ${name::-1}       # => Joh\necho ${name:(-1)}      # => n\necho ${name:(-2)}      # => hn\necho ${name:(-2):2}    # => hn\n\nlength=2\necho ${name:0:length}  # => Jo\n```",
+              "footer": "See: [Parameter expansion](http://wiki.bash-hackers.org/syntax/pe)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "basepath & dirpath",
+          "level": 3,
+          "cards": [
+            {
+              "title": "basepath & dirpath",
+              "body": "```bash\nSRC=\"/path/to/foo.cpp\"\n```",
+              "footer": "```bash\nBASEPATH=${SRC##*/}\necho $BASEPATH  # => \"foo.cpp\"\nDIRPATH=${SRC%$BASEPATH}\necho $DIRPATH   # => \"/path/to/\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Transform",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transform",
+              "body": "```bash\nSTR=\"HELLO WORLD!\"\necho ${STR,}   # => hELLO WORLD!\necho ${STR,,}  # => hello world!\n\nSTR=\"hello world!\"\necho ${STR^}   # => Hello world!\necho ${STR^^}  # => HELLO WORLD!\n\nARR=(hello World)\necho \"${ARR[@],}\" # => hello world\necho \"${ARR[@]^}\" # => Hello World\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Bash Arrays",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Defining arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Defining arrays",
+              "body": "```bash\nFruits=('Apple' 'Banana' 'Orange')\n\nFruits[0]=\"Apple\"\nFruits[1]=\"Banana\"\nFruits[2]=\"Orange\"\n\nARRAY1=(foo{1..2}) # => foo1 foo2\nARRAY2=({A..D})    # => A B C D\n\n# Merge => foo1 foo2 A B C D\nARRAY3=(${ARRAY1[@]} ${ARRAY2[@]})\n\n# declare construct\ndeclare -a Numbers=(1 2 3)\nNumbers+=(4 5) # Append => 1 2 3 4 5\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Indexing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Indexing",
+              "body": "| -                  | -             |\n| ------------------ | ------------- |\n| `${Fruits[0]}`     | First element |\n| `${Fruits[-1]}`    | Last element  |\n| `${Fruits[*]}`     | All elements  |\n| `${Fruits[@]}`     | All elements  |\n| `${#Fruits[@]}`    | Number of all |\n| `${#Fruits}`       | Length of 1st |\n| `${#Fruits[3]}`    | Length of nth |\n| `${Fruits[@]:3:2}` | Range         |\n| `${!Fruits[@]}`    | Keys of all   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Iteration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Iteration",
+              "body": "```bash\nFruits=('Apple' 'Banana' 'Orange')\n\nfor e in \"${Fruits[@]}\"; do\n    echo $e\ndone\n```",
+              "footer": "#### With index\n\n```bash\nfor i in \"${!Fruits[@]}\"; do\n  printf \"%s\\t%s\\n\" \"$i\" \"${Fruits[$i]}\"\ndone\n\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operations",
+              "body": "```bash\nFruits=(\"${Fruits[@]}\" \"Watermelon\")     # Push\nFruits+=('Watermelon')                   # Also Push\nFruits=( ${Fruits[@]/Ap*/} )             # Remove by regex match\nunset Fruits[2]                          # Remove one item\nFruits=(\"${Fruits[@]}\")                  # Duplicate\nFruits=(\"${Fruits[@]}\" \"${Veggies[@]}\")  # Concatenate\nlines=(`cat \"logfile\"`)                  # Read from file\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays as arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays as arguments",
+              "body": "```bash\nfunction extract()\n{\n    local -n myarray=$1\n    local idx=$2\n    echo \"${myarray[$idx]}\"\n}\nFruits=('Apple' 'Banana' 'Orange')\nextract Fruits 2     # => Orangle\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Bash Dictionaries",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Defining",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Defining",
+              "body": "```bash\ndeclare -A sounds\n```",
+              "footer": "```bash\nsounds[dog]=\"bark\"\nsounds[cow]=\"moo\"\nsounds[bird]=\"tweet\"\nsounds[wolf]=\"howl\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Working with dictionaries",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Working with dictionaries",
+              "body": "```bash\necho ${sounds[dog]} # Dog's sound\necho ${sounds[@]}   # All values\necho ${!sounds[@]}  # All keys\necho ${#sounds[@]}  # Number of elements\nunset sounds[dog]   # Delete dog\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Iteration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Iteration",
+              "body": "```bash\nfor val in \"${sounds[@]}\"; do\n    echo $val\ndone\n```",
+              "footer": "```bash\nfor key in \"${!sounds[@]}\"; do\necho $key\ndone\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Bash Conditionals",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Integer conditions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Integer conditions",
+              "body": "| Condition           | Description                                 |\n| ------------------- | ------------------------------------------- |\n| `[[ NUM -eq NUM ]]` | <yel>Eq</yel>ual                            |\n| `[[ NUM -ne NUM ]]` | <yel>N</yel>ot <yel>e</yel>qual             |\n| `[[ NUM -lt NUM ]]` | <yel>L</yel>ess <yel>t</yel>han             |\n| `[[ NUM -le NUM ]]` | <yel>L</yel>ess than or <yel>e</yel>qual    |\n| `[[ NUM -gt NUM ]]` | <yel>G</yel>reater <yel>t</yel>han          |\n| `[[ NUM -ge NUM ]]` | <yel>G</yel>reater than or <yel>e</yel>qual |\n| `(( NUM < NUM ))`   | Less than                                   |\n| `(( NUM <= NUM ))`  | Less than or equal                          |\n| `(( NUM > NUM ))`   | Greater than                                |\n| `(( NUM >= NUM ))`  | Greater than or equal                       |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String conditions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String conditions",
+              "body": "| Condition          | Description                 |\n| ------------------ | --------------------------- |\n| `[[ -z STR ]]`     | Empty string                |\n| `[[ -n STR ]]`     | <yel>N</yel>ot empty string |\n| `[[ STR == STR ]]` | Equal                       |\n| `[[ STR = STR ]]`  | Equal (Same above)          |\n| `[[ STR < STR ]]`  | Less than _(ASCII)_         |\n| `[[ STR > STR ]]`  | Greater than _(ASCII)_      |\n| `[[ STR != STR ]]` | Not Equal                   |\n| `[[ STR =~ STR ]]` | Regexp                      |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Example",
+              "body": "",
+              "footer": "#### String\n\n```bash\nif [[ -z \"$string\" ]]; then\n    echo \"String is empty\"\nelif [[ -n \"$string\" ]]; then\n    echo \"String is not empty\"\nelse\n    echo \"This never happens\"\nfi\n```\n\n#### Combinations\n\n```bash\nif [[ X && Y ]]; then\n    ...\nfi\n```\n\n#### Equal\n\n```bash\nif [[ \"$A\" == \"$B\" ]]; then\n    ...\nfi\n```\n\n#### Regex\n\n```bash\nif [[ '1. abc' =~ ([a-z]+) ]]; then\n    echo ${BASH_REMATCH[1]}\nfi\n```\n\n#### Smaller\n\n```bash\nif (( $a < $b )); then\n   echo \"$a is smaller than $b\"\nfi\n```\n\n#### Exists\n\n```bash\nif [[ -e \"file.txt\" ]]; then\n    echo \"file exists\"\nfi\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File conditions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File conditions",
+              "body": "| Condition         | Description                            |\n| ----------------- | -------------------------------------- |\n| `[[ -e FILE ]]`   | <yel>E</yel>xists                      |\n| `[[ -d FILE ]]`   | <yel>D</yel>irectory                   |\n| `[[ -f FILE ]]`   | <yel>F</yel>ile                        |\n| `[[ -h FILE ]]`   | Symlink                                |\n| `[[ -s FILE ]]`   | Size is > 0 bytes                      |\n| `[[ -r FILE ]]`   | <yel>R</yel>eadable                    |\n| `[[ -w FILE ]]`   | <yel>W</yel>ritable                    |\n| `[[ -x FILE ]]`   | Executable                             |\n| `[[ f1 -nt f2 ]]` | f1 <yel>n</yel>ewer <yel>t</yel>han f2 |\n| `[[ f1 -ot f2 ]]` | f2 <yel>o</yel>lder <yel>t</yel>han f1 |\n| `[[ f1 -ef f2 ]]` | Same files                             |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "More conditions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "More conditions",
+              "body": "| Condition            | Description          |\n| -------------------- | -------------------- | ----- | --- |\n| `[[ -o noclobber ]]` | If OPTION is enabled |\n| `[[ ! EXPR ]]`       | Not                  |\n| `[[ X && Y ]]`       | And                  |\n| `[[ X                |                      | Y ]]` | Or  |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "logical and, or",
+          "level": 3,
+          "cards": [
+            {
+              "title": "logical and, or",
+              "body": "```bash\nif [ \"$1\" = 'y' -a $2 -gt 0 ]; then\n    echo \"yes\"\nfi\n\nif [ \"$1\" = 'n' -o $2 -lt 0 ]; then\n    echo \"no\"\nfi\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Bash Loops",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic for loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic for loop",
+              "body": "```bash\nfor i in /etc/rc.*; do\n    echo $i\ndone\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "C-like for loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "C-like for loop",
+              "body": "```bash\nfor ((i = 0 ; i < 100 ; i++)); do\n    echo $i\ndone\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ranges",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ranges",
+              "body": "```bash\nfor i in {1..5}; do\n    echo \"Welcome $i\"\ndone\n```",
+              "footer": "#### With step size\n\n```bash\nfor i in {5..50..5}; do\n    echo \"Welcome $i\"\ndone\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Continue",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Continue",
+              "body": "",
+              "footer": "```bash {data=3,5}\nfor number in $(seq 1 3); do\n    if [[ $number == 2 ]]; then\n        continue;\n    fi\n    echo \"$number\"\ndone\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break",
+              "body": "```bash\nfor number in $(seq 1 3); do\n    if [[ $number == 2 ]]; then\n        # Skip entire rest of loop.\n        break;\n    fi\n    # This will only print 1\n    echo \"$number\"\ndone\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Until",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Until",
+              "body": "```bash\ncount=0\nuntil [ $count -gt 10 ]; do\n    echo \"$count\"\n    ((count++))\ndone\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While with increment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While with increment",
+              "body": "```bash\ni=1\nwhile [[ $i -lt 4 ]]; do\n    echo \"Number: $i\"\n    ((i++))\ndone\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While with decrement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While with decrement",
+              "body": "```bash\ni=3\nwhile [[ $i -gt 0 ]]; do\n    echo \"Number: $i\"\n    ((i--))\ndone\n```",
+              "footer": "#### Combined with test\n\n```bash\ni=3\nwhile ((i--)); do\n    echo \"Number: $i\"\ndone\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Forever",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Forever",
+              "body": "```bash\nwhile true; do\n    # here is some code.\ndone\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Forever (shorthand)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Forever (shorthand)",
+              "body": "```bash\nwhile :; do\n    # here is some code.\ndone\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reading lines",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reading lines",
+              "body": "```bash\ncat file.txt | while read line; do\n    echo $line\ndone\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Bash Functions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Defining functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Defining functions",
+              "body": "```bash\nmyfunc() {\n    echo \"hello $1\"\n}\n```",
+              "footer": "```bash\nfunction myfunc() {\necho \"hello $1\"\n}\n```\n```bash\nmyfunc \"John\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Returning values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Returning values",
+              "body": "```bash\nmyfunc() {\n    local myresult='some value'\n    echo $myresult\n}\n```",
+              "footer": "```bash\nresult=\"$(myfunc)\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Raising errors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Raising errors",
+              "body": "```bash\nmyfunc() {\n    return 1\n}\n```",
+              "footer": "```bash\nif myfunc; then\necho \"success\"\nelse\necho \"failure\"\nfi\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Bash Options {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Options",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Options",
+              "body": "```bash\n# Avoid overlay files\n# (echo \"hi\" > foo)\nset -o noclobber\n\n# Used to exit upon error\n# avoiding cascading errors\nset -o errexit\n\n# Unveils hidden failures\nset -o pipefail\n\n# Exposes unset variables\nset -o nounset\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Glob options",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Glob options",
+              "body": "```bash\n# Non-matching globs are removed\n# ('*.foo' => '')\nshopt -s nullglob\n\n# Non-matching globs throw errors\nshopt -s failglob\n\n# Case insensitive globs\nshopt -s nocaseglob\n\n# Wildcards match dotfiles\n# (\"*.sh\" => \".foo.sh\")\nshopt -s dotglob\n\n# Allow ** for recursive matches\n# ('lib/**/*.rb' => 'lib/a/b/c.rb')\nshopt -s globstar\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Bash History {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Commands",
+              "body": "| Command               | Description                               |\n| --------------------- | ----------------------------------------- |\n| `history`             | Show history                              |\n| `sudo !!`             | Run the previous command with sudo        |\n| `shopt -s histverify` | Don't execute expanded result immediately |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Expansions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Expansions",
+              "body": "| Expression   | Description                                          |\n| ------------ | ---------------------------------------------------- |\n| `!$`         | Expand last parameter of most recent command         |\n| `!*`         | Expand all parameters of most recent command         |\n| `!-n`        | Expand `n`th most recent command                     |\n| `!n`         | Expand `n`th command in history                      |\n| `!<command>` | Expand most recent invocation of command `<command>` |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operations",
+              "body": "| Code                 | Description                                                           |\n| -------------------- | --------------------------------------------------------------------- |\n| `!!`                 | Execute last command again                                            |\n| `!!:s/<FROM>/<TO>/`  | Replace first occurrence of `<FROM>` to `<TO>` in most recent command |\n| `!!:gs/<FROM>/<TO>/` | Replace all occurrences of `<FROM>` to `<TO>` in most recent command  |\n| `!$:t`               | Expand only basename from last parameter of most recent command       |\n| `!$:h`               | Expand only directory from last parameter of most recent command      |\n\n`!!` and `!$` can be replaced with any valid expansion.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Slices",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Slices",
+              "body": "| Code     | Description                                                                              |\n| -------- | ---------------------------------------------------------------------------------------- |\n| `!!:n`   | Expand only `n`th token from most recent command (command is `0`; first argument is `1`) |\n| `!^`     | Expand first argument from most recent command                                           |\n| `!$`     | Expand last token from most recent command                                               |\n| `!!:n-m` | Expand range of tokens from most recent command                                          |\n| `!!:n-$` | Expand `n`th token to last from most recent command                                      |\n\n`!!` can be replaced with any valid expansion i.e. `!cat`, `!-2`, `!42`, etc.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Numeric calculations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Numeric calculations",
+              "body": "```bash\n$((a + 200))      # Add 200 to $a\n```",
+              "footer": "```bash\n$(($RANDOM%200))  # Random number 0..199\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Subshells",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Subshells",
+              "body": "```bash\n(cd somedir; echo \"I'm now in $PWD\")\npwd # still in first directory\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inspecting commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inspecting commands",
+              "body": "```bash\ncommand -V cd\n#=> \"cd is a function/alias/whatever\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Redirection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Redirection",
+              "body": "```bash\npython hello.py > output.txt   # stdout to (file)\npython hello.py >> output.txt  # stdout to (file), append\npython hello.py 2> error.log   # stderr to (file)\npython hello.py 2>&1           # stderr to stdout\npython hello.py 2>/dev/null    # stderr to (null)\npython hello.py &>/dev/null    # stdout and stderr to (null)\n```",
+              "footer": "```bash\npython hello.py < foo.txt      # feed foo.txt to stdin for python\n```",
+              "spanConfig": "row-span-2 .col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Source relative",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Source relative",
+              "body": "```bash\nsource \"${0%/*}/../share/foo.sh\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Directory of script",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Directory of script",
+              "body": "```bash\nDIR=\"${0%/*}\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Case/switch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Case/switch",
+              "body": "```bash\ncase \"$1\" in\n    start | up)\n    vagrant up\n    ;;\n\n    *)\n    echo \"Usage: $0 {start|stop|ssh}\"\n    ;;\nesac\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Trap errors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Trap errors",
+              "body": "```bash\ntrap 'echo Error at about $LINENO' ERR\n```",
+              "footer": "or\n```bash\ntraperr() {\necho \"ERROR: ${BASH_SOURCE[1]} at about ${BASH_LINENO[0]}\"\n}\nset -o errtrace\ntrap traperr ERR\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "printf",
+          "level": 3,
+          "cards": [
+            {
+              "title": "printf",
+              "body": "```bash\nprintf \"Hello %s, I'm %s\" Sven Olga\n#=> \"Hello Sven, I'm Olga\n\nprintf \"1 + 1 = %d\" 2\n#=> \"1 + 1 = 2\"\n\nprintf \"Print a float: %f\" 2\n#=> \"Print a float: 2.000000\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Getting options",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting options",
+              "body": "```bash\nwhile [[ \"$1\" =~ ^- && ! \"$1\" == \"--\" ]]; do case $1 in\n    -V | --version )\n    echo $version\n    exit\n    ;;\n    -s | --string )\n    shift; string=$1\n    ;;\n    -f | --flag )\n    flag=1\n    ;;\nesac; shift; done\nif [[ \"$1\" == '--' ]]; then shift; fi\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check for command's result",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check for command's result",
+              "body": "```bash\nif ping -c 1 google.com; then\n    echo \"It appears you have a working internet connection\"\nfi\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Special variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Special variables",
+              "body": "| Expression | Description                  |\n| ---------- | ---------------------------- |\n| `$?`       | Exit status of last task     |\n| `$!`       | PID of last background task  |\n| `$$`       | PID of shell                 |\n| `$0`       | Filename of the shell script |\n\nSee [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Grep check",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Grep check",
+              "body": "```bash\nif grep -q 'foo' ~/.bash_history; then\n    echo \"You appear to have typed 'foo' in the past\"\nfi\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Backslash escapes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Backslash escapes",
+              "body": "- &nbsp;\n- \\!\n- \\\"\n- \\#\n- \\&\n- \\'\n- \\(\n- \\)\n- \\,\n- \\;\n- \\<\n- \\>\n- \\[\n- \\|\n- \\\\\n- \\]\n- \\^\n- \\{\n- \\}\n- \\`\n- \\$\n- \\*\n- \\?\n\n{.cols-4 .marker-none}\n\nEscape these special characters with `\\`",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Heredoc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Heredoc",
+              "body": "```sh\ncat <<END\nhello world\nEND\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Go to previous directory",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Go to previous directory",
+              "body": "```bash\npwd # /home/user/foo\ncd bar/\npwd # /home/user/foo/bar\ncd -\npwd # /home/user/foo\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reading input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reading input",
+              "body": "```bash\necho -n \"Proceed? [y/n]: \"\nread ans\necho $ans\n```",
+              "footer": "```bash\nread -n 1 ans    # Just one character\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Conditional execution",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conditional execution",
+              "body": "```bash\ngit commit && git push\ngit commit || echo \"Commit failed\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Strict mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strict mode",
+              "body": "```bash\nset -euo pipefail\nIFS=$'\\n\\t'\n```",
+              "footer": "See: [Unofficial bash strict mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Optional arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Optional arguments",
+              "body": "```bash\nargs=(\"$@\")\nargs+=(foo)\nargs+=(bar)\necho \"${args[@]}\"\n```",
+              "footer": "Put the arguments into an array and then append",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see {.cols-1}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see {.cols-1}",
+          "body": "- [Devhints](https://devhints.io/bash) _(devhints.io)_\n- [Bash-hackers wiki](http://wiki.bash-hackers.org/) _(bash-hackers.org)_\n- [Shell vars](http://wiki.bash-hackers.org/syntax/shellvars) _(bash-hackers.org)_\n- [Learn bash in y minutes](https://learnxinyminutes.com/docs/bash/) _(learnxinyminutes.com)_\n- [Bash Guide](http://mywiki.wooledge.org/BashGuide) _(mywiki.wooledge.org)_\n- [ShellCheck](https://www.shellcheck.net/) _(shellcheck.net)_\n- [shell - Standard Shell](https://devmanual.gentoo.org/tools-reference/bash/index.html) _(devmanual.gentoo.org)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

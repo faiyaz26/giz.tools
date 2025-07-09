@@ -1,0 +1,558 @@
+{
+  "id": "openssl",
+  "metadata": {
+    "title": "OpenSSL",
+    "date": "2020-11-25T18:28:43.000Z",
+    "icon": "icon-style",
+    "background": "bg-indigo-600",
+    "tags": null,
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "This is a reference of commands to use to interact with electronic certificates\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Private Key {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Print out the private key details",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Print out the private key details",
+              "body": "```bash\nopenssl rsa -check -text -in privateKey.key\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Print out the hashes of the private key",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Print out the hashes of the private key",
+              "body": "```bash\nopenssl rsa -noout -modulus -in privateKey.key | openssl md5\nopenssl rsa -noout -modulus -in privateKey.key | openssl sha1\nopenssl rsa -noout -modulus -in privateKey.key | openssl sha256\nopenssl rsa -noout -modulus -in privateKey.key | openssl sha512\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Change password",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Change password",
+              "body": "```bash\nopenssl rsa -aes256 -in privateKey.key -out newPrivateKey.key\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "List available elliptic curves",
+          "level": 3,
+          "cards": [
+            {
+              "title": "List available elliptic curves",
+              "body": "```bash\nopenssl ecparam -list_curves\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Create elliptic curve private key with a specific curve",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create elliptic curve private key with a specific curve",
+              "body": "```bash\nopenssl ecparam -name secp521r1 -genkey -noout -out privateKey.key\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Certificate {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Print out the hashes of the certificate",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Print out the hashes of the certificate",
+              "body": "```bash\nopenssl x509 -noout -modulus -in certificate.crt | openssl md5\nopenssl x509 -noout -modulus -in certificate.crt | openssl sha1\nopenssl x509 -noout -modulus -in certificate.crt | openssl sha256\nopenssl x509 -noout -modulus -in certificate.crt | openssl sha512\n```",
+              "footer": "Or, alternatively:\n```bash\nopenssl x509 -noout -fingerprint -in certificate.crt\nopenssl x509 -noout -fingerprint -sha256 -in certificate.crt\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Print out the content of the certificates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Print out the content of the certificates",
+              "body": "```bash\nopenssl x509 -in certificate.crt -noout -text|more\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Print out specific fields of the certificates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Print out specific fields of the certificates",
+              "body": "```bash\nopenssl x509 -noout -subject certificate.crt\nopenssl x509 -noout -issuer certificate.crt\nopenssl x509 -noout -dates certificate.crt\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inspect server certificates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inspect server certificates",
+              "body": "```bash\necho | openssl s_client -servername www.openssl.org -connect \\\nwww.openssl.org:443 2>/dev/null | openssl x509 -noout -text|more\necho | openssl s_client -servername imap.arcor.de -connect \\\nimap.arcor.de:993 2>/dev/null | openssl x509 -noout -text|more\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Verify certificates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Verify certificates",
+              "body": "```bash\nopenssl verify -verbose -x509_strict -CAfile \\\nissuer.crt Test\\ Haeschen\\ 1.crt\n```",
+              "footer": "Result:\n```bash\nTest Haeschen 1.crt: OK\n```\n**Corrupted**\n([for example](https://security.stackexchange.com/questions/60804/creating-an-x-509-certificate-with-an-invalid-signature))\n```bash\nopenssl verify -verbose -x509_strict -CAfile \\\nissuer.crt Test\\ Haeschen\\ 1_corrupted.crt\n```\nResult:\n```bash\nC = DE, ST = Thueringen, L = Rudolstadt, O = Damaschkestr. 11, OU = Arbeitszimmer, CN = Test Haeschen 1\nerror 7 at 0 depth lookup: certificate signature failure\nerror Test Haeschen 1_corrupted.crt: verification failed\n40270500477F0000:error:0200008A:rsa routines:RSA_padding_check_PKCS1_type_1:invalid padding:../crypto/rsa/rsa_pk1.c:75:\n40270500477F0000:error:02000072:rsa routines:rsa_ossl_public_decrypt:padding check failed:../crypto/rsa/rsa_ossl.c:598:\n40270500477F0000:error:1C880004:Provider routines:rsa_verify:RSA lib:../providers/implementations/signature/rsa_sig.c:774:\n40270500477F0000:error:06880006:asn1 encoding routines:ASN1_item_verify_ctx:EVP lib:../crypto/asn1/a_verify.c:217:\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "S/Mime {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "create signature",
+          "level": 3,
+          "cards": [
+            {
+              "title": "create signature",
+              "body": "```bash\nopenssl smime -sign -in msg.txt -text -out msg.p7s \\\n-signer certificate.crt -inkey privateKey.key\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Verify signature",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Verify signature",
+              "body": "```bash\nopenssl smime -verify -in msg.p7s -CAfile chain.pem\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CRL {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Print out the contents of the CRL",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Print out the contents of the CRL",
+              "body": "```bash\nopenssl crl -inform DER -noout -text  -in crl/cacrl.der\nopenssl crl -inform PEM -noout -text  -in crl/cacrl.pem\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "PKCS#12 {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Display contents",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Display contents",
+              "body": "```bash\nopenssl pkcs12 -info -in  digitalIdentity.p12\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Create from certificate and private key",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create from certificate and private key",
+              "body": "```bash\nopenssl pkcs12 -export -in certificate.cert \\\n-inkey privateKey.key -out digitalIdentity.p12\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extract private key",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extract private key",
+              "body": "```bash\nopenssl pkcs12 -in digitalIdentity.p12 -out privateKey.key\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Convert to PEM",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Convert to PEM",
+              "body": "```bash\nopenssl pkcs12 -in digitalIdentity.p12 -out digitalIdentity.pem\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "TSA {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Display query",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Display query",
+              "body": "```bash\nopenssl ts -query -in query.tsq -text\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Display reply",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Display reply",
+              "body": "```bash\nopenssl ts -reply -in reply.tsr -text\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Verify reply",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Verify reply",
+              "body": "```bash\nopenssl ts -verify -in reply.tsr -data data.dat -CAfile chain.pem\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extract token from reply",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extract token from reply",
+              "body": "```bash\nopenssl ts -reply -in reply.tsr -token_out -out token.tk\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extract certificates from token",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extract certificates from token",
+              "body": "```bash\nopenssl pkcs7 -inform DER -in token.tk -print_certs -noout -text\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CSR {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Create from existing key",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create from existing key",
+              "body": "```bash\nopenssl req -new -key privateKey.key -out my.csr\n```",
+              "footer": "This can of course be a RSA key or one based on an elliptic curve. Available curves can be listed using\n```bash\nopenssl ecparam -list_curves\n```\nAfterwards you chose one of the curves and create a private key like so:\n```bash\nopenssl ecparam -name secp521r1 -genkey -noout \\\n-out privateKey.key\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Display",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Display",
+              "body": "```bash\nopenssl req -in my.csr -noout -text\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "HTTPS {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Dump Certificates PEM encoded",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dump Certificates PEM encoded",
+              "body": "```bash\nopenssl s_client -showcerts -connect www.example.com:443\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "STARTTLS {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Dump Certificates PEM encoded",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dump Certificates PEM encoded",
+              "body": "```bash\nopenssl s_client -showcerts -starttls imap \\\n-connect mail.domain.com:139\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "S/MIME verification {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Possible outcomes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Possible outcomes",
+              "body": "```bash\nVerification failure\n140485684135232:error:2E09A09E:CMS routines:CMS_SignerInfo_verify_content:verification failure:../crypto/cms/cms_sd.c:847:\n140485684135232:error:2E09D06D:CMS routines:CMS_verify:content verify error:../crypto/cms/cms_smime.c:393:\n```",
+              "footer": "Message signature not trusted (return code 4):\n```bash\nVerification failure\n140146111432000:error:2E099064:CMS routines:cms_signerinfo_verify_cert:certificate verify error:../crypto/cms/cms_smime.c:252:Verify error:unable to get local issuer certificate\n```\nMessage not signed (return code 2):\n```bash\nError reading S/MIME message\n140701208487232:error:0D0D40CD:asn1 encoding routines:SMIME_read_ASN1:invalid mime type:../crypto/asn1/asn_mime.c:469:type: multipart/alternative\n```\nValidation successful (return code 0):\n```bash\nVerification successful\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Verify the validity of an email message",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Verify the validity of an email message",
+              "body": "```bash\nopenssl cms -verify -in some_email_message.eml\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Verify the validity of an email message explicitly specifying trust",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Verify the validity of an email message explicitly specifying trust",
+              "body": "```bash\nopenssl cms -verify -in some_email_message \\\n-CAfile trust_anchor-crt\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Signed and encrypted messages need to be decrypted first:",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Signed and encrypted messages need to be decrypted first:",
+              "body": "```bash\nopenssl cms -decrypt -out decrypted_email_message \\\n-inkey p12.pem -in some_encrypted_email_message\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Raw {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "See the raw structure of an ASN.1 file (only for DER encoded files)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "See the raw structure of an ASN.1 file (only for DER encoded files)",
+              "body": "```bash\nopenssl asn1parse -in mysterious_file.pem\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "With a bit more detail",
+          "level": 3,
+          "cards": [
+            {
+              "title": "With a bit more detail",
+              "body": "```bash\nopenssl asn1parse -dump -strictpem -in mysterious_file.pem\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Some resources with useful OpenSSL commands",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Some resources with useful OpenSSL commands",
+          "body": "- [OpenSSL command cheatsheet](https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/)\n- [21 OpenSSL Examples to Help You in Real-World](https://geekflare.com/openssl-commands-certificates/)\n- [The Most Common OpenSSL Commands](https://www.sslshopper.com/article-most-common-openssl-commands.html)\n- [OpenSSL Quick Reference Guide](https://www.digicert.com/ssl-support/openssl-quick-reference-guide.htm)\n- [openssl_commands.md](https://gist.github.com/webtobesocial/5313b0d7abc25e06c2d78f8b767d4bc3)\n- [OpenSSL Essentials: Working with SSL Certificates, Private Keys and CSRs](https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs)\n- [OpenSSL tips and tricks](https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art030)\n- [Checking A Remote Certificate Chain With OpenSSL ](https://langui.sh/2009/03/14/checking-a-remote-certificate-chain-with-openssl/)\n- [OpenSSL: how to extract certificates and token status from RFC3161 timestamping reply?](https://stackoverflow.com/questions/66044640/openssl-how-to-extract-certificates-and-token-status-from-rfc3161-timestamping)\n- [Steps to generate CSR for SAN certificate with openssl](https://www.golinuxcloud.com/openssl-subject-alternative-name/)\n- [Howto add a Subject Alternative Name extension into a Certificate Signing Request](https://support.microfocus.com/kb/doc.php?id=3522065)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

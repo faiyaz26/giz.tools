@@ -1,0 +1,1912 @@
+{
+  "id": "swift",
+  "metadata": {
+    "title": "Swift",
+    "date": "2023-02-28T14:50:01.000Z",
+    "background": "bg-[#eb4e38]",
+    "tags": [
+      "Apple",
+      "iOS",
+      "iPadOS"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This cheat sheet provides examples of using Swift that cover basic Swift knowledge, control flow etc.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Variable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variable",
+              "body": "```swift\nvar score = 0  // Variable\nlet pi = 3.14  // Constant\n\nvar greeting = \"Hello\"\nvar numberOfToys = 8\nvar isMorning = true\n\nvar numberOfToys: Int = 8\nnumberOfToys += 1\n\nprint(numberOfToys)\n// prints \"9\"\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type annotations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type annotations",
+              "body": "```swift\nvar greeting: String = \"Hello\"\nvar numberOfToys: Int = 8\nvar isMorning: Bool = true\nvar price: Double = 8.99\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arithmetic operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arithmetic operators",
+              "body": "- `+` Add\n- `-` Subtraction\n- `*` Multiplication\n- `/` Division\n- `%` Remainder\n\n{.cols-2 .marker-none}\n\n\n\n- `+=` Adds and assigns sums\n- `-=` subtract and assign the difference\n- `*=` Multiplication and assignment\n- `/=` Divide and assign quotient\n- `%=` Divide and assign remainder\n\n{.marker-none}\n\n```swift\nvar x = 0\nx = 4 + 2 // x is now 6\nx = 4 - 2 // x is now 2\nx = 4 * 2 // x is now 8\nx = 4 / 2 // x is now 2\nx = 4 % 2 // x is now 0\n```",
+              "footer": "#### Compound Assignment Operators\n\n```swift\nvar numberOfDogs = 100\nnumberOfDogs += 1\nprint(\"There are \\(numberOfDogs) Dalmatians!\")\n\n// print: There are 101 Dalmatians!\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String interpolation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String interpolation",
+              "body": "```swift\nvar apples = 6\nprint(\"I have \\(apples) apples!\")\n\n// print: I have 6 apples!\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multi-line string",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multi-line string",
+              "body": "```swift\nlet myLongString = \"\"\"\nSwift?\nThis is my favorite language!\nYeah!\n\"\"\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Code Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Code Comments",
+              "body": "```swift\n// This line represents a comment in Swift.\n\n/*\nThis is all commented out.\nNone will run!\n*/\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Form a tuple",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Form a tuple",
+              "body": "```swift\nlet player = (\"Maya\", 5, 150)\n\nprint(player) // (\"Maya\", 5, 150)\nprint(\"\\(player.0): level \\(player.1), \\(player.2) pts\") // Maya: level 5, 150 pts\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Decompose tuple",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Decompose tuple",
+              "body": "```swift\nlet player = (name: \"Maya\", level: 5)\nlet (currentName, curLevel) = player\nprint(\"\\(currentName): level \\(curLevel)\")\n// print: Maya: level 5\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Special comment syntax (MARK)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Special comment syntax (MARK)",
+              "body": "```swift\n// MARK: -view settings\n```",
+              "footer": "`MARK` can be used to display comments in the column",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Special comment syntax (TODO)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Special comment syntax (TODO)",
+              "body": "```swift\n// TODO: update logic to accommodate data changes\n```",
+              "footer": "`TODO` is used to display reminders of things that need to be done",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Special Comment Syntax (FIXME)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Special Comment Syntax (FIXME)",
+              "body": "```swift\n// FIXME: Fix buggy behavior when making changes to existing entries\n```",
+              "footer": "`FIXME` is used to display reminders about things that need to be fixed",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Variable",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Variable declaration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variable declaration",
+              "body": "```swift\nvar greeting = \"Hello\"\nvar numberOfToys = 8\nvar isMorning = true\n```",
+              "footer": "For clarity, variable declarations can contain type annotations:\n```swift\nvar greeting: String = \"Hello\"\nvar numberOfToys: Int = 8\nvar isMorning: Bool = true\n```\nVariables are mutable. Their values be changed:\n```swift\nvar numberOfToys: Int = 8\nnumberOfToys += 1\nprint(numberOfToys)\n// print \"9\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Constants",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Constants",
+              "body": "```swift\nlet greeting = \"Hello\"\nlet numberOfToys = 8\nlet isMorning = true\n```",
+              "footer": "For clarity, constant declarations can contain type annotations:\n```swift\nlet greeting: String = \"Hello\"\nlet numberOfToys: Int = 8\nlet isMorning: Bool = true\n```\nConstants are immutable. Their values be changed:\n```swift\nlet numberOfToys: Int = 8\nnumberOfToys += 1\n// Error: numberOfToys is immutable\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Computed variables (get and set)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Computed variables (get and set)",
+              "body": "```swift\nimport Foundation\n\nlet df = DateFormatter()\ndf.dateFormat = \"d MMMM yyyy\"\n\nguard var birth = df.date(from: \"5 June 1999\") else {\n    print(\"Date is not valid\")\n    return\n}\n\nvar age: Int {\n    Calendar.current\n        .dateComponents([.year],\n                        from: birth,\n                        to: Date()).year!\n}\n\nprint(age) // 23\nguard let birth2 = df.date(from: \"5 June 2002\") else {\n    print(\"Date is not valid\")\n    return\n}\nbirth = birth2\nprint(age) // 20\n```",
+              "footer": "In the example below, distanceInFeet has a `getter` and a `setter`. Because of the `setter`, the `getter` requires the\nkeyword `get`:\n```swift\nvar distanceInMeters: Float = 100\nvar distanceInFeet: Float {\nget {\ndistanceInMeters *3.28\n}\nset(newDistance) {\ndistanceInMeters = newDistance /3.28\n}\n}\nprint(distanceInMeters) // 100.0\nprint(distanceInFeet)   // 328.0\ndistanceInFeet = 250\nprint(distanceInMeters) // 76.21951\nprint(distanceInFeet)   // 250.0\ndistanceInMeters = 800\nprint(distanceInMeters) // 800.0\nprint(distanceInFeet)   // 2624.0\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "willSet",
+          "level": 3,
+          "cards": [
+            {
+              "title": "willSet",
+              "body": "```swift\nvar distance = 5 {\n  willSet {\n    print(\"The distance will be set\")\n  }\n}\n\ndistance = 10 // print: distance will be set\n```",
+              "footer": "The new value can be accessed in `willSet`:\n```swift\nvar distance = 5 {\nwillSet(newDistance) {\nprint(\"The distance will be set \\(newDistance)\")\n}\n}\ndistance = 10 // print: distance will be set to 10\n```\n`willSet` can be used to execute some code before setting the variable value",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "didSet",
+          "level": 3,
+          "cards": [
+            {
+              "title": "didSet",
+              "body": "```swift\nvar distance = 5 {\n  didSet {\n    print(\"The distance is set to \\(distance)\")\n    print(\"Its old value is: \\(oldValue)\")\n  }\n}\ndistance = 10 // print: distance will be set to 10\n              // print: its old value is: 5\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "willSet and didSet",
+          "level": 3,
+          "cards": [
+            {
+              "title": "willSet and didSet",
+              "body": "```swift\nvar distance = 5 {\n  willSet(newDistance) {\n    print(\"The distance will be set to \\(newDistance)\")\n  }\n  didSet {\n    print(\"The distance is set to \\(distance)\")\n    print(\"Its old value is: \\(oldValue)\")\n  }\n}\ndistance = 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Conditions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "if statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "if statement",
+              "body": "```swift\nvar halloween = true\nif halloween {\n  print(\"Trick or treat!\")\n}\n// print: Trick or treat!\nif 5 > 3 {\n  print(\"5 is greater than 3\")\n} else {\n  print(\"5 is not more than 3\")\n}\n// output: \"5 is greater than 3\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "else statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "else statement",
+              "body": "```swift\nvar turbulence = false\n\nif turbulence {\n  print(\"Please sit down.\")\n} else {\n  print(\"You are free to move around.\")\n}\n// print: You are free to move around.\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "else if statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "else if statement",
+              "body": "```swift\nvar weather = \"rainy\"\nif weather == \"sunny\" {\n  print(\"Get some sunscreen\")\n} else if weather == \"rainy\" {\n  print(\"Take an umbrella\")\n} else if weather == \"snowing\" {\n  print(\"Put on your snow boots\")\n} else {\n  print(\"Invalid weather\")\n}\n// print: take an umbrella\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comparison Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comparison Operators",
+              "body": "```swift\n5 > 1      // true\n6 < 10     // true\n2 >= 3     // false\n3 <= 5     // true\n\"A\" == \"a\" // false\n\"B\" != \"b\" // true\n```",
+              "footer": "-`<` less than <br> -`>` greater than <br> -`<=` less than or equal to <br> -`>=` greater than or equal to <br> -`==` is\nequal to <br> -`!=` is not equal to",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Range Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Range Operators",
+              "body": "```swift\na...b      // numbers between a and b (including both a and b)\na..<b      // numbers between a and b (including a but excluding b)\n...b      // numbers till b (including b)\n```",
+              "footer": "-`a...b` Closed Range <br> -`a..<b` Half-Open Range <br> -`...b` One-Sided Range",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ternary conditional operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ternary conditional operator",
+              "body": "```swift\nvar driverLicense = true\n\ndriverLicense\n    ? print(\"driver seat\") : print(\"passenger seat\")\n// print: driver's seat\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "switch statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "switch statement",
+              "body": "```swift\nvar secondaryColor = \"green\"\n\nswitch secondaryColor {\n  case \"orange\":\n    print(\"A mixture of red and yellow\")\n  case \"purple\":\n    print(\"A mix of red and blue\")\n  default:\n    print(\"This may not be a secondary color\")\n}\n// print: mix of blue and yellow\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "switch statement: interval matching",
+          "level": 3,
+          "cards": [
+            {
+              "title": "switch statement: interval matching",
+              "body": "```swift\nlet year = 1905\nvar artPeriod: String\n\nswitch year {\n  case 1860...1885:\n    artPeriod = \"Impressionism\"\n  case 1886...1910:\n    artPeriod = \"Post-Impressionism\"\n  default:\n    artPeriod = \"Unknown\"\n}\n// print: post-impressionism\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "switch statement: composite case",
+          "level": 3,
+          "cards": [
+            {
+              "title": "switch statement: composite case",
+              "body": "```swift\nlet service = \"Seamless\"\n\nswitch service {\ncase \"Uber\", \"Lyft\":\n    print(\"travel\")\n  case \"DoorDash\", \"Seamless\", \"GrubHub\":\n    print(\"Restaurant delivery\")\n  case \"Instacart\", \"FreshDirect\":\n    print(\"Grocery Delivery\")\n  default:\n    print(\"Unknown service\")\n}\n// print: restaurant takeaway\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "switch statement: where clause",
+          "level": 3,
+          "cards": [
+            {
+              "title": "switch statement: where clause",
+              "body": "```swift\nlet num = 7\n\nswitch num {\n  case let x where x % 2 == 0:\n    print(\"\\(num) is even\")\n  case let x where x % 2 == 1:\n    print(\"\\(num) odd number\")\n  default:\n    print(\"\\(num) is invalid\")\n}\n\n// print: 7 odd\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logical Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logical Operators",
+              "body": "```swift\n!true  // false\n!false //true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logical Operators &&",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logical Operators &&",
+              "body": "```swift\ntrue && true   // true\ntrue && false  // false\nfalse && true  // false\nfalse && false // false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logical operators ||",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logical operators ||",
+              "body": "```swift\ntrue || true   // true\ntrue || false  // true\nfalse || true  // true\nfalse || false // false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Combined Logical Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Combined Logical Operators",
+              "body": "```swift\n!false && true || false // true\n```",
+              "footer": "`!false && true` first evaluates and returns `true` Then, the expression, `true` || `false` evaluates and returns the\nfinal result `true`\n```swift\nfalse || true && false // false\n```\n`true && false` first evaluates to return `false` Then, the expression, `false` || `false` evaluates and returns the\nfinal result `false`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Control the order of execution",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Control the order of execution",
+              "body": "```swift\n// without parentheses:\ntrue || true && false || false\n//----> true\n\n// with brackets:\n(true || true) && (false || false)\n//----> false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Simple guards",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Simple guards",
+              "body": "```swift\nfunc greet(name: String?) {\n  guard let unwrapped = name else {\n    print(\"Hello guest!\")\n    return\n  }\n  print(\"Hello \\(unwrapped)!\")\n}\ngreet(name: \"Asma\") // output: Hello Asma!\ngreet(name: nil)    // output: Hello guest!\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "cycle",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "scope",
+          "level": 3,
+          "cards": [
+            {
+              "title": "scope",
+              "body": "```swift\nlet zeroToThree = 0...3\n//zeroToThree: 0, 1, 2, 3\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "stride() function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "stride() function",
+              "body": "```swift\nfor oddNum in stride(from: 1, to: 5, by: 2) {\n  print(oddNum)\n}\n// print: 1\n// print: 3\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "for-in loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for-in loop",
+              "body": "```swift\nfor char in \"hehe\" {\n  print(char)\n}\n// print: h\n// print: e\n// print: h\n// print: e\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "continue keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "continue keyword",
+              "body": "```swift\nfor num in 0...5 {\n  if num % 2 == 0 {\n    continue\n  }\n  print(num)\n}\n// print: 1\n// print: 3\n// print: 5\n```",
+              "footer": "The `continue` keyword will force the loop to continue for the next iteration",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "break keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "break keyword",
+              "body": "```swift\nfor char in \"supercalifragilistic\" {\nif char == \"c\" {\n    break\n  }\n  print(char)\n}\n// print: s\n// print: u\n// print: p\n// print: e\n// print: r\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use underscores",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use underscores",
+              "body": "```swift\nfor _ in 1...3 {\n  print(\"Ole\")\n}\n// print: Ole\n// print: Ole\n// print: Ole\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "while loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "while loop",
+              "body": "```swift\nvar counter = 1\nvar stopNum = Int.random(in: 1...10)\n\nwhile counter < stopNum {\n  print(counter)\n  counter += 1\n}\n// loop to print until the stop condition is met\n```",
+              "footer": "A `while` loop accepts a condition and keeps executing its body code while the provided condition is `true`. If the\ncondition is never false, the loop will keep running and the program will get stuck in an `infinite loop`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Arrays and collections",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array",
+              "body": "```swift\nvar scores = [Int]()\n// array is empty: []\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".count property",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".count property",
+              "body": "```swift\nvar grocery = [\"🥓\", \"🥞\", \"🍪\", \"🥛\", \"🍊\"]\nprint(grocery.count)\n// print: 5\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "index",
+          "level": 3,
+          "cards": [
+            {
+              "title": "index",
+              "body": "```swift\nvar vowels = [\"a\", \"e\", \"i\", \"o\", \"u\"]\n\nprint(vowels[0]) // prints: a\nprint(vowels[1]) // prints: e\nprint(vowels[2]) // print: i\nprint(vowels[3]) // prints: o\nprint(vowels[4]) // prints: u\n```",
+              "footer": "Note: Swift arrays are zero-indexed, meaning the first element has index 0.",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Initialize with array literal",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Initialize with array literal",
+              "body": "```swift\n// use type inference:\nvar snowfall = [2.4, 3.6, 3.4, 1.8, 0.0]\n// explicit type:\nvar temp: [Int] = [33, 31, 30, 38, 44]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Initialize with default value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Initialize with default value",
+              "body": "```swift\nvar teams = [Int](repeating: 0, count: 3)\nprint(teams) // prints: [0, 0, 0]\n// or with Array type\nvar sizes = Array<Int>(repeating: 0, count: 3)\nprint(sizes) // prints: [0, 0, 0]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".append() method and += operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".append() method and += operator",
+              "body": "```swift\nvar gymBadges = [\"Boulder\", \"Cascade\"]\ngymBadges.append(\"Thunder\")\ngymBadges += [\"Rainbow\", \"Soul\"]\n// [\"Boulder\", \"Cascade\", \"Thunder\",\n// \"Rainbow\", \"Soul\"]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".insert() and .remove() methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".insert() and .remove() methods",
+              "body": "```swift\nvar moon = [\"🌖\", \"🌗\", \"🌘\", \"🌑\"]\nmoon.insert(\"🌕\", at: 0)\n// [\"🌕\", \"🌖\", \"🌗\", \"🌘\", \"🌑\"]\n\nmoon.remove(at: 4)\n// [\"🌕\", \"🌖\", \"🌗\", \"🌘\"]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Iterate over an array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Iterate over an array",
+              "body": "```swift\nvar employees = [\"Peter\", \"Denial\", \"Jame\"]\nfor person in employees {\n  print(person)\n}\n// print: Peter\n// print: Denial\n// print: Jam\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Collection (Set)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Collection (Set)",
+              "body": "```swift\nvar paintingsInMOMA: Set = [\n  \"The Dream\",\n  \"The Starry Night\",\n  \"The False Mirror\"\n]\n```",
+              "footer": "We can use a collection (`Set`) to store `unique` elements of the same data type",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Empty collection (Set)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Empty collection (Set)",
+              "body": "```swift\nvar team = Set<String>()\n\nprint(team)\n// print: []\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Populate the collection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Populate the collection",
+              "body": "```swift\nvar vowels: Set = [\"a\", \"e\", \"i\", \"o\",\"u\"]\n```",
+              "footer": "To create a set filled with values, use the `Set` keyword before the assignment operator.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".insert()",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".insert()",
+              "body": "```swift\nvar cookieJar: Set = [\n  \"Chocolate Chip\",\n  \"Oatmeal Raisin\"\n]\n// add a new element\ncookieJar.insert(\"Peanut Butter Chip\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".remove() and .removeAll() methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".remove() and .removeAll() methods",
+              "body": "```swift\nvar oddNumbers: Set = [1, 2, 3, 5]\n\n// remove existing element\noddNumbers.remove(2)\n// remove all elements\noddNumbers.removeAll()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".contains()",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".contains()",
+              "body": "```swift\nvar names: Set = [\"Rosa\", \"Doug\", \"Waldo\"]\nprint(names.contains(\"Lola\")) // print: false\n\nif names.contains(\"Waldo\"){\n  print(\"There's Waldo!\")\n} else {\n  print(\"Where's Waldo?\")\n}\n// print: There's Waldo!\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".isEmpty property",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".isEmpty property",
+              "body": "```swift\nvar emptyList = [String]()\nprint(emptyList.isEmpty)     // print: true\n\nvar populatedList: [Int] = [1, 2, 3]\nprint(populatedList.isEmpty) // print: false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Iterate over a collection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Iterate over a collection",
+              "body": "```swift\nvar recipe: Set = [\"Egg\", \"Flour\", \"Sugar\"]\n\nfor ingredient in recipe {\n  print (\"Include \\(ingredient) in the recipe\")\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".isEmpty property",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".isEmpty property",
+              "body": "```swift\nvar emptySet = Set<String>()\nprint(emptySet.isEmpty)     // print: true\n\nvar populatedSet: Set = [1, 2, 3]\nprint(populatedSet.isEmpty) // print: false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".count property",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".count property",
+              "body": "```swift\nvar band: Set = [\"Peter\", \"Denial\", \"Jame\"]\n\nprint(\"The band has \\(band.count) players.\")\n// print: Band has 4 players.\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".intersection() Intersection",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".intersection() Intersection",
+              "body": "```swift\nvar setA: Set = [\"A\", \"B\", \"C\", \"D\"]\nvar setB: Set = [\"C\", \"D\", \"E\", \"F\"]\n\nvar setC = setA.intersection(setB)\nprint(setC) // print: [\"D\", \"C\"]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".union()",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".union()",
+              "body": "```swift\nvar setA: Set = [\"A\", \"B\", \"C\", \"D\"]\nvar setB: Set = [\"C\", \"D\", \"E\", \"F\"]\n\nvar setC = setA.union(setB)\nprint(setC)\n// print: [\"B\", \"A\", \"D\", \"F\", \"C\", \"E\"]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".symmetricDifference() Symmetric difference",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".symmetricDifference() Symmetric difference",
+              "body": "```swift\nvar setA: Set = [\"A\", \"B\", \"C\", \"D\"]\nvar setB: Set = [\"C\", \"D\", \"E\", \"F\"]\n\nvar setC = setA.symmetricDifference(setB)\nprint(setC)\n// print: [\"B\", \"E\", \"F\", \"A\"]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".subtracting() Subtraction",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".subtracting() Subtraction",
+              "body": "```swift\nvar setA: Set = [\"A\", \"B\", \"C\", \"D\"]\nvar setB: Set = [\"C\", \"D\"]\n\nvar setC = setA.subtracting(setB)\nprint(setC)\n// print: [\"B\", \"A\"]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "dictionary",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Base Dictionary",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Base Dictionary",
+              "body": "```swift\nvar dictionaryName = [\n  \"Key1\": \"Value1\",\n  \"Key2\": \"Value2\",\n  \"Key3\": \"Value3\"\n]\n```",
+              "footer": "An `unordered` collection of pairs of data or key-value pairs",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keys",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keys",
+              "body": "```swift\nvar fruitStand = [\n  \"Coconuts\": 12,\n  \"Pineapples\": 12,\n  \"Papaya\": 12\n]\n```",
+              "footer": "Each `key` is `unique` even if they all contain the same `value`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type Consistency",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type Consistency",
+              "body": "```swift\nvar numberOfSides = [\n  \"triangle\": 3,\n  \"square\": 4,\n  \"rectangle\": 4\n]\n```",
+              "footer": "Contains only `String` keys and `Int` values",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Initialize and populate the dictionary",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Initialize and populate the dictionary",
+              "body": "```swift\nvar employeeID = [\n  \"Hamlet\": 1367,\n  \"Horatio\": 8261,\n  \"Ophelia\": 9318\n]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Initialize an empty dictionary",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Initialize an empty dictionary",
+              "body": "```swift\n// initializer syntax:\nvar yearlyFishPopulation = [Int: Int]()\n\n// Empty dictionary literal syntax:\nvar yearlyBirdPopulation: [Int: Int] = [:]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "add to dictionary",
+          "level": 3,
+          "cards": [
+            {
+              "title": "add to dictionary",
+              "body": "```swift\nvar pronunciation = [\n  \"library\": \"lai·breh·ree\",\n  \"apple\": \"a·pl\"\n]\n// new key: \"programming\", new value: \"prow gra\"\npronunciation[\"programming\"] = \"prow·gra\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Delete key-value pair",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delete key-value pair",
+              "body": "```swift\nvar bookShelf = [\n  \"Goodnight\": \"Margaret Wise Brown\",\n  \"The BFG\": \"Roald Dahl\",\n  \"Falling Up\": \"Shel Silverstein\",\n  \"No, David!\": \"David Shannon\"\n]\n// remove value by setting key to nil\nbookShelf[\"The BFG\"] = nil\n\n// remove value using .removeValue()\nbookShelf.removeValue(forKey: \"Goodnight\")\n\n// remove all values\nbookShelf.removeAll()\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Modify the key-value pair",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Modify the key-value pair",
+              "body": "```swift\nvar change = [\n  \"Quarter\": 0.29,\n  \"Dime\": 0.15,\n  \"Nickel\": 0.05\n]\n\n// Change the value using subscript syntax\nchange[\"Quarter\"] = .25\n\n// Change the value using .updateValue()\nchange.updateValue(.10, forKey: \"Dime\")\n```",
+              "footer": "To change the value of a key-value pair, use the `.updateValue()` method or the subscript syntax by appending brackets\n`[ ]` with the existing keys within to the name of the dictionary, then adding the assignment operator _(`= `)_ followed\nby the modified value",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".isEmpty property",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".isEmpty property",
+              "body": "```swift\nvar bakery = [String:Int]()\n\n// check if the dictionary is empty\nprint(bakery.isEmpty) // prints true\nbakery[\"Cupcakes\"] = 12\n// check if the dictionary is empty\nprint(bakery.isEmpty) // print false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".count property",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".count property",
+              "body": "```swift\nvar fruitStand = [\n  \"Apples\": 12,\n  \"Oranges\", 17\n]\nprint(fruitStand.count) // print: 2\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Assigning values to variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Assigning values to variables",
+              "body": "```swift\nvar hex = [\n  \"red\": \"#ff0000\",\n  \"yellow\": \"#ffff00\",\n  \"blue\": \"#0000ff\",\n]\n\nprint(\"Blue hexadecimal code \\(hex[\"blue\"])\")\n// print: blue hex code Optional(\"#0000ff\")\n\nif let redHex = hex[\"red\"] {\n  print(\"red hexadecimal code \\(redHex)\")\n}\n// print: red hex code #ff0000\n```",
+              "footer": "Assigning the value of a key-value pair to a variable will return an optional value. To extract values, use the optional\nexpansion",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Traversing the dictionary",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Traversing the dictionary",
+              "body": "```swift\nvar emojiMeaning = [\n  \"🤔\": \"Thinking Face\",\n  \"😪\": \"Sleepy Face\",\n  \"😵\": \"Dizzy Face\"\n]\n// loop through keys and values\nfor (emoji, meaning) in emojiMeaning {\n  print(\"\\(emoji) is called '\\(meaning)Emoji'\")\n}\n// iterate through keys only\nfor emoji in emojiMeaning.keys {\n  print(emoji)\n}\n// iterate through values only\nfor meaning in emojiMeaning.values {\n  print(meaning)\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "function",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic functions",
+              "body": "```swift\nfunc washCar() -> Void {\n  print(\"Soap\")\n  print(\"Scrub\")\n  print(\"Rinse\")\n  print(\"Dry\")\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Call functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Call functions",
+              "body": "```swift\nfunc greetLearner() {\n print(\"Welcome to CheatSheets.zip!\")\n}\n// function call:\ngreetLearner()\n// print: Welcome to CheatSheets.zip!\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "return value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "return value",
+              "body": "```swift\nlet birthYear = 1994\nvar currentYear = 2020\n\nfunc findAge() -> Int {\n  return currentYear-birthYear\n}\n\nprint(findAge()) // prints: 26\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple parameters",
+              "body": "```swift\nfunc convertFracToDec(numerator: Double, denominator: Double) -> Double {\n  return numerator / denominator\n}\n\nlet decimal = convertFracToDec(numerator: 1.0, denominator: 2.0)\nprint(decimal) // prints: 0.5\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Omit parameter labels",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Omit parameter labels",
+              "body": "```swift\nfunc findDiff(_ a: Int, b: Int) -> Int {\n  return a -b\n}\n\nprint(findDiff(6, b: 4)) // prints: 2\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "return multiple values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "return multiple values",
+              "body": "```swift\nfunc smartphoneModel() -> (name: String, version: String, yearReleased: Int) {\n  return (\"iPhone\", \"8 Plus\", 2017)\n}\nlet phone = smartphoneModel()\n\nprint(phone.name)         // print: iPhone\nprint(phone.version)      // print: 8 Plus\nprint(phone.yearReleased) // print: 2017\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Parameters & Arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Parameters & Arguments",
+              "body": "```swift\nfunc findSquarePerimet(side: Int) -> Int {\n  return side *4\n}\n\nlet perimeter = findSquarePerimet(side: 5)\nprint(perimeter) // print: 20\n\n// Parameter: side\n// Argument: 5\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Implicit return",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Implicit return",
+              "body": "```swift\nfunc nextTotalSolarEclipse() -> String {\n  \"April 8th, 2024 🌎\"\n}\n\nprint(nextTotalSolarEclipse())\n// print: April 8th, 2024 🌎\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Default parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Default parameters",
+              "body": "```swift\nfunc greet(person: String = \"guest\") {\n  print(\"Hello \\(person)\")\n}\ngreet() // Hello guest\ngreet(person: \"Aliya\") // Hello Aliya\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Input and output parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Input and output parameters",
+              "body": "```swift\nvar currentSeason = \"Winter\"\n\nfunc season(month: Int, name: inout String) {\n  switch month {\n    case 1...2:\n      name = \"Winter ⛄️\"\n    case 3...6:\n      name = \"Spring 🌱\"\n    case 7...9:\n      name = \"Summer ⛱\"\n    case 10...11:\n      name = \"Autumn 🍂\"\n    default:\n      name = \"Unknown\"\n  }\n}\nseason(month: 4, name: &currentSeason)\n\nprint(currentSeason) // Spring 🌱\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "variable parameter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "variable parameter",
+              "body": "```swift\nfunc totalStudent(data: String...) -> Int {\n  let numStudents = data.count\n  return numStudents\n}\n\nprint(totalStudent(data: \"Denial\", \"Peter\"))\n// print: 2\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Optional parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Optional parameters",
+              "body": "```swift\nfunc getFirstInitial(from name: String?) -> String? {\n  return name?.first\n}\n```",
+              "footer": "Functions can accept optional types and return optional types. When a function cannot return a reasonable instance of\nthe requested type, it should return `nil`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "structure",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Structure Creation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Structure Creation",
+              "body": "```swift\nstruct Building {\n  var address: String\n  var floors: Int\n  init(address: String, floors: Int) {\n    self.address = address\n    self.floors = floors\n  }\n}\n```",
+              "footer": "Structs or structs are used to programmatically represent real-life objects in code. A structure is created using the\n`struct` keyword, followed by its name, followed by a body containing its properties and methods",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Default property values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Default property values",
+              "body": "```swift\nstruct Car {\n  var numOfWheels = 4\n  var topSpeed = 80\n}\n\nvar reliantRobin = Car(numOfWheels: 3)\n\nprint(reliantRobin.numOfWheels) // prints: 3\nprint(reliantRobin.topSpeed)    // print: 80\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Structural instance creation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Structural instance creation",
+              "body": "```swift\nstruct Person {\n  var name: String\n  var age: Int\n\n  init(name: String, age: Int) {\n    self.name = name\n    self.age = age\n  }\n}\n\n// Person instance:\nvar morty = Person(name: \"Peter\", age: 14)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "init() method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "init() method",
+              "body": "```swift\nstruct TV {\n  var size: Int\n  var type: String\n\n  init(size: Int, type: String) {\n    self.size = size\n    self.type = type\n  }\n}\n```",
+              "footer": "Using the `TV` class\n```swift\nvar newTV = TV(size: 65, type: \"LED\")\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check type",
+              "body": "```swift\nprint(type(of: \"abc\")) // print: String\nprint(type(of: 123))   // print: 123\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mutation method (mutating)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutation method (mutating)",
+              "body": "```swift\nstruct Menu {\n  var menuItems = [\"Fries\", \"Burgers\"]\n  mutating func addToMenu(dish: String) {\n    self.menuItems.append(dish)\n  }\n}\n```",
+              "footer": "Using the `Menu` class\n```swift\nvar dinerMenu = Menu()\ndinerMenu.addToMenu(dish: \"Toast\")\nprint(dinerMenu.menuItems)\n// prints: [\"Fries\", \"Burgers\", \"Toast\"]\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Structural methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Structural methods",
+              "body": "```swift\nstruct Dog {\n  func bark() {\n    print(\"Woof\")\n  }\n}\nlet fido = Dog()\nfido.bark() // prints: Woof\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "class",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "reference type (class)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "reference type (class)",
+              "body": "```swift\nclass Player {\n  var name: String\n\n  init(name: String) {\n    self.name = name\n  }\n}\n\nvar player1 = Player(name: \"Tomoko\")\nvar player2 = player1\nplayer2.name = \"Isabella\"\n\nprint(player1.name) // Isabella\nprint(player2.name) // Isabella\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "instance of the class",
+          "level": 3,
+          "cards": [
+            {
+              "title": "instance of the class",
+              "body": "```swift\nclass Person {\n  var name = \"\"\n  var age = 0\n}\n\nvar sonny = Person()\n// sonny is now an instance of Person\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "init() method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "init() method",
+              "body": "```swift\nclass Fruit {\n  var hasSeeds = true\n  var color: String\n\n  init(color: String) {\n    self.color = color\n  }\n}\n```",
+              "footer": "Using the Fruit class\n```swift\nlet apple = Fruit(color: \"red\")\n```\nA class can be initialized using the `init()` method and the corresponding initialization properties. In the `init()`\nmethod, the `self` keyword is used to refer to the actual instance of the class assigning property values",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Class Attributes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class Attributes",
+              "body": "```swift\nvar ferris = Student()\n\nferris.name = \"Ferris Bueller\"\nferris.year = 12\nferris.gpa = 3.81\nferris.honors = false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inherit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inherit",
+              "body": "```swift\nclass BankAccount {\n  var balance = 0.0\n  func deposit(amount: Double) {\n    balance += amount\n  }\n  func withdraw(amount: Double) {\n    balance -= amount\n  }\n}\n```",
+              "footer": "`SavingsAccount` extends `BankAccount` class\n```swift\nclass SavingsAccount: BankAccount {\nvar interest = 0.0\nfunc addInterest() {\nlet interest = balance *0.005\nself.deposit(amount: interest)\n}\n}\n```\nThe new `SavingsAccount` class (subclass) automatically gets all the characteristics of the `BankAccount` class\n(superclass). Additionally, the `SavingsAccount` class defines an `.interest` property and an `.addInterest()` method.",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Example",
+              "body": "```swift\nclass Student {\n  var name: String\n  var year: Int\n  var gpa: Double\n  var honors: Bool\n}\n```",
+              "footer": "Use default property values\n```swift\nclass Student {\nvar name = \"\"\nvar gpa = 0.0\nvar honors = false\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "This is an example of a struct definition and a class definition",
+          "level": 3,
+          "cards": [
+            {
+              "title": "This is an example of a struct definition and a class definition",
+              "body": "```swift\nstruct Resolution {\n  var width = 0\n  var height = 0\n}\nclass VideoMode {\n  var resolution = Resolution()\n  var interlaced = false\n  var frameRate = 0.0\n  var name: String?\n}\n```",
+              "footer": "The `Resolution` structure definition and the `VideoMode` class definition only describe the appearance of `Resolution`\nor `VideoMode`, create an instance of the structure or class:\n```swift\nlet resolution = Resolution(width: 1920)\nlet someVideoMode = VideoMode()\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Enumerate",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Define the enumeration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Define the enumeration",
+              "body": "```swift\nenum Day {\n  case monday\n  case tuesday\n  case wednesday\n  case thursday\n  case friday\n  case saturday\n  case sunday\n}\n\nlet casualWorkday: Day = .friday\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Switch statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Switch statement",
+              "body": "```swift\nenum Dessert {\n  case cake(flavor: String)\n  case vanillaIceCream(scoops: Int)\n  case brownie\n}\n\nlet customerOrder: Dessert = .cake(flavor: \"Red Velvet\")\nswitch customerOrder {\n  case let .cake(flavor):\n    print(\"You ordered a \\(flavor) cake\")\n  case .brownie:\n    print(\"You ordered a chocolate cake\")\n}\n// prints: \"You ordered a red velvet cake\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CaseIterable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CaseIterable",
+              "body": "```swift\nenum Season: CaseIterable {\n  case winter\n  case spring\n  case summer\n  case falls\n}\n\nfor season in Season.allCases {\n  print(season)\n}\n```",
+              "footer": "Add conformance to the `CaseIterable` protocol to access the `allCases` property, which returns an array of all cases of\nthe enumeration",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Original value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Original value",
+              "body": "```swift\nenum Beatle: String {\n  case john paul george ringo\n}\n\nprint(\"The Beatles are \\(Beatle.john.rawValue).\")\n// print: The Beatles are john.\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Related values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Related values",
+              "body": "```swift\nenum Dessert {\n  case cake(flavor: String)\n  case vanillaIceCream(scoops: Int)\n  case brownie\n}\n\nlet order: Dessert = .cake(flavor: \"Red Velvet\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "instance method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "instance method",
+              "body": "```swift\nenum Traffic {\n  case light\n  case heavy\n\n  mutating func reportAccident() {\n    self = .heavy\n  }\n}\n\nvar currentTraffic: Traffic = .light\n\ncurrentTraffic.reportAccident()\n// currentTraffic is now .heavy\n```",
+              "footer": "Just like classes and structs, enumerations can have instance methods. If an instance method mutates the value of the\nenum, it needs to be marked `mutating`",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Initialize from primitive value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Initialize from primitive value",
+              "body": "```swift\nenum Hello: String {\n  case english = \"Hello\"\n  case japanese = \"Hello!\"\n  case emoji = \"👋\"\n}\nlet hello1 = Hello(rawValue: \"Hello!\")\nlet hello2 = Hello(rawValue: \"Привет\")\nprint(hello1) // Optional(Hello.japanese)\nprint(hello2) // nil\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Computed properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Computed properties",
+              "body": "```swift\nenum ShirtSize: String {\n  case small = \"S\"\n  case medium = \"M\"\n  case large = \"L\"\n  case extraLarge = \"XL\"\n  var description: String {\n    return \"The size of this shirt is \\(self.rawValue)\"\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Extensions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "What are extensions?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "What are extensions?",
+              "body": "Extensions is a way to add new add new functionality to existing classes, structures, enumerations, or protocol types.\nThis includes adding new methods, properties, initializers, and more.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Why use extensions?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Why use extensions?",
+              "body": "Extensions are particularly useful for organizing and modularizing our code without needing to modify the original type,\nespecially when we don't have access to the original source code.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extension syntax",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extension syntax",
+              "body": "```swift\nextension SomeType {\n    // New functionalities to be added\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Computed properties",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Computed properties",
+              "body": "```swift\nextension Int {\n    var isEven: Bool {\n        self % 2 == 0\n    }\n}\n\nprint(4.isEven) // Outputs: true\nprint(7.isEven) // Outputs: false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Methods",
+              "body": "```swift\nextension String {\n    func reverse() -> String {\n        String(self.reversed())\n    }\n}\n\nprint(\"abc\".reverse()) // Output: cba\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mutating methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutating methods",
+              "body": "```swift\nextension Int {\n    mutating func square() {\n        self = self * self\n    }\n}\n\nvar number = 5\nnumber.square()\nprint(number) // Output: 25\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Initializers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Initializers",
+              "body": "```swift\nextension Date {\n    init?(timestamp: Double) {\n        self.init(timeIntervalSince1970: timestamp)\n    }\n}\n\nlet timestamp = 1693982400.0 // Unix timestamp for 2023-09-06 06:40:00\nif let date = Date(timestamp: timestamp) {\n    print(date) // Output: 2023-09-06 06:40:00 +0000\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Subscripts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Subscripts",
+              "body": "```swift\nextension String {\n    subscript(index: Int) -> Character {\n        self[self.index(startIndex, offsetBy: index)]\n    }\n}\n\nprint(\"Swift\"[0]) // Output: S\nprint(\"Swift\"[1]) // Output: w\nprint(\"Swift\"[2]) // Output: i\nprint(\"Swift\"[3]) // Output: f\nprint(\"Swift\"[4]) // Output: t\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Protocol extensions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Protocol extensions",
+              "body": "```swift\n// Define a protocol\nprotocol Describable {\n    func describe() -> String\n}\n\n// Provide a default implementation using a protocol extension\nextension Describable {\n    func describe() -> String {\n        \"This is a generic description\"\n    }\n}\n\n// Define a struct that conforms Describable protocol\nstruct Person: Describable {\n    var name: String\n    var age: Int\n\n    // Overriding the default implementation\n    func describe() -> String {\n        \"My name is \\(name) and I am \\(age) years old.\"\n    }\n}\n\nstruct Employee: Describable {\n    var name: String\n    var age: Int\n\n    // Using the default implementation\n}\n\n// By just implementing the protocol the describe() method is available\n\nlet person = Person(name: \"Ivan\", age: 21)\nlet employee = Employee(name: \"Saul\", age: 25)\n\nprint(person.describe()) // Output: My name is Ivan and I am 21 years old.\nprint(employee.describe()) // Output: This is a generic description\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Constraints for extensions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Constraints for extensions",
+              "body": "```swift\nextension Array where Element: Numeric {\n    func sum() -> Element {\n        reduce(0, +)\n    }\n}\n\nlet numbers = [1, 2, 3, 4, 5]\nprint(numbers.sum()) // Output: 15\n\nlet doubles = [1.5, 2.5, 3.5]\nprint(doubles.sum()) // Output: 7.5\n\n// This will not work because String is not Numeric\n// let strings = [\"a\", \"b\", \"c\"]\n// print(strings.sum()) // Error: Cannot invoke 'sum' with an array of strings\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Organizing code with extensions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Organizing code with extensions",
+              "body": "```swift\nimport SwiftUI\n\nstruct HomeView: View {\n    var body: some View {\n        ScrollView {\n            header\n            // Add other views\n        }\n    }\n}\n\nextension HomeView {\n    private var header: some View {\n        Text(\"Header ...\")\n    }\n}\n\n#Preview {\n    HomeView()\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Generics",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "What are generics?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "What are generics?",
+              "body": "Generics in Swift are a feature that allows us to create functions, classes, structures, and protocols that can work\nwith any data type.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Why use generics?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Why use generics?",
+              "body": "Generics enable us to write clear and concise code that works with any data type. By using placeholders (like `T`), this\nreduces the risk of introducing bugs.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type parameters",
+              "body": "```swift\nfunc foo<T, U>(a: T, b: U) {\n  // ...\n}\n\nstruct Foo<T, U> {\n  var a: T\n  // ...\n}\n```",
+              "footer": "The placeholders `T` is an example of a type parameter, are written inside angle brackets(such as `<T>`).",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generic Data Structures",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generic Data Structures",
+              "body": "```swift\nstruct Box<T> {\n    var value: T\n}\nlet intBox = Box(value: 10)\nlet stringBox = Box(value: \"Hello\")\n\nprint(intBox.value) // Output: 10\nprint(stringBox.value) // Output: \"Hello\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generic Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generic Functions",
+              "body": "```swift\nfunc swapValues<T>(_ a: inout T, _ b: inout T) {\n    let temp = a\n    a = b\n    b = temp\n}\n\nvar a = 10\nvar b = 20\nswapValues(&a, &b)\nprint(a) // Output: 20\nprint(b) // Output: 10\n\nvar c = \"Hello\"\nvar d = \"World\"\nswapValues(&c, &d)\nprint(c) // Output: \"World\"\nprint(d) // Output: \"Hello\"\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Constraints on Generics",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Constraints on Generics",
+              "body": "```swift\nfunc sum<T: Numeric>(_ array: [T]) -> T {\n    array.reduce(0, +)\n}\n\nprint(sum([1, 1.5, 2])) // Output: 4.5\n\n// This will not work because String is not Numeric\n// print(sum([\"a\", \"b\", \"c\"]))\n// Error: function 'sum' requires that 'String' conform to 'Numeric'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Associated Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Associated Types",
+              "body": "```swift\nprotocol Foo {\n    associatedtype T\n    func foo() -> T\n}\n```",
+              "footer": "Associated types are used in protocols to define a placeholder for a type that will be specified later. They act as a\ngeneric placeholder. The exact type isn't defined in the protocol itself; instead, it's determined when a class, struct,\nor enum conforms to the protocol.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generic Protocols",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generic Protocols",
+              "body": "```swift\nprotocol Storage {\n    associatedtype Item\n    func store(item: Item)\n    func retrieve() -> Item?\n}\n\nclass SimpleStorage<T>: Storage {\n    private var items: [T] = []\n\n    func store(item: T) {\n        items.append(item)\n    }\n\n    func retrieve() -> T? {\n        return items.isEmpty ? nil : items.removeLast()\n    }\n}\n\nlet intStorage = SimpleStorage<Int>()\nintStorage.store(item: 42)\nprint(intStorage.retrieve() ?? \"Empty\")  // Output: 42\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generic Typealiases",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generic Typealiases",
+              "body": "```swift\ntypealias StringDictionary<T> = [String: T]\ntypealias IntFunction<T> = (Int) -> Int\ntypealias Vector<T> = (T, T, T)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also See",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also See",
+          "body": "- [Swift Documentation (Official)](https://www.swift.org/documentation/) _(swift.or)_\n- [Swift Programming Language (Official)](https://docs.swift.org/swift-book/) _(swift.or)_\n- [One-Stop Quick Reference for Swift Developers](https://swiftly.dev/) _(swiftly.dev)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

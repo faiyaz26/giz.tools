@@ -1,0 +1,160 @@
+{
+  "id": "soundcloud",
+  "metadata": {
+    "title": "SoundCloud",
+    "date": "2022-11-23T16:23:31.705Z",
+    "background": "bg-[#ec622b]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 22 keyboard shortcuts found on SoundCloud\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General I",
+              "body": "| Shortcut        | Action               |\n| --------------- | -------------------- |\n| `Space`         | Play or pause        |\n| `Shift` `Right` | Play next track      |\n| `Shift` `L`     | Repeat playing track |\n| `Shift` `Left`  | Play previous track  |\n| `Right`         | Seek forward         |\n| `L`             | Like playing track   |\n| `R`             | Repost playing track |\n| `S`             | Search               |\n| `G` `L`         | Navigate to likes    |\n| `G` `C`         | Navigate to library  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Space`",
+                  "action": "Play or pause"
+                },
+                {
+                  "shortcut": "`Shift` `Right`",
+                  "action": "Play next track"
+                },
+                {
+                  "shortcut": "`Shift` `L`",
+                  "action": "Repeat playing track"
+                },
+                {
+                  "shortcut": "`Shift` `Left`",
+                  "action": "Play previous track"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Seek forward"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Like playing track"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Repost playing track"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Search"
+                },
+                {
+                  "shortcut": "`G` `L`",
+                  "action": "Navigate to likes"
+                },
+                {
+                  "shortcut": "`G` `C`",
+                  "action": "Navigate to library"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General II",
+              "body": "| Shortcut       | Action                    |\n| -------------- | ------------------------- |\n| `G` `H`        | Navigate to history       |\n| `Shift` `S`    | Shuffle                   |\n| `Shift` `Down` | Decrease volume           |\n| `Shift` `Up`   | Increase volume           |\n| `M`            | Mute volume               |\n| `Left`         | Seek backwards            |\n| `0-9`          | Seek to position          |\n| `P`            | Navigate to playing track |\n| `H`            | Show keyboard shortcuts   |\n| `G` `S`        | Navigate to stream        |\n| `G` `P`        | Navigate to profile       |\n| `Q`            | Show next up              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `H`",
+                  "action": "Navigate to history"
+                },
+                {
+                  "shortcut": "`Shift` `S`",
+                  "action": "Shuffle"
+                },
+                {
+                  "shortcut": "`Shift` `Down`",
+                  "action": "Decrease volume"
+                },
+                {
+                  "shortcut": "`Shift` `Up`",
+                  "action": "Increase volume"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Mute volume"
+                },
+                {
+                  "shortcut": "`Left`",
+                  "action": "Seek backwards"
+                },
+                {
+                  "shortcut": "`0-9`",
+                  "action": "Seek to position"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Navigate to playing track"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Show keyboard shortcuts"
+                },
+                {
+                  "shortcut": "`G` `S`",
+                  "action": "Navigate to stream"
+                },
+                {
+                  "shortcut": "`G` `P`",
+                  "action": "Navigate to profile"
+                },
+                {
+                  "shortcut": "`Q`",
+                  "action": "Show next up"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for SoundCloud](https://i.imgur.com/ZQf24je.png) _(i.imgur.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

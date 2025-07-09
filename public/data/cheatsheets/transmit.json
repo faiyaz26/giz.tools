@@ -1,0 +1,416 @@
+{
+  "id": "transmit",
+  "metadata": {
+    "title": "Transmit",
+    "date": "2022-11-23T16:23:31.695Z",
+    "background": "bg-[#646fed]",
+    "label": "Mac",
+    "tags": [
+      null,
+      "mac"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 62 keyboard shortcuts found in Transmit. This application is MacOS-only.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Transmit Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transmit Menu",
+              "body": "| Shortcut        | Action                     |\n| --------------- | -------------------------- |\n| `Cmd` `,`       | Preferences...             |\n| `Cmd` `H`       | Hide Transmit              |\n| `Cmd` `Opt` `H` | Hide others                |\n| `Cmd` `Q`       | Quit Transmit              |\n| `Cmd` `Opt` `Q` | Quit and close all windows |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `,`",
+                  "action": "Preferences..."
+                },
+                {
+                  "shortcut": "`Cmd` `H`",
+                  "action": "Hide Transmit"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `H`",
+                  "action": "Hide others"
+                },
+                {
+                  "shortcut": "`Cmd` `Q`",
+                  "action": "Quit Transmit"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Q`",
+                  "action": "Quit and close all windows"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File Menu",
+              "body": "| Shortcut          | Action                      |\n| ----------------- | --------------------------- |\n| `Cmd` `N`         | New window                  |\n| `Cmd` `T`         | New tab                     |\n| `Cmd` `Shift` `N` | New folder                  |\n| `Cmd` `Opt` `N`   | New file                    |\n| `Cmd` `W`         | Close tab                   |\n| `Cmd` `Shift` `W` | Close window                |\n| `Cmd` `Opt` `W`   | Close all                   |\n| `Cmd` `E`         | Disconnect                  |\n| `Cmd` `O`         | Open                        |\n| `Cmd` `S`         | Save                        |\n| `Cmd` `B`         | Preview in browser          |\n| `Cmd` `I`         | Get info                    |\n| `Cmd` `Opt` `I`   | Show inspector              |\n| `Cmd` `D`         | Duplicate                   |\n| `Cmd` `Y`         | Quick look at selected-file |\n| `Cmd` `P`         | Print...                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `N`",
+                  "action": "New window"
+                },
+                {
+                  "shortcut": "`Cmd` `T`",
+                  "action": "New tab"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `N`",
+                  "action": "New folder"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `N`",
+                  "action": "New file"
+                },
+                {
+                  "shortcut": "`Cmd` `W`",
+                  "action": "Close tab"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `W`",
+                  "action": "Close window"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `W`",
+                  "action": "Close all"
+                },
+                {
+                  "shortcut": "`Cmd` `E`",
+                  "action": "Disconnect"
+                },
+                {
+                  "shortcut": "`Cmd` `O`",
+                  "action": "Open"
+                },
+                {
+                  "shortcut": "`Cmd` `S`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`Cmd` `B`",
+                  "action": "Preview in browser"
+                },
+                {
+                  "shortcut": "`Cmd` `I`",
+                  "action": "Get info"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `I`",
+                  "action": "Show inspector"
+                },
+                {
+                  "shortcut": "`Cmd` `D`",
+                  "action": "Duplicate"
+                },
+                {
+                  "shortcut": "`Cmd` `Y`",
+                  "action": "Quick look at selected-file"
+                },
+                {
+                  "shortcut": "`Cmd` `P`",
+                  "action": "Print..."
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Edit Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Edit Menu",
+              "body": "| Shortcut          | Action                    |\n| ----------------- | ------------------------- |\n| `Cmd` `Z`         | Undo                      |\n| `Cmd` `Shift` `Z` | Redo                      |\n| `Cmd` `X`         | Cut                       |\n| `Cmd` `C`         | Copy                      |\n| `Cmd` `V`         | Paste                     |\n| `Cmd` `A`         | Select all                |\n| `Cmd` `J`         | Jump to selection         |\n| `Cmd` `:`         | Show spelling and grammar |\n| `Cmd` `;`         | Check spelling            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Z`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Cmd` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Cmd` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Cmd` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Cmd` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Cmd` `J`",
+                  "action": "Jump to selection"
+                },
+                {
+                  "shortcut": "`Cmd` `:`",
+                  "action": "Show spelling and grammar"
+                },
+                {
+                  "shortcut": "`Cmd` `;`",
+                  "action": "Check spelling"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View Menu",
+              "body": "| Shortcut            | Action                |\n| ------------------- | --------------------- |\n| `Cmd` `L`           | Show transfers        |\n| `Cmd` `Opt` `L`     | Show transfers window |\n| `Cmd` `1`           | View as thumbnails    |\n| `Cmd` `2`           | View as list          |\n| `Cmd` `3`           | View as columns       |\n| `Cmd` `4`           | View as cover flow    |\n| `Cmd` `R`           | Refresh               |\n| `Cmd` `Shift` `B`   | Show invisible files  |\n| `Cmd` `Shift` `S`   | Hide places bar       |\n| `Cmd` `Shift` `J`   | Show view options     |\n| `Cmd` `Ctrl` `F`    | Enter full screen     |\n| `Cmd` `Opt` `Left`  | Focus on local        |\n| `Cmd` `Opt` `Right` | Focus on remote       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `L`",
+                  "action": "Show transfers"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `L`",
+                  "action": "Show transfers window"
+                },
+                {
+                  "shortcut": "`Cmd` `1`",
+                  "action": "View as thumbnails"
+                },
+                {
+                  "shortcut": "`Cmd` `2`",
+                  "action": "View as list"
+                },
+                {
+                  "shortcut": "`Cmd` `3`",
+                  "action": "View as columns"
+                },
+                {
+                  "shortcut": "`Cmd` `4`",
+                  "action": "View as cover flow"
+                },
+                {
+                  "shortcut": "`Cmd` `R`",
+                  "action": "Refresh"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `B`",
+                  "action": "Show invisible files"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `S`",
+                  "action": "Hide places bar"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `J`",
+                  "action": "Show view options"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `F`",
+                  "action": "Enter full screen"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Left`",
+                  "action": "Focus on local"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Right`",
+                  "action": "Focus on remote"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Go Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Go Menu",
+              "body": "| Shortcut          | Action                        |\n| ----------------- | ----------------------------- |\n| `Cmd` `[`         | Back                          |\n| `Cmd` `]`         | Forward                       |\n| `Cmd` `Up`        | Enclosing folder              |\n| `Cmd` `Opt` `G`   | Go to folder...               |\n| `Cmd` `Opt` `T`   | Open in terminal              |\n| `Cmd` `Shift` `L` | Link folder navigation        |\n| `Cmd` `K`         | Connect to last used protocol |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `[`",
+                  "action": "Back"
+                },
+                {
+                  "shortcut": "`Cmd` `]`",
+                  "action": "Forward"
+                },
+                {
+                  "shortcut": "`Cmd` `Up`",
+                  "action": "Enclosing folder"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `G`",
+                  "action": "Go to folder..."
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `T`",
+                  "action": "Open in terminal"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `L`",
+                  "action": "Link folder navigation"
+                },
+                {
+                  "shortcut": "`Cmd` `K`",
+                  "action": "Connect to last used protocol"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Transfer Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transfer Menu",
+              "body": "| Shortcut                | Action                                |\n| ----------------------- | ------------------------------------- |\n| `Cmd` `Shift` `R`       | Transfer selected items               |\n| `Cmd` `Opt` `Shift` `R` | Transfer selected items without rules |\n| `Cmd` `.`               | Cancel                                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Shift` `R`",
+                  "action": "Transfer selected items"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Shift` `R`",
+                  "action": "Transfer selected items without rules"
+                },
+                {
+                  "shortcut": "`Cmd` `.`",
+                  "action": "Cancel"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Servers Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Servers Menu",
+              "body": "| Shortcut          | Action             |\n| ----------------- | ------------------ |\n| `Cmd` `Shift` `A` | Add new server     |\n| `Cmd` `Shift` `F` | Show quick connect |\n| `Cmd` `Shift` `I` | Edit server        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Shift` `A`",
+                  "action": "Add new server"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `F`",
+                  "action": "Show quick connect"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `I`",
+                  "action": "Edit server"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Window Menu",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Window Menu",
+              "body": "| Shortcut             | Action              |\n| -------------------- | ------------------- |\n| `Cmd` `M`            | Minimize            |\n| `Cmd` `Opt` `M`      | Minimize all        |\n| `Ctrl` `Tab`         | Select next tab     |\n| `Ctrl` `Shift` `Tab` | Select previous tab |\n| `Cmd` `Ctrl` `T`     | Transcript          |\n| `Cmd` `Opt` `I`      | Show inspector      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `M`",
+                  "action": "Minimize"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `M`",
+                  "action": "Minimize all"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Select next tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Tab`",
+                  "action": "Select previous tab"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `T`",
+                  "action": "Transcript"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `I`",
+                  "action": "Show inspector"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for the Transmit app](https://library.panic.com/transmit/transmit5/shortcuts/)\n  _(library.panic.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

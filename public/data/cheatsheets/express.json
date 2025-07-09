@@ -1,0 +1,329 @@
+{
+  "id": "express",
+  "metadata": {
+    "title": "Express",
+    "date": "2023-02-26T15:23:31.000Z",
+    "background": "bg-[#edc545]",
+    "tags": [
+      "config",
+      "format"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "A quick reference cheatsheet for Express, a flexible and streamlined web framework for Node.js\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Hello World",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hello World",
+              "body": "",
+              "footer": "- \"Create project, add `package.json` configuration\n\n  ```bash\n  $ mkdir myapp # create directory\n  $ cd myapp    # enter the directory\n  $ npm init -y # Initialize a configuration\n  ```\n\n- Install dependencies\n\n  ```bash\n  $ npm install express\n  ```\n\n- Entry file `index.js` add code:\n\n  ```js\n  const express = require('express');\n  const app = express();\n  const port = 3000;\n  app.get('/', (req, res) => {\n    res.send('Hello World!');\n  });\n  app.listen(port, () => {\n    console.log(`Listening port on ${port}`);\n  });\n  ```\n\n- Run the application using the following command\n  ```bash\n  $ node index.js\n  ```\n  {.marker-timeline}",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "express -h",
+          "level": 3,
+          "cards": [
+            {
+              "title": "express -h",
+              "body": "```bash\nUsage: express [options] [dir]\nOptions:\n  -h, --help output usage information\n      --version output version number\n  -e, --ejs add ejs engine support\n      --hbs add hbs engine support\n      --pug add pug engine support\n  -H, --hogan add hogan.js engine support\n      --no-view No view engine generated\n  -v, --view <engine> add view <engine> support (ejs|hbs|hjs|jade|pug|twig|vash) (default jade)\n  -c, --css <engine> add stylesheet <engine> support (less|stylus|compass|sass) (default css)\n      --git add .gitignore\n  -f, --force force non-empty directories\n```",
+              "footer": "{.wrap-text}\nCreate a `myapp` project\n```bash\n$ express --view=pug myapp\n$ DEBUG=myapp:*npm start\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "express()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "express()",
+              "body": "| :-                     | :-                                                          |\n| :--------------------- | :---------------------------------------------------------- |\n| `express.json()`       | [#](http://expressjs.com/en/4x/api.html#express.json)       |\n| `express.raw()`        | [#](http://expressjs.com/en/4x/api.html#express.raw)        |\n| `express.Router()`     | [#](http://expressjs.com/en/4x/api.html#express.router)     |\n| `express.static()`     | [#](http://expressjs.com/en/4x/api.html#express.static)     |\n| `express.text()`       | [#](http://expressjs.com/en/4x/api.html#express.text)       |\n| `express.urlencoded()` | [#](http://expressjs.com/en/4x/api.html#express.urlencoded) |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Router",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Router",
+              "body": "| :-                | :-                                                     |\n| :---------------- | :----------------------------------------------------- |\n| `router.all()`    | [#](http://expressjs.com/en/4x/api.html#router.all)    |\n| `router.METHOD()` | [#](http://expressjs.com/en/4x/api.html#router.METHOD) |\n| `router.param()`  | [#](http://expressjs.com/en/4x/api.html#router.param)  |\n| `router.route()`  | [#](http://expressjs.com/en/4x/api.html#router.route)  |\n| `router.use()`    | [#](http://expressjs.com/en/4x/api.html#router.use)    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Application",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Application",
+              "body": "```js\nvar express = require('express');\nvar app = express();\n\nconsole.dir(app.locals.title);\n//=> 'My App'\nconsole.dir(app.locals.email);\n//=> 'me@myapp.com'\n```",
+              "footer": "#### Attribute\n\n| :-              | :-                                                                                        |\n| :-------------- | :---------------------------------------------------------------------------------------- |\n| `app.locals`    | Local variables in the application [#](http://expressjs.com/en/4x/api.html#app.locals)    |\n| `app.mountpath` | Path pattern for mounting sub-apps [#](http://expressjs.com/en/4x/api.html#app.mountpath) |\n\n#### Events\n\n| :-      | :-                                                                                                                                                                   |\n| :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `mount` | The child application is mounted on the parent application, and the event is triggered on the child application [#](http://expressjs.com/en/4x/api.html#app.onmount) |\n\n#### Method\n\n| :-                        | :-                                                         |\n| :------------------------ | :--------------------------------------------------------- |\n| `app.all()`               | [#](http://expressjs.com/en/4x/api.html#app.all)           |\n| `app.delete()`            | [#](http://expressjs.com/en/4x/api.html#app.delete.method) |\n| `app.disable()`           | [#](http://expressjs.com/en/4x/api.html#app.disable)       |\n| `app.disabled()`          | [#](http://expressjs.com/en/4x/api.html#app.disabled)      |\n| `app.enable()`            | [#](http://expressjs.com/en/4x/api.html#app.enable)        |\n| `app.enabled()`           | [#](http://expressjs.com/en/4x/api.html#app.enabled)       |\n| `app.engine()`            | [#](http://expressjs.com/en/4x/api.html#app.engine)        |\n| `app.get(name)`           | [#](http://expressjs.com/en/4x/api.html#app.get)           |\n| `app.get(path, callback)` | [#](http://expressjs.com/en/4x/api.html#app.get.method)    |\n| `app.listen()`            | [#](http://expressjs.com/en/4x/api.html#app.listen)        |\n| `app.METHOD()`            | [#](http://expressjs.com/en/4x/api.html#app.METHOD)        |\n| `app.param()`             | [#](http://expressjs.com/en/4x/api.html#app.param)         |\n| `app.path()`              | [#](http://expressjs.com/en/4x/api.html#app.path)          |\n| `app.post()`              | [#](http://expressjs.com/en/4x/api.html#app.post.method)   |\n| `app.put()`               | [#](http://expressjs.com/en/4x/api.html#app.put.method)    |\n| `app.render()`            | [#](http://expressjs.com/en/4x/api.html#app.render)        |\n| `app.route()`             | [#](http://expressjs.com/en/4x/api.html#app.route)         |\n| `app.set()`               | [#](http://expressjs.com/en/4x/api.html#app.set)           |\n| `app.use()`               | [#](http://expressjs.com/en/4x/api.html#app.use)           |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Request",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Request",
+              "body": "",
+              "footer": "#### Attribute\n\n| :-                  | :-                                                         |\n| :------------------ | :--------------------------------------------------------- |\n| `req.app`           | [#](http://expressjs.com/en/4x/api.html#req.app)           |\n| `req.baseUrl`       | [#](http://expressjs.com/en/4x/api.html#req.baseUrl)       |\n| `req.body`          | [#](http://expressjs.com/en/4x/api.html#req.body)          |\n| `req.cookies`       | [#](http://expressjs.com/en/4x/api.html#req.cookies)       |\n| `req.fresh`         | [#](http://expressjs.com/en/4x/api.html#req.fresh)         |\n| `req.hostname`      | [#](http://expressjs.com/en/4x/api.html#req.hostname)      |\n| `req.ip`            | [#](http://expressjs.com/en/4x/api.html#req.ip)            |\n| `req.ips`           | [#](http://expressjs.com/en/4x/api.html#req.ips)           |\n| `req.method`        | [#](http://expressjs.com/en/4x/api.html#req.method)        |\n| `req.originalUrl`   | [#](http://expressjs.com/en/4x/api.html#req.originalUrl)   |\n| `req.params`        | [#](http://expressjs.com/en/4x/api.html#req.params)        |\n| `req.path`          | [#](http://expressjs.com/en/4x/api.html#req.path)          |\n| `req.protocol`      | [#](http://expressjs.com/en/4x/api.html#req.protocol)      |\n| `req.query`         | [#](http://expressjs.com/en/4x/api.html#req.query)         |\n| `req.route`         | [#](http://expressjs.com/en/4x/api.html#req.route)         |\n| `req.secure`        | [#](http://expressjs.com/en/4x/api.html#req.secure)        |\n| `req.signedCookies` | [#](http://expressjs.com/en/4x/api.html#req.signedCookies) |\n| `req.stale`         | [#](http://expressjs.com/en/4x/api.html#req.stale)         |\n| `req.subdomains`    | [#](http://expressjs.com/en/4x/api.html#req.subdomains)    |\n| `req.xhr`           | [#](http://expressjs.com/en/4x/api.html#req.xhr)           |\n\n#### Method\n\n| :-                       | :-                                                                              |\n| :----------------------- | :------------------------------------------------------------------------------ |\n| `req.accepts()`          | [#](http://expressjs.com/en/4x/api.html#req.accepts)                            |\n| `req.acceptsCharsets()`  | [#](http://expressjs.com/en/4x/api.html#req.acceptsCharsets)                    |\n| `req.acceptsEncodings()` | [#](http://expressjs.com/en/4x/api.html#req.acceptsEncodings)                   |\n| `req.acceptsLanguages()` | [#](http://expressjs.com/en/4x/api.html#req.acceptsLanguages)                   |\n| `req.get()`              | Get HTTP request header fields [#](http://expressjs.com/en/4x/api.html#req.get) |\n| `req.is()`               | [#](http://expressjs.com/en/4x/api.html#req.is)                                 |\n| `req.param()`            | [#](http://expressjs.com/en/4x/api.html#req.param)                              |\n| `req.range()`            | [#](http://expressjs.com/en/4x/api.html#req.range)                              |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Response",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Response",
+              "body": "```js\napp.get('/', function (req, res) {\n  console.dir(res.headersSent); //false\n  res.send('OK');\n  console.dir(res.headersSent); //true\n});\n```",
+              "footer": "#### Attribute\n\n| :-                | :-                                                       |\n| :---------------- | :------------------------------------------------------- |\n| `res.app`         | [#](http://expressjs.com/en/4x/api.html#res.app)         |\n| `res.headersSent` | [#](http://expressjs.com/en/4x/api.html#res.headersSent) |\n| `res.locals`      | [#](http://expressjs.com/en/4x/api.html#res.locals)      |\n\n#### Method\n\n| :-                  | :-                                                                                    |\n| :------------------ | :------------------------------------------------------------------------------------ |\n| `res.append()`      | [#](http://expressjs.com/en/4x/api.html#res.append)                                   |\n| `res.attachment()`  | [#](http://expressjs.com/en/4x/api.html#res.attachment)                               |\n| `res.cookie()`      | [#](http://expressjs.com/en/4x/api.html#res.cookie)                                   |\n| `res.clearCookie()` | [#](http://expressjs.com/en/4x/api.html#res.clearCookie)                              |\n| `res.download()`    | Prompt for files to download [#](http://expressjs.com/en/4x/api.html#res.download)    |\n| `res.end()`         | end the response process [#](http://expressjs.com/en/4x/api.html#res.end)             |\n| `res.format()`      | [#](http://expressjs.com/en/4x/api.html#res.format)                                   |\n| `res.get()`         | [#](http://expressjs.com/en/4x/api.html#res.get)                                      |\n| `res.json()`        | Send JSON response [#](http://expressjs.com/en/4x/api.html#res.json)                  |\n| `res.jsonp()`       | Send a response with JSONP support [#](http://expressjs.com/en/4x/api.html#res.jsonp) |\n| `res.links()`       | [#](http://expressjs.com/en/4x/api.html#res.links)                                    |\n| `res.location()`    | [#](http://expressjs.com/en/4x/api.html#res.location)                                 |\n| `res.redirect()`    | Redirect request [#](http://expressjs.com/en/4x/api.html#res.redirect)                |\n| `res.render()`      | render view template [#](http://expressjs.com/en/4x/api.html#res.render)              |\n| `res.send()`        | Send various types of responses [#](http://expressjs.com/en/4x/api.html#res.send)     |\n| `res.sendFile()`    | Send a file as an octet stream [#](http://expressjs.com/en/4x/api.html#res.sendFile)  |\n| `res.sendStatus()`  | [#](http://expressjs.com/en/4x/api.html#res.sendStatus)                               |\n| `res.set()`         | [#](http://expressjs.com/en/4x/api.html#res.set)                                      |\n| `res.status()`      | [#](http://expressjs.com/en/4x/api.html#res.status)                                   |\n| `res.type()`        | [#](http://expressjs.com/en/4x/api.html#res.type)                                     |\n| `res.vary()`        | [#](http://expressjs.com/en/4x/api.html#res.vary)                                     |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Example",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Router",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Router",
+              "body": "```js\nrouter.use(function (req, res, next) {\n  //.. some logic here .. like any other middleware\n  next();\n});\n```",
+              "footer": "will handle any request ending in `/events`\n```js\n//depends on where the router \"use()\"\nrouter.get('/events', (req, res, next) => {\n//..\n});\n```",
+              "spanConfig": " row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Response",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Response",
+              "body": "```js\napp.get('/user/:id', (req, res) => {\n  res.send('user' + req.params.id);\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Request",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Request",
+              "body": "```js\napp.get('/user/:id', (req, res) => {\n  res.send('user' + req.params.id);\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "res. end()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "res. end()",
+              "body": "```js\nres.end();\nres.status(404).end();\n```",
+              "footer": "End the response process. This method actually comes from the Node core, specifically the `response.end()` method of\n`http.ServerResponse`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "res.json([body])",
+          "level": 3,
+          "cards": [
+            {
+              "title": "res.json([body])",
+              "body": "```js\nres.json(null);\nres.json({ user: 'tobi' });\nres.status(500).json({ error: 'message' });\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "app.all",
+          "level": 3,
+          "cards": [
+            {
+              "title": "app.all",
+              "body": "```js\napp.all('/secret', function (req, res, next) {\n  console.log('access secret section...');\n  next(); // Pass control to the next handler\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "app.delete",
+          "level": 3,
+          "cards": [
+            {
+              "title": "app.delete",
+              "body": "```js\napp.delete('/', function (req, res) {\n  res.send('DELETE request to homepage');\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "app.disable(name)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "app.disable(name)",
+              "body": "```js\napp.disable('trust proxy');\napp.get('trust proxy');\n// => false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "app.disabled(name)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "app.disabled(name)",
+              "body": "```js\napp.disabled('trust proxy');\n// => true\n\napp.enable('trust proxy');\napp.disabled('trust proxy');\n// => false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "app.engine(ext, callback)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "app.engine(ext, callback)",
+              "body": "```js\nvar engines = require('consolidate');\n\napp.engine('haml', engines.haml);\napp.engine('html', engines.hogan);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "app.listen([port[, host[, backlog]]][, callback])",
+          "level": 3,
+          "cards": [
+            {
+              "title": "app.listen([port[, host[, backlog]]][, callback])",
+              "body": "```js\nvar express = require('express');\n\nvar app = express();\napp.listen(3000);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Routing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Routing",
+              "body": "```js\nconst express = require('express');\nconst app = express();\n\n//Respond to \"hello world\" when making a GET request to the homepage\napp.get('/', (req, res) => {\n  res.send('hello world');\n});\n```",
+              "footer": "```js\n// GET method routing\napp.get('/', (req, res) => {\nres.send('GET request to the homepage');\n});\n// POST method routing\napp.post('/', (req, res) => {\nres.send('POST request to the homepage');\n});\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Middleware",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Middleware",
+              "body": "```js\nfunction logOriginalUrl(req, res, next) {\n  console.log('ReqURL:', req.originalUrl);\n  next();\n}\n\nfunction logMethod(req, res, next) {\n  console.log('Request Type:', req.method);\n  next();\n}\n\nconst log = [logOriginalUrl, logMethod];\n\napp.get('/user/:id', log, (req, res, next) => {\n  res.send('User Info');\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Using templates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using templates",
+              "body": "```js\napp.set('view engine', 'pug');\n```",
+              "footer": "Create a `Pug` template file named `index.pug` in the `views` directory with the following content\n```pug\nhtml\nthe head\ntitle= title\nthe body\nh1=message\n```\nCreate a route to render the `index.pug` file. If the view engine property is not set, the extension of the view file\nmust be specified\n```js\napp.get('/', (req, res) => {\nres.render('index', {\ntitle: 'Hey',\nmessage: 'Hello there!'\n});\n});\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

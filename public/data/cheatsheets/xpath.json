@@ -1,0 +1,484 @@
+{
+  "id": "xpath",
+  "metadata": {
+    "title": "XPath",
+    "date": "2020-12-19T22:15:43.000Z",
+    "background": "bg-[#77aeeb]",
+    "tags": [
+      "document",
+      "expression",
+      "select"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "This is an [XPath](https://en.wikipedia.org/wiki/XPath) selectors cheat sheet, which lists commonly used XPath positioning methods and CSS selectors\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "XPath Selectors {.cols-6}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Getting started",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting started",
+              "body": "```console\n$x('/html/body')\n$x('//h1')\n$x('//h1')[0].innerText\n$x('//a[text()=\"XPath\"]')[0].click()\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Descendant selectors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Descendant selectors",
+              "body": "| Xpath        | CSS          |\n| ------------ | ------------ |\n| `//h1`       | h1           |\n| `//div//p`   | div p        |\n| `//ul/li`    | ul > li      |\n| `//ul/li/a`  | ul > li > a  |\n| `//div/*`    | div > \\*     |\n| `/`          | :root        |\n| `/html/body` | :root > body |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Order selectors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Order selectors",
+              "body": "| Xpath               | CSS                  |\n| ------------------- | -------------------- |\n| `//ul/li[1]`        | ul > li:first-child  |\n| `//ul/li[2]`        | ul > li:nth-child(2) |\n| `//ul/li[last()]`   | ul > li:last-child   |\n| `//li[@id=\"id\"][1]` | li#id:first-child    |\n| `//a[1]`            | a:first-child        |\n| `//a[last()]`       | a:last-child         |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Attribute selectors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Attribute selectors",
+              "body": "| Xpath                           | CSS                  |\n| ------------------------------- | -------------------- |\n| `//*[@id=\"id\"]`                 | #id                  |\n| `//*[@class=\"class\"]`           | .class               |\n| `//input[@type=\"submit\"]`       | input[type=\"submit\"] |\n| `//a[@id=\"abc\"][@for=\"xyz\"]`    | a#abc[for=\"xyz\"]     |\n| `//a[@rel]`                     | a[rel]               |\n| `//a[starts-with(@href, '/')]`  | a[href^='/']         |\n| `//a[ends-with(@href, '.pdf')]` | a[href$='pdf']       |\n| `//a[contains(@href, '://')]`   | a[href*='`:`//']     |\n| `//a[contains(@rel, 'help')]`   | a[rel~='help']       |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-3 .row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Siblings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Siblings",
+              "body": "| Xpath                                | CSS      |\n| ------------------------------------ | -------- |\n| `//h1/following-sibling::ul`         | h1 ~ ul  |\n| `//h1/following-sibling::ul[1]`      | h1 + ul  |\n| `//h1/following-sibling::[@id=\"id\"]` | h1 ~ #id |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "jQuery",
+          "level": 3,
+          "cards": [
+            {
+              "title": "jQuery",
+              "body": "| Xpath                            | CSS                        |\n| -------------------------------- | -------------------------- |\n| `//ul/li/..`                     | $('ul > li').parent()      |\n| `//li/ancestor-or-self::section` | $('li').closest('section') |\n| `//a/@href`                      | $('a').attr('href')        |\n| `//span/text()`                  | $('span').text()           |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Misc selectors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc selectors",
+              "body": "| Xpath                             | CSS                       |\n| --------------------------------- | ------------------------- | --------------------- |\n| `//h1[not(@id)]`                  | h1:not([id])              |\n| `//button[text()=\"Submit\"]`       | Text match                |\n| `//button[contains(text(),\"Go\")]` | Text contains (substring) |\n| `//product[@price > 2.50]`        | Arithmetic                |\n| `//ul[*]`                         | Has children              |\n| `//ul[li]`                        | Has children (specific)   |\n| `//a[@name or @href]`             | Or logic                  |\n| `//a                              | //div`                    | Union (joins results) |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "XPath Expressions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Steps and axes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Steps and axes",
+              "body": "<br/>\n\n| -    | -    | -    | -               |\n| ---- | ---- | ---- | --------------- |\n| `//` | `ul` | `/`  | `a[@id='link']` |\n| Axis | Step | Axis | Step            |\n\n{.left-text}",
+              "footer": "",
+              "spanConfig": "secondary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Prefixes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Prefixes",
+              "body": "| Prefix | Example               | Means    |\n| ------ | --------------------- | -------- |\n| `//`   | `//hr[@class='edge']` | Anywhere |\n| `/`    | `/html/body/div`      | Root     |\n| `./`   | `./div/p`             | Relative |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Axes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Axes",
+              "body": "| Axis | Example             | Means      |\n| ---- | ------------------- | ---------- |\n| `/`  | `//ul/li/a`         | Child      |\n| `//` | `//[@id=\"list\"]//a` | Descendant |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "XPath Predicates",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Predicates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Predicates",
+              "body": "```bash\n//div[true()]\n//div[@class=\"head\"]\n//div[@class=\"head\"][@id=\"top\"]\n```",
+              "footer": "Restricts a nodeset only if some condition is true. They can be chained.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operators",
+              "body": "```bash\n# Comparison\n//a[@id = \"xyz\"]\n//a[@id != \"xyz\"]\n//a[@price > 25]\n```",
+              "footer": "```bash\n//div[@id=\"head\" and position()=2]\n//div[(x and y) or not(z)]\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Using nodes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using nodes",
+              "body": "```bash\n# Use them inside functions\n//ul[count(li) > 2]\n//ul[count(li[@class='hide']) > 0]\n```",
+              "footer": "```bash\n//ul[li]\n```\nYou can use nodes inside predicates.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Indexing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Indexing",
+              "body": "```bash\n//a[1]                # first <a>\n//a[last()]           # last <a>\n//ol/li[2]            # second <li>\n//ol/li[position()=2] # same as above\n//ol/li[position()>1] #:not(:first-child)\n```",
+              "footer": "Use `[]` with a number, or `last()` or `position()`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Chaining order",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Chaining order",
+              "body": "```bash\na[1][@href='/']\na[@href='/'][1]\n```",
+              "footer": "Order is significant, these two are different.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Nesting predicates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Nesting predicates",
+              "body": "```\n//section[.//h1[@id='hi']]\n```",
+              "footer": "This returns `<section>` if it has an `<h1>` descendant with `id='hi'`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "XPath Functions {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Node functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Node functions",
+              "body": "```bash\nname()            # //[starts-with(name(), 'h')]\ntext()            # //button[text()=\"Submit\"]\n                  # //button/text()\nlang(str)\nnamespace-uri()\n```",
+              "footer": "```bash\ncount()           # //table[count(tr)=1]\nposition()        # //ol/li[position()=2]\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String functions",
+              "body": "```bash\ncontains()        # font[contains(@class,\"head\")]\nstarts-with()     # font[starts-with(@class,\"head\")]\nends-with()       # font[ends-with(@class,\"head\")]\n```",
+              "footer": "```bash\nconcat(x,y)\nsubstring(str, start, len)\nsubstring-before(\"01/02\", \"/\")  #=> 01\nsubstring-after(\"01/02\", \"/\")   #=> 02\ntranslate()\nnormalize-space()\nstring-length()\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Boolean functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Boolean functions",
+              "body": "```bash\nnot(expr)         # button[not(starts-with(text(),\"Submit\"))]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type conversion",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type conversion",
+              "body": "```bash\nstring()\nnumber()\nboolean()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "XPath Axes {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Using axes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using axes",
+              "body": "```bash\n//ul/li                       # ul > li\n//ul/child::li                # ul > li (same)\n//ul/following-sibling::li    # ul ~ li\n//ul/descendant-or-self::li   # ul li\n//ul/ancestor-or-self::li     # $('ul').closest('li')\n```",
+              "footer": "|      |      |            |      |\n| ---- | ---- | ---------- | ---- |\n| `//` | `ul` | `/child::` | `li` |\n| Axis | Step | Axis       | Step |\n{.left-text}\nSteps of an expression are separated by `/`, usually used to pick child nodes. That's not always true: you can specify a\ndifferent \"axis\" with `::`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Child axis",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Child axis",
+              "body": "```bash\n# both the same\n//ul/li/a\n//child::ul/child::li/child::a\n```",
+              "footer": "`child::` is the default axis. This makes `//a/b/c` work.\n```bash\n//ul[li]\n//ul[child::li]\n```\n```bash\n//ul[count(li) > 2]\n//ul[count(child::li) > 2]\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Descendant-or-self axis",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Descendant-or-self axis",
+              "body": "```bash\n# both the same\n//div//h4\n//div/descendant-or-self::h4\n```",
+              "footer": "`//` is short for the `descendant-or-self::` axis.\n```bash\n//ul//[last()]\n//ul/descendant-or-self::[last()]\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Other axes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Other axes",
+              "body": "| Axis                 | Abbrev | Notes                                            |\n| -------------------- | ------ | ------------------------------------------------ |\n| `ancestor`           |        |                                                  |\n| `ancestor-or-self`   |        |                                                  |\n| `attribute`          | `@`    | `@href` is short for `attribute::href`           |\n| `child`              |        | `div` is short for `child::div`                  |\n| `descendant`         |        |                                                  |\n| `descendant-or-self` | `//`   | `//` is short for `/descendant-or-self::node()/` |\n| `namespace`          |        |                                                  |\n| `self`               | `.`    | `.` is short for `self::node()`                  |\n| `parent`             | `..`   | `..` is short for `parent::node()`               |\n| `following`          |        |                                                  |\n| `following-sibling`  |        |                                                  |\n| `preceding`          |        |                                                  |\n| `preceding-sibling`  |        |                                                  |\n\n{.headers}\n\nThere are other axes you can use.",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Unions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Unions",
+              "body": "```bash\n//a | //span\n```",
+              "footer": "Use `|` to join two expressions.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "XPath More examples {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "```bash\n//*                 # all elements\ncount(//*)          # count all elements\n(//h1)[1]/text()    # text of the first h1 heading\n//li[span]          # find a <li> with an <span> inside it\n                    # ...expands to //li[child::span]\n//ul/li/..          # use .. to select a parent\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find a parent",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find a parent",
+              "body": "```bash\n//section[h1[@id='section-name']]\n```",
+              "footer": "Finds a `<section>` that directly contains `h1#section-name`\n```bash\n//section[//h1[@id='section-name']]\n```\nFinds a `<section>` that contains `h1#section-name`. (Same as above, but uses descendant-or-self instead of child)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Closest",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Closest",
+              "body": "```bash\n./ancestor-or-self::[@class=\"box\"]\n```",
+              "footer": "Works like jQuery's `$().closest('.box')`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Attributes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Attributes",
+              "body": "```bash\n//item[@price > 2*@discount]\n```",
+              "footer": "Finds `<item>` and check its attributes",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Devhints](https://devhints.io/xpath) _(devhints.io)_\n- [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _(whitebeam.org)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

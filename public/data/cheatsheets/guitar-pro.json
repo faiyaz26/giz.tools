@@ -1,0 +1,844 @@
+{
+  "id": "guitar-pro",
+  "metadata": {
+    "title": "Guitar Pro",
+    "date": "2022-11-23T16:23:31.693Z",
+    "background": "bg-[#659af0]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 129 keyboard shortcuts found in Guitar Pro\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Track",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Track",
+              "body": "| Shortcut                | Action     |\n| ----------------------- | ---------- |\n| `Ctrl` `Shift` `Insert` | Add        |\n| `Ctrl` `Shift` `Delete` | Delete     |\n| `Ctrl` `Alt` `Up`       | Move up    |\n| `Ctrl` `Alt` `Down`     | Move down  |\n| `F6`                    | Properties |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `Insert`",
+                  "action": "Add"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Delete`",
+                  "action": "Delete"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Up`",
+                  "action": "Move up"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Down`",
+                  "action": "Move down"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Properties"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bar - General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bar - General",
+              "body": "| Shortcut        | Action             |\n| --------------- | ------------------ | --------- |\n| `Ctrl` `Insert` | Insert bar         |\n| `Ctrl` `Delete` | Delete bar         |\n| `K`             | Clef               |\n| `Ctrl` `K`      | Key signature      |\n| `Ctrl` `T`      | Time signature     |\n| `Ctrl` `/`      | Triplet feel       |\n| `               | `                  | Free time |\n| `[`             | Repeat open        |\n| `]`             | Repeat close       |\n| `D`             | Directions         |\n| `Ctrl` `R`      | Multi rest         |\n| `Ctrl` `Enter`  | Force line break   |\n| `Shift` `7`     | Prevent line break |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Insert`",
+                  "action": "Insert bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Delete`",
+                  "action": "Delete bar"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Clef"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Key signature"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Time signature"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Triplet feel"
+                },
+                {
+                  "shortcut": "`",
+                  "action": "`"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Repeat open"
+                },
+                {
+                  "shortcut": "`]`",
+                  "action": "Repeat close"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Directions"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Multi rest"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Force line break"
+                },
+                {
+                  "shortcut": "`Shift` `7`",
+                  "action": "Prevent line break"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bar - Section",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bar - Section",
+              "body": "| Shortcut         | Action           |\n| ---------------- | ---------------- |\n| `Shift` `Insert` | Insert or remove |\n| `Alt` `Left`     | Previous section |\n| `Alt` `Right`    | Next section     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `Insert`",
+                  "action": "Insert or remove"
+                },
+                {
+                  "shortcut": "`Alt` `Left`",
+                  "action": "Previous section"
+                },
+                {
+                  "shortcut": "`Alt` `Right`",
+                  "action": "Next section"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bar - Simile Mark",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bar - Simile Mark",
+              "body": "| Shortcut           | Action          |\n| ------------------ | --------------- |\n| `Shift` `5`        | Repeat one bar  |\n| `Ctrl` `Shift` `5` | Repeat two bars |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `5`",
+                  "action": "Repeat one bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `5`",
+                  "action": "Repeat two bars"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Note - Duration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Note - Duration",
+              "body": "| Shortcut           | Action                                            |\n| ------------------ | ------------------------------------------------- |\n| `+/-`              | Increase or decrease (whole note, half note, etc) |\n| `Shift` `5`        | Dotting                                           |\n| `Ctrl` `Shift` `5` | Double dotting                                    |\n| `/`                | Triplet                                           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`+/-`",
+                  "action": "Increase or decrease (whole note, half note, etc)"
+                },
+                {
+                  "shortcut": "`Shift` `5`",
+                  "action": "Dotting"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `5`",
+                  "action": "Double dotting"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Triplet"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Note - General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Note - General",
+              "body": "| Shortcut           | Action                    |\n| ------------------ | ------------------------- |\n| `Insert`           | Insert a beat             |\n| `Shift` `Delete`   | Delete the beats          |\n| `C`                | Copy the beats at the end |\n| `L`                | Tie note                  |\n| `Shift` `L`        | Tie the beat              |\n| `F`                | Fermata                   |\n| `R`                | Rest                      |\n| `Ctrl` `D`         | Brush downstroke          |\n| `Ctrl` `U`         | Brush upstroke            |\n| `Ctrl` `Shift` `D` | Arpeggio down             |\n| `Ctrl` `Shift` `U` | Arpeggio up               |\n| `Shift` `R`        | Rasgueado                 |\n| `Shift` `D`        | PickStroke down           |\n| `Shift` `U`        | PickStroke up             |\n| `Shift` `-`        | One semi-town down        |\n| `Shift` `+`        | One semi-tone up          |\n| `Alt` `Down`       | Shift down                |\n| `Alt` `Up`         | Shift up                  |\n| `A`                | Chord                     |\n| `Shift` `I`        | Barre                     |\n| `Shift` `2`        | Timer                     |\n| `T`                | Text                      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-6",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Insert`",
+                  "action": "Insert a beat"
+                },
+                {
+                  "shortcut": "`Shift` `Delete`",
+                  "action": "Delete the beats"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Copy the beats at the end"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Tie note"
+                },
+                {
+                  "shortcut": "`Shift` `L`",
+                  "action": "Tie the beat"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Fermata"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Rest"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Brush downstroke"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Brush upstroke"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `D`",
+                  "action": "Arpeggio down"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `U`",
+                  "action": "Arpeggio up"
+                },
+                {
+                  "shortcut": "`Shift` `R`",
+                  "action": "Rasgueado"
+                },
+                {
+                  "shortcut": "`Shift` `D`",
+                  "action": "PickStroke down"
+                },
+                {
+                  "shortcut": "`Shift` `U`",
+                  "action": "PickStroke up"
+                },
+                {
+                  "shortcut": "`Shift` `-`",
+                  "action": "One semi-town down"
+                },
+                {
+                  "shortcut": "`Shift` `+`",
+                  "action": "One semi-tone up"
+                },
+                {
+                  "shortcut": "`Alt` `Down`",
+                  "action": "Shift down"
+                },
+                {
+                  "shortcut": "`Alt` `Up`",
+                  "action": "Shift up"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Chord"
+                },
+                {
+                  "shortcut": "`Shift` `I`",
+                  "action": "Barre"
+                },
+                {
+                  "shortcut": "`Shift` `2`",
+                  "action": "Timer"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Text"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Effects - General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Effects - General",
+              "body": "| Shortcut             | Action                |\n| -------------------- | --------------------- |\n| `X`                  | Dead note             |\n| `O`                  | Ghost note            |\n| `;`                  | Accented note         |\n| `Shift` `;`          | Heavily accented note |\n| `Shift` `1`          | Staccato              |\n| `Shift` `-`          | Tenuto                |\n| `Shift` `H`          | Legato                |\n| `I`                  | Let ring              |\n| `[`                  | Palm mute note        |\n| `]`                  | Palm-mute on beat     |\n| `Y`                  | Natural harmonic      |\n| `Alt` `Y`            | Artificial harmonic   |\n| `B`                  | Bend                  |\n| `Shift` `W`          | Tremolo bar           |\n| `H`                  | Hammer on or pull-off |\n| `Shift` `9`          | Left-hand tapping     |\n| `Shift` `0`          | Tapping               |\n| `Shift` `4`          | Slap                  |\n| `Ctrl` `Shift` `4`   | Pop                   |\n| `N`                  | Trill                 |\n| `Shift` `,`          | Fade in               |\n| `Shift` `.`          | Fade out              |\n| `Ctrl` `Shift` `./,` | Volume swell          |\n| `Alt` `O`            | Wah open              |\n| `Alt` `C`            | Wah close             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-6",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`X`",
+                  "action": "Dead note"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Ghost note"
+                },
+                {
+                  "shortcut": "`;`",
+                  "action": "Accented note"
+                },
+                {
+                  "shortcut": "`Shift` `;`",
+                  "action": "Heavily accented note"
+                },
+                {
+                  "shortcut": "`Shift` `1`",
+                  "action": "Staccato"
+                },
+                {
+                  "shortcut": "`Shift` `-`",
+                  "action": "Tenuto"
+                },
+                {
+                  "shortcut": "`Shift` `H`",
+                  "action": "Legato"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Let ring"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Palm mute note"
+                },
+                {
+                  "shortcut": "`]`",
+                  "action": "Palm-mute on beat"
+                },
+                {
+                  "shortcut": "`Y`",
+                  "action": "Natural harmonic"
+                },
+                {
+                  "shortcut": "`Alt` `Y`",
+                  "action": "Artificial harmonic"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Bend"
+                },
+                {
+                  "shortcut": "`Shift` `W`",
+                  "action": "Tremolo bar"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Hammer on or pull-off"
+                },
+                {
+                  "shortcut": "`Shift` `9`",
+                  "action": "Left-hand tapping"
+                },
+                {
+                  "shortcut": "`Shift` `0`",
+                  "action": "Tapping"
+                },
+                {
+                  "shortcut": "`Shift` `4`",
+                  "action": "Slap"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `4`",
+                  "action": "Pop"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Trill"
+                },
+                {
+                  "shortcut": "`Shift` `,`",
+                  "action": "Fade in"
+                },
+                {
+                  "shortcut": "`Shift` `.`",
+                  "action": "Fade out"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `./,`",
+                  "action": "Volume swell"
+                },
+                {
+                  "shortcut": "`Alt` `O`",
+                  "action": "Wah open"
+                },
+                {
+                  "shortcut": "`Alt` `C`",
+                  "action": "Wah close"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Note - Accidentals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Note - Accidentals",
+              "body": "| Shortcut         | Action                |\n| ---------------- | --------------------- |\n| `Ctrl` `Alt` `7` | Double flat           |\n| `Ctrl` `7`       | Flat                  |\n| `Ctrl` `8`       | Natural               |\n| `Ctrl` `9`       | Sharp                 |\n| `Ctrl` `Alt` `9` | Double sharp          |\n| `Ctrl` `Alt` `8` | Change the accidental |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Alt` `7`",
+                  "action": "Double flat"
+                },
+                {
+                  "shortcut": "`Ctrl` `7`",
+                  "action": "Flat"
+                },
+                {
+                  "shortcut": "`Ctrl` `8`",
+                  "action": "Natural"
+                },
+                {
+                  "shortcut": "`Ctrl` `9`",
+                  "action": "Sharp"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `9`",
+                  "action": "Double sharp"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `8`",
+                  "action": "Change the accidental"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Effects - Grace Note",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Effects - Grace Note",
+              "body": "| Shortcut  | Action          |\n| --------- | --------------- |\n| `G`       | Before the beat |\n| `Alt` `G` | On the beat     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G`",
+                  "action": "Before the beat"
+                },
+                {
+                  "shortcut": "`Alt` `G`",
+                  "action": "On the beat"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Effects - Vibrato",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Effects - Vibrato",
+              "body": "| Shortcut  | Action                     |\n| --------- | -------------------------- |\n| `V`       | Left-hand vibrato (slight) |\n| `Alt` `V` | Left-hand vibrato (wide)   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`V`",
+                  "action": "Left-hand vibrato (slight)"
+                },
+                {
+                  "shortcut": "`Alt` `V`",
+                  "action": "Left-hand vibrato (wide)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Effects - Vibrato with Trem. Bar",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Effects - Vibrato with Trem. Bar",
+              "body": "| Shortcut  | Action                          |\n| --------- | ------------------------------- |\n| `W`       | Vibrato with trem. bar (slight) |\n| `Alt` `W` | Vibrato with trem. bar (wide)   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`W`",
+                  "action": "Vibrato with trem. bar (slight)"
+                },
+                {
+                  "shortcut": "`Alt` `W`",
+                  "action": "Vibrato with trem. bar (wide)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Effects - Slide",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Effects - Slide",
+              "body": "| Shortcut  | Action       |\n| --------- | ------------ |\n| `S`       | Legato slide |\n| `Alt` `S` | Shift slide  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`S`",
+                  "action": "Legato slide"
+                },
+                {
+                  "shortcut": "`Alt` `S`",
+                  "action": "Shift slide"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Effects - Tremolo",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Effects - Tremolo",
+              "body": "| Shortcut    | Action             |\n| ----------- | ------------------ |\n| `Shift` `'` | Thirty-second note |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `'`",
+                  "action": "Thirty-second note"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tools",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tools",
+              "body": "| Shortcut           | Action                   |\n| ------------------ | ------------------------ |\n| `F4`               | Check the bars' duration |\n| `Ctrl` `Shift` `M` | Move or swap voices      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F4`",
+                  "action": "Check the bars' duration"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Move or swap voices"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sound",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sound",
+              "body": "| Shortcut       | Action                        |\n| -------------- | ----------------------------- |\n| `Space`        | Play                          |\n| `Ctrl` `Space` | Play from the beginning       |\n| `Ctrl` `Home`  | First bar                     |\n| `Ctrl` `Left`  | Rewind                        |\n| `Ctrl` `Right` | Fast forward                  |\n| `Ctrl` `End`   | Last bar                      |\n| `F9`           | Play in loops (speed trainer) |\n| `F2`           | RSI (Realistic Sound Engine)  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Space`",
+                  "action": "Play"
+                },
+                {
+                  "shortcut": "`Ctrl` `Space`",
+                  "action": "Play from the beginning"
+                },
+                {
+                  "shortcut": "`Ctrl` `Home`",
+                  "action": "First bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left`",
+                  "action": "Rewind"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right`",
+                  "action": "Fast forward"
+                },
+                {
+                  "shortcut": "`Ctrl` `End`",
+                  "action": "Last bar"
+                },
+                {
+                  "shortcut": "`F9`",
+                  "action": "Play in loops (speed trainer)"
+                },
+                {
+                  "shortcut": "`F2`",
+                  "action": "RSI (Realistic Sound Engine)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View",
+              "body": "| Shortcut         | Action         |\n| ---------------- | -------------- |\n| `Ctrl` `Alt` `D` | Design mode    |\n| `F3`             | Multitrack     |\n| `Ctrl` `B`       | Enable browser |\n| `F6`             | Fretboard      |\n| `F6`             | Keyboard       |\n| `F6`             | Drums          |\n| `F11`            | Full screen    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Alt` `D`",
+                  "action": "Design mode"
+                },
+                {
+                  "shortcut": "`F3`",
+                  "action": "Multitrack"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Enable browser"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Fretboard"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Keyboard"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Drums"
+                },
+                {
+                  "shortcut": "`F11`",
+                  "action": "Full screen"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Edit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Edit",
+              "body": "| Shortcut           | Action           |\n| ------------------ | ---------------- |\n| `Ctrl` `Z`         | Undo             |\n| `Ctrl` `Shift` `Z` | Redo             |\n| `Ctrl` `X`         | Cut              |\n| `Ctrl` `C`         | Copy             |\n| `Ctrl` `V`         | Paste            |\n| `Ctrl` `Shift` `X` | Multitrack cut   |\n| `Ctrl` `Shift` `C` | Multitrack copy  |\n| `Ctrl` `Shift` `V` | Special paste    |\n| `Ctrl` `A`         | Select all       |\n| `Ctrl` `G`         | Go to            |\n| `F10`              | Edit automations |\n| `Ctrl` `1-4`       | Voices           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "Multitrack cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Multitrack copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `V`",
+                  "action": "Special paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Go to"
+                },
+                {
+                  "shortcut": "`F10`",
+                  "action": "Edit automations"
+                },
+                {
+                  "shortcut": "`Ctrl` `1-4`",
+                  "action": "Voices"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "| Shortcut           | Action            |\n| ------------------ | ----------------- |\n| `Ctrl` `N`         | New steel guitar  |\n| `Ctrl` `O`         | Open              |\n| `Ctrl` `W`         | Close             |\n| `Ctrl` `S`         | Save              |\n| `Ctrl` `Shift` `S` | Save As           |\n| `F5`               | Score information |\n| `F7`               | Stylesheet        |\n| `F8`               | Print preview     |\n| `Ctrl` `P`         | Print             |\n| `F12`              | Preferences       |\n| `Ctrl` `Q`         | Quit              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New steel guitar"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open"
+                },
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Save As"
+                },
+                {
+                  "shortcut": "`F5`",
+                  "action": "Score information"
+                },
+                {
+                  "shortcut": "`F7`",
+                  "action": "Stylesheet"
+                },
+                {
+                  "shortcut": "`F8`",
+                  "action": "Print preview"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Print"
+                },
+                {
+                  "shortcut": "`F12`",
+                  "action": "Preferences"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Quit"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Guitar Pro](https://shredaddict.com/guitar-pro-shortcuts/) _(shredaddict.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

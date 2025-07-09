@@ -1,0 +1,680 @@
+{
+  "id": "firefox",
+  "metadata": {
+    "title": "Firefox",
+    "date": "2022-11-23T16:23:31.703Z",
+    "background": "bg-[#e34e4b]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 116 keyboard shortcuts found in Firefox\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut           | Action                  |\n| ------------------ | ----------------------- |\n| `Alt` `Left`       | Back                    |\n| `Alt` `Right`      | Forward                 |\n| `Alt` `Home`       | Home                    |\n| `Ctrl` `O`         | Open File               |\n| `Ctrl` `R`         | Reload                  |\n| `Ctrl` `Shift` `R` | Reload (override cache) |\n| `Ctrl` `.`         | Stop                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `Left`",
+                  "action": "Back"
+                },
+                {
+                  "shortcut": "`Alt` `Right`",
+                  "action": "Forward"
+                },
+                {
+                  "shortcut": "`Alt` `Home`",
+                  "action": "Home"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open File"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Reload"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Reload (override cache)"
+                },
+                {
+                  "shortcut": "`Ctrl` `.`",
+                  "action": "Stop"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Current Page",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Current Page",
+              "body": "| Shortcut        | Action                             |\n| --------------- | ---------------------------------- |\n| `Tab`           | Focus Next Link or Input Field     |\n| `Shift` `Tab`   | Focus Previous Link or Input Field |\n| `Space`         | Go Down a Screen                   |\n| `Shift` `Space` | Go Up a Screen                     |\n| `Ctrl` `Down`   | Go to Bottom of Page               |\n| `Ctrl` `Up`     | Go to Top of Page                  |\n| `F6`            | Move to Next Frame                 |\n| `Shift` `F6`    | Move to Previous Frame             |\n| `Ctrl` `P`      | Print                              |\n| `Ctrl` `S`      | Save Page As                       |\n| `Ctrl` `+`      | Zoom In                            |\n| `Ctrl` `-`      | Zoom Out                           |\n| `Ctrl` `0`      | Zoom Reset                         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Focus Next Link or Input Field"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Focus Previous Link or Input Field"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Go Down a Screen"
+                },
+                {
+                  "shortcut": "`Shift` `Space`",
+                  "action": "Go Up a Screen"
+                },
+                {
+                  "shortcut": "`Ctrl` `Down`",
+                  "action": "Go to Bottom of Page"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up`",
+                  "action": "Go to Top of Page"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Move to Next Frame"
+                },
+                {
+                  "shortcut": "`Shift` `F6`",
+                  "action": "Move to Previous Frame"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Print"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save Page As"
+                },
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Zoom In"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Zoom Out"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Zoom Reset"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editing",
+              "body": "| Shortcut           | Action                  |\n| ------------------ | ----------------------- |\n| `Ctrl` `C`         | Copy                    |\n| `Ctrl` `X`         | Cut                     |\n| `Backspace`        | Delete                  |\n| `Home`             | Go to Beginning of Line |\n| `End`              | Go to End of Line       |\n| `Ctrl` `V`         | Paste                   |\n| `Ctrl` `Shift` `V` | Paste (as plain text)   |\n| `Ctrl` `Shift` `Z` | Redo                    |\n| `Ctrl` `A`         | Select All              |\n| `Ctrl` `Z`         | Undo                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Backspace`",
+                  "action": "Delete"
+                },
+                {
+                  "shortcut": "`Home`",
+                  "action": "Go to Beginning of Line"
+                },
+                {
+                  "shortcut": "`End`",
+                  "action": "Go to End of Line"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `V`",
+                  "action": "Paste (as plain text)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select All"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Search",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Search",
+              "body": "| Shortcut           | Action                                             |\n| ------------------ | -------------------------------------------------- |\n| `Ctrl` `F`         | Find                                               |\n| `Ctrl` `G`         | Find Again                                         |\n| `Ctrl` `Shift` `G` | Find Previous                                      |\n| `'`                | Quick Find within link-text only                   |\n| `/`                | Quick Find                                         |\n| `Esc`              | Close the Find or Quick Find bar                   |\n| `Ctrl` `K`         | Focus Search bar                                   |\n| `Ctrl` `Up/Down`   | Change the Default Search Engine                   |\n| `Alt` `Up/Down`    | View menu to switch, add, or manage search engines |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Find Again"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Find Previous"
+                },
+                {
+                  "shortcut": "`'`",
+                  "action": "Quick Find within link-text only"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Quick Find"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close the Find or Quick Find bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Focus Search bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up/Down`",
+                  "action": "Change the Default Search Engine"
+                },
+                {
+                  "shortcut": "`Alt` `Up/Down`",
+                  "action": "View menu to switch, add, or manage search engines"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Windows and Tabs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Windows and Tabs",
+              "body": "| Shortcut                | Action                                       |\n| ----------------------- | -------------------------------------------- |\n| `Ctrl` `W`              | Close Tab                                    |\n| `Ctrl` `Shift` `W`      | Close Window                                 |\n| `Ctrl` `Tab`            | Cycle through Tabs in Recently Used Order    |\n| `Ctrl` `Q`              | Quit                                         |\n| `Ctrl` `PgUp`           | Go one Tab to the Left                       |\n| `Ctrl` `PgDown`         | Go one Tab to the Right                      |\n| `Ctrl` `Shift` `PgUp`   | Move Tab Left                                |\n| `Ctrl` `Shift` `PgDown` | Move Tab Right                               |\n| `Ctrl` `Shift` `Home`   | Move Tab in focus to start                   |\n| `Ctrl` `Shift` `End`    | Move Tab in focus to end                     |\n| `Ctrl` `M`              | Mute/Unmute Audio                            |\n| `Ctrl` `T`              | New Tab                                      |\n| `Ctrl` `N`              | New Window                                   |\n| `Ctrl` `Shift` `P`      | New Private Window                           |\n| `Alt` `Enter`           | Open Address in New Foreground Tab           |\n| `Enter`                 | Open Focused Bookmark or Link in Current Tab |\n| `Ctrl` `Enter`          | Open Focused Bookmark in New Foreground Tab  |\n| `Ctrl` `Shift` `Enter`  | Open Focused Bookmark in New Background Tab  |\n| `Ctrl` `Enter`          | Open Focused Link in New Background Tab      |\n| `Shift` `Enter`         | Open Focused Bookmark or Link in New Window  |\n| `Ctrl` `Shift` `T`      | Undo Close Tab                               |\n| `Ctrl` `Shift` `N`      | Undo Close Window                            |\n| `Ctrl` `1-8`            | Select Tab 1-8                               |\n| `Ctrl` `9`              | Select Last Tab                              |\n| `Ctrl` `Shift` `X`      | Moves the URL left or right                  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close Tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `W`",
+                  "action": "Close Window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Cycle through Tabs in Recently Used Order"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Quit"
+                },
+                {
+                  "shortcut": "`Ctrl` `PgUp`",
+                  "action": "Go one Tab to the Left"
+                },
+                {
+                  "shortcut": "`Ctrl` `PgDown`",
+                  "action": "Go one Tab to the Right"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `PgUp`",
+                  "action": "Move Tab Left"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `PgDown`",
+                  "action": "Move Tab Right"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Home`",
+                  "action": "Move Tab in focus to start"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `End`",
+                  "action": "Move Tab in focus to end"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Mute/Unmute Audio"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "New Tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New Window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "New Private Window"
+                },
+                {
+                  "shortcut": "`Alt` `Enter`",
+                  "action": "Open Address in New Foreground Tab"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Open Focused Bookmark or Link in Current Tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Open Focused Bookmark in New Foreground Tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Enter`",
+                  "action": "Open Focused Bookmark in New Background Tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Open Focused Link in New Background Tab"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Open Focused Bookmark or Link in New Window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Undo Close Tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Undo Close Window"
+                },
+                {
+                  "shortcut": "`Ctrl` `1-8`",
+                  "action": "Select Tab 1-8"
+                },
+                {
+                  "shortcut": "`Ctrl` `9`",
+                  "action": "Select Last Tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "Moves the URL left or right"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "History",
+          "level": 3,
+          "cards": [
+            {
+              "title": "History",
+              "body": "| Shortcut                | Action               |\n| ----------------------- | -------------------- |\n| `Ctrl` `Shift` `H`      | History sidebar      |\n| `Ctrl` `Shift` `Delete` | Clear Recent History |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "History sidebar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Delete`",
+                  "action": "Clear Recent History"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bookmarks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bookmarks",
+              "body": "| Shortcut                            | Action                     |\n| ----------------------------------- | -------------------------- |\n| `Ctrl` `Shift` `D`                  | Bookmark All Tabs          |\n| `Ctrl` `D`                          | Bookmark This Page         |\n| `Ctrl` `B`                          | Bookmarks sidebar          |\n| `Ctrl` `Shift` `S`                  | Library window (Bookmarks) |\n| `(search field in Library)` `Space` | Search for all Bookmarks   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `D`",
+                  "action": "Bookmark All Tabs"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Bookmark This Page"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bookmarks sidebar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Library window (Bookmarks)"
+                },
+                {
+                  "shortcut": "`(search field in Library)` `Space`",
+                  "action": "Search for all Bookmarks"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tools",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tools",
+              "body": "| Shortcut           | Action                 |\n| ------------------ | ---------------------- |\n| `Ctrl` `J`         | Downloads              |\n| `Ctrl` `Shift` `A` | Add-ons                |\n| `Ctrl` `Alt` `I`   | Toggle Developer Tools |\n| `Ctrl` `Alt` `K`   | Web Console            |\n| `Ctrl` `Alt` `C`   | Inspector              |\n| `Ctrl` `Alt` `S`   | Debugger               |\n| `Shift` `F7`       | Style Editor           |\n| `Shift` `F5`       | Profiler               |\n| `Ctrl` `Alt` `E`   | Network                |\n| `Shift` `F2`       | Developer Toolbar      |\n| `Ctrl` `Alt` `M`   | Responsive Design View |\n| `Shift` `F4`       | Scratchpad             |\n| `Ctrl` `U`         | Page Source            |\n| `Ctrl` `Shift` `J` | Browser Console        |\n| `Ctrl` `I`         | Page Info              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Downloads"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Add-ons"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `I`",
+                  "action": "Toggle Developer Tools"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `K`",
+                  "action": "Web Console"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `C`",
+                  "action": "Inspector"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `S`",
+                  "action": "Debugger"
+                },
+                {
+                  "shortcut": "`Shift` `F7`",
+                  "action": "Style Editor"
+                },
+                {
+                  "shortcut": "`Shift` `F5`",
+                  "action": "Profiler"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `E`",
+                  "action": "Network"
+                },
+                {
+                  "shortcut": "`Shift` `F2`",
+                  "action": "Developer Toolbar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `M`",
+                  "action": "Responsive Design View"
+                },
+                {
+                  "shortcut": "`Shift` `F4`",
+                  "action": "Scratchpad"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Page Source"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Browser Console"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Page Info"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "PDF Viewer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PDF Viewer",
+              "body": "| Shortcut         | Action                          |\n| ---------------- | ------------------------------- |\n| `N/J/Right`      | Next page                       |\n| `P/K/Left`       | Previous page                   |\n| `Ctrl` `+`       | Zoom in                         |\n| `Ctrl` `-`       | Zoom out                        |\n| `Ctrl` `0`       | Automatic Zoom                  |\n| `R`              | Rotate the document clockwise   |\n| `Ctrl` `R`       | Rotate counterclockwise         |\n| `Ctrl` `Alt` `P` | Switch to Presentation Mode     |\n| `S`              | Choose Text Selection Tool      |\n| `H`              | Choose Hand Tool                |\n| `Ctrl` `Alt` `G` | Focus the Page Number input box |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`N/J/Right`",
+                  "action": "Next page"
+                },
+                {
+                  "shortcut": "`P/K/Left`",
+                  "action": "Previous page"
+                },
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Automatic Zoom"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Rotate the document clockwise"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Rotate counterclockwise"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `P`",
+                  "action": "Switch to Presentation Mode"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Choose Text Selection Tool"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Choose Hand Tool"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `G`",
+                  "action": "Focus the Page Number input box"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Miscellaneous",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Miscellaneous",
+              "body": "| Shortcut               | Action                             |\n| ---------------------- | ---------------------------------- |\n| `Ctrl` `Enter`         | Complete .com address              |\n| `Shift` `Enter`        | Complete .net address              |\n| `Ctrl` `Shift` `Enter` | Complete .org address              |\n| `Shift` `Delete`       | Delete Selected Autocomplete Entry |\n| `Ctrl` `Shift` `F`     | Toggle Full Screen                 |\n| `Ctrl` `Alt` `R`       | Toggle Reader Mode                 |\n| `F7`                   | Caret Browsing                     |\n| `Ctrl` `L`             | Select Location Bar                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Complete .com address"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Complete .net address"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Enter`",
+                  "action": "Complete .org address"
+                },
+                {
+                  "shortcut": "`Shift` `Delete`",
+                  "action": "Delete Selected Autocomplete Entry"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Toggle Full Screen"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `R`",
+                  "action": "Toggle Reader Mode"
+                },
+                {
+                  "shortcut": "`F7`",
+                  "action": "Caret Browsing"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Select Location Bar"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Media Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Media Shortcuts",
+              "body": "| Shortcut       | Action                  |\n| -------------- | ----------------------- |\n| `Space`        | Toggle Play/Pause       |\n| `Down`         | Decrease volume         |\n| `Up`           | Increase volume         |\n| `Ctrl` `Down`  | Mute audio              |\n| `Ctrl` `Up`    | Unmute audio            |\n| `Left`         | Seek back 15 seconds    |\n| `Ctrl` `Left`  | Seek back 10%           |\n| `Right`        | Seek forward 15 seconds |\n| `Ctrl` `Right` | Seek forward 10%        |\n| `Home`         | Seek to the beginning   |\n| `End`          | Seek to the end         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Space`",
+                  "action": "Toggle Play/Pause"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Decrease volume"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Increase volume"
+                },
+                {
+                  "shortcut": "`Ctrl` `Down`",
+                  "action": "Mute audio"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up`",
+                  "action": "Unmute audio"
+                },
+                {
+                  "shortcut": "`Left`",
+                  "action": "Seek back 15 seconds"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left`",
+                  "action": "Seek back 10%"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Seek forward 15 seconds"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right`",
+                  "action": "Seek forward 10%"
+                },
+                {
+                  "shortcut": "`Home`",
+                  "action": "Seek to the beginning"
+                },
+                {
+                  "shortcut": "`End`",
+                  "action": "Seek to the end"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Firefox](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly)\n  _(support.mozilla.org)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

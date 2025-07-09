@@ -1,0 +1,300 @@
+{
+  "id": "alpine-linux",
+  "metadata": {
+    "title": "Alpine Linux",
+    "date": "2024-03-20T12:00:00.000Z",
+    "icon": "icon-alpine",
+    "background": "bg-blue-600",
+    "tags": [
+      "linux",
+      "server",
+      "container"
+    ],
+    "categories": [
+      "Operating System"
+    ],
+    "intro": "A comprehensive cheatsheet for Alpine Linux, covering package management, system administration, networking, and more. Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox."
+  },
+  "sections": [
+    {
+      "title": "Package Management (apk)",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic Package Operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Package Operations",
+              "body": "```bash\n# Update package index\napk update\n\n# Upgrade all installed packages\napk upgrade\n\n# Install a package\napk add <package-name>\n\n# Remove a package\napk del <package-name>\n\n# Search for a package\napk search <package-name>\n\n# Show package info\napk info <package-name>\n\n# List all installed packages\napk list --installed\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Advanced Package Operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Advanced Package Operations",
+              "body": "```bash\n# Add package from testing repository\napk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing <package-name>\n\n# Add multiple packages\napk add package1 package2 package3\n\n# Clean package cache\napk cache clean\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "System Administration",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Service Management (OpenRC)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Service Management (OpenRC)",
+              "body": "```bash\n# Start a service\nrc-service <service-name> start\n\n# Stop a service\nrc-service <service-name> stop\n\n# Restart a service\nrc-service <service-name> restart\n\n# Add service to default runlevel\nrc-update add <service-name> default\n\n# Remove service from default runlevel\nrc-update del <service-name> default\n\n# List all services\nrc-status\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "System Information",
+          "level": 3,
+          "cards": [
+            {
+              "title": "System Information",
+              "body": "```bash\n# Show system information\nuname -a\n\n# Show disk usage\ndf -h\n\n# Show memory usage\nfree -h\n\n# Show running processes\nps aux\n\n# Show system uptime\nuptime\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Network Configuration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Network Configuration",
+              "body": "```bash\n# Show network interfaces\nip addr show\n\n# Configure network interface\nsetup-interfaces\n\n# Test network connectivity\nping -c 4 google.com\n\n# Show routing table\nip route show\n\n# Edit network configuration\nvi /etc/network/interfaces\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "User Management",
+          "level": 3,
+          "cards": [
+            {
+              "title": "User Management",
+              "body": "```bash\n# Add a new user\nadduser <username>\n\n# Add user to group\naddgroup <username> <groupname>\n\n# Change password\npasswd <username>\n\n# Delete user\ndeluser <username>\n\n# List all users\ncat /etc/passwd\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "File System Operations",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic File Operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic File Operations",
+              "body": "```bash\n# Create directory\nmkdir <directory-name>\n\n# Remove directory\nrm -r <directory-name>\n\n# Copy files\ncp <source> <destination>\n\n# Move/rename files\nmv <source> <destination>\n\n# Change permissions\nchmod <permissions> <file>\n\n# Change ownership\nchown <user>:<group> <file>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Container Operations",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Docker Support",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Docker Support",
+              "body": "```bash\n# Install Docker\napk add docker\n\n# Start Docker service\nrc-service docker start\n\n# Enable Docker at boot\nrc-update add docker default\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "System Maintenance",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Disk Operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Disk Operations",
+              "body": "```bash\n# Check disk space\ndf -h\n\n# Check directory size\ndu -sh <directory>\n\n# Mount a device\nmount /dev/<device> /mnt/<mountpoint>\n\n# Unmount a device\numount /mnt/<mountpoint>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Backup and Restore",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Backup and Restore",
+              "body": "```bash\n# Create tar archive\ntar -czf backup.tar.gz /path/to/backup\n\n# Extract tar archive\ntar -xzf backup.tar.gz\n\n# Create system backup (root required)\nlbu package /media/backup.apkovl.tar.gz\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Tips and Tricks",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Common Configuration Files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Common Configuration Files",
+              "body": "- `/etc/apk/repositories` - Package repositories\n- `/etc/network/interfaces` - Network configuration\n- `/etc/hostname` - System hostname\n- `/etc/hosts` - Host mappings\n- `/etc/resolv.conf` - DNS configuration",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Environment Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Environment Variables",
+              "body": "```bash\n# Set environment variable\nexport VARIABLE=value\n\n# View all environment variables\nenv\n\n# Add permanent environment variable\necho \"export VARIABLE=value\" >> ~/.profile\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "System Logs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "System Logs",
+              "body": "```bash\n# View system logs\nless /var/log/messages\n\n# View boot messages\ndmesg\n\n# Follow log in real-time\ntail -f /var/log/messages\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Security",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Firewall (using iptables)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Firewall (using iptables)",
+              "body": "```bash\n# Install iptables\napk add iptables\n\n# Allow SSH (port 22)\niptables -A INPUT -p tcp --dport 22 -j ACCEPT\n\n# Save iptables rules\n/etc/init.d/iptables save\n\n# Restore iptables rules\n/etc/init.d/iptables restart\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SSH Configuration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SSH Configuration",
+              "body": "```bash\n# Generate SSH key\nssh-keygen -t rsa -b 4096\n\n# Copy SSH key to remote server\nssh-copy-id user@remote-server\n\n# Edit SSH configuration\nvi /etc/ssh/sshd_config\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Common Commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Common Commands",
+              "body": "```bash\n# Check system logs for errors\ndmesg | grep -i error\n\n# Check service status\nrc-service <service-name> status\n\n# Check system resource usage\ntop\n\n# Check network connections\nnetstat -tuln\n\n# Check disk health\nsmartctl -a /dev/sda  # Requires smartmontools package\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

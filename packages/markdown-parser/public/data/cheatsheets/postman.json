@@ -1,0 +1,180 @@
+{
+  "id": "postman",
+  "metadata": {
+    "title": "Postman",
+    "date": "2022-11-23T16:23:31.703Z",
+    "background": "bg-[#cf5e3c]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 23 keyboard shortcuts found in Postman\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Navigational Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigational Shortcuts",
+              "body": "| Shortcut           | Action                           |\n| ------------------ | -------------------------------- |\n| `Ctrl` `Alt` `1`   | Focus Sidebar                    |\n| `Ctrl` `Alt` `2`   | Focus Builder                    |\n| `Ctrl` `#`         | Focus on #th tab                 |\n| `Ctrl` `Shift` `/` | Switch between tabs              |\n| `Down`             | Move to next item                |\n| `Up`               | Move to previous item            |\n| `Right`            | Expand collection/folder         |\n| `Left`             | Collapse collection/folder       |\n| `Shift` `Down`     | Select current AND next item     |\n| `Shift` `Up`       | Select current AND previous item |\n| `Ctrl` `F`         | Search sidebar                   |\n| `Enter`            | Open request in a tab            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Alt` `1`",
+                  "action": "Focus Sidebar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `2`",
+                  "action": "Focus Builder"
+                },
+                {
+                  "shortcut": "`Ctrl` `#`",
+                  "action": "Focus on #th tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `/`",
+                  "action": "Switch between tabs"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Move to next item"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Move to previous item"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Expand collection/folder"
+                },
+                {
+                  "shortcut": "`Left`",
+                  "action": "Collapse collection/folder"
+                },
+                {
+                  "shortcut": "`Shift` `Down`",
+                  "action": "Select current AND next item"
+                },
+                {
+                  "shortcut": "`Shift` `Up`",
+                  "action": "Select current AND previous item"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Search sidebar"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Open request in a tab"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Manipulation Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Manipulation Shortcuts",
+              "body": "| Shortcut   | Action      |\n| ---------- | ----------- |\n| `Ctrl` `C` | Copy        |\n| `Ctrl` `V` | Paste       |\n| `Delete`   | Delete      |\n| `Ctrl` `D` | Duplicate   |\n| `Ctrl` `E` | Edit/Rename |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Delete`",
+                  "action": "Delete"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Duplicate"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Edit/Rename"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Global Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Global Shortcuts",
+              "body": "| Shortcut           | Action         |\n| ------------------ | -------------- |\n| `Ctrl` `S`         | Save           |\n| `Ctrl` `Shift` `S` | Save As        |\n| `Ctrl` `Enter`     | Send Request   |\n| `Ctrl` `\\`         | Toggle Sidebar |\n| `Ctrl` `L`         | Jump to URL    |\n| `Ctrl` `Alt` `C`   | Open Console   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Save As"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Send Request"
+                },
+                {
+                  "shortcut": "`Ctrl` `\\`",
+                  "action": "Toggle Sidebar"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Jump to URL"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `C`",
+                  "action": "Open Console"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Postman](https://learning.getpostman.com/docs/postman/launching_postman/keyboard_shortcuts/)\n  _(learning.getpostman.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

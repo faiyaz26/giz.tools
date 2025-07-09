@@ -1,6 +1,1797 @@
 {
   "cheatsheets": [
     {
+      "id": "zoom",
+      "name": "Zoom",
+      "description": "A visual cheat-sheet for the 32 keyboard shortcuts found in Zoom. These shortcuts are for MacOS, for Windows visit /zoom-windows.\n",
+      "keywords": [
+        "zoom",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "windows",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Mac Keyboard Shortcuts {.cols-2}",
+        "Windows Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.352Z"
+    },
+    {
+      "id": "zed",
+      "name": "Zed",
+      "description": "A visual cheat-sheet for the 50 keyboard shortcuts found in the Zed text editor.",
+      "keywords": [
+        "zed",
+        "text",
+        "editor",
+        "shortcut",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.353Z"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "description": "A visual cheat-sheet for the 18 keyboard shortcuts found on YouTube.com\n",
+      "keywords": [
+        "youtube",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.354Z"
+    },
+    {
+      "id": "yaml",
+      "name": "YAML",
+      "description": "This is a quick reference cheat sheet for understanding and writing YAML format configuration files.\n",
+      "keywords": [
+        "yaml",
+        "config",
+        "format",
+        "programming",
+        "getting",
+        "started",
+        "collections",
+        "reference",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "YAML Collections",
+        "YAML Reference",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.355Z"
+    },
+    {
+      "id": "xpath",
+      "name": "XPath",
+      "description": "This is an [XPath](https://en.wikipedia.org/wiki/XPath) selectors cheat sheet, which lists commonly used XPath positioning methods and CSS selectors\n",
+      "keywords": [
+        "xpath",
+        "document",
+        "expression",
+        "select",
+        "toolkit",
+        "selectors",
+        "{.cols-6}",
+        "expressions",
+        "predicates",
+        "functions"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "XPath Selectors {.cols-6}",
+        "XPath Expressions",
+        "XPath Predicates",
+        "XPath Functions {.cols-2}",
+        "XPath Axes {.cols-2}",
+        "XPath More examples {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.356Z"
+    },
+    {
+      "id": "wordpress",
+      "name": "WordPress",
+      "description": "A visual cheat-sheet for the 34 keyboard shortcuts found in the WordPress visual editor\n",
+      "keywords": [
+        "wordpress",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.357Z"
+    },
+    {
+      "id": "windows-shortcuts",
+      "name": "windows-shortcuts",
+      "description": "Quick reference for windows-shortcuts",
+      "keywords": [],
+      "categories": [],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [],
+      "lastUpdated": "2025-07-09T16:05:42.357Z"
+    },
+    {
+      "id": "windows-cmd",
+      "name": "windows-cmd",
+      "description": "Quick reference for windows-cmd",
+      "keywords": [
+        "getting",
+        "started",
+        "manage",
+        "file",
+        "system",
+        "network",
+        "miscellaneouss",
+        "tips",
+        "tricks",
+        "other"
+      ],
+      "categories": [],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Manage file :",
+        "System & Network",
+        "Miscellaneouss",
+        "Tips & Tricks",
+        "Other"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.358Z"
+    },
+    {
+      "id": "webstorm",
+      "name": "WebStorm",
+      "description": "This quick reference cheat sheet lists the default keyboard shortcuts for WebStorm running on Windows/Linux or Mac\n",
+      "keywords": [
+        "webstorm",
+        "jetbrains",
+        "web",
+        "shortcut",
+        "keyboard shortcuts",
+        "windows",
+        "linux",
+        "keymap"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Webstorm Windows & Linux Keymap"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.359Z"
+    },
+    {
+      "id": "webflow",
+      "name": "Webflow",
+      "description": "A visual cheat-sheet for the 41 keyboard shortcuts found in Webflow\n",
+      "keywords": [
+        "webflow",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.360Z"
+    },
+    {
+      "id": "vue",
+      "name": "Vue",
+      "description": "A Vue 3 cheat sheet with the most important concepts, reactivity, component system, routing, and more. Updated for the latest version and perfect for both beginners and advanced users.\n",
+      "keywords": [
+        "vue",
+        "web",
+        "programming",
+        "vue.js",
+        "cheatsheet",
+        "beginner",
+        "advanced",
+        "setup",
+        "app",
+        "structure"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "📘 Vue.js 3 Cheatsheet – Beginner to Advanced",
+        "⚙️ 1. Setup",
+        "🧠 2. App Structure",
+        "📦 3. Data, Methods, Template",
+        "🧰 4. Directives",
+        "🪝 5. Lifecycle Hooks",
+        "🎯 6. Events",
+        "🔁 7. Computed & Watch",
+        "🧱 8. Components",
+        "🔗 9. Props & Emits",
+        "🔄 10. v-model with Components",
+        "⚒ 11. Composition API",
+        "🌐 12. Vue Router",
+        "📦 13. Pinia (Vuex Alternative)",
+        "🎨 14. Slots",
+        "🧪 15. Testing",
+        "🧼 16. Best Practices",
+        "🛠 17. Dev Tools",
+        "📚 18. Official Resources"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.361Z"
+    },
+    {
+      "id": "vscode",
+      "name": "VSCode",
+      "description": "This VSCode (Visual Studio Code) quick reference cheat sheet shows its keyboard shortcuts and commands.\n",
+      "keywords": [
+        "vscode",
+        "text",
+        "editor",
+        "shortcut",
+        "toolkit",
+        "keyboard",
+        "shortcuts",
+        "for",
+        "windows",
+        "macos"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Keyboard shortcuts for Windows",
+        "Keyboard shortcuts for MacOS",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.362Z"
+    },
+    {
+      "id": "vlc",
+      "name": "VLC Player",
+      "description": "A visual cheat-sheet for the 82 keyboard shortcuts found in VLC Player\n",
+      "keywords": [
+        "vlc",
+        "player",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.363Z"
+    },
+    {
+      "id": "vivaldi",
+      "name": "Vivaldi Browser",
+      "description": "A visual cheat-sheet for the 69 default keyboard shortcuts found in the Vivaldi browser\n",
+      "keywords": [
+        "vivaldi",
+        "browser",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.364Z"
+    },
+    {
+      "id": "vim",
+      "name": "Vim",
+      "description": "A useful collection of [Vim](http://www.vim.org/) 8.2 quick reference cheat sheets to help you learn vim editor faster.\n",
+      "keywords": [
+        "vim",
+        "vi",
+        "text",
+        "editor",
+        "terminal",
+        "shortcut",
+        "toolkit",
+        "getting",
+        "started",
+        "operators"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Vim Operators",
+        "Vim Text objects",
+        "Vim Multiple files",
+        "Vim Search and Replace",
+        "Vimdiff",
+        "Miscellaneous",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.365Z"
+    },
+    {
+      "id": "unreal-engine",
+      "name": "Unreal Engine",
+      "description": "A visual cheat-sheet for many keyboard shortcuts found in Unreal Engine 5",
+      "keywords": [
+        "unreal",
+        "engine",
+        "keyboard shortcuts",
+        "level",
+        "editor",
+        "asset",
+        "editors",
+        "your",
+        "own",
+        "shortcuts"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Level Editor",
+        "Asset Editors",
+        "Your own Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.365Z"
+    },
+    {
+      "id": "unity-shader-graph",
+      "name": "Unity Shader Graph",
+      "description": "This is a visual cheat-sheet for the Unity Shader Graph. This tool is used to create custom shaders material in Unity, a popular game engine.\n",
+      "keywords": [
+        "unity",
+        "shader",
+        "graph",
+        "computer graphics",
+        "visual effects",
+        "programming",
+        "nodes",
+        "{.cols-2}",
+        "attributes",
+        "math"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Shader Graph Nodes {.cols-2}",
+        "1. Attributes {.cols-2}",
+        "2. Math Operations {.cols-2}",
+        "3. Color Processing {.cols-2}",
+        "4. Texture Processing {.cols-2}",
+        "5. Effects {.cols-2}",
+        "Custom Function Node",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.366Z"
+    },
+    {
+      "id": "unity-3d",
+      "name": "Unity 3D",
+      "description": "A visual cheat-sheet for the 50 keyboard shortcuts found in Unity 3D\n",
+      "keywords": [
+        "unity",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.366Z"
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "description": "A TypeScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.\n",
+      "keywords": [
+        "typescript",
+        "ts",
+        "web",
+        "programming",
+        "getting",
+        "started",
+        "basic",
+        "datatypes",
+        "modules",
+        "union"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Basic DataTypes",
+        "Modules",
+        "Union and Intersection Types",
+        "Utility Types",
+        "Decorators",
+        "Also read"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.367Z"
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter",
+      "description": "A visual cheat-sheet for the 26 keyboard shortcuts found on Twitter\n",
+      "keywords": [
+        "twitter",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.367Z"
+    },
+    {
+      "id": "trello",
+      "name": "Trello",
+      "description": "A visual cheat-sheet for the 29 keyboard shortcuts found on Trello\n",
+      "keywords": [
+        "trello",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.368Z"
+    },
+    {
+      "id": "transmit",
+      "name": "Transmit",
+      "description": "A visual cheat-sheet for the 62 keyboard shortcuts found in Transmit. This application is MacOS-only.\n",
+      "keywords": [
+        "transmit",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.368Z"
+    },
+    {
+      "id": "toml",
+      "name": "TOML",
+      "description": "This is a quick reference cheat sheet to the TOML format configuration file syntax.\n",
+      "keywords": [
+        "toml",
+        "config",
+        "format",
+        "programming",
+        "getting",
+        "started",
+        "strings",
+        "tables"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "TOML Strings",
+        "TOML Tables"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.369Z"
+    },
+    {
+      "id": "todoist",
+      "name": "Todoist",
+      "description": "A visual cheat-sheet for the 37 keyboard shortcuts found in Todoist\n",
+      "keywords": [
+        "todoist",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.369Z"
+    },
+    {
+      "id": "tmux",
+      "name": "Tmux",
+      "description": "The tmux cheat sheet quick reference of most commonly used shortcuts and commands\n",
+      "keywords": [
+        "tmux",
+        "utility",
+        "terminal",
+        "session",
+        "linux command",
+        "cli",
+        "shortcuts",
+        "command",
+        "mode"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Tmux CLI",
+        "Tmux shortcuts",
+        "Tmux Command Mode"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.370Z"
+    },
+    {
+      "id": "ticktick",
+      "name": "TickTick",
+      "description": "A visual cheat-sheet for the 25 keyboard shortcuts found in the TickTick desktop app\n",
+      "keywords": [
+        "ticktick",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.370Z"
+    },
+    {
+      "id": "terraform",
+      "name": "Terraform",
+      "description": "This is a quick reference cheat sheet for [Terraform](https://docs.docker.com/get-started/).\n",
+      "keywords": [
+        "terraform",
+        "container",
+        "virtual",
+        "programming",
+        "hcl",
+        "syntax:",
+        "{.cols-2}",
+        "meta-arguments",
+        "cli",
+        "also"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "HCL Syntax: {.cols-2}",
+        "Meta-Arguments",
+        "Terraform CLI",
+        "Also See"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.371Z"
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram Desktop",
+      "description": "A visual cheat-sheet for the 37 keyboard shortcuts found on the Telegram Desktop app\n",
+      "keywords": [
+        "telegram",
+        "desktop",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.371Z"
+    },
+    {
+      "id": "taskset",
+      "name": "Taskset",
+      "description": "The taskset command is used to set or retrieve the CPU affinity of a running process given its pid, or to launch a new command with a given CPU affinity.",
+      "keywords": [
+        "taskset",
+        "process",
+        "process manager",
+        "linux command",
+        "getting",
+        "started",
+        "{.cols-3}",
+        "example",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-3}",
+        "Example",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.372Z"
+    },
+    {
+      "id": "table-plus",
+      "name": "TablePlus",
+      "description": "A visual cheat-sheet for the 34 keyboard shortcuts found in TablePlus\n",
+      "keywords": [
+        "tableplus",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.372Z"
+    },
+    {
+      "id": "systemd",
+      "name": "Systemd",
+      "description": "systemd is the init system and service manager used by most modern Linux distributions.\n",
+      "keywords": [
+        "systemd",
+        "linux",
+        "linux command",
+        "core",
+        "utilities{.cols-4}",
+        "utility",
+        "commands",
+        "{.cols-4}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "systemd Core Utilities{.cols-4}",
+        "Utility Commands {.cols-4}",
+        "Also See"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.373Z"
+    },
+    {
+      "id": "swift",
+      "name": "Swift",
+      "description": "This cheat sheet provides examples of using Swift that cover basic Swift knowledge, control flow etc.\n",
+      "keywords": [
+        "swift",
+        "apple",
+        "ios",
+        "ipados",
+        "programming",
+        "getting",
+        "started",
+        "variable",
+        "conditions",
+        "cycle"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Variable",
+        "Conditions",
+        "cycle",
+        "Arrays and collections",
+        "dictionary",
+        "function",
+        "structure",
+        "class",
+        "Enumerate",
+        "Extensions",
+        "Generics",
+        "Also See"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.374Z"
+    },
+    {
+      "id": "svelte",
+      "name": "Svelte",
+      "description": "A Svelte cheat sheet with the most important concepts, functions, reactivity, and more. A complete quick reference for beginners, updated for Svelte 5.\n",
+      "keywords": [
+        "svelte",
+        "web",
+        "programming",
+        "getting",
+        "started",
+        "components",
+        "properties",
+        "{.cols-2}",
+        "state",
+        "{.cols-1}"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Components",
+        "Properties {.cols-2}",
+        "State {.cols-1}",
+        "Events {.cols-1}",
+        "Loops {.cols-2}",
+        "Forms {.cols-1}",
+        "CSS {.cols-1}",
+        "Fetching Data {.cols-1}",
+        "Lifecycle Hooks {.cols-1}",
+        "More Svelte Features {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.375Z"
+    },
+    {
+      "id": "superhuman",
+      "name": "Superhuman",
+      "description": "A visual cheat-sheet for the 105 keyboard shortcuts found in Superhuman. This application is MacOS-only.\n",
+      "keywords": [
+        "superhuman",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.375Z"
+    },
+    {
+      "id": "sublime-text",
+      "name": "Sublime Text",
+      "description": "A visual cheat-sheet for the 49 keyboard shortcuts found in Sublime Text\n",
+      "keywords": [
+        "sublime",
+        "text",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.376Z"
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "description": "A visual cheat-sheet for the 23 keyboard shortcuts found in Spotify\n",
+      "keywords": [
+        "spotify",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.378Z"
+    },
+    {
+      "id": "soundcloud",
+      "name": "SoundCloud",
+      "description": "A visual cheat-sheet for the 22 keyboard shortcuts found on SoundCloud\n",
+      "keywords": [
+        "soundcloud",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.378Z"
+    },
+    {
+      "id": "socket-io",
+      "name": "Socket io",
+      "description": "Socket.IO is a JavaScript library for real-time web applications. It enables bi-directional, event-based communication between clients (typically browsers or native apps) and servers.\n",
+      "keywords": [
+        "socket",
+        "socket io",
+        "web",
+        "programming",
+        "introduction",
+        "installation",
+        "setup",
+        "connecting",
+        "emitting",
+        "listening"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Introduction",
+        "Installation / Setup",
+        "Connecting / Setup",
+        "Emitting & Listening to Events",
+        "Broadcasting & Rooms",
+        "Disconnects & Errors",
+        "Namespaces",
+        "Authentication (Basic Token)",
+        "Tips for Debugging & Logging",
+        "Advanced Features",
+        "Best Practices"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.379Z"
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "description": "A visual cheat-sheet for the 62 keyboard shortcuts found in Slack\n",
+      "keywords": [
+        "slack",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.379Z"
+    },
+    {
+      "id": "skype",
+      "name": "Skype",
+      "description": "A visual cheat-sheet for the 31 keyboard shortcuts found in Skype\n",
+      "keywords": [
+        "skype",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.380Z"
+    },
+    {
+      "id": "sketchup",
+      "name": "SketchUp Pro",
+      "description": "A visual cheat-sheet for the 135 default keyboard shortcuts found in SketchUp Pro\n",
+      "keywords": [
+        "sketchup",
+        "pro",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.380Z"
+    },
+    {
+      "id": "sketch",
+      "name": "Sketch",
+      "description": "A visual cheat-sheet for the 149 keyboard shortcuts found in Sketch. This application is MacOS-only.\n",
+      "keywords": [
+        "sketch",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.381Z"
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "description": "A visual cheat-sheet for the 50 keyboard shortcuts found on the Shopify website\n",
+      "keywords": [
+        "shopify",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.381Z"
+    },
+    {
+      "id": "sequel-pro",
+      "name": "Sequel Pro",
+      "description": "A visual cheat-sheet for the 71 keyboard shortcuts found in Sequel Pro. This application is MacOS-only.\n",
+      "keywords": [
+        "sequel",
+        "pro",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.382Z"
+    },
+    {
+      "id": "selenium",
+      "name": "Selenium",
+      "description": "This cheat sheet is a crash course for Selenium beginners and help to get the idea about the basic concepts of Selenium.\n",
+      "keywords": [
+        "selenium",
+        "automation",
+        "testing",
+        "programming",
+        "getting",
+        "started"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.382Z"
+    },
+    {
+      "id": "sed",
+      "name": "Sed",
+      "description": "[Sed](https://www.gnu.org/software/sed/manual/sed.html) is a stream editor, this sed cheat sheet contains sed commands and some common sed tricks.\n",
+      "keywords": [
+        "sed",
+        "editor",
+        "replace",
+        "text",
+        "utility",
+        "linux command",
+        "getting",
+        "started",
+        "commands",
+        "examples"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Sed commands",
+        "Sed examples",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.383Z"
+    },
+    {
+      "id": "sdkman",
+      "name": "SDKMAN!",
+      "description": "This cheatsheet provides the most commonly used SDKMAN! command line instructions\n",
+      "keywords": [
+        "sdkman!",
+        "command",
+        "software development kits",
+        "sdk",
+        "linux command",
+        "getting",
+        "started",
+        "{.cols-2}"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.383Z"
+    },
+    {
+      "id": "screen",
+      "name": "Screen",
+      "description": "This is a quick reference guide cheat sheet for the screen command.\n",
+      "keywords": [
+        "screen",
+        "terminal",
+        "session",
+        "utility",
+        "linux command",
+        "getting",
+        "started"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.385Z"
+    },
+    {
+      "id": "sass",
+      "name": "Sass",
+      "description": "This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).\n",
+      "keywords": [
+        "sass",
+        "css",
+        "programming",
+        "basics",
+        "mixins",
+        "color",
+        "functions",
+        "{.cols-2}",
+        "other",
+        "feature"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Sass Basics",
+        "Sass Mixins",
+        "Sass Color functions {.cols-2}",
+        "Sass Other functions {.cols-2}",
+        "Sass Feature checks {.cols-2}",
+        "Sass Loops",
+        "Sass Other features"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.385Z"
+    },
+    {
+      "id": "rust",
+      "name": "Rust",
+      "description": "The Rust quick reference cheat sheet that aims at providing help on writing basic syntax and methods.\n",
+      "keywords": [
+        "rust",
+        "programming",
+        "getting",
+        "started",
+        "types",
+        "strings",
+        "operators",
+        "flow",
+        "control",
+        "functions"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Rust Types",
+        "Rust Strings",
+        "Rust Operators",
+        "Rust Flow Control",
+        "Rust Functions",
+        "Misc",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.386Z"
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "description": "The [Ruby](https://www.ruby-lang.org/) cheat sheet is a one-page reference sheet for the Ruby programming language.\n",
+      "keywords": [
+        "ruby",
+        "script",
+        "interpret",
+        "programming",
+        "getting",
+        "started",
+        "flow",
+        "control",
+        "string",
+        "methods"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Ruby Flow control",
+        "String",
+        "Methods",
+        "Blocks",
+        "Procs",
+        "Lambdas",
+        "Array",
+        "boolean enumerable method",
+        "Combination method",
+        "Loops",
+        "Classes",
+        "See Also"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.388Z"
+    },
+    {
+      "id": "roam",
+      "name": "Roam Research",
+      "description": "A visual cheat-sheet for the 45 keyboard shortcuts found on Roam Research\n",
+      "keywords": [
+        "roam",
+        "research",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.388Z"
+    },
+    {
+      "id": "resolutions",
+      "name": "Resolutions",
+      "description": "This cheat sheet lists screen sizes, viewport size and CSS media queries for popular Phones, Tablets, Laptops and Watches\n",
+      "keywords": [
+        "resolutions",
+        "design",
+        "screen",
+        "size",
+        "other",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "lists",
+        "{.cols-1}"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "Lists of Resolutions {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.389Z"
+    },
+    {
+      "id": "regex",
+      "name": "RegEX",
+      "description": "A quick reference for regular expressions (regex), including symbols, ranges, grouping, assertions and some sample patterns to get you started.\n",
+      "keywords": [
+        "regex",
+        "regular expression",
+        "regexp",
+        "pattern",
+        "toolkit",
+        "getting",
+        "started",
+        "examples{.cols-3}",
+        "python",
+        "javascript"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Regex examples{.cols-3}",
+        "RegEx in Python",
+        "Regex in JavaScript",
+        "Regex in PHP",
+        "Regex in Java",
+        "Regex in MySQL {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.389Z"
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "description": "This is a [redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands\n",
+      "keywords": [
+        "redis",
+        "cache",
+        "database",
+        "getting",
+        "started",
+        "string",
+        "command{.cols-3}",
+        "set",
+        "command",
+        "list"
+      ],
+      "categories": [
+        "Database"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Redis String command{.cols-3}",
+        "Redis Set command",
+        "Redis List command",
+        "Redis Hash command",
+        "Redis Sorted set command",
+        "Redis Geo command{.cols-2}",
+        "Redis Hyperloglog command{.cols-3}",
+        "Redis Server command{.cols-3}",
+        "Redis Generic command{.cols-3}",
+        "Redis Connection command{.cols-3}",
+        "Redis Stream command{.cols-2}",
+        "Miscellaneous {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.391Z"
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "description": "A visual cheat-sheet for the 17 keyboard shortcuts found on Reddit.com\n",
+      "keywords": [
+        "reddit",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.391Z"
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "description": "A React cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.\n",
+      "keywords": [
+        "react",
+        "web",
+        "programming",
+        "getting",
+        "started",
+        "components",
+        "properties",
+        "{.cols-2}",
+        "states",
+        "{.cols-1}"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-emerald-500 to-green-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Components",
+        "Properties {.cols-2}",
+        "States {.cols-1}",
+        "Events {.cols-1}",
+        "Loops {.cols-2}",
+        "Forms {.cols-1}",
+        "CSS {.cols-1}",
+        "AJAX {.cols-1}",
+        "Hooks {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.392Z"
+    },
+    {
+      "id": "react-test-library",
+      "name": "React Testing Library Cheat Sheet",
+      "description": "When it comes to testing React apps manually, we can either choose to render individual component trees in a simplified test environment or run the complete app in a realistic browser environment (end-to-end testing). But for automated tests, React Testing Library (RTL) is recommended for its user-centric approach and maintainability.\n",
+      "keywords": [
+        "react",
+        "testing",
+        "library",
+        "cheat",
+        "sheet",
+        "javascript",
+        "cheatsheet",
+        "introduction",
+        "basic",
+        "level"
+      ],
+      "categories": [
+        "Testing"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Introduction",
+        "Basic level",
+        "Intermediate level",
+        "Advanced Level",
+        "Conclusion"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.392Z"
+    },
+    {
+      "id": "quip",
+      "name": "Quip.com",
+      "description": "A visual cheat-sheet for the 52 keyboard shortcuts found in Quip\n",
+      "keywords": [
+        "quip.com",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.393Z"
+    },
+    {
+      "id": "quickref",
+      "name": "CheatSheets",
+      "description": "This is the magic syntax variant manual that you can use on CheatSheets.zip, It's a good practice for contributors.",
+      "keywords": [
+        "cheatsheets",
+        "guide",
+        "reference",
+        "other",
+        "getting",
+        "started",
+        "section",
+        "variants",
+        "one",
+        "column"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Getting Started",
+        "Section Variants",
+        "One Column Example {.cols-1}",
+        "Two Columns Example {.cols-2}",
+        "Default",
+        "Card Variants",
+        "Table Variants",
+        "List Variants",
+        "Code Variants",
+        "Paragraph Variants",
+        "Cards Example"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.393Z"
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "description": "This is a quick reference list of cheat sheets for PyTorch. See also [PyTorch website](https://pytorch.org/)",
+      "keywords": [
+        "pytorch",
+        "ai",
+        "python",
+        "other",
+        "imports",
+        ".cols-1",
+        "tensors",
+        "data",
+        "utilities"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Imports { .cols-1 }",
+        "Tensors { .cols-1 }",
+        "Data Utilities { .cols-1 }"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.394Z"
+    },
+    {
       "id": "python",
       "name": "Python",
       "description": "The [Python](https://www.python.org/) cheat sheet is a one-page reference sheet for the Python 3 programming language.\n",
@@ -16,7 +1807,9 @@
         "types",
         "advanced"
       ],
-      "categories": ["Programming"],
+      "categories": [
+        "Programming"
+      ],
       "status": "Available",
       "gradient": "from-blue-500 to-indigo-600",
       "badge": "Popular",
@@ -40,7 +1833,2242 @@
         "Date & Time Handling",
         "Miscellaneous"
       ],
-      "lastUpdated": "2025-07-09T13:50:55.198Z"
+      "lastUpdated": "2025-07-09T16:05:42.395Z"
+    },
+    {
+      "id": "putty",
+      "name": "PuTTy",
+      "description": "A visual cheat-sheet for the 32 keyboard shortcuts found on the PuTTy app\n",
+      "keywords": [
+        "putty",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.395Z"
+    },
+    {
+      "id": "proto-io",
+      "name": "Proto.io",
+      "description": "A visual cheat-sheet for the 48 keyboard shortcuts found in Proto.io\n",
+      "keywords": [
+        "proto.io",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.396Z"
+    },
+    {
+      "id": "principle",
+      "name": "Principle",
+      "description": "A visual cheat-sheet for the 30 keyboard shortcuts found in Principle. This application is MacOS-only.\n",
+      "keywords": [
+        "principle",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.396Z"
+    },
+    {
+      "id": "powershell",
+      "name": "PowerShell",
+      "description": "This is a quick reference cheat sheet to getting started with PowerShell scripting.",
+      "keywords": [
+        "powershell",
+        "script",
+        "windows",
+        "programming",
+        "operating system",
+        "basic",
+        "commands",
+        "system",
+        "management",
+        "scripting"
+      ],
+      "categories": [
+        "Programming",
+        "Operating System"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Basic Commands",
+        "System Management",
+        "Scripting",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.396Z"
+    },
+    {
+      "id": "postman",
+      "name": "Postman",
+      "description": "A visual cheat-sheet for the 23 keyboard shortcuts found in Postman\n",
+      "keywords": [
+        "postman",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.397Z"
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL",
+      "description": "The [PostgreSQL](https://www.postgresql.org/docs/current/) cheat sheet provides you with the common PostgreSQL commands and statements.\n",
+      "keywords": [
+        "postgresql",
+        "db",
+        "rdbms",
+        "database",
+        "getting",
+        "started",
+        "working",
+        "commands",
+        "miscellaneous",
+        "also"
+      ],
+      "categories": [
+        "Database"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "PostgreSQL Working",
+        "PostgreSQL Commands",
+        "Miscellaneous",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.397Z"
+    },
+    {
+      "id": "pocket",
+      "name": "Pocket",
+      "description": "A visual cheat-sheet for the 36 keyboard shortcuts found on Pocket for Web\n",
+      "keywords": [
+        "pocket",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.398Z"
+    },
+    {
+      "id": "pm2",
+      "name": "PM2",
+      "description": "[PM2] is a daemon process manager that will help you manage and keep your application online. Getting started with PM2 is straightforward, it is offered as a simple and intuitive CLI.\n",
+      "keywords": [
+        "pm2",
+        "process",
+        "linux command",
+        "getting",
+        "started",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.398Z"
+    },
+    {
+      "id": "phpstorm",
+      "name": "PhpStorm",
+      "description": "A visual cheat-sheet for the 96 keyboard shortcuts found in JetBrains PhpStorm\n",
+      "keywords": [
+        "phpstorm",
+        "jetbrains",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.399Z"
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "description": "This [PHP](https://www.php.net/manual/en/) cheat sheet provides a reference for quickly looking up the correct syntax for the code you use most frequently.\n",
+      "keywords": [
+        "php",
+        "web",
+        "programming",
+        "getting",
+        "started",
+        "types",
+        "strings",
+        "arrays",
+        "operators",
+        "{.cols-4}"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "PHP Types",
+        "PHP Strings",
+        "PHP Arrays",
+        "PHP Operators {.cols-4}",
+        "PHP Conditionals",
+        "PHP Loops",
+        "PHP Functions",
+        "PHP Classes",
+        "PHP Trait",
+        "PHP Enums (PHP 8.1)",
+        "PHP Date & Time Handling",
+        "Miscellaneous",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.399Z"
+    },
+    {
+      "id": "perl",
+      "name": "Perl",
+      "description": "The perl quick reference cheat sheet that aims at providing help on writing basic syntax and methods.\n",
+      "keywords": [
+        "perl",
+        "programming",
+        "getting",
+        "started",
+        "datatypes",
+        "array",
+        "oparationns",
+        "control",
+        "flow",
+        "object"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Datatypes",
+        "Array oparationns",
+        "Control Flow",
+        "Object Oriented Programming",
+        "example",
+        "Date and Time"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.400Z"
+    },
+    {
+      "id": "pandoc",
+      "name": "Pandoc",
+      "description": "[Pandoc](https://pandoc.org) is a document converter, this pandoc cheat sheet contains pandoc commands and some common pandoc tricks.\n",
+      "keywords": [
+        "pandoc",
+        "convert",
+        "document",
+        "utility",
+        "linux command",
+        "getting",
+        "started",
+        "examples",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Pandoc examples",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.401Z"
+    },
+    {
+      "id": "pandas",
+      "name": "Pandas",
+      "description": "[Pandas](https://pandas.pydata.org/) is a powerful data analysis and manipulation library for Python. This cheat sheet is a quick reference for Pandas beginners.\n",
+      "keywords": [
+        "pandas",
+        "data analysis",
+        "data manipulation",
+        "python",
+        "getting",
+        "started",
+        "{.cols-2}"
+      ],
+      "categories": [
+        "Python"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.401Z"
+    },
+    {
+      "id": "outlook",
+      "name": "Microsoft Outlook",
+      "description": "A visual cheat-sheet for the 210 keyboard shortcuts found in Microsoft Outlook\n",
+      "keywords": [
+        "microsoft",
+        "outlook",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.402Z"
+    },
+    {
+      "id": "origami",
+      "name": "Origami Studio",
+      "description": "A visual cheat-sheet for the 71 keyboard shortcuts found in Origami Studio. This application is MacOS-only.\n",
+      "keywords": [
+        "origami",
+        "studio",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.403Z"
+    },
+    {
+      "id": "openssl",
+      "name": "OpenSSL",
+      "description": "This is a reference of commands to use to interact with electronic certificates\n",
+      "keywords": [
+        "openssl",
+        "linux command",
+        "private",
+        "key",
+        "{.cols-2}",
+        "certificate",
+        "s/mime",
+        "crl",
+        "pkcs#12",
+        "tsa"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Private Key {.cols-2}",
+        "Certificate {.cols-2}",
+        "S/Mime {.cols-2}",
+        "CRL {.cols-2}",
+        "PKCS#12 {.cols-2}",
+        "TSA {.cols-2}",
+        "CSR {.cols-2}",
+        "HTTPS {.cols-2}",
+        "STARTTLS {.cols-2}",
+        "S/MIME verification {.cols-2}",
+        "Raw {.cols-2}",
+        "Some resources with useful OpenSSL commands"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.403Z"
+    },
+    {
+      "id": "ocaml",
+      "name": "OCaml",
+      "description": "The [OCaml](https://www.ocaml.org/) cheat sheet is a one-page reference sheet for the OCaml programming language.\n",
+      "keywords": [
+        "ocaml",
+        "scientific",
+        "functional",
+        "programming",
+        "getting",
+        "started",
+        "data",
+        "types",
+        "functions",
+        "control"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Data Types",
+        "Functions",
+        "Control Flow",
+        "Useful Tools"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.403Z"
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "description": "A visual cheat-sheet for the 17 keyboard shortcuts found in the Obsidian knowledge base app.\n",
+      "keywords": [
+        "obsidian",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.404Z"
+    },
+    {
+      "id": "numpy",
+      "name": "Numpy",
+      "description": "[NumPy](https://numpy.org/) is the fundamental package for scientific computing with Python. This cheat sheet is a quick reference for NumPy beginners.\n",
+      "keywords": [
+        "numpy",
+        "scientific",
+        "computing",
+        "python",
+        "getting",
+        "started",
+        "{.cols-2}"
+      ],
+      "categories": [
+        "Python"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.405Z"
+    },
+    {
+      "id": "notion",
+      "name": "Notion Shortcuts",
+      "description": "A comprehensive quick reference guide for Notion keyboard shortcuts on Desktop and Web, designed to boost your productivity.",
+      "keywords": [
+        "notion",
+        "shortcuts",
+        "keyboard",
+        "productivity",
+        "reference",
+        "software",
+        "most",
+        "popular",
+        "essential",
+        "{.col-span-3}"
+      ],
+      "categories": [
+        "Productivity",
+        "Software"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Most Popular / Essential {.col-span-3}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.405Z"
+    },
+    {
+      "id": "nmap",
+      "name": "nmap",
+      "description": "Quick reference for nmap",
+      "keywords": [
+        "getting",
+        "started",
+        "nmap",
+        "intermediate",
+        "options",
+        "formating",
+        "answers",
+        "advanced",
+        "technic",
+        "investigation"
+      ],
+      "categories": [],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Nmap Intermediate Options",
+        "Formating answers",
+        "Advanced Technic",
+        "Investigation Exemple",
+        "Also See"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.406Z"
+    },
+    {
+      "id": "nim",
+      "name": "Nim",
+      "description": "The Nim quick reference cheat sheet that aims at providing help on writing basic syntax and methods.\n",
+      "keywords": [
+        "nim",
+        "programming",
+        "getting",
+        "started",
+        "opatators",
+        "control",
+        "flow",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Opatators",
+        "Control flow",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.406Z"
+    },
+    {
+      "id": "networkports",
+      "name": "networkports",
+      "description": "Quick reference for networkports",
+      "keywords": [
+        "networking",
+        "and",
+        "infrastructure",
+        "data",
+        "management",
+        "communication",
+        "services",
+        "security",
+        "system",
+        "application"
+      ],
+      "categories": [],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Networking and Infrastructure",
+        "Data Management",
+        "Communication Services",
+        "Security Services",
+        "System and Application Services",
+        "Miscellaneous Services"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.407Z"
+    },
+    {
+      "id": "netstat",
+      "name": "Netstat",
+      "description": "This quick reference cheat sheet provides various for using netstat command.\n",
+      "keywords": [
+        "netstat",
+        "network",
+        "utility",
+        "port",
+        "linux command",
+        "getting",
+        "started"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.407Z"
+    },
+    {
+      "id": "neo4j",
+      "name": "Neo4j",
+      "description": "A Neo4j cheat sheet with getting started resources and information on how to query the database with Cypher.\n",
+      "keywords": [
+        "neo4j",
+        "db",
+        "graphdb",
+        "database",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "syntax",
+        "reading",
+        "data"
+      ],
+      "categories": [
+        "Database"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "Neo4j Syntax",
+        "Neo4j Reading Data",
+        "Neo4j Writing Data",
+        "Neo4j Functions",
+        "Neo4j Schema Operations",
+        "Neo4j Multidatabase",
+        "Neo4j Security",
+        "★ Note"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.409Z"
+    },
+    {
+      "id": "nc",
+      "name": "Netcat",
+      "description": "This cheat sheet provides various for using Netcat on both Linux and Unix.",
+      "keywords": [
+        "netcat",
+        "ncat",
+        "nc",
+        "utility",
+        "network",
+        "traffic",
+        "linux command",
+        "getting",
+        "started",
+        "{.cols-5}"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-5}",
+        "Netcat Examples"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.409Z"
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "description": "The SQL cheat sheet provides you with the most commonly used SQL statements for your reference.",
+      "keywords": [
+        "mysql",
+        "rdbms",
+        "db",
+        "database",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "examples",
+        "data",
+        "types"
+      ],
+      "categories": [
+        "Database"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "MySQL Examples",
+        "MySQL Data Types",
+        "MySQL Functions & Operators",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.410Z"
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "description": "The MongoDB cheat sheet provides you with the most commonly used MongoDB commands and queries for your reference. the cheatsheet is from mongodb developers website",
+      "keywords": [
+        "mongodb",
+        "nosql",
+        "db",
+        "database",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "crud",
+        "databases",
+        "and"
+      ],
+      "categories": [
+        "Database"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "Crud",
+        "Databases and Collections {.cols-2}",
+        "Indexes {.cols-2}",
+        "Others {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.411Z"
+    },
+    {
+      "id": "monday",
+      "name": "Monday.com",
+      "description": "A visual cheat-sheet for the 24 keyboard shortcuts found on Monday.com\n",
+      "keywords": [
+        "monday.com",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.411Z"
+    },
+    {
+      "id": "mitmproxy",
+      "name": "Mitmproxy",
+      "description": "[mitmproxy](https://mitmproxy.org/) is a free and open source interactive HTTPS proxy. This is a quick reference cheat sheet to the mitmproxy.\n",
+      "keywords": [
+        "mitmproxy",
+        "capture",
+        "traffic",
+        "network",
+        "utility",
+        "toolkit",
+        "getting",
+        "started",
+        "filter",
+        "scripts"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Mitmproxy Filter",
+        "Mitmproxy Scripts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.412Z"
+    },
+    {
+      "id": "missive",
+      "name": "Missive",
+      "description": "A visual cheat-sheet for the 83 keyboard shortcuts found in Missive\n",
+      "keywords": [
+        "missive",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.412Z"
+    },
+    {
+      "id": "mime",
+      "name": "MIME types",
+      "description": "This cheat sheet lists some common MIME types for the Web. You can look in the [IANA/MIME Media Types registry](http://www.iana.org/assignments/media-types/index.html) which contains all registered MIME types.\n",
+      "keywords": [
+        "mime",
+        "types",
+        "media type",
+        "other",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "lists",
+        "{.cols-1}"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "Lists of MIME types {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.412Z"
+    },
+    {
+      "id": "microsoft-teams",
+      "name": "Microsoft Teams",
+      "description": "A visual cheat-sheet for the 38 keyboard shortcuts found in Microsoft Teams\n",
+      "keywords": [
+        "microsoft",
+        "teams",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.413Z"
+    },
+    {
+      "id": "matplotlib",
+      "name": "Matplotlib",
+      "description": "[Matplotlib](https://matplotlib.org/) is a comprehensive library for creating static, animated, and interactive plots in Python.  \nThis cheat sheet provides a quick reference from basic to advanced usage, covering essential features for data science, machine learning, and scientific computing.\n",
+      "keywords": [
+        "matplotlib",
+        "data visualization",
+        "plotting",
+        "python",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "plot",
+        "types",
+        "customization"
+      ],
+      "categories": [
+        "Python"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "Plot Types {.cols-2}",
+        "Customization {.row-span-2}",
+        "Subplots & Layouts",
+        "Advanced Visualizations {.cols-2}",
+        "Working with Images",
+        "For Machine Learning",
+        "Saving Plots",
+        "Show & Clear",
+        "More Useful Functions"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.414Z"
+    },
+    {
+      "id": "matlab",
+      "name": "MATLAB",
+      "description": "This quick reference cheat sheet provides an example introduction to using the [MATLAB](https://mathworks.cn/) scientific computing language to get started quickly\n",
+      "keywords": [
+        "matlab",
+        "programming",
+        "getting",
+        "started",
+        "basic",
+        "knowledge",
+        "data",
+        "import",
+        "and",
+        "export"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Basic knowledge",
+        "Data import and export"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.415Z"
+    },
+    {
+      "id": "markdown",
+      "name": "Markdown",
+      "description": "This is a quick reference cheat sheet to the Markdown syntax.",
+      "keywords": [
+        "markdown",
+        "md",
+        "markup",
+        "text",
+        "format",
+        "programming",
+        "quick",
+        "reference"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Markdown Quick Reference",
+        "h2"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.416Z"
+    },
+    {
+      "id": "lsof",
+      "name": "Lsof",
+      "description": "This quick reference cheat sheet provides various for using lsof command.\n",
+      "keywords": [
+        "lsof",
+        "port",
+        "processes",
+        "utility",
+        "linux command",
+        "getting",
+        "started"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.416Z"
+    },
+    {
+      "id": "latex",
+      "name": "LaTeX",
+      "description": "This cheat sheet summarizes a reference list of [LaTeX](https://www.latex-project.org/) commonly used display math notation and some application examples of [KaTeX](https://katex.org/).\n",
+      "keywords": [
+        "latex",
+        "programming",
+        "getting",
+        "started",
+        "supported",
+        "functions",
+        "operator",
+        "relation",
+        "symbols",
+        "and"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Supported Functions",
+        "Operator",
+        "Relation",
+        "Symbols and Punctuation",
+        "Environments",
+        "Lists",
+        "Style, Color, Size and Font",
+        "Also See"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.418Z"
+    },
+    {
+      "id": "laravel",
+      "name": "Laravel",
+      "description": "[Laravel](https://laravel.com/docs/8.x/) is an expressive and progressive web application framework for PHP. \nThis cheat sheet provides a reference for common commands and features for Laravel 8.\n",
+      "keywords": [
+        "laravel",
+        "web",
+        "framework",
+        "php",
+        "programming",
+        "getting",
+        "started",
+        "configuration",
+        "routing",
+        "helpers"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Configuration",
+        "Routing",
+        "Helpers",
+        "Controllers",
+        "Requests",
+        "Views",
+        "Blade Templates",
+        "Forms",
+        "Validation",
+        "Session",
+        "Logging",
+        "Deployment",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.418Z"
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "description": "This page contains a list of commonly used kubectl commands and flags.\n",
+      "keywords": [
+        "kubernetes",
+        "config",
+        "format",
+        "programming",
+        "viewing",
+        "and",
+        "finding",
+        "resources",
+        "{.cols-2}",
+        "updating"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Viewing and finding resources {.cols-2}",
+        "Updating resources",
+        "Create resources",
+        "Miscellaneous",
+        "Also See"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.419Z"
+    },
+    {
+      "id": "kotlin",
+      "name": "Kotlin",
+      "description": "A quick reference cheatsheet for Kotlin that includes usage, examples, and more.\n",
+      "keywords": [
+        "kotlin",
+        "cross-platform",
+        "android",
+        "programming",
+        "introduction",
+        "data",
+        "types",
+        "and",
+        "variables",
+        "conditional"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Introduction to Kotlin",
+        "Data Types and Variables",
+        "Conditional Expression",
+        "Null-Safety",
+        "Collections",
+        "Function",
+        "Class",
+        "See Also"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.419Z"
+    },
+    {
+      "id": "kanbanmail",
+      "name": "KanbanMail",
+      "description": "A visual cheat-sheet for the 29 keyboard shortcuts found in KanbanMail\n",
+      "keywords": [
+        "kanbanmail",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.420Z"
+    },
+    {
+      "id": "json",
+      "name": "JSON",
+      "description": "This is a quick reference cheat sheet for understanding and writing JSON format configuration files.\n",
+      "keywords": [
+        "json",
+        "config",
+        "format",
+        "programming",
+        "getting",
+        "started",
+        "access",
+        "javascript",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Access JSON in JavaScript",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.420Z"
+    },
+    {
+      "id": "jquery",
+      "name": "jQuery",
+      "description": "This [jQuery](https://jquery.com/) cheat sheet is a great reference for both beginners and experienced developers.\n",
+      "keywords": [
+        "jquery",
+        "web",
+        "js",
+        "javascript",
+        "library",
+        "programming",
+        "getting",
+        "started",
+        "selectors",
+        "attributes"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "jQuery Selectors",
+        "jQuery Attributes",
+        "jQuery Manipulation",
+        "jQuery Traversing",
+        "jQuery Events",
+        "jQuery Effects",
+        "jQuery Ajax",
+        "Miscellaneous"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.421Z"
+    },
+    {
+      "id": "jira",
+      "name": "Jira",
+      "description": "A visual cheat-sheet for the 44 keyboard shortcuts found in Jira\n",
+      "keywords": [
+        "jira",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.421Z"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "description": "A JavaScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.\n",
+      "keywords": [
+        "javascript",
+        "js",
+        "web",
+        "programming",
+        "getting",
+        "started",
+        "conditionals",
+        "functions",
+        "scope",
+        "arrays"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-yellow-500 to-amber-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "JavaScript Conditionals",
+        "JavaScript Functions",
+        "JavaScript Scope",
+        "JavaScript Arrays",
+        "JavaScript Set",
+        "JavaScript Loops",
+        "JavaScript Iterators {.cols-2}",
+        "JavaScript Objects {.cols-2}",
+        "JavaScript Classes",
+        "JavaScript Modules {.cols-2}",
+        "JavaScript Promises {.cols-2}",
+        "JavaScript Async-Await {.cols-2}",
+        "JavaScript Requests"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.423Z"
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "description": "This cheat sheet is a crash course for Java beginners and help review the basic syntax of the Java language.\n",
+      "keywords": [
+        "java",
+        "object-oriented",
+        "class",
+        "programming",
+        "getting",
+        "started",
+        "strings",
+        "arrays",
+        "conditionals",
+        "loops"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Java Strings",
+        "Java Arrays",
+        "Java Conditionals",
+        "Java Loops",
+        "Java Collections Framework",
+        "Misc"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.424Z"
+    },
+    {
+      "id": "iso-639-1",
+      "name": "ISO 639-1 Language Code",
+      "description": "This is a list of the ISO language codes that conform to the ISO 639-1 standard, it provide reference for multi-language website.\n",
+      "keywords": [
+        "iso",
+        "639-1",
+        "language",
+        "code",
+        "i18n",
+        "other",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "list"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "List of ISO 639-1 codes {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.424Z"
+    },
+    {
+      "id": "ini",
+      "name": "INI",
+      "description": "This is a quick reference cheat sheet for understanding and writing INI-format configuration files.\n",
+      "keywords": [
+        "ini",
+        "programming",
+        "getting",
+        "started",
+        "see",
+        "also"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "See also"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.425Z"
+    },
+    {
+      "id": "idea",
+      "name": "IntelliJ IDEA",
+      "description": "IntelliJ IDEA is a very good Java IDE, most of its commands have shortcuts to keep your hands from leaving the keyboard\n",
+      "keywords": [
+        "intellij",
+        "idea",
+        "jetbrains",
+        "java",
+        "shortcut",
+        "keyboard shortcuts",
+        "windows",
+        "linux",
+        "keymap"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "IDEA Windows & Linux Keymap"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.426Z"
+    },
+    {
+      "id": "http-status-code",
+      "name": "HTTP Status Code",
+      "description": "The HTTP status codes cheat sheet. A quick reference to every HTTP status code.\n",
+      "keywords": [
+        "http",
+        "status",
+        "code",
+        "response",
+        "server",
+        "other"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "HTTP Status code"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.426Z"
+    },
+    {
+      "id": "htmx",
+      "name": "HTMX",
+      "description": "A modern, minimal JavaScript library that allows you to create dynamic web interfaces using HTML attributes.\n",
+      "keywords": [
+        "htmx",
+        "frontend",
+        "javascript",
+        "programming",
+        "getting",
+        "started",
+        "{.cols-3}",
+        "core",
+        "attributes",
+        "swap"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started {.cols-3}",
+        "Core Attributes {.cols-3}",
+        "Swap & Out of Band {.cols-3}",
+        "Forms & Events {.cols-3}",
+        "Advanced Features {.cols-3}",
+        "Events & Extensions {.cols-3}",
+        "Example Use Case {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.427Z"
+    },
+    {
+      "id": "html",
+      "name": "HTML",
+      "description": "This HTML quick reference cheat sheet lists the common HTML and HTML5 tags in readable layout.\n",
+      "keywords": [
+        "html",
+        "web",
+        "programming",
+        "getting",
+        "started",
+        "html5",
+        "tags",
+        "tables",
+        "lists",
+        "forms"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "HTML5 Tags",
+        "HTML Tables",
+        "HTML Lists",
+        "HTML Forms",
+        "HTML input Tags {.cols-2}",
+        "HTML meta Tags {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.428Z"
+    },
+    {
+      "id": "html-char",
+      "name": "HTML Characters Entities",
+      "description": "This cheatsheet is a complete list of HTML entities with their numbers and names. Also included is a full list of ASCII characters that can be represented in HTML.\n",
+      "keywords": [
+        "html",
+        "characters",
+        "entities",
+        "code",
+        "other",
+        "character",
+        "entity",
+        "references",
+        "{.cols-1}"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "HTML Character Entity References {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.430Z"
+    },
+    {
+      "id": "hook",
+      "name": "Hook",
+      "description": "The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page reference sheet for the Hook programming language.\n",
+      "keywords": [
+        "hook",
+        "script",
+        "interpret",
+        "programming",
+        "getting",
+        "started",
+        "types",
+        "and",
+        "values",
+        "syntax"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Types and Values",
+        "Syntax",
+        "Variables",
+        "Operators and Expressions",
+        "Branching",
+        "Looping",
+        "Strings",
+        "Arrays",
+        "Functions and Closures",
+        "Structs",
+        "Destructuring",
+        "Modularity",
+        "Error Handling"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.432Z"
+    },
+    {
+      "id": "homebrew",
+      "name": "Homebrew",
+      "description": "This is a quick reference cheat sheet to getting started with homebrew.",
+      "keywords": [
+        "homebrew",
+        "packages manager",
+        "macos",
+        "toolkit",
+        "getting",
+        "started"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.433Z"
+    },
+    {
+      "id": "guitar-pro",
+      "name": "Guitar Pro",
+      "description": "A visual cheat-sheet for the 129 keyboard shortcuts found in Guitar Pro\n",
+      "keywords": [
+        "guitar",
+        "pro",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.434Z"
+    },
+    {
+      "id": "grep",
+      "name": "Grep",
+      "description": "This cheat sheet is intended to be a quick reminder for the main concepts involved in using the command line program grep and assumes you already understand its usage.",
+      "keywords": [
+        "grep",
+        "egrep",
+        "search",
+        "pattern",
+        "text",
+        "linux command",
+        "getting",
+        "started",
+        "{.cols-5}",
+        "regular"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-5}",
+        "Grep regular expressions"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.434Z"
+    },
+    {
+      "id": "graphql",
+      "name": "GraphQL",
+      "description": "This quick reference cheat sheet provides a brief overview of GraphQL.\n",
+      "keywords": [
+        "graphql",
+        "query",
+        "api",
+        "programming",
+        "getting",
+        "started",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.435Z"
+    },
+    {
+      "id": "google-search",
+      "name": "Google Search",
+      "description": "This quick reference cheat sheet lists of Google advanced search operators.\n",
+      "keywords": [
+        "google",
+        "search",
+        "other",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.435Z"
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "description": "A visual cheat-sheet for the 54 keyboard shortcuts found in Google Drive on the web\n",
+      "keywords": [
+        "google",
+        "drive",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.436Z"
+    },
+    {
+      "id": "google-chrome",
+      "name": "Google Chrome",
+      "description": "A visual cheat-sheet for the 65 keyboard shortcuts found in Google Chrome\n",
+      "keywords": [
+        "google",
+        "chrome",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.436Z"
+    },
+    {
+      "id": "go",
+      "name": "Go",
+      "description": "This cheat sheet provided basic syntax and methods to help you using [Go](https://go.dev/).\n",
+      "keywords": [
+        "go",
+        "programming",
+        "getting",
+        "started",
+        "basic",
+        "types",
+        "strings",
+        "flow",
+        "control",
+        "structs"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Go Basic types",
+        "Go Strings",
+        "Go Flow control",
+        "Go Structs & Maps",
+        "Go Functions",
+        "Go Packages",
+        "Go Concurrency",
+        "Go Error control",
+        "Go Methods {.cols-2}",
+        "Go Interfaces {.cols-2}",
+        "Go generics {.cols-2}",
+        "Go File I/O {.cols-2}",
+        "Go Testing {.cols-2}",
+        "Go JSON Handling {.cols-2}",
+        "Go Server {.cols-2}",
+        "Miscellaneous",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.437Z"
+    },
+    {
+      "id": "gnupg",
+      "name": "GnuPG",
+      "description": "A cheatsheet for GnuPG, the encryption and signing software.",
+      "keywords": [
+        "gnupg",
+        "linux command",
+        "getting",
+        "started",
+        "encryption",
+        "commit",
+        "signing",
+        "windows:",
+        "add",
+        "startup"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Encryption",
+        "Commit Signing",
+        "Windows: Add to Startup Apps {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.437Z"
+    },
+    {
+      "id": "gnome-desktop",
+      "name": "Gnome Desktop",
+      "description": "A visual cheat-sheet for Gnome Desktop\n",
+      "keywords": [
+        "gnome",
+        "desktop",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.438Z"
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "description": "A visual cheat-sheet for the 90 keyboard shortcuts found on Gmail\n",
+      "keywords": [
+        "gmail",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.438Z"
+    },
+    {
+      "id": "gitlab",
+      "name": "GitLab",
+      "description": "A visual cheat-sheet for the 58 keyboard shortcuts found in GitLab\n",
+      "keywords": [
+        "gitlab",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.439Z"
+    },
+    {
+      "id": "github",
+      "name": "Github",
+      "description": "A visual cheat-sheet for the 80 keyboard shortcuts found on Github.com\n",
+      "keywords": [
+        "github",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.439Z"
+    },
+    {
+      "id": "github-cli",
+      "name": "Github CLI",
+      "description": "A quick reference to Github CLI, an open-source command line tool that enables GitHub on your terminal.",
+      "keywords": [
+        "github",
+        "cli",
+        "cicd",
+        "toolkit",
+        "getting",
+        "started"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.440Z"
+    },
+    {
+      "id": "github-actions",
+      "name": "Github Actions",
+      "description": "A quick reference to Github Actions for the automation of software workflows, allowing developers to build, test, and deploy code right from their GitHub repositories.",
+      "keywords": [
+        "github",
+        "actions",
+        "cicd",
+        "toolkit",
+        "getting",
+        "started",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.440Z"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "description": "This cheat sheet summarizes commonly used Git command line instructions for quick reference.",
+      "keywords": [
+        "git",
+        "github",
+        "gitlab",
+        "version",
+        "vcs",
+        "linux command",
+        "getting",
+        "started",
+        "tricks",
+        "advanced"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-orange-500 to-red-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Git Tricks",
+        "Advanced Git"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.441Z"
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP",
+      "description": "A visual cheat-sheet for the 97 keyboard shortcuts found in GIMP\n",
+      "keywords": [
+        "gimp",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.442Z"
+    },
+    {
+      "id": "framer-x",
+      "name": "Framer X",
+      "description": "A visual cheat-sheet for the 45 keyboard shortcuts found in Framer X. This application is MacOS-only.\n",
+      "keywords": [
+        "framer",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.442Z"
+    },
+    {
+      "id": "fortnite",
+      "name": "Fortnite",
+      "description": "A visual cheat-sheet for the 26 default keyboard shortcuts found in Fortnite\n",
+      "keywords": [
+        "fortnite",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.443Z"
+    },
+    {
+      "id": "flask",
+      "name": "Flask",
+      "description": "A concise cheatsheet for Flask, a lightweight WSGI web application framework for Python.\n",
+      "keywords": [
+        "flask",
+        "web",
+        "python",
+        "backend",
+        "programming",
+        "getting",
+        "started",
+        "{.cols-3}",
+        "app",
+        "config"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started {.cols-3}",
+        "App Config & Environment {.cols-3}",
+        "Routing & Methods {.cols-3}",
+        "Request & Response {.cols-3}",
+        "Templates & Static {.cols-3}",
+        "Sessions & Cookies {.cols-2}",
+        "JSON API & Middleware {.cols-2}",
+        "Error Handling & Blueprints {.cols-2}",
+        "Project Structure {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.443Z"
+    },
+    {
+      "id": "firefox",
+      "name": "Firefox",
+      "description": "A visual cheat-sheet for the 116 keyboard shortcuts found in Firefox\n",
+      "keywords": [
+        "firefox",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.444Z"
     },
     {
       "id": "finder",
@@ -56,15 +4084,1520 @@
         "also",
         "see"
       ],
-      "categories": ["Keyboard Shortcuts"],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
       "status": "Available",
       "gradient": "from-blue-500 to-cyan-600",
       "badge": "New",
       "icon": "Code",
-      "sections": ["Keyboard Shortcuts {.cols-2}", "Also see"],
-      "lastUpdated": "2025-07-09T13:50:55.199Z"
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.444Z"
+    },
+    {
+      "id": "find",
+      "name": "Find",
+      "description": "This is a quick reference list of cheatsheet for linux find command, contains common options and examples.\n",
+      "keywords": [
+        "find",
+        "search",
+        "file",
+        "directory",
+        "linux command",
+        "getting",
+        "started",
+        "date",
+        "and",
+        "time"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Find Date and Time",
+        "Find and {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.445Z"
+    },
+    {
+      "id": "filezilla",
+      "name": "FileZilla",
+      "description": "A visual cheat-sheet for the 30 keyboard shortcuts found on the FileZilla program\n",
+      "keywords": [
+        "filezilla",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.445Z"
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "description": "A visual cheat-sheet for the 119 keyboard shortcuts found in Figma\n",
+      "keywords": [
+        "figma",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.446Z"
+    },
+    {
+      "id": "feedly",
+      "name": "Feedly",
+      "description": "A visual cheat-sheet for the 25 keyboard shortcuts found on the Feedly app\n",
+      "keywords": [
+        "feedly",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.446Z"
+    },
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "description": "A concise cheatsheet for FastAPI, a fast and modern web framework for building APIs with Python 3.7+.\n",
+      "keywords": [
+        "fastapi",
+        "web",
+        "python",
+        "backend",
+        "programming",
+        "getting",
+        "started",
+        "{.cols-3}",
+        "routing",
+        "parameters"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started {.cols-3}",
+        "Routing & Parameters {.cols-3}",
+        "Request Body & Validation {.cols-3}",
+        "Forms, Files, Headers {.cols-3}",
+        "Middleware & Dependency {.cols-2}",
+        "Errors & JSON API {.cols-2}",
+        "Templates & Static {.cols-2}",
+        "Routers & Structure {.cols-2}",
+        "Docs & Status {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.447Z"
+    },
+    {
+      "id": "express",
+      "name": "Express",
+      "description": "A quick reference cheatsheet for Express, a flexible and streamlined web framework for Node.js\n",
+      "keywords": [
+        "express",
+        "config",
+        "format",
+        "programming",
+        "getting",
+        "started",
+        "example"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Example"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.447Z"
+    },
+    {
+      "id": "es6",
+      "name": "ES6",
+      "description": "A quick reference cheatsheet of what's new in JavaScript for ES2015, ES2016, ES2017, ES2018 and beyond\n",
+      "keywords": [
+        "es6",
+        "config",
+        "format",
+        "programming",
+        "getting",
+        "started",
+        "promises",
+        "destructuring",
+        "spread",
+        "operator"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Promises",
+        "Destructuring",
+        "Spread Operator {.cols-2}",
+        "Functions",
+        "Objects",
+        "Modules module",
+        "Generators",
+        "see also"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.448Z"
+    },
+    {
+      "id": "emoji",
+      "name": "Emoji",
+      "description": "Some of the emoji codes are not super easy to remember, so here is a little cheat sheet.",
+      "keywords": [
+        "emoji",
+        "other",
+        "getting",
+        "started"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.448Z"
+    },
+    {
+      "id": "emmet",
+      "name": "Emmet",
+      "description": "[Emmet](https://emmet.io/) is a web-developer’s toolkit for boosting HTML & CSS code writing, which allows you to write large HTML code blocks at speed of light using well-known CSS selectors.\n",
+      "keywords": [
+        "emmet",
+        "snippets",
+        "coding",
+        "html",
+        "css",
+        "abbr",
+        "toolkit",
+        "syntax",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Emmet Syntax",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.449Z"
+    },
+    {
+      "id": "emacs",
+      "name": "Emacs",
+      "description": "[Emacs](https://www.gnu.org/software/emacs) is the extensible, customizable, self-documenting real time display text editor.\nThis reference was made for Emacs 27.\n",
+      "keywords": [
+        "emacs",
+        "editor",
+        "text",
+        "shortcut",
+        "toolkit",
+        "getting",
+        "started",
+        "search",
+        "misc"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting started",
+        "Emacs Search",
+        "Misc"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.450Z"
+    },
+    {
+      "id": "ejs",
+      "name": "EJS",
+      "description": "EJS(Embedded JavaScript) is a simple templating language that lets you generate HTML markup with plain JavaScript.",
+      "keywords": [
+        "ejs",
+        "frontend",
+        "framework",
+        "programming",
+        "get",
+        "started",
+        ".cols-3",
+        "docs",
+        "{.cols-3}",
+        "client-side"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Get Started { .cols-3 }",
+        "Docs {.cols-3}",
+        "Client-side support {.cols-2}",
+        "Options {.cols-1}",
+        "Tags {.cols-1}",
+        "CLI {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.450Z"
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "description": "This is a quick reference cheat sheet for [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.\n",
+      "keywords": [
+        "docker",
+        "container",
+        "virtual",
+        "programming",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "containers",
+        "images",
+        "networking"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "Docker Containers {.cols-2}",
+        "Docker Images {.cols-2}",
+        "Docker Networking {.cols-2}",
+        "Clean Up {.cols-2}",
+        "Miscellaneous {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.451Z"
+    },
+    {
+      "id": "django",
+      "name": "Django",
+      "description": "A Django cheat sheet.\n",
+      "keywords": [
+        "django",
+        "python",
+        "web",
+        "programming",
+        "getting",
+        "started",
+        "project",
+        "config",
+        "{.cols-1}",
+        "data"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Project config {.cols-1}",
+        "Data Models",
+        "Lookup",
+        "Static Route and Customize Admin Panel {.cols-1}",
+        "Views {.cols-1}",
+        "Templates",
+        "Context Processor {.cols-1}",
+        "Model Managers and Querysets",
+        "Form",
+        "Flash messages {.cols-1}",
+        "User Model",
+        "Authentication",
+        "Create Custom Accounts Model",
+        "Send Email",
+        "Signals",
+        "Seed",
+        "Environment Variables",
+        "Asynchronous Tasks",
+        "Deployment Django in Server"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.452Z"
+    },
+    {
+      "id": "dart",
+      "name": "Dart",
+      "description": "A Dart cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.\n",
+      "keywords": [
+        "dart",
+        "flutter",
+        "programming",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "operators",
+        "control",
+        "flows",
+        "conditionals"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "Operators {.cols-2}",
+        "Control Flows : Conditionals {.cols-2}",
+        "Control Flows : Loops",
+        "Collections {.cols-2}",
+        "Functions {.cols-2}",
+        "Classes and Objects",
+        "Implicit interfaces {.cols-2}",
+        "Exceptions",
+        "Futures",
+        "Extensions {.cols-2}",
+        "Miscellaneous {.cols-2}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.453Z"
+    },
+    {
+      "id": "curl",
+      "name": "Curl",
+      "description": "This [Curl](https://github.com/curl/curl) cheat sheet contains commands and examples of some common Curl tricks.\n",
+      "keywords": [
+        "curl",
+        "url",
+        "request",
+        "linux command",
+        "getting",
+        "started",
+        "example",
+        "{.cols-6}"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Example {.cols-6}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.453Z"
+    },
+    {
+      "id": "css3",
+      "name": "CSS 3",
+      "description": "This is a quick reference cheat sheet for CSS goodness, listing selector syntax, properties, units and other useful bits of information.\n",
+      "keywords": [
+        "css",
+        "web",
+        "style",
+        "programming",
+        "getting",
+        "started",
+        "selectors",
+        "fonts",
+        "colors",
+        "backgrounds"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "CSS Selectors",
+        "CSS Fonts",
+        "CSS Colors",
+        "CSS Backgrounds",
+        "CSS The Box Model",
+        "CSS Animation {.cols-5}",
+        "CSS Flexbox {.cols-2}",
+        "CSS Flexbox Tricks",
+        "CSS Grid Layout",
+        "CSS Dynamic Content",
+        "Css 3 tricks",
+        "Modern CSS",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.454Z"
+    },
+    {
+      "id": "cs",
+      "name": "C#",
+      "description": "C# quick reference cheat sheet that provides basic syntax and methods.\n",
+      "keywords": [
+        "object-oriented",
+        "class",
+        "programming",
+        "getting",
+        "started",
+        "strings",
+        "misc"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "C# Strings",
+        "Misc"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.454Z"
+    },
+    {
+      "id": "cron",
+      "name": "Cron",
+      "description": "[Cron](https://en.wikipedia.org/wiki/Cron) is most suitable for scheduling repetitive tasks. Scheduling one-time tasks can be accomplished using the associated at utility.\n",
+      "keywords": [
+        "cron",
+        "schedule",
+        "crontab",
+        "time",
+        "linux command",
+        "format",
+        "{.cols-2}",
+        "also",
+        "see",
+        "{.cols-1}"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Crontab Format {.cols-2}",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.455Z"
+    },
+    {
+      "id": "cpp",
+      "name": "C++",
+      "description": "C++ quick reference cheat sheet that provides basic syntax and methods.\n",
+      "keywords": [
+        "c++",
+        "programming",
+        "getting",
+        "started",
+        "arrays",
+        "conditionals",
+        "loops",
+        "functions",
+        "classes",
+        "objects"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "C++ Arrays",
+        "C++ Conditionals",
+        "C++ Loops",
+        "C++ Functions",
+        "C++ Classes & Objects {.cols-2}",
+        "C++ Preprocessor",
+        "Miscellaneous",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.456Z"
+    },
+    {
+      "id": "conventional-commits",
+      "name": "Conventional Commits",
+      "description": "A cheat sheet of the Conventional Commits and Conventional Comments standards\n",
+      "keywords": [
+        "conventional",
+        "commits",
+        "permission",
+        "other",
+        "getting",
+        "started",
+        "{.cols-3}",
+        "specification",
+        "{.cols-1}",
+        "also"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-3}",
+        "Specification {.cols-1}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.456Z"
+    },
+    {
+      "id": "color-picker",
+      "name": "color-picker",
+      "description": "Quick reference for color-picker",
+      "keywords": [
+        "getting",
+        "started",
+        "color",
+        "palette",
+        "gradient",
+        "css"
+      ],
+      "categories": [],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Color Palette",
+        "Gradient CSS"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.456Z"
+    },
+    {
+      "id": "code-editor-ios",
+      "name": "Code Editor for iOS",
+      "description": "A visual cheat-sheet for the 43 keyboard shortcuts found in the Code Editor for iOS app. This application is MacOS-only.\n",
+      "keywords": [
+        "code",
+        "editor",
+        "for",
+        "ios",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.457Z"
+    },
+    {
+      "id": "chrome-devtools",
+      "name": "Chrome Developer Tools",
+      "description": "A visual cheat-sheet for the 56 keyboard shortcuts found in Chrome's Developer Tools\n",
+      "keywords": [
+        "chrome",
+        "developer",
+        "tools",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.457Z"
+    },
+    {
+      "id": "chmod",
+      "name": "Chmod",
+      "description": "This quick reference cheat sheet provides a brief overview of file permissions, and the operation of the chmod command\n",
+      "keywords": [
+        "chmod",
+        "permission",
+        "linux command",
+        "getting",
+        "started",
+        "examples",
+        "practices",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Chmod Examples",
+        "Chmod Practices",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.458Z"
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "description": "This cheat sheet lists out prompts and tips from all over the world on how to use ChatGPT effectively",
+      "keywords": [
+        "chatgpt",
+        "ai",
+        "openai",
+        "prompts",
+        "tips",
+        "toolkit",
+        "overview",
+        "prompt",
+        "engineering",
+        "examples"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Overview",
+        "Prompt Engineering",
+        "Examples",
+        "Any Suggestions?"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.458Z"
+    },
+    {
+      "id": "canvas",
+      "name": "HTML Canvas",
+      "description": "This HTML  Canvas quick reference cheat sheet lists the common HTML5  Canvas design tags in readable layout.\n",
+      "keywords": [
+        "html",
+        "canvas",
+        "web",
+        "programming",
+        "getting",
+        "started",
+        "drawing",
+        "shapes",
+        "paths",
+        "bezier"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Drawing Shapes",
+        "Paths",
+        "Bezier and Quadratic Curves",
+        "Transformations",
+        "Gradients",
+        "Compositing",
+        "Also read"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.459Z"
+    },
+    {
+      "id": "c",
+      "name": "C",
+      "description": "C quick reference cheat sheet that provides basic syntax and methods.\n",
+      "keywords": [
+        "programming",
+        "getting",
+        "started",
+        "operators",
+        "data",
+        "types",
+        "preprocessor",
+        "function",
+        "structures",
+        "file"
+      ],
+      "categories": [
+        "Programming"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Operators",
+        "Data Types",
+        "C Preprocessor",
+        "C Function",
+        "C Structures",
+        "File Processing"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.460Z"
+    },
+    {
+      "id": "brave",
+      "name": "Brave Browser",
+      "description": "A visual cheat-sheet for the 64 keyboard shortcuts found in the Brave browser\n",
+      "keywords": [
+        "brave",
+        "browser",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.460Z"
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "description": "A visual cheat-sheet for the 187 keyboard shortcuts found in Blender\n",
+      "keywords": [
+        "blender",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "{.cols-2}",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts {.cols-2}",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.461Z"
+    },
+    {
+      "id": "bitbucket",
+      "name": "Bitbucket",
+      "description": "A visual cheat-sheet for the 35 keyboard shortcuts found on Bitbucket\n",
+      "keywords": [
+        "bitbucket",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.461Z"
+    },
+    {
+      "id": "bear-notes",
+      "name": "Bear",
+      "description": "A visual cheat-sheet for the 66 keyboard shortcuts found in Bear. This application is MacOS-only.\n",
+      "keywords": [
+        "bear",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.462Z"
+    },
+    {
+      "id": "bash",
+      "name": "Bash",
+      "description": "This is a quick reference cheat sheet to getting started with linux bash shell scripting.",
+      "keywords": [
+        "bash",
+        "shell",
+        "sh",
+        "echo",
+        "script",
+        "linux",
+        "programming",
+        "operating system",
+        "getting",
+        "started"
+      ],
+      "categories": [
+        "Programming",
+        "Operating System"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Getting Started",
+        "Bash Parameter expansions",
+        "Bash Arrays",
+        "Bash Dictionaries",
+        "Bash Conditionals",
+        "Bash Loops",
+        "Bash Functions",
+        "Bash Options {.cols-2}",
+        "Bash History {.cols-2}",
+        "Miscellaneous",
+        "Also see {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.462Z"
+    },
+    {
+      "id": "awk",
+      "name": "Awk",
+      "description": "This is a one page quick reference cheat sheet to the [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html), which covers commonly used awk expressions and commands.\n",
+      "keywords": [
+        "awk",
+        "bash",
+        "text",
+        "script",
+        "linux command",
+        "getting",
+        "started",
+        "variables",
+        "operators",
+        "functions"
+      ],
+      "categories": [
+        "Linux Command"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started",
+        "Awk Variables",
+        "Awk Operators",
+        "Awk Functions",
+        "Awk Arrays",
+        "Awk Conditions",
+        "Awk Loops",
+        "Awk Formatted Printing",
+        "Miscellaneous",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.463Z"
+    },
+    {
+      "id": "audacity",
+      "name": "Audacity",
+      "description": "A visual cheat-sheet for the 135 default keyboard shortcuts found in Audacity\n",
+      "keywords": [
+        "audacity",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.464Z"
+    },
+    {
+      "id": "aspect-ratio",
+      "name": "Aspect Ratio",
+      "description": "This cheat sheet lists some common aspect ratios and their pixel resolutions. Always confirm your final delivery ratio when shooting.\n",
+      "keywords": [
+        "aspect",
+        "ratio",
+        "photo",
+        "image",
+        "resolutions",
+        "other",
+        "getting",
+        "started",
+        "{.cols-2}",
+        "lists"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started {.cols-2}",
+        "Lists of Aspect Ratios"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.464Z"
+    },
+    {
+      "id": "ascii-code",
+      "name": "ASCII Code",
+      "description": "This cheatsheet is a complete list of ASCII Code Table with their numbers and names.\n",
+      "keywords": [
+        "ascii",
+        "code",
+        "table",
+        "other",
+        "{.cols-1}"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "ASCII Code Table {.cols-1}"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.464Z"
+    },
+    {
+      "id": "asana",
+      "name": "Asana",
+      "description": "A visual cheat-sheet for the 40 keyboard shortcuts found in Asana\n",
+      "keywords": [
+        "asana",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.465Z"
+    },
+    {
+      "id": "arduino",
+      "name": "Arduino IDE",
+      "description": "A visual cheat-sheet for the 12 keyboard shortcuts found in the Arduino IDE\n",
+      "keywords": [
+        "arduino",
+        "ide",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.465Z"
+    },
+    {
+      "id": "apple-music",
+      "name": "Apple Music",
+      "description": "A visual cheat-sheet for the 62 keyboard shortcuts found in the Apple Music app. This application is MacOS-only.\n",
+      "keywords": [
+        "apple",
+        "music",
+        "mac",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.466Z"
+    },
+    {
+      "id": "apex-legends",
+      "name": "Apex Legends",
+      "description": "A visual cheat-sheet for the 27 default keyboard shortcuts found in Apex Legends\n",
+      "keywords": [
+        "apex",
+        "legends",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.467Z"
+    },
+    {
+      "id": "android-studio",
+      "name": "Android Studio",
+      "description": "A visual cheat-sheet for the 130 keyboard shortcuts found in the Andriod Studio software\n",
+      "keywords": [
+        "android",
+        "studio",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.467Z"
+    },
+    {
+      "id": "alpine-linux",
+      "name": "Alpine Linux",
+      "description": "A comprehensive cheatsheet for Alpine Linux, covering package management, system administration, networking, and more. Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.",
+      "keywords": [
+        "alpine",
+        "linux",
+        "server",
+        "container",
+        "operating system",
+        "package",
+        "management",
+        "(apk)",
+        "system",
+        "administration"
+      ],
+      "categories": [
+        "Operating System"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Package Management (apk)",
+        "System Administration",
+        "File System Operations",
+        "Container Operations",
+        "System Maintenance",
+        "Tips and Tricks",
+        "Security",
+        "Troubleshooting"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.468Z"
+    },
+    {
+      "id": "alan-ai",
+      "name": "Alan AI",
+      "description": "This cheat sheet covers all major script concepts, client API methods, handlers and other tools to create a multimodal conversational experience with Alan AI",
+      "keywords": [
+        "alan",
+        "ai",
+        "alanai",
+        "prompts",
+        "tips",
+        "toolkit",
+        "dialog",
+        "script",
+        "client",
+        "sdk"
+      ],
+      "categories": [
+        "Toolkit"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Dialog script",
+        "Client SDK",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.468Z"
+    },
+    {
+      "id": "airtable",
+      "name": "Airtable",
+      "description": "A visual cheat-sheet for the 36 keyboard shortcuts found in Airtable\n",
+      "keywords": [
+        "airtable",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.469Z"
+    },
+    {
+      "id": "ai",
+      "name": "AI Directory",
+      "description": "This is a quick reference list of cheat sheets for the AI Navigation Directory, designed to help you discover exciting AI tools.",
+      "keywords": [
+        "directory",
+        "ai",
+        "list",
+        "tools",
+        "resources",
+        "other",
+        "getting",
+        "started"
+      ],
+      "categories": [
+        "Other"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "BookOpen",
+      "sections": [
+        "Getting Started"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.470Z"
+    },
+    {
+      "id": "affinity-photo",
+      "name": "Affinity Photo",
+      "description": "A visual cheat-sheet for the 177 keyboard shortcuts found in Affinity Photo\n",
+      "keywords": [
+        "affinity",
+        "photo",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.471Z"
+    },
+    {
+      "id": "affinity-designer",
+      "name": "Affinity Designer",
+      "description": "A visual cheat-sheet for the 108 keyboard shortcuts found in Affinity Designer\n",
+      "keywords": [
+        "affinity",
+        "designer",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.471Z"
+    },
+    {
+      "id": "adobe-xd",
+      "name": "Adobe XD",
+      "description": "A visual cheat-sheet for the 97 keyboard shortcuts found in Adobe XD\n",
+      "keywords": [
+        "adobe",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.472Z"
+    },
+    {
+      "id": "adobe-photoshop",
+      "name": "Adobe Photoshop",
+      "description": "A visual cheat-sheet for the 283 keyboard shortcuts found in Adobe Photoshop\n",
+      "keywords": [
+        "adobe",
+        "photoshop",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.473Z"
+    },
+    {
+      "id": "adobe-lightroom",
+      "name": "Adobe Lightroom CC",
+      "description": "A visual cheat-sheet for the 251 keyboard shortcuts found in Adobe Lightroom CC\n",
+      "keywords": [
+        "adobe",
+        "lightroom",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "also",
+        "see"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "Keyboard Shortcuts",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.475Z"
+    },
+    {
+      "id": "1password",
+      "name": "1Password",
+      "description": "A cheat sheet for 1password's keyboard shortcuts in Mac, Windows, iOS, Linux.\n",
+      "keywords": [
+        "1password",
+        "tools",
+        "keyboard shortcuts",
+        "keyboard",
+        "shortcuts",
+        "for",
+        "mac",
+        "ios",
+        "windows",
+        "linux"
+      ],
+      "categories": [
+        "Keyboard Shortcuts"
+      ],
+      "status": "Available",
+      "gradient": "from-gray-500 to-gray-600",
+      "badge": "Available",
+      "icon": "Code",
+      "sections": [
+        "1Password Keyboard Shortcuts for Mac",
+        "1Password Keyboard Shortcuts for iOS",
+        "1Password Keyboard Shortcuts for Windows",
+        "1Password Keyboard Shortcuts for Linux",
+        "Also see"
+      ],
+      "lastUpdated": "2025-07-09T16:05:42.476Z"
     }
   ],
-  "createdAt": "2025-07-09T13:50:55.199Z",
+  "createdAt": "2025-07-09T16:05:42.476Z",
   "version": "1.0.0"
 }

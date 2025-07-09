@@ -1,0 +1,242 @@
+{
+  "id": "notion",
+  "metadata": {
+    "title": "Notion Shortcuts",
+    "date": "2025-04-24T12:51:00.000Z",
+    "background": "bg-gradient-to-l from-gray-400 to-gray-600 hover:from-blue-500 hover:to-purple-500",
+    "tags": [
+      "notion",
+      "keyboard",
+      "shortcuts",
+      "productivity",
+      "reference"
+    ],
+    "categories": [
+      "Productivity",
+      "Software"
+    ],
+    "intro": "A comprehensive quick reference guide for Notion keyboard shortcuts on Desktop and Web, designed to boost your productivity.",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Most Popular / Essential {.col-span-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Create & Navigate",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create & Navigate",
+              "body": "| Action                       | Mac Shortcut             | Windows/Linux Shortcut |\n| :--------------------------- | :----------------------- | :--------------------- |\n| Create a new page            | `Cmd` `N`                | `Ctrl` `N`             |\n| Open new Notion window       | `Cmd` `Shift` `N`        | `Ctrl` `Shift` `N`     |\n| Quick Find (Search)          | `Cmd` `P`                | `Ctrl` `P`             |\n| Go back in page history      | `Cmd` `[`                | `Ctrl` `[`             |\n| Go forward in page history   | `Cmd` `]`                | `Ctrl` `]`             |\n| Go to parent page            | `Cmd` `Shift` `U`        | `Ctrl` `Shift` `U`     |\n| Open Page Link in New Tab    | `Cmd` `Click`            | `Ctrl` `Click`         |\n| Open Page Link in New Window | `Option` `Shift` `Click` | `Alt` `Shift` `Click`  |\n\n{.show-header .shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View & Mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View & Mode",
+              "body": "| Action                   | Mac Shortcut             | Windows/Linux Shortcut    |\n| :----------------------- | :----------------------- | :------------------------ |\n| Toggle Dark/Light Mode   | `Cmd` `Shift` `L`        | `Ctrl` `Shift` `L`        |\n| Lock/Unlock current page | `Cmd` `Shift` `L` (Hold) | `Ctrl` `Shift` `L` (Hold) |\n| Zoom In                  | `Cmd` `+`                | `Ctrl` `+`                |\n| Zoom Out                 | `Cmd` `-`                | `Ctrl` `-`                |\n| Reset Zoom               | `Cmd` `0`                | `Ctrl` `0`                |\n\n{.show-header .shortcuts}\n\n# Markdown Style Formatting {.cols-1}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "On New Lines",
+          "level": 3,
+          "cards": [
+            {
+              "title": "On New Lines",
+              "body": "Type the following at the beginning of an empty line, then press `Space`:\n\n- `*`, `-`, or `+` : Bulleted list\n- `[]` : To-do checkbox (Note: just the characters, no `Cmd`/`Ctrl`)\n- `1.` : Numbered list\n- `#` : H1 heading\n- `##` : H2 heading\n- `###` : H3 heading\n- `>` : Toggle list\n- `\"` : Quote block\n- `---` : Divider (three hyphens)\n- ` ` : Code block (three backticks)",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inline",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inline",
+              "body": "- Wrap text with `**` or `__` for **Bold**.\n- Wrap text with `*` or `_` for _Italics_.\n- Wrap text with `~` for ~~Strikethrough~~.\n- Wrap text with `` ` `` for `inline code`.\n\n# Text Formatting & Editing {.cols-2}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic Formatting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Formatting",
+              "body": "Select text first, then use the shortcut: | Action | Mac Shortcut | Windows/Linux Shortcut | |\n:------------------------- | :------------------------ | :----------------------- | | Bold | `Cmd` `B` | `Ctrl` `B` | |\nItalic | `Cmd` `I` | `Ctrl` `I` | | Underline | `Cmd` `U` | `Ctrl` `U` | | Strikethrough | `Cmd` `Shift` `S` | `Ctrl`\n`Shift` `S` | | Inline Code | `Cmd` `E` | `Ctrl` `E` | | Create Link | `Cmd` `K` | `Ctrl` `K` | | Change Color /\nHighlight | `Cmd` `Shift` `H` | `Ctrl` `Shift` `H` | | Clear Formatting | `Cmd` `\\` | `Ctrl` `\\` | {.show-header\n.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Block Type Conversion",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Block Type Conversion",
+              "body": "Select the block(s) first, then use the shortcut: | Action | Mac Shortcut | Windows/Linux Shortcut | |\n:------------------------- | :------------------------ | :----------------------- | | Turn into Text block | `Cmd`\n`Option` `0` | `Ctrl` `Alt` `0` | | Turn into H1 Heading | `Cmd` `Option` `1` | `Ctrl` `Alt` `1` | | Turn into H2\nHeading | `Cmd` `Option` `2` | `Ctrl` `Alt` `2` | | Turn into H3 Heading | `Cmd` `Option` `3` | `Ctrl` `Alt` `3` | |\nTurn into To-do list | `Cmd` `Option` `4` | `Ctrl` `Alt` `4` | | Turn into Bulleted list | `Cmd` `Option` `5` | `Ctrl`\n`Alt` `5` | | Turn into Numbered list | `Cmd` `Option` `6` | `Ctrl` `Alt` `6` | | Turn into Toggle list | `Cmd` `Option`\n`7` | `Ctrl` `Alt` `7` | | Turn into Code block | `Cmd` `Option` `8` | `Ctrl` `Alt` `8` | | Turn into Page | `Cmd`\n`Option` `9` | `Ctrl` `Alt` `9` | | Turn into Callout | `Cmd` `Option` `C` | `Ctrl` `Alt` `C` | {.show-header\n.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editing",
+              "body": "| Action                     | Mac Shortcut    | Windows/Linux Shortcut |\n| :------------------------- | :-------------- | :--------------------- |\n| New Line within same block | `Shift` `Enter` | `Shift` `Enter`        |\n\n{.show-header .shortcuts}\n\n# Creating & Modifying Blocks {.cols-2}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Creation & Selection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Creation & Selection",
+              "body": "| Action                                     | Mac Shortcut        | Windows/Linux Shortcut |\n| :----------------------------------------- | :------------------ | :--------------------- |\n| Create new text block below                | `Enter`             | `Enter`                |\n| Open the `/` command menu                  | `/`                 | `/`                    |\n| Select current block                       | `Esc`               | `Esc`                  |\n| Select parent block                        | `Shift` `Esc`       | `Shift` `Esc`          |\n| Select block above/below                   | `Up` / `Down`       | `Up` / `Down`          |\n| Select multiple blocks                     | `Shift` `Up`/`Down` | `Shift` `Up`/`Down`    |\n| Select all blocks                          | `Cmd` `A`           | `Ctrl` `A`             |\n| Edit selected block (or text within block) | `Enter`             | `Enter`                |\n\n{.show-header .shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Moving & Structuring",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Moving & Structuring",
+              "body": "| Action                                  | Mac Shortcut               | Windows/Linux Shortcut     |\n| :-------------------------------------- | :------------------------- | :------------------------- |\n| Duplicate selected block(s)             | `Cmd` `D`                  | `Ctrl` `D`                 |\n| Move selected block(s) up/down          | `Cmd` `Shift` `Up`/`Down`  | `Ctrl` `Shift` `Up`/`Down` |\n| Indent block (nest)                     | `Tab`                      | `Tab`                      |\n| Un-indent block                         | `Shift` `Tab`              | `Shift` `Tab`              |\n| Expand/Collapse toggle list             | `Cmd` `Option` `T`         | `Ctrl` `Alt` `T`           |\n| Expand/Collapse all toggles             | `Cmd` `Option` `Shift` `T` | `Ctrl` `Alt` `Shift` `T`   |\n| Open page from selected link/page block | `Cmd` `Enter`              | `Ctrl` `Enter`             |\n| Delete selected block(s)                | `Delete` or `Backspace`    | `Delete` or `Backspace`    |\n| Turn block into a page                  | `Cmd` `Option` `9`         | `Ctrl` `Alt` `9`           |\n| Move block(s) to another page           | `Cmd` `Option` `Shift` `M` | `Ctrl` `Alt` `Shift` `M`   |\n\n{.show-header .shortcuts}\n\n# Comments & Mentions {.cols-2}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "| Action                   | Mac Shortcut      | Windows/Linux Shortcut |\n| :----------------------- | :---------------- | :--------------------- |\n| Add comment to selection | `Cmd` `Shift` `M` | `Ctrl` `Shift` `M`     |\n\n{.show-header .shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mentions & Links (Type in block)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mentions & Links (Type in block)",
+              "body": "- `@` + person's name: Mention a person\n- `@` + page title: Mention/link a page\n- `[[` + page title: Link another page\n- `+` + page title: Link another page (alternative)\n- `@` + date (e.g., `@today`, `@next tuesday`, `@1/15`): Add a date mention\n- `@remind` + date + time (optional): Set a reminder",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Emoji",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Emoji",
+              "body": "| Action                | Mac Shortcut           | Windows/Linux Shortcut |\n| :-------------------- | :--------------------- | :--------------------- |\n| Emoji Picker (System) | `Cmd` `Ctrl` `Space`   | `Win` `.` or `Win` `;` |\n| Emoji Picker (Notion) | `:` + emoji name + `:` | `:` + emoji name + `:` |\n\n{.show-header .shortcuts}\n\n# Database Shortcuts {.cols-2}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation & Selection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation & Selection",
+              "body": "| Action                     | Mac Shortcut          | Windows/Linux Shortcut |\n| :------------------------- | :-------------------- | :--------------------- |\n| Select row above/below     | `Shift` `Up`/`Down`   | `Shift` `Up`/`Down`    |\n| Open selected page(s)      | `Cmd` `Enter`         | `Ctrl` `Enter`         |\n| Edit property              | `Enter`               | `Enter`                |\n| Move to cell above/below   | `Shift` `Enter`       | `Shift` `Enter`        |\n| Move to cell left/right    | `Tab` / `Shift` `Tab` | `Tab` / `Shift` `Tab`  |\n| Select column              | `Cmd` `Shift` `K`     | `Ctrl` `Shift` `K`     |\n| Select multiple cards/rows | `Shift` `Click`       | `Shift` `Click`        |\n\n{.show-header .shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Other",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Other",
+              "body": "| Action                     | Mac Shortcut      | Windows/Linux Shortcut |\n| :------------------------- | :---------------- | :--------------------- |\n| Quick Find within Database | `Cmd` `Shift` `P` | `Ctrl` `Shift` `P`     |\n\n{.show-header .shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Official Notion Keyboard Shortcuts](https://www.notion.so/help/keyboard-shortcuts) _(notion.so)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

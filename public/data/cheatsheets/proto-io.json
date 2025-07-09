@@ -1,0 +1,360 @@
+{
+  "id": "proto-io",
+  "metadata": {
+    "title": "Proto.io",
+    "date": "2022-11-23T16:23:31.694Z",
+    "background": "bg-[#5697a9]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 48 keyboard shortcuts found in Proto.io\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Main",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Main",
+              "body": "| Shortcut           | Action                  |\n| ------------------ | ----------------------- |\n| `Ctrl` `F`         | Find                    |\n| `Ctrl` `K`         | Show keyboard shortcuts |\n| `Ctrl` `S`         | Save                    |\n| `Esc`              | Close modal windows     |\n| `Shift` `P`        | Preview                 |\n| `Ctrl` `Shift` `S` | Save and Preview        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Show keyboard shortcuts"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close modal windows"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Preview"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Save and Preview"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "History",
+          "level": 3,
+          "cards": [
+            {
+              "title": "History",
+              "body": "| Shortcut           | Action                |\n| ------------------ | --------------------- |\n| `Ctrl` `Z`         | Undo                  |\n| `Ctrl` `Shift` `Z` | Redo                  |\n| `Ctrl` `[`         | Go to previous canvas |\n| `Ctrl` `]`         | Go to next canvas     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Go to previous canvas"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Go to next canvas"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Edit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Edit",
+              "body": "| Shortcut    | Action     |\n| ----------- | ---------- |\n| `Ctrl` `A`  | Select all |\n| `Ctrl` `X`  | Cut        |\n| `Ctrl` `C`  | Copy       |\n| `Ctrl` `V`  | Paste      |\n| `Ctrl` `D`  | Duplicate  |\n| `Backspace` | Delete     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Duplicate"
+                },
+                {
+                  "shortcut": "`Backspace`",
+                  "action": "Delete"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Grid",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Grid",
+              "body": "| Shortcut   | Action                                |\n| ---------- | ------------------------------------- |\n| `Ctrl` `'` | Toggle grid                           |\n| `Ctrl` `\\` | Toggle grid system                    |\n| `Ctrl` `;` | Toggle custom guides                  |\n| `Ctrl` `L` | Toggle smart guides                   |\n| `Alt`      | Toggle snap to grid on drag or resize |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `'`",
+                  "action": "Toggle grid"
+                },
+                {
+                  "shortcut": "`Ctrl` `\\`",
+                  "action": "Toggle grid system"
+                },
+                {
+                  "shortcut": "`Ctrl` `;`",
+                  "action": "Toggle custom guides"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Toggle smart guides"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Toggle snap to grid on drag or resize"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View",
+              "body": "| Shortcut       | Action                                                                       |\n| -------------- | ---------------------------------------------------------------------------- |\n| `Ctrl` `+`     | Zoom in                                                                      |\n| `Ctrl` `-`     | Zoom out                                                                     |\n| `Ctrl` `0`     | Zoom to 100%                                                                 |\n| `Ctrl` `1`     | Fit to screen                                                                |\n| `Ctrl` `2`     | Zoom to selected layers, or fit all layers if none selected                  |\n| `Ctrl` `3`     | Center selected layer(s) in the canvas, or center on screen if none selected |\n| `Ctrl` `Right` | Toggle right pane                                                            |\n| `Ctrl` `Left`  | Toggle left pane                                                             |\n| `Space`        | Pan canvas while keydown                                                     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Zoom to 100%"
+                },
+                {
+                  "shortcut": "`Ctrl` `1`",
+                  "action": "Fit to screen"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Zoom to selected layers, or fit all layers if none selected"
+                },
+                {
+                  "shortcut": "`Ctrl` `3`",
+                  "action": "Center selected layer(s) in the canvas, or center on screen if none selected"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right`",
+                  "action": "Toggle right pane"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left`",
+                  "action": "Toggle left pane"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Pan canvas while keydown"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Item",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Item",
+              "body": "| Shortcut              | Action                                    |\n| --------------------- | ----------------------------------------- |\n| `Ctrl` `Up`           | Bring to front                            |\n| `Ctrl` `Down`         | Send to back                              |\n| `Ctrl` `Shift` `Up`   | Bring forward                             |\n| `Ctrl` `Shift` `Down` | Send backwards                            |\n| `(arrows)`            | Move item                                 |\n| `Shift` `(arrows)`    | Snap item                                 |\n| `Shift`               | Lock drag direction (hold while dragging) |\n| `R`                   | Insert rectangle                          |\n| `O`                   | Insert oval                               |\n| `L`                   | Insert line                               |\n| `T`                   | Insert text                               |\n| `I`                   | Insert interaction area                   |\n| `Enter`               | Enter selected container                  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Up`",
+                  "action": "Bring to front"
+                },
+                {
+                  "shortcut": "`Ctrl` `Down`",
+                  "action": "Send to back"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Up`",
+                  "action": "Bring forward"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Down`",
+                  "action": "Send backwards"
+                },
+                {
+                  "shortcut": "`(arrows)`",
+                  "action": "Move item"
+                },
+                {
+                  "shortcut": "`Shift` `(arrows)`",
+                  "action": "Snap item"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Lock drag direction (hold while dragging)"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Insert rectangle"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Insert oval"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Insert line"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Insert text"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Insert interaction area"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Enter selected container"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Group",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Group",
+              "body": "| Shortcut           | Action           |\n| ------------------ | ---------------- |\n| `Ctrl` `G`         | Group selected   |\n| `Ctrl` `Shift` `G` | Ungroup selected |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Group selected"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Ungroup selected"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "States Preview",
+          "level": 3,
+          "cards": [
+            {
+              "title": "States Preview",
+              "body": "| Shortcut | Action                         |\n| -------- | ------------------------------ |\n| `Space`  | Play or pause state transition |\n| `.`      | Forward state transition       |\n| `,`      | Rewind state transition        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Space`",
+                  "action": "Play or pause state transition"
+                },
+                {
+                  "shortcut": "`.`",
+                  "action": "Forward state transition"
+                },
+                {
+                  "shortcut": "`,`",
+                  "action": "Rewind state transition"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Proto.io](https://support.proto.io/hc/en-us/articles/115001423511-Keyboard-shortcuts)\n  _(support.proto.io)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

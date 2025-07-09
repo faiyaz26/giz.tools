@@ -1,0 +1,244 @@
+{
+  "id": "sketchup",
+  "metadata": {
+    "title": "SketchUp Pro",
+    "date": "2022-11-23T16:23:31.693Z",
+    "background": "bg-[#265a94]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 135 default keyboard shortcuts found in SketchUp Pro\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General I",
+              "body": "| Shortcut          | Action                                                                             |\n| ----------------- | ---------------------------------------------------------------------------------- |\n| `A`               | 2 point arc tool                                                                   |\n| `C`               | Circle tool                                                                        |\n| `Shift` `C`       | Circle tool - lock current inferences                                              |\n| `E`               | Eraser tool                                                                        |\n| `Alt` `E`         | Eraser tool - soften or smooth (use on edges to make adjacent faces appear curved) |\n| `Shift` `E`       | Eraser tool - hide                                                                 |\n| `Alt` `Shift` `E` | Eraser tool - unsoften or unsmooth                                                 |\n| `L`               | Line tool                                                                          |\n| `Shift` `L`       | Line tool - lock in current inference direction                                    |\n| `(arrows)` `L`    | Line tool - lock direction                                                         |\n| `M`               | Move tool                                                                          |\n| `Alt` `M`         | Move tool - move a copy                                                            |\n| `Shift` `M`       | Move tool - hold down to lock in current inference direction                       |\n| `Ctrl` `M`        | Move tool - auto-fold (allow move even if it means adding extra edges and faces)   |\n| `(arrows)` `M`    | Move tool - lock direction                                                         |\n| `F`               | Offset tool                                                                        |\n| `O`               | Orbit tool                                                                         |\n| `Alt` `O`         | Orbit tool - disable 'gravity-weighted' orbiting                                   |\n| `Shift` `O`       | Orbit tool - activate pan tool                                                     |\n| `B`               | Paint bucket tool                                                                  |\n| `Alt` `B`         | Paint bucket tool - fill material, paint all matching adjacent faces               |\n| `Shift` `B`       | Paint bucket tool - replace material, paint all matching faces in the model        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`A`",
+                  "action": "2 point arc tool"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Circle tool"
+                },
+                {
+                  "shortcut": "`Shift` `C`",
+                  "action": "Circle tool - lock current inferences"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Eraser tool"
+                },
+                {
+                  "shortcut": "`Alt` `E`",
+                  "action": "Eraser tool - soften or smooth (use on edges to make adjacent faces appear curved)"
+                },
+                {
+                  "shortcut": "`Shift` `E`",
+                  "action": "Eraser tool - hide"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `E`",
+                  "action": "Eraser tool - unsoften or unsmooth"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Line tool"
+                },
+                {
+                  "shortcut": "`Shift` `L`",
+                  "action": "Line tool - lock in current inference direction"
+                },
+                {
+                  "shortcut": "`(arrows)` `L`",
+                  "action": "Line tool - lock direction"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Move tool"
+                },
+                {
+                  "shortcut": "`Alt` `M`",
+                  "action": "Move tool - move a copy"
+                },
+                {
+                  "shortcut": "`Shift` `M`",
+                  "action": "Move tool - hold down to lock in current inference direction"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Move tool - auto-fold (allow move even if it means adding extra edges and faces)"
+                },
+                {
+                  "shortcut": "`(arrows)` `M`",
+                  "action": "Move tool - lock direction"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Offset tool"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Orbit tool"
+                },
+                {
+                  "shortcut": "`Alt` `O`",
+                  "action": "Orbit tool - disable 'gravity-weighted' orbiting"
+                },
+                {
+                  "shortcut": "`Shift` `O`",
+                  "action": "Orbit tool - activate pan tool"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Paint bucket tool"
+                },
+                {
+                  "shortcut": "`Alt` `B`",
+                  "action": "Paint bucket tool - fill material, paint all matching adjacent faces"
+                },
+                {
+                  "shortcut": "`Shift` `B`",
+                  "action": "Paint bucket tool - replace material, paint all matching faces in the model"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General II",
+              "body": "| Shortcut              | Action                                                                                      |\n| --------------------- | ------------------------------------------------------------------------------------------- |\n| `Shift` `B`           | Paint bucket tool - replace material, paint all matching faces in the model                 |\n| `Alt` `Shift` `B`     | Paint bucket tool - replace material on object, paint all matching faces on the same object |\n| `Ctrl` `B`            | Paint bucket tool - sample material                                                         |\n| `P`                   | Push and pull tool                                                                          |\n| `Alt` `P`             | Push and pull tool - push or pull a copy of the face, leaving original in place             |\n| `R`                   | Rectangle tool                                                                              |\n| `Alt` `R`             | Rectangle tool - start drawing from center                                                  |\n| `Q`                   | Rotate tool                                                                                 |\n| `Alt` `Q`             | Rotate tool - rotate a copy                                                                 |\n| `S`                   | Scale tool                                                                                  |\n| `Alt` `S`             | Scale tool - scale about center                                                             |\n| `Shift` `S`           | Scale tool - scale uniformly, don't distort                                                 |\n| `Space`               | Select tool                                                                                 |\n| `Alt` `Space`         | Select tool - add to selection                                                              |\n| `Shift`               | Select tool - add or subtract from selection                                                |\n| `Alt` `Shift` `Space` | Select tool - subtract from selection                                                       |\n| `T`                   | Tape measure tool                                                                           |\n| `Alt` `T`             | Tape measure tool - toggle create guide or measure only                                     |\n| `(arrows)` `T`        | Tape measure tool - lock direction                                                          |\n| `Z`                   | Zoom tool                                                                                   |\n| `Shift` `Z`           | Zoom tool - combine with click-drag mouse to change field of view                           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `B`",
+                  "action": "Paint bucket tool - replace material, paint all matching faces in the model"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `B`",
+                  "action": "Paint bucket tool - replace material on object, paint all matching faces on the same object"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Paint bucket tool - sample material"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Push and pull tool"
+                },
+                {
+                  "shortcut": "`Alt` `P`",
+                  "action": "Push and pull tool - push or pull a copy of the face, leaving original in place"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Rectangle tool"
+                },
+                {
+                  "shortcut": "`Alt` `R`",
+                  "action": "Rectangle tool - start drawing from center"
+                },
+                {
+                  "shortcut": "`Q`",
+                  "action": "Rotate tool"
+                },
+                {
+                  "shortcut": "`Alt` `Q`",
+                  "action": "Rotate tool - rotate a copy"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Scale tool"
+                },
+                {
+                  "shortcut": "`Alt` `S`",
+                  "action": "Scale tool - scale about center"
+                },
+                {
+                  "shortcut": "`Shift` `S`",
+                  "action": "Scale tool - scale uniformly, don't distort"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Select tool"
+                },
+                {
+                  "shortcut": "`Alt` `Space`",
+                  "action": "Select tool - add to selection"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Select tool - add or subtract from selection"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Space`",
+                  "action": "Select tool - subtract from selection"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Tape measure tool"
+                },
+                {
+                  "shortcut": "`Alt` `T`",
+                  "action": "Tape measure tool - toggle create guide or measure only"
+                },
+                {
+                  "shortcut": "`(arrows)` `T`",
+                  "action": "Tape measure tool - lock direction"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Zoom tool"
+                },
+                {
+                  "shortcut": "`Shift` `Z`",
+                  "action": "Zoom tool - combine with click-drag mouse to change field of view"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for SketchUp](https://help.sketchup.com/en/sketchup/getting-started-sketchup#qrc)\n  _(help.sketchup.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "id": "affinity-designer",
+  "metadata": {
+    "title": "Affinity Designer",
+    "date": "2022-11-23T16:23:31.702Z",
+    "background": "bg-[#79cdf1]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 108 keyboard shortcuts found in Affinity Designer\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Designer Persona",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Designer Persona",
+              "body": "| Shortcut       | Action                     |\n| -------------- | -------------------------- |\n| `Esc`          | Cancel operation           |\n| `F1`           | Help                       |\n| `0-9`          | Change opacity             |\n| `Tab`          | Toggle UI                  |\n| `T`            | Cycle text tools           |\n| `Y`            | Transparency tool          |\n| `I`            | Color picker tool          |\n| `P`            | Pen tool                   |\n| `[`            | Decrease brush size        |\n| `]`            | Increase brush size        |\n| `A`            | Node tool                  |\n| `F`            | Point transform tool       |\n| `G`            | Fill tool                  |\n| `H`            | View tool                  |\n| `;`            | Toggle snapping            |\n| `\\`            | Clip to canvas             |\n| `Z`            | Zoom tool                  |\n| `X`            | Toggle active selector     |\n| `C`            | Corner tool                |\n| `V`            | Move tool                  |\n| `B`            | Vector brush tool          |\n| `N`            | Pencil tool                |\n| `M`            | Cycle shape tool           |\n| `,`            | Cycle split view           |\n| `.`            | Reset selection box        |\n| `/`            | Set fill or stroke to none |\n| `Ctrl` `1`     | Zoom to 100%               |\n| `Ctrl` `2`     | Zoom to 200%               |\n| `Ctrl` `3`     | Zoom to 400%               |\n| `Ctrl` `4`     | Zoom to 800%               |\n| `Ctrl` `8`     | Zoom to actual size        |\n| `Ctrl` `9`     | Zoom to pixel size         |\n| `Ctrl` `0`     | Zoom to fit                |\n| `Ctrl` `-`     | Zoom out                   |\n| `Ctrl` `=`     | Zoom in                    |\n| `Ctrl` `Tab`   | Switch view                |\n| `Ctrl` `W`     | Close                      |\n| `Ctrl` `R`     | Rulers                     |\n| `Ctrl` `T`     | Character                  |\n| `Ctrl` `Y`     | Redo                       |\n| `Ctrl` `O`     | Open                       |\n| `Ctrl` `P`     | Print                      |\n| `Ctrl` `[`     | Back one                   |\n| `Ctrl` `]`     | Forward one                |\n| `Ctrl` `Enter` | Convert to curves          |\n| `Ctrl` `A`     | Select all                 |\n| `Ctrl` `S`     | Save                       |\n| `Ctrl` `G`     | Group                      |\n| `Ctrl` `J`     | Duplicate                  |\n| `Ctrl` `L`     | Lock                       |\n| `Ctrl` `;`     | Show guides                |\n| `Ctrl` `'`     | Show grid                  |\n| `Ctrl` `Z`     | Undo                       |\n| `Ctrl` `X`     | Cut                        |\n| `Ctrl` `C`     | Copy                       |\n| `Ctrl` `V`     | Paste                      |\n| `Ctrl` `N`     | New                        |\n| `Ctrl` `M`     | Curves                     |\n| `Ctrl` `,`     | Preferences                |\n| `Space`        | Hold for view tool         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Cancel operation"
+                },
+                {
+                  "shortcut": "`F1`",
+                  "action": "Help"
+                },
+                {
+                  "shortcut": "`0-9`",
+                  "action": "Change opacity"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Toggle UI"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Cycle text tools"
+                },
+                {
+                  "shortcut": "`Y`",
+                  "action": "Transparency tool"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Color picker tool"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Pen tool"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Decrease brush size"
+                },
+                {
+                  "shortcut": "`]`",
+                  "action": "Increase brush size"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Node tool"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Point transform tool"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Fill tool"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "View tool"
+                },
+                {
+                  "shortcut": "`;`",
+                  "action": "Toggle snapping"
+                },
+                {
+                  "shortcut": "`\\`",
+                  "action": "Clip to canvas"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Zoom tool"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Toggle active selector"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Corner tool"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Move tool"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Vector brush tool"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Pencil tool"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Cycle shape tool"
+                },
+                {
+                  "shortcut": "`,`",
+                  "action": "Cycle split view"
+                },
+                {
+                  "shortcut": "`.`",
+                  "action": "Reset selection box"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Set fill or stroke to none"
+                },
+                {
+                  "shortcut": "`Ctrl` `1`",
+                  "action": "Zoom to 100%"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Zoom to 200%"
+                },
+                {
+                  "shortcut": "`Ctrl` `3`",
+                  "action": "Zoom to 400%"
+                },
+                {
+                  "shortcut": "`Ctrl` `4`",
+                  "action": "Zoom to 800%"
+                },
+                {
+                  "shortcut": "`Ctrl` `8`",
+                  "action": "Zoom to actual size"
+                },
+                {
+                  "shortcut": "`Ctrl` `9`",
+                  "action": "Zoom to pixel size"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Zoom to fit"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `=`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Switch view"
+                },
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Rulers"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Character"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Print"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Back one"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Forward one"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Convert to curves"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Group"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Duplicate"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Lock"
+                },
+                {
+                  "shortcut": "`Ctrl` `;`",
+                  "action": "Show guides"
+                },
+                {
+                  "shortcut": "`Ctrl` `'`",
+                  "action": "Show grid"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Curves"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Preferences"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Hold for view tool"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pixel Persona",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pixel Persona",
+              "body": "| Shortcut | Action                      |\n| -------- | --------------------------- |\n| `W`      | Selection brush             |\n| `E`      | Erase brush                 |\n| `I`      | Color picker tool           |\n| `O`      | Cycle dodge or burn brushes |\n| `[`      | Decrease brush size         |\n| `]`      | Increase brush size         |\n| `G`      | Flood fill tool             |\n| `L`      | Freehand selection tool     |\n| `X`      | Toggle active selector      |\n| `V`      | Move tool                   |\n| `B`      | Cycle brush or pixel tools  |\n| `M`      | Cycle marquees              |\n| `,`      | Cycle split view            |\n| `.`      | Reset selection box         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`W`",
+                  "action": "Selection brush"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Erase brush"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Color picker tool"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Cycle dodge or burn brushes"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Decrease brush size"
+                },
+                {
+                  "shortcut": "`]`",
+                  "action": "Increase brush size"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Flood fill tool"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Freehand selection tool"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Toggle active selector"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Move tool"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Cycle brush or pixel tools"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Cycle marquees"
+                },
+                {
+                  "shortcut": "`,`",
+                  "action": "Cycle split view"
+                },
+                {
+                  "shortcut": "`.`",
+                  "action": "Reset selection box"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Modifiers and Layer Control",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Modifiers and Layer Control",
+              "body": "| Shortcut | Action                                                                 |\n| -------- | ---------------------------------------------------------------------- |\n| `Alt`    | Drawing and painting - temporarily switches to the color picker tool   |\n| `Shift`  | Freehand selection tools - connects clicked points with straight lines |\n| `Shift`  | Reverses aspect ratio constraint on scaling                            |\n| `Ctrl`   | Scales from the center of selection                                    |\n| `Alt`    | Ignores snapping during an operation                                   |\n| `Ctrl`   | Geometric shapes - moves red handles symmetrically                     |\n| `Shift`  | Path text - maintains distance between red handles                     |\n| `Ctrl`   | Path text - moves red handles symmetrically                            |\n| `Shift`  | Pixel brush painting - draws straight line connecting two strokes      |\n| `Shift`  | Pixel selections - constrains marquee to square or circle              |\n| `Ctrl`   | Pixel selection - moves underlying layer rather than selection         |\n| `Alt`    | Pixel selection - removes from selection                               |\n| `Ctrl`   | Pixel tool - erases from current layer or projects                     |\n| `Shift`  | Rotating - constrains rotations to 15 degree intervals                 |\n| `Shift`  | Selecting - scales multiple objects and layers                         |\n| `Alt`    | Selecting - selects object or layer behind current selection           |\n| `Ctrl`   | Shearing - mirrors shear around center of object                       |\n| `Shift`  | Vector drawing tools - constrains handle angles to 15 degrees          |\n| `Alt`    | Vector drawing tools - sets node to sharp for creating cusps           |\n| `Ctrl`   | Vector drawing tools - temporarily switches to node editing from pen   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Drawing and painting - temporarily switches to the color picker tool"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Freehand selection tools - connects clicked points with straight lines"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Reverses aspect ratio constraint on scaling"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Scales from the center of selection"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Ignores snapping during an operation"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Geometric shapes - moves red handles symmetrically"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Path text - maintains distance between red handles"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Path text - moves red handles symmetrically"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Pixel brush painting - draws straight line connecting two strokes"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Pixel selections - constrains marquee to square or circle"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Pixel selection - moves underlying layer rather than selection"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Pixel selection - removes from selection"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Pixel tool - erases from current layer or projects"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Rotating - constrains rotations to 15 degree intervals"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Selecting - scales multiple objects and layers"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Selecting - selects object or layer behind current selection"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Shearing - mirrors shear around center of object"
+                },
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Vector drawing tools - constrains handle angles to 15 degrees"
+                },
+                {
+                  "shortcut": "`Alt`",
+                  "action": "Vector drawing tools - sets node to sharp for creating cusps"
+                },
+                {
+                  "shortcut": "`Ctrl`",
+                  "action": "Vector drawing tools - temporarily switches to node editing from pen"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Advanced Text",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Advanced Text",
+              "body": "| Shortcut                    | Action                   |\n| --------------------------- | ------------------------ |\n| `Ctrl` `T`                  | Character panel          |\n| `Ctrl` `Shift` `T`          | Typography dialog        |\n| `Ctrl` `B`                  | Bold                     |\n| `Ctrl` `I`                  | Italic                   |\n| `Ctrl` `U`                  | Underline                |\n| `Ctrl` `Alt` `L`            | Align left               |\n| `Ctrl` `Alt` `C`            | Align center             |\n| `Ctrl` `Alt` `R`            | Align right              |\n| `Alt` `Shift` `Left`        | Tighten spacing more     |\n| `Alt` `Shift` `Right`       | Loosen spacing more      |\n| `Ctrl` `Alt` `Shift` `Up`   | Precise raise baseline   |\n| `Ctrl` `Alt` `Shift` `Down` | Precise lower baseline   |\n| `Ctrl` `Alt` `Down`         | Precise increase leading |\n| `Ctrl` `Alt` `Up`           | Precise decrease leading |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Character panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Typography dialog"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Italic"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Underline"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `L`",
+                  "action": "Align left"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `C`",
+                  "action": "Align center"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `R`",
+                  "action": "Align right"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Left`",
+                  "action": "Tighten spacing more"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Right`",
+                  "action": "Loosen spacing more"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `Up`",
+                  "action": "Precise raise baseline"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `Down`",
+                  "action": "Precise lower baseline"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Down`",
+                  "action": "Precise increase leading"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Up`",
+                  "action": "Precise decrease leading"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Affinity Designer](https://affinityspotlight.com/article/downloadable-affinity-keyboard-shortcut-cheat-sheets/)\n  _(affinityspotlight.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

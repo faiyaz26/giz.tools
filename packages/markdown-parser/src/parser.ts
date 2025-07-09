@@ -661,15 +661,28 @@ export class MarkdownParser {
 
     // Add tags
     if (document.metadata.tags) {
-      document.metadata.tags.forEach((tag) => {
-        if (tag) keywords.add(tag.toLowerCase());
+      const tags = Array.isArray(document.metadata.tags)
+        ? document.metadata.tags
+        : typeof document.metadata.tags === "string"
+        ? [document.metadata.tags]
+        : [];
+
+      tags.forEach((tag) => {
+        if (tag && typeof tag === "string") keywords.add(tag.toLowerCase());
       });
     }
 
     // Add categories
     if (document.metadata.categories) {
-      document.metadata.categories.forEach((category) => {
-        if (category) keywords.add(category.toLowerCase());
+      const categories = Array.isArray(document.metadata.categories)
+        ? document.metadata.categories
+        : typeof document.metadata.categories === "string"
+        ? [document.metadata.categories]
+        : [];
+
+      categories.forEach((category) => {
+        if (category && typeof category === "string")
+          keywords.add(category.toLowerCase());
       });
     }
 

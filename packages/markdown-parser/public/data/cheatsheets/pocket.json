@@ -1,0 +1,232 @@
+{
+  "id": "pocket",
+  "metadata": {
+    "title": "Pocket",
+    "date": "2022-11-23T16:23:31.702Z",
+    "background": "bg-[#d54d57]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 36 keyboard shortcuts found on Pocket for Web\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Viewing Your List",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Viewing Your List",
+              "body": "| Shortcut | Action                |\n| -------- | --------------------- |\n| `G` `L`  | Go to My List         |\n| `G` `A`  | Go to Archive         |\n| `G` `F`  | Go to Favorites       |\n| `G` `R`  | Go to Articles        |\n| `G` `H`  | Go to Highlights      |\n| `G` `V`  | Go to Videos          |\n| `G` `T`  | Go to All Tags        |\n| `G` `S`  | Go to Search          |\n| `G` `B`  | Bulk Edit             |\n| `G` `U`  | Save a URL            |\n| `S` `N`  | Sort by Newest        |\n| `S` `O`  | Sort by Oldest        |\n| `V` `L`  | List View             |\n| `V` `G`  | Grid View             |\n| `V` `D`  | Detail View           |\n| `C` `L`  | Change to Light Theme |\n| `C` `D`  | Change to Dark Theme  |\n| `C` `S`  | Change to Sepia Theme |\n| `?`      | Open Help Overlay     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `L`",
+                  "action": "Go to My List"
+                },
+                {
+                  "shortcut": "`G` `A`",
+                  "action": "Go to Archive"
+                },
+                {
+                  "shortcut": "`G` `F`",
+                  "action": "Go to Favorites"
+                },
+                {
+                  "shortcut": "`G` `R`",
+                  "action": "Go to Articles"
+                },
+                {
+                  "shortcut": "`G` `H`",
+                  "action": "Go to Highlights"
+                },
+                {
+                  "shortcut": "`G` `V`",
+                  "action": "Go to Videos"
+                },
+                {
+                  "shortcut": "`G` `T`",
+                  "action": "Go to All Tags"
+                },
+                {
+                  "shortcut": "`G` `S`",
+                  "action": "Go to Search"
+                },
+                {
+                  "shortcut": "`G` `B`",
+                  "action": "Bulk Edit"
+                },
+                {
+                  "shortcut": "`G` `U`",
+                  "action": "Save a URL"
+                },
+                {
+                  "shortcut": "`S` `N`",
+                  "action": "Sort by Newest"
+                },
+                {
+                  "shortcut": "`S` `O`",
+                  "action": "Sort by Oldest"
+                },
+                {
+                  "shortcut": "`V` `L`",
+                  "action": "List View"
+                },
+                {
+                  "shortcut": "`V` `G`",
+                  "action": "Grid View"
+                },
+                {
+                  "shortcut": "`V` `D`",
+                  "action": "Detail View"
+                },
+                {
+                  "shortcut": "`C` `L`",
+                  "action": "Change to Light Theme"
+                },
+                {
+                  "shortcut": "`C` `D`",
+                  "action": "Change to Dark Theme"
+                },
+                {
+                  "shortcut": "`C` `S`",
+                  "action": "Change to Sepia Theme"
+                },
+                {
+                  "shortcut": "`?`",
+                  "action": "Open Help Overlay"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Item Actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Item Actions",
+              "body": "| Shortcut | Action                         |\n| -------- | ------------------------------ |\n| `O`      | Open the original in a new tab |\n| `A`      | Archive the selected item      |\n| `F`      | Favorite the selected item     |\n| `T`      | Tag the selected item          |\n| `D`      | Delete the selected item       |\n| `X`      | Select item in bulk edit       |\n| `J`      | Select the next item           |\n| `K`      | Select the previous item       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`O`",
+                  "action": "Open the original in a new tab"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Archive the selected item"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Favorite the selected item"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Tag the selected item"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Delete the selected item"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Select item in bulk edit"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Select the next item"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Select the previous item"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Article View",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Article View",
+              "body": "| Shortcut   | Action                                   |\n| ---------- | ---------------------------------------- |\n| `Ctrl` `=` | Increase the font size                   |\n| `Ctrl` `-` | Decrease the font size                   |\n| `B`        | Toggle full screen mode                  |\n| `D`        | Edit tags                                |\n| `T`        | Archive the item                         |\n| `F`        | Favorite the item                        |\n| `O`        | View the original                        |\n| `Alt` `=`  | Increase the column width (premium only) |\n| `Alt` `-`  | Decrease the column width (premium only) |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `=`",
+                  "action": "Increase the font size"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Decrease the font size"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Toggle full screen mode"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Edit tags"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Archive the item"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Favorite the item"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "View the original"
+                },
+                {
+                  "shortcut": "`Alt` `=`",
+                  "action": "Increase the column width (premium only)"
+                },
+                {
+                  "shortcut": "`Alt` `-`",
+                  "action": "Decrease the column width (premium only)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Pocket](https://help.getpocket.com/article/994-keyboard-shortcuts-in-pocket-for-web)\n  _(help.getpocket.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

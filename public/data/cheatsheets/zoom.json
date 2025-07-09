@@ -1,0 +1,414 @@
+{
+  "id": "zoom",
+  "metadata": {
+    "title": "Zoom",
+    "date": "2022-11-23T16:23:31.704Z",
+    "background": "bg-[#2858ee]",
+    "tags": [
+      null,
+      "mac"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 32 keyboard shortcuts found in Zoom. These shortcuts are for MacOS, for Windows visit /zoom-windows.\n"
+  },
+  "sections": [
+    {
+      "title": "Mac Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Meetings I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Meetings I",
+              "body": "| Shortcut          | Action                                                              |\n| ----------------- | ------------------------------------------------------------------- |\n| `Cmd` `J`         | Join meeting                                                        |\n| `Cmd` `Ctrl` `V`  | Start meeting                                                       |\n| `Cmd` `J`         | Schedule meeting                                                    |\n| `Cmd` `Ctrl` `S`  | Screen share via direct share                                       |\n| `Cmd` `Shift` `A` | Mute or unmute audio                                                |\n| `Cmd` `Ctrl` `U`  | Mute audio for everyone except the host, only available to the host |\n| `Space`           | Push to talk                                                        |\n| `Cmd` `Shift` `V` | Start or stop video                                                 |\n| `Cmd` `Shift` `N` | Switch camera                                                       |\n| `Cmd` `Shift` `S` | Start or stop screen share                                          |\n| `Cmd` `Shift` `T` | Pause or resume screen share                                        |\n| `Cmd` `Shift` `R` | Start local recording                                               |\n| `Cmd` `Shift` `C` | Start cloud recording                                               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `J`",
+                  "action": "Join meeting"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `V`",
+                  "action": "Start meeting"
+                },
+                {
+                  "shortcut": "`Cmd` `J`",
+                  "action": "Schedule meeting"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `S`",
+                  "action": "Screen share via direct share"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `A`",
+                  "action": "Mute or unmute audio"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `U`",
+                  "action": "Mute audio for everyone except the host, only available to the host"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Push to talk"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `V`",
+                  "action": "Start or stop video"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `N`",
+                  "action": "Switch camera"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `S`",
+                  "action": "Start or stop screen share"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `T`",
+                  "action": "Pause or resume screen share"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `R`",
+                  "action": "Start local recording"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `C`",
+                  "action": "Start cloud recording"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Meetings II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Meetings II",
+              "body": "| Shortcut               | Action                                                                   |\n| ---------------------- | ------------------------------------------------------------------------ |\n| `Cmd` `Shift` `P`      | Pause or resume recording                                                |\n| `Cmd` `Shift` `W`      | Switch to active speaker view or gallery view, depending on current view |\n| `Ctrl` `P`             | View previous 25 participants in gallery view                            |\n| `Ctrl` `N`             | View next 25 participants in gallery view                                |\n| `Cmd` `U`              | Display or hide participants panel                                       |\n| `Cmd` `Shift` `H`      | Show or hide in-meeting chat panel                                       |\n| `Cmd` `I`              | Open invite window                                                       |\n| `Opt` `Y`              | Raise hand or lower hand                                                 |\n| `Ctrl` `Shift` `R`     | Gain remote control                                                      |\n| `Ctrl` `Shift` `G`     | Stop remote control                                                      |\n| `Cmd` `Shift` `F`      | Enter or exit full screen                                                |\n| `Cmd` `Shift` `M`      | Switch to minimal window                                                 |\n| `Ctrl` `Opt` `Cmd` `H` | Show or hide meeting controls                                            |\n| `Cmd` `W`              | Prompt to end or leave meeting                                           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Shift` `P`",
+                  "action": "Pause or resume recording"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `W`",
+                  "action": "Switch to active speaker view or gallery view, depending on current view"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "View previous 25 participants in gallery view"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "View next 25 participants in gallery view"
+                },
+                {
+                  "shortcut": "`Cmd` `U`",
+                  "action": "Display or hide participants panel"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `H`",
+                  "action": "Show or hide in-meeting chat panel"
+                },
+                {
+                  "shortcut": "`Cmd` `I`",
+                  "action": "Open invite window"
+                },
+                {
+                  "shortcut": "`Opt` `Y`",
+                  "action": "Raise hand or lower hand"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Gain remote control"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Stop remote control"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `F`",
+                  "action": "Enter or exit full screen"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `M`",
+                  "action": "Switch to minimal window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Opt` `Cmd` `H`",
+                  "action": "Show or hide meeting controls"
+                },
+                {
+                  "shortcut": "`Cmd` `W`",
+                  "action": "Prompt to end or leave meeting"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Chat Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Chat Shortcuts",
+              "body": "| Shortcut  | Action                    |\n| --------- | ------------------------- |\n| `Cmd` `K` | Jump to chat with someone |\n| `Cmd` `T` | Screenshot                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `K`",
+                  "action": "Jump to chat with someone"
+                },
+                {
+                  "shortcut": "`Cmd` `T`",
+                  "action": "Screenshot"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General Shortcuts",
+              "body": "| Shortcut   | Action                                                          |\n| ---------- | --------------------------------------------------------------- |\n| `Cmd` `W`  | Close the current window                                        |\n| `Cmd` `L`  | Switch to portrait or landscape view, depending on current view |\n| `Ctrl` `T` | Switch from one tab to the next                                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `W`",
+                  "action": "Close the current window"
+                },
+                {
+                  "shortcut": "`Cmd` `L`",
+                  "action": "Switch to portrait or landscape view, depending on current view"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Switch from one tab to the next"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Windows Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "All Shortcuts II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "All Shortcuts II",
+              "body": "| Shortcut             | Action                                                                            |\n| -------------------- | --------------------------------------------------------------------------------- |\n| `F6`                 | Navigate among Zoom popup windows                                                 |\n| `Ctrl` `Alt` `Shift` | Move focus to Zoom's meeting controls                                             |\n| `PgUp`               | View previous 25 video stream in gallery view                                     |\n| `PgDn`               | View next 25 video stream in gallery view                                         |\n| `Alt` `F1`           | Switch to active speaker view in video meeting                                    |\n| `Alt` `F2`           | Switch to gallery video view in video meeting                                     |\n| `Alt` `F4`           | Close the current window                                                          |\n| `Alt` `V`            | Start or stop video                                                               |\n| `Alt` `A`            | Mute or unmute audio                                                              |\n| `Alt` `M`            | Mute or unmute audio for everyone except host, available to the meeting host only |\n| `Alt` `S`            | Launch share screen window and stop screen share                                  |\n| `Alt` `Shift` `S`    | Start or stop new screen share                                                    |\n| `Alt` `T`            | Pause or resume screen share                                                      |\n| `Alt` `R`            | Start or stop local recording                                                     |\n| `Alt` `C`            | Start or stop cloud recording                                                     |\n| `Alt` `P`            | Pause or resume recording                                                         |\n| `Alt` `N`            | Switch camera                                                                     |\n| `Alt` `F`            | Enter or exit full screen                                                         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F6`",
+                  "action": "Navigate among Zoom popup windows"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift`",
+                  "action": "Move focus to Zoom's meeting controls"
+                },
+                {
+                  "shortcut": "`PgUp`",
+                  "action": "View previous 25 video stream in gallery view"
+                },
+                {
+                  "shortcut": "`PgDn`",
+                  "action": "View next 25 video stream in gallery view"
+                },
+                {
+                  "shortcut": "`Alt` `F1`",
+                  "action": "Switch to active speaker view in video meeting"
+                },
+                {
+                  "shortcut": "`Alt` `F2`",
+                  "action": "Switch to gallery video view in video meeting"
+                },
+                {
+                  "shortcut": "`Alt` `F4`",
+                  "action": "Close the current window"
+                },
+                {
+                  "shortcut": "`Alt` `V`",
+                  "action": "Start or stop video"
+                },
+                {
+                  "shortcut": "`Alt` `A`",
+                  "action": "Mute or unmute audio"
+                },
+                {
+                  "shortcut": "`Alt` `M`",
+                  "action": "Mute or unmute audio for everyone except host, available to the meeting host only"
+                },
+                {
+                  "shortcut": "`Alt` `S`",
+                  "action": "Launch share screen window and stop screen share"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `S`",
+                  "action": "Start or stop new screen share"
+                },
+                {
+                  "shortcut": "`Alt` `T`",
+                  "action": "Pause or resume screen share"
+                },
+                {
+                  "shortcut": "`Alt` `R`",
+                  "action": "Start or stop local recording"
+                },
+                {
+                  "shortcut": "`Alt` `C`",
+                  "action": "Start or stop cloud recording"
+                },
+                {
+                  "shortcut": "`Alt` `P`",
+                  "action": "Pause or resume recording"
+                },
+                {
+                  "shortcut": "`Alt` `N`",
+                  "action": "Switch camera"
+                },
+                {
+                  "shortcut": "`Alt` `F`",
+                  "action": "Enter or exit full screen"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "All Shortcuts II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "All Shortcuts II",
+              "body": "| Shortcut                 | Action                                 |\n| ------------------------ | -------------------------------------- |\n| `Alt` `F`                | Enter or exit full screen              |\n| `Alt` `H`                | Display or hide in-meeting chat panel  |\n| `Alt` `U`                | Display or hide participants panel     |\n| `Alt` `I`                | Open invite window                     |\n| `Alt` `Y`                | Raise or lower hand                    |\n| `Alt` `Shift` `R`        | Gain remote control                    |\n| `Alt` `Shift` `G`        | Stop remote control                    |\n| `Ctrl` `2`               | Read active speaker name               |\n| `Ctrl` `Alt` `Shift` `H` | Show or hide floating meeting controls |\n| `Alt` `Shift` `T`        | Screenshot                             |\n| `Alt` `L`                | Switch to portrait or landscape view   |\n| `Ctrl` `W`               | Close current chat session             |\n| `Ctrl` `Up`              | Go to previous chat                    |\n| `Ctrl` `Down`            | Go to next chat                        |\n| `Ctrl` `T`               | Jump to chat with someone              |\n| `Ctrl` `F`               | Search                                 |\n| `Ctrl` `Tab`             | Move to the next tab                   |\n| `Ctrl` `Shift` `Tab`     | Move to the previous tab               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `F`",
+                  "action": "Enter or exit full screen"
+                },
+                {
+                  "shortcut": "`Alt` `H`",
+                  "action": "Display or hide in-meeting chat panel"
+                },
+                {
+                  "shortcut": "`Alt` `U`",
+                  "action": "Display or hide participants panel"
+                },
+                {
+                  "shortcut": "`Alt` `I`",
+                  "action": "Open invite window"
+                },
+                {
+                  "shortcut": "`Alt` `Y`",
+                  "action": "Raise or lower hand"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `R`",
+                  "action": "Gain remote control"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `G`",
+                  "action": "Stop remote control"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Read active speaker name"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `H`",
+                  "action": "Show or hide floating meeting controls"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `T`",
+                  "action": "Screenshot"
+                },
+                {
+                  "shortcut": "`Alt` `L`",
+                  "action": "Switch to portrait or landscape view"
+                },
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close current chat session"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up`",
+                  "action": "Go to previous chat"
+                },
+                {
+                  "shortcut": "`Ctrl` `Down`",
+                  "action": "Go to next chat"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Jump to chat with someone"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Search"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Move to the next tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Tab`",
+                  "action": "Move to the previous tab"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Zoom on MacOS](https://support.zoom.us/hc/en-us/articles/205683899-Hot-Keys-and-Keyboard-Shortcuts-for-Zoom)\n  _(support.zoom.us)_\n- [Keyboard shortcuts for Zoom on Windows](https://support.zoom.us/hc/en-us/articles/205683899-Hot-Keys-and-Keyboard-Shortcuts-for-Zoom)\n  _(support.zoom.us)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

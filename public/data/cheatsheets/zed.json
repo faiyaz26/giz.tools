@@ -1,0 +1,337 @@
+{
+  "id": "zed",
+  "metadata": {
+    "title": "Zed",
+    "date": "2025-04-20T19:30:23.390Z",
+    "background": "bg-[#3e4548]",
+    "label": null,
+    "tags": [
+      "text",
+      "editor",
+      "shortcut"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 50 keyboard shortcuts found in the Zed text editor."
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Zed",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Zed",
+              "body": "| Shortcut           | Action                |\n| ------------------ | --------------------- |\n| `Ctrl` `,`         | Open settings         |\n| `Ctrl` `Shift` `X` | Open Extensions store |\n| `Ctrl` `Q`         | Quit Zed              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Open settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "Open Extensions store"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Quit Zed"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File",
+              "body": "| Shortcut                 | Action             |\n| ------------------------ | ------------------ |\n| `Ctrl` `N`               | New file           |\n| `Ctrl` `Shift` `N`       | New Window         |\n| `Ctrl` `O`               | Open folder        |\n| `Ctrl` `Alt` `Shift` `O` | Open remote folder |\n| `Ctrl` `S`               | Save               |\n| `Ctrl` `Shift` `S`       | Save As...         |\n| `Ctrl` `Alt` `S`         | Save All           |\n| `Ctrl` `Shift` `W`       | Close Window       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New file"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "New Window"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open folder"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `O`",
+                  "action": "Open remote folder"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Save As..."
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `S`",
+                  "action": "Save All"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `W`",
+                  "action": "Close Window"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Edit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Edit",
+              "body": "| Shortcut           | Action              |\n| ------------------ | ------------------- |\n| `Ctrl` `Z`         | Undo                |\n| `Ctrl` `Shift` `Z` | Redo                |\n| `Ctrl` `X`         | Cut                 |\n| `Ctrl` `C`         | Copy                |\n| `Ctrl` `V`         | Paste               |\n| `Ctrl` `Shift` `F` | Find in project     |\n| `Ctrl` `/`         | Toggle line comment |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Find in project"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Toggle line comment"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selection",
+              "body": "| Shortcut              | Action                 |\n| --------------------- | ---------------------- |\n| `Ctrl` `A`            | Select all             |\n| `Alt` `Shift` `Right` | Expand selection       |\n| `Alt` `Shift` `Left`  | Shrink selection       |\n| `Alt` `Shift` `Up`    | Add cursor above       |\n| `Alt` `Shift` `Down`  | Add cursor below       |\n| `Ctrl` `Shift` `Down` | Select next Occurrence |\n| `Alt` `Up`            | Move line up           |\n| `Alt` `Down`          | Move line down         |\n| `Ctrl` `Shift` `D`    | Duplicate selection    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Right`",
+                  "action": "Expand selection"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Left`",
+                  "action": "Shrink selection"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Up`",
+                  "action": "Add cursor above"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Down`",
+                  "action": "Add cursor below"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Down`",
+                  "action": "Select next Occurrence"
+                },
+                {
+                  "shortcut": "`Alt` `Up`",
+                  "action": "Move line up"
+                },
+                {
+                  "shortcut": "`Alt` `Down`",
+                  "action": "Move line down"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `D`",
+                  "action": "Duplicate selection"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View",
+              "body": "| Shortcut           | Action             |\n| ------------------ | ------------------ |\n| `Ctrl` `B`         | Toggle Left Dock   |\n| `Ctrl` `Alt` `B`   | Toggle Right Dock  |\n| `Ctrl` `J`         | Toggle Bottom Dock |\n| `Ctrl` `Alt` `Y`   | Close All Docks    |\n| `Ctrl` `K` `Up`    | Split Up           |\n| `Ctrl` `K` `Down`  | Split Down         |\n| `Ctrl` `K` `Left`  | Split Left         |\n| `Ctrl` `K` `Right` | Split Right        |\n| `Ctrl` `Shift` `E` | Project Panel      |\n| `Ctrl` `Shift` `B` | Outline Panel      |\n| `Ctrl` `Shift` `C` | Collab Panel       |\n| `Ctrl` `` ` ``     | Terminal Panel     |\n| `Ctrl` `Shift` `M` | Diagnostics        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Toggle Left Dock"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `B`",
+                  "action": "Toggle Right Dock"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Toggle Bottom Dock"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Y`",
+                  "action": "Close All Docks"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Up`",
+                  "action": "Split Up"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Down`",
+                  "action": "Split Down"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Left`",
+                  "action": "Split Left"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Right`",
+                  "action": "Split Right"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Project Panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `B`",
+                  "action": "Outline Panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Collab Panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `` ` ``",
+                  "action": "Terminal Panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Diagnostics"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Go",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Go",
+              "body": "| Shortcut            | Action                  |\n| ------------------- | ----------------------- |\n| `Ctrl` `Alt` `-`    | Back                    |\n| `Ctrl` `Shift` `P`  | Command Palette…        |\n| `Ctrl` `E`          | Go to File…             |\n| `Ctrl` `Shift` `O`  | Go to Symbol in Editor… |\n| `Ctrl` `G`          | Go to Line/Column…      |\n| `F12`               | Go to Definition        |\n| `Ctrl` `F12`        | Go to Type Definition   |\n| `Alt` `Shift` `F12` | Find All References     |\n| `F8`                | Next Problem            |\n| `Shift` `F8`        | Previous Problem        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Alt` `-`",
+                  "action": "Back"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Command Palette…"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Go to File…"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `O`",
+                  "action": "Go to Symbol in Editor…"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Go to Line/Column…"
+                },
+                {
+                  "shortcut": "`F12`",
+                  "action": "Go to Definition"
+                },
+                {
+                  "shortcut": "`Ctrl` `F12`",
+                  "action": "Go to Type Definition"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `F12`",
+                  "action": "Find All References"
+                },
+                {
+                  "shortcut": "`F8`",
+                  "action": "Next Problem"
+                },
+                {
+                  "shortcut": "`Shift` `F8`",
+                  "action": "Previous Problem"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Zed](https://zed.dev/)\n- [Zed GitHub](https://github.com/zed-industries/zed)\n- [Zed Documentation](https://zed.dev/docs)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

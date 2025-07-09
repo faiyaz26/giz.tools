@@ -1,0 +1,350 @@
+{
+  "id": "find",
+  "metadata": {
+    "title": "Find",
+    "date": "2020-12-28T16:52:20.000Z",
+    "tags": [
+      "search",
+      "file",
+      "directory"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "This is a quick reference list of cheatsheet for linux find command, contains common options and examples.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Usage",
+              "body": "```\nWildcard\n```",
+              "footer": "shell script\n$ find . -name \"*.txt\"\n$ find . -name \"2020*.csv\"\n$ find . -name \"json_*\"\n```\n- [Regex reference](/regex) _(cheatsheets.zip)_\n- [Find cheatsheet](https://gist.github.com/gr1ev0us/3a9b9d9dbdd38f6379288eb2686fc538) _(gist.github.com)_",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Option Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Option Examples",
+              "body": "| Option      | Example                                    | Description                                 |\n| ----------- | ------------------------------------------ | ------------------------------------------- |\n| `-type`     | find . -type d                             | Find only directories                       |\n| `-name`     | find . -type f -name \"\\*.txt\"              | Find file by name                           |\n| `-iname`    | find . -type f -iname \"hello\"              | Find file by name (case-insensitive)        |\n| `-size`     | find . -size +1G                           | Find files larger than 1G                   |\n| `-user`     | find . -type d -user jack                  | Find jack's file                            |\n| `-regex`    | find /var -regex '.\\*/tmp/.\\*[0-9]\\*.file' | Using Regex with find. See [regex](/regex)  |\n| `-maxdepth` | find . -maxdepth 1 -name \"a.txt\"           | In the current directory and subdirectories |\n| `-mindepth` | find / -mindepth 3 -maxdepth 5 -name pass  | Between sub-directory level 2 and 4         |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type",
+              "body": "|           |                      |\n| --------- | -------------------- |\n| `-type d` | Directory            |\n| `-type f` | File                 |\n| `-type l` | Symbolic link        |\n| `-type b` | Buffered block       |\n| `-type c` | Unbuffered character |\n| `-type p` | Named pipe           |\n| `-type s` | Socket               |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Size",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Size",
+              "body": "|           |                           |\n| --------- | ------------------------- |\n| `-size b` | 512-byte blocks (default) |\n| `-size c` | Bytes                     |\n| `-size k` | Kilobytes                 |\n| `-size M` | Megabytes                 |\n| `-size G` | Gigabytes                 |\n| `-size T` | Terabytes _(only BSD)_    |\n| `-size P` | Petabytes _(only BSD)_    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Size +/-",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Size +/-",
+              "body": "```\nFind all smaller than 10MB files\n```",
+              "footer": "shell script\n$ find / -size -10M\n```\nFind all files that are exactly 10M\n```shell script\n$ find / -size 10M\n```\nFind Size between 100MB and 1GB\n```shell script\n$ find / -size +100M -size -1G\n```\nThe `+` and `-` prefixes signify greater than and less than, as usual.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Names",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Names",
+              "body": "```\nFind files under home directory\n```",
+              "footer": "shell script\n$ find /home -name tecmint.txt\n```\nFind files using name and ignoring case\n```shell script\n$ find /home -iname tecmint.txt\n```\nFind directories using name\n```shell script\n$ find / -type d -name tecmint\n```\nFind php files using name\n```shell script\n$ find . -type f -name tecmint.php\n```\nFind all php files in directory\n```shell script\n$ find . -type f -name \"*.php\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Permissions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Permissions",
+              "body": "```\nFind the files without permission 777.\n```",
+              "footer": "shell script\n$ find / -type f ! -perm 777\n```\nFind SUID set files.\n```shell script\n$ find / -perm /u=s\n```\nFind SGID set files.\n```shell script\n$ find / -perm /g=s\n```\nFind Read Only files.\n```shell script\n$ find / -perm /u=r\n```\nFind Executable files.\n```shell script\n$ find / -perm /a=x\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Owners and Groups",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Owners and Groups",
+              "body": "```\nFind all files based on user\n```",
+              "footer": "shell script\n$ find /home -user tecmint\n```\nFind all files based on group\n```shell script\n$ find /home -group developer\n```\nFind particular files of user\n```shell script\n$ find /home -user tecmint -iname \"*.txt\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple filenames",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple filenames",
+              "body": "",
+              "footer": "```shell script {.wrap}\n$ find . -type f \\( -name \"*.sh\" -o -name \"*.txt\" \\)\n```\n\nFind files with `.sh` and `.txt` extensions",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple dirs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple dirs",
+              "body": "",
+              "footer": "```shell script {.wrap}\n$ find /opt /usr /var -name foo.scala -type f\n```\n\nFind files with multiple dirs",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Empty",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Empty",
+              "body": "```\nDelete all empty files in a directory\n```",
+              "footer": "shell script\n$ find . -type f -empty -delete\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Find Date and Time",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Means",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Means",
+              "body": "| Option  | Description                                                     |\n| ------- | --------------------------------------------------------------- |\n| `atime` | access time (last time file <yel>opened</yel>)                  |\n| `mtime` | modified time (last time file <yel>contents was modified</yel>) |\n| `ctime` | changed time (last time file <yel>inode was changed</yel>)      |",
+              "footer": "#### Example\n\n| Option          | Description                                                |\n| --------------- | ---------------------------------------------------------- |\n| `-mtime +0`     | Modified greater than 24 hours ago                         |\n| `-mtime 0`      | Modified between now and 1 day ago                         |\n| `-mtime -1`     | Modified less than 1 day ago (same as `-mtime 0`)          |\n| `-mtime 1`      | Modified between 24 and 48 hours ago                       |\n| `-mtime +1`     | Modified more than 48 hours ago                            |\n| `-mtime +1w`    | Last modified more than 1 week ago                         |\n| `-atime 0`      | Last accessed between now and 24 hours ago                 |\n| `-atime +0`     | Accessed more than 24 hours ago                            |\n| `-atime 1`      | Accessed between 24 and 48 hours ago                       |\n| `-atime +1`     | Accessed more than 48 hours ago                            |\n| `-atime -1`     | Accessed less than 24 hours ago (same as `-atime 0`)       |\n| `-ctime -6h30m` | File status changed within the last 6 hours and 30 minutes |",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "```\nfind last 50 days accessed files\n```",
+              "footer": "shell script\n$ find / -atime 50\n```\nfind last 50-100 days modified files\n```shell script\n$ find / -mtime +50 –mtime -100\n```\nfind changed files in last 1 hour\n```shell script\n$ find / -cmin -60\n```\nfind modified files in last 1 hour\n```shell script\n$ find / -mmin -60\n```\nfind accessed files in last 1 hour\n```shell script\n$ find / -amin -60\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Find and {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Find and delete",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find and delete",
+              "body": "```\nFind and remove single file\n```",
+              "footer": "shell script\n$ find . -type f -name \"tecmint.txt\" -exec rm -f {} \\;\n```\nFind and delete 100mb files\n```shell script\n$ find / -type f -size +100m -exec rm -f {} \\;\n```\nFind specific files and delete\n```shell script\n$ find / -type f -name *.mp3 -size +10m -exec rm {} \\;\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find and replace",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find and replace",
+              "body": "```\nFind readable and writable files and modify the content `old` to `new`\n```",
+              "footer": "shell script {.wrap}\n$ find ./ -type f -readable -writable -exec sed -i \"s/old/new/g\" {} \\;\n```\nSee also: [sed cheatsheet](/sed)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find and rename",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find and rename",
+              "body": "```\nFind and rename extension (`.html` => `.gohtml`)\n```",
+              "footer": "shell script {.wrap}\n$ find ./ -depth -name \"*.html\" -exec sh -c 'mv \"$1\" \"${1%.html}.gohtml\"' _ {} \\;\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find and move",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find and move",
+              "body": "",
+              "footer": "```shell script\n$ find . -name '*.mp3' -exec mv {} /tmp/music \\;\n```\n\nFind and move it to a specific directory (`/tmp/music`)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find and copy",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find and copy",
+              "body": "",
+              "footer": "```shell script\n$ find . -name '*2020*.xml' -exec cp -r \"{}\" /tmp/backup \\;\n```\n\nFind matching files and copy to a specific directory (`/tmp/backup`)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find and concatenate",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find and concatenate",
+              "body": "```\nMerge all sorted csv files in the download directory into `merged.csv`\n```",
+              "footer": "shell script {.wrap}\n$ find download -type f -iname '*.csv' | sort | xargs cat > merged.csv\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find and sort",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find and sort",
+              "body": "```\nfind and sort descending\n```",
+              "footer": "shell script\n$ find . -type f | sort -r\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find and chmod",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find and chmod",
+              "body": "```\nFind directories and set permissions to 755.\n```",
+              "footer": "shell script\n$ find / -type d -perm 777 -print -exec chmod 755 {} \\;\n```",
+              "spanConfig": "row-span-1",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find and compress",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find and compress",
+              "body": "```\nFind all `.csv` files and compress it into `cheatsheets.zip`\n```",
+              "footer": "shell script\n$ find . -type f -name \"*.csv\" | xargs zip cheatsheets.zip\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}
