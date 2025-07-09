@@ -20,7 +20,7 @@ import { CodeBlock } from "./code-block";
 import type {
   CheatsheetCard,
   CheatsheetSubsection,
-} from "@/lib/cheatsheet-data";
+} from "@/lib/cheatsheet-data-client";
 
 interface ContentCardProps {
   card: CheatsheetCard;

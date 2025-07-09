@@ -5,7 +5,7 @@ import { Command } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { KeyboardShortcut } from "@/components/keyboard-button";
 import { cn } from "@/lib/utils";
-import type { CheatsheetCard } from "@/lib/cheatsheet-data";
+import type { CheatsheetCard } from "@/lib/cheatsheet-data-client";
 
 interface ShortcutsCardProps {
   card: CheatsheetCard;

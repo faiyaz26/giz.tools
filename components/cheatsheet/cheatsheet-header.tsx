@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import type { CheatsheetMetadata } from "@/lib/cheatsheet-data";
+import type { CheatsheetMetadata } from "@/lib/cheatsheet-data-client";
 
 interface CheatsheetHeaderProps {
   metadata: CheatsheetMetadata;
