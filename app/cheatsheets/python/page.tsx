@@ -9,8 +9,7 @@ import { Copy, Play, ExternalLink, Check } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus, vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { ClientOnlySyntaxHighlighter } from '@/components/client-only-syntax-highlighter';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -72,52 +71,25 @@ const CodeBlock = ({ code, language }: { code: string, language: string }) => {
   };
 
   const isDark = theme === 'dark';
-  const baseStyle = isDark ? vscDarkPlus : vs;
   
-  const customStyle = {
-    ...baseStyle,
-    'pre[class*="language-"]': {
-      ...baseStyle['pre[class*="language-"]'],
-      background: isDark ? 'rgb(2 6 23)' : 'rgb(255 255 255)', // slate-950 : white
-      margin: 0,
-      padding: '0.75rem',
-      borderRadius: '0.375rem',
-      fontSize: '0.8125rem',
-      lineHeight: '1.2rem',
-      whiteSpace: 'pre-wrap' as const,
-      wordBreak: 'break-word' as const,
-      overflowWrap: 'break-word' as const,
-      border: isDark ? '1px solid rgb(51 65 85)' : '1px solid rgb(226 232 240)', // slate-600 : slate-200
-    },
-    'code[class*="language-"]': {
-      ...baseStyle['code[class*="language-"]'],
-      background: 'transparent',
-      fontSize: '0.8125rem',
-      lineHeight: '1.2rem',
-      whiteSpace: 'pre-wrap' as const,
-      wordBreak: 'break-word' as const,
-      overflowWrap: 'break-word' as const,
-    }
-  };
-
   return (
     <div className="relative group">
-      <SyntaxHighlighter
+      <ClientOnlySyntaxHighlighter
         language={getLanguage(language)}
-        style={customStyle}
         customStyle={{
-          background: isDark ? 'rgb(2 6 23)' : 'rgb(255 255 255)', // slate-950 : white
+          background: isDark ? '#0f172a' : '#ffffff', // Consistent dark:slate-900 / white
           margin: 0,
           padding: '1rem',
           borderRadius: '0.375rem',
           fontSize: '0.875rem',
           lineHeight: '1.25rem',
+          border: isDark ? '1px solid #334155' : '1px solid #e2e8f0',
         }}
         wrapLongLines={true}
         showLineNumbers={false}
       >
         {code}
-      </SyntaxHighlighter>
+      </ClientOnlySyntaxHighlighter>
       <button 
         onClick={copyCode}
         className={cn(
@@ -501,10 +473,9 @@ export default function PythonCheatsheetPage() {
   }, [activeSection, router]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-20">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
+      {/* Header */}
+      <div className="text-center mb-20">
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 mb-6">
             {pythonCheatsheet.metadata.title}
           </h1>
@@ -587,6 +558,5 @@ export default function PythonCheatsheetPage() {
           setActiveSection={navigateToSection}
         />
       </div>
-    </div>
   );
 }
