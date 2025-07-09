@@ -38,3 +38,6 @@ next-env.d.ts
 # compiled output
 dist/
 packages/*/dist/
+
+# generated examples
+packages/*/examples/*.json
