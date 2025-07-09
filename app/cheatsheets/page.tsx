@@ -81,12 +81,12 @@ export default function CheatsheetIndexPage() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-500 dark:to-purple-600 mb-6">
-            Programming Cheatsheets
+            Productivity Cheatsheets
           </h1>
           <p className="text-xl text-gray-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-            Quick reference guides for programming languages, tools, and
-            technologies. Find syntax, examples, and essential concepts all in
-            one place.
+            Quick reference guides for programming languages, developer tools,
+            applications, and shortcuts. Find syntax, commands, and essential
+            concepts all in one place.
           </p>
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             <Badge
