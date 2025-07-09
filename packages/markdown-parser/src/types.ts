@@ -48,6 +48,7 @@ export interface ParserOptions {
   includeMetadata?: boolean;
   preserveCodeBlocks?: boolean;
   extractSpanConfig?: boolean;
+  unifiedOutput?: boolean; // New option for unified output
 }
 
 export interface ParseResult {
@@ -55,4 +56,17 @@ export interface ParseResult {
   document?: MarkdownDocument;
   error?: string;
   filePath?: string;
+}
+
+// New unified cheatsheet interfaces
+export interface UnifiedCheatsheetItem {
+  id: string;
+  metadata: MarkdownMetadata;
+  sections: Section[];
+}
+
+export interface UnifiedCheatsheetData {
+  cheatsheets: UnifiedCheatsheetItem[];
+  createdAt: string;
+  version: string;
 }

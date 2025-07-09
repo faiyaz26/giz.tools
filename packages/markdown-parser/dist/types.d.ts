@@ -41,11 +41,22 @@ export interface ParserOptions {
     includeMetadata?: boolean;
     preserveCodeBlocks?: boolean;
     extractSpanConfig?: boolean;
+    unifiedOutput?: boolean;
 }
 export interface ParseResult {
     success: boolean;
     document?: MarkdownDocument;
     error?: string;
     filePath?: string;
+}
+export interface UnifiedCheatsheetItem {
+    id: string;
+    metadata: MarkdownMetadata;
+    sections: Section[];
+}
+export interface UnifiedCheatsheetData {
+    cheatsheets: UnifiedCheatsheetItem[];
+    createdAt: string;
+    version: string;
 }
 //# sourceMappingURL=types.d.ts.map

@@ -19,14 +19,15 @@ import { cn } from '@/lib/utils';
 import {
   loadCheatsheetData, 
   parseSpanConfig, 
+  getCheatsheetById,
   type CheatsheetData,
   type CheatsheetCard,
   type CheatsheetSubsection,
   type CheatsheetCardSubsection
 } from '@/lib/cheatsheet-data';
 
-// Load the parsed Python cheatsheet data
-const pythonCheatsheet: CheatsheetData = loadCheatsheetData('python-cheatsheet-parsed.json');
+// Load the parsed Python cheatsheet data from unified format
+const pythonCheatsheet: CheatsheetData | null = getCheatsheetById('python');
 
 // Component for rendering code blocks with syntax highlighting
 const CodeBlock = ({ code, language }: { code: string, language: string }) => {
@@ -417,8 +418,10 @@ const CheatsheetCard = ({ card, subsection }: { card: CheatsheetCard, subsection
 export default function PythonCheatsheetPage() {
   const router = useRouter();
   const [activeSection, setActiveSection] = useState(
-    pythonCheatsheet.sections[0]?.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || ''
+    pythonCheatsheet?.sections[0]?.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || ''
   );
+  const [copied, setCopied] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
   
   // Function to navigate to a section and update URL
   const navigateToSection = (sectionId: string) => {
@@ -448,6 +451,8 @@ export default function PythonCheatsheetPage() {
   
   // Update active section based on scroll position
   useEffect(() => {
+    if (!pythonCheatsheet) return;
+    
     const handleScroll = () => {
       const sections = pythonCheatsheet.sections;
       
@@ -467,10 +472,25 @@ export default function PythonCheatsheetPage() {
         }
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection, router]);
+
+  // If the cheatsheet is not found, show an error message
+  if (!pythonCheatsheet) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-white mb-4">Python Cheatsheet Not Found</h1>
+          <p className="text-slate-400">The Python cheatsheet data could not be loaded.</p>
+          <Link href="/cheatsheets">
+            <Button className="mt-4">Back to Cheatsheets</Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">

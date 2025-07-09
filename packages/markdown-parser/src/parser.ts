@@ -1,5 +1,7 @@
 import * as fs from "fs";
+import * as path from "path";
 import * as yaml from "js-yaml";
+import { glob } from "glob";
 import {
   Card,
   Section,
@@ -9,6 +11,8 @@ import {
   ParserOptions,
   ParseResult,
   KeyboardShortcut,
+  UnifiedCheatsheetData,
+  UnifiedCheatsheetItem,
 } from "./types.js";
 
 /**
@@ -493,5 +497,64 @@ export class MarkdownParser {
     }
 
     return shortcuts;
+  }
+
+  /**
+   * Parse multiple markdown files and create a unified cheatsheet data structure
+   */
+  public async parseUnified(
+    filePaths: string[],
+    options: ParserOptions = {}
+  ): Promise<UnifiedCheatsheetData> {
+    const cheatsheets: UnifiedCheatsheetItem[] = [];
+
+    for (const filePath of filePaths) {
+      try {
+        const result = await this.parseFile(filePath, options);
+
+        if (result.success && result.document) {
+          const fileName = path.basename(filePath, path.extname(filePath));
+          const cheatsheetItem: UnifiedCheatsheetItem = {
+            id: fileName.toLowerCase().replace(/[^a-z0-9]/g, "-"),
+            metadata: result.document.metadata,
+            sections: result.document.sections,
+          };
+          cheatsheets.push(cheatsheetItem);
+        } else {
+          console.warn(`Failed to parse ${filePath}: ${result.error}`);
+        }
+      } catch (error) {
+        console.error(`Error processing ${filePath}:`, error);
+      }
+    }
+
+    return {
+      cheatsheets,
+      createdAt: new Date().toISOString(),
+      version: "1.0.0",
+    };
+  }
+
+  /**
+   * Parse unified data from examples directory
+   */
+  public async parseExamples(
+    examplesDir: string,
+    options: ParserOptions = {}
+  ): Promise<UnifiedCheatsheetData> {
+    const markdownFiles = await glob("*.md", { cwd: examplesDir });
+    const fullPaths = markdownFiles.map((file) => path.join(examplesDir, file));
+
+    return this.parseUnified(fullPaths, options);
+  }
+
+  /**
+   * Convert unified cheatsheet data to JSON string
+   */
+  public toUnifiedJSON(
+    data: UnifiedCheatsheetData,
+    indent: number = 2
+  ): string {
+    return JSON.stringify(data, null, indent);
   }
 }

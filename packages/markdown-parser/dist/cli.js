@@ -153,6 +153,49 @@ program
         process.exit(1);
     }
 });
+program
+    .command("unified <pattern>")
+    .description("Parse multiple markdown files and create unified cheatsheet JSON")
+    .option("-o, --output <path>", "Output file path (defaults to unified-cheatsheets.json)")
+    .option("--no-metadata", "Skip metadata extraction")
+    .option("--no-code-blocks", "Do not preserve code block formatting")
+    .option("--no-span-config", "Do not extract span configuration")
+    .option("--pretty", "Pretty print JSON output")
+    .action(async (pattern, options) => {
+    try {
+        const parser = new MarkdownParser();
+        const parserOptions = {
+            includeMetadata: options.metadata !== false,
+            preserveCodeBlocks: options.codeBlocks !== false,
+            extractSpanConfig: options.spanConfig !== false,
+            unifiedOutput: true,
+        };
+        console.log(chalk.blue(`📖 Finding files matching: ${pattern}`));
+        const files = await glob(pattern);
+        if (files.length === 0) {
+            console.log(chalk.yellow(`⚠️ No files found matching pattern: ${pattern}`));
+            return;
+        }
+        console.log(chalk.blue(`📖 Parsing ${files.length} files...`));
+        const unifiedData = await parser.parseUnified(files, parserOptions);
+        const outputPath = options.output || "unified-cheatsheets.json";
+        const jsonOutput = parser.toUnifiedJSON(unifiedData, options.pretty ? 2 : 0);
+        await fs.promises.writeFile(outputPath, jsonOutput, "utf-8");
+        console.log(chalk.green(`✅ Successfully created unified cheatsheet: ${outputPath}`));
+        // Print summary
+        console.log(chalk.cyan("\n📊 Summary:"));
+        console.log(`   Total Cheatsheets: ${unifiedData.cheatsheets.length}`);
+        unifiedData.cheatsheets.forEach((cheatsheet, index) => {
+            console.log(`   ${index + 1}. ${cheatsheet.metadata.title || cheatsheet.id} (${cheatsheet.sections.length} sections)`);
+        });
+        console.log(`   Created: ${unifiedData.createdAt}`);
+        console.log(`   Version: ${unifiedData.version}`);
+    }
+    catch (error) {
+        console.error(chalk.red(`❌ Unexpected error: ${error}`));
+        process.exit(1);
+    }
+});
 // Handle case where no command is provided
 if (process.argv.length <= 2) {
     program.help();

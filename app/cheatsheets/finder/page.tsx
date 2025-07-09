@@ -16,16 +16,15 @@ import { FloatingNavBar } from '@/components/floating-nav-bar';
 import { cn } from '@/lib/utils';
 import {
   parseSpanConfig, 
+  getCheatsheetById,
   type CheatsheetData,
   type CheatsheetCard,
   type CheatsheetSubsection,
   type KeyboardShortcut as KeyboardShortcutType
 } from '@/lib/cheatsheet-data';
 
-// Import the parsed Finder cheatsheet data directly
-import finderCheatsheetData from '@/lib/finder-cheatsheet.json';
-
-const finderCheatsheet: CheatsheetData = finderCheatsheetData as CheatsheetData;
+// Load the parsed Finder cheatsheet data from unified format
+const finderCheatsheet: CheatsheetData | null = getCheatsheetById('finder');
 
 // Component for rendering shortcuts cards
 const ShortcutsCard = ({ card, spanConfig }: { 
@@ -97,13 +96,53 @@ const ContentCard = ({ card, spanConfig }: { card: CheatsheetCard, spanConfig?: 
       <CardContent className="pt-4 space-y-4">
         {card.body && (
           <div className="prose prose-neutral dark:prose-invert max-w-none">
-            <div dangerouslySetInnerHTML={{ __html: card.body }} />
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                a({ href, children, ...props }) {
+                  return (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 underline inline-flex items-center gap-1"
+                      {...props}
+                    >
+                      {children}
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  );
+                }
+              }}
+            >
+              {card.body}
+            </ReactMarkdown>
           </div>
         )}
         {card.footer && (
           <div className="border-t border-border pt-4">
             <div className="prose prose-neutral dark:prose-invert max-w-none">
-              <div dangerouslySetInnerHTML={{ __html: card.footer }} />
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  a({ href, children, ...props }) {
+                    return (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 underline inline-flex items-center gap-1"
+                        {...props}
+                      >
+                        {children}
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    );
+                  }
+                }}
+              >
+                {card.footer}
+              </ReactMarkdown>
             </div>
           </div>
         )}
@@ -115,7 +154,7 @@ const ContentCard = ({ card, spanConfig }: { card: CheatsheetCard, spanConfig?: 
 export default function FinderCheatsheetPage() {
   const router = useRouter();
   const [activeSection, setActiveSection] = useState(
-    finderCheatsheet.sections[0]?.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || ''
+    finderCheatsheet?.sections[0]?.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || ''
   );
   
   // Function to navigate to a section and update URL
@@ -124,19 +163,17 @@ export default function FinderCheatsheetPage() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(sectionId);
-      // Update URL with hash
       router.replace(`/cheatsheets/finder#${sectionId}`, { scroll: false });
     }
   };
   
   // Initialize from URL hash on component mount
   useEffect(() => {
-    const hash = window.location.hash.slice(1); // Remove the '#'
+    const hash = window.location.hash.slice(1);
     if (hash) {
       const element = document.getElementById(hash);
       if (element) {
         setActiveSection(hash);
-        // Small delay to ensure the page is rendered
         setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth' });
         }, 100);
@@ -146,6 +183,8 @@ export default function FinderCheatsheetPage() {
   
   // Update active section based on scroll position
   useEffect(() => {
+    if (!finderCheatsheet) return;
+    
     const handleScroll = () => {
       const sections = finderCheatsheet.sections;
       
@@ -157,7 +196,6 @@ export default function FinderCheatsheetPage() {
           if (rect.top <= 100) {
             if (activeSection !== sectionId) {
               setActiveSection(sectionId);
-              // Update URL when scrolling to a new section
               router.replace(`/cheatsheets/finder#${sectionId}`, { scroll: false });
             }
             break;
@@ -165,10 +203,25 @@ export default function FinderCheatsheetPage() {
         }
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection, router]);
+
+  // If the cheatsheet is not found, show an error message
+  if (!finderCheatsheet) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-white mb-4">Finder Cheatsheet Not Found</h1>
+          <p className="text-slate-400">The Finder cheatsheet data could not be loaded.</p>
+          <Link href="/cheatsheets">
+            <Button className="mt-4">Back to Cheatsheets</Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pb-24">
@@ -242,14 +295,15 @@ export default function FinderCheatsheetPage() {
                   <div className={gridClass}
                        style={{ gridAutoRows: 'minmax(200px, auto)' }}>
                     {(() => {
-                      return section.subsections.flatMap((subsection, subsectionIndex) => 
-                        subsection.cards.map((card, cardIndex) => {
+                      return [
+                        // Render section-level cards first
+                        ...section.cards.map((card, cardIndex) => {
                           const spanConfig = parseSpanConfig(card.spanConfig);
                           
                           if (card.isShortcutsCard && card.shortcuts) {
                             return (
                               <ShortcutsCard 
-                                key={`${subsectionIndex}-${cardIndex}`}
+                                key={`section-${cardIndex}`}
                                 card={card}
                                 spanConfig={spanConfig}
                               />
@@ -257,14 +311,38 @@ export default function FinderCheatsheetPage() {
                           } else {
                             return (
                               <ContentCard 
-                                key={`${subsectionIndex}-${cardIndex}`}
+                                key={`section-${cardIndex}`}
                                 card={card}
                                 spanConfig={spanConfig}
                               />
                             );
                           }
-                        })
-                      );
+                        }),
+                        // Then render subsection cards
+                        ...section.subsections.flatMap((subsection, subsectionIndex) => 
+                          subsection.cards.map((card, cardIndex) => {
+                            const spanConfig = parseSpanConfig(card.spanConfig);
+                            
+                            if (card.isShortcutsCard && card.shortcuts) {
+                              return (
+                                <ShortcutsCard 
+                                  key={`${subsectionIndex}-${cardIndex}`}
+                                  card={card}
+                                  spanConfig={spanConfig}
+                                />
+                              );
+                            } else {
+                              return (
+                                <ContentCard 
+                                  key={`${subsectionIndex}-${cardIndex}`}
+                                  card={card}
+                                  spanConfig={spanConfig}
+                                />
+                              );
+                            }
+                          })
+                        )
+                      ];
                     })()}
                   </div>
                 );

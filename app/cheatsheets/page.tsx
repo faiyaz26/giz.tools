@@ -9,32 +9,63 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { getAllCheatsheets } from "@/lib/cheatsheet-data";
+import { cn } from "@/lib/utils";
 
-const cheatsheets = [
-  {
-    title: "Python",
-    description: "A comprehensive guide to Python programming language basics",
-    href: "/cheatsheets/python",
-    icon: Code,
-    color: "from-blue-500 to-indigo-600",
-    badge: "Popular",
-    items: ["Syntax", "Data Types", "Control Flow", "Functions", "Modules"],
-  },
-  {
-    title: "Finder",
-    description: "Keyboard shortcuts for macOS Finder application",
-    href: "/cheatsheets/finder",
-    icon: Code,
-    color: "from-blue-500 to-cyan-600",
-    badge: "New",
-    items: [
-      "Navigation",
-      "File Operations",
-      "View Options",
-      "Quick Actions",
-      "System",
-    ],
-  },
+// Load cheatsheets from unified data
+const availableCheatsheets = getAllCheatsheets();
+
+// Create dynamic cheatsheet list based on unified data
+const cheatsheets = availableCheatsheets.map((cheatsheet) => {
+  // Determine icon and color based on cheatsheet type
+  const getIcon = (id: string, categories: string[]) => {
+    if (categories.includes("Keyboard Shortcuts")) return Code;
+    if (categories.includes("Programming")) return Code;
+    return BookOpen;
+  };
+
+  const getColor = (id: string) => {
+    switch (id) {
+      case "python":
+        return "from-blue-500 to-indigo-600";
+      case "finder":
+        return "from-blue-500 to-cyan-600";
+      default:
+        return "from-gray-500 to-gray-600";
+    }
+  };
+
+  const getBadge = (id: string) => {
+    switch (id) {
+      case "python":
+        return "Popular";
+      case "finder":
+        return "New";
+      default:
+        return "Available";
+    }
+  };
+
+  // Extract key topics from sections
+  const getItems = (sections: any[]) => {
+    return sections.slice(0, 5).map((section) => section.title);
+  };
+
+  return {
+    title: cheatsheet.metadata.title,
+    description:
+      cheatsheet.metadata.intro ||
+      `Quick reference for ${cheatsheet.metadata.title}`,
+    href: `/cheatsheets/${cheatsheet.id}`,
+    icon: getIcon(cheatsheet.id, cheatsheet.metadata.categories),
+    color: getColor(cheatsheet.id),
+    badge: getBadge(cheatsheet.id),
+    items: getItems(cheatsheet.sections),
+  };
+});
+
+// Add placeholders for future cheatsheets
+const placeholderCheatsheets = [
   {
     title: "JavaScript",
     description: "Essential JavaScript concepts and syntax for web development",
@@ -49,9 +80,9 @@ const cheatsheets = [
     description: "Quick reference for React hooks, components and patterns",
     href: "#",
     icon: Code,
-    color: "from-cyan-500 to-blue-600",
+    color: "from-emerald-500 to-green-600",
     badge: "Coming Soon",
-    items: ["Components", "Hooks", "State", "Props", "Context"],
+    items: ["Components", "Hooks", "State", "Props", "Lifecycle"],
   },
   {
     title: "Git",
@@ -64,6 +95,9 @@ const cheatsheets = [
   },
 ];
 
+// Combine dynamic and placeholder cheatsheets
+const allCheatsheets = [...cheatsheets, ...placeholderCheatsheets];
+
 export default function CheatsheetIndexPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950">
@@ -73,108 +107,135 @@ export default function CheatsheetIndexPage() {
           <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 mb-6">
             Programming Cheatsheets
           </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Quick reference guides for programming languages, frameworks, and
-            tools. Find syntax, examples, and best practices all in one place.
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            Quick reference guides for programming languages, tools, and
+            technologies. Find syntax, examples, and essential concepts all in
+            one place.
           </p>
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            <Badge
+              variant="secondary"
+              className="text-blue-400 border-blue-400/20"
+            >
+              Quick Reference
+            </Badge>
+            <Badge
+              variant="secondary"
+              className="text-green-400 border-green-400/20"
+            >
+              Copy-Paste Ready
+            </Badge>
+            <Badge
+              variant="secondary"
+              className="text-purple-400 border-purple-400/20"
+            >
+              Syntax Highlighting
+            </Badge>
+          </div>
         </div>
 
         {/* Cheatsheets Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {cheatsheets.map((cheatsheet) => (
-            <Card
-              key={cheatsheet.title}
-              className="bg-slate-800 border-slate-700 overflow-hidden transition-all duration-300 hover:shadow-xl group"
-            >
-              <div
-                className={`absolute inset-0 bg-gradient-to-br opacity-5 group-hover:opacity-10 transition-opacity ${cheatsheet.color}`}
-              ></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {allCheatsheets.map((sheet, index) => {
+            const IconComponent = sheet.icon;
+            const isAvailable = sheet.href !== "#";
 
-              <CardHeader>
-                <div className="flex items-center justify-between mb-2">
-                  <div
-                    className={`p-3 rounded-xl bg-gradient-to-br ${cheatsheet.color}`}
-                  >
-                    <cheatsheet.icon className="h-6 w-6 text-white" />
+            return (
+              <Card
+                key={index}
+                className={cn(
+                  "group relative overflow-hidden border-slate-800/50 bg-slate-900/50 backdrop-blur-sm transition-all duration-300 hover:scale-105",
+                  isAvailable
+                    ? "hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10"
+                    : "opacity-75"
+                )}
+              >
+                <div
+                  className={cn(
+                    "absolute inset-0 bg-gradient-to-br opacity-5 group-hover:opacity-10 transition-opacity",
+                    sheet.color
+                  )}
+                />
+                <CardHeader className="relative">
+                  <div className="flex items-center justify-between mb-3">
+                    <div
+                      className={cn(
+                        "p-3 rounded-lg bg-gradient-to-br",
+                        sheet.color
+                      )}
+                    >
+                      <IconComponent className="h-6 w-6 text-white" />
+                    </div>
+                    <Badge
+                      variant={isAvailable ? "default" : "secondary"}
+                      className={cn(
+                        isAvailable
+                          ? "bg-blue-600/20 text-blue-400 border-blue-500/30"
+                          : "bg-slate-700/50 text-slate-400 border-slate-600/30"
+                      )}
+                    >
+                      {sheet.badge}
+                    </Badge>
                   </div>
-                  <Badge
-                    className={
-                      cheatsheet.badge === "Coming Soon"
-                        ? "bg-amber-600"
-                        : cheatsheet.badge === "New"
-                        ? "bg-emerald-600"
-                        : "bg-green-600"
-                    }
-                  >
-                    {cheatsheet.badge}
-                  </Badge>
-                </div>
-                <CardTitle className="text-2xl text-slate-100">
-                  {cheatsheet.title}
-                </CardTitle>
-                <CardDescription className="text-slate-300">
-                  {cheatsheet.description}
-                </CardDescription>
-              </CardHeader>
-
-              <CardContent>
-                <div className="mb-6">
-                  <h4 className="text-sm font-medium text-slate-400 mb-2">
-                    Includes:
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {cheatsheet.items.map((item) => (
-                      <Badge
-                        key={item}
-                        variant="outline"
-                        className="bg-slate-700/50 text-slate-300 border-slate-600"
-                      >
-                        {item}
-                      </Badge>
-                    ))}
+                  <CardTitle className="text-white group-hover:text-blue-400 transition-colors">
+                    {sheet.title}
+                  </CardTitle>
+                  <CardDescription className="text-slate-400 line-clamp-2">
+                    {sheet.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="relative">
+                  <div className="space-y-3 mb-6">
+                    <h4 className="text-sm font-medium text-slate-300">
+                      Key Topics:
+                    </h4>
+                    <div className="flex flex-wrap gap-1">
+                      {sheet.items.slice(0, 5).map((item, itemIndex) => (
+                        <Badge
+                          key={itemIndex}
+                          variant="outline"
+                          className="text-xs text-slate-400 border-slate-700/50"
+                        >
+                          {item}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
-                </div>
-
-                <Button
-                  asChild={cheatsheet.badge !== "Coming Soon"}
-                  disabled={cheatsheet.badge === "Coming Soon"}
-                  className="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700"
-                >
-                  {cheatsheet.badge !== "Coming Soon" ? (
-                    <Link href={cheatsheet.href}>
-                      View Cheatsheet
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                  {isAvailable ? (
+                    <Link href={sheet.href}>
+                      <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 group">
+                        Explore Cheatsheet
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Button>
                     </Link>
                   ) : (
-                    <span>
+                    <Button disabled className="w-full">
                       Coming Soon
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </span>
+                    </Button>
                   )}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white">
-          <h2 className="text-3xl font-bold mb-4">Need more resources?</h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Check out our collection of articles and guides for in-depth
-            learning.
-          </p>
-          <Button
-            size="lg"
-            variant="secondary"
-            asChild
-            className="text-lg px-8 py-3"
-          >
-            <Link href="/articles">
-              Explore Articles
-              <BookOpen className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-slate-900/50 border border-slate-800/50 rounded-2xl p-8 backdrop-blur-sm">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Missing a Cheatsheet?
+            </h2>
+            <p className="text-slate-400 mb-6 max-w-lg mx-auto">
+              Can&apos;t find the programming language or tool you&apos;re
+              looking for? Let us know and we&apos;ll add it to our collection.
+            </p>
+            <Button
+              variant="outline"
+              className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10 hover:border-blue-400"
+            >
+              Request Cheatsheet
+            </Button>
+          </div>
         </div>
       </div>
     </div>

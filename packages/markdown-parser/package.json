@@ -16,7 +16,8 @@
     "prepublishOnly": "npm run build",
     "test": "echo \"Tests coming soon\"",
     "parse:single": "npm run build && node dist/cli.js --file",
-    "parse:batch": "npm run build && node dist/cli.js --batch"
+    "parse:batch": "npm run build && node dist/cli.js --batch",
+    "parse:unified": "npm run build && node dist/cli.js unified"
   },
   "dependencies": {
     "js-yaml": "^4.1.0",

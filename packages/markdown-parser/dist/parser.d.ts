@@ -1,4 +1,4 @@
-import { MarkdownDocument, ParserOptions, ParseResult } from "./types.js";
+import { MarkdownDocument, ParserOptions, ParseResult, UnifiedCheatsheetData } from "./types.js";
 /**
  * Markdown Parser for Husky CMS
  * Parses markdown files and converts them to structured JSON format
@@ -57,5 +57,17 @@ export declare class MarkdownParser {
      * Parse keyboard shortcuts from markdown table content
      */
     private parseShortcutsFromContent;
+    /**
+     * Parse multiple markdown files and create a unified cheatsheet data structure
+     */
+    parseUnified(filePaths: string[], options?: ParserOptions): Promise<UnifiedCheatsheetData>;
+    /**
+     * Parse unified data from examples directory
+     */
+    parseExamples(examplesDir: string, options?: ParserOptions): Promise<UnifiedCheatsheetData>;
+    /**
+     * Convert unified cheatsheet data to JSON string
+     */
+    toUnifiedJSON(data: UnifiedCheatsheetData, indent?: number): string;
 }
 //# sourceMappingURL=parser.d.ts.map

@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import pythonCheatsheetData from "./python-cheatsheet.json";
+import unifiedCheatsheetsData from "./unified-cheatsheets.json";
 
 // Type definitions for the parsed cheatsheet data
 export interface KeyboardShortcut {
@@ -54,6 +55,19 @@ export interface CheatsheetData {
   sections: CheatsheetSection[];
 }
 
+// Unified cheatsheet interfaces
+export interface UnifiedCheatsheetItem {
+  id: string;
+  metadata: CheatsheetMetadata;
+  sections: CheatsheetSection[];
+}
+
+export interface UnifiedCheatsheetData {
+  cheatsheets: UnifiedCheatsheetItem[];
+  createdAt: string;
+  version: string;
+}
+
 // Load parsed cheatsheet data
 export function loadCheatsheetData(filename: string): CheatsheetData {
   if (filename === "python-cheatsheet-parsed.json") {
@@ -71,6 +85,32 @@ export function loadCheatsheetData(filename: string): CheatsheetData {
   }
 
   throw new Error(`Cheatsheet data not found: ${filename}`);
+}
+
+// Load unified cheatsheet data
+export function loadUnifiedCheatsheetData(): UnifiedCheatsheetData {
+  return unifiedCheatsheetsData as UnifiedCheatsheetData;
+}
+
+// Get a specific cheatsheet from unified data
+export function getCheatsheetById(id: string): CheatsheetData | null {
+  const unified = loadUnifiedCheatsheetData();
+  const cheatsheet = unified.cheatsheets.find((cs) => cs.id === id);
+
+  if (cheatsheet) {
+    return {
+      metadata: cheatsheet.metadata,
+      sections: cheatsheet.sections,
+    };
+  }
+
+  return null;
+}
+
+// Get all available cheatsheets from unified data
+export function getAllCheatsheets(): UnifiedCheatsheetItem[] {
+  const unified = loadUnifiedCheatsheetData();
+  return unified.cheatsheets;
 }
 
 // Parse span configuration into CSS classes
