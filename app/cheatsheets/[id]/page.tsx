@@ -1,6 +1,10 @@
 import React from "react";
+import { notFound } from "next/navigation";
 import { DynamicCheatsheetPage } from "@/components/cheatsheet/dynamic-cheatsheet-page";
-import { getAllCheatsheetsServer } from "@/lib/cheatsheet-data-server";
+import {
+  getAllCheatsheetsServer,
+  getCheatsheetByIdServer,
+} from "@/lib/cheatsheet-data-server";
 
 // Generate static params for all available cheatsheets
 export function generateStaticParams() {
@@ -10,6 +14,9 @@ export function generateStaticParams() {
   }));
 }
 
+// Only generate pages for known cheatsheets
+export const dynamicParams = false;
+
 interface CheatsheetPageProps {
   params: Promise<{
     id: string;
@@ -18,5 +25,12 @@ interface CheatsheetPageProps {
 
 export default async function CheatsheetPage({ params }: CheatsheetPageProps) {
   const { id } = await params;
+
+  // Check if the cheatsheet exists
+  const cheatsheet = getCheatsheetByIdServer(id);
+  if (!cheatsheet) {
+    notFound();
+  }
+
   return <DynamicCheatsheetPage cheatsheetId={id} />;
 }
