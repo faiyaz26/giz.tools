@@ -127,12 +127,28 @@ export class MarkdownParser {
       const h2EndIndex = nextMatch ? nextMatch.index! : content.length;
       const h2Content = content.slice(h2StartIndex, h2EndIndex);
 
+      // Check if this H2 section has H3 subsections
+      const h3Matches = Array.from(h2Content.matchAll(this.h3Pattern));
+
       const section: Section = {
         title: h2Title,
         level: 2,
         cards: [],
-        subsections: this.parseH3Sections(h2Content, options),
+        subsections: [],
       };
+
+      if (h3Matches.length > 0) {
+        // Has H3 subsections - parse them normally
+        section.subsections = this.parseH3Sections(h2Content, options);
+      } else {
+        // No H3 subsections - treat the entire H2 content as a card
+        const trimmedContent = h2Content.trim();
+        if (trimmedContent) {
+          // Create a card from the direct H2 content
+          const cards = this.parseCards(trimmedContent, h2Title, "", options);
+          section.cards = cards;
+        }
+      }
 
       sections.push(section);
     }
@@ -229,15 +245,28 @@ export class MarkdownParser {
       // No subsections - use original parsing
       const parts = this.splitContentIntoParts(cleanedContent, options);
 
-      if (parts.code || parts.footer) {
+      // Create a card if there's any content (code, footer, or just regular content)
+      if (parts.code || parts.footer || cleanedContent.trim()) {
+        // For sections with no code blocks, put the content in body instead of footer
+        // This handles cases like "Also see" sections with list content
+        const hasCodeBlocks = cleanedContent.includes("```");
+
         const card: Card = {
           title: sectionTitle,
-          body: parts.code,
-          footer: parts.footer,
+          body:
+            parts.code ||
+            (!hasCodeBlocks && parts.footer
+              ? parts.footer
+              : !parts.footer && cleanedContent.trim()
+              ? cleanedContent.trim()
+              : ""),
+          footer: hasCodeBlocks ? parts.footer : "",
           spanConfig: spanClass,
           isShortcutsCard: isShortcutsSection,
           shortcuts: isShortcutsSection
-            ? this.parseShortcutsFromContent(parts.footer || parts.code)
+            ? this.parseShortcutsFromContent(
+                parts.footer || parts.code || cleanedContent
+              )
             : undefined,
         };
         cards.push(card);
