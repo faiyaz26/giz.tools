@@ -1,0 +1,480 @@
+{
+  "id": "bear-notes",
+  "metadata": {
+    "title": "Bear",
+    "date": "2022-11-23T16:23:31.705Z",
+    "background": "bg-[#cd5654]",
+    "label": "Mac",
+    "tags": [
+      null,
+      "mac"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 66 keyboard shortcuts found in Bear. This application is MacOS-only.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Text Styles",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Text Styles",
+              "body": "| Shortcut             | Action             |\n| -------------------- | ------------------ |\n| `Option` `Cmd` `1-6` | Headings           |\n| `Option` `Cmd` `S`   | Line separator     |\n| `Cmd` `B`            | Bold               |\n| `Cmd` `I`            | Italic             |\n| `Cmd` `U`            | Underline          |\n| `Shift` `Cmd` `E`    | Strikethrough      |\n| `Cmd` `K`            | Link               |\n| `Cmd` `L`            | Unordered list     |\n| `Shift` `Cmd` `L`    | Ordered list       |\n| `Shift` `Cmd` `U`    | Quote              |\n| `Cmd` `T`            | Todo               |\n| `Option` `Cmd` `C`   | Inline code        |\n| `Ctrl` `Option` `C`  | Code block         |\n| `Shift` `Cmd` `M`    | Marker/Highlighter |\n| `Shift` `Cmd` `V`    | Insert file        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Option` `Cmd` `1-6`",
+                  "action": "Headings"
+                },
+                {
+                  "shortcut": "`Option` `Cmd` `S`",
+                  "action": "Line separator"
+                },
+                {
+                  "shortcut": "`Cmd` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Cmd` `I`",
+                  "action": "Italic"
+                },
+                {
+                  "shortcut": "`Cmd` `U`",
+                  "action": "Underline"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `E`",
+                  "action": "Strikethrough"
+                },
+                {
+                  "shortcut": "`Cmd` `K`",
+                  "action": "Link"
+                },
+                {
+                  "shortcut": "`Cmd` `L`",
+                  "action": "Unordered list"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `L`",
+                  "action": "Ordered list"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `U`",
+                  "action": "Quote"
+                },
+                {
+                  "shortcut": "`Cmd` `T`",
+                  "action": "Todo"
+                },
+                {
+                  "shortcut": "`Option` `Cmd` `C`",
+                  "action": "Inline code"
+                },
+                {
+                  "shortcut": "`Ctrl` `Option` `C`",
+                  "action": "Code block"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `M`",
+                  "action": "Marker/Highlighter"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `V`",
+                  "action": "Insert file"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Todos",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Todos",
+              "body": "| Shortcut           | Action                  |\n| ------------------ | ----------------------- |\n| `Shift` `Cmd` `T`  | Toggle Todo             |\n| `Option` `Cmd` `T` | Mark Todo as completed  |\n| `Ctrl` `Cmd` `T`   | Mark Todo as incomplete |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `Cmd` `T`",
+                  "action": "Toggle Todo"
+                },
+                {
+                  "shortcut": "`Option` `Cmd` `T`",
+                  "action": "Mark Todo as completed"
+                },
+                {
+                  "shortcut": "`Ctrl` `Cmd` `T`",
+                  "action": "Mark Todo as incomplete"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Structure",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Structure",
+              "body": "| Shortcut              | Action           |\n| --------------------- | ---------------- |\n| `Cmd` `]`             | Shift line right |\n| `Cmd` `[`             | Shift line left  |\n| `Cmd` `Option` `Up`   | Move line up     |\n| `Cmd` `Option` `Down` | Move line down   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `]`",
+                  "action": "Shift line right"
+                },
+                {
+                  "shortcut": "`Cmd` `[`",
+                  "action": "Shift line left"
+                },
+                {
+                  "shortcut": "`Cmd` `Option` `Up`",
+                  "action": "Move line up"
+                },
+                {
+                  "shortcut": "`Cmd` `Option` `Down`",
+                  "action": "Move line down"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Lists",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Lists",
+              "body": "| Shortcut        | Action                       |\n| --------------- | ---------------------------- |\n| `Tab`           | Shift the list element right |\n| `Shift` `Tab`   | Shift the list element left  |\n| `Shift` `Enter` | End the list                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Shift the list element right"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Shift the list element left"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "End the list"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dates",
+              "body": "| Shortcut          | Action                                        |\n| ----------------- | --------------------------------------------- |\n| `Shift` `Cmd` `7` | Long Form Date with time (11 Jul 2017, 10:43) |\n| `Shift` `Cmd` `8` | Long Form Date (11 Jul 2017)                  |\n| `Shift` `Cmd` `9` | Short Form Date (11/07/2017)                  |\n| `Shift` `Cmd` `0` | Hours (11:43)                                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `Cmd` `7`",
+                  "action": "Long Form Date with time (11 Jul 2017, 10:43)"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `8`",
+                  "action": "Long Form Date (11 Jul 2017)"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `9`",
+                  "action": "Short Form Date (11/07/2017)"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `0`",
+                  "action": "Hours (11:43)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Control",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Control",
+              "body": "| Shortcut      | Action      |\n| ------------- | ----------- |\n| `Cmd` `A`     | Select all  |\n| `Cmd` `Enter` | End editing |\n| `Cmd` `P`     | Print note  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Cmd` `Enter`",
+                  "action": "End editing"
+                },
+                {
+                  "shortcut": "`Cmd` `P`",
+                  "action": "Print note"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Zoom",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Zoom",
+              "body": "| Shortcut  | Action      |\n| --------- | ----------- |\n| `Cmd` `+` | Zoom in     |\n| `Cmd` `-` | Zoom out    |\n| `Cmd` `0` | Actual size |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Cmd` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Cmd` `0`",
+                  "action": "Actual size"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut                  | Action                                                                |\n| ------------------------- | --------------------------------------------------------------------- |\n| `Cmd` `N`                 | Create a new note                                                     |\n| `Option` `Cmd` `N`        | Create a new note in a new window                                     |\n| `Up/Down`                 | Move the selection in the note and tags list                          |\n| `Left/Right`              | Move the selection between the sidebar, the nost list, and the editor |\n| `Enter`                   | Edit the selected note                                                |\n| `Option` `Cmd` `F`        | Search in the current note list                                       |\n| `Cmd` `Backspace`         | Delete selected note                                                  |\n| `Shift` `Cmd` `R`         | Restore selected note                                                 |\n| `Shift` `Cmd` `P`         | Pin/unpin selected note                                               |\n| `Cmd` `A`                 | Select all the notes in the list                                      |\n| `Shift` `Cmd` `Backspace` | Empty Trash                                                           |\n| `Cmd` `1`                 | Select Notes in the sidebar                                           |\n| `Cmd` `2`                 | Select Untagged in the sidebar                                        |\n| `Cmd` `3`                 | Select ToDo in the sidebar                                            |\n| `Cmd` `4`                 | Select Today in the sidebar                                           |\n| `Cmd` `5`                 | Select Archive in the sidebar                                         |\n| `Cmd` `6`                 | Select Trash in the sidebar                                           |\n| `Option` `Cmd` `Left`     | Navigate back in visualized notes history                             |\n| `Option` `Cmd` `Right`    | Navigate forward in visualized notes history                          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `N`",
+                  "action": "Create a new note"
+                },
+                {
+                  "shortcut": "`Option` `Cmd` `N`",
+                  "action": "Create a new note in a new window"
+                },
+                {
+                  "shortcut": "`Up/Down`",
+                  "action": "Move the selection in the note and tags list"
+                },
+                {
+                  "shortcut": "`Left/Right`",
+                  "action": "Move the selection between the sidebar, the nost list, and the editor"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Edit the selected note"
+                },
+                {
+                  "shortcut": "`Option` `Cmd` `F`",
+                  "action": "Search in the current note list"
+                },
+                {
+                  "shortcut": "`Cmd` `Backspace`",
+                  "action": "Delete selected note"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `R`",
+                  "action": "Restore selected note"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `P`",
+                  "action": "Pin/unpin selected note"
+                },
+                {
+                  "shortcut": "`Cmd` `A`",
+                  "action": "Select all the notes in the list"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `Backspace`",
+                  "action": "Empty Trash"
+                },
+                {
+                  "shortcut": "`Cmd` `1`",
+                  "action": "Select Notes in the sidebar"
+                },
+                {
+                  "shortcut": "`Cmd` `2`",
+                  "action": "Select Untagged in the sidebar"
+                },
+                {
+                  "shortcut": "`Cmd` `3`",
+                  "action": "Select ToDo in the sidebar"
+                },
+                {
+                  "shortcut": "`Cmd` `4`",
+                  "action": "Select Today in the sidebar"
+                },
+                {
+                  "shortcut": "`Cmd` `5`",
+                  "action": "Select Archive in the sidebar"
+                },
+                {
+                  "shortcut": "`Cmd` `6`",
+                  "action": "Select Trash in the sidebar"
+                },
+                {
+                  "shortcut": "`Option` `Cmd` `Left`",
+                  "action": "Navigate back in visualized notes history"
+                },
+                {
+                  "shortcut": "`Option` `Cmd` `Right`",
+                  "action": "Navigate forward in visualized notes history"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Panels and search",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Panels and search",
+              "body": "| Shortcut           | Action                                     |\n| ------------------ | ------------------------------------------ |\n| `Shift` `Cmd` `I`  | Toggle information panel                   |\n| `Cmd` `F`          | Search inside the current note             |\n| `Option` `Cmd` `F` | Search and replace inside the current note |\n| `Shift` `Cmd` `F`  | Search inside the note list                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `Cmd` `I`",
+                  "action": "Toggle information panel"
+                },
+                {
+                  "shortcut": "`Cmd` `F`",
+                  "action": "Search inside the current note"
+                },
+                {
+                  "shortcut": "`Option` `Cmd` `F`",
+                  "action": "Search and replace inside the current note"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `F`",
+                  "action": "Search inside the note list"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Saving and importing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Saving and importing",
+              "body": "| Shortcut          | Action                |\n| ----------------- | --------------------- |\n| `Shift` `Cmd` `S` | Export selected notes |\n| `Shift` `Cmd` `O` | Import notes          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `Cmd` `S`",
+                  "action": "Export selected notes"
+                },
+                {
+                  "shortcut": "`Shift` `Cmd` `O`",
+                  "action": "Import notes"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Window",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Window",
+              "body": "| Shortcut         | Action                             |\n| ---------------- | ---------------------------------- |\n| `Ctrl` `1`       | Show sidebar, note list and editor |\n| `Ctrl` `2`       | Show note list and editor          |\n| `Ctrl` `3`       | Show editor only                   |\n| `Cmd` `,`        | Show preferences                   |\n| `Ctrl` `Cmd` `F` | Enter fullscreen                   |\n| `Cmd` `\\`        | Open main window                   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `1`",
+                  "action": "Show sidebar, note list and editor"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Show note list and editor"
+                },
+                {
+                  "shortcut": "`Ctrl` `3`",
+                  "action": "Show editor only"
+                },
+                {
+                  "shortcut": "`Cmd` `,`",
+                  "action": "Show preferences"
+                },
+                {
+                  "shortcut": "`Ctrl` `Cmd` `F`",
+                  "action": "Enter fullscreen"
+                },
+                {
+                  "shortcut": "`Cmd` `\\`",
+                  "action": "Open main window"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Bear notes app](https://bear.app/faq/Shortcuts%20and%20more/Mac%20shortcuts/) _(bear.app)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

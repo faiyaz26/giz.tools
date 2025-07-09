@@ -1,0 +1,272 @@
+{
+  "id": "networkports",
+  "metadata": {},
+  "sections": [
+    {
+      "title": "Networking and Infrastructure",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Web Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Web Ports",
+              "body": "| **Port**     | **Nom**          | **Description**             |\r\n|:-------------| :--------------- |:----------------------------|\r\n| `80`         | HTTP             | HyperText Transfer Protocol |\r\n| `443`        | HTTPS            | HTTP Secure                 |\r\n| `8080`       | HTTP-Alt         | Alternative HTTP Port       |\r\n| `8443`       | HTTPS-Alt        | Alternative HTTPS Port      |\r\n| `8000`       | HTTP-Proxy       | For proxy server HTTP       |\r\n| `8008`       | HTTP-Backup      | Backup port for HTTP        |\r\n| `8888`       | HTTP-Alternative | Alternative port for HTTP   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Network and Infrastructure Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Network and Infrastructure Service Ports",
+              "body": "| **Port** | **Nom**   | **Description**                     |\r\n|:---------| :-------- |:------------------------------------|\r\n| `53`     | DNS       | Domain Name System                  |\r\n| `67`/`68`| DHCP      | Dynamic Host Configuration Protocol |\r\n| `123`    | NTP       | Network Time Protocol               |\r\n| `161`    | SNMP      | Simple Network Management Protocol  |\r\n| `162`    | SNMP-Trap | SNMP Trap Messages                  |\r\n| `514`    | Syslog    | Logging system                      |\r\n| `69`     | TFTP      | Trivial File Transfer Protocol      |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Virtualization and Containerization Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Virtualization and Containerization Service Ports",
+              "body": "| **Port**  | **Nom**       | **Description**                 |\r\n|:----------| :------------ |:--------------------------------|\r\n| `2375`    | Docker        | Docker without  TLS             |\r\n| `2376`    | Docker        | Docker with TLS                 |\r\n| `6443`    | Kubernetes    | Kubernetes API Server           |\r\n| `8443`    | Kubernetes    | Alternative Kubernetes API port |\r\n| `9100`    | Node Exporter | Prometheus Node Exporter        |\r\n| `9090`    | Prometheus    | Prometheus Monitoring           |\r\n| `5672`    | RabbitMQ      | Message Broker RabbitMQ         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Monitoring and Management Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Monitoring and Management Service Ports",
+              "body": "| **Port** | **Nom**    | **Description**                           |\r\n|:---------| :--------- |:------------------------------------------|\r\n| `631`    | IPP        | Internet Printing Protocol                |\r\n| `873`    | rsync      | Remote Sync                               |\r\n| `8086`   | InfluxDB   | Time Series Database InfluxDB             |\r\n| `9093`   | Prometheus | Prometheus Alertmanager Alert Management  |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data Management",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Data Base Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Data Base Ports",
+              "body": "| **Port**  | **Nom**              | **Description**                       |\r\n|:----------| :------------------- |:--------------------------------------|\r\n| `1433`    | Microsoft SQL Server | Microsoft SQL Database Server         |\r\n| `3306`    | MySQL                | MySQL Database Management System      |\r\n| `5432`    | PostgreSQL           | PostgreSQL Database Management System |\r\n| `1521`    | Oracle               | Oracle Database Management System     |\r\n| `27017`   | MongoDB              | MongoDB NoSQL Database                |\r\n| `11211`   | Memcached            | Memcached Memory Caching System       |\r\n| `6379`    | Redis                | Redis In-Memory Database              |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Communication Services",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Remote Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Remote Ports",
+              "body": "| **Port** | **Nom** | **Description**                    |\r\n|:---------| :------ |:-----------------------------------|\r\n| `22`     | SSH     | Secure Shell                       |\r\n| `23`     | Telnet  | Unsecure remote terminal protocol  |\r\n| `3389`   | RDP     | Remote Desktop Protocol            |\r\n| `5900`   | VNC     | Virtual Network Computing          |\r\n| `69`     | TFTP    | Trivial File Transfer Protocol     |\r\n| `179`    | BGP     | Border Gateway Protocol            |\r\n| `113`    | Ident   | Ident Protocol                     |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Messagerie Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Messagerie Service Ports",
+              "body": "| **Port** | **Nom**         | **Description**                  |\r\n|:---------| :-------------- |:---------------------------------|\r\n| `25`     | SMTP            | Simple Mail Transfer Protocol    |\r\n| `465`    | SMTPS           | SMTP Secure                      |\r\n| `587`    | SMTP-Submission | Port for email submission        |\r\n| `110`    | POP3            | Post Office Protocol v3          |\r\n| `995`    | POP3S           | POP3 Secure                      |\r\n| `143`    | IMAP            | Internet Message Access Protocol |\r\n| `993`    | IMAPS           | IMAP Secure                      |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Instant Messaging and VoIP Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Instant Messaging and VoIP Service Ports",
+              "body": "| **Port** | **Nom**     | **Description**                            |\r\n|:---------| :---------- |:-------------------------------------------|\r\n| `5060`   | SIP         | Session Initiation Protocol                |\r\n| `5061`   | SIP-Secure  | SIP over TLS                               |\r\n| `1720`   | H.323       | Communication protocol for VoIP            |\r\n| `3478`   | STUN        | Session Traversal Utilities for NAT        |\r\n| `1234`   | Skype       | Communication VoIP via Skype               |\r\n| `5222`   | XMPP        | Extensible Messaging and Presence Protocol |\r\n| `5223`   | XMPP-Secure | XMPP over SSL                              |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Voice and Video Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Voice and Video Service Ports",
+              "body": "| **Port**        | **Nom**    | **Description**                                         |\r\n|:----------------| :--------- |:--------------------------------------------------------|\r\n| `5060`          | SIP        | Session Initiation Protocol pour VoIP                   |\r\n| `5061`          | SIP Secure | SIP sur TLS                                             |\r\n| `16384`-`32767` | RTP        | Real-time Transport Protocol pour streaming audio/vidéo |\r\n| `3478`          | STUN       | Session Traversal Utilities for NAT                     |\r\n| `5004`          | RTP        | Real-time Transport Protocol for media                  |\r\n| `5222`          | XMPP       | Extensible messaging protocol for instant messaging     |\r\n| `9000`          | WebRTC     | Protocols for real-time communication via browser       |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "P2P Download and Sharing Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "P2P Download and Sharing Service Ports",
+              "body": "| **Port**      | **Nom**    | **Description**                        |\r\n|:--------------| :--------- |:---------------------------------------|\r\n| `6881`-`6889` | BitTorrent | Ports used by BitTorrent clients       |\r\n| `51413`       | BitTorrent | Default port for BitTorrent            |\r\n| `6969`        | BitTorrent | Default port for BitTorrent trackers   |\r\n| `1194`        | OpenVPN    | Also used for VPNs and some P2P        |\r\n| `4661`        | uTorrent   | Port used by uTorrent client           |\r\n| `37152`       | Steam      | Used by Steam platform for downloads   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Security Services",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Security Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Security Ports",
+              "body": "| **Port** | **Nom**     | **Description**                            |\r\n|:---------| :---------- | :----------------------------------------- |\r\n| `1194`   | OpenVPN     | Virtual Private Network                    |\r\n| `1701`   | L2TP        | Layer 2 Tunneling Protocol                 |\r\n| `1723`   | PPTP        | Point-to-Point Tunneling Protocol          |\r\n| `4500`   | IPsec-NAT-T | IPsec NAT Traversal                        |\r\n| `500`    | IKE         | Internet Key Exchange                      |\r\n| `1812`   | RADIUS      | Remote Authentication Dial-In User Service |\r\n| `3306`   | MySQL SSL   | MySQL avec chiffrement SSL                 |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cryptography and Security Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cryptography and Security Service Ports",
+              "body": "| **Port** | **Nom**   | **Description**                        |\r\n|:---------| :-------- |:---------------------------------------|\r\n| `443`    | HTTPS     | HTTP Secure avec SSL/TLS               |\r\n| `993`    | IMAPS     | IMAP sécurisé avec SSL/TLS             |\r\n| `995`    | POP3S     | POP3 sécurisé avec SSL/TLS             |\r\n| `636`    | LDAPS     | LDAP sécurisé avec SSL/TLS             |\r\n| `8443`   | HTTPS-Alt | Alternative port for HTTPS             |\r\n| `8888`   | SSL Proxy | Secure proxy using SSL/TLS             |\r\n| `563`    | SNEWS     | Secure Network News Transfer Protocol  |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "System and Application Services",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "File Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File Service Ports",
+              "body": "| **Port** | **Nom**     | **Description**                         |\r\n|:---------| :---------- |:----------------------------------------|\r\n| `20`     | FTP-DATA    | FTP data transfer                       |\r\n| `21`     | FTP         | File Transfer Protocol                  |\r\n| `22`     | SFTP        | Secure File Transfer Protocol (via SSH) |\r\n| `445`    | SMB         | Server Message Block (Windows Shares)   |\r\n| `139`    | NetBIOS-SSN | NetBIOS Session Service                 |\r\n| `2049`   | NFS         | Network File System                     |\r\n| `548`    | AFP         | Apple Filing Protocol                   |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Miscellaneous System and App Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Miscellaneous System and App Ports",
+              "body": "| **Port**    | **Nom** | **Description**                               |\r\n|:------------| :------ |:----------------------------------------------|\r\n| `137`-`139` | NetBIOS | NetBIOS services for naming and file sharing  |\r\n| `1900`      | UPnP    | Universal Plug and Play                       |\r\n| `24800`     | Vuze    | Client BitTorrent Vuze                        |\r\n| `32400`     | Plex    | Serveur multimédia Plex                       |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous Services",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Gaming Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Gaming Service Ports",
+              "body": "| **Port**  | **Nom**       | **Description**                  |\r\n|:----------| :------------ |:---------------------------------|\r\n| `27015`   | Steam         | Steam gaming platform            |\r\n| `7777`    | Unreal Engine | Game servers using Unreal Engine |\r\n| `27020`   | Source Engine | Game servers using Source Engine |\r\n| `28910`   | Various Games | Various multiplayer games        |\r\n| `27000`   | Various Games | Additional multiplayer games     |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Miscellaneous Service Ports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Miscellaneous Service Ports",
+              "body": "| **Port**  | **Nom** | **Description**                                           |\r\n|:----------| :------ | :-------------------------------------------------------- |\r\n| `500`     | ISAKMP  | Internet Security Association and Key Management Protocol |\r\n| `520`     | RIP     | Routing Information Protocol                              |\r\n| `1900`    | UPnP    | Universal Plug and Play                                   |\r\n| `3659`    | RADIUS  | Remote Authentication Dial-In User Service                |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

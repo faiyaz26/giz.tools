@@ -1,0 +1,104 @@
+{
+  "id": "arduino",
+  "metadata": {
+    "title": "Arduino IDE",
+    "date": "2022-11-23T16:23:31.697Z",
+    "background": "bg-[#409096]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 12 keyboard shortcuts found in the Arduino IDE\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "| Shortcut           | Action                           |\n| ------------------ | -------------------------------- |\n| `Ctrl` `S`         | Save                             |\n| `Ctrl` `Shift` `S` | Save as                          |\n| `Ctrl` `N`         | Open a new sketch                |\n| `Ctrl` `O`         | Open an existing sketch          |\n| `Ctrl` `Q`         | Close the Arduino IDE            |\n| `Ctrl` `R`         | Verify                           |\n| `Ctrl` `U`         | Upload                           |\n| `Ctrl` `F`         | Find                             |\n| `Ctrl` `T`         | Adjust the alignment and spacing |\n| `Ctrl` `/`         | Comment                          |\n| `Ctrl` `Shift` `M` | Open the serial monitor          |\n| `Ctrl` `K`         | Open the sketch folder           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Save as"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Open a new sketch"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open an existing sketch"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Close the Arduino IDE"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Verify"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Upload"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Adjust the alignment and spacing"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Comment"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Open the serial monitor"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Open the sketch folder"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for the Arduino IDE](https://progtpoint.blogspot.com/2017/02/arduino-keyboard-shortcuts.html)\n  _(progtpoint.blogspot.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

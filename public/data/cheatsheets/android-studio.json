@@ -1,0 +1,720 @@
+{
+  "id": "android-studio",
+  "metadata": {
+    "title": "Android Studio",
+    "date": "2022-11-23T16:23:31.704Z",
+    "background": "bg-[#6bd488]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 130 keyboard shortcuts found in the Andriod Studio software\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "| Shortcut                 | Action                                            |\n| ------------------------ | ------------------------------------------------- |\n| `Ctrl` `S`               | Save all                                          |\n| `Ctrl` `Alt` `Y`         | Synchronize                                       |\n| `Ctrl` `Shift` `F12`     | Minimize or maximize the editor                   |\n| `Alt` `Shift` `F`        | Add to favorites                                  |\n| `Alt` `Shift` `I`        | Inspect the current file with the current profile |\n| `Ctrl` <code>\\`</code>   | Quick switch the scheme                           |\n| `Ctrl` `Alt` `S`         | Open the settings dialogue                        |\n| `Ctrl` `Alt` `Shift` `S` | Open the project structure dialogue               |\n| `Ctrl` `Tab`             | Switch between the tabs and tool window           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save all"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Y`",
+                  "action": "Synchronize"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F12`",
+                  "action": "Minimize or maximize the editor"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `F`",
+                  "action": "Add to favorites"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `I`",
+                  "action": "Inspect the current file with the current profile"
+                },
+                {
+                  "shortcut": "`Ctrl` <code>\\`</code>",
+                  "action": "Quick switch the scheme"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `S`",
+                  "action": "Open the settings dialogue"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `S`",
+                  "action": "Open the project structure dialogue"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Switch between the tabs and tool window"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigating and Searching",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigating and Searching",
+              "body": "| Shortcut                   | Action                                      |\n| -------------------------- | ------------------------------------------- |\n| `Shift` `Shift`            | Search everything, including code and menus |\n| `Ctrl` `F`                 | Find                                        |\n| `F3`                       | Find next                                   |\n| `Shift` `F3`               | Find previous                               |\n| `Ctrl` `R`                 | Replace                                     |\n| `Ctrl` `Shift` `A`         | Find action                                 |\n| `Ctrl` `Alt` `Shift` `N`   | Search by a symbol name                     |\n| `Ctrl` `N`                 | Find class                                  |\n| `Ctrl` `Shift` `N`         | Find file, instead of class                 |\n| `Ctrl` `Shift` `F`         | Find in path                                |\n| `Ctrl` `F12`               | Open file structure pop-up                  |\n| `Alt` `Right/Left`         | Navigate between open editor tabs           |\n| `Ctrl` `Enter`             | Jump to source                              |\n| `Shift` `F4`               | Open the current editor tab in a new window |\n| `Ctrl` `E`                 | Recently opened files pop-up                |\n| `Ctrl` `Shift` `E`         | Recently edited files pop-up                |\n| `Ctrl` `Shift` `Backspace` | Go to last edit location                    |\n| `Ctrl` `F4`                | Close active editor tab                     |\n| `Esc`                      | Return to editor window from a tool window  |\n| `Shift` `Esc`              | Hide active or last active tool window      |\n| `Ctrl` `G`                 | Go to line                                  |\n| `Ctrl` `H`                 | Open type hierarchy                         |\n| `Ctrl` `Shift` `H`         | Open method hierarchy                       |\n| `Ctrl` `Alt` `H`           | Open call hierarchy                         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `Shift`",
+                  "action": "Search everything, including code and menus"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find"
+                },
+                {
+                  "shortcut": "`F3`",
+                  "action": "Find next"
+                },
+                {
+                  "shortcut": "`Shift` `F3`",
+                  "action": "Find previous"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Replace"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Find action"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `N`",
+                  "action": "Search by a symbol name"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Find class"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Find file, instead of class"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Find in path"
+                },
+                {
+                  "shortcut": "`Ctrl` `F12`",
+                  "action": "Open file structure pop-up"
+                },
+                {
+                  "shortcut": "`Alt` `Right/Left`",
+                  "action": "Navigate between open editor tabs"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Jump to source"
+                },
+                {
+                  "shortcut": "`Shift` `F4`",
+                  "action": "Open the current editor tab in a new window"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Recently opened files pop-up"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Recently edited files pop-up"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Backspace`",
+                  "action": "Go to last edit location"
+                },
+                {
+                  "shortcut": "`Ctrl` `F4`",
+                  "action": "Close active editor tab"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Return to editor window from a tool window"
+                },
+                {
+                  "shortcut": "`Shift` `Esc`",
+                  "action": "Hide active or last active tool window"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Go to line"
+                },
+                {
+                  "shortcut": "`Ctrl` `H`",
+                  "action": "Open type hierarchy"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "Open method hierarchy"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `H`",
+                  "action": "Open call hierarchy"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Writing Code",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Writing Code",
+              "body": "| Shortcut               | Action                                                                            |\n| ---------------------- | --------------------------------------------------------------------------------- |\n| `Alt` `Insert`         | Generate code, e.g. getters, setters, constructors, new class                     |\n| `Ctrl` `O`             | Override methods                                                                  |\n| `Ctrl` `I`             | Implement methods                                                                 |\n| `Ctrl` `Alt` `T`       | Surround with if...else, try...catch, etc                                         |\n| `Ctrl` `Y`             | Delete line at caret                                                              |\n| `Ctrl` `-`             | Collapse the current code block                                                   |\n| `Ctrl` `+`             | Expand the current code block                                                     |\n| `Ctrl` `Shift` `-`     | Collapse all code blocks                                                          |\n| `Ctrl` `Shift` `+`     | Expand all code blocks                                                            |\n| `Ctrl` `D`             | Duplicate the current line or selection                                           |\n| `Ctrl` `Space`         | Basic code completion                                                             |\n| `Ctrl` `Shift` `Space` | Smart code completion, filters the list of methods and variables by expected type |\n| `Ctrl` `Shift` `Enter` | Complete statement                                                                |\n| `Ctrl` `Q`             | Quick documentation lookup                                                        |\n| `Ctrl` `P`             | Show parameters for selected method                                               |\n| `Ctrl` `B`             | Go to declaration, directly                                                       |\n| `Ctrl` `Alt` `B`       | Go to implementations                                                             |\n| `Ctrl` `U`             | Go to super-method or super-class                                                 |\n| `Ctrl` `Shift` `I`     | Open quick definition lookup                                                      |\n| `Alt` `1`              | Toggle project tool window visibility                                             |\n| `F11`                  | Toggle bookmark                                                                   |\n| `Ctrl` `F11`           | Toggle bookmark with mnemonic                                                     |\n| `Ctrl` `/`             | Comment or uncomment with line comment                                            |\n| `Ctrl` `Shift` `/`     | Comment or uncomment with block comment                                           |\n| `Ctrl` `W`             | Select successively increasing code blocks                                        |\n| `Ctrl` `Shift` `W`     | Decrease current selection to previous state                                      |\n| `Ctrl` `[`             | Move to code block start                                                          |\n| `Ctrl` `]`             | Move to code block end                                                            |\n| `Ctrl` `Shift` `[`     | Select to the code block start                                                    |\n| `Ctrl` `Shift` `]`     | Select to the code block end                                                      |\n| `Ctrl` `Del`           | Delete to the end of a word                                                       |\n| `Ctrl` `Backspace`     | Delete to the start of a word                                                     |\n| `Ctrl` `Alt` `O`       | Optimize imports                                                                  |\n| `Alt` `Enter`          | Project quick fix, show intention actions and quick fixes                         |\n| `Ctrl` `Alt` `L`       | Reformat code                                                                     |\n| `Ctrl` `Alt` `I`       | Auto-indent lines                                                                 |\n| `Tab`                  | Indent lines                                                                      |\n| `Shift` `Tab`          | Unindent lines                                                                    |\n| `Ctrl` `Shift` `J`     | Smart line join                                                                   |\n| `Ctrl` `Enter`         | Smart line split                                                                  |\n| `Shift` `Enter`        | Start new line                                                                    |\n| `F2`                   | Next highlighted error                                                            |\n| `Shift` `F2`           | Previous highlighted error                                                        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `Insert`",
+                  "action": "Generate code, e.g. getters, setters, constructors, new class"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Override methods"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Implement methods"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `T`",
+                  "action": "Surround with if...else, try...catch, etc"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Delete line at caret"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Collapse the current code block"
+                },
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Expand the current code block"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `-`",
+                  "action": "Collapse all code blocks"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `+`",
+                  "action": "Expand all code blocks"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Duplicate the current line or selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Space`",
+                  "action": "Basic code completion"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Space`",
+                  "action": "Smart code completion, filters the list of methods and variables by expected type"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Enter`",
+                  "action": "Complete statement"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Quick documentation lookup"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Show parameters for selected method"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Go to declaration, directly"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `B`",
+                  "action": "Go to implementations"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Go to super-method or super-class"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `I`",
+                  "action": "Open quick definition lookup"
+                },
+                {
+                  "shortcut": "`Alt` `1`",
+                  "action": "Toggle project tool window visibility"
+                },
+                {
+                  "shortcut": "`F11`",
+                  "action": "Toggle bookmark"
+                },
+                {
+                  "shortcut": "`Ctrl` `F11`",
+                  "action": "Toggle bookmark with mnemonic"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Comment or uncomment with line comment"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `/`",
+                  "action": "Comment or uncomment with block comment"
+                },
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Select successively increasing code blocks"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `W`",
+                  "action": "Decrease current selection to previous state"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Move to code block start"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Move to code block end"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `[`",
+                  "action": "Select to the code block start"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `]`",
+                  "action": "Select to the code block end"
+                },
+                {
+                  "shortcut": "`Ctrl` `Del`",
+                  "action": "Delete to the end of a word"
+                },
+                {
+                  "shortcut": "`Ctrl` `Backspace`",
+                  "action": "Delete to the start of a word"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `O`",
+                  "action": "Optimize imports"
+                },
+                {
+                  "shortcut": "`Alt` `Enter`",
+                  "action": "Project quick fix, show intention actions and quick fixes"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `L`",
+                  "action": "Reformat code"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `I`",
+                  "action": "Auto-indent lines"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Indent lines"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Unindent lines"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Smart line join"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Smart line split"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Start new line"
+                },
+                {
+                  "shortcut": "`F2`",
+                  "action": "Next highlighted error"
+                },
+                {
+                  "shortcut": "`Shift` `F2`",
+                  "action": "Previous highlighted error"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Viewing Layouts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Viewing Layouts",
+              "body": "| Shortcut           | Action        |\n| ------------------ | ------------- |\n| `Ctrl` `+`         | Zoom in       |\n| `Ctrl` `-`         | Zoom out      |\n| `Ctrl` `0`         | Fit to screen |\n| `Ctrl` `Shift` `1` | Actual size   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Fit to screen"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `1`",
+                  "action": "Actual size"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Layout Editor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Layout Editor",
+              "body": "| Shortcut          | Action                                       |\n| ----------------- | -------------------------------------------- |\n| `B`               | Toggle between Design and Blueprint modes    |\n| `O`               | Toggle between Portrait and Landscaope modes |\n| `D`               | Toggle devices                               |\n| `R`               | Force refresh                                |\n| `E`               | Toggle render errors panel                   |\n| `Del`             | Delete constraints                           |\n| `Ctrl` `+`        | Zoom in                                      |\n| `Ctrl` `-`        | Zoom out                                     |\n| `Ctrl` `0`        | Zoom to fit                                  |\n| `Ctrl` `B`        | Go to XML                                    |\n| `Ctrl` `A`        | Select all components                        |\n| `Shift` `(click)` | Select multiple components                   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`B`",
+                  "action": "Toggle between Design and Blueprint modes"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Toggle between Portrait and Landscaope modes"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Toggle devices"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Force refresh"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Toggle render errors panel"
+                },
+                {
+                  "shortcut": "`Del`",
+                  "action": "Delete constraints"
+                },
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Zoom to fit"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Go to XML"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all components"
+                },
+                {
+                  "shortcut": "`Shift` `(click)`",
+                  "action": "Select multiple components"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation Editor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation Editor",
+              "body": "| Shortcut         | Action                       |\n| ---------------- | ---------------------------- |\n| `Ctrl` `+`       | Zoom in                      |\n| `Ctrl` `-`       | Zoom out                     |\n| `Ctrl` `0`       | Zoom to fit                  |\n| `Ctrl` `B`       | Go to XML                    |\n| `E`              | Toggle render errors panel   |\n| `Ctrl` `G`       | Group into a nested graph    |\n| `Tab`            | Cycle through destinations   |\n| `Ctrl` `A`       | Select all destinations      |\n| `Ctrl` `(click)` | Select multiple destinations |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Zoom to fit"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Go to XML"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Toggle render errors panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Group into a nested graph"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Cycle through destinations"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all destinations"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click)`",
+                  "action": "Select multiple destinations"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Build and Run",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Build and Run",
+              "body": "| Shortcut           | Action                             |\n| ------------------ | ---------------------------------- |\n| `Ctrl` `F9`        | Build                              |\n| `Shift` `F10`      | Build and run                      |\n| `Ctrl` `F10`       | Apply changes and restart activity |\n| `Ctrl` `Alt` `F10` | Apply code changes                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F9`",
+                  "action": "Build"
+                },
+                {
+                  "shortcut": "`Shift` `F10`",
+                  "action": "Build and run"
+                },
+                {
+                  "shortcut": "`Ctrl` `F10`",
+                  "action": "Apply changes and restart activity"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `F10`",
+                  "action": "Apply code changes"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Debugging",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Debugging",
+              "body": "| Shortcut            | Action              |\n| ------------------- | ------------------- |\n| `Shift` `F9`        | Debug               |\n| `F8`                | Step over           |\n| `F7`                | Step into           |\n| `Shift` `F7`        | Smart step into     |\n| `Shift` `F8`        | Step out            |\n| `Alt` `F9`          | Run to cursor       |\n| `Alt` `F8`          | Evaluate expression |\n| `F9`                | Resume program      |\n| `Ctrl` `F8`         | Toggle breakpoint   |\n| `Ctrl` `Shift` `F8` | View breakpoints    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `F9`",
+                  "action": "Debug"
+                },
+                {
+                  "shortcut": "`F8`",
+                  "action": "Step over"
+                },
+                {
+                  "shortcut": "`F7`",
+                  "action": "Step into"
+                },
+                {
+                  "shortcut": "`Shift` `F7`",
+                  "action": "Smart step into"
+                },
+                {
+                  "shortcut": "`Shift` `F8`",
+                  "action": "Step out"
+                },
+                {
+                  "shortcut": "`Alt` `F9`",
+                  "action": "Run to cursor"
+                },
+                {
+                  "shortcut": "`Alt` `F8`",
+                  "action": "Evaluate expression"
+                },
+                {
+                  "shortcut": "`F9`",
+                  "action": "Resume program"
+                },
+                {
+                  "shortcut": "`Ctrl` `F8`",
+                  "action": "Toggle breakpoint"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F8`",
+                  "action": "View breakpoints"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Refactoring",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Refactoring",
+              "body": "| Shortcut         | Action            |\n| ---------------- | ----------------- |\n| `F5`             | Copy              |\n| `F6`             | Move              |\n| `Alt` `Del`      | Safe delete       |\n| `Shift` `F6`     | Rename            |\n| `Ctrl` `F6`      | Change signature  |\n| `Ctrl` `Alt` `N` | Inline            |\n| `Ctrl` `Alt` `M` | Extract method    |\n| `Ctrl` `Alt` `V` | Extract variable  |\n| `Ctrl` `Alt` `F` | Extract field     |\n| `Ctrl` `Alt` `C` | Extract constant  |\n| `Ctrl` `Alt` `P` | Extract parameter |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F5`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Move"
+                },
+                {
+                  "shortcut": "`Alt` `Del`",
+                  "action": "Safe delete"
+                },
+                {
+                  "shortcut": "`Shift` `F6`",
+                  "action": "Rename"
+                },
+                {
+                  "shortcut": "`Ctrl` `F6`",
+                  "action": "Change signature"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `N`",
+                  "action": "Inline"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `M`",
+                  "action": "Extract method"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `V`",
+                  "action": "Extract variable"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `F`",
+                  "action": "Extract field"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `C`",
+                  "action": "Extract constant"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `P`",
+                  "action": "Extract parameter"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Version Control",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Version Control",
+              "body": "| Shortcut              | Action                  |\n| --------------------- | ----------------------- |\n| `Ctrl` `K`            | Commit project to VCS   |\n| `Ctrl` `T`            | Update project from VCS |\n| `Alt` `Shift` `C`     | View recent changes     |\n| `Alt` <code>\\`</code> | Open VCS pop-up         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Commit project to VCS"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Update project from VCS"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `C`",
+                  "action": "View recent changes"
+                },
+                {
+                  "shortcut": "`Alt` <code>\\`</code>",
+                  "action": "Open VCS pop-up"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Android Studio](https://developer.android.com/studio/intro/keyboard-shortcuts)\n  _(developer.android.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

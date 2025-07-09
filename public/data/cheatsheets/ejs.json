@@ -1,0 +1,331 @@
+{
+  "id": "ejs",
+  "metadata": {
+    "title": "EJS",
+    "date": "2023-04-07T00:00:00.000Z",
+    "background": "bg-[#b4ca65]",
+    "tags": [
+      "EJS",
+      "Frontend",
+      "Framework"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "EJS(Embedded JavaScript) is a simple templating language that lets you generate HTML markup with plain JavaScript.",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Get Started { .cols-3 }",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Hello world",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hello world",
+              "body": "",
+              "footer": "#### install\n\n```shell\n$ npm install ejs\n```\n\n#### hello.ejs\n\n<!-- prettier-ignore -->\n```html\n<% if (user.email) { %>\n  <h1><%= user.email %></h1>\n<% } %>\n```\n\n#### CLI\n\n```shell\n$ ejs hello.ejs -o hello.html\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Render with Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Render with Data",
+              "body": "```js\nlet ejs = require('ejs');\n\nlet people = ['geddy', 'neil', 'alex'];\nlet tpl = '<%= people.join(\", \"); %>';\n\nlet html = ejs.render(tpl, { people: people });\nconsole.log(html);\n```",
+              "footer": "Pass EJS a template string and some data.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Browser Support",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Browser Support",
+              "body": "```html\n<script src=\"https://unpkg.com/ejs\"></script>\n<script>\n  let people = ['geddy', 'neil', 'alex'];\n  let html = ejs.render('<%= people.join(\", \"); %>', { people: people });\n  console.log(html);\n</script>\n```",
+              "footer": "Use ejs in a script tag.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "|              |                                  |\n| ------------ | -------------------------------- |\n| `<%= var %>` | Prints the value of the variable |\n| `<%- var %>` | Prints without HTML escaping     |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CLI",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CLI",
+              "body": "```shell\n$ ejs hello.ejs -o hello.html\n```",
+              "footer": "Feed it a template file and a data file\n```shell\n$ ejs hello.ejs -f data.json -o hello.html\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```html\n<%# This line will denote a comment %>\n```",
+              "footer": "<!-- prettier-ignore -->\n```html\n<%# This is a multi-line EJS comment.\nIt can span multiple lines,\nbut will not be displayed\nin the final HTML output.\n%>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Method",
+              "body": "```js\nlet ejs = require('ejs');\nlet template = ejs.compile(str, options);\n\ntemplate(data);\n// => Rendered HTML string\n\nejs.render(str, data, options);\n// => Rendered HTML string\n\nejs.renderFile(filename, data, options, function (err, str) {\n  // str => Rendered HTML string\n});\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Including Files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Including Files",
+              "body": "```html\n<%- include('partials/navbar.ejs') %>\n```",
+              "footer": "Include a template with data:\n```html\n<% include('header', { title: 'My Page' }) %>\n```\n<!-- prettier-ignore -->\n```html\n<ul>\n<% users.forEach(function(user){ %>\n<%- include('item', {user: user}); %>\n<% }); %>\n</ul>\n```\nTo include a template, needs a file name option, paths are relative",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Docs {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Conditionals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conditionals",
+              "body": "```html\n<% if (userLoggedIn) { %>\n  <p>Welcome, <%= username %>!</p>\n<% } else { %>\n  <p>Please log in.</p>\n<% } %>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Using loops",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using loops",
+              "body": "```html\n<ul>\n  <% for(i=0; i < users.length; i++) { %>\n    <li><%= users[i].username %></li>\n  <% } %>\n</ul>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Custom delimiters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom delimiters",
+              "body": "```js\nlet ejs = require('ejs'),\n  users = ['geddy', 'neil', 'alex'];\n\n// Just one template\nejs.render('<?= users.join(\" | \"); ?>', { users: users }, { delimiter: '?' });\n// => 'geddy | neil | alex'\n\n// Or globally\nejs.delimiter = '$';\nejs.render('<$= users.join(\" | \"); $>', { users: users });\n// => 'geddy | neil | alex'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Caching",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Caching",
+              "body": "```js\nlet ejs = require('ejs'),\n  LRU = require('lru-cache');\n\n// LRU cache with 100-item limit\nejs.cache = LRU(100);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Custom file loader",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom file loader",
+              "body": "```js\nlet ejs = require('ejs');\nlet myFileLoader = function (filePath) {\n  return 'myFileLoader: ' + fs.readFileSync(filePath);\n};\n\nejs.fileLoader = myFileLoader;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Layouts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Layouts",
+              "body": "```html\n<%- include('header'); -%>\n<h1>\n  Title\n</h1>\n<p>\n  My page\n</p>\n<%- include('footer'); -%>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Client-side support {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Example",
+              "body": "```html\n<div id=\"output\"></div>\n<script src=\"ejs.min.js\"></script>\n<script>\n  let people = ['geddy', 'neil', 'alex'],\n    html = ejs.render('<%= people.join(\", \"); %>', { people: people });\n  // With jQuery:\n  $('#output').html(html);\n  // Vanilla JS:\n  document.getElementById('output').innerHTML = html;\n</script>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Caveats",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Caveats",
+              "body": "```js\nlet str = \"Hello <%= include('file', {person: 'John'}); %>\",\n  fn = ejs.compile(str, { client: true });\n\n// include callback\nfn(data, null, function (path, d) {\n  // path -> 'file'\n  // d -> {person: 'John'}\n  // Put your code here\n  // Return the contents of file as a string\n}); // returns rendered string\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Options {.cols-1}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Options list",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Options list",
+              "body": "| Option             | Description                                                                                                                                                                                                                   |\n| ------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| cache              | Compiled functions are cached, requires filename                                                                                                                                                                              |\n| filename           | Used by cache to key caches, and for includes                                                                                                                                                                                 |\n| root               | Set project root for includes with an absolute path (e.g. `/file.ejs`). Can be an array to try to resolve include from multiple directories.                                                                                  |\n| views              | An array of paths to use when resolving includes with relative paths.                                                                                                                                                         |\n| context            | Function execution context                                                                                                                                                                                                    |\n| compileDebug       | When false, no debug instrumentation is compiled                                                                                                                                                                              |\n| client             | Returns standalone compiled function                                                                                                                                                                                          |\n| delimiter          | Character to use for inner delimiter, by default `%`                                                                                                                                                                          |\n| openDelimiter      | Character to use for opening delimiter, by default `<`                                                                                                                                                                        |\n| closeDelimiter     | Character to use for closing delimiter, by default `>`                                                                                                                                                                        |\n| debug              | Outputs generated function body                                                                                                                                                                                               |\n| strict             | When set to `true`, generated function is in strict mode                                                                                                                                                                      |\n| \\_with             | Whether or not to use with() {} constructs. If `false`, then the locals will be stored in the locals object. (Implies `--strict`)                                                                                             |\n| localsName         | Name to use for the object storing local variables when not using with defaults to `locals`                                                                                                                                   |\n| rmWhitespace       | Remove all safe-to-remove whitespace, including leading and trailing whitespace. It also enables a safer version of `-%> `line slurping for all scriptlet tags (it does not strip new lines of tags in the middle of a line). |\n| escape             | The escaping function used with `<%=` construct. It is used in rendering and is `.toString()`ed in the generation of client functions. (By default escapes XML).                                                              |\n| outputFunctionName | Set to a string (e.g., 'echo' or 'print') for a function to print output inside scriptlet tags.                                                                                                                               |\n| async              | When true, EJS will use an async function for rendering. (Depends on async/await support in the JS runtime.                                                                                                                   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Tags {.cols-1}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Tags list",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tags list",
+              "body": "| Tag               | Description                                                          |\n| ----------------- | :------------------------------------------------------------------- |\n| `<%`              | 'Scriptlet' tag, for control-flow, no output                         |\n| <code><%\\_</code> | 'Whitespace Slurping' Scriptlet tag, strips all whitespace before it |\n| `<%=`             | Outputs the value into the template (HTML escaped)                   |\n| `<%-`             | Outputs the unescaped value into the template                        |\n| `<%#`             | Comment tag, no execution, no output                                 |\n| `<%%`             | Outputs a literal `<%`                                               |\n| `%>`              | Plain ending tag                                                     |\n| `-%>`             | Trim-mode ('newline slurp') tag, trims following newline             |\n| <code>\\_%></code> | 'Whitespace Slurping' ending tag, removes all whitespace after it    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "CLI {.cols-1}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "CLI list",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CLI list",
+              "body": "```shell\n$ ejs -p [ -c ] ./template_file.ejs -o ./output.html\n$ ejs ./test/fixtures/user.ejs name=Lerxst\n$ ejs -n -l _ ./some_template.ejs -f ./data_file.json\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

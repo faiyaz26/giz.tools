@@ -1,0 +1,196 @@
+{
+  "id": "graphql",
+  "metadata": {
+    "title": "GraphQL",
+    "date": "2021-07-15T20:51:44.000Z",
+    "background": "bg-[#cc44a2]",
+    "tags": [
+      "query",
+      "API"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This quick reference cheat sheet provides a brief overview of GraphQL.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Overview",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Overview",
+              "body": "- An alternative approach to RESTful APIs\n- GraphQL is a query language for APIs\n- Easily describe the shape of the GraphQL API using clear shared terms.\n- Clients issue queries/mutations to read and update data\n- GraphQL syntax can express complex entity relations\n- Libraries to implement GraphQL in [different languages](https://graphql.org/code/)\n\n[GraphQL](https://graphql.org/) {.link-arrow}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Schema",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Schema",
+              "body": "|                |                                  |\n| -------------- | -------------------------------- |\n| `schema`       | GraphQL schema definition        |\n| `query`        | Read and traverse data           |\n| `mutation`     | Modify data or trigger an action |\n| `subscription` | Run a query when an event occurs |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Built-in Scalar Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Built-in Scalar Types",
+              "body": "|           |                                              |\n| --------- | -------------------------------------------- |\n| `Int`     | Signed 32‐bit integer                        |\n| `Float`   | Signed double-precision floating-point value |\n| `String`  | UTF‐8 character sequence                     |\n| `Boolean` | true or false                                |\n| `ID`      | A Unique identifier                          |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type Definitions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type Definitions",
+              "body": "|             |                   |\n| ----------- | ----------------- |\n| `scalar`    | Scalar Type       |\n| `type`      | Object Type       |\n| `interface` | Interface Type    |\n| `union`     | Union Type        |\n| `enum`      | Enum Type         |\n| `input`     | Input Object Type |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type Modifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type Modifiers",
+              "body": "|              |                                   |\n| ------------ | --------------------------------- |\n| `String`     | Nullable String                   |\n| `String!`    | Non-null String                   |\n| `[String]`   | List of nullable Strings          |\n| `[String]!`  | Non-null list of nullable Strings |\n| `[String!]!` | Non-null list of non-null Strings |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Input Arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Input Arguments",
+              "body": "",
+              "footer": "#### Basic Input\n\n```js\ntype Query {\n    users(limit: Int): [User]\n}\n```\n\n#### Input with default value\n\n```js\ntype Query {\n    users(limit: Int = 10): [User]\n}\n```\n\n#### Input with multiple arguments\n\n```js\ntype Query {\n    users(limit: Int, sort: String): [User]\n}\n```\n\n#### Input with multiple arguments and default values\n\n```js {.wrap}\ntype Query {\n    users(limit: Int = 10, sort: String): [User]\n}\ntype Query {\n    users(limit: Int, sort: String = \"asc\"): [User]\n}\ntype Query {\n    users(limit: Int = 10, sort: String = \"asc\"): [User]\n}\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Input Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Input Types",
+              "body": "```js\ninput ListUsersInput {\n    limit: Int\n    since_id: ID\n}\n```",
+              "footer": "```js\ntype Mutation {\nusers(params: ListUsersInput): [User]!\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Custom Scalars",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom Scalars",
+              "body": "```js\nscalar Url\ntype User {\n    name: String\n    homepage: Url\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Interfaces",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Interfaces",
+              "body": "```js\ninterface Foo {\n    is_foo: Boolean\n}\ninterface Goo {\n    is_goo: Boolean\n}\ntype Bar implements Foo {\n    is_foo: Boolean\n    is_bar: Boolean\n}\ntype Baz implements Foo, Goo {\n    is_foo: Boolean\n    is_goo: Boolean\n    is_baz: Boolean\n}\n```",
+              "footer": "Object implementing one or more Interfaces",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Unions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Unions",
+              "body": "```js\ntype Foo {\n    name: String\n}\ntype Bar {\n    is_bar: String\n}\nunion SingleUnion = Foo\nunion MultipleUnion = Foo | Bar\ntype Root {\n    single: SingleUnion\n    multiple: MultipleUnion\n}\n```",
+              "footer": "Union of one or more Objects",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Enums",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Enums",
+              "body": "",
+              "footer": "```js {.wrap}\nenum USER_STATE {\n    NOT_FOUND\n    ACTIVE\n    INACTIVE\n    SUSPENDED\n}\ntype Root {\n    stateForUser(userID: ID!): USER_STATE!\n    users(state: USER_STATE, limit: Int = 10): [User]\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [GraphQL Schema Language Cheat Sheet](https://github.com/sogko/graphql-schema-language-cheat-sheet) _(github.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

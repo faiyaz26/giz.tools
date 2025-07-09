@@ -1,0 +1,781 @@
+{
+  "id": "rust",
+  "metadata": {
+    "title": "Rust",
+    "date": "2022-01-01T11:51:44.000Z",
+    "background": "bg-black",
+    "tags": null,
+    "categories": [
+      "Programming"
+    ],
+    "intro": "The Rust quick reference cheat sheet that aims at providing help on writing basic syntax and methods.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Hello_World.rs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hello_World.rs",
+              "body": "```rust\nfn main() {\n    println!(\"Hello, World!\");\n}\n```",
+              "footer": "#### Compiling and Running\n\n```shell\n$ rustc Hello_World.rs\n$ ./Hello_World\nHello, World!\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Primitive types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Primitive types",
+              "body": "|                           |                                 |\n| ------------------------- | :------------------------------ |\n| `bool`                    | Boolean (`true` _/_ `false`)    |\n| `char`                    | character                       |\n| `f32`, `f64`              | 32-bits, 64-bits floats         |\n| `i64`, `i32`, `i16`, `i8` | signed 16- ... integers         |\n| `u64`, `u32`, `u16`, `u8` | unsigned 16-bits, ... integers  |\n| `isize`                   | pointer-sized signed integers   |\n| `usize`                   | pointer-sized unsigned integers |\n\nSee: [Rust Types](#rust-types)",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Formatting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Formatting",
+              "body": "",
+              "footer": "```rust {.wrap}\n// Single Placeholder\nprintln!(\"{}\", 1);\n\n// Multiple Placeholder\nprintln!(\"{} {}\", 1, 3);\n\n// Positional Arguments\nprintln!(\n    \"{0} is {1} {2}, also {0} is a {3} programming language\",\n    \"Rust\", \"cool\", \"language\", \"safe\"\n);\n\n// Named Arguments\nprintln!(\n    \"{country} is a diverse nation with unity.\",\n    country = \"India\"\n);\n\n// Placeholder traits :b for binary, :0x is for hex and :o is octal\nprintln!(\"Let us print 76 is binary which is {:b} , and hex equivalent is {:0x} and octal equivalent is {:o}\", 76, 76, 76);\n\n// Debug Trait\nprintln!(\n    \"Print whatever we want to here using debug trait {:?}\",\n    (76, 'A', 90)\n);\n\n// New Format Strings in 1.58\nlet x = \"world\";\nprintln!(\"Hello {x}!\");\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Printing Styles",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Printing Styles",
+              "body": "```rust\n// Prints the output\nprint!(\"Hello World\\n\");\n\n// Appends a new line after printing\nprintln!(\"Appending a new line\");\n\n// Prints as an error\neprint!(\"This is an error\\n\");\n\n// Prints as an error with new line\neprintln!(\"This is an error with new line\");\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```rust\n// Initializing and declaring a variable\nlet some_variable = \"This_is_a_variable\";\n\n// Making a variable mutable\nlet mut mutable_variable = \"Mutable\";\n\n// Assigning multiple variables\nlet (name, age) = (\"ElementalX\", 20);\n\n// (Global) constant\nconst SCREAMING_SNAKE_CASE: i64 = 9;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```rust\n// Line Comments\n/*.............Block Comments */\n/// Outer doc comments\n//! Inner doc comments\n```",
+              "footer": "See: [Comment](https://doc.rust-lang.org/reference/comments.html)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "```rust\nfn test() {\n    println!(\"This is a function!\");\n}\n\nfn main() {\n    test();\n}\n```",
+              "footer": "See: [Functions](#rust-functions)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Rust Types",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Integer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Integer",
+              "body": "```rust\nlet mut a: u32 = 8;\nlet b: u64 = 877;\nlet c: i64 = 8999;\nlet d = -90;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Floating-Point",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Floating-Point",
+              "body": "```rust\nlet mut sixty_bit_float: f64 = 89.90;\nlet thirty_two_bit_float: f32 = 7.90;\nlet just_a_float = 69.69;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Boolean",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Boolean",
+              "body": "",
+              "footer": "```rust {.wrap}\nlet true_val: bool = true;\nlet false_val: bool = false;\nlet just_a_bool = true;\nlet is_true = 8 < 5; // => false\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Character",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Character",
+              "body": "```rust\nlet first_letter_of_alphabet = 'a';\nlet explicit_char: char = 'F';\nlet implicit_char = '8';\nlet emoji = \"\\u{1f600}\"; // => 😀\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String Literal",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String Literal",
+              "body": "",
+              "footer": "```rust {.wrap}\nlet community_name = \"AXIAL\";\nlet no_of_members: &str = \"ten\";\n\nprintln!(\"The name of the community is {community_name} and it has {no_of_members} members\");\n```\n\nSee: [Strings](#rust-strings)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays",
+              "body": "```rust\n┌─────┬─────┬─────┬─────┬─────┬─────┐\n| 92  | 97  | 98  | 99  | 98  | 94  |\n└─────┴─────┴─────┴─────┴─────┴─────┘\n   0     1     2     3     4     5\n```",
+              "footer": "```rust\nlet array: [i64; 6] = [92, 97, 98, 99, 98, 94];\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multi-Dimensional Array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multi-Dimensional Array",
+              "body": "```rust\nj0   j1   j2   j3   j4   j5\n   ┌────┬────┬────┬────┬────┬────┐\ni0 | 1  | 2  | 3  | 4  | 5  | 6  |\n   ├────┼────┼────┼────┼────┼────┤\ni1 | 6  | 5  | 4  | 3  | 2  | 1  |\n   └────┴────┴────┴────┴────┴────┘\n```",
+              "footer": "```rust\nlet array: [[i64; 6]; 2] = [\n[1, 2, 3, 4, 5, 6],\n[6, 5, 4, 3, 2, 1]\n];\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mutable Array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutable Array",
+              "body": "```rust\nlet mut array: [i32; 3] = [2, 6, 10];\n\narray[1] = 4;\narray[2] = 6;\n```",
+              "footer": "Use the `mut` keyword to make it mutable.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Slices",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Slices",
+              "body": "```rust\nlet mut array: [i64; 4] = [1, 2, 3, 4];\nlet mut slices: &[i64] = &array[0..3]; // Lower range is inclusive and upper range is exclusive\n\nprintln!(\"The elements of the slices are : {slices:?}\");\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Vectors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Vectors",
+              "body": "```rust\nlet some_vector = vec![1, 2, 3, 4, 5];\n```",
+              "footer": "A vector is declared using the `vec!` macro.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tuples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tuples",
+              "body": "```rust\nlet tuple = (1, 'A', \"Cool\", 78, true);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Rust Strings",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "String Literal",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String Literal",
+              "body": "```rust\nlet cs: &str = \"cheat sheet\";\n\n// => Share cheat sheet for developers\nprintln!(\"Share {cs} for developers\");\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String Object",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String Object",
+              "body": "```rust\n// Creating an empty string object\nlet my_string = String::new();\n\n// Converting to a string object\nlet S_string = a_string.to_string()\n\n// Creating an initialized string object\nlet lang = String::from(\"Rust\");\nprintln!(\"First language is {lang}\");\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".capacity()",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".capacity()",
+              "body": "```rust\nlet rand = String::from(\"Random String\");\nrand.capacity() // => 13\n```",
+              "footer": "Calculates the capacity of the string in bytes.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".contains()",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".contains()",
+              "body": "```rust\nlet name = String::from(\"ElementalX\");\nname.contains(\"Element\") // => true\n```",
+              "footer": "Checks if the substring is contained inside the original string or not.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pushing a single character",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pushing a single character",
+              "body": "```rust\nlet mut half_text = String::from(\"Hal\");\nhalf_text.push('f'); // => Half\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pushing an entire String",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pushing an entire String",
+              "body": "```rust\nlet mut hi = String::from(\"Hey there...\");\nhi.push_str(\"How are you doing??\");\n\n// => Hey there...How are you doing??\nprintln!(\"{hi}\");\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Rust Operators",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Comparison Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comparison Operators",
+              "body": "```rust\nlet (e, f) = (1, 100);\n\nlet greater = f > e;        // => true\nlet less = f < e;           // => false\nlet greater_equal = f >= e; // => true\nlet less_equal = e <= f;    // => true\nlet equal_to = e == f;      // => false\nlet not_equal_to = e != f;  // => true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arithmetic Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arithmetic Operators",
+              "body": "",
+              "footer": "|          |                                            |\n| -------- | :----------------------------------------- |\n| `a +  b` | `a` is added to `b`                        |\n| `a -  b` | `b` is subtracted from `a`                 |\n| `a /  b` | `a` is divided by `b`                      |\n| `a % b`  | Gets remainder of `a` by dividing with `b` |\n| `a * b`  | `a` is multiplied with `b`                 |\n\n```rust {.wrap}\nlet (a, b) = (4, 5);\n\nlet sum: i32 = a + b;            // => 9\nlet subtractions: i32 = a - b;   // => -1\nlet multiplication: i32 = a * b; // => 20\nlet division: i32 = a / b;       // => 0\nlet modulus: i32 = a % b;        // => 4\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bitwise Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bitwise Operators",
+              "body": "",
+              "footer": "| Operator            | Description             |\n| ------------------- | ----------------------- |\n| `g & h`             | Binary AND              |\n| <code>g \\| h</code> | Binary OR               |\n| `g ^ h`             | Binary XOR              |\n| `!g`                | Binary one's complement |\n| `g << h`            | Binary shift left       |\n| `g >> h`            | Binary shift right      |\n\n```rust {.wrap}\nlet (g, h) = (0x1, 0x2);\n\nlet bitwise_and = g & h;  // => 0\nlet bitwise_or = g | h;   // => 3\nlet bitwise_xor = g ^ h;  // => 3\nlet right_shift = g >> 2; // => 0\nlet left_shift = h << 4;  // => 32\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logical Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logical Operators",
+              "body": "```rust\nlet (c, d) = (true, false);\n\nlet and = c && d;  // => false\nlet or = c || d;   // => true\nlet not = !c;      // => false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Compound Assignment Operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Compound Assignment Operator",
+              "body": "```rust\nlet mut k = 9;\nlet mut l = k;\n```",
+              "footer": "| Operator             | Description                             |\n| -------------------- | --------------------------------------- |\n| `k += l`             | Add a value and assign, then k=9        |\n| `k -= l`             | Substrate a value and assign, then k=18 |\n| `k /= l`             | Divide a value and assign, then k=9     |\n| `k *= l`             | Multiply a value and assign, then k=81  |\n| <code>k \\|= l</code> | Bitwise OR and assign, then k=89        |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Rust Flow Control",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "If Expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If Expression",
+              "body": "```rust\nlet case1: i32 = 81;\nlet case2: i32 = 82;\n\nif case1 < case2 {\n  println!(\"case1 is greater than case2\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "If...Else Expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If...Else Expression",
+              "body": "```rust\nlet case3 = 8;\nlet case4 = 9;\n\nif case3 >= case4 {\n    println!(\"case3 is better than case4\");\n} else {\n    println!(\"case4 is greater than case3\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "If...Else...if...Else Expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If...Else...if...Else Expression",
+              "body": "```rust\nlet foo = 12;\nlet bar = 13;\n\nif foo == bar {\n    println!(\"foo is equal to bar\");\n} else if foo < bar {\n    println!(\"foo less than bar\");\n} else if foo != bar {\n    println!(\"foo is not equal to bar\");\n} else {\n    println!(\"Nothing\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "If...Let Expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If...Let Expression",
+              "body": "```rust\nlet mut arr1: [i64; 3] = [1, 2, 3];\nif let [1, 2, _] = arr1 {\n    println!(\"Works with array\");\n}\n\nlet mut arr2: [&str; 2] = [\"one\", \"two\"];\nif let [\"Apple\", _] = arr2 {\n    println!(\"Works with str array too\");\n}\n```",
+              "footer": "```rust\nlet tuple_1 = (\"India\", 7, 90, 90.432);\nif let (_, 7, 9, 78.99) = tuple_1 {\nprintln!(\"Works with tuples too\");\n}\nlet tuple_2 = (9, 7, 89, 12, \"Okay\");\nif let (9, 7, 89, 12, blank) = tuple_2 {\nprintln!(\"Everything {blank} mate?\");\n}\nlet tuple_3 = (89, 90, \"Yes\");\nif let (9, 89, \"Yes\") = tuple_3 {\nprintln!(\"Pattern did match\");\n} else {\nprintln!(\"Pattern did not match\");\n}\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Match Expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Match Expression",
+              "body": "```rust\nlet day_of_week = 2;\nmatch day_of_week {\n    1 => {\n        println!(\"Its Monday my dudes\");\n    }\n    2 => {\n        println!(\"It's Tuesday my dudes\");\n    }\n    3 => {\n        println!(\"It's Wednesday my dudes\");\n    }\n    4 => {\n        println!(\"It's Thursday my dudes\");\n    }\n    5 => {\n        println!(\"It's Friday my dudes\");\n    }\n    6 => {\n        println!(\"It's Saturday my dudes\");\n    }\n    7 => {\n        println!(\"It's Sunday my dudes\");\n    }\n    _ => {\n        println!(\"Default!\")\n    }\n};\n```",
+              "footer": "",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Nested...If Expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Nested...If Expression",
+              "body": "```rust\nlet nested_conditions = 89;\nif nested_conditions == 89 {\n    let just_a_value = 98;\n    if just_a_value >= 97 {\n        println!(\"Greater than 97\");\n    }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "For Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For Loop",
+              "body": "```rust\nfor mut i in 0..15 {\n    i -= 1;\n    println!(\"The value of i is : {i}\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While Loop",
+              "body": "```rust\nlet mut check = 0;\nwhile check < 11 {\n    println!(\"Check is : {check}\");\n    check += 1;\n    println!(\"After incrementing: {check}\");\n\n    if check == 10 {\n        break; // stop while\n    }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loop keyword",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loop keyword",
+              "body": "```rust\nloop {\n    println!(\"hello world forever!\");\n}\n```",
+              "footer": "The infinite loop indicated.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break Statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break Statement",
+              "body": "```rust\nlet mut i = 1;\nloop {\n    println!(\"i is {i}\");\n    if i > 100 {\n        break;\n    }\n    i *= 2;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Continue Statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Continue Statement",
+              "body": "```rust\nfor (v, c) in (0..10 + 1).enumerate() {\n    println!(\"The {c} number loop\");\n    if v == 9 {\n        println!(\"Here we go continue?\");\n        continue;\n    }\n    println! {\"The value of v is : {v}\"};\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Rust Functions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic function",
+              "body": "```rust\nfn print_message() {\n    println!(\"Hello, CheatSheets.zip!\");\n}\n\nfn main() {\n    //Invoking a function in Rust.\n    print_message();\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pass by Value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pass by Value",
+              "body": "```rust\nfn main() {\n    let x: u32 = 10;\n    let y: u32 = 20;\n\n    // => 200\n    println!(\"Calc: {}\", cal_rect(x, y));\n}\n\nfn cal_rect(x: u32, y: u32) -> u32 {\n    x * y\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pass by Reference",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pass by Reference",
+              "body": "```rust\nfn main() {\n    let mut by_ref = 3; // => 3\n    power_of_three(&mut by_ref);\n    println!(\"{by_ref}\"); // => 9\n}\n\nfn power_of_three(by_ref: &mut i32) {\n    // de-referencing is important\n    *by_ref = *by_ref * *by_ref;\n    println!(\"{by_ref}\"); // => 9\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Returns",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Returns",
+              "body": "",
+              "footer": "```rust {.wrap}\nfn main() {\n    let (mut radius, mut pi) = (3.0, 3.14);\n    let (area, _perimeter) = calculate(\n        &mut radius,\n        &mut pi\n    );\n    println!(\"The area and the perimeter of the circle are: {area} & {_perimeter}\");\n}\n\nfn calculate(radius: &mut f64, pi: &mut f64) -> (f64, f64) {\n    let perimeter = 2.0 * *pi * *radius;\n    let area = *pi * *radius * *radius;\n    return (area, perimeter);\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays as Arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays as Arguments",
+              "body": "```rust\nfn main() {\n    let mut array: [i32; 5] = [1, 2, 3, 4, 6];\n    print_arrays(array);\n    println!(\"The elements: {array:?}\");\n}\n\nfn print_arrays(mut array: [i32; 5]) {\n    array[0] = 89;\n    array[1] = 90;\n    array[2] = 91;\n    array[3] = 92;\n    array[4] = 93;\n    println!(\"The elements: {array:?}\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Returning Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Returning Arrays",
+              "body": "```rust\nfn main() {\n    let mut arr: [i32; 5] = [2, 4, 6, 8, 10];\n    multiply(arr);\n    println!(\"The array is : {:?}\", multiply(arr));\n}\n\nfn multiply(mut arr: [i32; 5]) -> [i32; 5] {\n    arr[2] = 90;\n    for mut i in 0..5 {\n        arr[i] = arr[i] * arr[2];\n    }\n    return arr;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Misc",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Type Casting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type Casting",
+              "body": "```rust\nlet a_int = 90; // int\n// int to float\nlet mut type_cast = (a_int as f64);\n```",
+              "footer": "```rust\nlet original: char = 'I';\n// char to int => 73\nlet type_casted: i64 = original as i64;\n```\nTo perform type-casting in Rust one must use the `as` keyword.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Borrowing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Borrowing",
+              "body": "```rust\nlet mut foo = 4;\nlet mut borrowed_foo = &foo;\nprintln!(\"{borrowed_foo}\");\n```",
+              "footer": "```rust\nlet mut bar = 3;\nlet mut mutable_borrowed_bar = &mut bar;\nprintln!(\"{mutable_borrowed_bar}\");\n```\nHere borrowed value borrows the value from value one using `&` operator.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "De-referencing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "De-referencing",
+              "body": "```rust\nlet mut borrow = 10;\nlet deref = &mut borrow;\n\nprintln!(\"{}\", *deref);\n```",
+              "footer": "De-referencing in rust can be done using the `*` operator",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variable Scope",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variable Scope",
+              "body": "```rust\n{\n    // The scope limited to this braces\n    let a_number = 1;\n}\nprintln!(\"{a_number}\");\n```",
+              "footer": "This will produce error as the scope of the variable `a_number` ends at the braces",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [The Rust Document](https://doc.rust-lang.org/book/ch00-00-introduction.html) _(doc.rust-lang.org)_\n- [The Rust Reference](https://doc.rust-lang.org/reference/introduction.html) _(doc.rust-lang.org)_\n- [Rust Cheatsheet](https://phaiax.github.io/rust-cheatsheet/) _(phaiax.github.io)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

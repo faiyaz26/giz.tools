@@ -1,0 +1,394 @@
+{
+  "id": "jest",
+  "metadata": {
+    "title": "Jest Cheat Sheet",
+    "date": "2022-09-09T00:00:00.000Z",
+    "background": "bg-blue-500",
+    "description": "A complete cheat sheet on  Jest for testing React applications effectively.",
+    "tags": "React Testing Jest",
+    "categories": [
+      "Testing"
+    ],
+    "intro": "Jest is a JavaScript testing framework designed by Facebook. It works out of the box with modern JavaScript apps especially those built with React or Node.js. Its main goal is to simplify testing by providing all required features in one package test runner, assertion library, mocking, spies, coverage reports, and snapshot testing."
+  },
+  "sections": [
+    {
+      "title": "A Quick Overview to Jest",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Key Concepts Explained",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Key Concepts Explained",
+              "body": "- **`describe()`**: Used to group related test cases into a test suite.\n- **`test()` / `it()`**: Define a single test case. `it()` is just a BDD-style alias for `test()`.\n- **`expect()`**: Assertion library that checks whether a value meets expectations.\n- **`beforeEach()` / `afterEach()`**: Runs code before or after every test in a suite.\n- **`beforeAll()` / `afterAll()`**: Runs setup/teardown code once before or after all tests.\n- **`.only` / `.skip`**: Focus or ignore specific tests/suites.\n- **Snapshot testing**: Captures the rendered output and compares it across test runs.\n- **Mock functions**: Simulate function behavior or monitor how functions are called.\n- **Timer mocks**: Test time-based behavior like `setTimeout()` and `setInterval()`.\n- **Async testing**: Write tests that handle Promises or `async/await`.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "🚀 Quick Start",
+          "level": 3,
+          "cards": [
+            {
+              "title": "🚀 Quick Start",
+              "body": "```bash\nnpm install --save-dev jest babel-jest\n```",
+              "footer": "Add this to your `package.json`:\n```json\n\"scripts\": {\n\"test\": \"jest\"\n}\n```\nRun your tests:\n```bash\nnpm test -- --watch\n```\n📖 See: [Getting Started](https://jestjs.io/docs/getting-started)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "✍️ Writing Tests",
+      "level": 2,
+      "cards": [
+        {
+          "title": "✍️ Writing Tests",
+          "body": "```js\ndescribe('My work', () => {\n  test('works', () => {\n    expect(2).toEqual(2);\n  });\n});\n```",
+          "footer": "- **describe**: Group related tests.\n- **test** or **it**: Define individual test cases.\n- **expect**: Make assertions.\n🔄 `it()` is an alias for `test()`.",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🔧 Setup Hooks",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🔧 Setup Hooks",
+          "body": "```js\nbeforeEach(() => { ... });\nafterEach(() => { ... });\nbeforeAll(() => { ... });\nafterAll(() => { ... });\n```",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🎯 Focusing or Skipping Tests",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🎯 Focusing or Skipping Tests",
+          "body": "```js\ndescribe.only(...);\nit.only(...); // or fit()\n```",
+          "footer": "**Skipping tests:**\n```js\ndescribe.skip(...);\nit.skip(...); // or xit()\n```",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🏁 Optional CLI Flags",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🏁 Optional CLI Flags",
+          "body": "| Flag                  | Description                             |\n| --------------------- | --------------------------------------- |\n| `--coverage`          | Show test coverage summary              |\n| `--detectOpenHandles` | Detect unclosed handles (e.g., sockets) |\n| `--runInBand`         | Run tests serially (useful for CI)      |",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "✅ Expectations (Matchers)",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic",
+              "body": "```js\nexpect(value).not.toBe(value);\nexpect(value).toEqual(value);\nexpect(value).toBeTruthy();\n```",
+              "footer": "> Note: `toEqual` performs deep equality.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Snapshots",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Snapshots",
+              "body": "```js\nexpect(value).toMatchSnapshot();\nexpect(value).toMatchInlineSnapshot();\n```",
+              "footer": "> Inline snapshots require Prettier.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Errors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Errors",
+              "body": "```js\nexpect(fn).toThrow(error);\nexpect(fn).toThrowErrorMatchingSnapshot();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Booleans",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Booleans",
+              "body": "```js\nexpect(value).toBeFalsy();\nexpect(value).toBeNull();\nexpect(value).toBeTruthy();\nexpect(value).toBeUndefined();\nexpect(value).toBeDefined();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Numbers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Numbers",
+              "body": "```js\nexpect(value).toBeCloseTo(number, digits);\nexpect(value).toBeGreaterThan(number);\nexpect(value).toBeLessThanOrEqual(number);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Objects",
+              "body": "```js\nexpect(value).toBeInstanceOf(Class);\nexpect(value).toMatchObject(obj);\nexpect(value).toHaveProperty('key', value);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays/Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays/Strings",
+              "body": "```js\nexpect(value).toContain(item);\nexpect(value).toHaveLength(number);\nexpect(value).toMatch(/pattern/);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Custom Matchers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom Matchers",
+              "body": "```js\nexpect.extend(customMatchers);\nexpect.any(Constructor);\nexpect.assertions(1);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "⏱️ Async Tests",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Promises",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Promises",
+              "body": "```js\ntest('resolves correctly', () => {\n  return somePromise().then(data => {\n    expect(data).toEqual(...);\n  });\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Async/Await",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Async/Await",
+              "body": "```js\ntest('awaits correctly', async () => {\n  const result = await asyncFunc();\n  expect(result).toBe(...);\n});\n```",
+              "footer": "📖 See: [Jest Async Testing](https://jestjs.io/docs/asynchronous)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "📸 Snapshot Testing",
+      "level": 2,
+      "cards": [
+        {
+          "title": "📸 Snapshot Testing",
+          "body": "```js\nit('renders correctly', () => {\n  const output = something();\n  expect(output).toMatchSnapshot();\n});\n```",
+          "footer": "For React components:\n```js\nimport renderer from 'react-test-renderer';\nit('matches snapshot', () => {\nconst tree = renderer.create(<Component />).toJSON();\nexpect(tree).toMatchSnapshot();\n});\n```",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "⏲️ Timers",
+      "level": 2,
+      "cards": [
+        {
+          "title": "⏲️ Timers",
+          "body": "```js\njest.useFakeTimers();\n\nit('delays call', () => {\n  jest.runOnlyPendingTimers();\n  jest.runAllTimers();\n});\n```",
+          "footer": "📖 See: [Timer Mocks](https://jestjs.io/docs/timer-mocks)",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🧪 Mock Functions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Creating Mocks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Creating Mocks",
+              "body": "```js\nconst fn = jest.fn();\nconst squared = jest.fn((n) => n * n);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Assertions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Assertions",
+              "body": "```js\nexpect(fn).toHaveBeenCalled();\nexpect(fn).toHaveBeenCalledTimes(2);\nexpect(fn).toHaveBeenCalledWith(arg1, arg2);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Flexible Matchers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Flexible Matchers",
+              "body": "```js\nexpect(fn).toHaveBeenCalledWith(expect.any(String));\nexpect(fn).toHaveBeenCalledWith(expect.arrayContaining([1, 2]));\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Instances",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Instances",
+              "body": "```js\nconst MyClass = jest.fn();\nconst a = new MyClass();\nconst b = new MyClass();\nMyClass.mock.instances; // [a, b]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Call Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Call Data",
+              "body": "```js\nfn.mock.calls.length;\nfn.mock.calls[0][0];\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Return Values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Return Values",
+              "body": "```js\njest.fn().mockReturnValue('hello');\njest.fn().mockReturnValueOnce('hi');\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mock Implementations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mock Implementations",
+              "body": "```js\nconst fn = jest\n  .fn()\n  .mockImplementationOnce(() => 1)\n  .mockImplementationOnce(() => 2);\n```",
+              "footer": "This comprehensive guide helps you get started with Jest testing or use it like a pro. It pairs perfectly with the React Testing Library for a user-centric testing workflow.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

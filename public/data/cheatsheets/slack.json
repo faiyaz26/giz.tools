@@ -1,0 +1,416 @@
+{
+  "id": "slack",
+  "metadata": {
+    "title": "Slack",
+    "date": "2022-11-23T16:23:31.705Z",
+    "background": "bg-[#4d1a51]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 62 keyboard shortcuts found in Slack\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut             | Action                                         |\n| -------------------- | ---------------------------------------------- |\n| `Tab`                | Move focus to the next element                 |\n| `Shift` `Tab`        | Move focus to the previous element             |\n| `Up/Down`            | Move focus through messages in a channel or DM |\n| `F6`                 | Move focus to the next section                 |\n| `Shift` `F6`         | Move focus to the previous section             |\n| `Space`              | Take action or 'click' on buttons              |\n| `Enter`              | Take action or 'click' on links                |\n| `Esc`                | Close windows, menus, or the message field     |\n| `Ctrl` `+/-`         | Zoom in/out                                    |\n| `Home/PgUp`          | Scroll up                                      |\n| `End/PgDown`         | Scroll down                                    |\n| `Ctrl` `K`           | Quick Switcher                                 |\n| `Ctrl` `Shift` `K`   | Open direct messages menu                      |\n| `Ctrl` `Shift` `L`   | Browse all channels                            |\n| `Ctrl` `Shift` `T`   | Open All Threads view                          |\n| `Alt` `Up`           | Previous channel or DM                         |\n| `Alt` `Down`         | Next channel or DM                             |\n| `Alt` `Shift` `Up`   | Previous unread channel or DM                  |\n| `Alt` `Shift` `Down` | Next unread channel or DM                      |\n| `Alt` `Left`         | Previous channel or DM visited                 |\n| `Alt` `Right`        | Next channel or DM visited                     |\n| `Ctrl` `,`           | Preferences (desktop apps only)                |\n| `Ctrl` `.`           | Open or close right pane                       |\n| `Ctrl` `Shift` `I`   | Channel info pane                              |\n| `Ctrl` `Shift` `M`   | Activity                                       |\n| `Ctrl` `Shift` `E`   | Directory                                      |\n| `Ctrl` `Shift` `S`   | Starred Items                                  |\n| `Ctrl` `F`           | Search the current channel or conversation     |\n| `Ctrl` `G`           | Open previous search                           |\n| `Ctrl` `Shift` `F`   | Toggle full screen view                        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Move focus to the next element"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Move focus to the previous element"
+                },
+                {
+                  "shortcut": "`Up/Down`",
+                  "action": "Move focus through messages in a channel or DM"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Move focus to the next section"
+                },
+                {
+                  "shortcut": "`Shift` `F6`",
+                  "action": "Move focus to the previous section"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Take action or 'click' on buttons"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Take action or 'click' on links"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close windows, menus, or the message field"
+                },
+                {
+                  "shortcut": "`Ctrl` `+/-`",
+                  "action": "Zoom in/out"
+                },
+                {
+                  "shortcut": "`Home/PgUp`",
+                  "action": "Scroll up"
+                },
+                {
+                  "shortcut": "`End/PgDown`",
+                  "action": "Scroll down"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Quick Switcher"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Open direct messages menu"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Browse all channels"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Open All Threads view"
+                },
+                {
+                  "shortcut": "`Alt` `Up`",
+                  "action": "Previous channel or DM"
+                },
+                {
+                  "shortcut": "`Alt` `Down`",
+                  "action": "Next channel or DM"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Up`",
+                  "action": "Previous unread channel or DM"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Down`",
+                  "action": "Next unread channel or DM"
+                },
+                {
+                  "shortcut": "`Alt` `Left`",
+                  "action": "Previous channel or DM visited"
+                },
+                {
+                  "shortcut": "`Alt` `Right`",
+                  "action": "Next channel or DM visited"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Preferences (desktop apps only)"
+                },
+                {
+                  "shortcut": "`Ctrl` `.`",
+                  "action": "Open or close right pane"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `I`",
+                  "action": "Channel info pane"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Activity"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Directory"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Starred Items"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Search the current channel or conversation"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Open previous search"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Toggle full screen view"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "All Unreads navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "All Unreads navigation",
+              "body": "| Shortcut                  | Action                                |\n| ------------------------- | ------------------------------------- |\n| `Ctrl` `Shift` `A`        | Open All Unreads view                 |\n| `Alt` `(click a message)` | Mark message as unread                |\n| `Left/Right`              | Move between channels                 |\n| `R`                       | Toggle current channel read or unread |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Open All Unreads view"
+                },
+                {
+                  "shortcut": "`Alt` `(click a message)`",
+                  "action": "Mark message as unread"
+                },
+                {
+                  "shortcut": "`Left/Right`",
+                  "action": "Move between channels"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Toggle current channel read or unread"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Switch workspaces",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Switch workspaces",
+              "body": "| Shortcut             | Action                         |\n| -------------------- | ------------------------------ |\n| `Ctrl` `Shift` `Tab` | Switch to previous workspace   |\n| `Ctrl` `Tab`         | Switch to next workspace       |\n| `Ctrl` `[number]`    | Switch to a specific workspace |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `Tab`",
+                  "action": "Switch to previous workspace"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Switch to next workspace"
+                },
+                {
+                  "shortcut": "`Ctrl` `[number]`",
+                  "action": "Switch to a specific workspace"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mark messages read or unread",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mark messages read or unread",
+              "body": "| Shortcut                  | Action                                             |\n| ------------------------- | -------------------------------------------------- |\n| `Esc`                     | Mark all messages in current channel or DM as read |\n| `Shift` `Esc`             | Mark all messages as read                          |\n| `Alt` `(click a message)` | Set a message as your oldest unread message        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Mark all messages in current channel or DM as read"
+                },
+                {
+                  "shortcut": "`Shift` `Esc`",
+                  "action": "Mark all messages as read"
+                },
+                {
+                  "shortcut": "`Alt` `(click a message)`",
+                  "action": "Set a message as your oldest unread message"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Message shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Message shortcuts",
+              "body": "| Shortcut           | Action                                   |\n| ------------------ | ---------------------------------------- |\n| `Up`               | Edit your last message                   |\n| `Shift` `Up`       | Select text to beginning of current line |\n| `Shift` `Down`     | Select text to end of current line       |\n| `Shift` `Enter`    | Create a new line in your message        |\n| `Ctrl` `Shift` `\\` | Add emoji reactions to a message         |\n| `Ctrl` `B`         | Bold selected text                       |\n| `Ctrl` `I`         | Italicize selected text                  |\n| `Ctrl` `Shift` `X` | Strikethrough selected text              |\n| `Ctrl` `Shift` `>` | Quote selected text                      |\n| `Ctrl` `Shift` `C` | Codeblock selected text                  |\n| `Ctrl` `Shift` `7` | Turn selected text into a numbered list  |\n| `Ctrl` `Shift` `8` | Turn selected text into a bulleted list  |\n| `Ctrl` `Shift` `Y` | Set or edit your status                  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Up`",
+                  "action": "Edit your last message"
+                },
+                {
+                  "shortcut": "`Shift` `Up`",
+                  "action": "Select text to beginning of current line"
+                },
+                {
+                  "shortcut": "`Shift` `Down`",
+                  "action": "Select text to end of current line"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Create a new line in your message"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `\\`",
+                  "action": "Add emoji reactions to a message"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bold selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Italicize selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "Strikethrough selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `>`",
+                  "action": "Quote selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Codeblock selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `7`",
+                  "action": "Turn selected text into a numbered list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `8`",
+                  "action": "Turn selected text into a bulleted list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Y`",
+                  "action": "Set or edit your status"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Message autocomplete",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Message autocomplete",
+              "body": "| Shortcut             | Action                                                |\n| -------------------- | ----------------------------------------------------- |\n| `[character]` `Tab`  | Autocomplete @display name beginning with [character] |\n| `#[character]` `Tab` | Autocomplete channel beginning with [character]       |\n| `:[character]` `Tab` | Autocomplete emoji beginning with [character]         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`[character]` `Tab`",
+                  "action": "Autocomplete @display name beginning with [character]"
+                },
+                {
+                  "shortcut": "`#[character]` `Tab`",
+                  "action": "Autocomplete channel beginning with [character]"
+                },
+                {
+                  "shortcut": "`:[character]` `Tab`",
+                  "action": "Autocomplete emoji beginning with [character]"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File and snippets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File and snippets",
+              "body": "| Shortcut               | Action               |\n| ---------------------- | -------------------- |\n| `Ctrl` `U`             | Upload a file        |\n| `Ctrl` `Shift` `Enter` | Create a new snippet |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Upload a file"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Enter`",
+                  "action": "Create a new snippet"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Call actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Call actions",
+              "body": "| Shortcut  | Action                          |\n| --------- | ------------------------------- |\n| `M`       | Toggle mute on and off          |\n| `V`       | Toggle video on and off         |\n| `+/A`     | Show the invite list            |\n| `E` `1-9` | View and select emoji reactions |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`M`",
+                  "action": "Toggle mute on and off"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Toggle video on and off"
+                },
+                {
+                  "shortcut": "`+/A`",
+                  "action": "Show the invite list"
+                },
+                {
+                  "shortcut": "`E` `1-9`",
+                  "action": "View and select emoji reactions"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Slack](https://get.slack.help/hc/en-us/articles/201374536-Slack-keyboard-shortcuts)\n  _(get.slack.help)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

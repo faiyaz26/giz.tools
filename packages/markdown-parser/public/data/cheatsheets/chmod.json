@@ -1,0 +1,321 @@
+{
+  "id": "chmod",
+  "metadata": {
+    "title": "Chmod",
+    "date": "2021-07-01T10:51:44.000Z",
+    "background": "bg-indigo-600",
+    "tags": [
+      "permission"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "This quick reference cheat sheet provides a brief overview of file permissions, and the operation of the chmod command\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Syntax",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Syntax",
+              "body": "```shell script\n$ chmod [options] <permissions> <file>\n```",
+              "footer": "#### Example\n\n```shell\n$ chmod 755 foo.txt\n$ chmod +x cheatsheets.py\n$ chmod u-x cheatsheets.py\n$ chmod u=rwx,g=rx,o= cheatsheets.sh\n```\n\n#### Change files and directories recursively\n\n```shell\n$ chmod -R 755 my_directory\n```\n\nThe `chmod` command stands for \"change mode\"",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Chmod Generator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Chmod Generator",
+              "body": "<widget name=\"chmod\"/>\n\nChmod Generator allows you to quickly and visually generate permissions in numerical and symbolic.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Common Permissions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Common Permissions",
+              "body": "| Command | s         | Meaning                      |\n| ------- | --------- | ---------------------------- |\n| `400`   | r-------- | Readable by owner only       |\n| `500`   | r-x------ | Avoid Changing               |\n| `600`   | rw------- | Changeable by user           |\n| `644`   | rw-r--r-- | Read and change by user      |\n| `660`   | rw-rw---- | Changeable by user and group |\n| `700`   | rwx------ | Only user has full access    |\n| `755`   | rwxr-xr-x | Only changeable by user      |\n| `775`   | rwxrwxr-x | Sharing mode for a group     |\n| `777`   | rwxrwxrwx | Everybody can do everything  |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Explains",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Explains",
+              "body": "```shell\n$ ls -l\n-rw-r--r--  1 root root 3 Jun 29 15:35 a.log\ndrwxr-xr-x  2 root root 2 Jun 30 18:06 dir\n```",
+              "footer": "#### Permission analysis of \"dir\"\n\n```text\nd  rwx  r-x  r-x\n┬  ─┬─  ─┬─  ─┬─\n│   │    │    │\n│   │    │    └─ 4. Other｜5 (4+0+1)\n│   │    └────── 3. Group｜5 (4+0+1)\n│   └─────────── 2. User ｜7 (4+2+1)\n└─────────────── 1. File Type | directory\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Permission Modes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Permission Modes",
+              "body": "| Permission | Description             | Octal | Decimal   |\n| ---------- | ----------------------- | ----- | --------- |\n| `---`      | No Permission           | 000   | 0 (0+0+0) |\n| `--x`      | Execute                 | 001   | 1 (0+0+1) |\n| `-w-`      | Write                   | 010   | 2 (0+2+0) |\n| `-wx`      | Execute and Write       | 011   | 3 (0+2+1) |\n| `r--`      | Read                    | 100   | 4 (4+0+0) |\n| `r-x`      | Read and Execute        | 101   | 5 (4+0+1) |\n| `rw-`      | Read and Write          | 110   | 6 (4+2+0) |\n| `rwx`      | Read, Write and Execute | 111   | 7 (4+2+1) |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Objects",
+              "body": "| Who (abbr.) | Meaning            |\n| ----------- | ------------------ |\n| `u`         | `U`ser             |\n| `g`         | `G`roup            |\n| `o`         | `O`thers           |\n| `a`         | `A`ll, same as ugo |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Permissions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Permissions",
+              "body": "| Abbreviation | Permission    | Value |\n| ------------ | ------------- | ----- |\n| `r`          | `R`ead        | 4     |\n| `w`          | `W`rite       | 2     |\n| `x`          | E`x`ecute     | 1     |\n| `-`          | No permission | 0     |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File Types",
+              "body": "| Abbreviation | File Type       |\n| ------------ | --------------- |\n| `d`          | `D`irectory     |\n| `-`          | Regular file    |\n| `l`          | Symbolic `L`ink |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Chmod Examples",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operators",
+              "body": "| Symbol | Description |\n| ------ | ----------- |\n| `+`    | Add         |\n| `-`    | Remove      |\n| `=`    | Set         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "chmod 600",
+          "level": 3,
+          "cards": [
+            {
+              "title": "chmod 600",
+              "body": "```shell\n$ chmod 600 example.txt\n$ chmod u=rw,g=,o= example.txt\n$ chmod a+rwx,u-x,g-rwx,o-rwx example.txt\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "chmod 664",
+          "level": 3,
+          "cards": [
+            {
+              "title": "chmod 664",
+              "body": "```shell\n$ chmod 664 example.txt\n$ chmod u=rw,g=rw,o=r example.txt\n$ chmod a+rwx,u-x,g-x,o-wx example.txt\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "chmod 777",
+          "level": 3,
+          "cards": [
+            {
+              "title": "chmod 777",
+              "body": "```shell\n$ chmod 777 example.txt\n$ chmod u=rwx,g=rwx,o=rwx example.txt\n$ chmod a=rwx example.txt\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Symbolic mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Symbolic mode",
+              "body": "```shell\n$ chmod a-x chmodExampleFile.txt\n```",
+              "footer": "Allow read permission to everyone.\n```shell\n$ chmod a+r chmodExampleFile.txt\n```\nMake a file readable and writable by the group and others.\n```shell\n$ chmod go+rw chmodExampleFile.txt\n```\nMake a shell script executable by the user/owner.\n```shell\n$ chmod u+x chmodExampleScript.sh\n```\nAllow everyone to read, write, and execute the file and turn on the set group-ID.\n```shell\n$ chmod =rwx,g+s chmodExampleScript.sh\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Removing Permissions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Removing Permissions",
+              "body": "```shell\n$ chmod o-rw example.txt\n```",
+              "footer": "For our file example.txt, we can remove read write permissions using chmod for group by running the following command:\n```shell\n$ chmod  g-rx example.txt\n```\nTo remove chmod read write permissions from the group while adding read write permission to public/others, we can use\nthe following command:\n```shell\n$ chmod g-rx, o+rx example.txt\n```\nBut, if you wish to remove all permissions for group and others, you can do so using the go= instead:\n```shell\n$ chmod go= example.txt\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Executable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Executable",
+              "body": "```shell\n$ chmod +x ~/example.py\n$ chmod u+x ~/example.py\n$ chmod a+x ~/example.py\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "chmod 754",
+          "level": 3,
+          "cards": [
+            {
+              "title": "chmod 754",
+              "body": "```shell\n$ chmod 754 foo.sh\n$ chmod u=rwx,g=rx,o=r foo.sh\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Chmod Practices",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "SSH Permissions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SSH Permissions",
+              "body": "",
+              "footer": "```shell script\n$ chmod 700 ~/.ssh\n$ chmod 600 ~/.ssh/authorized_keys\n$ chmod 600 ~/.ssh/id_rsa\n$ chmod 600 ~/.ssh/id_rsa.pub\n$ chmod 400 /path/to/access_key.pem\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Web Permissions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Web Permissions",
+              "body": "",
+              "footer": "```shell script\n$ chmod -R 644 /var/www/html/\n$ chmod 644 .htaccess\n$ chmod 644 robots.txt\n$ chmod 755 /var/www/uploads/\n$ find /var/www/html -type d -exec chmod 755 {} \\;\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Batch Change",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Batch Change",
+              "body": "",
+              "footer": "```shell script\n$ chmod -R 644 /your_path\n$ find /path -type d -exec chmod 755 {} \\;\n$ find /path -type f -exec chmod 644 {} \\;\n```\n\nSee: [Command Substitution](https://tldp.org/LDP/abs/html/commandsub.html)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Modify File Permissions with chmod](https://www.linode.com/docs/guides/modify-file-permissions-with-chmod/)\n  _(linode.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

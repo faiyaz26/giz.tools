@@ -1,0 +1,828 @@
+{
+  "id": "sketch",
+  "metadata": {
+    "title": "Sketch",
+    "date": "2022-11-23T16:23:31.699Z",
+    "background": "bg-[#d36f2b]",
+    "label": "Mac",
+    "tags": [
+      null,
+      "mac"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 149 keyboard shortcuts found in Sketch. This application is MacOS-only.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "| Shortcut                | Action                  |\n| ----------------------- | ----------------------- |\n| `Cmd` `C`               | Copy                    |\n| `Cmd` `X`               | Cut                     |\n| `Cmd` `V`               | Paste                   |\n| `Cmd` `Shift` `V`       | Paste over selection    |\n| `Space` `(drag)`        | Pan Canvas              |\n| `Cmd` `Shift` `N`       | New page                |\n| `Fn` `Up`               | Previous page           |\n| `Fn` `Down`             | Next page               |\n| `Cmd` `+`               | Zoom in                 |\n| `Cmd` `-`               | Zoom out                |\n| `Ctrl` `R`              | Toggle rulers           |\n| `Ctrl` `P`              | Toggle pixels           |\n| `Ctrl` `X`              | Toggle pixel grid       |\n| `Ctrl` `G`              | Toggle grid             |\n| `Ctrl` `L`              | Toggle layout           |\n| `Ctrl` `E`              | Toggle slices           |\n| `Ctrl` `F`              | Toggle prototyping      |\n| `Cmd` `F`               | Filter in Layer List    |\n| `Cmd` `Ctrl` `K`        | Run custom plugin       |\n| `Cmd` `Z`               | Undo                    |\n| `Cmd` `Shift` `Z`       | Redo                    |\n| `Cmd` `N`               | New document            |\n| `Cmd` `Shift` `N`       | New Cloud document      |\n| `Cmd` `O`               | Open document           |\n| `Cmd` `Shift` `O`       | Open Cloud document     |\n| `Cmd` `W`               | Close window            |\n| `Cmd` `S`               | Save document           |\n| `Cmd` `Shift` `S`       | Duplicate document      |\n| `Cmd` `Shift` `Opt` `S` | Save document as...     |\n| `Cmd` `Shift` `P`       | Page setup              |\n| `Cmd` `,`               | Open Preferences window |\n| `Cmd` `H`               | Hide Sketch             |\n| `Cmd` `Q`               | Quit Sketch             |\n| `Cmd` `Shift` `?`       | Open the Help menu      |\n| `Cmd` `P`               | Open Preview window     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Cmd` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Cmd` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `V`",
+                  "action": "Paste over selection"
+                },
+                {
+                  "shortcut": "`Space` `(drag)`",
+                  "action": "Pan Canvas"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `N`",
+                  "action": "New page"
+                },
+                {
+                  "shortcut": "`Fn` `Up`",
+                  "action": "Previous page"
+                },
+                {
+                  "shortcut": "`Fn` `Down`",
+                  "action": "Next page"
+                },
+                {
+                  "shortcut": "`Cmd` `+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Cmd` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Toggle rulers"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Toggle pixels"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Toggle pixel grid"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Toggle grid"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Toggle layout"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Toggle slices"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Toggle prototyping"
+                },
+                {
+                  "shortcut": "`Cmd` `F`",
+                  "action": "Filter in Layer List"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `K`",
+                  "action": "Run custom plugin"
+                },
+                {
+                  "shortcut": "`Cmd` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Z`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Cmd` `N`",
+                  "action": "New document"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `N`",
+                  "action": "New Cloud document"
+                },
+                {
+                  "shortcut": "`Cmd` `O`",
+                  "action": "Open document"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `O`",
+                  "action": "Open Cloud document"
+                },
+                {
+                  "shortcut": "`Cmd` `W`",
+                  "action": "Close window"
+                },
+                {
+                  "shortcut": "`Cmd` `S`",
+                  "action": "Save document"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `S`",
+                  "action": "Duplicate document"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Opt` `S`",
+                  "action": "Save document as..."
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `P`",
+                  "action": "Page setup"
+                },
+                {
+                  "shortcut": "`Cmd` `,`",
+                  "action": "Open Preferences window"
+                },
+                {
+                  "shortcut": "`Cmd` `H`",
+                  "action": "Hide Sketch"
+                },
+                {
+                  "shortcut": "`Cmd` `Q`",
+                  "action": "Quit Sketch"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `?`",
+                  "action": "Open the Help menu"
+                },
+                {
+                  "shortcut": "`Cmd` `P`",
+                  "action": "Open Preview window"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inserting Layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inserting Layers",
+              "body": "| Shortcut | Action            |\n| -------- | ----------------- |\n| `R`      | Rectangle         |\n| `O`      | Oval              |\n| `L`      | Line              |\n| `U`      | Rounded rectangle |\n| `V`      | Vector tool       |\n| `P`      | Pencil tool       |\n| `T`      | Text tool         |\n| `A`      | Artboard tool     |\n| `S`      | Slice tool        |\n| `H`      | Hotspot tool      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`R`",
+                  "action": "Rectangle"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Oval"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Line"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Rounded rectangle"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Vector tool"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Pencil tool"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Text tool"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Artboard tool"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Slice tool"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Hotspot tool"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selecting Layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selecting Layers",
+              "body": "| Shortcut          | Action                         |\n| ----------------- | ------------------------------ |\n| `Cmd` `A`         | Select all                     |\n| `Cmd` `Shift` `A` | Select all Artboards           |\n| `Fn` `Right`      | Select next Artboard           |\n| `Fn` `Left`       | Select previous Artboard       |\n| `Cmd` `Shift` `J` | Reveal selection in Layer List |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `A`",
+                  "action": "Select all Artboards"
+                },
+                {
+                  "shortcut": "`Fn` `Right`",
+                  "action": "Select next Artboard"
+                },
+                {
+                  "shortcut": "`Fn` `Left`",
+                  "action": "Select previous Artboard"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `J`",
+                  "action": "Reveal selection in Layer List"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Moving and Resizing Layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Moving and Resizing Layers",
+              "body": "| Shortcut                   | Action                                                                  |\n| -------------------------- | ----------------------------------------------------------------------- |\n| `Opt`                      | Display distance between other layers (while hovering)                  |\n| `Cmd` `D`                  | Duplicate                                                               |\n| `(arrows)`                 | Nudge layer any direction by 1px                                        |\n| `Shift` `(arrows)`         | Nudge layer any direction by 10px                                       |\n| `Cmd` `K`                  | Scale layer                                                             |\n| `Cmd` `Right/Down`         | Expand by 1px                                                           |\n| `Cmd` `Left/Up`            | Contract by 1px                                                         |\n| `Cmd` `Shift` `Right/Down` | Expand by 10px                                                          |\n| `Cmd` `Shift` `Left/Up`    | Contract by 10px                                                        |\n| `Ctrl` `Opt`               | Show distance to baseline or cap height on text layers (while hovering) |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Opt`",
+                  "action": "Display distance between other layers (while hovering)"
+                },
+                {
+                  "shortcut": "`Cmd` `D`",
+                  "action": "Duplicate"
+                },
+                {
+                  "shortcut": "`(arrows)`",
+                  "action": "Nudge layer any direction by 1px"
+                },
+                {
+                  "shortcut": "`Shift` `(arrows)`",
+                  "action": "Nudge layer any direction by 10px"
+                },
+                {
+                  "shortcut": "`Cmd` `K`",
+                  "action": "Scale layer"
+                },
+                {
+                  "shortcut": "`Cmd` `Right/Down`",
+                  "action": "Expand by 1px"
+                },
+                {
+                  "shortcut": "`Cmd` `Left/Up`",
+                  "action": "Contract by 1px"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Right/Down`",
+                  "action": "Expand by 10px"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Left/Up`",
+                  "action": "Contract by 10px"
+                },
+                {
+                  "shortcut": "`Ctrl` `Opt`",
+                  "action": "Show distance to baseline or cap height on text layers (while hovering)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editing Layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editing Layers",
+              "body": "| Shortcut          | Action                                        |\n| ----------------- | --------------------------------------------- |\n| `Enter`           | Edit layer                                    |\n| `Esc`             | Finish editing                                |\n| `Opt` `Tab`       | Focus X position input field in the Inspector |\n| `Del`             | Delete layer                                  |\n| `Cmd` `Opt` `C`   | Copy style                                    |\n| `Cmd` `Opt` `V`   | Paste style                                   |\n| `Ctrl` `S`        | Sync shared style                             |\n| `Opt` `Ctrl` `S`  | Reset shared style                            |\n| `W`               | Add link to Artboard                          |\n| `F`               | Toggle fill                                   |\n| `B`               | Toggle border                                 |\n| `Ctrl` `C`        | Pick color                                    |\n| `0-9`             | Edit layer opacity                            |\n| `Cmd` `Shift` `T` | Transform shape                               |\n| `Cmd` `Shift` `R` | Rotate layer                                  |\n| `Cmd` `Ctrl` `M`  | Use as mask                                   |\n| `Cmd` `Esc`       | Return to instance                            |\n| `Cmd` `Opt` `U`   | Union multiple layers                         |\n| `Cmd` `Opt` `S`   | Subtract multiple layers                      |\n| `Cmd` `Opt` `I`   | Intersect multiple layers                     |\n| `Cmd` `Opt` `X`   | Difference multiple layers                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Edit layer"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Finish editing"
+                },
+                {
+                  "shortcut": "`Opt` `Tab`",
+                  "action": "Focus X position input field in the Inspector"
+                },
+                {
+                  "shortcut": "`Del`",
+                  "action": "Delete layer"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `C`",
+                  "action": "Copy style"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `V`",
+                  "action": "Paste style"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Sync shared style"
+                },
+                {
+                  "shortcut": "`Opt` `Ctrl` `S`",
+                  "action": "Reset shared style"
+                },
+                {
+                  "shortcut": "`W`",
+                  "action": "Add link to Artboard"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Toggle fill"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Toggle border"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Pick color"
+                },
+                {
+                  "shortcut": "`0-9`",
+                  "action": "Edit layer opacity"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `T`",
+                  "action": "Transform shape"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `R`",
+                  "action": "Rotate layer"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `M`",
+                  "action": "Use as mask"
+                },
+                {
+                  "shortcut": "`Cmd` `Esc`",
+                  "action": "Return to instance"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `U`",
+                  "action": "Union multiple layers"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `S`",
+                  "action": "Subtract multiple layers"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `I`",
+                  "action": "Intersect multiple layers"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `X`",
+                  "action": "Difference multiple layers"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Vector Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Vector Editing",
+              "body": "| Shortcut        | Action                         |\n| --------------- | ------------------------------ |\n| `Cmd` `Opt` `O` | Open or close path             |\n| `Tab`           | Selects next point             |\n| `Opt`           | Show all handle control points |\n| `1`             | Straight point type            |\n| `2`             | Mirrored point type            |\n| `3`             | Disconnected point type        |\n| `4`             | Asymmetric point type          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Opt` `O`",
+                  "action": "Open or close path"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Selects next point"
+                },
+                {
+                  "shortcut": "`Opt`",
+                  "action": "Show all handle control points"
+                },
+                {
+                  "shortcut": "`1`",
+                  "action": "Straight point type"
+                },
+                {
+                  "shortcut": "`2`",
+                  "action": "Mirrored point type"
+                },
+                {
+                  "shortcut": "`3`",
+                  "action": "Disconnected point type"
+                },
+                {
+                  "shortcut": "`4`",
+                  "action": "Asymmetric point type"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Text Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Text Editing",
+              "body": "| Shortcut                | Action                     |\n| ----------------------- | -------------------------- |\n| `Cmd` `Shift` `Opt` `V` | Paste as rich text         |\n| `Cmd` `T`               | Change typeface            |\n| `Cmd` `B`               | Bold                       |\n| `Cmd` `I`               | Italic                     |\n| `Cmd` `U`               | Underline                  |\n| `Cmd` `Opt` `+`         | Increase font size         |\n| `Cmd` `Opt` `-`         | Decrease font size         |\n| `Ctrl` `Opt` `L`        | Increase character spacing |\n| `Ctrl` `Opt` `T`        | Decrease character spacing |\n| `Cmd` `Shift` `[`       | Align left                 |\n| `Cmd` `Shift` `\\`       | Align center               |\n| `Cmd` `Shift` `]`       | Align right                |\n| `Cmd` `Opt` `Space`     | Emoji and symbols          |\n| `Cmd` `Opt` `O`         | Convert to outlines        |\n| `Shift` `Enter`         | Insert a line break        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Shift` `Opt` `V`",
+                  "action": "Paste as rich text"
+                },
+                {
+                  "shortcut": "`Cmd` `T`",
+                  "action": "Change typeface"
+                },
+                {
+                  "shortcut": "`Cmd` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Cmd` `I`",
+                  "action": "Italic"
+                },
+                {
+                  "shortcut": "`Cmd` `U`",
+                  "action": "Underline"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `+`",
+                  "action": "Increase font size"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `-`",
+                  "action": "Decrease font size"
+                },
+                {
+                  "shortcut": "`Ctrl` `Opt` `L`",
+                  "action": "Increase character spacing"
+                },
+                {
+                  "shortcut": "`Ctrl` `Opt` `T`",
+                  "action": "Decrease character spacing"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `[`",
+                  "action": "Align left"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `\\`",
+                  "action": "Align center"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `]`",
+                  "action": "Align right"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Space`",
+                  "action": "Emoji and symbols"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `O`",
+                  "action": "Convert to outlines"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Insert a line break"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arranging Layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arranging Layers",
+              "body": "| Shortcut                 | Action                            |\n| ------------------------ | --------------------------------- |\n| `Cmd` `G`                | Group                             |\n| `Cmd` `Shift` `G`        | Ungroup                           |\n| `Cmd` `R`                | Rename layer                      |\n| `Tab`                    | Select next layer in group        |\n| `Shift` `Tab`            | Select previous layer in group    |\n| `Enter`                  | Selects layer inside group        |\n| `Esc`                    | Selects parent group              |\n| `Cmd` `]`                | Bring forward                     |\n| `Cmd` `Opt` `]`          | Bring to front                    |\n| `Cmd` `[`                | Send backward                     |\n| `Cmd` `Opt` `[`          | Send to back                      |\n| `Cmd` `Shift` `Opt` `Up` | Move up, out of group or Artboard |\n| `Cmd` `Ctrl` `H`         | Distribute horizontally           |\n| `Cmd` `Ctrl` `V`         | Distribute vertically             |\n| `Cmd` `Shift` `H`        | Hide or show layer                |\n| `Cmd` `Shift` `L`        | Lock or unlock layer              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `G`",
+                  "action": "Group"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `G`",
+                  "action": "Ungroup"
+                },
+                {
+                  "shortcut": "`Cmd` `R`",
+                  "action": "Rename layer"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Select next layer in group"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Select previous layer in group"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Selects layer inside group"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Selects parent group"
+                },
+                {
+                  "shortcut": "`Cmd` `]`",
+                  "action": "Bring forward"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `]`",
+                  "action": "Bring to front"
+                },
+                {
+                  "shortcut": "`Cmd` `[`",
+                  "action": "Send backward"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `[`",
+                  "action": "Send to back"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `Opt` `Up`",
+                  "action": "Move up, out of group or Artboard"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `H`",
+                  "action": "Distribute horizontally"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `V`",
+                  "action": "Distribute vertically"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `H`",
+                  "action": "Hide or show layer"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `L`",
+                  "action": "Lock or unlock layer"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Exporting Layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Exporting Layers",
+              "body": "| Shortcut          | Action                   |\n| ----------------- | ------------------------ |\n| `Cmd` `Shift` `E` | Export                   |\n| `Cmd` `E`         | Export selected layer(s) |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Shift` `E`",
+                  "action": "Export"
+                },
+                {
+                  "shortcut": "`Cmd` `E`",
+                  "action": "Export selected layer(s)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Zoom and Focus",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Zoom and Focus",
+              "body": "| Shortcut                | Action                             |\n| ----------------------- | ---------------------------------- |\n| `Cmd` `0`               | Zoom to 100%                       |\n| `Cmd` `1`               | Zoom to all elements on Canvas     |\n| `Cmd` `2`               | Zoom to selected layer(s)          |\n| `Cmd` `3`               | Center selected layer(s) in Canvas |\n| `Shift` <code>\\`</code> | Temporarily zoom out to 100%       |\n| `Cmd` `Ctrl` `F`        | Toggle full screen                 |\n| `Cmd` `Opt` `1`         | Show or hide Layer list            |\n| `Cmd` `Opt` `2`         | Show or hide Inspector             |\n| `Cmd` `.`               | Enter presentation mode            |\n| `Cmd` `Opt` `T`         | Show or hide Toolbar               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `0`",
+                  "action": "Zoom to 100%"
+                },
+                {
+                  "shortcut": "`Cmd` `1`",
+                  "action": "Zoom to all elements on Canvas"
+                },
+                {
+                  "shortcut": "`Cmd` `2`",
+                  "action": "Zoom to selected layer(s)"
+                },
+                {
+                  "shortcut": "`Cmd` `3`",
+                  "action": "Center selected layer(s) in Canvas"
+                },
+                {
+                  "shortcut": "`Shift` <code>\\`</code>",
+                  "action": "Temporarily zoom out to 100%"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `F`",
+                  "action": "Toggle full screen"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `1`",
+                  "action": "Show or hide Layer list"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `2`",
+                  "action": "Show or hide Inspector"
+                },
+                {
+                  "shortcut": "`Cmd` `.`",
+                  "action": "Enter presentation mode"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `T`",
+                  "action": "Show or hide Toolbar"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Text Fields",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Text Fields",
+              "body": "| Shortcut       | Action                |\n| -------------- | --------------------- |\n| `Opt` `Tab`    | Focus Inspector       |\n| `Tab`          | Select next field     |\n| `Shift` `Tab`  | Select previous field |\n| `Enter`        | Confirm change        |\n| `Esc`          | Clear change          |\n| `Up`           | Increase value by 1   |\n| `Down`         | Decrease value by 1   |\n| `Shift` `Up`   | Increase value by 10  |\n| `Shift` `Down` | Decrease value by 10  |\n| `Opt` `Up`     | Increase value by 0.1 |\n| `Opt` `Down`   | Decrease value by 0.1 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Opt` `Tab`",
+                  "action": "Focus Inspector"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Select next field"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Select previous field"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Confirm change"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Clear change"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Increase value by 1"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Decrease value by 1"
+                },
+                {
+                  "shortcut": "`Shift` `Up`",
+                  "action": "Increase value by 10"
+                },
+                {
+                  "shortcut": "`Shift` `Down`",
+                  "action": "Decrease value by 10"
+                },
+                {
+                  "shortcut": "`Opt` `Up`",
+                  "action": "Increase value by 0.1"
+                },
+                {
+                  "shortcut": "`Opt` `Down`",
+                  "action": "Decrease value by 0.1"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Miscellaneous",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Miscellaneous",
+              "body": "| Shortcut               | Action                                                              |\n| ---------------------- | ------------------------------------------------------------------- |\n| `Shift`                | Launch Sketch with all plugins disabled (hold on startup)           |\n| `Cmd` `Ctrl` `D`       | Detach from Symbol                                                  |\n| `Cmd` `Ctrl` `Opt` `D` | Detach all contents from Symbol                                     |\n| `Cmd` `Shift` `D`      | Refresh Data                                                        |\n| `Cmd` `Ctrl` `R`       | Run last-used plugin again                                          |\n| `0-9`                  | With a gradient stop selected, position it between 0% and 100%      |\n| `=`                    | Position selected gradient stop directly between two existing stops |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift`",
+                  "action": "Launch Sketch with all plugins disabled (hold on startup)"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `D`",
+                  "action": "Detach from Symbol"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `Opt` `D`",
+                  "action": "Detach all contents from Symbol"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `D`",
+                  "action": "Refresh Data"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `R`",
+                  "action": "Run last-used plugin again"
+                },
+                {
+                  "shortcut": "`0-9`",
+                  "action": "With a gradient stop selected, position it between 0% and 100%"
+                },
+                {
+                  "shortcut": "`=`",
+                  "action": "Position selected gradient stop directly between two existing stops"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Sketch](https://www.sketch.com/docs/shortcuts/) _(www.sketch.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

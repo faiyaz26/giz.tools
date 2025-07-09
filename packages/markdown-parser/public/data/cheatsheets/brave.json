@@ -1,0 +1,356 @@
+{
+  "id": "brave",
+  "metadata": {
+    "title": "Brave Browser",
+    "date": "2022-11-23T16:23:31.698Z",
+    "background": "bg-[#da6b37]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 64 keyboard shortcuts found in the Brave browser\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Tabs and Windows",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tabs and Windows",
+              "body": "| Shortcut             | Action                                                               |\n| -------------------- | -------------------------------------------------------------------- |\n| `Ctrl` `N`           | Open a new window                                                    |\n| `Ctrl` `Shift` `N`   | Open a new window in Private mode                                    |\n| `Ctrl` `T`           | Open a new tab, and jump to it                                       |\n| `Ctrl` `Shift` `T`   | Reopen the last closed tab, and jump to it                           |\n| `Ctrl` `Tab`         | Jump to the next open tab                                            |\n| `Ctrl` `Shift` `Tab` | Jump to the previous open tab                                        |\n| `Ctrl` `1-8`         | Jump to a specific tab                                               |\n| `Ctrl` `9`           | Jump to the last tab                                                 |\n| `Alt` `Home`         | Open your home page in the current tab                               |\n| `Ctrl` `Left`        | Open the previous page from your browsing history in the current tab |\n| `Alt` `Right`        | Open the next page from your browsing history in the current tab     |\n| `Ctrl` `W`           | Close the current tab                                                |\n| `Ctrl` `Shift` `W`   | Close the current window                                             |\n| `Alt` `Space` `N`    | Minimize the current window                                          |\n| `Alt` `Space` `X`    | Maximize the current window                                          |\n| `Alt` `F4`           | Close the current window                                             |\n| `Ctrl` `Shift` `Q`   | Quit Brave                                                           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Open a new window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Open a new window in Private mode"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Open a new tab, and jump to it"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Reopen the last closed tab, and jump to it"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Jump to the next open tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Tab`",
+                  "action": "Jump to the previous open tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `1-8`",
+                  "action": "Jump to a specific tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `9`",
+                  "action": "Jump to the last tab"
+                },
+                {
+                  "shortcut": "`Alt` `Home`",
+                  "action": "Open your home page in the current tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left`",
+                  "action": "Open the previous page from your browsing history in the current tab"
+                },
+                {
+                  "shortcut": "`Alt` `Right`",
+                  "action": "Open the next page from your browsing history in the current tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close the current tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `W`",
+                  "action": "Close the current window"
+                },
+                {
+                  "shortcut": "`Alt` `Space` `N`",
+                  "action": "Minimize the current window"
+                },
+                {
+                  "shortcut": "`Alt` `Space` `X`",
+                  "action": "Maximize the current window"
+                },
+                {
+                  "shortcut": "`Alt` `F4`",
+                  "action": "Close the current window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Q`",
+                  "action": "Quit Brave"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Browser",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Browser",
+              "body": "| Shortcut                | Action                                             |\n| ----------------------- | -------------------------------------------------- |\n| `Alt` `F`               | Open the main menu                                 |\n| `Ctrl` `Shift` `B`      | Show or hide the bookmarks bar                     |\n| `Ctrl` `H`              | Open the history page in a new tab                 |\n| `Ctrl` `J`              | Open the downloads page in a new tab               |\n| `Shift` `Esc`           | Open the Brave task manager                        |\n| `Shift` `Alt` `T`       | Set focus on the first item in the toolbar         |\n| `F10`                   | Set focus on the last item in the toolbar          |\n| `F6`                    | Switch focus to unfocused dialog, if showing       |\n| `Ctrl` `F`              | Open the find bar to search the current page       |\n| `Ctrl` `G`              | Jump to the next match in your find bar search     |\n| `Ctrl` `Shift` `G`      | Jump to the previous match in your find bar search |\n| `Ctrl` `Shift` `J`      | Open developer tools                               |\n| `Ctrl` `Shift` `Delete` | Open the clear browser data options                |\n| `F1`                    | Open the Brave help center in a new tab            |\n| `Ctrl` `Shift` `M`      | Open profile menu                                  |\n| ``                      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `F`",
+                  "action": "Open the main menu"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `B`",
+                  "action": "Show or hide the bookmarks bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `H`",
+                  "action": "Open the history page in a new tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Open the downloads page in a new tab"
+                },
+                {
+                  "shortcut": "`Shift` `Esc`",
+                  "action": "Open the Brave task manager"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `T`",
+                  "action": "Set focus on the first item in the toolbar"
+                },
+                {
+                  "shortcut": "`F10`",
+                  "action": "Set focus on the last item in the toolbar"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Switch focus to unfocused dialog, if showing"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Open the find bar to search the current page"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Jump to the next match in your find bar search"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Jump to the previous match in your find bar search"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Open developer tools"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Delete`",
+                  "action": "Open the clear browser data options"
+                },
+                {
+                  "shortcut": "`F1`",
+                  "action": "Open the Brave help center in a new tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Open profile menu"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Address Bar",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Address Bar",
+              "body": "| Shortcut         | Action                                                                          |\n| ---------------- | ------------------------------------------------------------------------------- |\n| `Enter`          | Search with your default search engine (after typing)                           |\n| `Tab`            | Search using a different search engine (after typing)                           |\n| `Ctrl` `Enter`   | Add www. and .com to a site name, and open it in the current tab (after typing) |\n| `Alt` `Enter`    | Open a new tab and perform a search (after typing)                              |\n| `Ctrl` `L`       | Jump to the address bar                                                         |\n| `Ctrl` `K`       | Search from anywhere on the page                                                |\n| `Shift` `Delete` | Remove predictions from your address bar (after highlighting them)              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Search with your default search engine (after typing)"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Search using a different search engine (after typing)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Add www. and .com to a site name, and open it in the current tab (after typing)"
+                },
+                {
+                  "shortcut": "`Alt` `Enter`",
+                  "action": "Open a new tab and perform a search (after typing)"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Jump to the address bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Search from anywhere on the page"
+                },
+                {
+                  "shortcut": "`Shift` `Delete`",
+                  "action": "Remove predictions from your address bar (after highlighting them)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Webpage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Webpage",
+              "body": "| Shortcut           | Action                                                             |\n| ------------------ | ------------------------------------------------------------------ |\n| `Ctrl` `P`         | Open options to print the current page                             |\n| `Ctrl` `S`         | Open options to save the current page                              |\n| `Ctrl` `R`         | Reload the current page                                            |\n| `Ctrl` `Shift` `R` | Reload the current page, ignoring cached content                   |\n| `Esc`              | Stop the page loading                                              |\n| `Tab`              | Browse clickable items moving forward                              |\n| `Shift` `Tab`      | Browse clickable items moving backwards                            |\n| `Ctrl` `O`         | Open a file from your computer in Brave                            |\n| `Ctrl` `U`         | Display non-editable HTML source code for the current page         |\n| `Ctrl` `D`         | Save your current webpage as a bookmark                            |\n| `Ctrl` `Shift` `D` | Save all open tabs as bookmarks in a new folder                    |\n| `F11`              | Turn full-screen mode on or off                                    |\n| `Ctrl` `+`         | Make everything on the page bigger                                 |\n| `Ctrl` `-`         | Make everything on the page smaller                                |\n| `Ctrl` `0`         | Return everything on the page to default size                      |\n| `Space`            | Scroll down a webpage, a screen at a time                          |\n| `Shift` `Space`    | Scroll up a webpage, a screen at a time                            |\n| `Home`             | Go to the top of the page                                          |\n| `End`              | Go to the bottom of the page                                       |\n| `Shift` `(scroll)` | Scroll horizontally on the page                                    |\n| `Alt` `Left`       | Move your cursor to the front of the previous word in a text field |\n| `Ctrl` `Right`     | Move your cursor to the back of the next word in a text field      |\n| `Ctrl` `Back`      | Delete the previous word in a text field                           |\n| `Alt` `Home`       | Open the home page in the current tab                              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Open options to print the current page"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Open options to save the current page"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Reload the current page"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Reload the current page, ignoring cached content"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Stop the page loading"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Browse clickable items moving forward"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Browse clickable items moving backwards"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open a file from your computer in Brave"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Display non-editable HTML source code for the current page"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Save your current webpage as a bookmark"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `D`",
+                  "action": "Save all open tabs as bookmarks in a new folder"
+                },
+                {
+                  "shortcut": "`F11`",
+                  "action": "Turn full-screen mode on or off"
+                },
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Make everything on the page bigger"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Make everything on the page smaller"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Return everything on the page to default size"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Scroll down a webpage, a screen at a time"
+                },
+                {
+                  "shortcut": "`Shift` `Space`",
+                  "action": "Scroll up a webpage, a screen at a time"
+                },
+                {
+                  "shortcut": "`Home`",
+                  "action": "Go to the top of the page"
+                },
+                {
+                  "shortcut": "`End`",
+                  "action": "Go to the bottom of the page"
+                },
+                {
+                  "shortcut": "`Shift` `(scroll)`",
+                  "action": "Scroll horizontally on the page"
+                },
+                {
+                  "shortcut": "`Alt` `Left`",
+                  "action": "Move your cursor to the front of the previous word in a text field"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right`",
+                  "action": "Move your cursor to the back of the next word in a text field"
+                },
+                {
+                  "shortcut": "`Ctrl` `Back`",
+                  "action": "Delete the previous word in a text field"
+                },
+                {
+                  "shortcut": "`Alt` `Home`",
+                  "action": "Open the home page in the current tab"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Brave](https://support.brave.com/hc/en-us/articles/360032272171-What-keyboard-shortcuts-can-I-use-in-Brave-)\n  _(support.brave.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

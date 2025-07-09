@@ -1,0 +1,234 @@
+{
+  "id": "markdown",
+  "metadata": {
+    "title": "Markdown",
+    "date": "2020-12-14T18:28:43.000Z",
+    "background": "bg-[#6319bf]",
+    "tags": [
+      "md",
+      "Markup",
+      "text",
+      "format"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This is a quick reference cheat sheet to the Markdown syntax.",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Markdown Quick Reference",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Headers (atx style)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Headers (atx style)",
+              "body": "",
+              "footer": "<!-- prettier-ignore -->\n```markdown\n# h1",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "h2",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "h3",
+          "level": 3,
+          "cards": [
+            {
+              "title": "h3",
+              "body": "",
+              "footer": "#### h4\n##### h5\n###### h6\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Headers (setext style)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Headers (setext style)",
+              "body": "```markdown\nHeader 1\n========\n\nHeader 2\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Blockquotes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Blockquotes",
+              "body": "```markdown\n> This is  \n> a blockquote\n>\n> > Nested  \n> > Blockquote\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Unordered List",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Unordered List",
+              "body": "```markdown\n* Item 1\n* Item 2\n  * item 3a\n  * item 3b\n```",
+              "footer": "or\n```markdown\n- Item 1\n- Item 2\n```\nor\n<!-- prettier-ignore -->\n```markdown\n_ Item 1\n+ Item 2\n```\nor\n```markdown\n- [ ] Checkbox off\n- [x] Checkbox on\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ordered List",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ordered List",
+              "body": "```markdown\n1. Item 1\n2. Item 2  \n   a. Item 3a  \n   b. Item 3b\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Links",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Links",
+              "body": "```markdown\n[link](http://google.com)\n\n[link][google]  \n[google]: http://google.com\n\n<http://google.com>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Emphasis",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Emphasis",
+              "body": "```markdown\n*italic*  \n_italic_\n\n**bold**  \n__bold__\n\n`inline code`  \n~~struck out~~\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Horizontal line",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Horizontal line",
+              "body": "```markdown\n\n```",
+              "footer": "Asterisks\n<!-- prettier-ignore -->\n```markdown\n```\nUnderscores\n<!-- prettier-ignore -->\n```markdown\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Code",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Code",
+              "body": "```markdown\n```javascript\nconsole.log('This is a block code');\n```",
+              "footer": "````\n<!-- prettier-ignore -->\n```markdown\n~~~css\n.button {\nborder: none;\n}\n~~~\n```\n```markdown\n4 space indent makes a code block\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Escaped code",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Escaped code",
+              "body": "Escaped code blocks can be done with more back ticks on the outside or a different symbol.\n\n<!-- prettier-ignore -->\n``bash\necho hi\nbash\necho hi\n``\n\n```markdown\n````markdown\n```",
+              "footer": "#### Inline code\n\n```markdown\n`Inline code` has back-ticks around it\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tables",
+              "body": "```markdown\n| Left column | Center column | Right column |\n| :---------- | :-----------: | -----------: |\n| Cell 1      |   Centered    |        $1600 |\n| Cell 2      |    Cell 3     |          $12 |\n```",
+              "footer": "Simple style\n<!-- prettier-ignore -->\n```markdown\nLeft column | Center column | Right column\n:----------:|:-------------:|:-----------:\nCell 1   |   Centered    |    $1600\nCell 2   |    Cell 3     |     $12\n```\nA markdown table generator: [tableconvert.com](https://tableconvert.com/)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Images",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Images",
+              "body": "```markdown\n![GitHub Logo](/images/logo.png)\n\n![Alt Text](url)\n```",
+              "footer": "#### Image with link\n\n```markdown\n[![GitHub Logo](/images/logo.png)](https://github.com/)\n\n[![Alt Text](image_url)](link_url)\n```\n\n#### Reference style\n\n```markdown\n![alt text][logo]\n\n[logo]: /images/logo.png 'Logo Title'\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Backslash escapes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Backslash escapes",
+              "body": "| Characters        | Escape                | Description           |\n| ----------------- | --------------------- | :-------------------- |\n| <code>\\\\</code>   | <code>\\\\\\\\</code>     | Backslash             |\n| <code>\\`</code>   | <code>\\\\\\`</code>     | Backtick              |\n| <code>\\*</code>   | <code>\\\\\\*</code>     | Asterisk              |\n| <code>\\_</code>   | <code>\\\\\\_</code>     | Underscore            |\n| <code>\\{\\}</code> | <code>\\\\\\{\\\\\\}</code> | Curly braces          |\n| <code>\\[\\]</code> | <code>\\\\\\[\\\\\\]</code> | Square brackets       |\n| <code>\\(\\)</code> | <code>\\\\\\(\\\\\\)</code> | Parentheses           |\n| <code>\\#</code>   | <code>\\\\\\#</code>     | Hash mark             |\n| <code>\\+</code>   | <code>\\\\\\+</code>     | Plus sign             |\n| <code>\\-</code>   | <code>\\\\\\-</code>     | Minus sign \\(hyphen\\) |\n| <code>\\.</code>   | <code>\\\\\\.</code>     | Dot                   |\n| <code>\\!</code>   | <code>\\\\\\!</code>     | Exclamation mark      |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

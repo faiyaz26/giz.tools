@@ -1,0 +1,296 @@
+{
+  "id": "git",
+  "metadata": {
+    "title": "Git",
+    "date": "2020-11-25T18:28:43.000Z",
+    "background": "bg-[#d7593e]",
+    "tags": [
+      "github",
+      "gitlab",
+      "version",
+      "VCS"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "This cheat sheet summarizes commonly used Git command line instructions for quick reference.",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Create a Repository",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create a Repository",
+              "body": "```\nClone a repository\n```",
+              "footer": "shell script\n$ git clone git_url\n```\nClone a repository into a specified directory\n```shell script\n$ git clone git_url my_directory\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Make a change",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Make a change",
+              "body": "```\nStages the file, ready for commit\n```",
+              "footer": "shell script\n$ git add [file]\n```\nStage all changed files, ready for commit\n```shell script\n$ git add .\n```\nCommit all staged files to version history\n```shell script\n$ git commit -m \"commit message\"\n```\nCommit all your tracked files to version history\n```shell script\n$ git commit -am \"commit message\"\n```\nDiscard changes in working directory which is not staged\n```shell script\n$ git restore [file]\n```\nUnstage a staged file or file which is staged\n```shell script\n$ git restore --staged [file]\n```\nUnstage a file, keeping the file changes\n```shell script\n$ git reset [file]\n```\nRevert everything to the last commit\n```shell script\n$ git reset --hard\n```\nDiff of what is changed but not staged\n```shell script\n$ git diff\n```\nDiff of what is staged but not yet committed\n```shell script\n$ git diff --staged\n```\nApply any commits of current branch ahead of specified one\n```shell script\n$ git rebase [branch]\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Configuration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Configuration",
+              "body": "```\nSet an email address that will be attached to your commits and tags\n```",
+              "footer": "shell script\n$ git config --global user.email \"email\"\n```\nEnable some colorization of Git output\n```shell script\n$ git config --global color.ui auto\n```\nEdit the global configuration file in a text editor\n```shell script\n$ git config --global --edit\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Working with Branches",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Working with Branches",
+              "body": "```\nList all branches, local and remote\n```",
+              "footer": "shell script\n$ git branch -av\n```\nSwitch to my_branch, and update working directory\n```shell script\n$ git checkout my_branch\n```\nCreate a new branch called new_branch\n```shell script\n$ git checkout -b new_branch\n```\nDelete the branch called my_branch\n```shell script\n$ git branch -d my_branch\n```\nMerge branchA into branchB\n```shell script\n$ git checkout branchB\n$ git merge branchA\n```\nTag the current commit\n```shell script\n$ git tag my_tag\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Observe your Repository",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Observe your Repository",
+              "body": "```\nShow the commits on branchA that are not on branchB\n```",
+              "footer": "shell script\n$ git log branchB..branchA\n```\nShow the commits that changed file, even across renames\n```shell script\n$ git log --follow [file]\n```\nShow the diff of what is in branchA that is not in branchB\n```shell script\n$ git diff branchB...branchA\n```\nShow any object in Git in human-readable format\n```shell script\n$ git show [SHA]\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Synchronize",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Synchronize",
+              "body": "```\nMerge a remote branch into your current branch to bring it up to date\n```",
+              "footer": "shell script\n$ git merge [alias]/[branch]\n$ git merge --no-ff [alias]/[branch]\n$ git merge --ff-only [alias]/[branch]\n```\nTransmit local branch commits to the remote repository branch\n```shell script\n$ git push [alias] [branch]\n```\nFetch and merge any commits from the tracking remote branch\n```shell script\n$ git pull\n```\nMerge just one specific commit from another branch to your current branch\n```shell script\n$ git cherry-pick [commit_id]\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Remote",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Remote",
+              "body": "```\nShow the names of the remote repositories you've set up\n```",
+              "footer": "shell script\n$ git remote\n```\nShow the names and URLs of the remote repositories\n```shell script\n$ git remote -v\n```\nRemove a remote repository\n```shell script\n$ git remote rm [remote repo name]\n```\nChange the URL of the git repo\n```shell script\n$ git remote set-url origin [git_url]\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Temporary Commits",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Temporary Commits",
+              "body": "```\nList stack-order of stashed file changes\n```",
+              "footer": "shell script\n$ git stash list\n```\nWrite working from top of stash stack\n```shell script\n$ git stash pop\n```\nDiscard the changes from top of stash stack\n```shell script\n$ git stash drop\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tracking path Changes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tracking path Changes",
+              "body": "```\nChange an existing file path and stage the move\n```",
+              "footer": "shell script\n$ git mv [existing-path] [new-path]\n```\nShow all commit logs with indication of any paths that moved\n```shell script\n$ git log --stat -M\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ignoring Files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ignoring Files",
+              "body": "```\n/logs/*\n\n# \"!\" means don't ignore\n!logs/.gitkeep\n\n/# Ignore Mac system files\n.DS_store\n\n# Ignore node_modules folder\nnode_modules\n\n# Ignore SASS config files\n.sass-cache\n```",
+              "footer": "A `.gitignore` file specifies intentionally untracked files that Git should ignore",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Git Tricks",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Rename branch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Rename branch",
+              "body": "",
+              "footer": "- #### **Renamed** to `new_name`\n  ```shell script\n  $ git branch -m <new_name>\n  ```\n- #### **Push** and reset\n  ```shell script\n  $ git push origin -u <new_name>\n  ```\n- #### **Delete** remote branch\n  ```shell script\n  $ git push origin --delete <old>\n  ```\n  {.marker-timeline}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Log",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Log",
+              "body": "```\nShow changes over time for specific file\n```",
+              "footer": "shell script\n$ git log -p <file_name>\n```\nPrint out a cool visualization of your log\n```shell script {.wrap}\n$ git log --pretty=oneline --graph --decorate --all\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Branch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Branch",
+              "body": "```\nQuickly switch to the previous branch\n```",
+              "footer": "shell script\n$ git checkout -\n```\nGet only remote branches\n```shell script\n$ git branch -r\n```\nCheckout a single file from another branch\n```shell script\n$ git checkout <branch> -- <file>\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Rewriting history",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Rewriting history",
+              "body": "```\nAmend the latest commit without changing the commit message.\n```",
+              "footer": "shell script\n$ git commit --amend --no-edit\n```\nSee also: [Rewriting history](https://www.atlassian.com/git/tutorials/rewriting-history)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Git Aliases",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Git Aliases",
+              "body": "```cmd\ngit config --global alias.co checkout\ngit config --global alias.br branch\ngit config --global alias.ci commit\ngit config --global alias.st status\n```",
+              "footer": "See also: [More Aliases](https://gist.github.com/johnpolacek/69604a1f6861129ef088)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Advanced Git",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Submodules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Submodules",
+              "body": "```\nClone a repository and initialize its submodules:\n```",
+              "footer": "shell script\n$ git clone --recursive <repository_url>\n```\nUpdate all the submodules in your repository to the latest commit of their respective branches:\n```shell script\n$ git submodule update\n```\nPull the latest changes from the remote repositories of the submodules and update them in your main repository:\n```shell script\n$ git submodule update --remote\n```\nRemove a submodule from your repository:\n```shell script\n$ git submodule deinit <path>\n$ git rm <path>\n$ git commit -m \"Removed submodule\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cherry-picking",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cherry-picking",
+              "body": "",
+              "footer": "Cherry-picking allows you to apply a specific commit from one branch to another branch.\n\n```shell script\n$ git cherry-pick <commit_hash>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reflog",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reflog",
+              "body": "```\nFind the hash of the lost commit or branch using the reflog and then checkout to that hash to restore it:\n```",
+              "footer": "shell script\n$ git checkout <commit_or_branch_hash>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

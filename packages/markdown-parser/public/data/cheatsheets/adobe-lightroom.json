@@ -1,0 +1,1268 @@
+{
+  "id": "adobe-lightroom",
+  "metadata": {
+    "title": "Adobe Lightroom CC",
+    "date": "2022-11-23T16:23:31.702Z",
+    "background": "bg-[#081c32]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 251 keyboard shortcuts found in Adobe Lightroom CC\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Working with panels",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Working with panels",
+              "body": "| Shortcut                  | Action                                                                    |\n| ------------------------- | ------------------------------------------------------------------------- |\n| `Tab`                     | Show/hide side panels                                                     |\n| `Shift` `Tab`             | Show/hide all panels                                                      |\n| `T`                       | Show/hide toolbar                                                         |\n| `F5`                      | Show/hide Module Picker                                                   |\n| `F6`                      | Show/hide Filmstrip                                                       |\n| `F7`                      | Show/hide left panels                                                     |\n| `F8`                      | Show/hide right panels                                                    |\n| `Alt` `(click a panel)`   | Toggle solo mode                                                          |\n| `Shift` `(click a panel)` | Open a new panel without closing soloed panel                             |\n| `Ctrl` `(click a panel)`  | Open/close all panels                                                     |\n| `Ctrl` `Shift` `0-5`      | Open/close left panels, top to bottom                                     |\n| `Ctrl` `0-9`              | Open/close right panels, Library and Develop modules, top to bottom       |\n| `Ctrl` `1-7`              | Open/close right panels, Slideshow, Print, and Web modules, top to bottom |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Show/hide side panels"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Show/hide all panels"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Show/hide toolbar"
+                },
+                {
+                  "shortcut": "`F5`",
+                  "action": "Show/hide Module Picker"
+                },
+                {
+                  "shortcut": "`F6`",
+                  "action": "Show/hide Filmstrip"
+                },
+                {
+                  "shortcut": "`F7`",
+                  "action": "Show/hide left panels"
+                },
+                {
+                  "shortcut": "`F8`",
+                  "action": "Show/hide right panels"
+                },
+                {
+                  "shortcut": "`Alt` `(click a panel)`",
+                  "action": "Toggle solo mode"
+                },
+                {
+                  "shortcut": "`Shift` `(click a panel)`",
+                  "action": "Open a new panel without closing soloed panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click a panel)`",
+                  "action": "Open/close all panels"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `0-5`",
+                  "action": "Open/close left panels, top to bottom"
+                },
+                {
+                  "shortcut": "`Ctrl` `0-9`",
+                  "action": "Open/close right panels, Library and Develop modules, top to bottom"
+                },
+                {
+                  "shortcut": "`Ctrl` `1-7`",
+                  "action": "Open/close right panels, Slideshow, Print, and Web modules, top to bottom"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigating modules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigating modules",
+              "body": "| Shortcut                  | Action                     |\n| ------------------------- | -------------------------- |\n| `Ctrl` `Alt` `1`          | Go to Library module       |\n| `Ctrl` `Alt` `2`          | Go to Develop module       |\n| `Ctrl` `Alt` `3`          | Go to Slideshow module     |\n| `Ctrl` `Alt` `4`          | Go to Print module         |\n| `Ctrl` `Alt` `5`          | Go to Web module           |\n| `Ctrl` `Alt` `Left/Right` | Go back/go forward         |\n| `Ctrl` `Alt` `Up`         | Go back to previous module |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Alt` `1`",
+                  "action": "Go to Library module"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `2`",
+                  "action": "Go to Develop module"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `3`",
+                  "action": "Go to Slideshow module"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `4`",
+                  "action": "Go to Print module"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `5`",
+                  "action": "Go to Web module"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Left/Right`",
+                  "action": "Go back/go forward"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Up`",
+                  "action": "Go back to previous module"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Using a secondary window",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using a secondary window",
+              "body": "| Shortcut                     | Action                                           |\n| ---------------------------- | ------------------------------------------------ |\n| `F11`                        | Open secondary window                            |\n| `Shift` `G`                  | Enter Grid view                                  |\n| `Shift` `E`                  | Enter normal Loupe view                          |\n| `Ctrl` `Shift` `Enter`       | Enter locked Loupe view                          |\n| `Shift` `C`                  | Enter Compare view                               |\n| `Shift` `N`                  | Enter Survey view                                |\n| `Ctrl` `Alt` `Shift` `Enter` | Enter Slideshow view                             |\n| `Shift` `F11`                | Enter full-screen mode (requires second monitor) |\n| `Shift` `\\`                  | Show/hide Filter bar                             |\n| `Ctrl` `Shift` `+/-`         | Zoom in/out                                      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F11`",
+                  "action": "Open secondary window"
+                },
+                {
+                  "shortcut": "`Shift` `G`",
+                  "action": "Enter Grid view"
+                },
+                {
+                  "shortcut": "`Shift` `E`",
+                  "action": "Enter normal Loupe view"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Enter`",
+                  "action": "Enter locked Loupe view"
+                },
+                {
+                  "shortcut": "`Shift` `C`",
+                  "action": "Enter Compare view"
+                },
+                {
+                  "shortcut": "`Shift` `N`",
+                  "action": "Enter Survey view"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `Enter`",
+                  "action": "Enter Slideshow view"
+                },
+                {
+                  "shortcut": "`Shift` `F11`",
+                  "action": "Enter full-screen mode (requires second monitor)"
+                },
+                {
+                  "shortcut": "`Shift` `\\`",
+                  "action": "Show/hide Filter bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `+/-`",
+                  "action": "Zoom in/out"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Working in the Develop module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Working in the Develop module",
+              "body": "| Shortcut                     | Action                                                                                |\n| ---------------------------- | ------------------------------------------------------------------------------------- |\n| `V`                          | Convert to grayscale                                                                  |\n| `Ctrl` `U`                   | Auto tone                                                                             |\n| `Ctrl` `Shift` `U`           | Auto white balance                                                                    |\n| `Ctrl` `E`                   | Edit in Photoshop                                                                     |\n| `Ctrl` `Shift` `C/V`         | Copy/paste Develop settings                                                           |\n| `Ctrl` `Alt` `V`             | Paste settings from previous photo                                                    |\n| `Ctrl` `Alt` `Shift` `Left`  | Copy After settings to Before                                                         |\n| `Ctrl` `Alt` `Shift` `Right` | Copy Before settings to After                                                         |\n| `Ctrl` `Alt` `Shift` `Up`    | Swap Before and After settings                                                        |\n| `Up/Down`                    | Increase/decrease selected slider in small increments                                 |\n| `Shift` `Up/Down`            | Increase/decrease selected slider in larger increments                                |\n| `./,`                        | Cycle through Basic panel settings (forward/backward)                                 |\n| `(double-click slider name)` | Reset a slider                                                                        |\n| `Alt` `(click group name)`   | Reset a group of sliders                                                              |\n| `Ctrl` `Shift` `R`           | Reset all settings                                                                    |\n| `Ctrl` `Shift` `S`           | Sync settings                                                                         |\n| `Ctrl` `Alt` `S`             | Sync settings bypassing Synchronize Settings dialog box                               |\n| `Ctrl` `(click Sync button)` | Toggle Auto Sync                                                                      |\n| `Ctrl` `Alt` `Shift` `A`     | Enable Auto Sync                                                                      |\n| `Ctrl` `Alt` `Shift` `M`     | Match total exposures                                                                 |\n| `W`                          | Select White Balance tool (from any module)                                           |\n| `R`                          | Select the Crop tool (from any module)                                                |\n| `A`                          | Constrain aspect ratio when Crop tool is selected                                     |\n| `Shift` `A`                  | Crop to same aspect ratio as previous crop                                            |\n| `Alt` `(drag)`               | Crop from center of photo                                                             |\n| `O`                          | Cycle Crop grid overlay                                                               |\n| `Shift` `O`                  | Cycle Crop grid overlay orientation                                                   |\n| `X`                          | Switch crop between portrait and landscape orientation                                |\n| `Ctrl` `Alt` `R`             | Reset crop                                                                            |\n| `Shift` `T`                  | Select the Guided Upright tool                                                        |\n| `Q`                          | Select the Spot Removal tool                                                          |\n| `Shift` `T`                  | Toggle Brush between Clone and Heal modes when Spot Removal tool is selected          |\n| `K`                          | Select the Adjustment Brush tool (from any module)                                    |\n| `M`                          | Select the Graduated Filter tool                                                      |\n| `Shift` `T`                  | Toggle Mask between Edit and Brush modes when the Graduated/Radial Filter is selected |\n| `]/[`                        | Increase/decrease brush size                                                          |\n| `Shift` `]/[`                | Increase/decrease brush feathering                                                    |\n| `/`                          | Switch between local adjustment brush A and B                                         |\n| `Alt` `(drag)`               | Temporarily switch from brush A or B to Eraser                                        |\n| `Shift` `(drag)`             | Paint a horizontal or vertical line                                                   |\n| `H`                          | Show/hide local adjustment pin                                                        |\n| `O`                          | Show/hide local adjustment mask overlay                                               |\n| `Shift` `O`                  | Cycle local adjustment mask overlay colors                                            |\n| `Ctrl` `Alt` `Shift` `T`     | Select Targeted Adjustment tool to apply a Tone Curve adjustment                      |\n| `Ctrl` `Alt` `Shift` `H`     | Select Targeted Adjustment tool to apply a Hue adjustment                             |\n| `Ctrl` `Alt` `Shift` `S`     | Select Targeted Adjustment tool to apply a Saturation adjustment                      |\n| `Ctrl` `Alt` `Shift` `L`     | Select Targeted Adjustment tool to apply a Luminance adjustment                       |\n| `Ctrl` `Alt` `Shift` `G`     | Select Targeted Adjustment tool to apply a Grayscale Mix adjustment                   |\n| `Ctrl` `Alt` `Shift` `N`     | Deselect Targeted Adjustment tool                                                     |\n| `J`                          | Show clipping                                                                         |\n| `Ctrl` `]`                   | Rotate photo right (clockwise)                                                        |\n| `Ctrl` `[`                   | Rotate photo left (counterclockwise)                                                  |\n| `Space/Z`                    | Toggle between Loupe and 1:1 Zoom preview                                             |\n| `Ctrl` `+/-`                 | Zoom in/out                                                                           |\n| `Ctrl` `Enter`               | Play impromptu slide show                                                             |\n| `Y`                          | View Before and After left/right                                                      |\n| `Alt` `Y`                    | View Before and After top/bottom                                                      |\n| `Shift` `Y`                  | View Before and After in a split screen                                               |\n| `\\`                          | View Before only                                                                      |\n| `Ctrl` `N`                   | Create a new snapshot                                                                 |\n| `Ctrl` `Shift` `N`           | Create a new preset                                                                   |\n| `Ctrl` `Alt` `N`             | Create a new preset folder                                                            |\n| `Ctrl` `J`                   | Open Develop view options                                                             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`V`",
+                  "action": "Convert to grayscale"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Auto tone"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `U`",
+                  "action": "Auto white balance"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Edit in Photoshop"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C/V`",
+                  "action": "Copy/paste Develop settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `V`",
+                  "action": "Paste settings from previous photo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `Left`",
+                  "action": "Copy After settings to Before"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `Right`",
+                  "action": "Copy Before settings to After"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `Up`",
+                  "action": "Swap Before and After settings"
+                },
+                {
+                  "shortcut": "`Up/Down`",
+                  "action": "Increase/decrease selected slider in small increments"
+                },
+                {
+                  "shortcut": "`Shift` `Up/Down`",
+                  "action": "Increase/decrease selected slider in larger increments"
+                },
+                {
+                  "shortcut": "`./,`",
+                  "action": "Cycle through Basic panel settings (forward/backward)"
+                },
+                {
+                  "shortcut": "`(double-click slider name)`",
+                  "action": "Reset a slider"
+                },
+                {
+                  "shortcut": "`Alt` `(click group name)`",
+                  "action": "Reset a group of sliders"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Reset all settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Sync settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `S`",
+                  "action": "Sync settings bypassing Synchronize Settings dialog box"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click Sync button)`",
+                  "action": "Toggle Auto Sync"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `A`",
+                  "action": "Enable Auto Sync"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `M`",
+                  "action": "Match total exposures"
+                },
+                {
+                  "shortcut": "`W`",
+                  "action": "Select White Balance tool (from any module)"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Select the Crop tool (from any module)"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Constrain aspect ratio when Crop tool is selected"
+                },
+                {
+                  "shortcut": "`Shift` `A`",
+                  "action": "Crop to same aspect ratio as previous crop"
+                },
+                {
+                  "shortcut": "`Alt` `(drag)`",
+                  "action": "Crop from center of photo"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Cycle Crop grid overlay"
+                },
+                {
+                  "shortcut": "`Shift` `O`",
+                  "action": "Cycle Crop grid overlay orientation"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Switch crop between portrait and landscape orientation"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `R`",
+                  "action": "Reset crop"
+                },
+                {
+                  "shortcut": "`Shift` `T`",
+                  "action": "Select the Guided Upright tool"
+                },
+                {
+                  "shortcut": "`Q`",
+                  "action": "Select the Spot Removal tool"
+                },
+                {
+                  "shortcut": "`Shift` `T`",
+                  "action": "Toggle Brush between Clone and Heal modes when Spot Removal tool is selected"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Select the Adjustment Brush tool (from any module)"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Select the Graduated Filter tool"
+                },
+                {
+                  "shortcut": "`Shift` `T`",
+                  "action": "Toggle Mask between Edit and Brush modes when the Graduated/Radial Filter is selected"
+                },
+                {
+                  "shortcut": "`]/[`",
+                  "action": "Increase/decrease brush size"
+                },
+                {
+                  "shortcut": "`Shift` `]/[`",
+                  "action": "Increase/decrease brush feathering"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Switch between local adjustment brush A and B"
+                },
+                {
+                  "shortcut": "`Alt` `(drag)`",
+                  "action": "Temporarily switch from brush A or B to Eraser"
+                },
+                {
+                  "shortcut": "`Shift` `(drag)`",
+                  "action": "Paint a horizontal or vertical line"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Show/hide local adjustment pin"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Show/hide local adjustment mask overlay"
+                },
+                {
+                  "shortcut": "`Shift` `O`",
+                  "action": "Cycle local adjustment mask overlay colors"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `T`",
+                  "action": "Select Targeted Adjustment tool to apply a Tone Curve adjustment"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `H`",
+                  "action": "Select Targeted Adjustment tool to apply a Hue adjustment"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `S`",
+                  "action": "Select Targeted Adjustment tool to apply a Saturation adjustment"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `L`",
+                  "action": "Select Targeted Adjustment tool to apply a Luminance adjustment"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `G`",
+                  "action": "Select Targeted Adjustment tool to apply a Grayscale Mix adjustment"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `N`",
+                  "action": "Deselect Targeted Adjustment tool"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Show clipping"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Rotate photo right (clockwise)"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Rotate photo left (counterclockwise)"
+                },
+                {
+                  "shortcut": "`Space/Z`",
+                  "action": "Toggle between Loupe and 1:1 Zoom preview"
+                },
+                {
+                  "shortcut": "`Ctrl` `+/-`",
+                  "action": "Zoom in/out"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Play impromptu slide show"
+                },
+                {
+                  "shortcut": "`Y`",
+                  "action": "View Before and After left/right"
+                },
+                {
+                  "shortcut": "`Alt` `Y`",
+                  "action": "View Before and After top/bottom"
+                },
+                {
+                  "shortcut": "`Shift` `Y`",
+                  "action": "View Before and After in a split screen"
+                },
+                {
+                  "shortcut": "`\\`",
+                  "action": "View Before only"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Create a new snapshot"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Create a new preset"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `N`",
+                  "action": "Create a new preset folder"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Open Develop view options"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Changing view and screen modes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Changing view and screen modes",
+              "body": "| Shortcut           | Action                                             |\n| ------------------ | -------------------------------------------------- |\n| `E`                | Enter Library Loupe view                           |\n| `G`                | Enter Library Grid view                            |\n| `C`                | Enter Library Compare view                         |\n| `N`                | Enter Library Survey view                          |\n| `D`                | Open selected photo in the Develop module          |\n| `L`                | Cycle forward through Lights Out modes             |\n| `Shift` `L`        | Cycle backward through Lights Out modes            |\n| `Ctrl` `Shift` `L` | Toggle Lights Dim mode                             |\n| `F`                | Cycle screen modes                                 |\n| `Ctrl` `Shift` `F` | Switch between Normal and full-screen, hide panels |\n| `Ctrl` `Alt` `F`   | Go to Normal screen mode                           |\n| `I`                | Cycle info overlay                                 |\n| `Ctrl` `I`         | Show/hide info overlay                             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`E`",
+                  "action": "Enter Library Loupe view"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Enter Library Grid view"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Enter Library Compare view"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Enter Library Survey view"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Open selected photo in the Develop module"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Cycle forward through Lights Out modes"
+                },
+                {
+                  "shortcut": "`Shift` `L`",
+                  "action": "Cycle backward through Lights Out modes"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Toggle Lights Dim mode"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Cycle screen modes"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Switch between Normal and full-screen, hide panels"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `F`",
+                  "action": "Go to Normal screen mode"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Cycle info overlay"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Show/hide info overlay"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Managing photos and catalogs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Managing photos and catalogs",
+              "body": "| Shortcut                         | Action                                                                                 |\n| -------------------------------- | -------------------------------------------------------------------------------------- |\n| `Ctrl` `Shift` `I`               | Import photos from disk                                                                |\n| `Ctrl` `O`                       | Open catalog                                                                           |\n| `Ctrl` `,`                       | Open Preferences                                                                       |\n| `Ctrl` `Alt` `,`                 | Open Catalog Settings                                                                  |\n| `Ctrl` `Shift` `T`               | Create new subfolder (segmented tethered capture)                                      |\n| `Ctrl` `T`                       | Hide/show tether capture bar                                                           |\n| `Ctrl` `Shift` `N`               | Create a new folder in the Library module                                              |\n| `Ctrl` `'`                       | Create virtual copy (Library and Develop module only)                                  |\n| `Ctrl` `R`                       | Show in Explorer/Finder (Library and Develop module only)                              |\n| `Right/Left`                     | Go to next/previous photo in the Filmstrip                                             |\n| `Shift/Ctrl` `Click`             | Select multiple folders or collections (in Library, Slideshow, Print, and Web modules) |\n| `F2`                             | Rename photo (in Library module)                                                       |\n| `Delete`                         | Delete selected photo(s)                                                               |\n| `Alt` `Backspace`                | Remove selected photo(s) from catalog                                                  |\n| `Ctrl` `Alt` `Shift` `Backspace` | Delete selected photo(s) and move to Trash                                             |\n| `Ctrl` `Backspace`               | Delete rejected photo(s)                                                               |\n| `Ctrl` `E`                       | Edit in Photoshop                                                                      |\n| `Ctrl` `Alt` `E`                 | Open in other editor                                                                   |\n| `Ctrl` `Shift` `E`               | Export selected photo(s)                                                               |\n| `Ctrl` `Alt` `Shift` `E`         | Export with previous settings                                                          |\n| `Ctrl` `Alt` `Shift` `,`         | Open plug-in manager                                                                   |\n| `Ctrl` `P`                       | Print selected photo                                                                   |\n| `Ctrl` `Shift` `P`               | Open Page Setup dialog box                                                             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `I`",
+                  "action": "Import photos from disk"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open catalog"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Open Preferences"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `,`",
+                  "action": "Open Catalog Settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Create new subfolder (segmented tethered capture)"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Hide/show tether capture bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Create a new folder in the Library module"
+                },
+                {
+                  "shortcut": "`Ctrl` `'`",
+                  "action": "Create virtual copy (Library and Develop module only)"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Show in Explorer/Finder (Library and Develop module only)"
+                },
+                {
+                  "shortcut": "`Right/Left`",
+                  "action": "Go to next/previous photo in the Filmstrip"
+                },
+                {
+                  "shortcut": "`Shift/Ctrl` `Click`",
+                  "action": "Select multiple folders or collections (in Library, Slideshow, Print, and Web modules)"
+                },
+                {
+                  "shortcut": "`F2`",
+                  "action": "Rename photo (in Library module)"
+                },
+                {
+                  "shortcut": "`Delete`",
+                  "action": "Delete selected photo(s)"
+                },
+                {
+                  "shortcut": "`Alt` `Backspace`",
+                  "action": "Remove selected photo(s) from catalog"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `Backspace`",
+                  "action": "Delete selected photo(s) and move to Trash"
+                },
+                {
+                  "shortcut": "`Ctrl` `Backspace`",
+                  "action": "Delete rejected photo(s)"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Edit in Photoshop"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `E`",
+                  "action": "Open in other editor"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Export selected photo(s)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `E`",
+                  "action": "Export with previous settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `,`",
+                  "action": "Open plug-in manager"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Print selected photo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Open Page Setup dialog box"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comparing photos in the Library module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comparing photos in the Library module",
+              "body": "| Shortcut                 | Action                                                |\n| ------------------------ | ----------------------------------------------------- |\n| `E/Enter`                | Switch to Loupe view                                  |\n| `G/Esc`                  | Switch to Grid view                                   |\n| `C`                      | Switch to Compare view                                |\n| `N`                      | Switch to Survey view                                 |\n| `Space/E`                | Switch from Grid to Loupe view                        |\n| `Down`                   | Swap select and candidate photos in Compare view      |\n| `Up`                     | Make next photos select and candidate in Compare view |\n| `Z`                      | Toggle Zoom view                                      |\n| `Ctrl` `+/-`             | Zoom in/out in Loupe view                             |\n| `PgUp/PgDown`            | Scroll up/down zoomed photo in Loupe view             |\n| `Home/End`               | Go to beginning/end of Grid view                      |\n| `Ctrl` `Enter`           | Play impromptu slide show                             |\n| `Ctrl` `]`               | Rotate photo right (clockwise)                        |\n| `Ctrl` `[`               | Rotate photo left (counterclockwise)                  |\n| `=/-`                    | Increase/decrease Grid thumbnail size                 |\n| `PgUp/PgDown`            | Scroll up/down Grid thumbnails                        |\n| `Ctrl` `Shift` `H`       | Toggle cell extras                                    |\n| `Ctrl` `Alt` `Shift` `H` | Show/hide badges                                      |\n| `J`                      | Cycle Grid views                                      |\n| `Ctrl` `J`               | Open Library view options                             |\n| `Ctrl` `(click)`         | Select multiple discrete photos                       |\n| `Shift` `(click)`        | Select multiple contiguous photos                     |\n| `Ctrl` `A`               | Select all photos                                     |\n| `Ctrl` `D`               | Deselect all photos                                   |\n| `Ctrl` `Shift` `D`       | Select only active photo                              |\n| `/`                      | Deselect active photo                                 |\n| `Shift` `Left/Right`     | Add previous/next photo to selection                  |\n| `Ctrl` `Alt` `A`         | Select flagged photos                                 |\n| `Ctrl` `Alt` `Shift` `D` | Deselect unflagged photos                             |\n| `Ctrl` `G`               | Group into stack                                      |\n| `Ctrl` `Shift` `G`       | Unstack                                               |\n| `S`                      | Toggle stack                                          |\n| `Shift` `S`              | Move to top of stack                                  |\n| `Shift` `[`              | Move up in stack                                      |\n| `Shift` `]`              | Move down in stack                                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`E/Enter`",
+                  "action": "Switch to Loupe view"
+                },
+                {
+                  "shortcut": "`G/Esc`",
+                  "action": "Switch to Grid view"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Switch to Compare view"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Switch to Survey view"
+                },
+                {
+                  "shortcut": "`Space/E`",
+                  "action": "Switch from Grid to Loupe view"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Swap select and candidate photos in Compare view"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Make next photos select and candidate in Compare view"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Toggle Zoom view"
+                },
+                {
+                  "shortcut": "`Ctrl` `+/-`",
+                  "action": "Zoom in/out in Loupe view"
+                },
+                {
+                  "shortcut": "`PgUp/PgDown`",
+                  "action": "Scroll up/down zoomed photo in Loupe view"
+                },
+                {
+                  "shortcut": "`Home/End`",
+                  "action": "Go to beginning/end of Grid view"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Play impromptu slide show"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Rotate photo right (clockwise)"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Rotate photo left (counterclockwise)"
+                },
+                {
+                  "shortcut": "`=/-`",
+                  "action": "Increase/decrease Grid thumbnail size"
+                },
+                {
+                  "shortcut": "`PgUp/PgDown`",
+                  "action": "Scroll up/down Grid thumbnails"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "Toggle cell extras"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `H`",
+                  "action": "Show/hide badges"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Cycle Grid views"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Open Library view options"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click)`",
+                  "action": "Select multiple discrete photos"
+                },
+                {
+                  "shortcut": "`Shift` `(click)`",
+                  "action": "Select multiple contiguous photos"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all photos"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Deselect all photos"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `D`",
+                  "action": "Select only active photo"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Deselect active photo"
+                },
+                {
+                  "shortcut": "`Shift` `Left/Right`",
+                  "action": "Add previous/next photo to selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `A`",
+                  "action": "Select flagged photos"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `D`",
+                  "action": "Deselect unflagged photos"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Group into stack"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Unstack"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Toggle stack"
+                },
+                {
+                  "shortcut": "`Shift` `S`",
+                  "action": "Move to top of stack"
+                },
+                {
+                  "shortcut": "`Shift` `[`",
+                  "action": "Move up in stack"
+                },
+                {
+                  "shortcut": "`Shift` `]`",
+                  "action": "Move down in stack"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Rating and filtering photos",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Rating and filtering photos",
+              "body": "| Shortcut                        | Action                                      |\n| ------------------------------- | ------------------------------------------- |\n| `1-5`                           | Set star rating                             |\n| `Shift` `1-5`                   | Set star rating and go to next photo        |\n| `0`                             | Remove star rating                          |\n| `Shift` `0`                     | Remove star rating and go to next photo     |\n| `]/[`                           | Increase/decrease rating by one star        |\n| `6`                             | Assign a red label                          |\n| `7`                             | Assign a yellow label                       |\n| `8`                             | Assign a green label                        |\n| `9`                             | Assign a blue label                         |\n| `Shift` `6-9`                   | Assign a color label and go to next photo   |\n| `P`                             | Flag photo as a pick                        |\n| `Shift` `P`                     | Flag photo as a pick and go to next photo   |\n| `X`                             | Flag photo as a reject                      |\n| `Shift` `X`                     | Flag photo as a reject and go to next photo |\n| `U`                             | Unflag photo                                |\n| `Shift` `U`                     | Unflag photo and go to next photo           |\n| `Ctrl` `Up/Down`                | Increase/decrease flag status               |\n| <code>\\`</code>                 | Cycle flag settings                         |\n| `Ctrl` `Alt` `R`                | Refine photos                               |\n| `\\`                             | Show/hide Library Filter bar                |\n| `Shift` `(click filter labels)` | Open multiple filters in the Filter bar     |\n| `Shift` `L`                     | Toggle filters on/off                       |\n| `Ctrl` `F`                      | Find photo in the Library module            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`1-5`",
+                  "action": "Set star rating"
+                },
+                {
+                  "shortcut": "`Shift` `1-5`",
+                  "action": "Set star rating and go to next photo"
+                },
+                {
+                  "shortcut": "`0`",
+                  "action": "Remove star rating"
+                },
+                {
+                  "shortcut": "`Shift` `0`",
+                  "action": "Remove star rating and go to next photo"
+                },
+                {
+                  "shortcut": "`]/[`",
+                  "action": "Increase/decrease rating by one star"
+                },
+                {
+                  "shortcut": "`6`",
+                  "action": "Assign a red label"
+                },
+                {
+                  "shortcut": "`7`",
+                  "action": "Assign a yellow label"
+                },
+                {
+                  "shortcut": "`8`",
+                  "action": "Assign a green label"
+                },
+                {
+                  "shortcut": "`9`",
+                  "action": "Assign a blue label"
+                },
+                {
+                  "shortcut": "`Shift` `6-9`",
+                  "action": "Assign a color label and go to next photo"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Flag photo as a pick"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Flag photo as a pick and go to next photo"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Flag photo as a reject"
+                },
+                {
+                  "shortcut": "`Shift` `X`",
+                  "action": "Flag photo as a reject and go to next photo"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Unflag photo"
+                },
+                {
+                  "shortcut": "`Shift` `U`",
+                  "action": "Unflag photo and go to next photo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up/Down`",
+                  "action": "Increase/decrease flag status"
+                },
+                {
+                  "shortcut": "<code>\\`</code>",
+                  "action": "Cycle flag settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `R`",
+                  "action": "Refine photos"
+                },
+                {
+                  "shortcut": "`\\`",
+                  "action": "Show/hide Library Filter bar"
+                },
+                {
+                  "shortcut": "`Shift` `(click filter labels)`",
+                  "action": "Open multiple filters in the Filter bar"
+                },
+                {
+                  "shortcut": "`Shift` `L`",
+                  "action": "Toggle filters on/off"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find photo in the Library module"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Working with collections",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Working with collections",
+              "body": "| Shortcut                 | Action                                        |\n| ------------------------ | --------------------------------------------- |\n| `Ctrl` `N`               | Create a new collection in the Library module |\n| `B`                      | Add to Quick Collection                       |\n| `Shift` `B`              | Add to Quick Collection and go to next photo  |\n| `Ctrl` `B`               | Show Quick Collection                         |\n| `Ctrl` `Alt` `B`         | Save Quick Collection                         |\n| `Ctrl` `Shift` `B`       | Clear Quick Collection                        |\n| `Ctrl` `Alt` `Shift` `B` | Set as target collection                      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Create a new collection in the Library module"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Add to Quick Collection"
+                },
+                {
+                  "shortcut": "`Shift` `B`",
+                  "action": "Add to Quick Collection and go to next photo"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Show Quick Collection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `B`",
+                  "action": "Save Quick Collection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `B`",
+                  "action": "Clear Quick Collection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `B`",
+                  "action": "Set as target collection"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Working with metadata and keywords in the Library module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Working with metadata and keywords in the Library module",
+              "body": "| Shortcut                   | Action                                             |\n| -------------------------- | -------------------------------------------------- |\n| `Ctrl` `K`                 | Add keywords                                       |\n| `Ctrl` `Shift` `K`         | Edit keywords                                      |\n| `Ctrl` `Alt` `Shift` `K`   | Set a keyword shortcut                             |\n| `Shift` `K`                | Add/remove keyword shortcut from selected photo    |\n| `Ctrl` `Alt` `K`           | Enable painting                                    |\n| `Alt` `1-9`                | Add a keyword from a keyword set to selected photo |\n| `Alt` `0`                  | Cycle forward through keyword sets                 |\n| `Alt` `Shift` `0`          | Cycle backward through keyword sets                |\n| `Ctrl` `Alt` `Shift` `C/V` | Copy/paste metadata                                |\n| `Ctrl` `S`                 | Save metadata to file                              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Add keywords"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Edit keywords"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `K`",
+                  "action": "Set a keyword shortcut"
+                },
+                {
+                  "shortcut": "`Shift` `K`",
+                  "action": "Add/remove keyword shortcut from selected photo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `K`",
+                  "action": "Enable painting"
+                },
+                {
+                  "shortcut": "`Alt` `1-9`",
+                  "action": "Add a keyword from a keyword set to selected photo"
+                },
+                {
+                  "shortcut": "`Alt` `0`",
+                  "action": "Cycle forward through keyword sets"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `0`",
+                  "action": "Cycle backward through keyword sets"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `C/V`",
+                  "action": "Copy/paste metadata"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save metadata to file"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Working in the Slideshow module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Working in the Slideshow module",
+              "body": "| Shortcut           | Action                                  |\n| ------------------ | --------------------------------------- |\n| `Enter`            | Play slide show                         |\n| `Ctrl` `Enter`     | Play impromptu slide show               |\n| `Space`            | Pause slide show                        |\n| `Alt` `Enter`      | Preview slide show                      |\n| `Esc`              | End slide show                          |\n| `Right`            | Go to next slide                        |\n| `Left`             | Go to previous slide                    |\n| `Ctrl` `]`         | Rotate photo right (clockwise)          |\n| `Ctrl` `[`         | Rotate photo left (counterclockwise)    |\n| `Ctrl` `Shift` `H` | Show/hide guides                        |\n| `Ctrl` `J`         | Export PDF slide show                   |\n| `Ctrl` `Shift` `J` | Export JPEG slide show                  |\n| `Ctrl` `Alt` `J`   | Export video slide show                 |\n| `Ctrl` `N`         | Create a new slide show template        |\n| `Ctrl` `Shift` `N` | Create a new slide show template folder |\n| `Ctrl` `S`         | Save slide show settings                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Play slide show"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Play impromptu slide show"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Pause slide show"
+                },
+                {
+                  "shortcut": "`Alt` `Enter`",
+                  "action": "Preview slide show"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "End slide show"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Go to next slide"
+                },
+                {
+                  "shortcut": "`Left`",
+                  "action": "Go to previous slide"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Rotate photo right (clockwise)"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Rotate photo left (counterclockwise)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "Show/hide guides"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Export PDF slide show"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Export JPEG slide show"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `J`",
+                  "action": "Export video slide show"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Create a new slide show template"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Create a new slide show template folder"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save slide show settings"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Working in the Print module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Working in the Print module",
+              "body": "| Shortcut                 | Action                               |\n| ------------------------ | ------------------------------------ |\n| `Ctrl` `P`               | Print                                |\n| `Ctrl` `Alt` `P`         | Print one copy                       |\n| `Ctrl` `Shift` `P`       | Open Page Setup dialog box           |\n| `Ctrl` `Alt` `Shift` `P` | Open Print Settings dialog box       |\n| `Ctrl` `Shift` `Left`    | Go to first page                     |\n| `Ctrl` `Shift` `Right`   | Go to last page                      |\n| `Ctrl` `Left`            | Go to previous page                  |\n| `Ctrl` `Right`           | Go to next page                      |\n| `Ctrl` `Shift` `H`       | Show/hide guides                     |\n| `Ctrl` `R`               | Show/hide rulers                     |\n| `Ctrl` `Shift` `J`       | Show/hide page bleed                 |\n| `Ctrl` `Shift` `M`       | Show/hide margins and gutters        |\n| `Ctrl` `Shift` `K`       | Show/hide image cells                |\n| `Ctrl` `Shift` `U`       | Show/hide dimensions                 |\n| `Ctrl` `Enter`           | Play impromptu slide show            |\n| `Ctrl` `]`               | Rotate photo right (clockwise)       |\n| `Ctrl` `[`               | Rotate photo left (counterclockwise) |\n| `Ctrl` `N`               | Create a new print template          |\n| `Ctrl` `Shift` `N`       | Create a new print template folder   |\n| `Ctrl` `S`               | Save print settings                  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Print"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `P`",
+                  "action": "Print one copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Open Page Setup dialog box"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Shift` `P`",
+                  "action": "Open Print Settings dialog box"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Left`",
+                  "action": "Go to first page"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Right`",
+                  "action": "Go to last page"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left`",
+                  "action": "Go to previous page"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right`",
+                  "action": "Go to next page"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "Show/hide guides"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Show/hide rulers"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Show/hide page bleed"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Show/hide margins and gutters"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Show/hide image cells"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `U`",
+                  "action": "Show/hide dimensions"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Play impromptu slide show"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Rotate photo right (clockwise)"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Rotate photo left (counterclockwise)"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Create a new print template"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Create a new print template folder"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save print settings"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Working in the Web module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Working in the Web module",
+              "body": "| Shortcut           | Action                                   |\n| ------------------ | ---------------------------------------- |\n| `Ctrl` `R`         | Reload web gallery                       |\n| `Ctrl` `Alt` `P`   | Preview in browser                       |\n| `Ctrl` `Enter`     | Play impromptu slide show                |\n| `Ctrl` `J`         | Export web gallery                       |\n| `Ctrl` `N`         | Create a new web gallery template        |\n| `Ctrl` `Shift` `N` | Create a new web gallery template folder |\n| `Ctrl` `S`         | Save web gallery settings                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Reload web gallery"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `P`",
+                  "action": "Preview in browser"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Play impromptu slide show"
+                },
+                {
+                  "shortcut": "`Ctrl` `J`",
+                  "action": "Export web gallery"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Create a new web gallery template"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Create a new web gallery template folder"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save web gallery settings"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Using help",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using help",
+              "body": "| Shortcut         | Action                           |\n| ---------------- | -------------------------------- |\n| `Ctrl` `/`       | Display current module shortcuts |\n| `(click)`        | Hide current module shortcuts    |\n| `Ctrl` `Alt` `/` | Go to current module Help        |\n| `F1`             | Open Community Help              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Display current module shortcuts"
+                },
+                {
+                  "shortcut": "`(click)`",
+                  "action": "Hide current module shortcuts"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `/`",
+                  "action": "Go to current module Help"
+                },
+                {
+                  "shortcut": "`F1`",
+                  "action": "Open Community Help"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Adobe Lightroom CC](https://helpx.adobe.com/lightroom/help/keyboard-shortcuts.html)\n  _(helpx.adobe.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

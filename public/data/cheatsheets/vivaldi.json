@@ -1,0 +1,380 @@
+{
+  "id": "vivaldi",
+  "metadata": {
+    "title": "Vivaldi Browser",
+    "date": "2022-11-23T16:23:31.694Z",
+    "background": "bg-[#d54840]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 69 default keyboard shortcuts found in the Vivaldi browser\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Window",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Window",
+              "body": "| Shortcut                | Action                  |\n| ----------------------- | ----------------------- |\n| `Ctrl` `N`              | New window              |\n| `Ctrl` `Shift` `N`      | New private window      |\n| `Ctrl` `Shift` `W`      | Close window            |\n| `Ctrl` `E`              | Quick commands          |\n| `Ctrl` `,`              | Settings                |\n| `Ctrl` `Alt` `E`        | Extensions              |\n| `Ctrl` `H`              | History                 |\n| `Ctrl` `Alt` `B`        | Bookmarks               |\n| `Ctrl` `Shift` `Delete` | Delete browsing data    |\n| `Ctrl` `Q`              | Quit Vivaldi            |\n| `Ctrl` `Shift` `?`      | Help                    |\n| `Ctrl` `F1`             | Keyboard cheat sheet    |\n| `Ctrl` `P`              | Print                   |\n| `Ctrl` `U`              | View page source        |\n| `Ctrl` `Shift` `I`      | Developer tools         |\n| `Ctrl` `Shift` `J`      | Developer tools console |\n| `Ctrl` `Shift` `V`      | Paste and go            |\n| `Ctrl` `M`              | Minimize                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "New private window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `W`",
+                  "action": "Close window"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Quick commands"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `E`",
+                  "action": "Extensions"
+                },
+                {
+                  "shortcut": "`Ctrl` `H`",
+                  "action": "History"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `B`",
+                  "action": "Bookmarks"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Delete`",
+                  "action": "Delete browsing data"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Quit Vivaldi"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `?`",
+                  "action": "Help"
+                },
+                {
+                  "shortcut": "`Ctrl` `F1`",
+                  "action": "Keyboard cheat sheet"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Print"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "View page source"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `I`",
+                  "action": "Developer tools"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Developer tools console"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `V`",
+                  "action": "Paste and go"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Minimize"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View",
+              "body": "| Shortcut            | Action              |\n| ------------------- | ------------------- |\n| `Ctrl` `Shift` `F`  | Fullscreen mode     |\n| `Ctrl` `Shift` `B`  | Bookmarks bar       |\n| `Ctrl` `/`          | Status bar          |\n| `Ctrl` `F10`        | Toggle UI           |\n| `Ctrl` `+`          | Page zoom in        |\n| `Ctrl` `-`          | Page zoom out       |\n| `Ctrl` `0`          | Page zoom reset     |\n| `Ctrl` `Alt` `P`    | Panel               |\n| `F7`                | Focus panel         |\n| `Ctrl` `Alt` `Down` | Open next panel     |\n| `Ctrl` `Alt` `Up`   | Open previous panel |\n| `Ctrl` `Alt` `B`    | Bookmarks panel     |\n| `Ctrl` `Alt` `L`    | Downloads panel     |\n| `Ctrl` `Alt` `N`    | Notes panel         |\n| `Ctrl` `Alt` `Y`    | History panel       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Fullscreen mode"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `B`",
+                  "action": "Bookmarks bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Status bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `F10`",
+                  "action": "Toggle UI"
+                },
+                {
+                  "shortcut": "`Ctrl` `+`",
+                  "action": "Page zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Page zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Page zoom reset"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `P`",
+                  "action": "Panel"
+                },
+                {
+                  "shortcut": "`F7`",
+                  "action": "Focus panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Down`",
+                  "action": "Open next panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Up`",
+                  "action": "Open previous panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `B`",
+                  "action": "Bookmarks panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `L`",
+                  "action": "Downloads panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `N`",
+                  "action": "Notes panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Y`",
+                  "action": "History panel"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tab",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tab",
+              "body": "| Shortcut              | Action                   |\n| --------------------- | ------------------------ |\n| `Ctrl` `T`            | New tab                  |\n| `Ctrl` `W`            | Close tab                |\n| `Ctrl` `Shift` `Tab`  | Tab cycler back          |\n| `Ctrl` `Tab`          | Tab cycler forward       |\n| `Ctrl` `Shift` `[`    | Previous tab (by order)  |\n| `Ctrl` `Shift` `]`    | Next tab (by order)      |\n| `Ctrl` `Shift` `Up`   | Move active tab backward |\n| `Ctrl` `Shift` `Down` | Move active tab forward  |\n| `Ctrl` `1-8`          | Switch to tab 1-8        |\n| `Ctrl` `9`            | Switch to the last tab   |\n| `Ctrl` `Shift` `T`    | Reopen last tab          |\n| `Ctrl` `F9`           | Tile vertically          |\n| `Ctrl` `F8`           | Tile horizontally        |\n| `Ctrl` `F7`           | Tile to grid             |\n| `Ctrl` `F6`           | Untile tabs              |\n| `Ctrl` `Alt` `I`      | Load images              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "New tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Tab`",
+                  "action": "Tab cycler back"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Tab cycler forward"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `[`",
+                  "action": "Previous tab (by order)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `]`",
+                  "action": "Next tab (by order)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Up`",
+                  "action": "Move active tab backward"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Down`",
+                  "action": "Move active tab forward"
+                },
+                {
+                  "shortcut": "`Ctrl` `1-8`",
+                  "action": "Switch to tab 1-8"
+                },
+                {
+                  "shortcut": "`Ctrl` `9`",
+                  "action": "Switch to the last tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Reopen last tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `F9`",
+                  "action": "Tile vertically"
+                },
+                {
+                  "shortcut": "`Ctrl` `F8`",
+                  "action": "Tile horizontally"
+                },
+                {
+                  "shortcut": "`Ctrl` `F7`",
+                  "action": "Tile to grid"
+                },
+                {
+                  "shortcut": "`Ctrl` `F6`",
+                  "action": "Untile tabs"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `I`",
+                  "action": "Load images"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Page",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Page",
+              "body": "| Shortcut           | Action                     |\n| ------------------ | -------------------------- |\n| `Ctrl` `D`         | Create bookmark            |\n| `Ctrl` `L`         | Focus address field        |\n| `Ctrl` `R`         | Reload page                |\n| `Ctrl` `Shift` `R` | Force reload page          |\n| `F9`               | Focus page                 |\n| `Ctrl` `K`         | Focus search field         |\n| `Ctrl` `F`         | Find in page               |\n| `Ctrl` `G`         | Find next in page          |\n| `Ctrl` `Shift` `G` | Find previous in page      |\n| `Ctrl` `Left`      | History back               |\n| `Ctrl` `Right`     | History forward            |\n| `Esc`              | Stop loading               |\n| `Ctrl` `O`         | Open file                  |\n| `Ctrl` `S`         | Save page as               |\n| `Ctrl` `Shift` `H` | Home                       |\n| `Ctrl` `Alt` `C`   | Copy selected text to note |\n| `Shift` `Left`     | Spatial navigation left    |\n| `Shift` `Up`       | Spatial navigation up      |\n| `Shift` `Right`    | Spatial navigation right   |\n| `Shift` `Down`     | Spatial navigation down    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Create bookmark"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Focus address field"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Reload page"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Force reload page"
+                },
+                {
+                  "shortcut": "`F9`",
+                  "action": "Focus page"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Focus search field"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find in page"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Find next in page"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Find previous in page"
+                },
+                {
+                  "shortcut": "`Ctrl` `Left`",
+                  "action": "History back"
+                },
+                {
+                  "shortcut": "`Ctrl` `Right`",
+                  "action": "History forward"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Stop loading"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open file"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save page as"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "Home"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `C`",
+                  "action": "Copy selected text to note"
+                },
+                {
+                  "shortcut": "`Shift` `Left`",
+                  "action": "Spatial navigation left"
+                },
+                {
+                  "shortcut": "`Shift` `Up`",
+                  "action": "Spatial navigation up"
+                },
+                {
+                  "shortcut": "`Shift` `Right`",
+                  "action": "Spatial navigation right"
+                },
+                {
+                  "shortcut": "`Shift` `Down`",
+                  "action": "Spatial navigation down"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Vivaldi](https://help.vivaldi.com/article/keyboard-shortcuts/) _(help.vivaldi.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

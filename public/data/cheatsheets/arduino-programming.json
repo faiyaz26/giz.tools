@@ -1,0 +1,593 @@
+{
+  "id": "arduino-programming",
+  "metadata": {
+    "title": "Arduino Programming",
+    "date": "2024-05-29T08:58:31.000Z",
+    "background": "bg-[#387f83]",
+    "label": null,
+    "tags": "-cpp -I/O",
+    "categories": [
+      "Programming"
+    ],
+    "intro": "Ardunio programming cheat-sheet for I/O programming and  ardunio board programming.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Gather Necessary Materials",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Gather Necessary Materials",
+              "body": "- Arduino Board: Any model, such as Arduino Uno, Mega, Nano, etc.\n- USB Cable: Compatible with your Arduino board (commonly USB Type-A to Type-B for Uno).\n- Computer: Windows, macOS, or Linux.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Install the Arduino IDE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Install the Arduino IDE",
+              "body": "- windows/mac/linux\n- Go to the Arduino Software page.\n- Download the os installer.\n- Run the installer and follow the instructions.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Connect Your Arduino Board",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Connect Your Arduino Board",
+              "body": "- Connect the Arduino board to your computer using the USB cable.\n- The power LED on the Arduino should light up, indicating it’s receiving power.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Configure the Arduino IDE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Configure the Arduino IDE",
+              "body": "- Open the Arduino IDE.\n- Select Your Board:\n- Go to Tools > Board and select the model of your Arduino board (e.g., Arduino Uno).\n\n- Select the Port:\n\n- Go to Tools > Port and select the port that the Arduino is connected to (it usually shows as COMx on Windows,\n  /dev/cu.usbmodemxxxx on macOS, and /dev/ttyUSBx on Linux).",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Basic Structure",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Setup and Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Setup and Loop",
+              "body": "```cpp\nvoid setup() {\n  // Code here runs once\n}\n\nvoid loop() {\n  // Code here runs repeatedly\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comment",
+              "body": "```cpp\n// Single-line comment\n\n/*\nMulti-line\ncomment\n*/\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variable",
+              "body": "```cpp\nint ledPin = 13; // Integer\nfloat voltage = 5.0; // Floating-point number\nchar letter = 'A'; // Character\nString text = \"Hello\"; // String\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pin Modes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pin Modes",
+              "body": "```cpp\npinMode(pin, mode);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Digital I/O",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Digital I/O",
+              "body": "```cpp\ndigitalWrite(pin, value);\nint value = digitalRead(pin);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Analog I/O",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Analog I/O",
+              "body": "```cpp\nanalogWrite(pin, value);\nint value = analogRead(pin);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Serial Communication",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Begin Serial Communication",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Begin Serial Communication",
+              "body": "```cpp\nSerial.begin(baudRate);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Print to Serial Monitor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Print to Serial Monitor",
+              "body": "```cpp\nSerial.print(data);\nSerial.println(data);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Read from Serial Monitor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Read from Serial Monitor",
+              "body": "```cpp\nif (Serial.available()) {\n  char data = Serial.read();\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Control Structures",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "If Statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If Statement",
+              "body": "```cpp\nif (condition) {\n  // Code to execute if condition is true\n} else {\n  // Code to execute if condition is false\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "For Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For Loop",
+              "body": "```cpp\nfor (initialization; condition; increment) {\n  // Code to execute\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While Loop",
+              "body": "```cpp\nwhile (condition) {\n  // Code to execute\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "```cpp\nreturnType functionName(parameters) {\n  // Code to execute\n  return value;\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Libraries",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Include a Library",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Include a Library",
+              "body": "```cpp\n#include <LibraryName.h>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Using a Library",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using a Library",
+              "body": "```cpp\n#include <Servo.h>\n\nServo myServo;\n\nvoid setup() {\n  myServo.attach(9); // Attach servo to pin 9\n}\n\nvoid loop() {\n  myServo.write(90); // Set servo to 90 degrees\n  delay(1000);\n  myServo.write(0); // Set servo to 0 degrees\n  delay(1000);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Common Functions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Delay",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delay",
+              "body": "```cpp\ndelay(milliseconds);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Millis",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Millis",
+              "body": "```cpp\nunsigned long currentTime = millis();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Map",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Map",
+              "body": "```cpp\nlong outputValue = map(inputValue, fromLow, fromHigh, toLow, toHigh);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Random",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Random",
+              "body": "```cpp\nlong randomValue = random(max);\nlong randomValue = random(min, max);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Random Seed",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Random Seed",
+              "body": "```cpp\nrandomSeed(analogRead(0)); // Seed from analog pin 0\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Sensors and Modules",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Reading Temperature with DHT Sensor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reading Temperature with DHT Sensor",
+              "body": "```cpp\n#include <DHT.h>\n\n#define DHTPIN 2     // Pin which is connected to the DHT sensor\n#define DHTTYPE DHT11   // DHT 11\n\nDHT dht(DHTPIN, DHTTYPE);\n\nvoid setup() {\n  Serial.begin(9600);\n  dht.begin();\n}\n\nvoid loop() {\n  float humidity = dht.readHumidity();\n  float temperature = dht.readTemperature();\n\n  Serial.print(\"Humidity: \");\n  Serial.print(humidity);\n  Serial.print(\" %\\t\");\n  Serial.print(\"Temperature: \");\n  Serial.print(temperature);\n  Serial.println(\" *C\");\n\n  delay(2000);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Blinking LED",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Blinking LED",
+              "body": "```cpp\nconst int ledPin = 13;\n\nvoid setup() {\n  pinMode(ledPin, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(ledPin, HIGH);  // Turn the LED on\n  delay(1000);                 // Wait for 1 second\n  digitalWrite(ledPin, LOW);   // Turn the LED off\n  delay(1000);                 // Wait for 1 second\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Read Button Input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Read Button Input",
+              "body": "```cpp\nconst int buttonPin = 2;  // Pin where the push button is connected\nconst int ledPin = 13;    // Pin where the LED is connected\n\nvoid setup() {\n  pinMode(buttonPin, INPUT);  // Set the button pin as an input\n  pinMode(ledPin, OUTPUT);    // Set the LED pin as an output\n}\n\nvoid loop() {\n  int buttonState = digitalRead(buttonPin);  // Read the state of the button\n\n  if (buttonState == HIGH) {\n    digitalWrite(ledPin, HIGH);  // Turn the LED on\n  } else {\n    digitalWrite(ledPin, LOW);   // Turn the LED off\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Analog Input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Analog Input",
+              "body": "```cpp\nconst int potPin = A0;    // Pin where the potentiometer is connected\nconst int ledPin = 9;     // Pin where the LED is connected\n\nvoid setup() {\n  pinMode(ledPin, OUTPUT);  // Set the LED pin as an output\n}\n\nvoid loop() {\n  int potValue = analogRead(potPin);  // Read the potentiometer value\n  int ledBrightness = map(potValue, 0, 1023, 0, 255);  // Map the value to a range from 0 to 255\n\n  analogWrite(ledPin, ledBrightness);  // Set the brightness of the LED\n  delay(10);  // Small delay to make the LED change smoothly\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Serial Communication",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Serial Communication",
+              "body": "```cpp\nvoid setup() {\n  Serial.begin(9600);  // Start the serial communication at 9600 baud rate\n}\n\nvoid loop() {\n  Serial.println(\"Hello, world!\");  // Send a message to the serial monitor\n  delay(1000);  // Wait for 1 second\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Temperature Sensor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Temperature Sensor",
+              "body": "```cpp\nconst int tempPin = A0;  // Pin where the TMP36 sensor is connected\n\nvoid setup() {\n  Serial.begin(9600);  // Start the serial communication at 9600 baud rate\n}\n\nvoid loop() {\n  int tempValue = analogRead(tempPin);  // Read the sensor value\n  float voltage = tempValue * (5.0 / 1023.0);  // Convert the value to voltage\n  float temperatureC = (voltage - 0.5) * 100;  // Convert the voltage to temperature in Celsius\n\n  Serial.print(\"Temperature: \");\n  Serial.print(temperatureC);\n  Serial.println(\" C\");\n  delay(1000);  // Wait for 1 second\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "RGB LED Control",
+          "level": 3,
+          "cards": [
+            {
+              "title": "RGB LED Control",
+              "body": "```cpp\nconst int redPin = 9;\nconst int greenPin = 10;\nconst int bluePin = 11;\n\nconst int potRedPin = A0;\nconst int potGreenPin = A1;\nconst int potBluePin = A2;\n\nvoid setup() {\n  pinMode(redPin, OUTPUT);\n  pinMode(greenPin, OUTPUT);\n  pinMode(bluePin, OUTPUT);\n}\n\nvoid loop() {\n  int redValue = analogRead(potRedPin);\n  int greenValue = analogRead(potGreenPin);\n  int blueValue = analogRead(potBluePin);\n\n  analogWrite(redPin, map(redValue, 0, 1023, 0, 255));\n  analogWrite(greenPin, map(greenValue, 0, 1023, 0, 255));\n  analogWrite(bluePin, map(blueValue, 0, 1023, 0, 255));\n\n  delay(10);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ultrasonic Sensor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ultrasonic Sensor",
+              "body": "```cpp\nconst int trigPin = 9;\nconst int echoPin = 10;\n\nvoid setup() {\n  Serial.begin(9600);\n  pinMode(trigPin, OUTPUT);\n  pinMode(echoPin, INPUT);\n}\n\nvoid loop() {\n  long duration;\n  int distance;\n\n  digitalWrite(trigPin, LOW);\n  delayMicroseconds(2);\n  digitalWrite(trigPin, HIGH);\n  delayMicroseconds(10);\n  digitalWrite(trigPin, LOW);\n\n  duration = pulseIn(echoPin, HIGH);\n  distance = duration * 0.034 / 2;\n\n  Serial.print(\"Distance: \");\n  Serial.print(distance);\n  Serial.println(\" cm\");\n  delay(1000);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Controlling a Servo Motor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Controlling a Servo Motor",
+              "body": "```cpp\n#include <Servo.h>\n\nServo myServo;\nconst int potPin = A0;\n\nvoid setup() {\n  myServo.attach(9);  // Attach the servo to pin 9\n}\n\nvoid loop() {\n  int potValue = analogRead(potPin);  // Read the potentiometer value\n  int angle = map(potValue, 0, 1023, 0, 180);  // Map the value to an angle between 0 and 180\n\n  myServo.write(angle);  // Set the servo position\n  delay(15);  // Small delay for the servo to reach the position\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Displaying Text on an LCD",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Displaying Text on an LCD",
+              "body": "```cpp\n#include <LiquidCrystal.h>\n\n// Initialize the library with the numbers of the interface pins\nLiquidCrystal lcd(12, 11, 5, 4, 3, 2);\n\nvoid setup() {\n  // Set up the LCD's number of columns and rows\n  lcd.begin(16, 2);\n  // Print a message to the LCD\n  lcd.print(\"Hello, World!\");\n}\n\nvoid loop() {\n  // Set the cursor to column 0, line 1 (second row)\n  lcd.setCursor(0, 1);\n  // Print the number of seconds since reset\n  lcd.print(millis() / 1000);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Wireless Communication with NRF24L01",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Transmitter Code",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transmitter Code",
+              "body": "```cpp\n#include <SPI.h>\n#include <nRF24L01.h>\n#include <RF24.h>\n\nRF24 radio(9, 10);  // CE, CSN pins\n\nconst byte address[6] = \"00001\";  // Address\n\nvoid setup() {\n  radio.begin();\n  radio.openWritingPipe(address);\n  radio.setPALevel(RF24_PA_MIN);\n  radio.stopListening();\n}\n\nvoid loop() {\n  const char text[] = \"Hello\";\n  radio.write(&text, sizeof(text));\n  delay(1000);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Receiver Code",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Receiver Code",
+              "body": "```cpp\n#include <SPI.h>\n#include <nRF24L01.h>\n#include <RF24.h>\n\nRF24 radio(9, 10);  // CE, CSN pins\n\nconst byte address[6] = \"00001\";  // Address\n\nvoid setup() {\n  Serial.begin(9600);\n  radio.begin();\n  radio.openReadingPipe(0, address);\n  radio.setPALevel(RF24_PA_MIN);\n  radio.startListening();\n}\n\nvoid loop() {\n  if (radio.available()) {\n    char text[32] = \"\";\n    radio.read(&text, sizeof(text));\n    Serial.println(text);\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also Read",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also Read",
+          "body": "- [Ardunio](https://www.arduino.cc/en/software)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

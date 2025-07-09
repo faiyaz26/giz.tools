@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { tools } from "@/lib/tools-data";
+import { getAllCheatsheetsServer } from "@/lib/cheatsheet-data-server";
 
 export const dynamic = "force-static";
 
@@ -16,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/tools`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cheatsheets`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 0.9,
@@ -48,5 +55,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...toolPages];
+  // Cheatsheet pages
+  const cheatsheets = getAllCheatsheetsServer();
+  const cheatsheetPages = cheatsheets.map((cheatsheet) => ({
+    url: `${baseUrl}/cheatsheets/${cheatsheet.id}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...toolPages, ...cheatsheetPages];
 }

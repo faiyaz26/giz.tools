@@ -1,0 +1,476 @@
+{
+  "id": "yaml",
+  "metadata": {
+    "title": "YAML",
+    "date": "2020-12-29T18:26:55.000Z",
+    "background": "bg-[#b42e28]",
+    "tags": [
+      "config",
+      "format"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This is a quick reference cheat sheet for understanding and writing YAML format configuration files.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "[YAML](https://yaml.org/) is a data serialization language designed to be directly writable and readable by humans\n\n- YAML does not allow the use of tabs\n- Must be space between the element parts\n- YAML is CASE sensitive\n- End your YAML file with the `.yaml` or `.yml` extension\n- YAML is a superset of JSON\n- Ansible playbooks are YAML files {.marker-round}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Scalar types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scalar types",
+              "body": "<!-- prettier-ignore -->\n\n```yaml\nn1: 1            # integer\nn2: 1.234        # float\n\ns1: 'abc'        # string\ns2: \"abc\"        # string\ns3: abc          # string\n\nb: false         # boolean type\n\nd: 2015-04-05    # date type\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json {.wrap}\n{\n  \"n1\": 1,\n  \"n2\": 1.234,\n  \"s1\": \"abc\",\n  \"s2\": \"abc\",\n  \"s3\": \"abc\",\n  \"b\": false,\n  \"d\": \"2015-04-05\"\n}\n```\n\nUse spaces to indent. There must be space between the element parts.",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```yaml\nsome_thing: &VAR_NAME foobar\nother_thing: *VAR_NAME\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n<!-- prettier-ignore -->\n```json {.wrap}\n{\n  \"some_thing\": \"foobar\",\n  \"other_thing\": \"foobar\"\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```yaml\n# A single line comment example\n\n# block level comment example\n# comment line 1\n# comment line 2\n# comment line 3\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiline strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiline strings",
+              "body": "```yaml\ndescription: |\n  hello\n  world\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json {.wrap}\n{ \"description\": \"hello\\nworld\\n\" }\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inheritance",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inheritance",
+              "body": "```yaml\nparent: &defaults\n  a: 2\n  b: 3\n\nchild:\n  <<: *defaults\n  b: 4\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json {.wrap}\n{\n  \"parent\": {\n    \"a\": 2,\n    \"b\": 3\n  },\n  \"child\": {\n    \"a\": 2,\n    \"b\": 4\n  }\n}\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reference",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reference",
+              "body": "```yaml\nvalues: &ref\n  - Will be\n  - reused below\n\nother_values:\n  i_am_ref: *ref\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n<!-- prettier-ignore -->\n```json {.wrap}\n{\n  \"values\": [\n    \"Will be\",\n    \"reused below\"\n  ],\n  \"other_values\": {\n    \"i_am_ref\": [\n      \"Will be\",\n      \"reused below\"\n    ]\n  }\n}\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Folded strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Folded strings",
+              "body": "```yaml\ndescription: >\n  hello world\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json {.wrap}\n{ \"description\": \"hello world\\n\" }\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Two Documents",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Two Documents",
+              "body": "```yaml\ndocument: this is doc 1\n\ndocument: this is doc 2\n```",
+              "footer": "YAML uses `---` to separate directives from document content.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "YAML Collections",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Sequence",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sequence",
+              "body": "```yaml\n- Mark McGwire\n- Sammy Sosa\n- Ken Griffey\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n<!-- prettier-ignore -->\n```json {.wrap}\n[\n  \"Mark McGwire\",\n  \"Sammy Sosa\",\n  \"Ken Griffey\"\n]\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mapping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mapping",
+              "body": "<!-- prettier-ignore -->\n\n```yaml\nhr:  65       # Home runs\navg: 0.278    # Batting average\nrbi: 147      # Runs Batted In\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json {.wrap}\n{\n  \"hr\": 65,\n  \"avg\": 0.278,\n  \"rbi\": 147\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mapping to Sequences",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mapping to Sequences",
+              "body": "```yaml\nattributes:\n  - a1\n  - a2\nmethods: [getter, setter]\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json {.wrap}\n{\n  \"attributes\": [\"a1\", \"a2\"],\n  \"methods\": [\"getter\", \"setter\"]\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sequence of Mappings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sequence of Mappings",
+              "body": "<!-- prettier-ignore -->\n\n```yaml\nchildren:\n  - name: Jimmy Smith\n    age: 15\n  - name: Jimmy Smith\n    age: 15\n  -\n    name: Sammy Sosa\n    age: 12\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n<!-- prettier-ignore -->\n```json {.wrap}\n{\n  \"children\": [\n    {\"name\": \"Jimmy Smith\", \"age\": 15},\n    {\"name\": \"Jimmy Smith\", \"age\": 15},\n    {\"name\": \"Sammy Sosa\", \"age\": 12}\n  ]\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sequence of Sequences",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sequence of Sequences",
+              "body": "<!-- prettier-ignore -->\n\n```yaml\nmy_sequences:\n  - [1, 2, 3]\n  - [4, 5, 6]\n  -\n    - 7\n    - 8\n    - 9\n    - 0\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json {.wrap}\n{\n  \"my_sequences\": [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9, 0]\n  ]\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mapping of Mappings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mapping of Mappings",
+              "body": "```yaml\nMark McGwire: { hr: 65, avg: 0.278 }\nSammy Sosa: { hr: 63, avg: 0.288 }\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json {.wrap}\n{\n  \"Mark McGwire\": {\n    \"hr\": 65,\n    \"avg\": 0.278\n  },\n  \"Sammy Sosa\": {\n    \"hr\": 63,\n    \"avg\": 0.288\n  }\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Nested Collections",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Nested Collections",
+              "body": "```yaml\nJack:\n  id: 1\n  name: Franc\n  salary: 25000\n  hobby:\n    - a\n    - b\n  location: { country: 'A', city: 'A-A' }\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json {.wrap}\n{\n  \"Jack\": {\n    \"id\": 1,\n    \"name\": \"Franc\",\n    \"salary\": 25000,\n    \"hobby\": [\"a\", \"b\"],\n    \"location\": {\n      \"country\": \"A\",\n      \"city\": \"A-A\"\n    }\n  }\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Unordered Sets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Unordered Sets",
+              "body": "```yaml\nset1: !!set\n  ? one\n  ? two\nset2: !!set { 'one', 'two' }\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n```json {.wrap}\n{\n  \"set1\": { \"one\": null, \"two\": null },\n  \"set2\": { \"one\": null, \"two\": null }\n}\n```\n\nSets are represented as a Mapping where each key is associated with a null value",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ordered Mappings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ordered Mappings",
+              "body": "```yaml\nordered: !!omap\n  - Mark McGwire: 65\n  - Sammy Sosa: 63\n  - Ken Griffy: 58\n```",
+              "footer": "#### ↓ Equivalent JSON\n\n<!-- prettier-ignore -->\n```json {.wrap}\n{\n  \"ordered\": [\n    { \"Mark McGwire\": 65 },\n    { \"Sammy Sosa\": 63 },\n    { \"Ken Griffy\": 58 }\n  ]\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "YAML Reference",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Terms",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Terms",
+              "body": "- Sequences aka arrays or lists\n- Scalars aka strings or numbers\n- Mappings aka hashes or dictionaries {.marker-round}\n\nBased on the YAML.org [refcard](https://yaml.org/refcard.html).",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Document indicators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Document indicators",
+              "body": "|       |                     |\n| ----- | ------------------- |\n| `%`   | Directive indicator |\n| `---` | Document header     |\n| `...` | Document terminator |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Collection indicators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Collection indicators",
+              "body": "|      |                                 |\n| ---- | ------------------------------- |\n| `?`  | Key indicator                   |\n| `:`  | Value indicator                 |\n| `-`  | Nested series entry indicator   |\n| `,`  | Separate in-line branch entries |\n| `[]` | Surround in-line series branch  |\n| `{}` | Surround in-line keyed branch   |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Alias indicators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Alias indicators",
+              "body": "|     |                 |\n| --- | --------------- |\n| `&` | Anchor property |\n| `*` | Alias indicator |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Special keys",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Special keys",
+              "body": "|      |                                 |\n| ---- | ------------------------------- |\n| `=`  | Default \"value\" mapping key     |\n| `<<` | Merge keys from another mapping |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Scalar indicators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scalar indicators",
+              "body": "|       |                                   |\n| ----- | --------------------------------- | --------------------------------------------- | ----------- |\n| `''`  | Surround in-line unescaped scalar |\n| `\"`   | Surround in-line escaped scalar   |\n| `     | `                                 | Block scalar indicator                        |\n| `>`   | Folded scalar indicator           |\n| `-`   | Strip chomp modifier (`           | -`or`>-`)                                     |\n| `+`   | Keep chomp modifier (`            | +`or`>+`)                                     |\n| `1-9` | Explicit indentation modifier (`  | 1`or`>2`). <br/> Modifiers can be combined (` | 2-`, `>+1`) |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tag Property (usually unspecified)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tag Property (usually unspecified)",
+              "body": "|          |                                                             |\n| -------- | ----------------------------------------------------------- |\n| `none`   | Unspecified tag (automatically resolved by application)     |\n| `!`      | Non-specific tag (by default, `!!map`/`!!seq`/`!!str`)      |\n| `!foo`   | Primary (by convention, means a local `!foo` tag)           |\n| `!!foo`  | Secondary (by convention, means `tag:yaml.org,2002:foo`)    |\n| `!h!foo` | Requires `%TAG !h! <prefix>` (and then means `<prefix>foo`) |\n| `!<foo>` | Verbatim tag (always means `foo`)                           |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Misc indicators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc indicators",
+              "body": "|                  |                              |\n| ---------------- | ---------------------------- |\n| `#`              | Throwaway comment indicator  |\n| <code>\\`@</code> | Both reserved for future use |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Core types (default automatic tags)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Core types (default automatic tags)",
+              "body": "|         |                                          |\n| ------- | ---------------------------------------- |\n| `!!map` | `{Hash table, dictionary, mapping}`      |\n| `!!seq` | `{List, array, tuple, vector, sequence}` |\n| `!!str` | Unicode string                           |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Escape Codes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Escape Codes",
+              "body": "",
+              "footer": "#### Numeric\n\n- `\\x12` (8-bit)\n- `\\u1234` (16-bit)\n- `\\U00102030` (32-bit)\n\n{.cols-2 .marker-none}\n\n#### Protective\n\n- `\\\\` (\\\\)\n- `\\\"` (\")\n- `\\ ` ( )\n- `\\<TAB>` (TAB)\n\n{.cols-3 .marker-none}\n\n#### C\n\n- `\\0` (NUL)\n- `\\a` (BEL)\n- `\\b` (BS)\n- `\\f` (FF)\n- `\\n` (LF)\n- `\\r` (CR)\n- `\\t` (TAB)\n- `\\v` (VTAB)\n\n{.cols-3 .marker-none}\n\n#### Additional\n\n- `\\e` (ESC)\n- `\\_` (NBSP)\n- `\\N` (NEL)\n- `\\L` (LS)\n- `\\P` (PS)\n\n{.cols-3 .marker-none}",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "More types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "More types",
+              "body": "|          |                             |\n| -------- | --------------------------- |\n| `!!set`  | `{cherries, plums, apples}` |\n| `!!omap` | `[one: 1, two: 2]`          |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Language Independent Scalar Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Language Independent Scalar Types",
+              "body": "|                           |                                            |\n| ------------------------- | ------------------------------------------ |\n| `{~, null}`               | Null (no value).                           |\n| `[1234, 0x4D2, 02333]`    | [Decimal int, Hexadecimal int, Octal int]  |\n| `[1_230.15, 12.3015e+02]` | [Fixed float, Exponential float]           |\n| `[.inf, -.Inf, .NAN]`     | [Infinity (float), Negative, Not a number] |\n| `{Y, true, Yes, ON}`      | Boolean true                               |\n| `{n, FALSE, No, off}`     | Boolean false                              |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [YAML Reference Card](https://yaml.org/refcard.html) _(yaml.org)_\n- [Learn X in Y minutes](https://learnxinyminutes.com/docs/yaml/) _(learnxinyminutes.com)_\n- [YAML lint online](http://www.yamllint.com/) _(yamllint.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

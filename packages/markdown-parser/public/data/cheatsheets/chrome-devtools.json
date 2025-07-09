@@ -1,0 +1,392 @@
+{
+  "id": "chrome-devtools",
+  "metadata": {
+    "title": "Chrome Developer Tools",
+    "date": "2022-11-23T16:23:31.696Z",
+    "background": "bg-[#c64d3e]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 56 keyboard shortcuts found in Chrome's Developer Tools\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Opening DevTools",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Opening DevTools",
+              "body": "| Shortcut           | Action                            |\n| ------------------ | --------------------------------- |\n| `Ctrl` `Shift` `I` | Open whatever panel you used last |\n| `Ctrl` `Shift` `J` | Open the Console panel            |\n| `Ctrl` `Shift` `C` | Open the Elements panel           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `I`",
+                  "action": "Open whatever panel you used last"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Open the Console panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Open the Elements panel"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Global Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Global Shortcuts",
+              "body": "| Shortcut           | Action                                                 |\n| ------------------ | ------------------------------------------------------ |\n| `F1`               | Show Settings                                          |\n| `Ctrl` `]`         | Focus the next panel                                   |\n| `Ctrl` `[`         | Focus the previous panel                               |\n| `Ctrl` `Shift` `D` | Switch back to whatever docking position you last used |\n| `Ctrl` `Shift` `M` | Toggle Device Mode                                     |\n| `Ctrl` `Shift` `C` | Toggle Inspect Element Mode                            |\n| `Ctrl` `Shift` `P` | Open the Command Menu                                  |\n| `Esc`              | Toggle the Drawer                                      |\n| `Ctrl` `R`         | Normal reload                                          |\n| `Ctrl` `Shift` `R` | Hard reload                                            |\n| `Ctrl` `F`         | Search for text within the current panel               |\n| `Ctrl` `Shift` `F` | Opens the Search tab in the Drawer                     |\n| `Ctrl` `P`         | Open a file in the Sources panel                       |\n| `Ctrl` `Shift` `+` | Zoom in                                                |\n| `Ctrl` `-`         | Zoom out                                               |\n| `Ctrl` `0`         | Restore default zoom level                             |\n| `Ctrl` `O` `!`     | Run snippet                                            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F1`",
+                  "action": "Show Settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Focus the next panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Focus the previous panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `D`",
+                  "action": "Switch back to whatever docking position you last used"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Toggle Device Mode"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Toggle Inspect Element Mode"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Open the Command Menu"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Toggle the Drawer"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Normal reload"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Hard reload"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Search for text within the current panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Opens the Search tab in the Drawer"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Open a file in the Sources panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `+`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Ctrl` `-`",
+                  "action": "Zoom out"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Restore default zoom level"
+                },
+                {
+                  "shortcut": "`Ctrl` `O` `!`",
+                  "action": "Run snippet"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Elements Panel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Elements Panel",
+              "body": "| Shortcut      | Action                                                            |\n| ------------- | ----------------------------------------------------------------- |\n| `Ctrl` `Z`    | Undo change                                                       |\n| `Ctrl` `Y`    | Redo change                                                       |\n| `Up/Down`     | Select the element above or below the currently-selected element  |\n| `Right`       | Expand the currently-selected node                                |\n| `Left`        | Collapse the currently-selected node                              |\n| `Enter`       | Toggle Edit Attributes mode on the currently-selected element     |\n| `Tab`         | Select the next attribute after entering Edit Attributes mode     |\n| `Shift` `Tab` | Select the previous attribute after entering Edit Attributes mode |\n| `H`           | Hide the currently-selected element                               |\n| `F2`          | Toggle Edit as HTML mode on the currently-selected element        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo change"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Redo change"
+                },
+                {
+                  "shortcut": "`Up/Down`",
+                  "action": "Select the element above or below the currently-selected element"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Expand the currently-selected node"
+                },
+                {
+                  "shortcut": "`Left`",
+                  "action": "Collapse the currently-selected node"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Toggle Edit Attributes mode on the currently-selected element"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Select the next attribute after entering Edit Attributes mode"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Select the previous attribute after entering Edit Attributes mode"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Hide the currently-selected element"
+                },
+                {
+                  "shortcut": "`F2`",
+                  "action": "Toggle Edit as HTML mode on the currently-selected element"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sources Panel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sources Panel",
+              "body": "| Shortcut           | Action                                                            |\n| ------------------ | ----------------------------------------------------------------- |\n| `Ctrl` `\\`         | Pause script execution (if running), or resume (if paused)        |\n| `Ctrl` `'`         | Step over next function call                                      |\n| `Ctrl` `;`         | Step into next function call                                      |\n| `Ctrl` `Shift` `;` | Step out of current function                                      |\n| `Ctrl` `./,`       | Select the call frame below or above the currently-selected frame |\n| `Ctrl` `S`         | Save changes to local modifications                               |\n| `Ctrl` `Alt` `S`   | Save all changes                                                  |\n| `Ctrl` `G`         | Go to line                                                        |\n| `Alt` `W`          | Close the active tab                                              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `\\`",
+                  "action": "Pause script execution (if running), or resume (if paused)"
+                },
+                {
+                  "shortcut": "`Ctrl` `'`",
+                  "action": "Step over next function call"
+                },
+                {
+                  "shortcut": "`Ctrl` `;`",
+                  "action": "Step into next function call"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `;`",
+                  "action": "Step out of current function"
+                },
+                {
+                  "shortcut": "`Ctrl` `./,`",
+                  "action": "Select the call frame below or above the currently-selected frame"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save changes to local modifications"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `S`",
+                  "action": "Save all changes"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Go to line"
+                },
+                {
+                  "shortcut": "`Alt` `W`",
+                  "action": "Close the active tab"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Code Editor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Code Editor",
+              "body": "| Shortcut     | Action                                                         |\n| ------------ | -------------------------------------------------------------- |\n| `Ctrl` `Del` | Delete all characters in the last word, up to the cursor       |\n| `Ctrl` `M`   | Go to matching bracket                                         |\n| `Ctrl` `/`   | Toggle single-line comment                                     |\n| `Ctrl` `D`   | Select the next occurrence of whatever word the cursor is on   |\n| `Ctrl` `U`   | Deselect the next occurrence of whatever word the cursor is on |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Del`",
+                  "action": "Delete all characters in the last word, up to the cursor"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Go to matching bracket"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Toggle single-line comment"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Select the next occurrence of whatever word the cursor is on"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Deselect the next occurrence of whatever word the cursor is on"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Performance Panel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Performance Panel",
+              "body": "| Shortcut   | Action                  |\n| ---------- | ----------------------- |\n| `Ctrl` `E` | Start or stop recording |\n| `Ctrl` `S` | Save recording          |\n| `Ctrl` `O` | Load recording          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Start or stop recording"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save recording"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Load recording"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Memory Panel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Memory Panel",
+              "body": "| Shortcut   | Action                  |\n| ---------- | ----------------------- |\n| `Ctrl` `E` | Start or stop recording |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Start or stop recording"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Console Panel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Console Panel",
+              "body": "| Shortcut               | Action                         |\n| ---------------------- | ------------------------------ |\n| `Tab`                  | Accept autocomplete suggestion |\n| `Esc`                  | Reject autocomplete suggestion |\n| `Up`                   | Get previous statement         |\n| `Down`                 | Get next statement             |\n| `Ctrl` <code>\\`</code> | Focus the Console              |\n| `Ctrl` `L`             | Clear the console              |\n| `Shift` `Enter`        | Force a multi-line entry       |\n| `Enter`                | Execute                        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Accept autocomplete suggestion"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Reject autocomplete suggestion"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Get previous statement"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Get next statement"
+                },
+                {
+                  "shortcut": "`Ctrl` <code>\\`</code>",
+                  "action": "Focus the Console"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Clear the console"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Force a multi-line entry"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Execute"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/shortcuts)\n  _(developers.google.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

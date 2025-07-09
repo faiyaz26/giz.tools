@@ -1,0 +1,236 @@
+{
+  "id": "kanbanmail",
+  "metadata": {
+    "title": "KanbanMail",
+    "date": "2022-11-23T16:23:31.698Z",
+    "background": "bg-[#4d74e6]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 29 keyboard shortcuts found in KanbanMail\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Global",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Global",
+              "body": "| Shortcut   | Action            |\n| ---------- | ----------------- |\n| `Ctrl` `\\` | Toggle split view |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `\\`",
+                  "action": "Toggle split view"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Board",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Board",
+              "body": "| Shortcut   | Action                                       |\n| ---------- | -------------------------------------------- |\n| `C`        | Open composer                                |\n| `Ctrl` `N` | New note in the to-do column                 |\n| `/`        | Focus the search bar                         |\n| `Esc`      | Clear search, if it's on                     |\n| `1-5`      | Select the first thread in column \\<number\\> |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`C`",
+                  "action": "Open composer"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New note in the to-do column"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Focus the search bar"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Clear search, if it's on"
+                },
+                {
+                  "shortcut": "`1-5`",
+                  "action": "Select the first thread in column \\<number\\>"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Email",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Email",
+              "body": "| Shortcut    | Action                                   |\n| ----------- | ---------------------------------------- |\n| `S`         | Star or unstar                           |\n| `I`         | Mark as important or not important       |\n| `U`         | Mark as read or unread                   |\n| `Shift` `P` | Pin                                      |\n| `R`         | Reply                                    |\n| `A`         | Reply all                                |\n| `F`         | Forward                                  |\n| `E`         | Move to archived                         |\n| `1-5`       | Move to column \\<number\\>                |\n| `Shift` `3` | Move to trash                            |\n| `P`         | Go to the previous message in the thread |\n| `N`         | Go to the next message in the thread     |\n| `Shift` `U` | Unsubscribe                              |\n| `Enter`     | Open selected thread                     |\n| `Esc`       | Close thread viewer, if open             |\n| `Esc`       | Clear selected threads                   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`S`",
+                  "action": "Star or unstar"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Mark as important or not important"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Mark as read or unread"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Pin"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Reply"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Reply all"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Forward"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Move to archived"
+                },
+                {
+                  "shortcut": "`1-5`",
+                  "action": "Move to column \\<number\\>"
+                },
+                {
+                  "shortcut": "`Shift` `3`",
+                  "action": "Move to trash"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Go to the previous message in the thread"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Go to the next message in the thread"
+                },
+                {
+                  "shortcut": "`Shift` `U`",
+                  "action": "Unsubscribe"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Open selected thread"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close thread viewer, if open"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Clear selected threads"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Composer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Composer",
+              "body": "| Shortcut       | Action         |\n| -------------- | -------------- |\n| `Ctrl` `Enter` | Send email     |\n| `Ctrl` `S`     | Save as draft  |\n| `Esc`          | Close composer |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Send email"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save as draft"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close composer"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editor",
+              "body": "| Shortcut   | Action        |\n| ---------- | ------------- |\n| `Ctrl` `B` | Bold          |\n| `Ctrl` `I` | Italic        |\n| `Ctrl` `U` | Underline     |\n| `Ctrl` `K` | Add hyperlink |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Italic"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Underline"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Add hyperlink"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for KanbanMail](https://guides.kanbanmail.app/keyboard-shortcuts) _(guides.kanbanmail.app)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

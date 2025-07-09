@@ -1,0 +1,156 @@
+{
+  "id": "github-cli",
+  "metadata": {
+    "title": "Github CLI",
+    "date": "2023-11-29T00:00:00.000Z",
+    "icon": null,
+    "background": "bg-[#808080]",
+    "tags": [
+      "Github",
+      "CICD",
+      "CLI"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "A quick reference to Github CLI, an open-source command line tool that enables GitHub on your terminal.",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Installation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Installation",
+              "body": "```bash\ntype -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)\ncurl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \\\n&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \\\n&& echo \"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main\" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \\\n&& sudo apt update \\\n&& sudo apt install gh -y\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Usage",
+              "body": "```shell\n$ gh auth --with-token < token.txt\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repository Management",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repository Management",
+              "body": "**General**\n\n| Command                 | Description                                       |\n| :---------------------- | :------------------------------------------------ |\n| `gh repo create`        | Create a new GitHub repository                    |\n| `gh repo list [target]` | List repositories owned by a user or organization |\n\n**Targets**\n\n| Command                      | Description                                                    |\n| :--------------------------- | :------------------------------------------------------------- |\n| `gh repo archive [repo]`     | Archive a GitHub repository                                    |\n| `gh repo clone [dir]`        | Clone a GitHub repository locally                              |\n| `gh repo delete [repo]`      | Delete a GitHub repository                                     |\n| `gh repo deploy-key`         | Manage deploy keys in a repository                             |\n| `gh repo edit [repo]`        | Edit repository settings                                       |\n| `gh repo fork [repo]`        | Create a fork of a repository                                  |\n| `gh repo rename [name]`      | Rename a GitHub repository                                     |\n| `gh repo set-default [repo]` | This command sets the default remote repository                |\n| `gh repo sync [dest-repo]`   | Sync destination repository from source repository             |\n| `gh repo view [repo]`        | Display the description and the README of a GitHub repository. |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Issues",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Issues",
+              "body": "```bash\n# search issues matching set of keywords \"readme\" and \"typo\"\n$ gh search issues readme typo\n\n# search issues matching phrase \"broken feature\"\n$ gh search issues \"broken feature\"\n\n# search issues and pull requests in cli organization\n$ gh search issues --include-prs --owner=cli\n\n# search open issues assigned to yourself\n$ gh search issues --assignee=@me --state=open\n\n# search issues with numerous comments\n$ gh search issues --comments=\">100\"\n\n# search issues without label \"bug\"\n$ gh search issues -- -label:bug\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pull Requests",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pull Requests",
+              "body": "```shell\n$ gh pr status\n```",
+              "footer": "Sample Output:\n```\nCurrent branch\n- All checks failing - Review required\nCreated by you\nYou have no open pull requests\nRequesting a code review from you\n- 3/4 checks failing - Review required\n- Checks passing - Approved\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Github Actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Github Actions",
+              "body": "**General Actions**\n\n| Command               | Description                                                                         |\n| :-------------------- | :---------------------------------------------------------------------------------- |\n| `gh workflow disable` | Disable a workflow, preventing it from running or showing up when listing workflows |\n| `gh workflow enable`  | Enable a workflow, allowing it to be run and show up when listing workflows         |\n| `gh workflow list`    | List workflow files, hiding disabled workflows by default                           |\n| `gh workflow run`     | Create a workflow_dispatch event for a given workflow                               |\n| `gh workflow view`    | View the summary of a workflow                                                      |\n\n**Running Actions**\n\n| Command           | Description                                                         |\n| :---------------- | :------------------------------------------------------------------ |\n| `gh run cancel`   | Cancel a workflow run                                               |\n| `gh run delete`   | Delete a workflow run                                               |\n| `gh run download` | Download artifacts generated by a GitHub Actions workflow run       |\n| `gh run list`     | List recent workflow runs                                           |\n| `gh run rerun`    | Rerun an entire run, only failed jobs, or a specific job from a run |\n| `gh run view`     | View a summary of a workflow run                                    |\n| `gh run watch`    | Watch a run until it completes, showing its progress                |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Aliases",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Aliases",
+              "body": "**General Alias Settings**\n\n| Command           | Description                                                      |\n| :---------------- | :--------------------------------------------------------------- |\n| `gh alias delete` | Delete set aliases                                               |\n| `gh alias import` | Import aliases from the contents of a YAML file                  |\n| `gh alias list`   | Prints out all of the aliases gh is configured to use            |\n| `gh alias set`    | Define a word that will expand to a full gh command when invoked |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Releases",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Releases",
+              "body": "**General Actions**\n\n| Command             | Description                                  |\n| :------------------ | :------------------------------------------- |\n| `gh release create` | Create a new GitHub Release for a repository |\n| `gh release list`   | List releases in a repository                |\n\n**Target Commands**\n\n| Command                   | Description                             |\n| :------------------------ | :-------------------------------------- |\n| `gh release delete`       | Delete a release                        |\n| `gh release delete-asset` | Delete an asset from a release          |\n| `gh release download`     | Download assets from a GitHub release   |\n| `gh release edit`         | Edit a release                          |\n| `gh release upload`       | Upload asset files to a GitHub Release  |\n| `gh release view`         | View information about a GitHub Release |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Configuration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Configuration",
+              "body": "**Targeted Settings**\n\n| Command                 | Description                                         |\n| :---------------------- | :-------------------------------------------------- |\n| `gh config clear-cache` | Clear the cli cache                                 |\n| `gh config get`         | Print the value of a given configuration key        |\n| `gh config list`        | Print a list of configuration keys and values       |\n| `gh config set`         | Update configuration with a value for the given key |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

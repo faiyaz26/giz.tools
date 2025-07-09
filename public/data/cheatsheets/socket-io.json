@@ -1,0 +1,540 @@
+{
+  "id": "socket-io",
+  "metadata": {
+    "title": "Socket io",
+    "date": "27-06-2025",
+    "icon": "icon-style",
+    "background": "bg-[#1289D8]",
+    "tags": [
+      "socket io",
+      "web"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "Socket.IO is a JavaScript library for real-time web applications. It enables bi-directional, event-based communication between clients (typically browsers or native apps) and servers.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Introduction",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "- [Socket.IO Official Website](https://socket.io/) _(socket.io)_\n- [Socket.IO Documentation (v4.1)](https://socket.io/docs/v4/) _(socket.io)_\n- [Socket.IO GitHub Repository](https://github.com/socketio/socket.io) _(github.com)_\n- [Getting Started with Socket.IO (Chat App Tutorial)](https://socket.io/get-started/chat/) _(socket.io)_\n- [FreeCodeCamp Socket.IO Tutorial](https://www.freecodecamp.org/news/socket-io-tutorial/) _(freecodecamp.org)_",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Installation / Setup",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Installation / Setup",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Installation / Setup",
+              "body": "```bash\nnpm install socket.io socket.io-client\n```",
+              "footer": "**Python**\n```bash\npip install python-socketio eventlet\npip install python-socketio aiohttp\n```\n**Java**\n```groovy\nimplementation 'io.socket:socket.io-client:2.0.1'\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Installation / Setup",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Installation / Setup",
+              "body": "```ruby\npod 'Socket.IO-Client-Swift', '~> 16.0.1'\n```",
+              "footer": "**C# (.NET)**\n```powershell\nInstall-Package SocketIoClientDotNet\n```\n**React Native**\n```bash\nnpm install socket.io-client\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Installation / Setup",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Installation / Setup",
+              "body": "```bash\ngo get github.com/googollee/go-socket.io\n```",
+              "footer": "**Rust**\n```bash\ncargo add socketio-client\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Connecting / Setup",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "JavaScript (Browser Client then Node.js Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "JavaScript (Browser Client then Node.js Server)",
+              "body": "```js\nimport { io } from 'socket.io-client';\nconst socket = io('http://localhost:3000');\n```",
+              "footer": "**Server**\n```js\nconst io = require('socket.io')(3000, {\ncors: { origin: '*' }\n});\nio.on('connection', (socket) => {\nconsole.log('Client connected:', socket.id);\n});\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Python (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Python (Client then Server)",
+              "body": "```python\nimport socketio\nsio = socketio.Client()\nsio.connect('http://localhost:3000')\n```",
+              "footer": "**Server**\n```python\nimport socketio, eventlet, flask\napp = flask.Flask(__name__)\nsio = socketio.Server(cors_allowed_origins='*')\napp = socketio.WSGIApp(sio, app)\n@sio.event\ndef connect(sid, environ):\nprint('Client connected:', sid)\nif __name__ == '__main__':\neventlet.wsgi.server(eventlet.listen(('', 3000)), app)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Java (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Java (Client then Server)",
+              "body": "```java\nIO.Options opts = new IO.Options();\nSocket socket = IO.socket(\"http://localhost:3000\", opts);\nsocket.connect();\n```",
+              "footer": "**Server**\n```java\nimport io.socket.engineio.server.EngineIoServer;\nimport io.socket.server.SocketIoServer;\nEngineIoServer engineIo = new EngineIoServer();\nSocketIoServer io = new SocketIoServer(engineIo);\nio.listen(3000);\nio.on(\"connection\", args -> {\nvar client = args[0];\nSystem.out.println(\"Client connected: \" + client.id());\n});\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Swift (iOS Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Swift (iOS Client then Server)",
+              "body": "```swift\nlet manager = SocketManager(\n  socketURL: URL(string: \"http://localhost:3000\")!,\n  config: [.log(true), .compress]\n)\nlet socket = manager.defaultSocket\nsocket.connect()\n```",
+              "footer": "**Server**\n_Server setups in Swift are uncommon; usually Node.js or Python is used._",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "C# (.NET Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "C# (.NET Client then Server)",
+              "body": "```csharp\nvar socket = IO.Socket(\"http://localhost:3000\");\nsocket.Connect();\n```",
+              "footer": "**Server**\n```csharp\nusing Fleck;\nvar server = new WebSocketServer(\"ws://0.0.0.0:3000\");\nserver.Start(socket =>\n{\nsocket.OnOpen = () => Console.WriteLine(\"Client connected\");\n});\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "React Native (Client)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "React Native (Client)",
+              "body": "```js\nimport io from 'socket.io-client';\nconst socket = io('http://localhost:3000');\n```",
+              "footer": "_(Server side same as JavaScript above.)_",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Go (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Go (Client then Server)",
+              "body": "```go\nimport \"github.com/googollee/go-socket.io-client\"\nsocket, err := gosocketio.Dial(\n    gosocketio.GetUrl(\"localhost\", 3000, false),\n    transport.GetDefaultWebsocketTransport(),\n)\n```",
+              "footer": "**Server**\n```go\nimport (\n\"github.com/googollee/go-socket.io\"\n\"net/http\"\n)\nserver, _ := socketio.NewServer(nil)\nserver.OnConnect(\"/\", func(s socketio.Conn) error {\nfmt.Println(\"Client connected:\", s.ID())\nreturn nil\n})\nhttp.Handle(\"/socket.io/\", server)\ngo http.ListenAndServe(\":3000\", nil)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Rust (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Rust (Client then Server)",
+              "body": "```rust\nuse socketio_client::ClientBuilder;\n\nasync fn run() -> Result<(), Box<dyn std::error::Error>> {\n    let socket = ClientBuilder::new(\"http://localhost:3000\")\n        .transport(\"websocket\")\n        .connect()\n        .await?;\n    Ok(())\n}\n```",
+              "footer": "**Server**\n_Rust server support is experimental; commonly use Node.js/Python servers._",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Emitting & Listening to Events",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "JavaScript (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "JavaScript (Client then Server)",
+              "body": "```js\nsocket.emit('msg', 'Hi');\nsocket.on('reply', (data) => console.log('Reply:', data));\n```",
+              "footer": "**Server**\n```js\nio.on('connection', (socket) => {\nsocket.on('msg', (msg) => {\nconsole.log('Received:', msg);\nsocket.emit('reply', 'Hello from server');\n});\n});\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Python (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Python (Client then Server)",
+              "body": "```python\nsio.emit('msg', 'Hi')\n\n@sio.on('reply')\ndef on_reply(data):\n    print('Reply:', data)\n```",
+              "footer": "**Server**\n```python\n@sio.event\ndef msg(sid, data):\nprint('Received:', data)\nsio.emit('reply', 'Hello from server', to=sid)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Java (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Java (Client then Server)",
+              "body": "```java\nsocket.emit(\"msg\", \"Hi\");\nsocket.on(\"reply\", args -> System.out.println(\"Reply: \" + args[0]));\n```",
+              "footer": "**Server**\n```java\nio.on(\"connection\", args -> {\nvar client = args[0];\nclient.on(\"msg\", msgArgs -> {\nSystem.out.println(\"Received: \" + msgArgs[0]);\nclient.emit(\"reply\", \"Hello from server\");\n});\n});\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Swift (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Swift (Client then Server)",
+              "body": "```swift\nsocket.emit(\"msg\", \"Hi\")\nsocket.on(\"reply\") { data, _ in\n  print(\"Reply:\", data[0])\n}\n```",
+              "footer": "**Server**\n_Server side in Swift is rare; use Node.js/Python._",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "C# (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "C# (Client then Server)",
+              "body": "```csharp\nsocket.Emit(\"msg\", \"Hi\");\nsocket.On(\"reply\", data => Console.WriteLine(\"Reply: \" + data));\n```",
+              "footer": "**Server**\n```csharp\nsocket.OnMessage = message =>\n{\nConsole.WriteLine(\"Received: \" + message);\nsocket.Send(\"reply\", \"Hello from server\");\n};\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Go (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Go (Client then Server)",
+              "body": "```go\nsocket.Emit(\"msg\", \"Hi\")\nsocket.On(\"reply\", func(msg string) {\n    fmt.Println(\"Reply:\", msg)\n})\n```",
+              "footer": "**Server**\n```go\nserver.OnEvent(\"/\", \"msg\", func(s socketio.Conn, msg string) {\nfmt.Println(\"Received:\", msg)\ns.Emit(\"reply\", \"Hello from server\")\n})\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Rust (Client then Server)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Rust (Client then Server)",
+              "body": "```rust\nsocket.emit(\"msg\", Payload::String(\"Hi\"));\nsocket.on(\"reply\", |payload| println!(\"Reply: {:?}\", payload));\n```",
+              "footer": "**Server**\n_Experimental; typically use Node.js/Python._",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Broadcasting & Rooms",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Client (All Languages)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Client (All Languages)",
+              "body": "",
+              "footer": "- **Join a room:**\n\n  ```js\n  // JavaScript/Python/C#/etc.\n  socket.emit('join', 'room1');\n  socket.on('msg', (data) => console.log('Room message:', data));\n  ```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Server (All Languages)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Server (All Languages)",
+              "body": "",
+              "footer": "- **Node.js**\n\n  ```js\n  io.on('connection', (socket) => {\n    socket.on('join', (room) => {\n      socket.join(room);\n      io.to(room).emit('msg', 'Hello Room');\n    });\n  });\n  ```\n\n- **Python**\n\n  ```python\n  @sio.event\n  def join(sid, room):\n      sio.enter_room(sid, room)\n      sio.emit('msg', 'Hello Room', room=room)\n  ```\n\n- **Go**\n\n  ```go\n  server.OnEvent(\"/\", \"join\", func(s socketio.Conn, room string) {\n      s.Join(room)\n      server.BroadcastToRoom(\"/\", room, \"msg\", \"Welcome\")\n  })\n  ```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Disconnects & Errors",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Client (All Languages)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Client (All Languages)",
+              "body": "```js\nsocket.on('disconnect', (reason) => console.log('Disconnected:', reason));\nsocket.on('connect_error', (err) => console.error('Connection error:', err));\n```",
+              "footer": "```python\n@sio.event\ndef disconnect():\nprint('Disconnected')\n@sio.event\ndef connect_error(data):\nprint('Connection error:', data)\n```\n```go\n// Go client library varies; similar patterns apply.\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Server (All Languages)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Server (All Languages)",
+              "body": "```js\nio.on('connection', (socket) => {\n  socket.on('disconnect', (reason) =>\n    console.log('Client disconnected:', reason)\n  );\n});\n```",
+              "footer": "```go\nserver.OnDisconnect(\"/\", func(s socketio.Conn, reason string) {\nfmt.Println(\"Client disconnected:\", reason)\n})\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Namespaces",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Client (All Languages)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Client (All Languages)",
+              "body": "```js\nconst adminSocket = io('/admin');\n```",
+              "footer": "```python\nsio.connect('http://localhost:3000/admin', namespaces=['/admin'])\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Server (All Languages)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Server (All Languages)",
+              "body": "```js\nio.of('/admin').on('connection', (socket) => {\n  console.log('Admin connected:', socket.id);\n});\n```",
+              "footer": "```go\nserver.Of(\"/admin\").OnConnect(func(s socketio.Conn) {\nfmt.Println(\"Admin connected:\", s.ID())\n})\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Authentication (Basic Token)",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Client (All Languages)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Client (All Languages)",
+              "body": "```js\nconst socket = io('http://localhost:3000', {\n  auth: { token: 'abc' }\n});\n```",
+              "footer": "```python\nsio.connect('http://localhost:3000', auth={'token': 'abc'})\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Server (All Languages)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Server (All Languages)",
+              "body": "```js\nio.use((socket, next) => {\n  const token = socket.handshake.auth.token;\n  token === 'abc' ? next() : next(new Error('Auth error'));\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Tips for Debugging & Logging",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Client",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Client",
+              "body": "",
+              "footer": "- Log events:\n\n  ```js\n  socket.onAny((event, ...args) => console.log(event, args));\n  ```\n\n- Inspect network in browser devtools.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Server",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Server",
+              "body": "",
+              "footer": "- **JavaScript**\n\n  ```bash\n  DEBUG=socket.io* node server.js\n  ```\n\n- **Python**\n\n  ```python\n  import logging\n  logging.getLogger('socketio').setLevel(logging.DEBUG)\n  ```\n\n- **Go**\n  Print handler errors and use middleware for structured logs.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Advanced Features",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Middleware",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Middleware",
+              "body": "```js\nio.use((socket, next) => {\n  console.log('Middleware:', socket.id);\n  next();\n});\n```",
+              "footer": "```go\nserver.Use(func(s socketio.Conn, next func()) {\nfmt.Println(\"Middleware triggered:\", s.ID())\nnext()\n})\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Binary Streaming",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Binary Streaming",
+              "body": "```js\nfetch('/file')\n  .then((res) => res.arrayBuffer())\n  .then((buf) => socket.emit('file', buf));\n```",
+              "footer": "**Server**\n```go\nserver.OnEvent(\"/\", \"file\", func(s socketio.Conn, data []byte) {\nioutil.WriteFile(\"upload\", data, 0644)\n})\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Best Practices",
+          "body": "# Implement reconnection with exponential backoff on the client.\n\n# Sanitize and validate all data on both sides.\n\n# Use TLS in production and rotate authentication tokens frequently.\n\n# Separate concerns with namespaces and rooms.\n\n# Throttle high-frequency events and enable compression where possible.\n\n> Official docs: [https://socket.io/docs/v4/](https://socket.io/docs/v4/)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

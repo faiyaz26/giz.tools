@@ -1,0 +1,155 @@
+{
+  "id": "lsof",
+  "metadata": {
+    "title": "Lsof",
+    "date": "2021-02-05T16:12:47.000Z",
+    "background": "bg-blue-400",
+    "tags": [
+      "port",
+      "processes",
+      "utility"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "This quick reference cheat sheet provides various for using lsof command.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "",
+              "footer": "**lsof** meaning `L`i`S`t `O`pen `F`iles is used to find out which files are open by which process\n\n```shell script\n$ lsof\n$ sudo lsof -u root\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Port-specific",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Port-specific",
+              "body": "",
+              "footer": "```shell script\n$ lsof -i :8080\n$ lsof -i :80 -i :22\n$ lsof -i TCP:22\n$ lsof -i TCP:1-1024\n$ lsof -i UDP\n$ lsof -i @192.168.1.5\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Process-specific",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Process-specific",
+              "body": "",
+              "footer": "```shell script\n$ lsof -c mysql\n$ lsof -c java\n$ lsof -c ssh\n$ lsof -c nginx\n$ lsof -c ssh -c httpd\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "User-specific",
+          "level": 3,
+          "cards": [
+            {
+              "title": "User-specific",
+              "body": "",
+              "footer": "```shell script\n$ lsof -u www-data\n$ lsof -u www-data -u ubuntu\n$ lsof -i -u ^root # Except certain user\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Network-specific",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Network-specific",
+              "body": "",
+              "footer": "```shell script\n$ lsof -i 4   # IPv4 only\n$ lsof -i 6   # IPv6 only\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "PID-specific",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PID-specific",
+              "body": "",
+              "footer": "```shell script\n$ lsof -p 1753\n$ lsof -p ^3  # Except certain pids\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Filename-specific",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Filename-specific",
+              "body": "",
+              "footer": "```shell script\n$ lsof /var/log/messages\n$ lsof /etc/passwd\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Directory-specific",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Directory-specific",
+              "body": "",
+              "footer": "```shell script\n$ lsof +D /var/log # Within a directory\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Kill",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Kill",
+              "body": "",
+              "footer": "```shell script\n$ kill -9 `lsof -t -u apache`\n$ kill -9 $(lsof -t -i :8080)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

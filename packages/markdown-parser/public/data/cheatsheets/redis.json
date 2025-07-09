@@ -1,0 +1,2309 @@
+{
+  "id": "redis",
+  "metadata": {
+    "title": "Redis",
+    "background": "bg-[#c13b2c]",
+    "tags": [
+      "cache"
+    ],
+    "categories": [
+      "Database"
+    ],
+    "date": "2020-12-26T19:33:15.000Z",
+    "intro": "This is a [redis](https://redis.io/) quick reference cheat sheet that lists examples of redis commands\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Getting started",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting started",
+              "body": "```\nConnect to redis (Redis CLI client)\n```",
+              "footer": "shell script\n$ redis-cli\n```\nConnect to redis (telnet)\n```shell script\n$ telnet 127.0.0.1 6379\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Hello World",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hello World",
+              "body": "",
+              "footer": "#### Ping\n\n```shell script\nredis> PING\nPONG\n```\n\n#### Hello World\n\n```shell script\nredis> SET mykey \"Hello world\"\nOK\nredis> GET mykey\n\"Hello world\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic Data types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Data types",
+              "body": "- [Strings](#redis-string-command)\n- [Lists](#redis-list-command)\n- [Hashes](#redis-hash-command)\n- [Sets](#redis-set-command)\n- [Sorted Sets](#redis-sorted-set-command)\n\nRedis supports 5 basic data types",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis String command{.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "APPEND",
+          "level": 3,
+          "cards": [
+            {
+              "title": "APPEND",
+              "body": "```{.wrap}\nAPPEND key value\n```",
+              "footer": "#### Example\n\n```shell script\nredis> EXISTS mykey\n(integer) 0\nredis> APPEND mykey \"Hello\"\n(integer) 5\nredis> APPEND mykey \" World\"\n(integer) 11\nredis> GET mykey\n\"Hello World\"\n```\n\nAppend a value to a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "BITCOUNT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "BITCOUNT",
+              "body": "```{.wrap}\nBITCOUNT key [start end]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"foobar\"\n\"OK\"\nredis> BITCOUNT mykey\n(integer) 26\nredis> BITCOUNT mykey 0 0\n(integer) 4\nredis> BITCOUNT mykey 1 1\n(integer) 6\n```\n\nCount set bits in a string",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "BITFIELD",
+          "level": 3,
+          "cards": [
+            {
+              "title": "BITFIELD",
+              "body": "```{.wrap}\nBITFIELD key [GET type offset] [SET type offset value] [INCRBY type offset increment] [OVERFLOW WRAP|SAT|FAIL]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> BITFIELD mykey INCRBY i5 100 1 GET u4 0\n1) (integer) 1\n2) (integer) 0\n```\n\nPerform arbitrary bitfield integer operations on strings",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "BITOP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "BITOP",
+              "body": "```{.wrap}\nBITOP operation destkey key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET key1 \"foobar\"\n\"OK\"\nredis> SET key2 \"abcdef\"\n\"OK\"\nredis> BITOP AND dest key1 key2\n(integer) 6\nredis> GET dest\n\"`bc`ab\"\n```\n\nPerform bitwise operations between strings",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "BITPOS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "BITPOS",
+              "body": "```{.wrap}\nBITPOS key bit [start] [end]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"\\xff\\xf0\\x00\"\n\"OK\"\nredis> BITPOS mykey 0\n(integer) 12\nredis> SET mykey \"\\x00\\xff\\xf0\"\n\"OK\"\nredis> BITPOS mykey 1 0\n(integer) 8\nredis> BITPOS mykey 1 2\n(integer) 16\nredis> set mykey \"\\x00\\x00\\x00\"\n\"OK\"\nredis> BITPOS mykey 1\n(integer) -1\n```\n\nFind first bit set or clear in a string",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "DECR",
+          "level": 3,
+          "cards": [
+            {
+              "title": "DECR",
+              "body": "```{.wrap}\nDECR key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"10\"\n\"OK\"\nredis> DECR mykey\n(integer) 9\nredis> SET mykey \"234293482390480948029348230948\"\n\"OK\"\nredis> DECR mykey\nERR ERR value is not an integer or out of range\n```\n\nDecrement the integer value of a key by one",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "DECRBY",
+          "level": 3,
+          "cards": [
+            {
+              "title": "DECRBY",
+              "body": "```{.wrap}\nDECRBY key decrement\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"10\"\n\"OK\"\nredis> DECRBY mykey 3\n(integer) 7\n```\n\nDecrement the integer value of a key by the given number",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GET",
+              "body": "```{.wrap}\nGET key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> GET nonexisting\n(nil)\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> GET mykey\n\"Hello\"\n```\n\nGet the value of a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GETBIT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GETBIT",
+              "body": "```{.wrap}\nGETBIT key offset\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SETBIT mykey 7 1\n(integer) 0\nredis> GETBIT mykey 0\n(integer) 0\nredis> GETBIT mykey 7\n(integer) 1\nredis> GETBIT mykey 100\n(integer) 0\n```\n\nReturns the bit value at offset in the string value stored at key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GETRANGE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GETRANGE",
+              "body": "```{.wrap}\nGETRANGE key start end\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"This is a string\"\n\"OK\"\nredis> GETRANGE mykey 0 3\n\"This\"\nredis> GETRANGE mykey -3 -1\n\"ing\"\nredis> GETRANGE mykey 0 -1\n\"This is a string\"\nredis> GETRANGE mykey 10 100\n\"string\"\n```\n\nGet a substring of the string stored at a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GETSET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GETSET",
+              "body": "```{.wrap}\nGETSET key value\n```",
+              "footer": "#### Example\n\n```shell script\nredis> INCR mycounter\n(integer) 1\nredis> GETSET mycounter \"0\"\n\"1\"\nredis> GET mycounter\n\"0\"\n```\n\nSet the string value of a key and return its old value",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "INCR",
+          "level": 3,
+          "cards": [
+            {
+              "title": "INCR",
+              "body": "```{.wrap}\nINCR key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"10\"\n\"OK\"\nredis> INCR mykey\n(integer) 11\nredis> GET mykey\n\"11\"\n```\n\nIncrement the integer value of a key by one",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "MSETNX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "MSETNX",
+              "body": "```{.wrap}\nMSETNX key value [key value ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> MSETNX key1 \"Hello\" key2 \"there\"\n(integer) 1\nredis> MSETNX key2 \"new\" key3 \"world\"\n(integer) 0\nredis> MGET key1 key2 key3\n1) \"Hello\"\n2) \"there\"\n3) (nil)\n```\n\nSet multiple keys to multiple values, only if none of the keys exist",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "INCRBYFLOAT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "INCRBYFLOAT",
+              "body": "```{.wrap}\nINCRBYFLOAT key increment\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey 10.50\n\"OK\"\nredis> INCRBYFLOAT mykey 0.1\n\"10.6\"\nredis> INCRBYFLOAT mykey -5\n\"5.6\"\nredis> SET mykey 5.0e3\n\"OK\"\nredis> INCRBYFLOAT mykey 2.0e2\n\"5200\"\n```\n\nIncrement the float value of a key by the given amount",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "MGET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "MGET",
+              "body": "```{.wrap}\nMGET key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET key1 \"Hello\"\n\"OK\"\nredis> SET key2 \"World\"\n\"OK\"\nredis> MGET key1 key2 nonexisting\n1) \"Hello\"\n2) \"World\"\n3) (nil)\n```\n\nGet the values of all the given keys",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "MSET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "MSET",
+              "body": "```{.wrap}\nMSET key value [key value ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> MSET key1 \"Hello\" key2 \"World\"\n\"OK\"\nredis> GET key1\n\"Hello\"\nredis> GET key2\n\"World\"\n```\n\nSet multiple keys to multiple values",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "INCRBY",
+          "level": 3,
+          "cards": [
+            {
+              "title": "INCRBY",
+              "body": "```{.wrap}\nINCRBY key increment\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"10\"\n\"OK\"\nredis> INCRBY mykey 5\n(integer) 15\n```\n\nIncrement the integer value of a key by the given amount",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "PSETEX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PSETEX",
+              "body": "```{.wrap}\nPSETEX key milliseconds value\n```",
+              "footer": "#### Example\n\n```shell script\nredis> PSETEX mykey 1000 \"Hello\"\n\"OK\"\nredis> PTTL mykey\n(integer) 1000\nredis> GET mykey\n\"Hello\"\n```\n\nSet the value and expiration in milliseconds of a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SET",
+              "body": "```{.wrap}\nSET key value [EX seconds|PX milliseconds|KEEPTTL] [NX|XX] [GET]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> GET mykey\n\"Hello\"\nredis> SET anotherkey \"will expire in a minute\" EX 60\n\"OK\"\n```\n\nSet the string value of a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SETBIT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SETBIT",
+              "body": "```{.wrap}\nSETBIT key offset value\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SETBIT mykey 7 1\n(integer) 0\nredis> SETBIT mykey 7 0\n(integer) 1\nredis> GET mykey\n\"\\u0000\"\n```\n\nSets or clears the bit at offset in the string value stored at key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SETEX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SETEX",
+              "body": "```{.wrap}\nSETEX key seconds value\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SETEX mykey 10 \"Hello\"\n\"OK\"\nredis> TTL mykey\n(integer) 10\nredis> GET mykey\n\"Hello\"\n```\n\nSet the value and expiration of a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SETNX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SETNX",
+              "body": "```{.wrap}\nSETNX key value\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SETNX mykey \"Hello\"\n(integer) 1\nredis> SETNX mykey \"World\"\n(integer) 0\nredis> GET mykey\n\"Hello\"\n```\n\nSet the value of a key, only if the key does not exist",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SETRANGE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SETRANGE",
+              "body": "```{.wrap}\nSETRANGE key offset value\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET key1 \"Hello World\"\n\"OK\"\nredis> SETRANGE key1 6 \"Redis\"\n(integer) 11\nredis> GET key1\n\"Hello Redis\"\n```\n\nOverwrite part of a string at key starting at the specified offset",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "STRLEN",
+          "level": 3,
+          "cards": [
+            {
+              "title": "STRLEN",
+              "body": "```{.wrap}\nSTRLEN key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello world\"\n\"OK\"\nredis> STRLEN mykey\n(integer) 11\nredis> STRLEN nonexisting\n(integer) 0\n```\n\nGet the length of the value stored in a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "STRALGO",
+          "level": 3,
+          "cards": [
+            {
+              "title": "STRALGO",
+              "body": "```{.wrap}\nSTRALGO LCS algo-specific-argument [algo-specific-argument ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> STRALGO LCS KEYS key1 key2 IDX\n1) \"matches\"\n2) 1) 1) 1) (integer) 4\n         2) (integer) 7\n      2) 1) (integer) 5\n         2) (integer) 8\n   2) 1) 1) (integer) 2\n         2) (integer) 3\n      2) 1) (integer) 0\n         2) (integer) 1\n3) \"len\"\n4) (integer) 6\n```\n\nRun algorithms (currently LCS) against strings",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis Set command",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "SADD",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SADD",
+              "body": "```{.wrap}\nSADD key member [member ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD myset \"Hello\"\n(integer) 1\nredis> SADD myset \"World\"\n(integer) 1\nredis> SADD myset \"World\"\n(integer) 0\nredis> SMEMBERS myset\n1) \"Hello\"\n2) \"World\"\n```\n\nAdd one or more members to a set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SCARD",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SCARD",
+              "body": "```{.wrap}\nSCARD key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD myset \"Hello\"\n(integer) 1\nredis> SADD myset \"World\"\n(integer) 1\nredis> SCARD myset\n(integer) 2\n```\n\nGet the number of members in a set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SDIFF",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SDIFF",
+              "body": "```{.wrap}\nSDIFF key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD key1 \"a\"\n(integer) 1\nredis> SADD key1 \"b\"\n(integer) 1\nredis> SADD key1 \"c\"\n(integer) 1\nredis> SADD key2 \"c\"\n(integer) 1\nredis> SADD key2 \"d\"\n(integer) 1\nredis> SADD key2 \"e\"\n(integer) 1\nredis> SDIFF key1 key2\n1) \"a\"\n2) \"b\"\n```\n\nSubtract multiple sets",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SDIFFSTORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SDIFFSTORE",
+              "body": "```{.wrap}\nSDIFFSTORE destination key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD key1 \"a\"\n(integer) 1\nredis> SADD key1 \"b\"\n(integer) 1\nredis> SADD key1 \"c\"\n(integer) 1\nredis> SADD key2 \"c\"\n(integer) 1\nredis> SADD key2 \"d\"\n(integer) 1\nredis> SADD key2 \"e\"\n(integer) 1\nredis> SDIFFSTORE key key1 key2\n(integer) 2\nredis> SMEMBERS key\n1) \"a\"\n2) \"b\"\n```\n\nSubtract multiple sets and store the resulting set in a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SINTER",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SINTER",
+              "body": "```{.wrap}\nSINTER key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD key1 \"a\"\n(integer) 1\nredis> SADD key1 \"b\"\n(integer) 1\nredis> SADD key1 \"c\"\n(integer) 1\nredis> SADD key2 \"c\"\n(integer) 1\nredis> SADD key2 \"d\"\n(integer) 1\nredis> SADD key2 \"e\"\n(integer) 1\nredis> SINTER key1 key2\n1) \"c\"\n```\n\nIntersect multiple sets",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SINTERSTORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SINTERSTORE",
+              "body": "```{.wrap}\nSINTERSTORE destination key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD key1 \"a\"\n(integer) 1\nredis> SADD key1 \"b\"\n(integer) 1\nredis> SADD key1 \"c\"\n(integer) 1\nredis> SADD key2 \"c\"\n(integer) 1\nredis> SADD key2 \"d\"\n(integer) 1\nredis> SADD key2 \"e\"\n(integer) 1\nredis> SINTERSTORE key key1 key2\n(integer) 1\nredis> SMEMBERS key\n1) \"c\"\n```\n\nIntersect multiple sets and store the resulting set in a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SISMEMBER",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SISMEMBER",
+              "body": "```{.wrap}\nSISMEMBER key member\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD myset \"one\"\n(integer) 1\nredis> SISMEMBER myset \"one\"\n(integer) 1\nredis> SISMEMBER myset \"two\"\n(integer) 0\n```\n\nDetermine if a given value is a member of a set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SMISMEMBER",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SMISMEMBER",
+              "body": "```{.wrap}\nSMISMEMBER key member [member ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD myset \"one\"\n(integer) 1\nredis> SADD myset \"one\"\n(integer) 0\nredis> SMISMEMBER myset \"one\" \"notamember\"\n1) (integer) 1\n2) (integer) 0\n```\n\nReturns the membership associated with the given elements for a set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SMEMBERS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SMEMBERS",
+              "body": "```{.wrap}\nSMEMBERS key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD myset \"Hello\"\n(integer) 1\nredis> SADD myset \"World\"\n(integer) 1\nredis> SMEMBERS myset\n1) \"Hello\"\n2) \"World\"\n```\n\nGet all the members in a set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SMOVE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SMOVE",
+              "body": "```{.wrap}\nSMOVE source destination member\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD myset \"one\"\n(integer) 1\nredis> SADD myset \"two\"\n(integer) 1\nredis> SADD myotherset \"three\"\n(integer) 1\nredis> SMOVE myset myotherset \"two\"\n(integer) 1\nredis> SMEMBERS myset\n1) \"one\"\nredis> SMEMBERS myotherset\n1) \"two\"\n2) \"three\"\n```\n\nMove a member from one set to another",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SPOP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SPOP",
+              "body": "```{.wrap}\nSPOP key [count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD myset \"one\"\n(integer) 1\nredis> SADD myset \"two\"\n(integer) 1\nredis> SADD myset \"three\"\n(integer) 1\nredis> SPOP myset\n\"two\"\nredis> SMEMBERS myset\n1) \"one\"\n2) \"three\"\nredis> SADD myset \"four\"\n(integer) 1\nredis> SADD myset \"five\"\n(integer) 1\nredis> SPOP myset 3\n1) \"four\"\n2) \"five\"\n3) \"three\"\nredis> SMEMBERS myset\n1) \"one\"\n```\n\nRemove and return one or multiple random members from a set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SRANDMEMBER",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SRANDMEMBER",
+              "body": "```{.wrap}\nSRANDMEMBER key [count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD myset one two three\n(integer) 3\nredis> SRANDMEMBER myset\n\"three\"\nredis> SRANDMEMBER myset 2\n1) \"two\"\n2) \"three\"\nredis> SRANDMEMBER myset -5\n1) \"one\"\n2) \"two\"\n3) \"three\"\n4) \"three\"\n5) \"one\"\n```\n\nGet one or multiple random members from a set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SREM",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SREM",
+              "body": "```{.wrap}\nSREM key member [member ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD myset \"one\"\n(integer) 1\nredis> SADD myset \"two\"\n(integer) 1\nredis> SADD myset \"three\"\n(integer) 1\nredis> SREM myset \"one\"\n(integer) 1\nredis> SREM myset \"four\"\n(integer) 0\nredis> SMEMBERS myset\n1) \"two\"\n2) \"three\"\n```\n\nRemove one or more members from a set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SUNION",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SUNION",
+              "body": "```{.wrap}\nSUNION key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD key1 \"a\"\n(integer) 1\nredis> SADD key1 \"b\"\n(integer) 1\nredis> SADD key1 \"c\"\n(integer) 1\nredis> SADD key2 \"c\"\n(integer) 1\nredis> SADD key2 \"d\"\n(integer) 1\nredis> SADD key2 \"e\"\n(integer) 1\nredis> SUNION key1 key2\n1) \"a\"\n2) \"c\"\n3) \"e\"\n4) \"b\"\n5) \"d\"\n```\n\nAdd multiple sets",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SUNIONSTORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SUNIONSTORE",
+              "body": "```{.wrap}\nSUNIONSTORE destination key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SADD key1 \"a\"\n(integer) 1\nredis> SADD key1 \"b\"\n(integer) 1\nredis> SADD key1 \"c\"\n(integer) 1\nredis> SADD key2 \"c\"\n(integer) 1\nredis> SADD key2 \"d\"\n(integer) 1\nredis> SADD key2 \"e\"\n(integer) 1\nredis> SUNIONSTORE key key1 key2\n(integer) 5\nredis> SMEMBERS key\n1) \"a\"\n2) \"c\"\n3) \"e\"\n4) \"b\"\n5) \"d\"\n```\n\nAdd multiple sets and store the resulting set in a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis List command",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Misc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc",
+              "body": "| -                                                   | -                                                                                                  |\n| --------------------------------------------------- | -------------------------------------------------------------------------------------------------- |\n| [BRPOPLPUSH ](https://redis.io/commands/brpoplpush) | Pop an element from a list, push it to another list and return it; or block until one is available |\n| [BLMOVE ](https://redis.io/commands/blmove)         | Pop an element from a list, push it to another list and return it; or block until one is available |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "BLPOP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "BLPOP",
+              "body": "```{.wrap}\nBLPOP key [key ...] timeout\n```",
+              "footer": "#### Example\n\n```shell script\nredis> DEL list1 list2\n(integer) 0\nredis> RPUSH list1 a b c\n(integer) 3\nredis> BLPOP list1 list2 0\n1) \"list1\"\n2) \"a\"\n```\n\nRemove and get the first element in a list, or block until one is available |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "BRPOP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "BRPOP",
+              "body": "```{.wrap}\nBRPOP key [key ...] timeout\n```",
+              "footer": "#### Example\n\n```shell script\nredis> DEL list1 list2\n(integer) 0\nredis> RPUSH list1 a b c\n(integer) 3\nredis> BRPOP list1 list2 0\n1) \"list1\"\n2) \"c\"\n```\n\nRemove and get the last element in a list, or block until one is available |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LINDEX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LINDEX",
+              "body": "```{.wrap}\nLINDEX key index\n```",
+              "footer": "#### Example\n\n```shell script\nredis> LPUSH mylist \"World\"\n(integer) 1\nredis> LPUSH mylist \"Hello\"\n(integer) 2\nredis> LINDEX mylist 0\n\"Hello\"\nredis> LINDEX mylist -1\n\"World\"\nredis> LINDEX mylist 3\n(nil)\n```\n\nGet an element from a list by its index",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LINSERT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LINSERT",
+              "body": "```{.wrap}\nLINSERT key BEFORE|AFTER pivot element\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"Hello\"\n(integer) 1\nredis> RPUSH mylist \"World\"\n(integer) 2\nredis> LINSERT mylist BEFORE \"World\" \"There\"\n(integer) 3\nredis> LRANGE mylist 0 -1\n1) \"Hello\"\n2) \"There\"\n3) \"World\"\n```\n\nInsert an element before or after another element in a list",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LLEN",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LLEN",
+              "body": "```{.wrap}\nLLEN key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> LPUSH mylist \"World\"\n(integer) 1\nredis> LPUSH mylist \"Hello\"\n(integer) 2\nredis> LLEN mylist\n(integer) 2\n```\n\nGet the length of a list",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LPOP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LPOP",
+              "body": "```{.wrap}\nLPOP key [count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"one\"\n(integer) 1\nredis> RPUSH mylist \"two\"\n(integer) 2\nredis> RPUSH mylist \"three\"\n(integer) 3\nredis> LPOP mylist\n\"one\"\nredis> LRANGE mylist 0 -1\n1) \"two\"\n2) \"three\"\n```\n\nRemove and get the first elements in a list",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LPOS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LPOS",
+              "body": "```{.wrap}\nLPOS key element [RANK rank] [COUNT num-matches] [MAXLEN len]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist a b c d 1 2 3 4 3 3 3\n(integer) 11\nredis> LPOS mylist 3\n(integer) 6\nredis> LPOS mylist 3 COUNT 0 RANK 2\n1) (integer) 8\n2) (integer) 9\n3) (integer) 10\n```\n\nReturn the index of matching elements on a list",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LPUSH",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LPUSH",
+              "body": "```{.wrap}\nLPUSH key element [element ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> LPUSH mylist \"world\"\n(integer) 1\nredis> LPUSH mylist \"hello\"\n(integer) 2\nredis> LRANGE mylist 0 -1\n1) \"hello\"\n2) \"world\"\n```\n\nPrepend one or multiple elements to a list",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LPUSHX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LPUSHX",
+              "body": "```{.wrap}\nLPUSHX key element [element ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> LPUSH mylist \"World\"\n(integer) 1\nredis> LPUSHX mylist \"Hello\"\n(integer) 2\nredis> LPUSHX myotherlist \"Hello\"\n(integer) 0\nredis> LRANGE mylist 0 -1\n1) \"Hello\"\n2) \"World\"\nredis> LRANGE myotherlist 0 -1\n(empty list or set)\n```\n\nPrepend an element to a list, only if the list exists",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LRANGE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LRANGE",
+              "body": "```{.wrap}\nLRANGE key start stop\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"one\"\n(integer) 1\nredis> RPUSH mylist \"two\"\n(integer) 2\nredis> RPUSH mylist \"three\"\n(integer) 3\nredis> LRANGE mylist 0 0\n1) \"one\"\nredis> LRANGE mylist -3 2\n1) \"one\"\n2) \"two\"\n3) \"three\"\nredis> LRANGE mylist -100 100\n1) \"one\"\n2) \"two\"\n3) \"three\"\nredis> LRANGE mylist 5 10\n(empty list or set)\n```\n\nGet a range of elements from a list",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LREM",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LREM",
+              "body": "```{.wrap}\nLREM key count element\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"hello\"\n(integer) 1\nredis> RPUSH mylist \"hello\"\n(integer) 2\nredis> RPUSH mylist \"foo\"\n(integer) 3\nredis> RPUSH mylist \"hello\"\n(integer) 4\nredis> LREM mylist -2 \"hello\"\n(integer) 2\nredis> LRANGE mylist 0 -1\n1) \"hello\"\n2) \"foo\"\n```\n\nRemove elements from a list",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LSET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LSET",
+              "body": "```{.wrap}\nLSET key index element\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"one\"\n(integer) 1\nredis> RPUSH mylist \"two\"\n(integer) 2\nredis> RPUSH mylist \"three\"\n(integer) 3\nredis> LSET mylist 0 \"four\"\n\"OK\"\nredis> LSET mylist -2 \"five\"\n\"OK\"\nredis> LRANGE mylist 0 -1\n1) \"four\"\n2) \"five\"\n3) \"three\"\n```\n\nSet the value of an element in a list by its index",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LTRIM",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LTRIM",
+              "body": "```{.wrap}\nLTRIM key start stop\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"one\"\n(integer) 1\nredis> RPUSH mylist \"two\"\n(integer) 2\nredis> RPUSH mylist \"three\"\n(integer) 3\nredis> LTRIM mylist 1 -1\n\"OK\"\nredis> LRANGE mylist 0 -1\n1) \"two\"\n2) \"three\"\n```\n\nTrim a list to the specified range",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "RPOP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "RPOP",
+              "body": "```{.wrap}\nRPOP key [count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"one\"\n(integer) 1\nredis> RPUSH mylist \"two\"\n(integer) 2\nredis> RPUSH mylist \"three\"\n(integer) 3\nredis> RPOP mylist\n\"three\"\nredis> LRANGE mylist 0 -1\n1) \"one\"\n2) \"two\"\n```\n\nRemove and get the last elements in a list",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "RPOPLPUSH",
+          "level": 3,
+          "cards": [
+            {
+              "title": "RPOPLPUSH",
+              "body": "```{.wrap}\nRPOPLPUSH source destination\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"one\"\n(integer) 1\nredis> RPUSH mylist \"two\"\n(integer) 2\nredis> RPUSH mylist \"three\"\n(integer) 3\nredis> RPOPLPUSH mylist myotherlist\n\"three\"\nredis> LRANGE mylist 0 -1\n1) \"one\"\n2) \"two\"\nredis> LRANGE myotherlist 0 -1\n1) \"three\"\n```\n\nRemove the last element in a list, prepend it to another list and return it",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "LMOVE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LMOVE",
+              "body": "```{.wrap}\nLMOVE source destination LEFT|RIGHT LEFT|RIGHT\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"one\"\n(integer) 1\nredis> RPUSH mylist \"two\"\n(integer) 2\nredis> RPUSH mylist \"three\"\n(integer) 3\nredis> LMOVE mylist myotherlist RIGHT LEFT\n\"three\"\nredis> LMOVE mylist myotherlist LEFT RIGHT\n\"one\"\nredis> LRANGE mylist 0 -1\n1) \"two\"\nredis> LRANGE myotherlist 0 -1\n1) \"three\"\n2) \"one\"\n```\n\nPop an element from a list, push it to another list and return it",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "RPUSH",
+          "level": 3,
+          "cards": [
+            {
+              "title": "RPUSH",
+              "body": "```{.wrap}\nRPUSH key element [element ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"hello\"\n(integer) 1\nredis> RPUSH mylist \"world\"\n(integer) 2\nredis> LRANGE mylist 0 -1\n1) \"hello\"\n2) \"world\"\n```\n\nAppend one or multiple elements to a list",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "RPUSHX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "RPUSHX",
+              "body": "```{.wrap}\nRPUSHX key element [element ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> RPUSH mylist \"Hello\"\n(integer) 1\nredis> RPUSHX mylist \"World\"\n(integer) 2\nredis> RPUSHX myotherlist \"World\"\n(integer) 0\nredis> LRANGE mylist 0 -1\n1) \"Hello\"\n2) \"World\"\nredis> LRANGE myotherlist 0 -1\n(empty list or set)\n```\n\nAppend an element to a list, only if the list exists",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis Hash command",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "HDEL",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HDEL",
+              "body": "```{.wrap}\nHDEL key field [field ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET myhash field1 \"foo\"\n(integer) 1\nredis> HDEL myhash field1\n(integer) 1\nredis> HDEL myhash field2\n(integer) 0\n```\n\nDelete one or more hash fields",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HEXISTS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HEXISTS",
+              "body": "```{.wrap}\nHEXISTS key field\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET myhash field1 \"foo\"\n(integer) 1\nredis> HEXISTS myhash field1\n(integer) 1\nredis> HEXISTS myhash field2\n(integer) 0\n```\n\nDetermine if a hash field exists",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HGET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HGET",
+              "body": "```{.wrap}\nHGET key field\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET myhash field1 \"foo\"\n(integer) 1\nredis> HGET myhash field1\n\"foo\"\nredis> HGET myhash field2\n(nil)\n```\n\nGet the value of a hash field",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HGETALL",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HGETALL",
+              "body": "```{.wrap}\nHGETALL key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET myhash field1 \"Hello\"\n(integer) 1\nredis> HSET myhash field2 \"World\"\n(integer) 1\nredis> HGETALL myhash\n1) \"field1\"\n2) \"Hello\"\n3) \"field2\"\n4) \"World\"\n```\n\nGet all the fields and values in a hash",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HINCRBY",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HINCRBY",
+              "body": "```{.wrap}\nHINCRBY key field increment\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET myhash field 5\n(integer) 1\nredis> HINCRBY myhash field 1\n(integer) 6\nredis> HINCRBY myhash field -1\n(integer) 5\nredis> HINCRBY myhash field -10\n(integer) -5\n```\n\nIncrement the integer value of a hash field by the given number",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HINCRBYFLOAT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HINCRBYFLOAT",
+              "body": "```{.wrap}\nHINCRBYFLOAT key field increment\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET mykey field 10.50\n(integer) 1\nredis> HINCRBYFLOAT mykey field 0.1\n\"10.6\"\nredis> HINCRBYFLOAT mykey field -5\n\"5.6\"\nredis> HSET mykey field 5.0e3\n(integer) 0\nredis> HINCRBYFLOAT mykey field 2.0e2\n\"5200\"\n```\n\nIncrement the float value of a hash field by the given amount",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HKEYS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HKEYS",
+              "body": "```{.wrap}\nHKEYS key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET myhash field1 \"Hello\"\n(integer) 1\nredis> HSET myhash field2 \"World\"\n(integer) 1\nredis> HKEYS myhash\n1) \"field1\"\n2) \"field2\"\n```\n\nGet all the fields in a hash",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HLEN",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HLEN",
+              "body": "```{.wrap}\nHLEN key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET myhash field1 \"Hello\"\n(integer) 1\nredis> HSET myhash field2 \"World\"\n(integer) 1\nredis> HLEN myhash\n(integer) 2\n```\n\nGet the number of fields in a hash",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HMGET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HMGET",
+              "body": "```{.wrap}\nHMGET key field [field ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET myhash field1 \"Hello\"\n(integer) 1\nredis> HSET myhash field2 \"World\"\n(integer) 1\nredis> HMGET myhash field1 field2 nofield\n1) \"Hello\"\n2) \"World\"\n3) (nil)\n```\n\nGet the values of all the given hash fields",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HMSET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HMSET",
+              "body": "```{.wrap}\nHMSET key field value [field value ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HMSET myhash field1 \"Hello\" field2 \"World\"\n\"OK\"\nredis> HGET myhash field1\n\"Hello\"\nredis> HGET myhash field2\n\"World\"\n```\n\nSet multiple hash fields to multiple values",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HSET",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HSET",
+              "body": "```{.wrap}\nHSET key field value [field value ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET myhash field1 \"Hello\"\n(integer) 1\nredis> HGET myhash field1\n\"Hello\"\n```\n\nSet the string value of a hash field",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HSETNX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HSETNX",
+              "body": "```{.wrap}\nHSETNX key field value\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSETNX myhash field \"Hello\"\n(integer) 1\nredis> HSETNX myhash field \"World\"\n(integer) 0\nredis> HGET myhash field\n\"Hello\"\n```\n\nSet the value of a hash field, only if the field does not exist",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HSTRLEN",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HSTRLEN",
+              "body": "```{.wrap}\nHSTRLEN key field\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HMSET myhash f1 HelloWorld f2 99 f3 -256\n\"OK\"\nredis> HSTRLEN myhash f1\n(integer) 10\nredis> HSTRLEN myhash f2\n(integer) 2\nredis> HSTRLEN myhash f3\n(integer) 4\n```\n\nGet the length of the value of a hash field",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HVALS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HVALS",
+              "body": "```{.wrap}\nHVALS key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> HSET myhash field1 \"Hello\"\n(integer) 1\nredis> HSET myhash field2 \"World\"\n(integer) 1\nredis> HVALS myhash\n1) \"Hello\"\n2) \"World\"\n```\n\nGet all the values in a hash",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis Sorted set command",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "BZPOPMIN",
+          "level": 3,
+          "cards": [
+            {
+              "title": "BZPOPMIN",
+              "body": "```{.wrap}\nBZPOPMIN key [key ...] timeout\n```",
+              "footer": "#### Example\n\n```shell script\nredis> DEL zset1 zset2\n(integer) 0\nredis> ZADD zset1 0 a 1 b 2 c\n(integer) 3\nredis> BZPOPMIN zset1 zset2 0\n1) \"zset1\"\n2) \"a\"\n3) \"0\"\n```\n\nRemove and return the member with the lowest score from one or more sorted sets, or block until one is available",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "BZPOPMAX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "BZPOPMAX",
+              "body": "```{.wrap}\nBZPOPMAX key [key ...] timeout\n```",
+              "footer": "#### Example\n\n```shell script\nredis> DEL zset1 zset2\n(integer) 0\nredis> ZADD zset1 0 a 1 b 2 c\n(integer) 3\nredis> BZPOPMAX zset1 zset2 0\n1) \"zset1\"\n2) \"c\"\n3) \"2\"\n```\n\nRemove and return the member with the highest score from one or more sorted sets, or block until one is available",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZADD",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZADD",
+              "body": "```{.wrap}\nZADD key [NX|XX] [GT|LT] [CH] [INCR] score member [score member ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 1 \"uno\"\n(integer) 1\nredis> ZADD myzset 2 \"two\" 3 \"three\"\n(integer) 2\nredis> ZRANGE myzset 0 -1 WITHSCORES\n1) \"one\"\n2) \"1\"\n3) \"uno\"\n4) \"1\"\n5) \"two\"\n6) \"2\"\n7) \"three\"\n8) \"3\"\n```\n\nAdd one or more members to a sorted set, or update its score if it already exists",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZCARD",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZCARD",
+              "body": "```{.wrap}\nZCARD key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZCARD myzset\n(integer) 2\n```\n\nGet the number of members in a sorted set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZSCORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZSCORE",
+              "body": "```{.wrap}\nZSCORE key member\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZSCORE myzset \"one\"\n\"1\"\n```\n\nGet the score associated with the given member in a sorted set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZCOUNT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZCOUNT",
+              "body": "```{.wrap}\nZCOUNT key min max\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZCOUNT myzset -inf +inf\n(integer) 3\nredis> ZCOUNT myzset (1 3\n(integer) 2\n```\n\nCount the members in a sorted set with scores within the given values",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZDIFF",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZDIFF",
+              "body": "```{.wrap}\nZDIFF numkeys key [key ...] [WITHSCORES]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD zset1 1 \"one\"\n(integer) 1\nredis> ZADD zset1 2 \"two\"\n(integer) 1\nredis> ZADD zset1 3 \"three\"\n(integer) 1\nredis> ZADD zset2 1 \"one\"\n(integer) 1\nredis> ZADD zset2 2 \"two\"\n(integer) 1\nredis> ZDIFF 2 zset1 zset2\n1) \"three\"\nredis> ZDIFF 2 zset1 zset2 WITHSCORES\n1) \"three\"\n2) \"3\"\n```\n\nSubtract multiple sorted sets",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZDIFFSTORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZDIFFSTORE",
+              "body": "```{.wrap}\nZDIFFSTORE destination numkeys key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD zset1 1 \"one\"\n(integer) 1\nredis> ZADD zset1 2 \"two\"\n(integer) 1\nredis> ZADD zset1 3 \"three\"\n(integer) 1\nredis> ZADD zset2 1 \"one\"\n(integer) 1\nredis> ZADD zset2 2 \"two\"\n(integer) 1\nredis> ZDIFFSTORE out 2 zset1 zset2\n(integer) 1\nredis> ZRANGE out 0 -1 WITHSCORES\n1) \"three\"\n2) \"3\"\n```\n\nSubtract multiple sorted sets and store the resulting sorted set in a new key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZINCRBY",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZINCRBY",
+              "body": "```{.wrap}\nZINCRBY key increment member\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZINCRBY myzset 2 \"one\"\n\"3\"\nredis> ZRANGE myzset 0 -1 WITHSCORES\n1) \"two\"\n2) \"2\"\n3) \"one\"\n4) \"3\"\n```\n\nIncrement the score of a member in a sorted set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZINTER",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZINTER",
+              "body": "```{.wrap}\nZINTER numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX] [WITHSCORES]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD zset1 1 \"one\"\n(integer) 1\nredis> ZADD zset1 2 \"two\"\n(integer) 1\nredis> ZADD zset2 1 \"one\"\n(integer) 1\nredis> ZADD zset2 2 \"two\"\n(integer) 1\nredis> ZADD zset2 3 \"three\"\n(integer) 1\nredis> ZINTER 2 zset1 zset2\n1) \"one\"\n2) \"two\"\nredis> ZINTER 2 zset1 zset2 WITHSCORES\n1) \"one\"\n2) \"2\"\n3) \"two\"\n4) \"4\"\n```\n\nIntersect multiple sorted sets",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZINTERSTORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZINTERSTORE",
+              "body": "```{.wrap}\nZINTERSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD zset1 1 \"one\"\n(integer) 1\nredis> ZADD zset1 2 \"two\"\n(integer) 1\nredis> ZADD zset2 1 \"one\"\n(integer) 1\nredis> ZADD zset2 2 \"two\"\n(integer) 1\nredis> ZADD zset2 3 \"three\"\n(integer) 1\nredis> ZINTERSTORE out 2 zset1 zset2 WEIGHTS 2 3\n(integer) 2\nredis> ZRANGE out 0 -1 WITHSCORES\n1) \"one\"\n2) \"5\"\n3) \"two\"\n4) \"10\"\n```\n\nIntersect multiple sorted sets and store the resulting sorted set in a new key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZLEXCOUNT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZLEXCOUNT",
+              "body": "```{.wrap}\nZLEXCOUNT key min max\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 0 a 0 b 0 c 0 d 0 e\n(integer) 5\nredis> ZADD myzset 0 f 0 g\n(integer) 2\nredis> ZLEXCOUNT myzset - +\n(integer) 7\nredis> ZLEXCOUNT myzset [b [f\n(integer) 5\n```\n\nCount the number of members in a sorted set between a given lexicographical range",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZPOPMAX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZPOPMAX",
+              "body": "```{.wrap}\nZPOPMAX key [count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZPOPMAX myzset\n1) \"three\"\n2) \"3\"\n```\n\nRemove and return members with the highest scores in a sorted set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZPOPMIN",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZPOPMIN",
+              "body": "```{.wrap}\nZPOPMIN key [count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZPOPMIN myzset\n1) \"one\"\n2) \"1\"\n```\n\nRemove and return members with the lowest scores in a sorted set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZRANGE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZRANGE",
+              "body": "```{.wrap}\nZRANGE key start stop [WITHSCORES]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZRANGE myzset 0 -1\n1) \"one\"\n2) \"two\"\n3) \"three\"\nredis> ZRANGE myzset 2 3\n1) \"three\"\nredis> ZRANGE myzset -2 -1\n1) \"two\"\n2) \"three\"\n```\n\nReturn a range of members in a sorted set, by index",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZRANGEBYLEX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZRANGEBYLEX",
+              "body": "```{.wrap}\nZRANGEBYLEX key min max [LIMIT offset count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 0 a 0 b 0 c 0 d 0 e 0 f 0 g\n(integer) 7\nredis> ZRANGEBYLEX myzset - [c\n1) \"a\"\n2) \"b\"\n3) \"c\"\nredis> ZRANGEBYLEX myzset - (c\n1) \"a\"\n2) \"b\"\nredis> ZRANGEBYLEX myzset [aaa (g\n1) \"b\"\n2) \"c\"\n3) \"d\"\n4) \"e\"\n5) \"f\"\n```\n\nReturn a range of members in a sorted set, by lexicographical range",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZREVRANGEBYLEX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZREVRANGEBYLEX",
+              "body": "```{.wrap}\nZREVRANGEBYLEX key max min [LIMIT offset count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 0 a 0 b 0 c 0 d 0 e 0 f 0 g\n(integer) 7\nredis> ZREVRANGEBYLEX myzset [c -\n1) \"c\"\n2) \"b\"\n3) \"a\"\nredis> ZREVRANGEBYLEX myzset (c -\n1) \"b\"\n2) \"a\"\nredis> ZREVRANGEBYLEX myzset (g [aaa\n1) \"f\"\n2) \"e\"\n3) \"d\"\n4) \"c\"\n5) \"b\"\n```\n\nReturn a range of members in a sorted set, by lexicographical range, ordered from higher to lower strings.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZRANGEBYSCORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZRANGEBYSCORE",
+              "body": "```{.wrap}\nZRANGEBYSCORE key min max [WITHSCORES] [LIMIT offset count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZRANGEBYSCORE myzset -inf +inf\n1) \"one\"\n2) \"two\"\n3) \"three\"\nredis> ZRANGEBYSCORE myzset 1 2\n1) \"one\"\n2) \"two\"\nredis> ZRANGEBYSCORE myzset (1 2\n1) \"two\"\nredis> ZRANGEBYSCORE myzset (1 (2\n(empty list or set)\n```\n\nReturn a range of members in a sorted set, by score",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZRANK",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZRANK",
+              "body": "```{.wrap}\nZRANK key member\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZRANK myzset \"three\"\n(integer) 2\nredis> ZRANK myzset \"four\"\n(nil)\n```\n\nDetermine the index of a member in a sorted set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZREM",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZREM",
+              "body": "```{.wrap}\nZREM key member [member ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZREM myzset \"two\"\n(integer) 1\nredis> ZRANGE myzset 0 -1 WITHSCORES\n1) \"one\"\n2) \"1\"\n3) \"three\"\n4) \"3\"\n```\n\nRemove one or more members from a sorted set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZREMRANGEBYLEX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZREMRANGEBYLEX",
+              "body": "```{.wrap}\nZREMRANGEBYLEX key min max\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 0 aaaa 0 b 0 c 0 d 0 e\n(integer) 5\nredis> ZADD myzset 0 foo 0 zap 0 zip 0 ALPHA 0 alpha\n(integer) 5\nredis> ZRANGE myzset 0 -1\n1) \"ALPHA\"\n 2) \"aaaa\"\n 3) \"alpha\"\n 4) \"b\"\n 5) \"c\"\n 6) \"d\"\n 7) \"e\"\n 8) \"foo\"\n 9) \"zap\"\n10) \"zip\"\nredis> ZREMRANGEBYLEX myzset [alpha [omega\n(integer) 6\nredis> ZRANGE myzset 0 -1\n1) \"ALPHA\"\n2) \"aaaa\"\n3) \"zap\"\n4) \"zip\"\n```\n\nRemove all members in a sorted set between the given lexicographical range",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZREMRANGEBYRANK",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZREMRANGEBYRANK",
+              "body": "```{.wrap}\nZREMRANGEBYRANK key start stop\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZREMRANGEBYRANK myzset 0 1\n(integer) 2\nredis> ZRANGE myzset 0 -1 WITHSCORES\n1) \"three\"\n2) \"3\"\n```\n\nRemove all members in a sorted set within the given indexes",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZREMRANGEBYSCORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZREMRANGEBYSCORE",
+              "body": "```{.wrap}\nZREMRANGEBYSCORE key min max\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZREMRANGEBYSCORE myzset -inf (2\n(integer) 1\nredis> ZRANGE myzset 0 -1 WITHSCORES\n1) \"two\"\n2) \"2\"\n3) \"three\"\n4) \"3\"\n```\n\nRemove all members in a sorted set within the given scores",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZREVRANGE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZREVRANGE",
+              "body": "```{.wrap}\nZREVRANGE key start stop [WITHSCORES]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZREVRANGE myzset 0 -1\n1) \"three\"\n2) \"two\"\n3) \"one\"\nredis> ZREVRANGE myzset 2 3\n1) \"one\"\nredis> ZREVRANGE myzset -2 -1\n1) \"two\"\n2) \"one\"\n```\n\nReturn a range of members in a sorted set, by index, with scores ordered from high to low",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZREVRANGEBYSCORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZREVRANGEBYSCORE",
+              "body": "```{.wrap}\nZREVRANGEBYSCORE key max min [WITHSCORES] [LIMIT offset count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZREVRANGEBYSCORE myzset +inf -inf\n1) \"three\"\n2) \"two\"\n3) \"one\"\nredis> ZREVRANGEBYSCORE myzset 2 1\n1) \"two\"\n2) \"one\"\nredis> ZREVRANGEBYSCORE myzset 2 (1\n1) \"two\"\nredis> ZREVRANGEBYSCORE myzset (2 (1\n(empty list or set)\n```\n\nReturn a range of members in a sorted set, by score, with scores ordered from high to low",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZREVRANK",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZREVRANK",
+              "body": "```{.wrap}\nZREVRANK key member\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZADD myzset 3 \"three\"\n(integer) 1\nredis> ZREVRANK myzset \"one\"\n(integer) 2\nredis> ZREVRANK myzset \"four\"\n(nil)\n```\n\nDetermine the index of a member in a sorted set, with scores ordered from high to low",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZUNION",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZUNION",
+              "body": "```{.wrap}\nZUNION numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX] [WITHSCORES]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD zset1 1 \"one\"\n(integer) 1\nredis> ZADD zset1 2 \"two\"\n(integer) 1\nredis> ZADD zset2 1 \"one\"\n(integer) 1\nredis> ZADD zset2 2 \"two\"\n(integer) 1\nredis> ZADD zset2 3 \"three\"\n(integer) 1\nredis> ZUNION 2 zset1 zset2\n1) \"one\"\n2) \"three\"\n3) \"two\"\nredis> ZUNION 2 zset1 zset2 WITHSCORES\n1) \"one\"\n2) \"2\"\n3) \"three\"\n4) \"3\"\n5) \"two\"\n6) \"4\"\n```\n\nAdd multiple sorted sets",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZMSCORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZMSCORE",
+              "body": "```{.wrap}\nZMSCORE key member [member ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD myzset 1 \"one\"\n(integer) 1\nredis> ZADD myzset 2 \"two\"\n(integer) 1\nredis> ZMSCORE myzset \"one\" \"two\" \"nofield\"\n1) \"1\"\n2) \"2\"\n3) (nil)\n```\n\nGet the score associated with the given members in a sorted set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ZUNIONSTORE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ZUNIONSTORE",
+              "body": "```{.wrap}\nZUNIONSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ZADD zset1 1 \"one\"\n(integer) 1\nredis> ZADD zset1 2 \"two\"\n(integer) 1\nredis> ZADD zset2 1 \"one\"\n(integer) 1\nredis> ZADD zset2 2 \"two\"\n(integer) 1\nredis> ZADD zset2 3 \"three\"\n(integer) 1\nredis> ZUNIONSTORE out 2 zset1 zset2 WEIGHTS 2 3\n(integer) 3\nredis> ZRANGE out 0 -1 WITHSCORES\n1) \"one\"\n2) \"5\"\n3) \"three\"\n4) \"9\"\n5) \"two\"\n6) \"10\"\n```\n\nAdd multiple sorted sets and store the resulting sorted set in a new key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis Geo command{.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "GEOADD",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GEOADD",
+              "body": "```{.wrap}\nGEOADD key longitude latitude member [longitude latitude member ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> GEOADD Sicily 13.361389 38.115556 \"Palermo\" 15.087269 37.502669 \"Catania\"\n(integer) 2\nredis> GEODIST Sicily Palermo Catania\n\"166274.1516\"\nredis> GEORADIUS Sicily 15 37 100 km\n1) \"Catania\"\nredis> GEORADIUS Sicily 15 37 200 km\n1) \"Palermo\"\n2) \"Catania\"\n```\n\nAdd one or more geospatial items in the geospatial index represented using a sorted set",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GEOHASH",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GEOHASH",
+              "body": "```{.wrap}\nGEOHASH key member [member ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> GEOADD Sicily 13.361389 38.115556 \"Palermo\" 15.087269 37.502669 \"Catania\"\n(integer) 2\nredis> GEOHASH Sicily Palermo Catania\n1) \"sqc8b49rny0\"\n2) \"sqdtr74hyu0\"\n```\n\nReturns members of a geospatial index as standard geohash strings",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GEOPOS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GEOPOS",
+              "body": "```{.wrap}\nGEOPOS key member [member ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> GEOADD Sicily 13.361389 38.115556 \"Palermo\" 15.087269 37.502669 \"Catania\"\n(integer) 2\nredis> GEOPOS Sicily Palermo Catania NonExisting\n1) 1) \"13.36138933897018433\"\n   2) \"38.11555639549629859\"\n2) 1) \"15.08726745843887329\"\n   2) \"37.50266842333162032\"\n3) (nil)\n```\n\nReturns longitude and latitude of members of a geospatial index",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GEODIST",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GEODIST",
+              "body": "```{.wrap}\nGEODIST key member1 member2 [m|km|ft|mi]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> GEOADD Sicily 13.361389 38.115556 \"Palermo\" 15.087269 37.502669 \"Catania\"\n(integer) 2\nredis> GEODIST Sicily Palermo Catania\n\"166274.1516\"\nredis> GEODIST Sicily Palermo Catania km\n\"166.2742\"\nredis> GEODIST Sicily Palermo Catania mi\n\"103.3182\"\nredis> GEODIST Sicily Foo Bar\n(nil)\n```\n\nReturns the distance between two members of a geospatial index",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GEORADIUS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GEORADIUS",
+              "body": "```{.wrap}\nGEORADIUS key longitude latitude radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [COUNT count] [ASC|DESC] [STORE key] [STOREDIST key]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> GEOADD Sicily 13.361389 38.115556 \"Palermo\" 15.087269 37.502669 \"Catania\"\n(integer) 2\nredis> GEORADIUS Sicily 15 37 200 km WITHDIST\n1) 1) \"Palermo\"\n   2) \"190.4424\"\n2) 1) \"Catania\"\n   2) \"56.4413\"\nredis> GEORADIUS Sicily 15 37 200 km WITHCOORD\n1) 1) \"Palermo\"\n   2) 1) \"13.36138933897018433\"\n      2) \"38.11555639549629859\"\n2) 1) \"Catania\"\n   2) 1) \"15.08726745843887329\"\n      2) \"37.50266842333162032\"\nredis> GEORADIUS Sicily 15 37 200 km WITHDIST WITHCOORD\n1) 1) \"Palermo\"\n   2) \"190.4424\"\n   3) 1) \"13.36138933897018433\"\n      2) \"38.11555639549629859\"\n2) 1) \"Catania\"\n   2) \"56.4413\"\n   3) 1) \"15.08726745843887329\"\n      2) \"37.50266842333162032\"\n```\n\nQuery a sorted set representing a geospatial index to fetch members matching a given maximum distance from a point",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GEORADIUSBYMEMBER",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GEORADIUSBYMEMBER",
+              "body": "```{.wrap}\nGEORADIUSBYMEMBER key member radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [COUNT count] [ASC|DESC] [STORE key] [STOREDIST key]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> GEOADD Sicily 13.583333 37.316667 \"Agrigento\"\n(integer) 1\nredis> GEOADD Sicily 13.361389 38.115556 \"Palermo\" 15.087269 37.502669 \"Catania\"\n(integer) 2\nredis> GEORADIUSBYMEMBER Sicily Agrigento 100 km\n1) \"Agrigento\"\n2) \"Palermo\"\n```\n\nQuery a sorted set representing a geospatial index to fetch members matching a given maximum distance from a member",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GEOSEARCH",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GEOSEARCH",
+              "body": "```{.wrap}\nGEOSEARCH key [FROMMEMBER member] [FROMLONLAT longitude latitude] [BYRADIUS radius m|km|ft|mi] [BYBOX width height m|km|ft|mi] [ASC|DESC] [COUNT count] [WITHCOORD] [WITHDIST] [WITHHASH]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> GEOADD Sicily 13.361389 38.115556 \"Palermo\" 15.087269 37.502669 \"Catania\"\n(integer) 2\nredis> GEOADD Sicily 12.758489 38.788135 \"edge1\"   17.241510 38.788135 \"edge2\"\n(integer) 2\nredis> GEOSEARCH Sicily FROMLONLAT 15 37 BYRADIUS 200 km ASC\n1) \"Catania\"\n2) \"Palermo\"\nredis> GEOSEARCH Sicily FROMLONLAT 15 37 BYBOX 400 400 km ASC\n1) \"Catania\"\n2) \"Palermo\"\n3) \"edge2\"\n4) \"edge1\"\n```\n\nQuery a sorted set representing a geospatial index to fetch members inside an area of a box or a circle.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Misc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc",
+              "body": "| -                                                           | -                                                                                                                                             |\n| ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |\n| [GEOSEARCHSTORE ](https://redis.io/commands/geosearchstore) | Query a sorted set representing a geospatial index to fetch members inside an area of a box or a circle, and store the result in another key. |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis Hyperloglog command{.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "PFADD",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PFADD",
+              "body": "```{.wrap}\nPFADD key element [element ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> PFADD hll a b c d e f g\n(integer) 1\nredis> PFCOUNT hll\n(integer) 7\n```\n\nAdds the specified elements to the specified HyperLogLog.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "PFCOUNT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PFCOUNT",
+              "body": "```{.wrap}\nPFCOUNT key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> PFADD hll foo bar zap\n(integer) 1\nredis> PFADD hll zap zap zap\n(integer) 0\nredis> PFADD hll foo bar\n(integer) 0\nredis> PFCOUNT hll\n(integer) 3\nredis> PFADD some-other-hll 1 2 3\n(integer) 1\nredis> PFCOUNT hll some-other-hll\n(integer) 6\n```\n\nReturn the approximated cardinality of the set(s) observed by the HyperLogLog at key(s).",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "PFMERGE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PFMERGE",
+              "body": "```{.wrap}\nPFMERGE destkey sourcekey [sourcekey ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> PFADD hll1 foo bar zap a\n(integer) 1\nredis> PFADD hll2 a b c foo\n(integer) 1\nredis> PFMERGE hll3 hll1 hll2\n\"OK\"\nredis> PFCOUNT hll3\n(integer) 6\n```\n\nMerge N different HyperLogLogs into a single one.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis Server command{.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "COMMAND",
+          "level": 3,
+          "cards": [
+            {
+              "title": "COMMAND",
+              "body": "```{.wrap}\nCOMMAND\n```",
+              "footer": "#### Example\n\n```shell script\nredis> COMMAND\n1) 1) \"georadius_ro\"\n     2) (integer) -6\n     3) 1) \"readonly\"\n        2) \"movablekeys\"\n     4) (integer) 1\n     5) (integer) 1\n     6) (integer) 1\n     7) 1) \"@read\"\n        2) \"@geo\"\n        3) \"@slow\"\n  2) 1) \"zpopmin\"\n     2) (integer) -2\n     3) 1) \"write\"\n        2) \"fast\"\n  ........\n```\n\nGet array of Redis command details",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Misc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc",
+              "body": "| -                                                                    | -                                                                                                                                |\n| -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |\n| [ACL LOAD](https://redis.io/commands/acl-load)                       | Reload the ACLs from the configured ACL file                                                                                     |\n| [ACL SAVE](https://redis.io/commands/acl-save)                       | Save the current ACL rules in the configured ACL file                                                                            |\n| [ACL LIST](https://redis.io/commands/acl-list)                       | List the current ACL rules in ACL config file format                                                                             |\n| [ACL USERS](https://redis.io/commands/acl-users)                     | List the username of all the configured ACL rules                                                                                |\n| [ACL GETUSER ](https://redis.io/commands/acl-getuser)                | Get the rules for a specific ACL user                                                                                            |\n| [ACL SETUSER ](https://redis.io/commands/acl-setuser)                | Modify or create the rules for a specific ACL user                                                                               |\n| [ACL DELUSER ](https://redis.io/commands/acl-deluser)                | Remove the specified ACL users and the associated rules                                                                          |\n| [ACL CAT ](https://redis.io/commands/acl-cat)                        | List the ACL categories or the commands inside a category                                                                        |\n| [ACL GENPASS ](https://redis.io/commands/acl-genpass)                | Generate a pseudorandom secure password to use for ACL users                                                                     |\n| [ACL WHOAMI](https://redis.io/commands/acl-whoami)                   | Return the name of the user associated to the current connection                                                                 |\n| [ACL LOG ](https://redis.io/commands/acl-log)                        | List latest events denied because of ACLs in place                                                                               |\n| [ACL HELP](https://redis.io/commands/acl-help)                       | Show helpful text about the different subcommands                                                                                |\n| [BGREWRITEAOF](https://redis.io/commands/bgrewriteaof)               | Asynchronously rewrite the append-only file                                                                                      |\n| [BGSAVE ](https://redis.io/commands/bgsave)                          | Asynchronously save the dataset to disk                                                                                          |\n| [CONFIG GET ](https://redis.io/commands/config-get)                  | Get the value of a configuration parameter                                                                                       |\n| [CONFIG REWRITE](https://redis.io/commands/config-rewrite)           | Rewrite the configuration file with the in memory configuration                                                                  |\n| [CONFIG SET ](https://redis.io/commands/config-set)                  | Set a configuration parameter to the given value                                                                                 |\n| [CONFIG RESETSTAT](https://redis.io/commands/config-resetstat)       | Reset the stats returned by INFO                                                                                                 |\n| [DBSIZE](https://redis.io/commands/dbsize)                           | Return the number of keys in the selected database                                                                               |\n| [DEBUG OBJECT ](https://redis.io/commands/debug-object)              | Get debugging information about a key                                                                                            |\n| [DEBUG SEGFAULT](https://redis.io/commands/debug-segfault)           | Make the server crash                                                                                                            |\n| [FLUSHALL ](https://redis.io/commands/flushall)                      | Remove all keys from all databases                                                                                               |\n| [FLUSHDB ](https://redis.io/commands/flushdb)                        | Remove all keys from the current database                                                                                        |\n| [LOLWUT ](https://redis.io/commands/lolwut)                          | Display some computer art and the Redis version                                                                                  |\n| [LASTSAVE](https://redis.io/commands/lastsave)                       | Get the UNIX time stamp of the last successful save to disk                                                                      |\n| [MEMORY DOCTOR](https://redis.io/commands/memory-doctor)             | Outputs memory problems report                                                                                                   |\n| [MEMORY HELP](https://redis.io/commands/memory-help)                 | Show helpful text about the different subcommands                                                                                |\n| [MEMORY MALLOC-STATS](https://redis.io/commands/memory-malloc-stats) | Show allocator internal stats                                                                                                    |\n| [MEMORY PURGE](https://redis.io/commands/memory-purge)               | Ask the allocator to release memory                                                                                              |\n| [MEMORY STATS](https://redis.io/commands/memory-stats)               | Show memory usage details                                                                                                        |\n| [MEMORY USAGE ](https://redis.io/commands/memory-usage)              | Estimate the memory usage of a key                                                                                               |\n| [MODULE LIST](https://redis.io/commands/module-list)                 | List all modules loaded by the server                                                                                            |\n| [MODULE LOAD ](https://redis.io/commands/module-load)                | Load a module                                                                                                                    |\n| [MODULE UNLOAD ](https://redis.io/commands/module-unload)            | Unload a module                                                                                                                  |\n| [MONITOR](https://redis.io/commands/monitor)                         | Listen for all requests received by the server in real time                                                                      |\n| [SAVE](https://redis.io/commands/save)                               | Synchronously save the dataset to disk                                                                                           |\n| [SHUTDOWN ](https://redis.io/commands/shutdown)                      | Synchronously save the dataset to disk and then shut down the server                                                             |\n| [SLAVEOF ](https://redis.io/commands/slaveof)                        | Make the server a replica of another instance, or promote it as master. Deprecated starting with Redis 5. Use REPLICAOF instead. |\n| [REPLICAOF ](https://redis.io/commands/replicaof)                    | Make the server a replica of another instance, or promote it as master.                                                          |\n| [SLOWLOG ](https://redis.io/commands/slowlog)                        | Manages the Redis slow queries log                                                                                               |\n| [SWAPDB ](https://redis.io/commands/swapdb)                          | Swaps two Redis databases                                                                                                        |\n| [SYNC](https://redis.io/commands/sync)                               | Internal command used for replication                                                                                            |\n| [PSYNC ](https://redis.io/commands/psync)                            | Internal command used for replication                                                                                            |\n| [LATENCY DOCTOR](https://redis.io/commands/latency-doctor)           | Return a human readable latency analysis report.                                                                                 |\n| [LATENCY GRAPH ](https://redis.io/commands/latency-graph)            | Return a latency graph for the event.                                                                                            |\n| [LATENCY HISTORY ](https://redis.io/commands/latency-history)        | Return timestamp-latency samples for the event.                                                                                  |\n| [LATENCY LATEST](https://redis.io/commands/latency-latest)           | Return the latest latency samples for all events.                                                                                |\n| [LATENCY RESET ](https://redis.io/commands/latency-reset)            | Reset latency data for one or more events.                                                                                       |\n| [LATENCY HELP](https://redis.io/commands/latency-help)               | Show helpful text about the different subcommands.                                                                               |",
+              "footer": "",
+              "spanConfig": "col-span-2 .row-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "COMMAND COUNT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "COMMAND COUNT",
+              "body": "```{.wrap}\nCOMMAND COUNT\n```",
+              "footer": "#### Example\n\n```shell script\nredis> COMMAND COUNT\n(integer) 217\n```\n\nGet total number of Redis commands",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "COMMAND GETKEYS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "COMMAND GETKEYS",
+              "body": "```{.wrap}\nCOMMAND GETKEYS\n```",
+              "footer": "#### Example\n\n```shell script\nredis> COMMAND GETKEYS MSET a b c d e f\n1) \"a\"\n2) \"c\"\n3) \"e\"\nredis> COMMAND GETKEYS EVAL \"not consulted\" 3 key1 key2 key3 arg1 arg2 arg3 argN\n1) \"key1\"\n2) \"key2\"\n3) \"key3\"\nredis> COMMAND GETKEYS SORT mylist ALPHA STORE outlist\n1) \"mylist\"\n2) \"outlist\"\n```\n\nExtract keys given a full Redis command",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "COMMAND INFO",
+          "level": 3,
+          "cards": [
+            {
+              "title": "COMMAND INFO",
+              "body": "```{.wrap}\nCOMMAND INFO command-name [command-name ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> COMMAND INFO get set eval\n1) 1) \"get\"\n   2) (integer) 2\n   3) 1) \"readonly\"\n      2) \"fast\"\n   4) (integer) 1\n   5) (integer) 1\n   6) (integer) 1\n   7) 1) \"@read\"\n      2) \"@string\"\n      3) \"@fast\"\n2) 1) \"set\"\n   2) (integer) -3\n   3) 1) \"write\"\n      2) \"denyoom\"\n   4) (integer) 1\n   5) (integer) 1\n   6) (integer) 1\n   7) 1) \"@write\"\n      2) \"@string\"\n      3) \"@slow\"\n3) 1) \"eval\"\n   2) (integer) -3\n   3) 1) \"noscript\"\n      2) \"movablekeys\"\n   4) (integer) 0\n   5) (integer) 0\n   6) (integer) 0\n   7) 1) \"@slow\"\n      2) \"@scripting\"\n```\n\nGet array of specific Redis command details",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "INFO",
+          "level": 3,
+          "cards": [
+            {
+              "title": "INFO",
+              "body": "```{.wrap}\nINFO [section]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> INFO\n# Server\nredis_version:6.1.240\nredis_git_sha1:00000000\nredis_git_dirty:0\nredis_build_id:a26db646ea64a07c\nredis_mode:standalone\nos:Linux 5.4.0-1017-aws x86_64\n......\n```\n\nGet information and statistics about the server",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ROLE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ROLE",
+              "body": "```{.wrap}\nROLE\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ROLE\n1) \"master\"\n2) (integer) 0\n3) (empty list or set)\n```\n\nReturn the role of the instance in the context of replication",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "TIME",
+          "level": 3,
+          "cards": [
+            {
+              "title": "TIME",
+              "body": "```{.wrap}\nTIME\n```",
+              "footer": "#### Example\n\n```shell script\nredis> TIME\n1) \"1609040690\"\n2) \"558952\"\nredis> TIME\n1) \"1609040690\"\n2) \"559206\"\n```\n\nReturn the current server time",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis Generic command{.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Misc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc",
+              "body": "| -                                             | -                                                                                                            |\n| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |\n| [COPY ](https://redis.io/commands/copy)       | Copy a key                                                                                                   |\n| [MIGRATE ](https://redis.io/commands/migrate) | Atomically transfer a key from a Redis instance to another one.                                              |\n| [MOVE ](https://redis.io/commands/move)       | Move a key to another database                                                                               |\n| [OBJECT ](https://redis.io/commands/object)   | Inspect the internals of Redis objects                                                                       |\n| [RESTORE ](https://redis.io/commands/restore) | Create a key using the provided serialized value, previously obtained using DUMP.                            |\n| [SORT ](https://redis.io/commands/sort)       | Sort the elements in a list, set or sorted set                                                               |\n| [WAIT ](https://redis.io/commands/wait)       | Wait for the synchronous replication of all the write commands sent in the context of the current connection |\n| [SCAN ](https://redis.io/commands/scan)       | Incrementally iterate the keys space                                                                         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "DEL",
+          "level": 3,
+          "cards": [
+            {
+              "title": "DEL",
+              "body": "```{.wrap}\nDEL key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET key1 \"Hello\"\n\"OK\"\nredis> SET key2 \"World\"\n\"OK\"\nredis> DEL key1 key2 key3\n(integer) 2\n```\n\nDelete a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "DUMP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "DUMP",
+              "body": "```{.wrap}\nDUMP key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey 10\n\"OK\"\nredis> DUMP mykey\n\"\\u0000\\xC0\\n\\t\\u0000\\xBEm\\u0006\\x89Z(\\u0000\\n\"\n```\n\nReturn a serialized version of the value stored at the specified key.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "EXISTS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "EXISTS",
+              "body": "```{.wrap}\nEXISTS key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET key1 \"Hello\"\n\"OK\"\nredis> EXISTS key1\n(integer) 1\nredis> EXISTS nosuchkey\n(integer) 0\nredis> SET key2 \"World\"\n\"OK\"\nredis> EXISTS key1 key2 nosuchkey\n(integer) 2\n```\n\nDetermine if a key exists",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "EXPIRE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "EXPIRE",
+              "body": "```{.wrap}\nEXPIRE key seconds\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> EXPIRE mykey 10\n(integer) 1\nredis> TTL mykey\n(integer) 10\nredis> SET mykey \"Hello World\"\n\"OK\"\nredis> TTL mykey\n(integer) -1\n```\n\nSet a key's time to live in seconds",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "EXPIREAT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "EXPIREAT",
+              "body": "```{.wrap}\nEXPIREAT key timestamp\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> EXISTS mykey\n(integer) 1\nredis> EXPIREAT mykey 1293840000\n(integer) 1\nredis> EXISTS mykey\n(integer) 0\n```\n\nSet the expiration for a key as a UNIX timestamp",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "KEYS",
+          "level": 3,
+          "cards": [
+            {
+              "title": "KEYS",
+              "body": "```{.wrap}\nKEYS pattern\n```",
+              "footer": "#### Example\n\n```shell script\nredis> MSET firstname Jack lastname Stuntman age 35\n\"OK\"\nredis> KEYS *name*\n1) \"firstname\"\n2) \"lastname\"\nredis> KEYS a??\n1) \"age\"\nredis> KEYS *\n1) \"firstname\"\n2) \"age\"\n3) \"lastname\"\n```\n\nFind all keys matching the given pattern",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "PERSIST",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PERSIST",
+              "body": "```{.wrap}\nPERSIST key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> EXPIRE mykey 10\n(integer) 1\nredis> TTL mykey\n(integer) 10\nredis> PERSIST mykey\n(integer) 1\nredis> TTL mykey\n(integer) -1\n```\n\nRemove the expiration from a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "PEXPIRE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PEXPIRE",
+              "body": "```{.wrap}\nPEXPIRE key milliseconds\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> PEXPIRE mykey 1500\n(integer) 1\nredis> TTL mykey\n(integer) 1\nredis> PTTL mykey\n(integer) 1499\n```\n\nSet a key's time to live in milliseconds",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "PEXPIREAT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PEXPIREAT",
+              "body": "```{.wrap}\nPEXPIREAT key milliseconds-timestamp\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> PEXPIREAT mykey 1555555555005\n(integer) 1\nredis> TTL mykey\n(integer) -2\nredis> PTTL mykey\n(integer) -2\n```\n\nSet the expiration for a key as a UNIX timestamp specified in milliseconds",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "PTTL",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PTTL",
+              "body": "```{.wrap}\nPTTL key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> EXPIRE mykey 1\n(integer) 1\nredis> PTTL mykey\n(integer) 1000\n```\n\nGet the time to live for a key in milliseconds",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "RENAME",
+          "level": 3,
+          "cards": [
+            {
+              "title": "RENAME",
+              "body": "```{.wrap}\nRENAME key newkey\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> RENAME mykey myotherkey\n\"OK\"\nredis> GET myotherkey\n\"Hello\"\n```\n\nRename a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "RENAMENX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "RENAMENX",
+              "body": "```{.wrap}\nRENAMENX key newkey\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> SET myotherkey \"World\"\n\"OK\"\nredis> RENAMENX mykey myotherkey\n(integer) 0\nredis> GET myotherkey\n\"World\"\n```\n\nRename a key, only if the new key does not exist",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "TOUCH",
+          "level": 3,
+          "cards": [
+            {
+              "title": "TOUCH",
+              "body": "```{.wrap}\nTOUCH key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET key1 \"Hello\"\n\"OK\"\nredis> SET key2 \"World\"\n\"OK\"\nredis> TOUCH key1 key2\n(integer) 2\n```\n\nAlters the last access time of a key(s). Returns the number of existing keys specified.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "TTL",
+          "level": 3,
+          "cards": [
+            {
+              "title": "TTL",
+              "body": "```{.wrap}\nTTL key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET mykey \"Hello\"\n\"OK\"\nredis> EXPIRE mykey 10\n(integer) 1\nredis> TTL mykey\n(integer) 10\n```\n\nGet the time to live for a key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "TYPE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "TYPE",
+              "body": "```{.wrap}\nTYPE key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET key1 \"value\"\n\"OK\"\nredis> LPUSH key2 \"value\"\n(integer) 1\nredis> SADD key3 \"value\"\n(integer) 1\nredis> TYPE key1\n\"string\"\nredis> TYPE key2\n\"list\"\nredis> TYPE key3\n\"set\"\n```\n\nDetermine the type stored at key",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "UNLINK",
+          "level": 3,
+          "cards": [
+            {
+              "title": "UNLINK",
+              "body": "```{.wrap}\nUNLINK key [key ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> SET key1 \"Hello\"\n\"OK\"\nredis> SET key2 \"World\"\n\"OK\"\nredis> UNLINK key1 key2 key3\n(integer) 2\n```\n\nDelete a key asynchronously in another thread. Otherwise it is just as DEL, but non blocking.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis Connection command{.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Misc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc",
+              "body": "| -                                                             | -                                                                          |\n| ------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| [AUTH ](https://redis.io/commands/auth)                       | Authenticate to the server                                                 |\n| [CLIENT CACHING ](https://redis.io/commands/client-caching)   | Instruct the server about tracking or not keys in the next request         |\n| [CLIENT KILL ](https://redis.io/commands/client-kill)         | Kill the connection of a client                                            |\n| [CLIENT LIST ](https://redis.io/commands/client-list)         | Get the list of client connections                                         |\n| [CLIENT GETNAME](https://redis.io/commands/client-getname)    | Get the current connection name                                            |\n| [CLIENT GETREDIR](https://redis.io/commands/client-getredir)  | Get tracking notifications redirection client ID if any                    |\n| [CLIENT PAUSE ](https://redis.io/commands/client-pause)       | Stop processing commands from clients for some time                        |\n| [CLIENT REPLY ](https://redis.io/commands/client-reply)       | Instruct the server whether to reply to commands                           |\n| [CLIENT SETNAME ](https://redis.io/commands/client-setname)   | Set the current connection name                                            |\n| [CLIENT TRACKING ](https://redis.io/commands/client-tracking) | Enable or disable server assisted client side caching support              |\n| [CLIENT UNBLOCK ](https://redis.io/commands/client-unblock)   | Unblock a client blocked in a blocking command from a different connection |\n| [HELLO ](https://redis.io/commands/hello)                     | switch Redis protocol                                                      |\n| [QUIT](https://redis.io/commands/quit)                        | Close the connection                                                       |\n| [RESET](https://redis.io/commands/reset)                      | Reset the connection                                                       |\n| [SELECT ](https://redis.io/commands/select)                   | Change the selected database for the current connection                    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CLIENT ID",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CLIENT ID",
+              "body": "```{.wrap}\nCLIENT ID\n```",
+              "footer": "#### Example\n\n```shell script\nredis> CLIENT ID\nERR Unknown or disabled command 'CLIENT'\n```\n\nReturns the client ID for the current connection",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CLIENT INFO",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CLIENT INFO",
+              "body": "```{.wrap}\nCLIENT INFO\n```",
+              "footer": "#### Example\n\n```shell script\nredis> CLIENT INFO\n\"id=55542 addr=127.0.0.1:58710 laddr=127.0.0.1:6379 fd=8 name= age=114920 idle=0 flags=N db=0 sub=0 psub=0 multi=-1 qbuf=26 qbuf-free=40928 argv-mem=10 obl=0 oll=0 omem=0 tot-mem=61466 events=r cmd=client user=default redir=-1\\n\"\n```\n\nReturns information about the current client connection.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ECHO",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ECHO",
+              "body": "```{.wrap}\nECHO message\n```",
+              "footer": "#### Example\n\n```shell script\nredis> ECHO \"Hello World!\"\n\"Hello World!\"\n```\n\nEcho the given string",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "PING",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PING",
+              "body": "```{.wrap}\nPING [message]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> PING\n\"PONG\"\nredis> PING \"hello world\"\n\"hello world\"\n```\n\nPing the server",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Redis Stream command{.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Misc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc",
+              "body": "| -                                                   | -                                                                                                                                                                                  |\n| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [XINFO ](https://redis.io/commands/xinfo)           | Get information on streams and consumer groups                                                                                                                                     |\n| [XDEL ](https://redis.io/commands/xdel)             | Removes the specified entries from the stream. Returns the number of items actually deleted, that may be different from the number of IDs passed in case certain IDs do not exist. |\n| [XREAD ](https://redis.io/commands/xread)           | Return never seen elements in multiple streams, with IDs greater than the ones reported by the caller for each stream. Can block.                                                  |\n| [XGROUP ](https://redis.io/commands/xgroup)         | Create, destroy, and manage consumer groups.                                                                                                                                       |\n| [XREADGROUP ](https://redis.io/commands/xreadgroup) | Return new entries from a stream using a consumer group, or access the history of the pending entries for a given consumer. Can block.                                             |\n| [XCLAIM ](https://redis.io/commands/xclaim)         | Changes (or acquires) ownership of a message in a consumer group, as if the message was delivered to the specified consumer.                                                       |\n| [XPENDING ](https://redis.io/commands/xpending)     | Return information and entries from a stream consumer group pending entries list, that are messages fetched but never acknowledged.                                                |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "XADD",
+          "level": 3,
+          "cards": [
+            {
+              "title": "XADD",
+              "body": "```{.wrap}\nXADD key [MAXLEN [=|~] length] [NOMKSTREAM] *|ID field value [field value ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> XADD mystream * name Sara surname OConnor\n\"1609040574632-0\"\nredis> XADD mystream * field1 value1 field2 value2 field3 value3\n\"1609040574632-1\"\nredis> XLEN mystream\n(integer) 2\nredis> XRANGE mystream - +\n1) 1) \"1609040574632-0\"\n   2) 1) \"name\"\n      2) \"Sara\"\n      3) \"surname\"\n      4) \"OConnor\"\n2) 1) \"1609040574632-1\"\n   2) 1) \"field1\"\n      2) \"value1\"\n      3) \"field2\"\n      4) \"value2\"\n      5) \"field3\"\n      6) \"value3\"\n```\n\nAppends a new entry to a stream",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "XTRIM",
+          "level": 3,
+          "cards": [
+            {
+              "title": "XTRIM",
+              "body": "```{.wrap}\nXTRIM key MAXLEN [=|~] length\n```",
+              "footer": "#### Example\n\n```shell script\nredis> XADD mystream * field1 A field2 B field3 C field4 D\n\"1609040575750-0\"\nredis> XTRIM mystream MAXLEN 2\n(integer) 0\nredis> XRANGE mystream - +\n1) 1) \"1609040575750-0\"\n   2) 1) \"field1\"\n      2) \"A\"\n      3) \"field2\"\n      4) \"B\"\n      5) \"field3\"\n      6) \"C\"\n      7) \"field4\"\n      8) \"D\"\n```\n\nTrims the stream to (approximately if '~' is passed) a certain size",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "XRANGE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "XRANGE",
+              "body": "```{.wrap}\nXRANGE key start end [COUNT count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> XADD writers * name Virginia surname Woolf\n\"1609040578002-0\"\nredis> XADD writers * name Jane surname Austen\n\"1609040578002-1\"\nredis> XADD writers * name Toni surname Morrison\n\"1609040578003-0\"\nredis> XADD writers * name Agatha surname Christie\n\"1609040578003-1\"\nredis> XADD writers * name Ngozi surname Adichie\n\"1609040578003-2\"\nredis> XLEN writers\n(integer) 5\nredis> XRANGE writers - + COUNT 2\n1) 1) \"1609040578002-0\"\n   2) 1) \"name\"\n      2) \"Virginia\"\n      3) \"surname\"\n      4) \"Woolf\"\n2) 1) \"1609040578002-1\"\n   2) 1) \"name\"\n      2) \"Jane\"\n      3) \"surname\"\n      4) \"Austen\"\n```\n\nReturn a range of elements in a stream, with IDs matching the specified IDs interval",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "XREVRANGE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "XREVRANGE",
+              "body": "```{.wrap}\nXREVRANGE key end start [COUNT count]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> XADD writers * name Virginia surname Woolf\n\"1609040579130-0\"\nredis> XADD writers * name Jane surname Austen\n\"1609040579130-1\"\nredis> XADD writers * name Toni surname Morrison\n\"1609040579130-2\"\nredis> XADD writers * name Agatha surname Christie\n\"1609040579131-0\"\nredis> XADD writers * name Ngozi surname Adichie\n\"1609040579131-1\"\nredis> XLEN writers\n(integer) 5\nredis> XREVRANGE writers + - COUNT 1\n1) 1) \"1609040579131-1\"\n   2) 1) \"name\"\n      2) \"Ngozi\"\n      3) \"surname\"\n      4) \"Adichie\"\n```\n\nReturn a range of elements in a stream, with IDs matching the specified IDs interval, in reverse order (from greater to\nsmaller IDs) compared to XRANGE",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "XLEN",
+          "level": 3,
+          "cards": [
+            {
+              "title": "XLEN",
+              "body": "```{.wrap}\nXLEN key\n```",
+              "footer": "#### Example\n\n```shell script\nredis> XADD mystream * item 1\n\"1609040580250-0\"\nredis> XADD mystream * item 2\n\"1609040580250-1\"\nredis> XADD mystream * item 3\n\"1609040580251-0\"\nredis> XLEN mystream\n(integer) 3\n```\n\nReturn the number of entries in a stream",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "XACK",
+          "level": 3,
+          "cards": [
+            {
+              "title": "XACK",
+              "body": "```{.wrap}\nXACK key group ID [ID ...]\n```",
+              "footer": "#### Example\n\n```shell script\nredis> XACK mystream mygroup 1526569495631-0\nERR Unknown or disabled command 'XACK'\n```\n\nMarks a pending message as correctly processed, effectively removing it from the pending entries list of the consumer\ngroup. Return value of the command is the number of messages successfully acknowledged, that is, the IDs we were\nactually able to resolve in the PEL.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Cluster",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cluster",
+              "body": "| -                                                                                         | -                                                                |\n| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |\n| [CLUSTER ADDSLOTS ](https://redis.io/commands/cluster-addslots)                           | Assign new hash slots to receiving node                          |\n| [CLUSTER BUMPEPOCH](https://redis.io/commands/cluster-bumpepoch)                          | Advance the cluster config epoch                                 |\n| [CLUSTER COUNT-FAILURE-REPORTS ](https://redis.io/commands/cluster-count-failure-reports) | Return the number of failure reports active for a given node     |\n| [CLUSTER COUNTKEYSINSLOT ](https://redis.io/commands/cluster-countkeysinslot)             | Return the number of local keys in the specified hash slot       |\n| [CLUSTER DELSLOTS ](https://redis.io/commands/cluster-delslots)                           | Set hash slots as unbound in receiving node                      |\n| [CLUSTER FAILOVER ](https://redis.io/commands/cluster-failover)                           | Forces a replica to perform a manual failover of its master.     |\n| [CLUSTER FLUSHSLOTS](https://redis.io/commands/cluster-flushslots)                        | Delete a node's own slots information                            |\n| [CLUSTER FORGET ](https://redis.io/commands/cluster-forget)                               | Remove a node from the nodes table                               |\n| [CLUSTER GETKEYSINSLOT ](https://redis.io/commands/cluster-getkeysinslot)                 | Return local key names in the specified hash slot                |\n| [CLUSTER INFO](https://redis.io/commands/cluster-info)                                    | Provides info about Redis Cluster node state                     |\n| [CLUSTER KEYSLOT ](https://redis.io/commands/cluster-keyslot)                             | Returns the hash slot of the specified key                       |\n| [CLUSTER MEET ](https://redis.io/commands/cluster-meet)                                   | Force a node cluster to handshake with another node              |\n| [CLUSTER MYID](https://redis.io/commands/cluster-myid)                                    | Return the node id                                               |\n| [CLUSTER NODES](https://redis.io/commands/cluster-nodes)                                  | Get Cluster config for the node                                  |\n| [CLUSTER REPLICATE ](https://redis.io/commands/cluster-replicate)                         | Reconfigure a node as a replica of the specified master node     |\n| [CLUSTER RESET ](https://redis.io/commands/cluster-reset)                                 | Reset a Redis Cluster node                                       |\n| [CLUSTER SAVECONFIG](https://redis.io/commands/cluster-saveconfig)                        | Forces the node to save cluster state on disk                    |\n| [CLUSTER SET-CONFIG-EPOCH ](https://redis.io/commands/cluster-set-config-epoch)           | Set the configuration epoch in a new node                        |\n| [CLUSTER SETSLOT ](https://redis.io/commands/cluster-setslot)                             | Bind a hash slot to a specific node                              |\n| [CLUSTER SLAVES ](https://redis.io/commands/cluster-slaves)                               | List replica nodes of the specified master node                  |\n| [CLUSTER REPLICAS ](https://redis.io/commands/cluster-replicas)                           | List replica nodes of the specified master node                  |\n| [CLUSTER SLOTS](https://redis.io/commands/cluster-slots)                                  | Get array of Cluster slot to node mappings                       |\n| [READONLY](https://redis.io/commands/readonly)                                            | Enables read queries for a connection to a cluster replica node  |\n| [READWRITE](https://redis.io/commands/readwrite)                                          | Disables read queries for a connection to a cluster replica node |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Transactions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transactions",
+              "body": "| -                                            | -                                                                   |\n| -------------------------------------------- | ------------------------------------------------------------------- |\n| [DISCARD](https://redis.io/commands/discard) | Discard all commands issued after MULTI                             |\n| [EXEC](https://redis.io/commands/exec)       | Execute all commands issued after MULTI                             |\n| [MULTI](https://redis.io/commands/multi)     | Mark the start of a transaction block                               |\n| [UNWATCH](https://redis.io/commands/unwatch) | Forget about all watched keys                                       |\n| [WATCH ](https://redis.io/commands/watch)    | Watch the given keys to determine execution of the MULTI/EXEC block |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Scripting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scripting",
+              "body": "| -                                                         | -                                                    |\n| --------------------------------------------------------- | ---------------------------------------------------- |\n| [EVAL ](https://redis.io/commands/eval)                   | Execute a Lua script server side                     |\n| [EVALSHA ](https://redis.io/commands/evalsha)             | Execute a Lua script server side                     |\n| [SCRIPT DEBUG ](https://redis.io/commands/script-debug)   | Set the debug mode for executed scripts.             |\n| [SCRIPT EXISTS ](https://redis.io/commands/script-exists) | Check existence of scripts in the script cache.      |\n| [SCRIPT FLUSH](https://redis.io/commands/script-flush)    | Remove all the scripts from the script cache.        |\n| [SCRIPT KILL](https://redis.io/commands/script-kill)      | Kill the script currently in execution.              |\n| [SCRIPT LOAD ](https://redis.io/commands/script-load)     | Load the specified Lua script into the script cache. |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pubsub",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pubsub",
+              "body": "| -                                                       | -                                                                          |\n| ------------------------------------------------------- | -------------------------------------------------------------------------- |\n| [PSUBSCRIBE ](https://redis.io/commands/psubscribe)     | Listen for messages published to channels matching the given patterns      |\n| [PUBSUB ](https://redis.io/commands/pubsub)             | Inspect the state of the Pub/Sub subsystem                                 |\n| [PUBLISH ](https://redis.io/commands/publish)           | Post a message to a channel                                                |\n| [PUNSUBSCRIBE ](https://redis.io/commands/punsubscribe) | Stop listening for messages posted to channels matching the given patterns |\n| [SUBSCRIBE ](https://redis.io/commands/subscribe)       | Listen for messages published to the given channels                        |\n| [UNSUBSCRIBE ](https://redis.io/commands/unsubscribe)   | Stop listening for messages posted to the given channels                   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

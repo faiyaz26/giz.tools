@@ -1,0 +1,896 @@
+{
+  "id": "kotlin",
+  "metadata": {
+    "title": "Kotlin",
+    "date": "2023-02-26T16:24:31.000Z",
+    "background": "bg-[#7954f6]",
+    "tags": [
+      "Cross-platform",
+      "Android"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "A quick reference cheatsheet for Kotlin that includes usage, examples, and more.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Introduction to Kotlin",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "main()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "main()",
+              "body": "```kotlin\nfun main() {\n  println(\"Greetings, CheatSheets.zip!\")\n  // Code goes here\n}\n```",
+              "footer": "The main() function is the starting point of every Kotlin program and must be included in the code before execution",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Print statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Print statement",
+              "body": "```kotlin\nprintln(\"Greetings, earthling!\")\nprint(\"Take me to \")\nprint(\"your leader.\")\n\n/*\nPrint:\nGreetings, earthling!\nTake me to your leader.\n*/\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Notes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Notes",
+              "body": "```kotlin\n// this is a single line comment\n\n/*\nthis\nnote\nfor\nmany\n*/\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Execution order",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Execution order",
+              "body": "```kotlin\nfun main() {\n  println(\"I will be printed first.\")\n  println(\"I will be printed second.\")\n  println(\"I will be printed third.\")\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data Types and Variables",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Mutable variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutable variables",
+              "body": "```kotlin\nvar age = 25\nage = 26\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Immutable variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Immutable variables",
+              "body": "```kotlin\nval goldenRatio = 1.618\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type inference",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type inference",
+              "body": "```kotlin\n// The following variables are assigned a literal value inside double quotes\n// so the inferred type is String\n\nvar color = \"Purple\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String concatenation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String concatenation",
+              "body": "```kotlin\nvar streetAddress = \"123 Main St.\"\nvar cityState = \"Brooklyn, NY\"\n\nprintln(streetAddress + \" \" + cityState)\n// Print: 123 Main St. Brooklyn, NY\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String Templates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String Templates",
+              "body": "```kotlin\nvar address = \"123 Main St.\"\nprintln(\"The address is $address\")\n// prints: The address is 123 Main St.\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Built-in Properties and Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Built-in Properties and Functions",
+              "body": "```kotlin\nvar monument = \"the Statue of Liberty\"\n\nprintln(monument. capitalize())\n// print: The Statue of Liberty\nprintln(monument. length)\n// print: 21\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Character escape",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Character escape",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nprint(\"\\\"Excellent!\\\" I cried. \\\"Elementary,\\\" said he.\")\n\n// Print: \"Excellent!\" I cried. \"Elementary,\" said he.\n```\n\n- `\\n` insert new line\n- `\\t` inserts a tab\n- `\\r` inserts carriage return\n- `\\'` inserts a single quote\n- `\\\"` inserts a double quote\n- `\\\\` inserts a backslash\n- `\\$` inserts a dollar sign",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arithmetic Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arithmetic Operators",
+              "body": "```kotlin\n5 + 7  // 12\n9 -2   // 7\n8 *4   // 32\n25 /5  // 5\n31 % 2 // 1\n```",
+              "footer": "`+` addition, `-` subtraction, `*` multiplication, `/` division, and `%` modulus",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Order of operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Order of operations",
+              "body": "```kotlin\n5 + 8 *2 /4 -3 // 6\n3 + (4 + 4) /2 // 7\n4 *2 + 1 *7    // 15\n3 + 18 /2 *1   // 12\n6 -3 % 2 + 2   // 7\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Enhanced assignment operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Enhanced assignment operator",
+              "body": "```kotlin\nvar batteryPercentage = 80\n\n// long syntax\nbatteryPercentage = batteryPercentage + 10\n\n// short syntax with augmented assignment operator\nbatteryPercentage += 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Increment and decrement operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Increment and decrement operators",
+              "body": "```kotlin\nvar year = 2019\nyear++   // 2020\nyear--   // 2019\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Math library",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Math library",
+              "body": "```kotlin\nMath.pow(2.0, 3.0) // 8.0\nMath.min(6, 9)     // 6\nMath.max(10, 12)   // 12\nMath. round(13.7)  // 14\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Conditional Expression",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "If expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If expression",
+              "body": "```kotlin\nvar morning = true\n\nif (morning) {\n  println(\"Rise and shine!\")\n}\n// Print: Rise and shine!\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Else-expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Else-expression",
+              "body": "```kotlin\nvar rained = false\n\nif (rained) {\n  println(\"No need to water the plants today.\")\n} else {\n  println(\"The plant needs to be watered!\")\n}\n// print: The plant needs watering!\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Else-If expressions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Else-If expressions",
+              "body": "```kotlin\nvar age = 65\n\nif (age < 18 ) {\n  println(\"You are considered a minor\")\n} else if (age < 60) {\n  println(\"You are considered an adult\")\n} else {\n  println(\"You are considered senior\")\n}\n\n// print: you are considered senior\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comparison Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comparison Operators",
+              "body": "```kotlin\nvar myAge = 19\nvar sisterAge = 11\nvar cousinAge = 11\n\nmyAge > sisterAge  // true\nmyAge < cousinAge  // false\nmyAge >= cousinAge // true\nmyAge <= sisterAge // false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logical Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logical Operators",
+              "body": "```kotlin\nvar humid = true\nvar raining = true\nvar jacket = false\n\nprintln(!humid)\n// print: false\nprintln(jacket && raining)\n// print: true\nprintln(humid || raining)\n// print: true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "AND operator: &&",
+          "level": 3,
+          "cards": [
+            {
+              "title": "AND operator: &&",
+              "body": "```kotlin\nvar humid = true\nvar raining = true\nvar shorts = false\nvar sunny = false\n\n// true AND true\nprintln(humid && raining) // true\n// true AND false\nprintln(humid && shorts)  // false\n// false AND true\nprintln(sunny && raining) // false\n// false AND false\nprintln(shorts && sunny)  // false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Or operator:||",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Or operator:||",
+              "body": "```kotlin\nvar late = true\nvar skipBreakfast = true\nvar underslept = false\nvar checkEmails = false\n\n// true OR true\nprintln(skipBreakfast || late) // true\n// true OR false\nprintln(late || checkEmails)   // true\n// false OR true\nprintln(underslept || late)    // true\n// false OR false\nprintln(checkEmails || underslept) // false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "NOT operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "NOT operator",
+              "body": "```kotlin\nvar hungry = true\nvar full = false\n\nprintln(!hungry) // false\nprintln(!full)   // true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Evaluation order",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Evaluation order",
+              "body": "```kotlin\n!true && (false || true) // false\n/*\n(false || true) is evaluated first to return true.\nThen, evaluate !true && true and return the final result false\n*/\n\n!false && true || false // true\n/*\n!false is evaluated first to return true.\nThen true && true is evaluated, returning true.\nthen, true || evaluates to false and eventually returns true\n*/\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Nested conditions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Nested conditions",
+              "body": "```kotlin\nvar studied = true\nvar wellRested = true\n\nif (wellRested) {\n  println(\"Good luck today!\")\n  if (studied) {\n    println(\"You should prepare for the exam!\")\n  } else {\n    println(\"Spend a few hours studying before the exam!\")\n  }\n}\n\n// Print: Good luck today!\n// print: You should be ready for the exam!\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "When expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "When expression",
+              "body": "```kotlin\nvar grade = \"A\"\n\nwhen (grade) {\n  \"A\" -> println(\"Great job!\")\n  \"B\" -> println(\"Great job!\")\n  \"C\" -> println(\"You passed!\")\n  else -> println(\"Close! Be sure to prepare more next time!\")\n}\n// print: Great job!\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Range operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Range operator",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar height = 46 // inches\n\nif (height in 1..53) {\n  println(\"Sorry, you must be at least 54 inches to ride the coaster\")\n}\n// Prints: Sorry, you must be at least 54 inches to ride the roller coaster\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Equality Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Equality Operators",
+              "body": "```kotlin\nvar myAge = 22\nvar sisterAge = 21\n\nmyAge == sisterAge // false\nmyAge != sisterAge // true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Null-Safety",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Nullable vs Not-Nullable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Nullable vs Not-Nullable",
+              "body": "```kotlin\nvar a: String = \"Kotlin\" // a can never be null\na = null // compilation error\nvar b: String? = \"Kotlin\" // b can be null\nb = null // ok\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Safe-Calls",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Safe-Calls",
+              "body": "```kotlin\nval a = \"Kotlin\"\nval b: String? = null\nprintln(a.length) // can be called safely, because a is never null\nprintln(b?.length) // b?.length returns the length of b, or null if b is null\nprintln(a?.length) // Unnecessary safe call\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Chaining Safe-Calls",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Chaining Safe-Calls",
+              "body": "```kotlin\nbob?.department?.head?.name // chain returns null if any property is null\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Elvis Operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Elvis Operator",
+              "body": "```kotlin\nval l = b?.length ?: -1 // if b is null, return the default value -1\n// equval to:\nval l: Int = if (b != null) b.length else -1\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Not Null Assertion Operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Not Null Assertion Operator",
+              "body": "```kotlin\nval l = b!!.length // throws a NullPointerException, if b is null\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Collections",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Immutable list",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Immutable list",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar programmingLanguages = listOf(\"C#\", \"Java\", \"Kotlin\", \"Ruby\")\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mutable List",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutable List",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar fruits = mutableListOf(\"Orange\", \"Apple\", \"Banana\", \"Mango\")\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Access List",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Access List",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar cars = listOf(\"BMW\", \"Ferrari\", \"Volvo\", \"Tesla\")\n\nprintln(cars[2]) // Prints: Volvo\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Size Attribute",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Size Attribute",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar worldContinents = listOf(\"Asia\", \"Africa\", \"North America\", \"South America\", \"Antarctica\", \"Europe\", \"Australia\")\n\nprintln(worldContinents.size) // Prints: 7\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "List Manipulation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "List Manipulation",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar seas = listOf(\"Black Sea\", \"Caribbean Sea\", \"North Sea\")\nprintln(seas. contains(\"North Sea\")) // Prints: true\n\n// The contains() function performs a read operation on any list and determines if the element exists\nseas.add(\"Baltic Sea\") // Error: cannot write to immutable list\n// The add() function can only be called on mutable lists, so the code above throws an error\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Immutable Sets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Immutable Sets",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar primaryColors = setOf(\"Red\", \"Blue\", \"Yellow\")\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mutable Sets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutable Sets",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar womenInTech = mutableSetOf(\"Ada Lovelace\", \"Grace Hopper\", \"Radia Perlman\", \"Sister Mary Kenneth Keller\")\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Access Collection Elements",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Access Collection Elements",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar companies = setOf(\"Facebook\", \"Apple\", \"Netflix\", \"Google\")\n\nprintln(companies.elementAt(3))\n// Prints: Google\nprintln(companies.elementAt(4))\n// Returns and Error\nprintln(companies.elementAtOrNull(4))\n// Prints: null\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Immutable Map",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Immutable Map",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar averageTemp = mapOf(\"winter\" to 35,  \"spring\" to 60,  \"summer\" to 85, \"fall\" to 55)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Mutable Mapping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mutable Mapping",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar europeanDomains = mutableMapOf(\"Germany\" to \"de\", \"Slovakia\" to \"sk\", \"Hungary\" to \"hu\", \"Norway\" to \"no\")\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Retrieve map keys and values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Retrieve map keys and values",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar oscarWinners = mutableMapOf(\"Parasite\" to \"Bong Joon-ho\", \"Green Book\" to \"Jim Burke\", \"The Shape Of Water\" to \"Guillermo del Toro\")\n\nprintln(oscarWinners.keys)\n// Prints: [Parasite, Green Book, The Shape Of Water]\n\nprintln(oscarWinners.values)\n// Prints: [Bong Joon-ho, Jim Burke, Guillermo del Toro]\nprintln(oscarWinners[\"Parasite\"])\n// Prints: Bong Joon-ho\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Add and remove map entries",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Add and remove map entries",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nvar worldCapitals = mutableMapOf(\"United States\" to \"Washington D.C.\", \"Germany\" to \"Berlin\", \"Mexico\" to \"Mexico City\", \"France\" to \"Paris\")\n\nworldCapitals.put(\"Brazil\", \"Brasilia\")\nprintln(worldCapitals)\n// Prints: {United States=Washington D.C., Germany=Berlin, Mexico=Mexico City, France=Paris, Brazil=Brasilia}\n\nworldCapitals.remove(\"Germany\")\nprintln(worldCapitals)\n// Prints: {United States=Washington D.C., Mexico=Mexico City, France=Paris, Brazil=Brasilia}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Function",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function",
+              "body": "```kotlin\nfun greet() {\n  println(\"Hey there!\")\n}\n\nfun main() {\n  //Function call\n  greet() //Prints: Hey there!\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function Parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function Parameters",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nfun birthday(name: String, age: Int) {\n   println(\"Happy birthday $name! You turn $age today!\")\n}\n\nfun main() {\n  birthday(\"Oscar\", 26)\n  //Prints: Happy birthday Oscar! You turn 25 today!\n  birthday(\"Amarah\", 30)\n  //Prints: Happy birthday Amarah! You turn 30 today!\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Default Parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Default Parameters",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nfun favoriteLanguage(name, language = \"Kotlin\") {\n  println(\"Hello, $name. Your favorite programming language is $language\")\n}\n\nfun main() {\n  favoriteLanguage(\"Manon\")\n  //Prints: Hello, Manon. Your favorite programming language is Kotlin\n\n  favoriteLanguage(\"Lee\", \"Java\")\n  //Prints: Hello, Lee. Your favorite programming language is Java\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Named Parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Named Parameters",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nfun findMyAge(currentYear: Int, birthYear: Int) {\n   var myAge = currentYear -birthYear\nprintln(\"I am $myAge years old.\")\n}\n\nfun main() {\n  findMyAge(currentYear = 2020, birthYear = 1995)\n  //Prints: I am 25 years old.\n  findMyAge(birthYear = 1920, currentYear = 2020)\n  //Prints: I am 100 years old.\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Return Statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Return Statement",
+              "body": "",
+              "footer": "```kotlin {.wrap}\n//Return type is declared outside the parentheses\nfun getArea(length: Int, width: Int): Int {\n  var area = length *width\n\n  //return statement\n  return area\n}\n\nfun main() {\n  var myArea = getArea(10, 8)\nprintln(\"The area is $myArea.\")\n//Prints: The area is 80.\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Single expression function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Single expression function",
+              "body": "",
+              "footer": "```kotlin{.wrap}\nfun fullName(firstName: String, lastName: String) = \"$firstName $lastName\"\n\nfun main() {\n  println(fullName(\"Ariana\", \"Ortega\"))\n  //Prints: Ariana Ortega\n  println(fullName(\"Kai\", \"Gittens\"))\n  //Prints: Kai Gittens\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function Literals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function Literals",
+              "body": "",
+              "footer": "```kotlin{.wrap}\nfun main() {\n  //Anonymous Function:\n  var getProduct = fun(num1: Int, num2: Int): Int {\nreturn num1 *num2\n  }\n  println(getProduct(8, 3))\n  //Prints: 24\n//Lambda Expression\n  var getDifference = { num1: Int, num2: Int -> num1 -num2 }\n  println(getDifference(10, 3))\n  //Prints: 7\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Class",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Class Example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class Example",
+              "body": "```kotlin\n//class with properties containing default values\nclass Student {\n  var name = \"Lucia\"\n  var semester = \"Fall\"\n  var gpa = 3.95\n}\n\n//shorthand syntax without class body\nclass Student\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Class Instance",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class Instance",
+              "body": "```kotlin\n// Class\nclass Student {\n  var name = \"Lucia\"\n  var semester = \"Fall\"\nvar gpa = 3.95\n}\n\nfun main() {\n  var student = Student()\n  // Instance\n  println(student.name)\n  // Prints: Lucia\n  println(student.semester)\n  // Prints: Fall\n  println(student.gpa)\n  // Prints: 3.95\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Primary Constructor",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Primary Constructor",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nclass Student(val name: String, val gpa: Double, val semester: String, val estimatedGraduationYear: Int)\n\nfun main() {\n  var student = Student(\"Lucia\", 3.95, \"Fall\", 2022)\n  println(student.name)\n  //Prints: Lucia\n  println(student.gpa)\n  //Prints: 3.95\n  println(student.semester)\n  //Prints: Fall\n  println(student.estimatedGraduationYear)\n  //Prints: 2022\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Initialization Block",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Initialization Block",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nclass Student(val name: String, val gpa: Double, val semester: String, val estimatedGraduationYear: Int) {\n  init {\n    println(\"$name has ${estimatedGraduationYear -2020} years left in college.\")\n  }\n}\n\nfun main() {\n  var student = Student(\"Lucia\", 3.95, \"Fall\", 2022)\n//Prints: Lucia has 2 years left in college.\n}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Member Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Member Function",
+              "body": "",
+              "footer": "```kotlin {.wrap}\nclass Student(val name: String, val gpa: Double, val semester: String, val estimatedGraduationYear: Int) {\n\n  init {\nprintln(\"$name has ${estimatedGraduationYear -2020} years left in college.\")\n  }\n\n  //member function\n  fun calculateLetterGrade(): String {\n    return when {\n      gpa >= 3.0 -> \"A\"\n      gpa >= 2.7 -> \"B\"\n      gpa >= 1.7 -> \"C\"\ngpa >= 1.0 -> \"D\"\n      else -> \"E\"\n    }\n  }\n}\n\n//When the instance is created and the function is called, the when expression will be executed and return the letter grade\nfun main() {\n  var student = Student(\"Lucia\", 3.95, \"Fall\", 2022)\n//Prints: Lucia has 2 years left in college.\n  println(\"${student.name}'s letter grade is ${student.calculateLetterGrade()}.\")\n  //Prints: Lucia's letter grade is A.\n}\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "See Also",
+      "level": 2,
+      "cards": [
+        {
+          "title": "See Also",
+          "body": "- [Kotlin Language Official Documentation](https://kotlinlang.org/) _(kotlinlang.org)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

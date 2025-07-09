@@ -1,0 +1,413 @@
+{
+  "id": "postgres",
+  "metadata": {
+    "title": "PostgreSQL",
+    "background": "bg-[#3d6488]",
+    "tags": [
+      "DB",
+      "RDBMS"
+    ],
+    "categories": [
+      "Database"
+    ],
+    "date": "2021-01-11T14:19:24.000Z",
+    "intro": "The [PostgreSQL](https://www.postgresql.org/docs/current/) cheat sheet provides you with the common PostgreSQL commands and statements.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Getting started",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting started",
+              "body": "```\nList all databases\n```",
+              "footer": "shell script\npostgres=# \\l\n```\nConnect to the database named postgres\n```shell script\npostgres=# \\c postgres\n```\nDisconnect\n```shell script\npostgres=# \\q\npostgres=# \\!\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "psql commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "psql commands",
+              "body": "| Option              | Example                                      | Description                    |\n| ------------------- | -------------------------------------------- | :----------------------------- |\n| `[-d] <database>`   | psql -d mydb                                 | Connecting to database         |\n| `-U`                | psql -U john mydb                            | Connecting as a specific user  |\n| `-h` `-p`           | psql -h localhost -p 5432 mydb               | Connecting to a host/port      |\n| `-U` `-h` `-p` `-d` | psql -U admin -h 192.168.1.5 -p 2506 -d mydb | Connect remote PostgreSQL      |\n| `-W`                | psql -W mydb                                 | Force password                 |\n| `-c`                | psql -c '\\c postgres' -c '\\dt'               | Execute a SQL query or command |\n| `-H`                | psql -c \"\\l+\" -H postgres > database.html    | Generate HTML report           |\n| `-l`                | psql -l                                      | List all databases             |\n| `-f`                | psql mydb -f file.sql                        | Execute commands from a file   |\n| `-V`                | psql -V                                      | Print the psql version         |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Getting help",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting help",
+              "body": "| -           | -                              |\n| ----------- | :----------------------------- |\n| `\\h`        | Help on syntax of SQL commands |\n| `\\h` DELETE | DELETE SQL statement syntax    |\n| `\\?`        | List of PostgreSQL command     |\n\nRun in PostgreSQL console",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "PostgreSQL Working",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Recon",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Recon",
+              "body": "```\nSHOW SERVER_VERSION;\n```",
+              "footer": "Show system status\n```sql {.wrap}\n\\conninfo\n```\nShow environmental variables\n```sql {.wrap}\nSHOW ALL;\n```\nList users\n```sql {.wrap}\nSELECT rolname FROM pg_roles;\n```\nShow current user\n```sql {.wrap}\nSELECT current_user;\n```\nShow current user's permissions\n```\n\\du\n```\nShow current database\n```sql {.wrap}\nSELECT current_database();\n```\nShow all tables in database\n```sql {.wrap}\n\\dt\n```\nList functions\n```sql {.wrap}\n\\df <schema>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Databases",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Databases",
+              "body": "```\nConnect to database\n```",
+              "footer": "sql {.wrap}\n\\c <database_name>\n```\nShow current database\n```sql {.wrap}\nSELECT current_database();\n```\n[Create database](http://www.postgresql.org/docs/current/static/sql-createdatabase.html)\n```sql {.wrap}\nCREATE DATABASE <database_name> WITH OWNER <username>;\n```\n[Drop database](http://www.postgresql.org/docs/current/static/sql-dropdatabase.html)\n```sql {.wrap}\nDROP DATABASE IF EXISTS <database_name>;\n```\n[Rename database](http://www.postgresql.org/docs/current/static/sql-alterdatabase.html)\n```sql {.wrap}\nALTER DATABASE <old_name> RENAME TO <new_name>;\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tables",
+              "body": "```\nList tables, globally\n```",
+              "footer": "sql {.wrap}\n\\dt *.*.\nSELECT * FROM pg_catalog.pg_tables\n```\nList table schema\n```sql {.wrap}\n\\d <table_name>\n\\d+ <table_name>\nSELECT column_name, data_type, character_maximum_length\nFROM INFORMATION_SCHEMA.COLUMNS\nWHERE table_name = '<table_name>';\n```\n[Create table](http://www.postgresql.org/docs/current/static/sql-createtable.html)\n```sql {.wrap}\nCREATE TABLE <table_name>(\n<column_name> <column_type>,\n<column_name> <column_type>\n);\n```\nCreate table, with an auto-incrementing primary key\n```sql {.wrap}\nCREATE TABLE <table_name> (\n<column_name> SERIAL PRIMARY KEY\n);\n```\n[Delete table](http://www.postgresql.org/docs/current/static/sql-droptable.html)\n```sql {.wrap}\nDROP TABLE IF EXISTS <table_name> CASCADE;\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Permissions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Permissions",
+              "body": "```shell\nsudo su - postgres\npsql\n```",
+              "footer": "[Grant](http://www.postgresql.org/docs/current/static/sql-grant.html) all permissions on database\n```sql {.wrap}\nGRANT ALL PRIVILEGES ON DATABASE <db_name> TO <user_name>;\n```\nGrant connection permissions on database\n```sql {.wrap}\nGRANT CONNECT ON DATABASE <db_name> TO <user_name>;\n```\nGrant permissions on schema\n```sql {.wrap}\nGRANT USAGE ON SCHEMA public TO <user_name>;\n```\nGrant permissions to functions\n```sql {.wrap}\nGRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO <user_name>;\n```\nGrant permissions to select, update, insert, delete, on a all tables\n```sql {.wrap}\nGRANT SELECT, UPDATE, INSERT ON ALL TABLES IN SCHEMA public TO <user_name>;\n```\nGrant permissions, on a table\n```sql {.wrap}\nGRANT SELECT, UPDATE, INSERT ON <table_name> TO <user_name>;\n```\nGrant permissions, to select, on a table\n```sql {.wrap}\nGRANT SELECT ON ALL TABLES IN SCHEMA public TO <user_name>;\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Columns",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Columns",
+              "body": "```\nUpdate column\n```",
+              "footer": "sql {.wrap}\nALTER TABLE <table_name> IF EXISTS\nALTER <column_name> TYPE <data_type> [<constraints>];\n```\nDelete column\n```sql {.wrap}\nALTER TABLE <table_name> IF EXISTS\nDROP <column_name>;\n```\nUpdate column to be an auto-incrementing primary key\n```sql {.wrap}\nALTER TABLE <table_name>\nADD COLUMN <column_name> SERIAL PRIMARY KEY;\n```\nInsert into a table, with an auto-incrementing primary key\n```sql {.wrap}\nINSERT INTO <table_name>\nVALUES (DEFAULT, <value1>);\nINSERT INTO <table_name> (<column1_name>,<column2_name>)\nVALUES ( <value1>,<value2> );\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Data",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Data",
+              "body": "```\nRead one row of data\n```",
+              "footer": "sql {.wrap}\nSELECT * FROM <table_name> LIMIT 1;\n```\nSearch for data\n```sql {.wrap}\nSELECT * FROM <table_name> WHERE <column_name> = <value>;\n```\n[Insert](http://www.postgresql.org/docs/current/static/sql-insert.html) data\n```sql {.wrap}\nINSERT INTO <table_name> VALUES( <value_1>, <value_2> );\n```\n[Update](http://www.postgresql.org/docs/current/static/sql-update.html) data\n```sql {.wrap}\nUPDATE <table_name>\nSET <column_1> = <value_1>, <column_2> = <value_2>\nWHERE <column_1> = <value>;\n```\n[Delete](http://www.postgresql.org/docs/current/static/sql-delete.html) all data\n```sql {.wrap}\nDELETE FROM <table_name>;\n```\nDelete specific data\n```sql {.wrap}\nDELETE FROM <table_name>\nWHERE <column_name> = <value>;\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Users",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Users",
+              "body": "```\n[Create user](http://www.postgresql.org/docs/current/static/sql-createuser.html)\n```",
+              "footer": "sql {.wrap}\nCREATE USER <user_name> WITH PASSWORD '<password>';\n```\n[Drop user](http://www.postgresql.org/docs/current/static/sql-dropuser.html)\n```sql {.wrap}\nDROP USER IF EXISTS <user_name>;\n```\n[Alter](http://www.postgresql.org/docs/current/static/sql-alterrole.html) user password\n```sql {.wrap}\nALTER ROLE <user_name> WITH PASSWORD '<password>';\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Schema",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Schema",
+              "body": "```\n[Create schema](http://www.postgresql.org/docs/current/static/sql-createschema.html)\n```",
+              "footer": "sql {.wrap}\nCREATE SCHEMA IF NOT EXISTS <schema_name>;\n```\n[Drop schema](http://www.postgresql.org/docs/current/static/sql-dropschema.html)\n```sql {.wrap}\nDROP SCHEMA IF EXISTS <schema_name> CASCADE;\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dates",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dates",
+              "body": "```\nCalculate\n[age](<https://www.postgresql.org/docs/15/functions-datetime.html#:~:text=age%20(%20timestamp%2C%20timestamp%20)%20%E2%86%92%20interval>)\nbetween two dates\n```",
+              "footer": "sql {.wrap}\nSELECT age(timestamp, timestamp);\n```\nShow [current time](https://www.postgresql.org/docs/15/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT) with time\nzone\n```sql {.wrap}\nSELECT current_time;\n```\n[Make](<https://www.postgresql.org/docs/15/functions-datetime.html#:~:text=make_date%20(%20year%20int%2C%20month%20int%2C%20day%20int%20)%20%E2%86%92%20date>)\ndates using integers\n```sql {.wrap}\nSELECT make_date(2021,03,25);\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "PostgreSQL Commands",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Tables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tables",
+              "body": "| -                | -                               |\n| ---------------- | :------------------------------ |\n| `\\d <table>`     | Describe table                  |\n| `\\d+ <table>`    | Describe table with details     |\n| `\\dt`            | List tables from current schema |\n| `\\dt *.*`        | List tables from all schemas    |\n| `\\dt <schema>.*` | List tables for a schema        |\n| `\\dp`            | List table access privileges    |\n| `\\det[+]`        | List foreign tables             |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Query buffer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Query buffer",
+              "body": "| -            | -                                  |\n| ------------ | :--------------------------------- |\n| `\\e [FILE]`  | Edit the query buffer (or file)    |\n| `\\ef [FUNC]` | Edit function definition           |\n| `\\p`         | Show the contents                  |\n| `\\r`         | Reset (clear) the query buffer     |\n| `\\s [FILE]`  | Display history or save it to file |\n| `\\w FILE`    | Write query buffer to file         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Informational",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Informational",
+              "body": "| -               | -                               |\n| --------------- | :------------------------------ |\n| `\\l[+]`         | List all databases              |\n| `\\dn[S+]`       | List schemas                    |\n| `\\di[S+]`       | List indexes                    |\n| `\\du[+]`        | List roles                      |\n| `\\ds[S+]`       | List sequences                  |\n| `\\df[antw][S+]` | List functions                  |\n| `\\deu[+]`       | List user mappings              |\n| `\\dv[S+]`       | List views                      |\n| `\\dl`           | List large objects              |\n| `\\dT[S+]`       | List data types                 |\n| `\\da[S]`        | List aggregates                 |\n| `\\db[+]`        | List tablespaces                |\n| `\\dc[S+]`       | List conversions                |\n| `\\dC[+]`        | List casts                      |\n| `\\ddp`          | List default privileges         |\n| `\\dd[S]`        | Show object descriptions        |\n| `\\dD[S+]`       | List domains                    |\n| `\\des[+]`       | List foreign servers            |\n| `\\dew[+]`       | List foreign-data wrappers      |\n| `\\dF[+]`        | List text search configurations |\n| `\\dFd[+]`       | List text search dictionaries   |\n| `\\dFp[+]`       | List text search parsers        |\n| `\\dFt[+]`       | List text search templates      |\n| `\\dL[S+]`       | List procedural languages       |\n| `\\do[S]`        | List operators                  |\n| `\\dO[S+]`       | List collations                 |\n| `\\drds`         | List per-database role settings |\n| `\\dx[+]`        | List extensions                 |\n\n`S`: show system objects, `+`: additional detail",
+              "footer": "",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Connection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Connection",
+              "body": "| -                      | -                           |\n| ---------------------- | :-------------------------- |\n| `\\c [DBNAME]`          | Connect to new database     |\n| `\\encoding [ENCODING]` | Show or set client encoding |\n| `\\password [USER]`     | Change the password         |\n| `\\conninfo`            | Display information         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Formatting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Formatting",
+              "body": "| -                         | -                                          |\n| ------------------------- | :----------------------------------------- |\n| `\\a`                      | Toggle between unaligned and aligned       |\n| `\\C [STRING]`             | Set table title, or unset if none          |\n| `\\f [STRING]`             | Show or set field separator for unaligned  |\n| `\\H`                      | Toggle HTML output mode                    |\n| <code>\\t [on\\|off]</code> | Show only rows                             |\n| `\\T [STRING]`             | Set or unset HTML \\<table\\> tag attributes |\n| <code>\\x [on\\|off]</code> | Toggle expanded output                     |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Input/Output",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Input/Output",
+              "body": "| -                 | -                                                              |\n| ----------------- | :------------------------------------------------------------- |\n| `\\copy ...`       | Import/export table<br> _See also:_ [copy](#import-export-csv) |\n| `\\echo [STRING]`  | Print string                                                   |\n| `\\i FILE`         | Execute file                                                   |\n| `\\o [FILE]`       | Export all results to file                                     |\n| `\\qecho [STRING]` | String to output stream                                        |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "| -                     | -                                             |\n| --------------------- | :-------------------------------------------- |\n| `\\prompt [TEXT] NAME` | Set variable                                  |\n| `\\set [NAME [VALUE]]` | Set variable _(or list all if no parameters)_ |\n| `\\unset NAME`         | Delete variable                               |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Misc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc",
+              "body": "| -                              | -                    |\n| ------------------------------ | :------------------- |\n| `\\cd [DIR]`                    | Change the directory |\n| <code>\\timing [on\\|off]</code> | Toggle timing        |\n| `\\! [COMMAND]`                 | Execute in shell     |\n| `\\! ls -l`                     | List all in shell    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Large Objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Large Objects",
+              "body": "- `\\lo_export LOBOID FILE`\n- `\\lo_import FILE [COMMENT]`\n- `\\lo_list`\n- `\\lo_unlink LOBOID`\n\n{.marker-none}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Backup",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Backup",
+              "body": "```\nUse pg_dump to backup a database\n```",
+              "footer": "shell script\n$ pg_dump -d mydb -f mydb_backup.sql\n```\n| -    | -                                              |\n| ---- | :--------------------------------------------- |\n| `-a` | Dump only the data, not the schema             |\n| `-s` | Dump only the schema, no data                  |\n| `-c` | Drop database before recreating                |\n| `-C` | Create database before restoring               |\n| `-t` | Dump the named table(s) only                   |\n| `-F` | Format (`c`: custom, `d`: directory, `t`: tar) |\nUse `pg_dump -?` to get the full list of options",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Restore",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Restore",
+              "body": "```\nRestore a database with pg_restore\n```",
+              "footer": "shell script\n$ pg_restore -d mydb mydb_backup.sql -c\n```\n| -    | -                                                                            |\n| ---- | :--------------------------------------------------------------------------- |\n| `-U` | Specify a database user                                                      |\n| `-c` | Drop database before recreating                                              |\n| `-C` | Create database before restoring                                             |\n| `-e` | Exit if an error has encountered                                             |\n| `-F` | Format (`c`: custom, `d`: directory, `t`: tar, `p`: plain text sql(default)) |\n{.marker-none}\nUse `pg_restore -?` to get the full list of options",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Remote access",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Remote access",
+              "body": "```\nAppend to postgresql.conf\n```",
+              "footer": "shell script\nlisten_addresses = '*'\n```\nAppend to pg_hba.conf (Same location as postgresql.conf)\n```shell script\nhost  all  all  0.0.0.0/0  md5\nhost  all  all  ::/0       md5\n```\nRestart PostgreSQL server\n```shell script\n$ sudo systemctl restart postgresql\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Import/Export CSV",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Import/Export CSV",
+              "body": "```\nImport CSV file into table\n```",
+              "footer": "shell script\n\\copy table FROM '<path>' CSV\n\\copy table(col1,col1) FROM '<path>' CSV\n```\nSee also: [Copy](https://www.postgresql.org/docs/current/sql-copy.html)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Posgres-cheatsheet](https://gist.github.com/apolloclark/ea5466d5929e63043dcf#posgres-cheatsheet) _(gist.github.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

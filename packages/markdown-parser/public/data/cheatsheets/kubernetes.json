@@ -1,0 +1,567 @@
+{
+  "id": "kubernetes",
+  "metadata": {
+    "title": "Kubernetes",
+    "date": "2023-01-09T10:26:55.000Z",
+    "background": "bg-[#416cde]",
+    "tags": [
+      "config",
+      "format"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This page contains a list of commonly used kubectl commands and flags.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Viewing and finding resources {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Nodes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Nodes",
+              "body": "```bash\nkubectl get no # Display all node information\nkubectl get no -o wide # Show more information about all nodes\nkubectl describe no # Display node details\nkubectl get no -o yaml # Display node details in yaml format\nkubectl get node --selector=[label_name] # Filter the node with the specified label\nkubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=\"ExternalIP\")].address}'\n# Output the field information defined by the jsonpath expression\nkubectl top node [node_name] # Display node (CPU/memory/storage) usage\n```",
+              "footer": "Resource name: nodes, abbreviation: no",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pods",
+              "body": "```bash\nkubectl get po # Display all container group information\nkubectl get po -o wide\nkubectl describe po\nkubectl get po --show-labels # View the labels of the container group\nkubectl get po -l app=nginx\nkubectl get po -o yaml\nkubectl get pod [pod_name] -o yaml --export\nkubectl get pod [pod_name] -o yaml --export > nameoffile.yaml\n# Export container group information to yaml file in yaml format\nkubectl get pods --field-selector status.phase=Running\n# Use the field selector to filter out container group information\n```",
+              "footer": "Resource name: pods, abbreviation: po",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Namespaces",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Namespaces",
+              "body": "```bash\nkubectl get ns\nkubectl get ns -o yaml\nkubectl describe ns\n```",
+              "footer": "Resource name: namespaces, abbreviation: ns",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Deployments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Deployments",
+              "body": "```bash\nkubectl get deploy\nkubectl describe deploy\nkubectl get deploy -o wide\nkubectl get deploy -o yaml\n```",
+              "footer": "Resource name: deployments, abbreviation: deploy",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Services",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Services",
+              "body": "```bash\nkubectl get svc\nkubectl describe svc\nkubectl get svc -o wide\nkubectl get svc -o yaml\nkubectl get svc --show-labels\n```",
+              "footer": "Resource name: services, abbreviation: svc",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Daemon Sets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Daemon Sets",
+              "body": "```bash\nkubectl get ds\nkubectl describe ds --all-namespaces\nkubectl describe ds [daemonset_name] -n [namespace_name]\nkubectl get ds [ds_name] -n [ns_name] -o yaml\n```",
+              "footer": "Resource name: daemonsets, abbreviation: ds",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Events",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Events",
+              "body": "```bash\nkubectl get events\nkubectl get events -n kube-system\nkubectl get events -w\n```",
+              "footer": "Resource name: events, abbreviation: ev",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logs",
+              "body": "```bash\nkubectl logs [pod_name]\nkubectl logs --since=1h [pod_name]\nkubectl logs --tail=20 [pod_name]\nkubectl logs -f -c [container_name] [pod_name]\nkubectl logs [pod_name] > pod.log\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Service Accounts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Service Accounts",
+              "body": "```bash\nkubectl get sa\nkubectl get sa -o yaml\nkubectl get serviceaccounts default -o yaml >./sa.yaml\nkubectl replace serviceaccount default -f ./sa.yaml\n```",
+              "footer": "Resource name: serviceaccounts, abbreviation: ev",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Replica Sets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Replica Sets",
+              "body": "```bash\nkubectl get rs\nkubectl describe rs\nkubectl get rs -o wide\nkubectl get rs -o yaml\n```",
+              "footer": "Resource name: replicasets, abbreviation: rs",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Roles",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Roles",
+              "body": "```bash\nkubectl get roles --all-namespaces\nkubectl get roles --all-namespaces -o yaml\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Secrets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Secrets",
+              "body": "```bash\nkubectl get secrets\nkubectl get secrets --all-namespaces\nkubectl get secrets -o yaml\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Config maps",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Config maps",
+              "body": "```bash\nkubectl get cm\nkubectl get cm --all-namespaces\nkubectl get cm --all-namespaces -o yaml\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ingresses",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ingresses",
+              "body": "```bash\nkubectl get ing\nkubectl get ing --all-namespaces\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Persistent Volumes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Persistent Volumes",
+              "body": "```bash\nkubectl get pv\nkubectl describe pv\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Persistent volume declaration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Persistent volume declaration",
+              "body": "```bash\nkubectl get pvc\nkubectl describe pvc\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "storage class",
+          "level": 3,
+          "cards": [
+            {
+              "title": "storage class",
+              "body": "```bash\nkubectl get sc\nkubectl get sc -o yaml\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple resources",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple resources",
+              "body": "```bash\nkubectl get svc, po\nkubectl get deploy, no\nkubectl get all\nkubectl get all --all-namespaces\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Updating resources",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Taint",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Taint",
+              "body": "```bash\nkubectl taint [node_name] [taint_name]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Label",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Label",
+              "body": "```bash\nkubectl label [node_name] disktype=ssd\nkubectl label [pod_name] env=prod\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Maintain/Schedulable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Maintain/Schedulable",
+              "body": "```bash\nkubectl cordon [node_name] # node maintenance\nkubectl uncordon [node_name] # node is schedulable\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "clear",
+          "level": 3,
+          "cards": [
+            {
+              "title": "clear",
+              "body": "```bash\nkubectl drain [node_name] # empty the node\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Node/Pod",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Node/Pod",
+              "body": "```bash\nkubectl delete node [node_name]\nkubectl delete pod [pod_name]\nkubectl edit node [node_name]\nkubectl edit pod [pod_name]\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Stateless/Namespaced",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Stateless/Namespaced",
+              "body": "```bash\nkubectl edit deploy [deploy_name]\nkubectl delete deploy [deploy_name]\nkubectl expose deploy [deploy_name] --port=80 --type=NodePort\nkubectl scale deploy [deploy_name] --replicas=5\nkubectl delete ns\nkubectl edit ns [ns_name]\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Service",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Service",
+              "body": "```bash\nkubectl edit svc [svc_name]\nkubectl delete svc [svc_name]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Daemon set",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Daemon set",
+              "body": "```bash\nkubectl edit ds [ds_name] -n kube-system\nkubectl delete ds [ds_name]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Service account",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Service account",
+              "body": "```bash\nkubectl edit sa [sa_name]\nkubectl delete sa [sa_name]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Notes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Notes",
+              "body": "```bash\nkubectl annotate po [pod_name] [annotation]\nkubectl annotateno [node_name]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Create resources",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Create pod",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create pod",
+              "body": "```bash\nkubectl create -f [name_of_file]\nkubectl apply -f [name_of_file]\nkubectl run [pod_name] --image=nginx --restart=Never\nkubectl run [pod_name] --generator=run-pod/v1 --image=nginx\nkubectl run [pod_name] --image=nginx --restart=Never\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Create Service",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create Service",
+              "body": "```bash\nkubectl create svc nodeport [svc_name] --tcp=8080:80\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Create a stateless application",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create a stateless application",
+              "body": "```bash\nkubectl create -f [name_of_file]\nkubectl apply -f [name_of_file]\nkubectl create deploy [deploy_name] --image=nginx\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "interaction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "interaction",
+              "body": "```bash\nkubectl run [pod_name] --image=busybox --rm -it --restart=Never --sh\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Output YAML",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Output YAML",
+              "body": "```bash\nkubectl create deploy [deploy_name] --image=nginx --dry-run -o yaml > deploy.yaml\nkubectl get po [pod_name] -o yaml --export > pod.yaml\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Help",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Help",
+              "body": "```bash\nkubectl -h\nkubectl create -h\nkubectl run -h\nkubectl explain deploy.spec\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "APIs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "APIs",
+              "body": "```bash\nkubectl get --raw /apis/metrics.k8s.io/\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Information",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Information",
+              "body": "```bash\nkubectl config\nkubectl cluster-info\nkubectl get componentstatus\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also See",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also See",
+          "body": "- [Kubernetes Official Documentation](https://kubernetes.io/zh-cn/docs/reference/kubectl/) _(kubernetes.io)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

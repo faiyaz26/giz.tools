@@ -1,0 +1,277 @@
+{
+  "id": "pytorch",
+  "metadata": {
+    "title": "PyTorch",
+    "date": "2023-04-12T00:00:00.000Z",
+    "background": "bg-[#ee4c2c]",
+    "tags": [
+      "AI",
+      "Python"
+    ],
+    "categories": [
+      "Other"
+    ],
+    "intro": "This is a quick reference list of cheat sheets for PyTorch. See also [PyTorch website](https://pytorch.org/)"
+  },
+  "sections": [
+    {
+      "title": "Imports { .cols-1 }",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "```\nimport torch                                        # root package\nfrom torch.utils.data import Dataset, DataLoader    # dataset representation and loading\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Neural Network API",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Neural Network API",
+              "body": "```\nimport torch.autograd as autograd         # computation graph\nfrom torch import Tensor                  # tensor node in the computation graph\nimport torch.nn as nn                     # neural networks\nimport torch.nn.functional as F           # layers, activations and more\nimport torch.optim as optim               # optimizers e.g. gradient descent, ADAM, etc.\nfrom torch.jit import script, trace       # hybrid frontend decorator and tracing jit\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Torchscript and JIT",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Torchscript and JIT",
+              "body": "```\ntorch.jit.trace()         # takes your module or function and an example\n                          # data input, and traces the computational steps\n                          # that the data encounters as it progresses through the model\n\n@script                   # decorator used to indicate data-dependent\n                          # control flow within the code being traced\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ONNX",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ONNX",
+              "body": "```\ntorch.onnx.export(model, dummy data, xxxx.proto)       # exports an ONNX formatted\n                                                       # model using a trained model, dummy\n                                                       # data and the desired file name\n\nmodel = onnx.load(\"alexnet.proto\")                     # load an ONNX model\nonnx.checker.check_model(model)                        # check that the model\n                                                       # IR is well formed\n\nonnx.helper.printable_graph(model.graph)               # print a human readable\n                                                       # representation of the graph\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Vision",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Vision",
+              "body": "```\nfrom torchvision import datasets, models, transforms     # vision datasets,\n                                                         # architectures &\n                                                         # transforms\n\nimport torchvision.transforms as transforms              # composable transforms\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Distributed Training",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Distributed Training",
+              "body": "```\nimport torch.distributed as dist             # distributed communication\nfrom torch.multiprocessing import Process    # memory sharing processes\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Tensors { .cols-1 }",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Creation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Creation",
+              "body": "```\nx = torch.randn(*size)              # tensor with independent N(0,1) entries\nx = torch.[ones|zeros](*size)       # tensor with all 1's [or 0's]\nx = torch.tensor(L)                 # create tensor from [nested] list or ndarray L\ny = x.clone()                       # clone of x\nwith torch.no_grad():               # code wrap that stops autograd from tracking tensor history\nrequires_grad=True                  # arg, when set to True, tracks computation\n                                    # history for future derivative calculations\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dimensionality",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dimensionality",
+              "body": "```\nx.size()                                  # return tuple-like object of dimensions\nx = torch.cat(tensor_seq, dim=0)          # concatenates tensors along dim\ny = x.view(a,b,...)                       # reshapes x into size (a,b,...)\ny = x.view(-1,a)                          # reshapes x into size (b,a) for some b\ny = x.transpose(a,b)                      # swaps dimensions a and b\ny = x.permute(*dims)                      # permutes dimensions\ny = x.unsqueeze(dim)                      # tensor with added axis\ny = x.unsqueeze(dim=2)                    # (a,b,c) tensor -> (a,b,1,c) tensor\ny = x.squeeze()                           # removes all dimensions of size 1 (a,1,b,1) -> (a,b)\ny = x.squeeze(dim=1)                      # removes specified dimension of size 1 (a,1,b,1) -> (a,b,1)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Algebra",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Algebra",
+              "body": "```\nret = A.mm(B)       # matrix multiplication\nret = A.mv(x)       # matrix-vector multiplication\nx = x.t()           # matrix transpose\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GPU Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GPU Usage",
+              "body": "```\ntorch.cuda.is_available                                     # check for cuda\nx = x.cuda()                                                # move x's data from\n                                                            # CPU to GPU and return new object\n\nx = x.cpu()                                                 # move x's data from GPU to CPU\n                                                            # and return new object\n\nif not args.disable_cuda and torch.cuda.is_available():     # device agnostic code\n    args.device = torch.device('cuda')                      # and modularity\nelse:                                                       #\n    args.device = torch.device('cpu')                       #\n\nnet.to(device)                                              # recursively convert their\n                                                            # parameters and buffers to\n                                                            # device specific tensors\n\nx = x.to(device)                                            # copy your tensors to a device\n                                                            # (gpu, cpu)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Deep Learning",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Deep Learning",
+              "body": "```\nnn.Linear(m,n)                                # fully connected layer from\n                                              # m to n units\n\nnn.ConvXd(m,n,s)                              # X dimensional conv layer from\n                                              # m to n channels where X⍷{1,2,3}\n                                              # and the kernel size is s\n\nnn.MaxPoolXd(s)                               # X dimension pooling layer\n                                              # (notation as above)\n\nnn.BatchNormXd                                # batch norm layer\nnn.RNN/LSTM/GRU                               # recurrent layers\nnn.Dropout(p=0.5, inplace=False)              # dropout layer for any dimensional input\nnn.Dropout2d(p=0.5, inplace=False)            # 2-dimensional channel-wise dropout\nnn.Embedding(num_embeddings, embedding_dim)   # (tensor-wise) mapping from\n                                              # indices to embedding vectors\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loss Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loss Functions",
+              "body": "```\nnn.X                                  # where X is L1Loss, MSELoss, CrossEntropyLoss\n                                      # CTCLoss, NLLLoss, PoissonNLLLoss,\n                                      # KLDivLoss, BCELoss, BCEWithLogitsLoss,\n                                      # MarginRankingLoss, HingeEmbeddingLoss,\n                                      # MultiLabelMarginLoss, SmoothL1Loss,\n                                      # SoftMarginLoss, MultiLabelSoftMarginLoss,\n                                      # CosineEmbeddingLoss, MultiMarginLoss,\n                                      # or TripletMarginLoss\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Activation Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Activation Functions",
+              "body": "```\nnn.X                                  # where X is ReLU, ReLU6, ELU, SELU, PReLU, LeakyReLU,\n                                      # RReLu, CELU, GELU, Threshold, Hardshrink, HardTanh,\n                                      # Sigmoid, LogSigmoid, Softplus, SoftShrink,\n                                      # Softsign, Tanh, TanhShrink, Softmin, Softmax,\n                                      # Softmax2d, LogSoftmax or AdaptiveSoftmaxWithLoss\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Optimizers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Optimizers",
+              "body": "```\nopt = optim.x(model.parameters(), ...)      # create optimizer\nopt.step()                                  # update weights\noptim.X                                     # where X is SGD, Adadelta, Adagrad, Adam,\n                                            # AdamW, SparseAdam, Adamax, ASGD,\n                                            # LBFGS, RMSprop or Rprop\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Learning rate scheduling",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Learning rate scheduling",
+              "body": "```\nscheduler = optim.X(optimizer,...)      # create lr scheduler\nscheduler.step()                        # update lr after optimizer updates weights\noptim.lr_scheduler.X                    # where X is LambdaLR, MultiplicativeLR,\n                                        # StepLR, MultiStepLR, ExponentialLR,\n                                        # CosineAnnealingLR, ReduceLROnPlateau, CyclicLR,\n                                        # OneCycleLR, CosineAnnealingWarmRestarts,\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Data Utilities { .cols-1 }",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Datasets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Datasets",
+              "body": "```\nDataset                    # abstract class representing dataset\nTensorDataset              # labelled dataset in the form of tensors\nConcat Dataset             # concatenation of Datasets\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dataloaders and DataSamplers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dataloaders and DataSamplers",
+              "body": "```\nDataLoader(dataset, batch_size=1, ...)      # loads data batches agnostic\n                                            # of structure of individual data points\n\nsampler.Sampler(dataset,...)                # abstract class dealing with\n                                            # ways to sample from dataset\n\nsampler.XSampler where ...                  # Sequential, Random, SubsetRandom,\n                                            # WeightedRandom, Batch, Distributed\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

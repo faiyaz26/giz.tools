@@ -1,0 +1,351 @@
+{
+  "id": "matplotlib",
+  "metadata": {
+    "title": "Matplotlib",
+    "date": "06-06-2025",
+    "background": "bg-[#1a073e]",
+    "tags": [
+      "data visualization",
+      "matplotlib",
+      "plotting"
+    ],
+    "categories": [
+      "Python"
+    ],
+    "intro": "[Matplotlib](https://matplotlib.org/) is a comprehensive library for creating static, animated, and interactive plots in Python.  \nThis cheat sheet provides a quick reference from basic to advanced usage, covering essential features for data science, machine learning, and scientific computing.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Importing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Importing",
+              "body": "```python\nimport matplotlib.pyplot as plt  # Core plotting library\nimport numpy as np               # For numerical operations\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic Plot",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Plot",
+              "body": "```python\nx = np.linspace(0, 10, 100)      # 100 points between 0 and 10\ny = np.sin(x)                    # Sine function values\nplt.plot(x, y)                   # Create a line plot\nplt.show()                       # Display the plot\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Plot Types {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Line Plot",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Line Plot",
+              "body": "```python\nplt.plot(x, y)                   # Line plot of y vs x\nplt.title(\"Sine Wave\")          # Set title\nplt.xlabel(\"x-axis\")            # Label x-axis\nplt.ylabel(\"y-axis\")            # Label y-axis\nplt.grid(True)                  # Show gridlines\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Scatter Plot",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scatter Plot",
+              "body": "```python\nplt.scatter(x, y)               # Scatter plot\nplt.title(\"Scatter Plot\")\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bar Plot",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bar Plot",
+              "body": "```python\ncategories = ['A', 'B', 'C']\nvalues = [10, 20, 15]\nplt.bar(categories, values)     # Vertical bar chart\nplt.title(\"Bar Chart\")\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Horizontal Bar Plot",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Horizontal Bar Plot",
+              "body": "```python\nplt.barh(categories, values)    # Horizontal bar chart\nplt.title(\"Horizontal Bar Chart\")\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Histogram",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Histogram",
+              "body": "```python\ndata = np.random.randn(1000)    # Random normal distribution\nplt.hist(data, bins=30)         # Histogram with 30 bins\nplt.title(\"Histogram\")\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pie Chart",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pie Chart",
+              "body": "```python\nsizes = [25, 35, 20, 20]\nlabels = ['A', 'B', 'C', 'D']\nplt.pie(sizes, labels=labels, autopct='%1.1f%%')  # Pie chart with % labels\nplt.title(\"Pie Chart\")\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Customization {.row-span-2}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Customization {.row-span-2}",
+          "body": "| Feature         | Code Example                                                                         | Description                                 |\n| --------------- | ------------------------------------------------------------------------------------ | ------------------------------------------- |\n| Title           | `plt.title(\"Title\")`                                                                 | Set the title of the plot                   |\n| X/Y Labels      | `plt.xlabel(\"X\")`, `plt.ylabel(\"Y\")`                                                 | Label the axes                              |\n| Grid            | `plt.grid(True)`                                                                     | Show grid                                   |\n| Legend          | `plt.legend([\"line1\"])`                                                              | Add legend                                  |\n| Line Style      | `plt.plot(x, y, linestyle='--')`                                                     | Dashed line                                 |\n| Color           | `plt.plot(x, y, color='green')`                                                      | Set line color                              |\n| Marker          | `plt.plot(x, y, marker='o')`                                                         | Show markers on points                      |\n| Axis Limits     | `plt.xlim(0, 10)`, `plt.ylim(-1, 1)`                                                 | Set axis range                              |\n| Tick Labels     | `plt.xticks([...])`, `plt.yticks([...])`                                             | Customize tick positions                    |\n| Text Annotation | `plt.text(5, 0, \"Midpoint\")`                                                         | Add text at a specific coordinate           |\n| Arrow           | `plt.annotate(\"Peak\", xy=(7, 1), xytext=(6, 1.5), arrowprops=dict(arrowstyle=\"->\"))` | Add annotation arrow                        |\n| Style Sheets    | `plt.style.use('ggplot')`                                                            | Use predefined styles like `seaborn`, `bmh` |",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "Subplots & Layouts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Multiple Subplots",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple Subplots",
+              "body": "```python\nfig, axs = plt.subplots(2, 2)        # Create 2x2 grid of subplots\naxs[0, 0].plot(x, y)                 # Top-left subplot\naxs[0, 1].scatter(x, y)              # Top-right subplot\naxs[1, 0].bar(categories, values)    # Bottom-left subplot\naxs[1, 1].hist(data)                 # Bottom-right subplot\nplt.tight_layout()                   # Adjust spacing to prevent overlap\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Figure Size",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Figure Size",
+              "body": "```python\nplt.figure(figsize=(10, 5))         # Set figure size (width, height in inches)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Advanced Visualizations {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Heatmap",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Heatmap",
+              "body": "```python\ndata = np.random.rand(10, 10)       # Random 10x10 matrix\nplt.imshow(data, cmap='hot', interpolation='nearest')  # Display as image\nplt.colorbar()                      # Show color scale\nplt.title(\"Heatmap\")\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Contour Plot",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Contour Plot",
+              "body": "```python\nX, Y = np.meshgrid(x, x)\nZ = np.sin(X) * np.cos(Y)\nplt.contour(X, Y, Z)                # Contour lines\nplt.title(\"Contour Plot\")\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "3D Plot",
+          "level": 3,
+          "cards": [
+            {
+              "title": "3D Plot",
+              "body": "```python\nfrom mpl_toolkits.mplot3d import Axes3D\nfig = plt.figure()\nax = fig.add_subplot(111, projection='3d')  # 3D subplot\nax.plot3D(x, y, np.cos(x))                  # 3D line\nplt.title(\"3D Plot\")\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Working with Images",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Working with Images",
+          "body": "```python\nimport matplotlib.image as mpimg\nimg = mpimg.imread('image.jpg')     # Load image\nplt.imshow(img)                     # Display image\nplt.axis('off')                     # Hide axes\nplt.title(\"Image Display\")\nplt.show()\n```",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "For Machine Learning",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Plotting Loss vs Epoch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Plotting Loss vs Epoch",
+              "body": "```python\nepochs = range(1, 11)\nloss = [0.9, 0.7, 0.5, 0.4, 0.3, 0.25, 0.2, 0.18, 0.15, 0.13]\nplt.plot(epochs, loss)\nplt.title(\"Training Loss\")\nplt.xlabel(\"Epoch\")\nplt.ylabel(\"Loss\")\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Confusion Matrix (Heatmap)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Confusion Matrix (Heatmap)",
+              "body": "```python\nfrom sklearn.metrics import confusion_matrix\nimport seaborn as sns\n\ny_true = [0, 1, 2, 2, 0]\ny_pred = [0, 0, 2, 2, 1]\ncm = confusion_matrix(y_true, y_pred)    # Create confusion matrix\nsns.heatmap(cm, annot=True, fmt='d', cmap='Blues')  # Heatmap visualization\nplt.title(\"Confusion Matrix\")\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ROC Curve",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ROC Curve",
+              "body": "```python\nfrom sklearn.metrics import roc_curve, auc\n\nfpr, tpr, _ = roc_curve([0, 0, 1, 1], [0.1, 0.4, 0.35, 0.8])  # Compute ROC\nroc_auc = auc(fpr, tpr)                 # Area under curve\nplt.plot(fpr, tpr, label=f'AUC = {roc_auc:.2f}')\nplt.plot([0, 1], [0, 1], 'k--')         # Diagonal line\nplt.xlabel(\"False Positive Rate\")\nplt.ylabel(\"True Positive Rate\")\nplt.title(\"ROC Curve\")\nplt.legend()\nplt.show()\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Saving Plots",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Saving Plots",
+          "body": "```python\nplt.savefig(\"figure.png\", dpi=300, bbox_inches='tight')  # Save plot to file\n```",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "Show & Clear",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Show & Clear",
+          "body": "```python\nplt.show()     # Show plot window\nplt.clf()      # Clear current figure (useful when plotting in loops)\nplt.close()    # Close figure window (useful in scripts or GUI apps)\n```",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "More Useful Functions",
+      "level": 2,
+      "cards": [
+        {
+          "title": "More Useful Functions",
+          "body": "| Function                       | Use Case                        |\n| ------------------------------ | ------------------------------- |\n| `plt.fill_between(x, y1, y2)`  | Fill area between curves        |\n| `plt.axhline(y=value)`         | Draw horizontal line at y       |\n| `plt.axvline(x=value)`         | Draw vertical line at x         |\n| `plt.errorbar(x, y, yerr=...)` | Plot with error bars            |\n| `plt.twinx()`                  | Create secondary y-axis         |\n| `plt.subplots_adjust(...)`     | Manually adjust subplot spacing |\n| `plt.gca()`                    | Get current axes                |\n| `plt.gcf()`                    | Get current figure              |\n\n---",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

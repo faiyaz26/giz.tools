@@ -34,3 +34,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# compiled output
+dist/
+packages/*/dist/
+
+# generated examples
+packages/*/examples/*.json
+
+# temporary directories
+packages/*/temp-repo/

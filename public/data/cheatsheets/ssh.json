@@ -1,0 +1,324 @@
+{
+  "id": "ssh",
+  "metadata": {
+    "title": "SSH",
+    "date": "2021-01-27T11:48:05.000Z",
+    "background": "bg-blue-400",
+    "tags": [
+      "protocol",
+      "remote",
+      "network",
+      22
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "This quick reference cheat sheet provides various for using SSH.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Connecting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Connecting",
+              "body": "```\nConnect on a specific port\n```",
+              "footer": "shell script\n$ ssh root@192.168.1.5 -p 6222\n```\nConnect via pem file (0400 permissions)\n```shell script\n$ ssh -i /path/file.pem root@192.168.1.5\n```\nSee: [SSH Permissions](/chmod#ssh-permissions)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Executing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Executing",
+              "body": "```\nInvoke a local script\n```",
+              "footer": "shell script\n$ ssh root@192.168.1.5 bash < script.sh\n```\nCompresses and downloads from a server\n```shell script {.wrap}\n$ ssh root@192.168.1.5 \"tar cvzf - ~/source\" > output.tgz\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SCP",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SCP",
+              "body": "```\nCopies between two servers\n```",
+              "footer": "shell script\n$ scp user@server:/file user@server:/dir\n```\nCopies from local to remote\n```shell script\n$ scp dest/file.ext user@server:/dir\n```\nCopies a whole folder\n```shell script\n$ scp -r user@server:/dir dest/\n```\nCopies all files from a folder\n```shell script\n$ scp user@server:/dir/* dest/\n```\nCopies from a server folder to the current folder\n```shell script\n$ scp user@server:/dir/* .\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Config location",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Config location",
+              "body": "| File Path                | Description          |\n| ------------------------ | -------------------- |\n| `/etc/ssh/ssh_config`    | System-wide config   |\n| `~/.ssh/config`          | User-specific config |\n| `~/.ssh/id_{type}`       | Private key          |\n| `~/.ssh/id_{type}.pub`   | Public key           |\n| `~/.ssh/known_hosts`     | Known Servers        |\n| `~/.ssh/authorized_keys` | Authorized login key |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "SCP Options",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SCP Options",
+              "body": "| Options       | Description                                    |\n| ------------- | ---------------------------------------------- |\n| scp `-r`      | <yel>R</yel>ecursively copy entire directories |\n| scp `-C`      | <yel>C</yel>ompresses data                     |\n| scp `-v`      | Prints <yel>v</yel>erbose info                 |\n| scp `-P` 8080 | Uses a specific <yel>P</yel>ort                |\n| scp `-B`      | <yel>B</yel>atch mode _(Prevents password)_    |\n| scp `-p`      | <yel>P</yel>reserves times and modes           |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Config sample",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Config sample",
+              "body": "```toml\nHost server1\n    HostName 192.168.1.5\n    User root\n    Port 22\n    IdentityFile ~/.ssh/server1.key\n```",
+              "footer": "Launch by alias\n```shell script\n$ ssh server1\n```\nSee: Full [Config Options](https://linux.die.net/man/5/ssh_config)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ProxyJump",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ProxyJump",
+              "body": "```\n\n```",
+              "footer": "shell script {.wrap}\n$ ssh -J user@proxy_host1 user@remote_host2\n```\nMultiple jumps\n```shell script {.wrap}\n$ ssh -J user@proxy_host1:port1,user@proxy_host2:port2 user@remote_host3\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ssh-copy-id",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ssh-copy-id",
+              "body": "```\nCopy to alias server\n```",
+              "footer": "shell script {.wrap}\n$ ssh-copy-id server1\n```\nCopy specific key\n```shell script {.wrap}\n$ ssh-copy-id -i ~/.ssh/id_rsa.pub user@server\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "SSH keygen {.cols-5}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "ssh-keygen",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ssh-keygen",
+              "body": "",
+              "footer": "```shell script\n$ ssh-keygen -t rsa -b 4096 -C \"your@mail.com\"\n```\n\n| -   | -    | -                             |\n| --- | ---- | ----------------------------- |\n|     | `-t` | [Type](#key-type) of key      |\n|     | `-b` | The number of bits in the key |\n|     | `-C` | Provides a new comment        |\n\n{.left-text}\n\nGenerate an RSA 4096 bit key with email as a comment",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generate",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generate",
+              "body": "```\nSpecify filename\n```",
+              "footer": "shell script\n$ ssh-keygen -f ~/.ssh/filename\n```\nGenerate public key from private key\n```shell script\n$ ssh-keygen -y -f private.key > public.pub\n```\nChange comment\n```shell script\n$ ssh-keygen -c -f ~/.ssh/id_rsa\n```\nChange private key passphrase\n```shell script\n$ ssh-keygen -p -f ~/.ssh/id_rsa\n```",
+              "spanConfig": "col-span-2 .row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Key type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Key type",
+              "body": "- rsa\n- ed25519\n- dsa\n- ecdsa",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "known_hosts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "known_hosts",
+              "body": "```\nRemove from known_hosts\n```",
+              "footer": "shell script\n$ ssh-keygen -R <ip/hostname>\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Key format",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Key format",
+              "body": "- PEM\n- PKCS8",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "SSH Tunneling",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "SSH Tunnel Options",
+          "level": 3,
+          "cards": [
+            {
+              "title": "SSH Tunnel Options",
+              "body": "| Option | Description                                            |\n| ------ | :----------------------------------------------------- |\n| `-L`   | Local port forwarding                                  |\n| `-R`   | Remote port forwarding                                 |\n| `-D`   | Dynamic port forwarding                                |\n| `-f`   | Run in background                                      |\n| `-N`   | Do not execute a remote command                        |\n| `-g`   | Allow remote hosts to connect to local forwarded ports |\n\n{.left-text}\n\nmore details on flag above with `man ssh`",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Local Port Forwarding",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Local Port Forwarding",
+              "body": "```bash\n# Forward a local port to a remote server\nssh -L local_port:remote_host:remote_port user@ssh_server\n\n# Example: Forward local port 8080 to remote port 80 on example.com\nssh -L 8080:example.com:80 user@ssh_server\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dynamic Port Forwarding",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dynamic Port Forwarding",
+              "body": "```bash\n# Create a SOCKS proxy on a local port\nssh -D local_port user@ssh_server\n\n# Create a SOCKS proxy on local port 1080 in the background\nssh -f -N -D 1080 user@ssh_server\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Background Tunnel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Background Tunnel",
+              "body": "```bash\n# Create a local port forwarding tunnel in the background\nssh -f -N -L local_port:remote_host:remote_port user@ssh_server\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple Tunnels",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple Tunnels",
+              "body": "```bash\n# Create multiple tunnels in a single SSH command\nssh -L 8080:example.com:80 -L 3306:db.example.com:3306 user@ssh_server\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Combining Options",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Combining Options",
+              "body": "```bash\n# In background, no command, allow remote host, local port forward, identity_file\nssh -f -N -g -L 8080:example.com:80 -i ~/.ssh/custom_key user@ssh_server\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [OpenSSH Config File Examples](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/) _(cyberciti.biz)_\n- [ssh_config](https://linux.die.net/man/5/ssh_config) _(linux.die.net)_\n- [man-ssh](https://man7.org/linux/man-pages/man1/ssh.1.html)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

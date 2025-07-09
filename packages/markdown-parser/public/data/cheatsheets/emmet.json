@@ -1,0 +1,199 @@
+{
+  "id": "emmet",
+  "metadata": {
+    "title": "Emmet",
+    "date": "2020-12-14T18:28:43.000Z",
+    "background": "bg-[#95c844]",
+    "tags": [
+      "snippets",
+      "coding",
+      "html",
+      "css",
+      "abbr"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "[Emmet](https://emmet.io/) is a web-developer’s toolkit for boosting HTML & CSS code writing, which allows you to write large HTML code blocks at speed of light using well-known CSS selectors.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Emmet Syntax",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Getting started",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting started",
+              "body": "Let us start to improve your development to the speed of light.\n\n- [Emmet in Visual Studio Code](https://code.visualstudio.com/docs/editor/emmet) _(code.visualstudio.com)_\n- [Emmet 2 for Sublime Text](https://github.com/emmetio/sublime-text-plugin) _(github.com)_\n- [Emmet for Coda](https://emmet.io/download/coda/) _(emmet.io)_\n- [Emmet for Atom](https://github.com/emmetio/emmet-atom#readme) _(github.com)_",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiplication: \\*",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiplication: \\*",
+              "body": "```html\n<ul>\n  <li></li>\n  <li></li>\n  <li></li>\n  <li></li>\n  <li></li>\n</ul>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Child: >",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Child: >",
+              "body": "```html\n<nav>\n  <ul>\n    <li></li>\n  </ul>\n</nav>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Custom attributes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom attributes",
+              "body": "```html\n<p title=\"Hello world\"></p>\n```",
+              "footer": "`td[rowspan=2 colspan=3 title]`\n```html\n<td rowspan=\"2\" colspan=\"3\" title=\"\"></td>\n```\n`[a='value1' b=\"value2\"]`\n```html\n<div a=\"value1\" b=\"value2\"></div>\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Text: {}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Text: {}",
+              "body": "```html\n<a href=\"\">Click me</a>\n```",
+              "footer": "`p>{Click }+a{here}+{ to continue}`\n```html {.wrap}\n<p>Click <a href=\"\">here</a> to continue</p>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ID and CLASS attributes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ID and CLASS attributes",
+              "body": "```html\n<div id=\"header\"></div>\n```",
+              "footer": "`.title`\n```html\n<div class=\"title\"></div>\n```\n`form#search.wide`\n```html\n<form id=\"search\" class=\"wide\"></form>\n```\n`p.class1.class2.class3`\n```html\n<p class=\"class1 class2 class3\"></p>\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Implicit tag names",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Implicit tag names",
+              "body": "```html\n<div class=\"class\"></div>\n```",
+              "footer": "`em>.class`\n```html\n<em><span class=\"class\"></span></em>\n```\n`ul>.class`\n```html\n<ul>\n<li class=\"class\"></li>\n</ul>\n```\n`table>.row>.col`\n```html\n<table>\n<tr class=\"row\">\n<td class=\"col\"></td>\n</tr>\n</table>\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sibling: +",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sibling: +",
+              "body": "```html\n<div></div>\n<p></p>\n<blockquote></blockquote>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Climb-up: ^",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Climb-up: ^",
+              "body": "```html\n<div></div>\n<div>\n  <p><span></span><em></em></p>\n  <blockquote></blockquote>\n</div>\n```",
+              "footer": "`div+div>p>span+em^^bq`\n```html\n<div></div>\n<div>\n<p><span></span><em></em></p>\n</div>\n<blockquote></blockquote>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Grouping: ()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Grouping: ()",
+              "body": "```html\n<div>\n  <header>\n    <ul>\n      <li><a href=\"\"></a></li>\n      <li><a href=\"\"></a></li>\n    </ul>\n  </header>\n  <footer>\n    <p></p>\n  </footer>\n</div>\n```",
+              "footer": "<code>(div>dl>(dt+dd)\\*4)+footer>p</code>\n```html\n<div>\n<dl>\n<dt></dt>\n<dd></dd>\n<dt></dt>\n<dd></dd>\n<dt></dt>\n<dd></dd>\n<dt></dt>\n<dd></dd>\n</dl>\n</div>\n<footer>\n<p></p>\n</footer>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Indexing: $",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Indexing: $",
+              "body": "```html\n<ul>\n  <li class=\"item1\"></li>\n  <li class=\"item2\"></li>\n  <li class=\"item3\"></li>\n</ul>\n```",
+              "footer": "<code>h$[title=item$]{Header $}\\*3</code>\n```html\n<h1 title=\"item1\">Header 1</h1>\n<h2 title=\"item2\">Header 2</h2>\n<h3 title=\"item3\">Header 3</h3>\n```\n<code>ul>li.item$$$\\*3</code>\n```html\n<ul>\n<li class=\"item001\"></li>\n<li class=\"item002\"></li>\n<li class=\"item003\"></li>\n</ul>\n```\n<code>ul>li.item$@-\\*3</code>\n```html\n<ul>\n<li class=\"item3\"></li>\n<li class=\"item2\"></li>\n<li class=\"item1\"></li>\n</ul>\n```\n<code>ul>li.item$@2\\*3</code>\n```html\n<ul>\n<li class=\"item2\"></li>\n<li class=\"item3\"></li>\n<li class=\"item4\"></li>\n</ul>\n```",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see {.cols-1}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see {.cols-1}",
+          "body": "- [Emmet Cheat sheet](https://docs.emmet.io/cheat-sheet/) _(docs.emmet.io)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

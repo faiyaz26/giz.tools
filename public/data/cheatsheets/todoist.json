@@ -1,0 +1,284 @@
+{
+  "id": "todoist",
+  "metadata": {
+    "title": "Todoist",
+    "date": "2022-11-23T16:23:31.696Z",
+    "background": "bg-[#cc4d3b]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 37 keyboard shortcuts found in Todoist\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Task Quick Add",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Task Quick Add",
+              "body": "| Shortcut      | Action                                |\n| ------------- | ------------------------------------- |\n| `@`           | Add a label                           |\n| `#`           | Pick a project                        |\n| `+`           | Add an assignee                       |\n| `p1/p2/p3/p4` | Set a priority level                  |\n| `Ctrl` `M`    | Add a comment to a newly created task |\n| `Alt` `Enter` | Save and go to comments (Win 10 only) |\n| `Tab`         | Open full task editor (Win 10 only)   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`@`",
+                  "action": "Add a label"
+                },
+                {
+                  "shortcut": "`#`",
+                  "action": "Pick a project"
+                },
+                {
+                  "shortcut": "`+`",
+                  "action": "Add an assignee"
+                },
+                {
+                  "shortcut": "`p1/p2/p3/p4`",
+                  "action": "Set a priority level"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Add a comment to a newly created task"
+                },
+                {
+                  "shortcut": "`Alt` `Enter`",
+                  "action": "Save and go to comments (Win 10 only)"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Open full task editor (Win 10 only)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "| Shortcut       | Action                                   |\n| -------------- | ---------------------------------------- |\n| `Ctrl` `Click` | Select and change multiple tasks at once |\n| `Q`            | Add task                                 |\n| `A`            | Add new task at the bottom of the list   |\n| `Shift` `A`    | Add new task at the top of the list      |\n| `/`            | Open search                              |\n| `U`            | Undo last action                         |\n| `F5`           | Manually sync                            |\n| `Home`         | Navigate to default page                 |\n| `PgUp`         | Navigate back in 1-pane/2-pane view      |\n| `PgDown`       | Navigate forward in 1-pane/2-pane view   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Click`",
+                  "action": "Select and change multiple tasks at once"
+                },
+                {
+                  "shortcut": "`Q`",
+                  "action": "Add task"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Add new task at the bottom of the list"
+                },
+                {
+                  "shortcut": "`Shift` `A`",
+                  "action": "Add new task at the top of the list"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Open search"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Undo last action"
+                },
+                {
+                  "shortcut": "`F5`",
+                  "action": "Manually sync"
+                },
+                {
+                  "shortcut": "`Home`",
+                  "action": "Navigate to default page"
+                },
+                {
+                  "shortcut": "`PgUp`",
+                  "action": "Navigate back in 1-pane/2-pane view"
+                },
+                {
+                  "shortcut": "`PgDown`",
+                  "action": "Navigate forward in 1-pane/2-pane view"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Adding or editing tasks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Adding or editing tasks",
+              "body": "| Shortcut        | Action                                                                            |\n| --------------- | --------------------------------------------------------------------------------- |\n| `Esc`           | Cancel current changes                                                            |\n| `Enter`         | Save a newly created task and create a new one below it                           |\n| `Shift` `Enter` | Save changes to an existing task and create a new task below it                   |\n| `Ctrl` `Enter`  | Save a new task or save changes to an existing one and create a new task above it |\n| `Ctrl` `Up`     | Move to the task above the task currently being edited                            |\n| `Ctrl` `Down`   | Move to the task below the task currently being edited                            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Cancel current changes"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Save a newly created task and create a new one below it"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Save changes to an existing task and create a new task below it"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Save a new task or save changes to an existing one and create a new task above it"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up`",
+                  "action": "Move to the task above the task currently being edited"
+                },
+                {
+                  "shortcut": "`Ctrl` `Down`",
+                  "action": "Move to the task below the task currently being edited"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Creating and completing sub-tasks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Creating and completing sub-tasks",
+              "body": "| Shortcut             | Action                                               |\n| -------------------- | ---------------------------------------------------- |\n| `Ctrl` `Alt` `Right` | Increase task indent                                 |\n| `Ctrl` `Alt` `Left`  | Decrease task indent                                 |\n| `Shift` `(click)`    | Complete a sub-task or recurring task and archive it |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Alt` `Right`",
+                  "action": "Increase task indent"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Left`",
+                  "action": "Decrease task indent"
+                },
+                {
+                  "shortcut": "`Shift` `(click)`",
+                  "action": "Complete a sub-task or recurring task and archive it"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sorting tasks inside a project",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sorting tasks inside a project",
+              "body": "| Shortcut | Action           |\n| -------- | ---------------- |\n| `S`      | Sort by date     |\n| `P`      | Sort by priority |\n| `R`      | Sort by assignee |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`S`",
+                  "action": "Sort by date"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Sort by priority"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Sort by assignee"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut           | Action                             |\n| ------------------ | ---------------------------------- |\n| `Ctrl` `1`         | Inbox                              |\n| `Ctrl` `Shift` `1` | Team Inbox (Todoist Business only) |\n| `Ctrl` `2`         | Today                              |\n| `Ctrl` `3`         | Next 7 days                        |\n| `Ctrl` `4`         | Projects                           |\n| `Ctrl` `5`         | Labels                             |\n| `Ctrl` `6`         | Filters                            |\n| `Ctrl` `,`         | Settings                           |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `1`",
+                  "action": "Inbox"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `1`",
+                  "action": "Team Inbox (Todoist Business only)"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Today"
+                },
+                {
+                  "shortcut": "`Ctrl` `3`",
+                  "action": "Next 7 days"
+                },
+                {
+                  "shortcut": "`Ctrl` `4`",
+                  "action": "Projects"
+                },
+                {
+                  "shortcut": "`Ctrl` `5`",
+                  "action": "Labels"
+                },
+                {
+                  "shortcut": "`Ctrl` `6`",
+                  "action": "Filters"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Settings"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Todoist](https://get.todoist.help/hc/en-us/articles/205063212-Keyboard-Shortcuts)\n  _(get.todoist.help)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

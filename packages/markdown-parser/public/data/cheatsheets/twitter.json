@@ -1,0 +1,192 @@
+{
+  "id": "twitter",
+  "metadata": {
+    "title": "Twitter",
+    "date": "2022-11-23T16:23:31.705Z",
+    "background": "bg-[#4894e2]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 26 keyboard shortcuts found on Twitter\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Actions",
+              "body": "| Shortcut       | Action             |\n| -------------- | ------------------ |\n| `N`            | New tweet          |\n| `L`            | Like tweet         |\n| `R`            | Reply to tweet     |\n| `T`            | Retweet            |\n| `M`            | Direct message     |\n| `U`            | Mute account       |\n| `B`            | Block account      |\n| `Enter`        | Open tweet details |\n| `O`            | Expand photos      |\n| `/`            | Search             |\n| `Ctrl` `Enter` | Send tweet         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`N`",
+                  "action": "New tweet"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Like tweet"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Reply to tweet"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Retweet"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Direct message"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Mute account"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Block account"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Open tweet details"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Expand photos"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Search"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Send tweet"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut | Action             |\n| -------- | ------------------ |\n| `?`      | Full keyboard menu |\n| `J`      | Next tweet         |\n| `K`      | Previous tweet     |\n| `Space`  | Page down          |\n| `.`      | Load new tweets    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`?`",
+                  "action": "Full keyboard menu"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Next tweet"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Previous tweet"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Page down"
+                },
+                {
+                  "shortcut": "`.`",
+                  "action": "Load new tweets"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Timelines",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Timelines",
+              "body": "| Shortcut | Action                  |\n| -------- | ----------------------- |\n| `G` `N`  | Home timeline           |\n| `G` `O`  | Moments                 |\n| `G` `N`  | Notifications tab       |\n| `G` `R`  | Mentions                |\n| `G` `P`  | Profile                 |\n| `G` `L`  | Likes tab               |\n| `G` `I`  | Lists tab               |\n| `G` `M`  | Direct messages         |\n| `G` `S`  | Settings and privacy    |\n| `G` `U`  | Go to someone's profile |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `N`",
+                  "action": "Home timeline"
+                },
+                {
+                  "shortcut": "`G` `O`",
+                  "action": "Moments"
+                },
+                {
+                  "shortcut": "`G` `N`",
+                  "action": "Notifications tab"
+                },
+                {
+                  "shortcut": "`G` `R`",
+                  "action": "Mentions"
+                },
+                {
+                  "shortcut": "`G` `P`",
+                  "action": "Profile"
+                },
+                {
+                  "shortcut": "`G` `L`",
+                  "action": "Likes tab"
+                },
+                {
+                  "shortcut": "`G` `I`",
+                  "action": "Lists tab"
+                },
+                {
+                  "shortcut": "`G` `M`",
+                  "action": "Direct messages"
+                },
+                {
+                  "shortcut": "`G` `S`",
+                  "action": "Settings and privacy"
+                },
+                {
+                  "shortcut": "`G` `U`",
+                  "action": "Go to someone's profile"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Twitter](https://help.twitter.com/en/using-twitter/how-to-tweet) _(help.twitter.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

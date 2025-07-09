@@ -1,0 +1,296 @@
+{
+  "id": "asana",
+  "metadata": {
+    "title": "Asana",
+    "date": "2022-11-23T16:23:31.697Z",
+    "background": "bg-[#e0726e]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 40 keyboard shortcuts found in Asana\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "My Tasks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "My Tasks",
+              "body": "| Shortcut  | Action                            |\n| --------- | --------------------------------- |\n| `Tab` `Y` | Mark as Today in your My Tasks    |\n| `Tab` `U` | Mark as Upcoming in your My Tasks |\n| `Tab` `L` | Mark as Later in your My Tasks    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Tab` `Y`",
+                  "action": "Mark as Today in your My Tasks"
+                },
+                {
+                  "shortcut": "`Tab` `U`",
+                  "action": "Mark as Upcoming in your My Tasks"
+                },
+                {
+                  "shortcut": "`Tab` `L`",
+                  "action": "Mark as Later in your My Tasks"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inbox",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inbox",
+              "body": "| Shortcut | Action              |\n| -------- | ------------------- |\n| `K/J`    | Move Up/Down        |\n| `H`      | Jump to Inbox tab   |\n| `S`      | Jump to Archive tab |\n| `F`      | Follow or Unfollow  |\n| `I`      | Archive             |\n| `U`      | Move to Inbox       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`K/J`",
+                  "action": "Move Up/Down"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Jump to Inbox tab"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Jump to Archive tab"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Follow or Unfollow"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Archive"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Move to Inbox"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Task Actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Task Actions",
+              "body": "| Shortcut                 | Action                                        |\n| ------------------------ | --------------------------------------------- |\n| `Enter`                  | New Task                                      |\n| `Tab` `Backspace`        | Delete Selected Task(s)                       |\n| `Backspace`              | Delete current task (when task name is empty) |\n| `Ctrl` `Enter`           | Complete Selected Task(s)                     |\n| `Ctrl` `Up/Down`         | Move Up/Down                                  |\n| `Ctrl` `Shift` `Up/Down` | Jump Up/Down to the next Section              |\n| `Ctrl` `C`               | Copy Selected Tasks                           |\n| `Ctrl` `V`               | Paste Tasks (one per line)                    |\n| `Tab` `M`                | Assign to Me                                  |\n| `Tab` `H`                | Like a Selected Task                          |\n| `:`                      | Create a Section (at the end of a task name)  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Enter`",
+                  "action": "New Task"
+                },
+                {
+                  "shortcut": "`Tab` `Backspace`",
+                  "action": "Delete Selected Task(s)"
+                },
+                {
+                  "shortcut": "`Backspace`",
+                  "action": "Delete current task (when task name is empty)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Complete Selected Task(s)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up/Down`",
+                  "action": "Move Up/Down"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Up/Down`",
+                  "action": "Jump Up/Down to the next Section"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy Selected Tasks"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste Tasks (one per line)"
+                },
+                {
+                  "shortcut": "`Tab` `M`",
+                  "action": "Assign to Me"
+                },
+                {
+                  "shortcut": "`Tab` `H`",
+                  "action": "Like a Selected Task"
+                },
+                {
+                  "shortcut": "`:`",
+                  "action": "Create a Section (at the end of a task name)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut  | Action                                     |\n| --------- | ------------------------------------------ |\n| `Tab` `Z` | Navigate to My Tasks                       |\n| `Tab` `I` | Navigate to Inbox                          |\n| `Tab` `C` | Comment on Selected Task                   |\n| `Tab` `A` | Assign Selected Task                       |\n| `Tab` `D` | Set Due Date                               |\n| `Tab` `F` | Add Follower                               |\n| `Tab` `T` | Add a tag to the task                      |\n| `Tab` `S` | Focus Subtasks                             |\n| `Tab` `/` | Search for a project, tag, person, or task |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Tab` `Z`",
+                  "action": "Navigate to My Tasks"
+                },
+                {
+                  "shortcut": "`Tab` `I`",
+                  "action": "Navigate to Inbox"
+                },
+                {
+                  "shortcut": "`Tab` `C`",
+                  "action": "Comment on Selected Task"
+                },
+                {
+                  "shortcut": "`Tab` `A`",
+                  "action": "Assign Selected Task"
+                },
+                {
+                  "shortcut": "`Tab` `D`",
+                  "action": "Set Due Date"
+                },
+                {
+                  "shortcut": "`Tab` `F`",
+                  "action": "Add Follower"
+                },
+                {
+                  "shortcut": "`Tab` `T`",
+                  "action": "Add a tag to the task"
+                },
+                {
+                  "shortcut": "`Tab` `S`",
+                  "action": "Focus Subtasks"
+                },
+                {
+                  "shortcut": "`Tab` `/`",
+                  "action": "Search for a project, tag, person, or task"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selection",
+              "body": "| Shortcut          | Action                       |\n| ----------------- | ---------------------------- |\n| `Up/Down`         | Change Selection             |\n| `Shift` `(click)` | Select Range                 |\n| `Shift` `Up/Down` | Select Range                 |\n| `Ctrl` `(click)`  | Multi-select Individual Task |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Up/Down`",
+                  "action": "Change Selection"
+                },
+                {
+                  "shortcut": "`Shift` `(click)`",
+                  "action": "Select Range"
+                },
+                {
+                  "shortcut": "`Shift` `Up/Down`",
+                  "action": "Select Range"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click)`",
+                  "action": "Multi-select Individual Task"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Application",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Application",
+              "body": "| Shortcut      | Action                            |\n| ------------- | --------------------------------- |\n| `Ctrl` `/`    | Show Keyboard Shortcuts           |\n| `Tab`         | Expand the right pane             |\n| `Esc`         | Collapse the right pane           |\n| `Tab` `X`     | Enter Focus Mode                  |\n| `Tab` `Q`     | Quick Add                         |\n| `Tab` `Enter` | Post Comment (from comment field) |\n| `Tab` `B`     | What it sounds like               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Show Keyboard Shortcuts"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Expand the right pane"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Collapse the right pane"
+                },
+                {
+                  "shortcut": "`Tab` `X`",
+                  "action": "Enter Focus Mode"
+                },
+                {
+                  "shortcut": "`Tab` `Q`",
+                  "action": "Quick Add"
+                },
+                {
+                  "shortcut": "`Tab` `Enter`",
+                  "action": "Post Comment (from comment field)"
+                },
+                {
+                  "shortcut": "`Tab` `B`",
+                  "action": "What it sounds like"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Asana](https://asana.com/guide/help/faq/shortcuts) _(asana.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

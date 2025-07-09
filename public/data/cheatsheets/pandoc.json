@@ -1,0 +1,78 @@
+{
+  "id": "pandoc",
+  "metadata": {
+    "title": "Pandoc",
+    "date": "2023-03-21T13:26:00.000Z",
+    "background": "bg-red-400",
+    "tags": [
+      "convert",
+      "document",
+      "utility"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "[Pandoc](https://pandoc.org) is a document converter, this pandoc cheat sheet contains pandoc commands and some common pandoc tricks.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Pandoc Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pandoc Usage",
+              "body": "",
+              "footer": "Syntax\n\n```shell script\n$ pandoc -s [source file] -o [output file]\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Pandoc examples",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "LaTeX to MS Word",
+          "level": 3,
+          "cards": [
+            {
+              "title": "LaTeX to MS Word",
+              "body": "```\n.tex to .docx with default citations\n```",
+              "footer": "shell script\n$ pandoc -s file.tex --citeproc --bibliography=bib_library.bib -o file.docx\n```\n.tex to .docx with specific citations\n```shell script\n$ pandoc -s file.tex --citeproc --bibliography=bib_library.bib --csl=apa.csl -o file.docx\n```\nGet `.csl` file from [here](https://github.com/citation-style-language/styles)\n.tex to .docx with cross references\n```shell script\n$ pandoc -s file.tex --filter pandoc-crossref -o file.docx\n```\nGet the filter `pandoc-crossref` from [here](https://github.com/lierdakil/pandoc-crossref/releases)",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see {.cols-1}",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see {.cols-1}",
+          "body": "- [pandoc examples](https://pandoc.org/demos.html)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

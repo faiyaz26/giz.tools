@@ -1,0 +1,352 @@
+{
+  "id": "gnome-desktop",
+  "metadata": {
+    "title": "Gnome Desktop",
+    "date": "2024-06-05T16:23:31.705Z",
+    "background": "bg-[#5885c9]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for Gnome Desktop\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Actions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Actions",
+              "body": "| Shortcut      | Action              |\n| ------------- | ------------------- |\n| `Alt+Super+8` | Turn zoom on or off |\n| `Alt+Super+=` | Zoom in             |\n| `Alt+Super+-` | Zoom out            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt+Super+8`",
+                  "action": "Turn zoom on or off"
+                },
+                {
+                  "shortcut": "`Alt+Super+=`",
+                  "action": "Zoom in"
+                },
+                {
+                  "shortcut": "`Alt+Super+-`",
+                  "action": "Zoom out"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Launchers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Launchers",
+              "body": "| Shortcut     | Action              |\n| ------------ | ------------------- |\n| `Super+F1`   | Launch Help Browser |\n| `Ctrl+Alt+T` | Launch Terminal     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Super+F1`",
+                  "action": "Launch Help Browser"
+                },
+                {
+                  "shortcut": "`Ctrl+Alt+T`",
+                  "action": "Launch Terminal"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Screenshots",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Screenshots",
+              "body": "| Shortcut           | Action                            |\n| ------------------ | --------------------------------- |\n| `Shift+Ctrl+Alt+R` | Record a screencast interactively |\n| `Shift+Print`      | Take a screenshot                 |\n| `Print`            | Take a screenshot interactively   |\n| `Alt+Print`        | Take a screenshot of a window     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift+Ctrl+Alt+R`",
+                  "action": "Record a screencast interactively"
+                },
+                {
+                  "shortcut": "`Shift+Print`",
+                  "action": "Take a screenshot"
+                },
+                {
+                  "shortcut": "`Print`",
+                  "action": "Take a screenshot interactively"
+                },
+                {
+                  "shortcut": "`Alt+Print`",
+                  "action": "Take a screenshot of a window"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "System",
+          "level": 3,
+          "cards": [
+            {
+              "title": "System",
+              "body": "| Shortcut       | Action                         |\n| -------------- | ------------------------------ |\n| `Super+N`      | Focus the active notification  |\n| `Super+L`      | Lock screen                    |\n| `Ctrl+Alt+Del` | Log out                        |\n| `Super+F10`    | Open the application menu      |\n| `Super+Escape` | Restore the keyboard shortcuts |\n| `Super+A`      | Show all applications          |\n| `Super+V`      | Show the notification list     |\n| `Super+S`      | Show the overview              |\n| `Alt+F2`       | Show the run command prompt    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Super+N`",
+                  "action": "Focus the active notification"
+                },
+                {
+                  "shortcut": "`Super+L`",
+                  "action": "Lock screen"
+                },
+                {
+                  "shortcut": "`Ctrl+Alt+Del`",
+                  "action": "Log out"
+                },
+                {
+                  "shortcut": "`Super+F10`",
+                  "action": "Open the application menu"
+                },
+                {
+                  "shortcut": "`Super+Escape`",
+                  "action": "Restore the keyboard shortcuts"
+                },
+                {
+                  "shortcut": "`Super+A`",
+                  "action": "Show all applications"
+                },
+                {
+                  "shortcut": "`Super+V`",
+                  "action": "Show the notification list"
+                },
+                {
+                  "shortcut": "`Super+S`",
+                  "action": "Show the overview"
+                },
+                {
+                  "shortcut": "`Alt+F2`",
+                  "action": "Show the run command prompt"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Typing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Typing",
+              "body": "| Shortcut            | Action                          |\n| ------------------- | ------------------------------- |\n| `Super+space`       | Switch to next typing source    |\n| `Shift+Super+Space` | Switch to previous input source |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Super+space`",
+                  "action": "Switch to next typing source"
+                },
+                {
+                  "shortcut": "`Shift+Super+Space`",
+                  "action": "Switch to previous input source"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Windows",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Windows",
+              "body": "| Shortcut      | Action                    |\n| ------------- | ------------------------- |\n| `Alt+Space`   | Activate the window menu  |\n| `Alt+F1`      | Close the window          |\n| `Super+H`     | Hide window               |\n| `Super+Up`    | Maximize window           |\n| `Alt+F7`      | Move window               |\n| `Alt+F8`      | Resize Window             |\n| `Super+Down`  | Restore window            |\n| `Alt+F10`     | Toggle maximization state |\n| `Super+Left`  | View split on left        |\n| `Super+Right` | View split on right       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt+Space`",
+                  "action": "Activate the window menu"
+                },
+                {
+                  "shortcut": "`Alt+F1`",
+                  "action": "Close the window"
+                },
+                {
+                  "shortcut": "`Super+H`",
+                  "action": "Hide window"
+                },
+                {
+                  "shortcut": "`Super+Up`",
+                  "action": "Maximize window"
+                },
+                {
+                  "shortcut": "`Alt+F7`",
+                  "action": "Move window"
+                },
+                {
+                  "shortcut": "`Alt+F8`",
+                  "action": "Resize Window"
+                },
+                {
+                  "shortcut": "`Super+Down`",
+                  "action": "Restore window"
+                },
+                {
+                  "shortcut": "`Alt+F10`",
+                  "action": "Toggle maximization state"
+                },
+                {
+                  "shortcut": "`Super+Left`",
+                  "action": "View split on left"
+                },
+                {
+                  "shortcut": "`Super+Right`",
+                  "action": "View split on right"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut                | Action                                 |\n| ----------------------- | -------------------------------------- |\n| `Ctrl+Super+D`          | Hide all normal windows                |\n| `Super+Page Up`         | Move to workspace on the left          |\n| `Super+Page Down`       | Move to workspace on the right         |\n| `Shift+Super+Down`      | Move window one monitor down           |\n| `Shift+Super+Left`      | Move window one monitor to the left    |\n| `Shift+Super+Right`     | Move window one monitor to the right   |\n| `Shift+Super+Up`        | Move window one monitor up             |\n| `Shift+Super+Page Up`   | Move window one workspace to the left  |\n| `Shift+Super+Page Down` | Move window one workspace to the right |\n| `Shift+Super+End`       | Move window to last workspace          |\n| `Shift+Super+Home`      | Move window to workspace 1             |\n| `Super+Tab`             | Switch applications                    |\n| `Ctrl+Alt+Tab`          | Switch system controls                 |\n| `Ctrl+Alt+Escape`       | Switch system controls directly        |\n| `Super+End`             | Switch to last workspace               |\n| `Super+Home`            | Switch to workspace 1                  |\n| `Alt+Tab`               | Switch windows                         |\n| `Alt+Escape`            | Switch windows directly                |\n| `Alt+F6`                | Switch windows of an app directly      |\n| `Super+`                | Switch windows of an application       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl+Super+D`",
+                  "action": "Hide all normal windows"
+                },
+                {
+                  "shortcut": "`Super+Page Up`",
+                  "action": "Move to workspace on the left"
+                },
+                {
+                  "shortcut": "`Super+Page Down`",
+                  "action": "Move to workspace on the right"
+                },
+                {
+                  "shortcut": "`Shift+Super+Down`",
+                  "action": "Move window one monitor down"
+                },
+                {
+                  "shortcut": "`Shift+Super+Left`",
+                  "action": "Move window one monitor to the left"
+                },
+                {
+                  "shortcut": "`Shift+Super+Right`",
+                  "action": "Move window one monitor to the right"
+                },
+                {
+                  "shortcut": "`Shift+Super+Up`",
+                  "action": "Move window one monitor up"
+                },
+                {
+                  "shortcut": "`Shift+Super+Page Up`",
+                  "action": "Move window one workspace to the left"
+                },
+                {
+                  "shortcut": "`Shift+Super+Page Down`",
+                  "action": "Move window one workspace to the right"
+                },
+                {
+                  "shortcut": "`Shift+Super+End`",
+                  "action": "Move window to last workspace"
+                },
+                {
+                  "shortcut": "`Shift+Super+Home`",
+                  "action": "Move window to workspace 1"
+                },
+                {
+                  "shortcut": "`Super+Tab`",
+                  "action": "Switch applications"
+                },
+                {
+                  "shortcut": "`Ctrl+Alt+Tab`",
+                  "action": "Switch system controls"
+                },
+                {
+                  "shortcut": "`Ctrl+Alt+Escape`",
+                  "action": "Switch system controls directly"
+                },
+                {
+                  "shortcut": "`Super+End`",
+                  "action": "Switch to last workspace"
+                },
+                {
+                  "shortcut": "`Super+Home`",
+                  "action": "Switch to workspace 1"
+                },
+                {
+                  "shortcut": "`Alt+Tab`",
+                  "action": "Switch windows"
+                },
+                {
+                  "shortcut": "`Alt+Escape`",
+                  "action": "Switch windows directly"
+                },
+                {
+                  "shortcut": "`Alt+F6`",
+                  "action": "Switch windows of an app directly"
+                },
+                {
+                  "shortcut": "`Super+`",
+                  "action": "Switch windows of an application"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Gnome Shell Cheatsheet](https://wiki.gnome.org/Projects/GnomeShell/CheatSheet) _(www.gnome.org)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

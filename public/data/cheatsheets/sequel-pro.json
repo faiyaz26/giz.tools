@@ -1,0 +1,420 @@
+{
+  "id": "sequel-pro",
+  "metadata": {
+    "title": "Sequel Pro",
+    "date": "2022-11-23T16:23:31.701Z",
+    "background": "bg-[#ca9c3d]",
+    "label": "Mac",
+    "tags": [
+      null,
+      "mac"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 71 keyboard shortcuts found in Sequel Pro. This application is MacOS-only.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Main Tabs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Main Tabs",
+              "body": "| Shortcut  | Action          |\n| --------- | --------------- |\n| `Cmd` `1` | Table Structure |\n| `Cmd` `2` | Table Content   |\n| `Cmd` `3` | Table Relations |\n| `Cmd` `4` | Table Info      |\n| `Cmd` `5` | Custom Query    |\n| `Cmd` `6` | Table Triggers  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `1`",
+                  "action": "Table Structure"
+                },
+                {
+                  "shortcut": "`Cmd` `2`",
+                  "action": "Table Content"
+                },
+                {
+                  "shortcut": "`Cmd` `3`",
+                  "action": "Table Relations"
+                },
+                {
+                  "shortcut": "`Cmd` `4`",
+                  "action": "Table Info"
+                },
+                {
+                  "shortcut": "`Cmd` `5`",
+                  "action": "Custom Query"
+                },
+                {
+                  "shortcut": "`Cmd` `6`",
+                  "action": "Table Triggers"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General Shortcuts",
+              "body": "| Shortcut               | Action                                     |\n| ---------------------- | ------------------------------------------ |\n| `Cmd` `N`              | New window (connection file)               |\n| `Cmd` `T`              | New tab (connection file)                  |\n| `Cmd` `Shift` `A`      | Add connection to favorites                |\n| `Cmd` `O`              | Open (connection file or SQL file)         |\n| `Cmd` `Opt` `O`        | Open current connection file in new window |\n| `Cmd` `S`              | Save (connection file)                     |\n| `Cmd` `Shift` `S`      | Save as (connection file)                  |\n| `Cmd` `Ctrl` `S`       | Save query                                 |\n| `Cmd` `W`              | Close (connection file)                    |\n| `Cmd` `Opt` `W`        | Close all (connection file)                |\n| `Cmd` `P`              | Print                                      |\n| `Cmd` `Shift` `I`      | Import                                     |\n| `Cmd` `Shift` `K`      | Show console window                        |\n| `Cmd` `K`              | Clear console                              |\n| `Ctrl` `Opt` `Left`    | Back in history                            |\n| `Ctrl` `Opt` `Right`   | Forward in history                         |\n| `Ctrl` `Tab`           | Select next tab                            |\n| `Ctrl` `Shift` `Tab`   | Select previous tab                        |\n| `Ctrl` `Shift` `N`     | Insert NULL value                          |\n| `Cmd` `Shift` `C`      | Copy create table syntax                   |\n| `Cmd` `Opt` `S`        | Show create table syntax                   |\n| `Cmd` `Shift` `R`      | Refresh databases                          |\n| `Cmd` `Shift` `D`      | Choose database                            |\n| `Cmd` `Shift` `V`      | Show server variables                      |\n| `Cmd` `Opt` `P`        | Show server processes                      |\n| `Cmd` `Ctrl` `R`       | Refresh tables                             |\n| `Cmd` `Shift` `F`      | Flush privileges                           |\n| `Cmd` `U`              | User accounts...                           |\n| `Cmd` `C`              | Copy selection or selected row(s)          |\n| `Cmd` `Opt` `C`        | Copy selected row(s) with column names     |\n| `Cmd` `Opt` `Ctrl` `C` | Copy selected row(s) as SQL INSERT         |\n| `Cmd` `Shift` `T`      | Show/hide toolbar                          |\n| `Cmd` `Ctrl` `F`       | Filter table content                       |\n| `Cmd` `Opt` `Ctrl` `F` | Filter tables                              |\n| `Cmd` `Opt` `Ctrl` `B` | Bundle editor                              |\n| `Cmd` `Opt` `Ctrl` `N` | Navigator                                  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `N`",
+                  "action": "New window (connection file)"
+                },
+                {
+                  "shortcut": "`Cmd` `T`",
+                  "action": "New tab (connection file)"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `A`",
+                  "action": "Add connection to favorites"
+                },
+                {
+                  "shortcut": "`Cmd` `O`",
+                  "action": "Open (connection file or SQL file)"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `O`",
+                  "action": "Open current connection file in new window"
+                },
+                {
+                  "shortcut": "`Cmd` `S`",
+                  "action": "Save (connection file)"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `S`",
+                  "action": "Save as (connection file)"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `S`",
+                  "action": "Save query"
+                },
+                {
+                  "shortcut": "`Cmd` `W`",
+                  "action": "Close (connection file)"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `W`",
+                  "action": "Close all (connection file)"
+                },
+                {
+                  "shortcut": "`Cmd` `P`",
+                  "action": "Print"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `I`",
+                  "action": "Import"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `K`",
+                  "action": "Show console window"
+                },
+                {
+                  "shortcut": "`Cmd` `K`",
+                  "action": "Clear console"
+                },
+                {
+                  "shortcut": "`Ctrl` `Opt` `Left`",
+                  "action": "Back in history"
+                },
+                {
+                  "shortcut": "`Ctrl` `Opt` `Right`",
+                  "action": "Forward in history"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Select next tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Tab`",
+                  "action": "Select previous tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Insert NULL value"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `C`",
+                  "action": "Copy create table syntax"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `S`",
+                  "action": "Show create table syntax"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `R`",
+                  "action": "Refresh databases"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `D`",
+                  "action": "Choose database"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `V`",
+                  "action": "Show server variables"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `P`",
+                  "action": "Show server processes"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `R`",
+                  "action": "Refresh tables"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `F`",
+                  "action": "Flush privileges"
+                },
+                {
+                  "shortcut": "`Cmd` `U`",
+                  "action": "User accounts..."
+                },
+                {
+                  "shortcut": "`Cmd` `C`",
+                  "action": "Copy selection or selected row(s)"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `C`",
+                  "action": "Copy selected row(s) with column names"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Ctrl` `C`",
+                  "action": "Copy selected row(s) as SQL INSERT"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `T`",
+                  "action": "Show/hide toolbar"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `F`",
+                  "action": "Filter table content"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Ctrl` `F`",
+                  "action": "Filter tables"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Ctrl` `B`",
+                  "action": "Bundle editor"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Ctrl` `N`",
+                  "action": "Navigator"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Select",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Select",
+              "body": "| Shortcut          | Action                    |\n| ----------------- | ------------------------- |\n| `Ctrl` `W`        | Select current word       |\n| `Ctrl` `L`        | Select current line       |\n| `Cmd` `Shift` `B` | Select enclosing brackets |\n| `Cmd` `A`         | Select all                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Select current word"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Select current line"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `B`",
+                  "action": "Select enclosing brackets"
+                },
+                {
+                  "shortcut": "`Cmd` `A`",
+                  "action": "Select all"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Table Structure Tab",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Table Structure Tab",
+              "body": "| Shortcut        | Action                   |\n| --------------- | ------------------------ |\n| `Cmd` `Opt` `A` | Add a new field          |\n| `Del`           | Delete selected field    |\n| `Cmd` `D`       | Duplicate selected field |\n| `Cmd` `R`       | Refresh table structure  |\n| `Cmd` `4`       | Edit table details       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Opt` `A`",
+                  "action": "Add a new field"
+                },
+                {
+                  "shortcut": "`Del`",
+                  "action": "Delete selected field"
+                },
+                {
+                  "shortcut": "`Cmd` `D`",
+                  "action": "Duplicate selected field"
+                },
+                {
+                  "shortcut": "`Cmd` `R`",
+                  "action": "Refresh table structure"
+                },
+                {
+                  "shortcut": "`Cmd` `4`",
+                  "action": "Edit table details"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Table Content Tab",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Table Content Tab",
+              "body": "| Shortcut        | Action                 |\n| --------------- | ---------------------- |\n| `Cmd` `Opt` `A` | Add a new row          |\n| `Del`           | Delete selected row(s) |\n| `Cmd` `D`       | Duplicate selected row |\n| `Cmd` `R`       | Refresh table contents |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Opt` `A`",
+                  "action": "Add a new row"
+                },
+                {
+                  "shortcut": "`Del`",
+                  "action": "Delete selected row(s)"
+                },
+                {
+                  "shortcut": "`Cmd` `D`",
+                  "action": "Duplicate selected row"
+                },
+                {
+                  "shortcut": "`Cmd` `R`",
+                  "action": "Refresh table contents"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Custom Query Tab",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom Query Tab",
+              "body": "| Shortcut        | Action                                                              |\n| --------------- | ------------------------------------------------------------------- |\n| `Cmd` `Opt` `R` | Run all queries (1.0+) / Run current query or selection (<=0.9.9.1) |\n| `Cmd` `R`       | Run current query or selection (1.0+) / Run all queries (<=0.9.9.1) |\n| `Cmd` `[`       | Shift line or selection rightwards                                  |\n| `Cmd` `]`       | Shift line or selection leftwards                                   |\n| `Cmd` `/`       | Toggle comment line or selection                                    |\n| `Cmd` `Opt` `/` | Toggle comment current query                                        |\n| `F5`            | Spell checker completion (narrow-down list)                         |\n| `Ctrl` `Y`      | Select current query                                                |\n| `Ctrl` `H`      | Show MySQL help for current word or selection                       |\n| `Cmd` `Opt` `F` | Open query favorites popup menu                                     |\n| `Cmd` `Opt` `Y` | Open query history popup menu                                       |\n| `Ctrl` `Up`     | Insert previous history item (successively)                         |\n| `Ctrl` `Down`   | Insert next history item (successively)                             |\n| `Cmd` `Opt` `1` | Show all database names as completion list                          |\n| `Cmd` `Opt` `2` | Show all table and view names as completion list                    |\n| `Cmd` `Opt` `3` | Show all table names from current database as completion list       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `Opt` `R`",
+                  "action": "Run all queries (1.0+) / Run current query or selection (<=0.9.9.1)"
+                },
+                {
+                  "shortcut": "`Cmd` `R`",
+                  "action": "Run current query or selection (1.0+) / Run all queries (<=0.9.9.1)"
+                },
+                {
+                  "shortcut": "`Cmd` `[`",
+                  "action": "Shift line or selection rightwards"
+                },
+                {
+                  "shortcut": "`Cmd` `]`",
+                  "action": "Shift line or selection leftwards"
+                },
+                {
+                  "shortcut": "`Cmd` `/`",
+                  "action": "Toggle comment line or selection"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `/`",
+                  "action": "Toggle comment current query"
+                },
+                {
+                  "shortcut": "`F5`",
+                  "action": "Spell checker completion (narrow-down list)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Select current query"
+                },
+                {
+                  "shortcut": "`Ctrl` `H`",
+                  "action": "Show MySQL help for current word or selection"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `F`",
+                  "action": "Open query favorites popup menu"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Y`",
+                  "action": "Open query history popup menu"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up`",
+                  "action": "Insert previous history item (successively)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Down`",
+                  "action": "Insert next history item (successively)"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `1`",
+                  "action": "Show all database names as completion list"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `2`",
+                  "action": "Show all table and view names as completion list"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `3`",
+                  "action": "Show all table names from current database as completion list"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Sequel Pro](https://sequelpro.com/docs/get-started/keyboard-shortcuts) _(sequelpro.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

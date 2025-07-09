@@ -1,0 +1,192 @@
+{
+  "id": "fortnite",
+  "metadata": {
+    "title": "Fortnite",
+    "date": "2022-11-23T16:23:31.699Z",
+    "background": "bg-[#8d2fc9]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 26 default keyboard shortcuts found in Fortnite\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Main Controls",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Main Controls",
+              "body": "| Shortcut     | Action                                    |\n| ------------ | ----------------------------------------- |\n| `R`          | Reload                                    |\n| `Q`          | Switch between combat mode and build mode |\n| `Space`      | Jump                                      |\n| `Left Ctrl`  | Crouch                                    |\n| `Left Shift` | Sprint                                    |\n| `=`          | Auto run                                  |\n| `W`          | Move forward                              |\n| `S`          | Move backwards                            |\n| `A`          | Move left                                 |\n| `D`          | Move right                                |\n| `M`          | Toggle map                                |\n| `Tab`        | Toggle inventory                          |\n| `E`          | Use or interact with object               |\n| `F`          | Select pickaxe                            |\n| `1-5`        | Select weapon slot 1-5                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`R`",
+                  "action": "Reload"
+                },
+                {
+                  "shortcut": "`Q`",
+                  "action": "Switch between combat mode and build mode"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Jump"
+                },
+                {
+                  "shortcut": "`Left Ctrl`",
+                  "action": "Crouch"
+                },
+                {
+                  "shortcut": "`Left Shift`",
+                  "action": "Sprint"
+                },
+                {
+                  "shortcut": "`=`",
+                  "action": "Auto run"
+                },
+                {
+                  "shortcut": "`W`",
+                  "action": "Move forward"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Move backwards"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Move left"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Move right"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Toggle map"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Toggle inventory"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Use or interact with object"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Select pickaxe"
+                },
+                {
+                  "shortcut": "`1-5`",
+                  "action": "Select weapon slot 1-5"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Building",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Building",
+              "body": "| Shortcut | Action                                                  |\n| -------- | ------------------------------------------------------- |\n| `R`      | Rotate building piece                                   |\n| `Z`      | Wall mode                                               |\n| `X`      | Floor mode                                              |\n| `C`      | Stair mode                                              |\n| `V`      | Pyramid mode                                            |\n| `Y`      | Trap mode                                               |\n| `F3`     | Select trap                                             |\n| `H`      | Upgrade building piece of repair damaged building piece |\n| `G`      | Edit building piece                                     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`R`",
+                  "action": "Rotate building piece"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Wall mode"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Floor mode"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Stair mode"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Pyramid mode"
+                },
+                {
+                  "shortcut": "`Y`",
+                  "action": "Trap mode"
+                },
+                {
+                  "shortcut": "`F3`",
+                  "action": "Select trap"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Upgrade building piece of repair damaged building piece"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Edit building piece"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Communication",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Communication",
+              "body": "| Shortcut | Action |\n| -------- | ------ |\n| `Enter`  | Chat   |\n| `B`      | Emote  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Chat"
+                },
+                {
+                  "shortcut": "`B`",
+                  "action": "Emote"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Fortnite](https://fortnite.gamepedia.com/Controls) _(fortnite.gamepedia.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,687 @@
+{
+  "id": "java",
+  "metadata": {
+    "title": "Java",
+    "date": "2021-03-10T19:50:01.000Z",
+    "background": "bg-[#d33731]",
+    "tags": [
+      "object-oriented",
+      "class"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This cheat sheet is a crash course for Java beginners and help review the basic syntax of the Java language.\n",
+    "plugins": [
+      "tooltip",
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Hello.java",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hello.java",
+              "body": "```java\npublic class Hello {\n  // main method\n  public static void main(String[] args)\n  {\n    // Output: Hello, world!\n    System.out.println(\"Hello, world!\");\n  }\n}\n```",
+              "footer": "Compiling and running\n```bash\n$ javac Hello.java\n$ java Hello\nHello, world!\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```java\nint num = 5;\nfloat floatNum = 5.99f;\nchar letter = 'D';\nboolean bool = true;\nString site = \"cheatsheets.zip\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Primitive Data Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Primitive Data Types",
+              "body": "| Data Type | Size   | Default | Range               |\n| --------- | ------ | ------- | :------------------ |\n| `byte`    | 1 byte | 0       | -128 ^to^ 127       |\n| `short`   | 2 byte | 0       | -2^15^ ^to^ 2^15^-1 |\n| `int`     | 4 byte | 0       | -2^31^ ^to^ 2^31^-1 |\n| `long`    | 8 byte | 0       | -2^63^ ^to^ 2^63^-1 |\n| `float`   | 4 byte | 0.0f    | _N/A_               |\n| `double`  | 8 byte | 0.0d    | _N/A_               |\n| `char`    | 2 byte | \\\\u0000 | 0 ^to^ 65535        |\n| `boolean` | _N/A_  | false   | true / false        |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings",
+              "body": "```java\nString first = \"John\";\nString last = \"Doe\";\nString name = first + \" \" + last;\nSystem.out.println(name);\n```",
+              "footer": "See: [Strings](#java-strings)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loops",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loops",
+              "body": "```java\nString word = \"CheatSheets\";\nfor (char c: word.toCharArray()) {\n  System.out.print(c + \"-\");\n}\n// Outputs: C-h-e-a-t-S-h-e-e-t-s-\n```",
+              "footer": "See: [Loops](#java-loops)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays",
+              "body": "```java\nchar[] chars = new char[10];\nchars[0] = 'a'\nchars[1] = 'b'\n\nString[] letters = {\"A\", \"B\", \"C\"};\nint[] mylist = {100, 200};\nboolean[] answers = {true, false};\n```",
+              "footer": "See: [Arrays](#java-arrays)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Swap",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Swap",
+              "body": "```java\nint a = 1;\nint b = 2;\nSystem.out.println(a + \" \" + b); // 1 2\n\nint temp = a;\na = b;\nb = temp;\nSystem.out.println(a + \" \" + b); // 2 1\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Type Casting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Type Casting",
+              "body": "```java\n// Widening\n// byte<short<int<long<float<double\nint i = 10;\nlong l = i;               // 10\n\n// Narrowing\ndouble d = 10.02;\nlong l = (long)d;         // 10\n\nString.valueOf(10);       // \"10\"\nInteger.parseInt(\"10\");   // 10\nDouble.parseDouble(\"10\"); // 10.0\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Conditionals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conditionals",
+              "body": "```java\nint j = 10;\n\nif (j == 10) {\n  System.out.println(\"I get printed\");\n} else if (j > 10) {\n  System.out.println(\"I don't\");\n} else {\n  System.out.println(\"I also don't\");\n}\n```",
+              "footer": "See: [Conditionals](#java-conditionals)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "User Input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "User Input",
+              "body": "```java\nScanner in = new Scanner(System.in);\nString str = in.nextLine();\nSystem.out.println(str);\n\nint num = in.nextInt();\nSystem.out.println(num);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Java Strings",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic",
+              "body": "```java\nString str1 = \"value\";\nString str2 = new String(\"value\");\nString str3 = String.valueOf(123);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Concatenation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Concatenation",
+              "body": "```java\nString s = 3 + \"str\" + 3;     // 3str3\nString s = 3 + 3 + \"str\";     // 6str\nString s = \"3\" + 3 + \"str\";   // 33str\nString s = \"3\" + \"3\" + \"23\";  // 3323\nString s = \"\" + 3 + 3 + \"23\"; // 3323\nString s = 3 + 3 + 23;        // Incompatible types\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "StringBuilder",
+          "level": 3,
+          "cards": [
+            {
+              "title": "StringBuilder",
+              "body": "```java\n┌───┬───┬───┬───┬───┬───┬───┬───┬───┐\n|   |   |   |   |   |   |   |   |   |\n└───┴───┴───┴───┴───┴───┴───┴───┴───┘\n0   1   2   3   4   5   6   7   8   9\n```",
+              "footer": "`sb.append(\"QuickRef\");`\n```java\n┌───┬───┬───┬───┬───┬───┬───┬───┬───┐\n| Q | u | i | c | k | R | e | f |   |\n└───┴───┴───┴───┴───┴───┴───┴───┴───┘\n0   1   2   3   4   5   6   7   8   9\n```\n`sb.delete(5, 9);`\n```java\n┌───┬───┬───┬───┬───┬───┬───┬───┬───┐\n| Q | u | i | c | k |   |   |   |   |\n└───┴───┴───┴───┴───┴───┴───┴───┴───┘\n0   1   2   3   4   5   6   7   8   9\n```\n`sb.insert(0, \"My \");`\n```java\n┌───┬───┬───┬───┬───┬───┬───┬───┬───┐\n| M | y |   | Q | u | i | c | k |   |\n└───┴───┴───┴───┴───┴───┴───┴───┴───┘\n0   1   2   3   4   5   6   7   8   9\n```\n`sb.append(\"!\");`\n```java\n┌───┬───┬───┬───┬───┬───┬───┬───┬───┐\n| M | y |   | Q | u | i | c | k | ! |\n└───┴───┴───┴───┴───┴───┴───┴───┴───┘\n0   1   2   3   4   5   6   7   8   9\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comparison",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comparison",
+              "body": "```java\nString s1 = new String(\"cheatsheets.zip\");\nString s2 = new String(\"cheatsheets.zip\");\n\ns1 == s2          // false\ns1.equals(s2)     // true\n\n\"AB\".equalsIgnoreCase(\"ab\")  // true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Manipulation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Manipulation",
+              "body": "```java\nString str = \"Abcd\";\n\nstr.toUpperCase();     // ABCD\nstr.toLowerCase();     // abcd\nstr.concat(\"#\");       // Abcd#\nstr.replace(\"b\", \"-\"); // A-cd\n\n\"  abc \".trim();       // abc\n\"ab\".toCharArray();    // {'a', 'b'}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Information",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Information",
+              "body": "```java\nString str = \"abcd\";\n\nstr.charAt(2);       // c\nstr.indexOf(\"a\")     // 0\nstr.indexOf(\"z\")     // -1\nstr.length();        // 4\nstr.toString();      // abcd\nstr.substring(2);    // cd\nstr.substring(2,3);  // c\nstr.contains(\"c\");   // true\nstr.endsWith(\"d\");   // true\nstr.startsWith(\"a\"); // true\nstr.isEmpty();       // false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Immutable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Immutable",
+              "body": "```java\nString str = \"hello\";\nstr.concat(\"world\");\n\n// Outputs: hello\nSystem.out.println(str);\n```",
+              "footer": "```java\nString str = \"hello\";\nString concat = str.concat(\"world\");\n// Outputs: helloworld\nSystem.out.println(concat);\n```\nOnce created cannot be modified, any modification creates a new String",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Java Arrays",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Declare",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Declare",
+              "body": "```java\nint[] a1;\nint[] a2 = {1, 2, 3};\nint[] a3 = new int[]{1, 2, 3};\n\nint[] a4 = new int[3];\na4[0] = 1;\na4[2] = 2;\na4[3] = 3;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Modify",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Modify",
+              "body": "```java\nint[] a = {1, 2, 3};\nSystem.out.println(a[0]); // 1\n\na[0] = 9;\nSystem.out.println(a[0]); // 9\n\nSystem.out.println(a.length); // 3\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loop (Read & Modify)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loop (Read & Modify)",
+              "body": "```java\nint[] arr = {1, 2, 3};\nfor (int i=0; i < arr.length; i++) {\n    arr[i] = arr[i] * 2;\n    System.out.print(arr[i] + \" \");\n}\n// Outputs: 2 4 6\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loop (Read)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loop (Read)",
+              "body": "```java\nString[] arr = {\"a\", \"b\", \"c\"};\nfor (String a: arr) {\n    System.out.print(a + \" \");\n}\n// Outputs: a b c\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multidimensional Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multidimensional Arrays",
+              "body": "```java\nint[][] matrix = { {1, 2, 3}, {4, 5} };\n\nint x = matrix[1][0];  // 4\n// [[1, 2, 3], [4, 5]]\nArrays.deepToString(matrix);\n\nint[][] a = matrix;\nfor (int i = 0; i < a.length; ++i) {\n  for(int j = 0; j < a[i].length; ++j) {\n    System.out.println(a[i][j]);\n  }\n}\n// Outputs: 1 2 3 4 5 6 7\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sort",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sort",
+              "body": "```java\nchar[] chars = {'b', 'a', 'c'};\nArrays.sort(chars);\n\n// [a, b, c]\nArrays.toString(chars);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Java Conditionals",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operators",
+              "body": "- <a data-tooltip=\"Additive operator (also used for String concatenation)\">+</a>\n- <a data-tooltip=\"Subtraction operator\">-</a>\n- <a data-tooltip=\"Multiplication operator\">\\*</a>\n- <a data-tooltip=\"Division operator\">/</a>\n- <a data-tooltip=\"Remainder operator\">%</a>\n- <a data-tooltip=\"Simple assignment operator\">=</a>\n- <a data-tooltip=\"Increment operator; increments a value by 1\">++</a>\n- <a data-tooltip=\"Decrement operator; decrements a value by 1\">--</a>\n- <a data-tooltip=\"Logical complement operator; inverts the value of a boolean\">!</a>\n\n{.marker-none .cols-4}\n\n- <a data-tooltip=\"Equal to\">==</a>\n- <a data-tooltip=\"Not equal to\">!=</a>\n- <a data-tooltip=\"Greater than\">></a>\n- <a data-tooltip=\"Greater than or equal to\">>=</a>\n- <a data-tooltip=\"Less than\"><</a>\n- <a data-tooltip=\"Less than or equal to\"><=</a>\n\n{.marker-none .cols-4}\n\n- <a data-tooltip=\"Conditional-AND\">&&</a>\n- <a data-tooltip=\"Conditional-OR\">||</a>\n- [?:](#ternary-operator){data-tooltip=\"Ternary (shorthand for if-then-else statement)\"}\n\n{.marker-none .cols-4}\n\n- <a data-tooltip=\"Compares an object to a specified type\">instanceof</a>\n\n{.marker-none}\n\n- <a data-tooltip=\"Unary bitwise complement\">~</a>\n- <a data-tooltip=\"Signed left shift\"><<</a>\n- <a data-tooltip=\"Signed right shift\">>></a>\n- <a data-tooltip=\"Unsigned right shift\">>>></a>\n- <a data-tooltip=\"Bitwise AND\">&</a>\n- <a data-tooltip=\"Bitwise exclusive OR\">^</a>\n- <a data-tooltip=\"Bitwise inclusive OR\">|</a>\n\n{.marker-none .cols-4}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "If else",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If else",
+              "body": "```java\nint k = 15;\nif (k > 20) {\n  System.out.println(1);\n} else if (k > 10) {\n  System.out.println(2);\n} else {\n  System.out.println(3);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Switch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Switch",
+              "body": "```java\nint month = 3;\nString str;\nswitch (month) {\n  case 1:\n    str = \"January\";\n    break;\n  case 2:\n    str = \"February\";\n    break;\n  case 3:\n    str = \"March\";\n    break;\n  default:\n    str = \"Some other month\";\n    break;\n}\n\n// Outputs: Result March\nSystem.out.println(\"Result \" + str);\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ternary operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ternary operator",
+              "body": "```java\nint a = 10;\nint b = 20;\nint max = (a > b) ? a : b;\n\n// Outputs: 20\nSystem.out.println(max);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Java Loops",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "For Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For Loop",
+              "body": "```java\nfor (int i = 0; i < 10; i++) {\n  System.out.print(i);\n}\n// Outputs: 0123456789\n```",
+              "footer": "```java\nfor (int i = 0,j = 0; i < 3; i++,j--) {\nSystem.out.print(j + \"|\" + i + \" \");\n}\n// Outputs: 0|0 -1|1 -2|2\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Enhanced For Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Enhanced For Loop",
+              "body": "```java\nint[] numbers = {1,2,3,4,5};\n\nfor (int number: numbers) {\n  System.out.print(number);\n}\n// Outputs: 12345\n```",
+              "footer": "Used to loop around array's or List's",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "While Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While Loop",
+              "body": "```java\nint count = 0;\n\nwhile (count < 5) {\n  System.out.print(count);\n  count++;\n}\n// Outputs: 01234\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Do While Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Do While Loop",
+              "body": "```java\nint count = 0;\n\ndo {\n  System.out.print(count);\n  count++;\n} while (count < 5);\n// Outputs: 01234\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Continue Statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Continue Statement",
+              "body": "```java\nfor (int i = 0; i < 5; i++) {\n  if (i == 3) {\n    continue;\n  }\n  System.out.print(i);\n}\n// Outputs: 0124\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break Statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break Statement",
+              "body": "```java\nfor (int i = 0; i < 5; i++) {\n  System.out.print(i);\n  if (i == 3) {\n    break;\n  }\n}\n// Outputs: 0123\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Java Collections Framework",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Java Collections",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Java Collections",
+              "body": "| Collection                                                                                                         | Interface   | Ordered | Sorted | Thread safe | Duplicate | Nullable           |\n| ------------------------------------------------------------------------------------------------------------------ | ----------- | ------- | ------ | ----------- | --------- | ------------------ |\n| [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)                                    | List        | Y       | _N_    | _N_         | Y         | Y                  |\n| [Vector](https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html)                                          | List        | Y       | _N_    | Y           | Y         | Y                  |\n| [LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)                                  | List, Deque | Y       | _N_    | _N_         | Y         | Y                  |\n| [CopyOnWriteArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArrayList.html)   | List        | Y       | _N_    | Y           | Y         | Y                  |\n| [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)                                        | Set         | _N_     | _N_    | _N_         | _N_       | One `null`         |\n| [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)                            | Set         | Y       | _N_    | _N_         | _N_       | One `null`         |\n| [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)                                        | Set         | Y       | Y      | _N_         | _N_       | _N_                |\n| [CopyOnWriteArraySet](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArraySet.html)     | Set         | Y       | _N_    | Y           | _N_       | One `null`         |\n| [ConcurrentSkipListSet](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListSet.html) | Set         | Y       | Y      | Y           | _N_       | _N_                |\n| [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)                                        | Map         | _N_     | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |\n| [HashTable](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html)                                    | Map         | _N_     | _N_    | Y           | _N (key)_ | _N (key)_          |\n| [LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html)                            | Map         | Y       | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |\n| [TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)                                        | Map         | Y       | Y      | _N_         | _N (key)_ | _N (key)_          |\n| [ConcurrentHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)         | Map         | _N_     | _N_    | Y           | _N (key)_ | _N_                |\n| [ConcurrentSkipListMap](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentSkipListMap.html) | Map         | Y       | Y      | Y           | _N (key)_ | _N_                |\n| [ArrayDeque](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html)                                  | Deque       | Y       | _N_    | _N_         | Y         | _N_                |\n| [PriorityQueue](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html)                            | Queue       | Y       | _N_    | _N_         | Y         | _N_                |\n| [ConcurrentLinkedQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedQueue.html) | Queue       | Y       | _N_    | Y           | Y         | _N_                |\n| [ConcurrentLinkedDeque](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentLinkedDeque.html) | Deque       | Y       | _N_    | Y           | Y         | _N_                |\n| [ArrayBlockingQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ArrayBlockingQueue.html)       | Queue       | Y       | _N_    | Y           | Y         | _N_                |\n| [LinkedBlockingDeque](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/LinkedBlockingDeque.html)     | Deque       | Y       | _N_    | Y           | Y         | _N_                |\n| [PriorityBlockingQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/PriorityBlockingQueue.html) | Queue       | Y       | _N_    | Y           | Y         | _N_                |\n\n{.show-header .left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ArrayList",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ArrayList",
+              "body": "```java\nList<Integer> nums = new ArrayList<>();\n\n// Adding\nnums.add(2);\nnums.add(5);\nnums.add(8);\n\n// Retrieving\nSystem.out.println(nums.get(0));\n\n// Indexed for loop iteration\nfor (int i = 0; i < nums.size(); i++) {\n    System.out.println(nums.get(i));\n}\n\nnums.remove(nums.size() - 1);\nnums.remove(0); // VERY slow\n\nfor (Integer value : nums) {\n    System.out.println(value);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HashMap",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HashMap",
+              "body": "```java\nMap<Integer, String> m = new HashMap<>();\nm.put(5, \"Five\");\nm.put(8, \"Eight\");\nm.put(6, \"Six\");\nm.put(4, \"Four\");\nm.put(2, \"Two\");\n\n// Retrieving\nSystem.out.println(m.get(6));\n\n// Lambda forEach\nm.forEach((key, value) -> {\n    String msg = key + \": \" + value;\n    System.out.println(msg);\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HashSet",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HashSet",
+              "body": "```java\nSet<String> set = new HashSet<>();\nif (set.isEmpty()) {\n    System.out.println(\"Empty!\");\n}\n\nset.add(\"dog\");\nset.add(\"cat\");\nset.add(\"mouse\");\nset.add(\"snake\");\nset.add(\"bear\");\n\nif (set.contains(\"cat\")) {\n    System.out.println(\"Contains cat\");\n}\n\nset.remove(\"cat\");\nfor (String element : set) {\n    System.out.println(element);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "ArrayDeque",
+          "level": 3,
+          "cards": [
+            {
+              "title": "ArrayDeque",
+              "body": "```java\nDeque<String> a = new ArrayDeque<>();\n\n// Using add()\na.add(\"Dog\");\n\n// Using addFirst()\na.addFirst(\"Cat\");\n\n// Using addLast()\na.addLast(\"Horse\");\n\n// [Cat, Dog, Horse]\nSystem.out.println(a);\n\n// Access element\nSystem.out.println(a.peek());\n\n// Remove element\nSystem.out.println(a.pop());\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Misc",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Access Modifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Access Modifiers",
+              "body": "| Modifier    | Class | Package | Subclass | World |\n| ----------- | ----- | ------- | -------- | ----- |\n| public      | Y     | Y       | Y        | Y     |\n| protected   | Y     | Y       | Y        | _N_   |\n| no modifier | Y     | Y       | _N_      | _N_   |\n| private     | Y     | _N_     | _N_      | _N_   |\n\n{.show-header .left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Regular expressions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Regular expressions",
+              "body": "```java\nString text = \"I am learning Java\";\n// Removing All Whitespace\ntext.replaceAll(\"\\\\s+\", \"\");\n\n// Splitting a String\ntext.split(\"\\\\|\");\ntext.split(Pattern.quote(\"|\"));\n```",
+              "footer": "See: [Regex in java](/regex#regex-in-java)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comment",
+              "body": "```java\n// I am a single line comment!\n\n/*\nAnd I am a\nmulti-line comment!\n*/\n\n/**\n * This\n * is\n * documentation\n * comment\n */\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keywords",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keywords",
+              "body": "- `abstract`\n- `continue`\n- `for`\n- `new`\n- `switch`\n- `assert`\n- `default`\n- `goto`\n- `package`\n- `synchronized`\n- `boolean`\n- `do`\n- `if`\n- `private`\n- `this`\n- `break`\n- `double`\n- `implements`\n- `protected`\n- `throw`\n- `byte`\n- `else`\n- `import`\n- `public`\n- `throws`\n- `case`\n- `enum`\n- `instanceof`\n- `return`\n- `transient`\n- `catch`\n- `extends`\n- `int`\n- `short`\n- `try`\n- `char`\n- `final`\n- `interface`\n- `static`\n- `void`\n- `class`\n- `finally`\n- `long`\n- `strictfp`\n- `volatile`\n- `const`\n- `float`\n- `native`\n- `super`\n- `while`\n\n{.marker-none .cols-6}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Math methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Math methods",
+              "body": "| Method                | Description            |\n| --------------------- | :--------------------- |\n| `Math.max(a,b)`       | Maximum of a and b     |\n| `Math.min(a,b)`       | Minimum of a and b     |\n| `Math.abs(a)`         | Absolute value a       |\n| `Math.sqrt(a)`        | Square-root of a       |\n| `Math.pow(a,b)`       | Power of b             |\n| `Math.round(a)`       | Closest integer        |\n| `Math.sin(ang)`       | Sine of ang            |\n| `Math.cos(ang)`       | Cosine of ang          |\n| `Math.tan(ang)`       | Tangent of ang         |\n| `Math.asin(ang)`      | Inverse sine of ang    |\n| `Math.log(a)`         | Natural logarithm of a |\n| `Math.toDegrees(rad)` | Angle rad in degrees   |\n| `Math.toRadians(deg)` | Angle deg in radians   |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Try/Catch/Finally",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Try/Catch/Finally",
+              "body": "```java\ntry {\n  // something\n} catch (Exception e) {\n  e.printStackTrace();\n} finally {\n  System.out.println(\"always printed\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "id": "filezilla",
+  "metadata": {
+    "title": "FileZilla",
+    "date": "2022-11-23T16:23:31.705Z",
+    "background": "bg-[#a42115]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 30 keyboard shortcuts found on the FileZilla program\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General Shortcuts I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General Shortcuts I",
+              "body": "| Shortcut           | Action                                                                              |\n| ------------------ | ----------------------------------------------------------------------------------- |\n| `F2`               | Rename selected file                                                                |\n| `F3`               | Search remote files                                                                 |\n| `F5`               | Refreshes local and remote file and folder views                                    |\n| `Tab`              | Switches to the next view                                                           |\n| `Alt` `Down`       | Transfers the currently selected item to an item of the same name in the other pane |\n| `Alt` `Up`         | Navigates up one line in a tree view, navigates to parent folder in file view       |\n| `Ctrl` `B`         | Add bookmark                                                                        |\n| `Ctrl` `Shift` `B` | Manage bookmarks                                                                    |\n| `Ctrl` `C`         | Stops the current operation                                                         |\n| `Ctrl` `D`         | Disconnects from server                                                             |\n| `Ctrl` `E`         | Show files currently being edited                                                   |\n| `Ctrl` `I`         | Directory listing filters...                                                        |\n| `Ctrl` `M`         | Manual transfer                                                                     |\n| `Ctrl` `Shift` `N` | Create a new directory                                                              |\n| `Ctrl` `O`         | Enable directory comparison                                                         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F2`",
+                  "action": "Rename selected file"
+                },
+                {
+                  "shortcut": "`F3`",
+                  "action": "Search remote files"
+                },
+                {
+                  "shortcut": "`F5`",
+                  "action": "Refreshes local and remote file and folder views"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Switches to the next view"
+                },
+                {
+                  "shortcut": "`Alt` `Down`",
+                  "action": "Transfers the currently selected item to an item of the same name in the other pane"
+                },
+                {
+                  "shortcut": "`Alt` `Up`",
+                  "action": "Navigates up one line in a tree view, navigates to parent folder in file view"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Add bookmark"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `B`",
+                  "action": "Manage bookmarks"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Stops the current operation"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Disconnects from server"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Show files currently being edited"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Directory listing filters..."
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Manual transfer"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Create a new directory"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Enable directory comparison"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General Shortcuts II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General Shortcuts II",
+              "body": "| Shortcut      | Action                                                                                |\n| ------------- | ------------------------------------------------------------------------------------- |\n| `Ctrl` `P`    | Process queue                                                                         |\n| `Ctrl` `Q`    | Exit                                                                                  |\n| `Ctrl` `R`    | Reconnects to server                                                                  |\n| `Ctrl` `S`    | Opens the site manager                                                                |\n| `Ctrl` `T`    | Opens a new tab                                                                       |\n| `Ctrl` `U`    | Preserve the timestamps of transferred files                                          |\n| `Ctrl` `Y`    | Toggle synchronized browsing                                                          |\n| `Ctrl` `W`    | Close tab                                                                             |\n| `Enter`       | Transfer the currently selected item if it is a file, or expands if it is a directory |\n| `Ctrl` `PgUp` | Switches to the next tab                                                              |\n| `Ctrl` `PgDn` | Switches to the previous tab                                                          |\n| `Up`          | Moves up one item in the current view                                                 |\n| `Down`        | Moves down one item in the current view                                               |\n| `Left`        | Nothing in a files view, up on level in a tree view                                   |\n| `Right`       | Down one level in a tree view if there are subfolders, nothing if there are none      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Process queue"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Exit"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Reconnects to server"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Opens the site manager"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Opens a new tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Preserve the timestamps of transferred files"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Toggle synchronized browsing"
+                },
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close tab"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Transfer the currently selected item if it is a file, or expands if it is a directory"
+                },
+                {
+                  "shortcut": "`Ctrl` `PgUp`",
+                  "action": "Switches to the next tab"
+                },
+                {
+                  "shortcut": "`Ctrl` `PgDn`",
+                  "action": "Switches to the previous tab"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Moves up one item in the current view"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Moves down one item in the current view"
+                },
+                {
+                  "shortcut": "`Left`",
+                  "action": "Nothing in a files view, up on level in a tree view"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Down one level in a tree view if there are subfolders, nothing if there are none"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for FileZilla](https://wiki.filezilla-project.org/Keyboard_shortcuts)\n  _(wiki.filezilla-project.org)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

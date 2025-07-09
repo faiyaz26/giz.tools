@@ -1,0 +1,315 @@
+{
+  "id": "docker",
+  "metadata": {
+    "title": "Docker",
+    "date": "2020-12-30T10:55:24.000Z",
+    "background": "bg-[#488fdf]",
+    "tags": [
+      "container",
+      "virtual"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "This is a quick reference cheat sheet for [Docker](https://docs.docker.com/get-started/). And you can find the most common Docker commands here.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Getting started",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting started",
+              "body": "```\n- `-d` - Run the container in detached mode\n- `-p 80:80` - Map port 80 to port 80 in the container\n- `docker/getting-started` - The image to use\n\n{.marker-none}\n\nCreate and run a container in foreground\n```",
+              "footer": "shell script\n$ docker run -it -p 8001:8080 --name my-nginx nginx\n```\n- `-it` - Interactive bash mode\n- `-p 8001:8080` - Map port 8001 to port 8080 in the container\n- `--name my-nginx` - Specify a name\n- `nginx` - The image to use\n{.marker-none}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General commands",
+              "body": "| Example                             | Description                                      |\n| ----------------------------------- | ------------------------------------------------ |\n| `docker ps`                         | List running containers                          |\n| `docker ps -a`                      | List all containers                              |\n| `docker ps -s`                      | List running containers<br>_(with CPU / memory)_ |\n| `docker images`                     | List all images                                  |\n| `docker exec -it <container>  bash` | Connecting to container                          |\n| `docker logs <container>`           | Shows container's console log                    |\n| `docker stop <container>`           | Stop a container                                 |\n| `docker restart <container>`        | Restart a container                              |\n| `docker rm <container>`             | Remove a container                               |\n| `docker port <container>`           | Shows container's port mapping                   |\n| `docker top <container>`            | List processes                                   |\n| `docker kill <container>`           | Kill a container                                 |\n\nParameter `<container>` can be container id or name",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Docker Containers {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Starting & Stopping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Starting & Stopping",
+              "body": "| Description               | Example                             |\n| ------------------------- | ----------------------------------- |\n| `docker start my-nginx`   | Starting                            |\n| `docker stop my-nginx`    | Stopping                            |\n| `docker restart my-nginx` | Restarting                          |\n| `docker pause my-nginx`   | Pausing                             |\n| `docker unpause my-nginx` | Unpausing                           |\n| `docker wait my-nginx`    | Blocking a Container                |\n| `docker kill my-nginx`    | Sending a SIGKILL                   |\n| `docker attach my-nginx`  | Connecting to an Existing Container |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Information",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Information",
+              "body": "| Example                   | Description                            |\n| ------------------------- | -------------------------------------- |\n| `docker ps`               | List running containers                |\n| `docker ps -a`            | List all containers                    |\n| `docker logs my-nginx`    | Container Logs                         |\n| `docker inspect my-nginx` | Inspecting Containers                  |\n| `docker events my-nginx`  | Containers Events                      |\n| `docker port my-nginx`    | Public Ports                           |\n| `docker top my-nginx`     | Running Processes                      |\n| `docker stats my-nginx`   | Container Resource Usage               |\n| `docker diff my-nginx`    | Lists the changes made to a container. |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Creating",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Creating",
+              "body": "```yaml\ndocker create [options] IMAGE\n  -a, --attach               # attach stdout/err\n  -i, --interactive          # attach stdin (interactive)\n  -t, --tty                  # pseudo-tty\n      --name NAME            # name your image\n  -p, --publish 5000:5000    # port map (host:container)\n      --expose 5432          # expose a port to containers\n  -P, --publish-all          # publish all ports\n      --link container:alias # linking\n  -v, --volume `pwd`:/app    # mount (absolute paths needed)\n  -e, --env NAME=hello       # env vars\n```",
+              "footer": "#### Example\n\n```shell script\n$ docker create --name my_redis --expose 6379 redis:3.0.2\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Manipulating",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Manipulating",
+              "body": "```\nRemoving a Container\n```",
+              "footer": "shell script\ndocker rm my-nginx\n```\nUpdating a Container\n```shell script\ndocker update --cpu-shares 512 -m 300M my-nginx\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Docker Images {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Manipulating",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Manipulating",
+              "body": "| `Example`                          | Description                     |\n| ---------------------------------- | ------------------------------- |\n| `docker images`                    | Listing images                  |\n| `docker rmi nginx`                 | Removing an image               |\n| `docker load < ubuntu.tar.gz`      | Loading a tarred repository     |\n| `docker load --input ubuntu.tar`   | Loading a tarred repository     |\n| `docker save busybox > ubuntu.tar` | Save an image to a tar archive  |\n| `docker history`                   | Showing the history of an image |\n| `docker commit nginx`              | Save a container as an image.   |\n| `docker tag nginx eon01/nginx`     | Tagging an image                |\n| `docker push eon01/nginx`          | Pushing an image                |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Building Images",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Building Images",
+              "body": "",
+              "footer": "```shell script\n$ docker build .\n$ docker build github.com/creack/docker-firefox\n$ docker build - < Dockerfile\n$ docker build - < context.tar.gz\n$ docker build -t eon/my-nginx .\n$ docker build -f myOtherDockerfile .\n$ curl example.com/remote/Dockerfile | docker build -f - .\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Docker Networking {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Manipulating",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Manipulating",
+              "body": "```\nListing networks\n```",
+              "footer": "shell script\ndocker network ls\n```\nGetting information about a network\n```shell script\ndocker network inspect MyOverlayNetwork\n```\nConnecting a running container to a network\n```shell script\ndocker network connect MyOverlayNetwork nginx\n```\nConnecting a container to a network when it starts\n```shell script\ndocker run -it -d --network=MyOverlayNetwork nginx\n```\nDisconnecting a container from a network\n```shell script\ndocker network disconnect MyOverlayNetwork nginx\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Creating Networks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Creating Networks",
+              "body": "",
+              "footer": "```shell script\ndocker network create -d overlay MyOverlayNetwork\n\ndocker network create -d bridge MyBridgeNetwork\n\ndocker network create -d overlay \\\n  --subnet=192.168.0.0/16 \\\n  --subnet=192.170.0.0/16 \\\n  --gateway=192.168.0.100 \\\n  --gateway=192.170.0.100 \\\n  --ip-range=192.168.1.0/24 \\\n  --aux-address=\"my-router=192.168.1.5\" \\\n  --aux-address=\"my-switch=192.168.1.6\" \\\n  --aux-address=\"my-printer=192.170.1.5\" \\\n  --aux-address=\"my-nas=192.170.1.6\" \\\n  MyOverlayNetwork\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Clean Up {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Clean All",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Clean All",
+              "body": "```shell\ndocker system prune\n```",
+              "footer": "Additionally, remove any stopped containers and all unused images (not just dangling images)\n```shell\ndocker system prune -a\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Containers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Containers",
+              "body": "```shell\ndocker stop $(docker ps -a -q)\n```",
+              "footer": "Delete stopped containers\n```shell\ndocker container prune\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Images",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Images",
+              "body": "```shell\ndocker image prune\n```",
+              "footer": "Remove all images which are not used by existing containers\n```shell\ndocker image prune -a\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Volumes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Volumes",
+              "body": "```shell\ndocker volume prune\n```",
+              "footer": "Remove all volumes not used by at least one container",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Docker Hub",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Docker Hub",
+              "body": "| Docker Syntax               | Description                         |\n| --------------------------- | ----------------------------------- |\n| `docker search search_word` | Search docker hub for images.       |\n| `docker pull user/image   ` | Downloads an image from docker hub. |\n| `docker login             ` | Authenticate to docker hub          |\n| `docker push user/image   ` | Uploads an image to docker hub.     |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Registry commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Registry commands",
+              "body": "```\nLogout from a Registry\n```",
+              "footer": "shell script\n$ docker logout\n$ docker logout localhost:8080\n```\nSearching an Image\n```shell script\n$ docker search nginx\n$ docker search nginx --stars=3 --no-trunc busybox\n```\nPulling an Image\n```shell script\n$ docker pull nginx\n$ docker pull eon01/nginx localhost:5000/myadmin/nginx\n```\nPushing an Image\n```shell script\n$ docker push eon01/nginx\n$ docker push eon01/nginx localhost:5000/myadmin/nginx\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Batch clean",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Batch clean",
+              "body": "| Example                             | Description             |\n| ----------------------------------- | ----------------------- |\n| `docker stop -f $(docker ps -a -q)` | Stopping all containers |\n| `docker rm -f $(docker ps -a -q)`   | Removing all containers |\n| `docker rmi -f $(docker images -q)` | Removing all images     |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Volumes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Volumes",
+              "body": "```\nCleanup unused volumes\n```",
+              "footer": "shell script\n$ docker volume prune\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

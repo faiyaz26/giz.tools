@@ -1,0 +1,978 @@
+{
+  "id": "perl",
+  "metadata": {
+    "title": "Perl",
+    "date": "2024-05-22T09:03:44.000Z",
+    "background": "bg-[#31719d]",
+    "tags": null,
+    "categories": [
+      "Programming"
+    ],
+    "intro": "The perl quick reference cheat sheet that aims at providing help on writing basic syntax and methods.\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Unix and Linux Installation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Unix and Linux Installation",
+              "body": "```shell\n$tar -xzf perl-5.x.y.tar.gz\n$cd perl-5.x.y\n$./Configure -de\n$make\n$make test\n$make install\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Windows Installation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Windows Installation",
+              "body": "- Follow the link for the Strawberry Perl installation on Windows http://strawberryperl.com\n\n- Download either 32bit or 64bit version of installation.\n\n- Run the downloaded file by double-clicking it in Windows Explorer. This brings up the Perl install wizard, which is\n  really easy to use. Just accept the default settings, wait until the installation is finished, and you're ready to\n  roll!",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Macintosh Installation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Macintosh Installation",
+              "body": "```shell\n$tar -xzf perl-5.x.y.tar.gz\n$cd perl-5.x.y\n$./Configure -de\n$make\n$make test\n$make install\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Running Perl",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Running Perl",
+              "body": "```shell\n# Unix/Linux\n$perl  -e <perl code>\n# Windows/DOS\nC:>perl -e <perl code>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Available command line options",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Available command line options",
+              "body": "|    Option     |                         Description |\n| :-----------: | ----------------------------------: |\n| -d[:debugger] |         Runs program under debugger |\n|  -Idirectory  |   Specifies @INC/#include directory |\n|      -T       |           Enables tainting warnings |\n|      -U       |            Allows unsafe operations |\n|      -w       |        Enables many useful warnings |\n|      -W       |                Enables all warnings |\n|      -X       |               Disables all warnings |\n|  -e program   | Runs Perl script sent in as program |\n|     file      |  Runs Perl script from a given file |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Script from the Command-line",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Script from the Command-line",
+              "body": "```shell\n# Unix/Linux\n$perl  script.pl\n# Windows/DOS\nC:>perl script.pl\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "First Perl Program",
+          "level": 3,
+          "cards": [
+            {
+              "title": "First Perl Program",
+              "body": "```shell\n$perl -e 'print \"Hello World\\n\"'\n\n# #!/usr/bin/perl\n\n# This will print \"Hello, World\"\nprint \"Hello, world\\n\";\n$chmod 0755 hello.pl\n$./hello.pl\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments in Perl",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments in Perl",
+              "body": "```perl\n# This is a comment in perl\n=begin comment\nThis is all part of multiline comment.\nYou can use as many lines as you like\nThese comments will be ignored by the\ncompiler until the next =cut is encountered.\n=cut\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Whitespaces in Perl",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Whitespaces in Perl",
+              "body": "```perl\n#!/usr/bin/perl\n\n# This would print with a line break in the middle\nprint \"Hello\n          world\\n\";\n#output\n#Hello\n#         world\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Single and Double Quotes in Perl",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Single and Double Quotes in Perl",
+              "body": "```perl\n#!/usr/bin/perl\n\nprint \"Hello, world\\n\";\nprint 'Hello, world\\n';\n\n#Hello, world\n#Hello, world\\n$\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Datatypes",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Creating Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Creating Variables",
+              "body": "```perl\n$age = 25;             # An integer assignment\n$name = \"John Paul\";   # A string\n$salary = 1445.50;     # A floating point\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Scalar Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scalar Variables",
+              "body": "```perl\n#!/usr/bin/perl\n\n$age = 25;             # An integer assignment\n$name = \"John Paul\";   # A string\n$salary = 1445.50;     # A floating point\n\nprint \"Age = $age\\n\";\nprint \"Name = $name\\n\";\nprint \"Salary = $salary\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array Variables",
+              "body": "```perl\n#!/usr/bin/perl\n\n@ages = (25, 30, 40);\n@names = (\"John Paul\", \"Lisa\", \"Kumar\");\n\nprint \"\\$ages[0] = $ages[0]\\n\";\nprint \"\\$ages[1] = $ages[1]\\n\";\nprint \"\\$ages[2] = $ages[2]\\n\";\nprint \"\\$names[0] = $names[0]\\n\";\nprint \"\\$names[1] = $names[1]\\n\";\nprint \"\\$names[2] = $names[2]\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Hash Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hash Variables",
+              "body": "```perl\n#!/usr/bin/perl\n\n%data = ('John Paul', 45, 'Lisa', 30, 'Kumar', 40);\n\nprint \"\\$data{'John Paul'} = $data{'John Paul'}\\n\";\nprint \"\\$data{'Lisa'} = $data{'Lisa'}\\n\";\nprint \"\\$data{'Kumar'} = $data{'Kumar'}\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variable Context",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variable Context",
+              "body": "```perl\n#!/usr/bin/perl\n\n@names = ('John Paul', 'Lisa', 'Kumar');\n\n@copy = @names;\n$size = @names;\n\nprint \"Given names are : @copy\\n\";\nprint \"Number of names are : $size\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Numeric Scalars",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Numeric Scalars",
+              "body": "```perl\n#!/usr/bin/perl\n\n$integer = 200;\n$negative = -300;\n$floating = 200.340;\n$bigfloat = -1.2E-23;\n\n# 377 octal, same as 255 decimal\n$octal = 0377;\n\n# FF hex, also 255 decimal\n$hexa = 0xff;\n\nprint \"integer = $integer\\n\";\nprint \"negative = $negative\\n\";\nprint \"floating = $floating\\n\";\nprint \"bigfloat = $bigfloat\\n\";\nprint \"octal = $octal\\n\";\nprint \"hexa = $hexa\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String Scalars",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String Scalars",
+              "body": "```perl\n#!/usr/bin/perl\n\n$var = \"This is string scalar!\";\n$quote = 'I m inside single quote - $var';\n$double = \"This is inside single quote - $var\";\n\n$escape = \"This example of escape -\\tHello, World!\";\n\nprint \"var = $var\\n\";\nprint \"quote = $quote\\n\";\nprint \"double = $double\\n\";\nprint \"escape = $escape\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Scalar Operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scalar Operations",
+              "body": "```perl\n#!/usr/bin/perl\n\n$str = \"hello\" . \"world\";       # Concatenates strings.\n$num = 5 + 10;                  # adds two numbers.\n$mul = 4 * 5;                   # multiplies two numbers.\n$mix = $str . $num;             # concatenates string and number.\n\nprint \"str = $str\\n\";\nprint \"num = $num\\n\";\nprint \"mul = $mul\\n\";\nprint \"mix = $mix\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiline Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiline Strings",
+              "body": "```perl\n#!/usr/bin/perl\n\n$string = 'This is\na multiline\nstring';\n\nprint \"$string\\n\";\n\n##########################\nprint <<EOF;\nThis is\na multiline\nstring\nEOF\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "V-Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "V-Strings",
+              "body": "```perl\n#!/usr/bin/perl\n\n$smile  = v9786;\n$foo    = v102.111.111;\n$martin = v77.97.114.116.105.110;\n\nprint \"smile = $smile\\n\";\nprint \"foo = $foo\\n\";\nprint \"martin = $martin\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Special Literals",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Special Literals",
+              "body": "```perl\n#!/usr/bin/perl\n\nprint \"File name \". __FILE__ . \"\\n\";\nprint \"Line Number \" . __LINE__ .\"\\n\";\nprint \"Package \" . __PACKAGE__ .\"\\n\";\n\n# they can not be interpolated\nprint \"__FILE__ __LINE__ __PACKAGE__\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sequential Number Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sequential Number Arrays",
+              "body": "```perl\n#!/usr/bin/perl\n\n@var_10 = (1..10);\n@var_20 = (10..20);\n@var_abc = (a..z);\n\nprint \"@var_10\\n\";   # Prints number from 1 to 10\nprint \"@var_20\\n\";   # Prints number from 10 to 20\nprint \"@var_abc\\n\";  # Prints number from a to z\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array Size",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array Size",
+              "body": "```perl\n#!/usr/bin/perl\n\n@array = (1,2,3);\n$array[50] = 4;\n\n$size = @array;\n$max_index = $#array;\n\nprint \"Size:  $size\\n\";\nprint \"Max Index: $max_index\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Array oparationns",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Adding and Removing Elements in Array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Adding and Removing Elements in Array",
+              "body": "| types                |                                                  Description                                                  |\n| :------------------- | :-----------------------------------------------------------------------------------------------------------: |\n| push @ARRAY, LIST    |                           Pushes the values of the list onto the end of the array.                            |\n| pop @ARRAY           |                               Pops off and returns the last value of the array.                               |\n| shift @ARRAY         | Shifts the first value of the array off and returns it, shortening the array by 1 and moving everything down. |\n| unshift @ARRAY, LIST |         Prepends list to the front of the array, and returns the number of elements in the new array.         |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array oparations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array oparations",
+              "body": "```perl\n#!/usr/bin/perl\n\n# create a simple array\n\n@coins = (\"Quarter\",\"Dime\",\"Nickel\");\nprint \"1. \\@coins = @coins\\n\";\n\n# add one element at the end of the array\n\npush(@coins, \"Penny\");\nprint \"2. \\@coins = @coins\\n\";\n\n# add one element at the beginning of the array\n\nunshift(@coins, \"Dollar\");\nprint \"3. \\@coins = @coins\\n\";\n\n# remove one element from the last of the array.\n\npop(@coins);\nprint \"4. \\@coins = @coins\\n\";\n\n# remove one element from the beginning of the array.\n\nshift(@coins);\nprint \"5. \\@coins = @coins\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Slicing Array Elements",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Slicing Array Elements",
+              "body": "```perl\n#!/usr/bin/perl\n\n@days = qw/Mon Tue Wed Thu Fri Sat Sun/;\n\n@weekdays = @days[3,4,5];\n\nprint \"@weekdays\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Replacing Array Elements",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Replacing Array Elements",
+              "body": "```perl\n#!/usr/bin/perl\n\n@nums = (1..20);\nprint \"Before - @nums\\n\";\n\nsplice(@nums, 5, 5, 21..25);\nprint \"After - @nums\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Transform Strings to Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transform Strings to Arrays",
+              "body": "```perl\n#!/usr/bin/perl\n\n# define Strings\n\n$var_string = \"Rain-Drops-On-Roses-And-Whiskers-On-Kittens\";\n$var_names = \"Larry,David,Roger,Ken,Michael,Tom\";\n\n# transform above strings into arrays.\n\n@string = split('-', $var_string);\n@names = split(',', $var_names);\n\nprint \"$string[3]\\n\";  # This will print Roses\nprint \"$names[4]\\n\"; # This will print Michael\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Transform Arrays to Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transform Arrays to Strings",
+              "body": "```perl\n#!/usr/bin/perl\n\n# define Strings\n$var_string = \"Rain-Drops-On-Roses-And-Whiskers-On-Kittens\";\n$var_names = \"Larry,David,Roger,Ken,Michael,Tom\";\n\n# transform above strings into arrays.\n@string = split('-', $var_string);\n@names  = split(',', $var_names);\n\n$string1 = join( '-', @string );\n$string2 = join( ',', @names );\n\nprint \"$string1\\n\";\nprint \"$string2\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sorting Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sorting Arrays",
+              "body": "```perl\n#!/usr/bin/perl\n\n# define an array\n@foods = qw(pizza steak chicken burgers);\nprint \"Before: @foods\\n\";\n\n# sort this array\n@foods = sort(@foods);\nprint \"After: @foods\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "The $[ Special Variable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "The $[ Special Variable",
+              "body": "```perl\n#!/usr/bin/perl\n\n# define an array\n@foods = qw(pizza steak chicken burgers);\nprint \"Foods: @foods\\n\";\n\n# Let's reset first index of all the arrays.\n$[ = 1;\n\nprint \"Food at \\@foods[1]: $foods[1]\\n\";\nprint \"Food at \\@foods[2]: $foods[2]\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Merging Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Merging Arrays",
+              "body": "```perl\n#!/usr/bin/perl\n\n@odd = (1,3,5);\n@even = (2, 4, 6);\n\n@numbers = (@odd, @even);\n\nprint \"numbers = @numbers\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selecting Elements from Lists",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selecting Elements from Lists",
+              "body": "```perl\n#!/usr/bin/perl\n\n@list = (5,4,3,2,1)[1..3];\n\nprint \"Value of list = @list\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Accessing Hash Elements",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Accessing Hash Elements",
+              "body": "```perl\n#!/usr/bin/perl\n\n%data = ('John Paul' => 45, 'Lisa' => 30, 'Kumar' => 40);\n\nprint \"$data{'John Paul'}\\n\";\nprint \"$data{'Lisa'}\\n\";\nprint \"$data{'Kumar'}\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extracting Slices",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extracting Slices",
+              "body": "```perl\n#!/uer/bin/perl\n\n%data = (-JohnPaul => 45, -Lisa => 30, -Kumar => 40);\n\n@array = @data{-JohnPaul, -Lisa};\n\nprint \"Array : @array\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extracting Keys and Values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extracting Keys and Values",
+              "body": "```perl\n#!/usr/bin/perl\n\n%data = ('John Paul' => 45, 'Lisa' => 30, 'Kumar' => 40);\n\n@names = keys %data;\n\nprint \"$names[0]\\n\";\nprint \"$names[1]\\n\";\nprint \"$names[2]\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Getting Hash Size",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting Hash Size",
+              "body": "```perl\n#!/usr/bin/perl\n\n%data = ('John Paul' => 45, 'Lisa' => 30, 'Kumar' => 40);\n\n@keys = keys %data;\n$size = @keys;\nprint \"1 - Hash size:  is $size\\n\";\n\n@values = values %data;\n$size = @values;\nprint \"2 - Hash size:  is $size\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Add and Remove Elements in Hashes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Add and Remove Elements in Hashes",
+              "body": "```perl\n#!/usr/bin/perl\n\n%data = ('John Paul' => 45, 'Lisa' => 30, 'Kumar' => 40);\n@keys = keys %data;\n$size = @keys;\nprint \"1 - Hash size:  is $size\\n\";\n\n# adding an element to the hash;\n$data{'Ali'} = 55;\n@keys = keys %data;\n$size = @keys;\nprint \"2 - Hash size:  is $size\\n\";\n\n# delete the same element from the hash;\ndelete $data{'Ali'};\n@keys = keys %data;\n$size = @keys;\nprint \"3 - Hash size:  is $size\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Control Flow",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "if-else",
+          "level": 3,
+          "cards": [
+            {
+              "title": "if-else",
+              "body": "```perl\n#!/usr/bin/perl\n\n# Perl program to illustrate\n# Decision-Making statements\n\n$a = 10;\n$b = 15;\n\n# if condition to check\n# for even number\nif($a % 2 == 0 )\n{\n\tprintf \"Even Number\";\n}\n\n# if-else condition to check\n# for even number or odd number\nif($b % 2 == 0 )\n{\n\tprintf \"\\nEven Number\";\n}\nelse\n{\n\tprintf \"\\nOdd Number\";\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "The ? : Operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "The ? : Operator",
+              "body": "```perl\n#!/usr/local/bin/perl\n\n$name = \"Ali\";\n$age = 10;\n\n$status = ($age > 60 )? \"A senior citizen\" : \"Not a senior citizen\";\n\nprint \"$name is  - $status\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "for loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for loop",
+              "body": "```perl\n#!/usr/bin/perl\n\n# Perl program to illustrate\n# the use of for Loop\n\n# for loop\nprint(\"For Loop:\\n\");\nfor ($count = 1 ; $count <= 3 ; $count++)\n{\n\tprint \"GeeksForGeeks\\n\"\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "foreach loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "foreach loop",
+              "body": "```perl\n#!/usr/bin/perl\n\n# Perl program to illustrate\n# the use of foreach Loop\n\n# Array\n@data = ('GEEKS', 4, 'GEEKS');\n\n# foreach loop\nprint(\"For-each Loop:\\n\");\nforeach $word (@data)\n{\n\tprint (\"$word \");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "while and do-while",
+          "level": 3,
+          "cards": [
+            {
+              "title": "while and do-while",
+              "body": "```perl\n#!/usr/bin/perl\n\n# Perl program to illustrate\n# the use of foreach Loop\n\n# while loop\n$count = 3;\n\nprint(\"While Loop:\\n\");\nwhile ($count >= 0)\n{\n\t$count = $count - 1;\n\tprint \"GeeksForGeeks\\n\";\n}\n\nprint(\"\\ndo...while Loop:\\n\");\n$a = 10;\n\n# do..While loop\ndo {\n\n\tprint \"$a \";\n\t$a = $a - 1;\n} while ($a > 0);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Object Oriented Programming",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Class and object",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class and object",
+              "body": "```perl\n#!/usr/bin/perl\n\n# Perl Program for creation of a\n# Class and its object\nuse strict;\nuse warnings;\n\npackage student;\n\n# constructor\nsub student_data\n{\n\n\t# shift will take package name 'student'\n\t# and assign it to variable 'class'\n\tmy $class_name = shift;\n\tmy $self = {\n\t\t\t\t'StudentFirstName' => shift,\n\t\t\t\t'StudentLastName' => shift\n\t\t\t};\n\t# Using bless function\n\tbless $self, $class_name;\n\n\t# returning object from constructor\n\treturn $self;\n}\n\n# Object creating and constructor calling\nmy $Data = student_data student(\"Geeks\", \"forGeeks\");\n\n# Printing the data\nprint \"$Data->{'StudentFirstName'}\\n\";\nprint \"$Data->{'StudentLastName'}\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Subroutines",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Subroutines",
+              "body": "```perl\n#!/usr/bin/perl\n\n# Perl Program to demonstrate the\n# subroutine declaration and calling\n\n# defining subroutine\nsub ask_user\n{\n\tprint \"Hello Geeks!\\n\";\n}\n\n# calling subroutine\n# you can also use\n# &ask_user();\nask_user();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Modules and Packages",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Modules and Packages",
+              "body": "```perl\n#!/usr/bin/perl\n\n# Using the Package 'Calculator'\nuse Calculator;\n\nprint \"Enter two numbers to multiply\";\n\n# Defining values to the variables\n$a = 5;\n$b = 10;\n\n# Subroutine call\nCalculator::multiplication($a, $b);\n\nprint \"\\nEnter two numbers to divide\";\n\n# Defining values to the variables\n$a = 45;\n$b = 5;\n\n# Subroutine call\nCalculator::division($a, $b);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "References",
+          "level": 3,
+          "cards": [
+            {
+              "title": "References",
+              "body": "```perl\n# Perl program to illustrate the\n# Referencing and Dereferencing\n# of an Array\n\n# defining an array\n@array = ('1', '2', '3');\n\n# making an reference to an array variable\n$reference_array = \\@array;\n\n# Dereferencing\n# printing the value stored\n# at $reference_array by prefixing\n# @ as it is a array reference\nprint @$reference_array;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Regular Expression",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Regular Expression",
+              "body": "```perl\n# Perl program to demonstrate\n# the m// and =~ operators\n\n# Actual String\n$a = \"GEEKSFORGEEKS\";\n\n# Prints match found if\n# its found in $a\nif ($a =~ m[GEEKS])\n{\n\tprint \"Match Found\\n\";\n}\n\n# Prints match not found\n# if its not found in $a\nelse\n{\n\tprint \"Match Not Found\\n\";\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File Handling",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File Handling",
+              "body": "```perl\n# Opening the file\nopen(fh, \"GFG2.txt\") or die \"File '$filename' can't be opened\";\n\n# Reading First line from the file\n$firstline = <fh>;\nprint \"$firstline\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File Test Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File Test Operators",
+              "body": "```perl\n#!/usr/bin/perl\n\n# Using predefined modules\nuse warnings;\nuse strict;\n\n# Providing path of file to a variable\nmy $filename = 'C:\\Users\\GeeksForGeeks\\GFG.txt';\n\n# Checking for the file existence\nif(-e $filename)\n{\n\n\t# If File exists\n\tprint(\"File $filename exists\\n\");\n}\n\nelse\n{\n\n\t# If File doesn't exists\n\tprint(\"File $filename does not exists\\n\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Working with Excel Files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Working with Excel Files",
+              "body": "```perl\n#!/usr/bin/perl\nuse Excel::Writer::XLSX;\n\nmy $Excelbook = Excel::Writer::XLSX->new( 'GFG_Sample.xlsx' );\nmy $Excelsheet = $Excelbook->add_worksheet();\n\n$Excelsheet->write( \"A1\", \"Hello!\" );\n$Excelsheet->write( \"A2\", \"GeeksForGeeks\" );\n$Excelsheet->write( \"B1\", \"Next_Column\" );\n\n$Excelbook->close;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reading from an Excel File:",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reading from an Excel File:",
+              "body": "```perl\nuse 5.016;\nuse Spreadsheet::Read qw(ReadData);\nmy $book_data = ReadData (‘new_excel.xlsx');\nsay 'A2: ' . $book_data->[1]{A2};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Error Handling",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Error Handling",
+              "body": "",
+              "footer": "```perl\nif(open(DATA, $file)) {\n   ...\n} else {\n   die \"Error: Couldn't open the file - $!\"\n}\n#example\nopen(DATA, $file) || die \"Error: Couldn't open the file $!\";",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "example",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "The warn Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "The warn Function",
+              "body": "```perl\nchdir('/etc') or warn \"Can't change directory\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "The die function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "The die function",
+              "body": "```perl\nchdir('/etc') or die \"Can't change directory\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Errors within Modules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Errors within Modules",
+              "body": "```perl\npackage T;\n\nrequire Exporter;\n@ISA = qw/Exporter/;\n@EXPORT = qw/function/;\nuse Carp;\n\nsub function {\n   warn \"Error in module!\";\n}\n1;\n#use T;\n#function();\n# all below code call the funtion\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "The carp Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "The carp Function",
+              "body": "```perl\npackage T;\n\nrequire Exporter;\n@ISA = qw/Exporter/;\n@EXPORT = qw/function/;\nuse Carp;\n\nsub function {\n   carp \"Error in module!\";\n}\n1;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "The cluck Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "The cluck Function",
+              "body": "```perl\npackage T;\n\nrequire Exporter;\n@ISA = qw/Exporter/;\n@EXPORT = qw/function/;\nuse Carp qw(cluck);\n\nsub function {\n   cluck \"Error in module!\";\n}\n1;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "The croak Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "The croak Function",
+              "body": "```perl\npackage T;\n\nrequire Exporter;\n@ISA = qw/Exporter/;\n@EXPORT = qw/function/;\nuse Carp;\n\nsub function {\n   croak \"Error in module!\";\n}\n1;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "The confess Function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "The confess Function",
+              "body": "```perl\npackage T;\n\nrequire Exporter;\n@ISA = qw/Exporter/;\n@EXPORT = qw/function/;\nuse Carp;\n\nsub function {\n   confess \"Error in module!\";\n}\n1;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Date and Time",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Current Date and Time",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Current Date and Time",
+              "body": "```perl\n#!/usr/local/bin/perl\n\n@months = qw( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec );\n@days = qw(Sun Mon Tue Wed Thu Fri Sat Sun);\n\n($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();\nprint \"$mday $months[$mon] $days[$wday]\\n\";\n#or\n#!/usr/local/bin/perl\n\n$datestring = localtime();\nprint \"Local date and time $datestring\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GMT Time",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GMT Time",
+              "body": "```perl\n#!/usr/local/bin/perl\n\n$datestring = gmtime();\nprint \"GMT date and time $datestring\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Format Date and Time",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Format Date and Time",
+              "body": "```perl\n#!/usr/local/bin/perl\n\n($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();\n\nprintf(\"Time Format - HH:MM:SS\\n\");\nprintf(\"%02d:%02d:%02d\", $hour, $min, $sec);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Epoch time",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Epoch time",
+              "body": "```perl\n#!/usr/local/bin/perl\n\n$epoc = time();\n\nprint \"Number of seconds since Jan 1, 1970 - $epoc\\n\";\n#or\n#!/usr/local/bin/perl\n\n$datestring = localtime();\nprint \"Current date and time $datestring\\n\";\n\n$epoc = time();\n$epoc = $epoc - 24 * 60 * 60;   # one day before of current date.\n\n$datestring = localtime($epoc);\nprint \"Yesterday's date and time $datestring\\n\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "POSIX Function strftime()",
+          "level": 3,
+          "cards": [
+            {
+              "title": "POSIX Function strftime()",
+              "body": "```perl\n#!/usr/local/bin/perl\nuse POSIX qw(strftime);\n\n$datestring = strftime \"%a %b %e %H:%M:%S %Y\", localtime;\nprintf(\"date and time - $datestring\\n\");\n\n# or for GMT formatted appropriately for your locale:\n$datestring = strftime \"%a %b %e %H:%M:%S %Y\", gmtime;\nprintf(\"date and time - $datestring\\n\");\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

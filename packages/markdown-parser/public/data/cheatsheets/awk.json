@@ -1,0 +1,673 @@
+{
+  "id": "awk",
+  "metadata": {
+    "title": "Awk",
+    "date": "2020-12-31T15:18:34.000Z",
+    "background": "bg-slate-600",
+    "tags": [
+      "bash",
+      "text",
+      "script"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "This is a one page quick reference cheat sheet to the [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html), which covers commonly used awk expressions and commands.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Have a try",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Have a try",
+              "body": "",
+              "footer": "```shell script {.wrap}\n$ awk -F: '{print $1, $NF}' /etc/passwd\n```\n\n| -             | -                         |\n| ------------- | ------------------------- |\n| `-F:`         | Colon as a separator      |\n| `{...}`       | Awk program               |\n| `print`       | Prints the current record |\n| `$1`          | First field               |\n| `$NF`         | Last field                |\n| `/etc/passwd` | Input data file           |\n\n{.left-text}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Awk program",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Awk program",
+              "body": "```\nBEGIN          {<initializations>}\n   <pattern 1> {<program actions>}\n   <pattern 2> {<program actions>}\n   ...\nEND            {< final actions >}\n```",
+              "footer": "#### Example\n\n```\nawk '\n    BEGIN { print \"\\n>>>Start\" }\n    !/(login|shutdown)/ { print NR, $0 }\n    END { print \"<<<END\\n\" }\n' /etc/passwd\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```bash\n$1      $2/$(NF-1)    $3/$NF\n           ▼          ▼           ▼\n        ┌──────┬──────────────────┬───────┐\n$0/NR ▶ │  ID  │  WEBSITE         │  URI  │\n        ├──────┼──────────────────┼───────┤\n$0/NR ▶ │  1   │  cheatsheets.zip │  awk  │\n        ├──────┼──────────────────┼───────┤\n$0/NR ▶ │  2   │  google.com      │  25   │\n        └──────┴──────────────────┴───────┘\n```",
+              "footer": "```\nawk -F: '{print $1,$NF}' /etc/passwd\nawk -F: '{print NR, $0}' /etc/passwd\nawk -F: '{print $(NF-1)}' /etc/passwd\nawk -F: '{print $1 \"=\" $6}' /etc/passwd\n```\nSee: [Variables](#awk-variables)",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Awk program examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Awk program examples",
+              "body": "```\nawk 'BEGIN {print \"hello world\"}'        # Prints \"hello world\"\nawk -F: '{print $1}' /etc/passwd         # -F: Specify field separator\n\n# /pattern/ Execute actions only for matched pattern\nawk -F: '/root/ {print $1}' /etc/passwd\n\n# BEGIN block is executed once at the start\nawk -F: 'BEGIN { print \"uid\"} { print $1 }' /etc/passwd\n\n# END block is executed once at the end\nawk -F: '{print $1} END { print \"-done-\"}' /etc/passwd\n```",
+              "footer": "",
+              "spanConfig": "col-span-2 .row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Conditions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conditions",
+              "body": "```\nawk -F: '$3>30 {print $1}' /etc/passwd\n```",
+              "footer": "See: [Conditions](#awk-conditions)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generate 1000 spaces",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generate 1000 spaces",
+              "body": "```\nawk 'BEGIN{\n    while (a++ < 1000)\n        s=s \" \";\n    print s\n}'\n```",
+              "footer": "See: [Loops](#awk-loops)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays",
+              "body": "```\nawk 'BEGIN {\n   fruits[\"mango\"] = \"yellow\";\n   fruits[\"orange\"] = \"orange\"\n   for(fruit in fruits) {\n     print \"The color of \" fruit \" is \" fruits[fruit]\n   }\n}'\n```",
+              "footer": "See: [Arrays](#awk-arrays)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "```\n# => 5\nawk 'BEGIN{print length(\"hello\")}'\n# => HELLO\nawk 'BEGIN{print toupper(\"hello\")}'\n# => hel\nawk 'BEGIN{print substr(\"hello\", 1, 3)}'\n```",
+              "footer": "See: [Functions](#awk-functions)",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Awk Variables",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Build-in variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Build-in variables",
+              "body": "| -              | -                                                   |\n| -------------- | --------------------------------------------------- |\n| `$0`           | Whole line                                          |\n| `$1, $2...$NF` | First, second… last field                           |\n| `NR`           | `N`umber of `R`ecords                               |\n| `NF`           | `N`umber of `F`ields                                |\n| `OFS`          | `O`utput `F`ield `S`eparator <br> _(default \" \")_   |\n| `FS`           | input `F`ield `S`eparator <br> _(default \" \")_      |\n| `ORS`          | `O`utput `R`ecord `S`eparator <br> _(default \"\\n\")_ |\n| `RS`           | input `R`ecord `S`eparator <br> _(default \"\\n\")_    |\n| `FILENAME`     | Name of the file                                    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Expressions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Expressions",
+              "body": "| -                   | -                                  |\n| ------------------- | ---------------------------------- |\n| `$1 == \"root\"`      | First field equals root            |\n| `{print $(NF-1)}`   | Second last field                  |\n| `NR!=1{print $0}`   | From 2nd record                    |\n| `NR > 3`            | From 4th record                    |\n| `NR == 1`           | First record                       |\n| `END{print NR}`     | Total records                      |\n| `BEGIN{print OFMT}` | Output format                      |\n| `{print NR, $0}`    | Line number                        |\n| `{print NR \"\t\" $0}`  | Line number (tab)                  |\n| `{$1 = NR; print}`  | Replace 1st field with line number |\n| `$NF > 4`           | Last field > 4                     |\n| `NR % 2 == 0`       | Even records                       |\n| `NR==10, NR==20`    | Records 10 to 20                   |\n| `BEGIN{print ARGC}` | Total arguments                    |\n| `ORS=NR%5?\",\":\"\\n\"` | Concatenate records                |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "```\nawk -F: '{sum += $3}\n     END { print sum, sum/NR }\n' /etc/passwd\n```",
+              "footer": "Printing parameters\n```\nawk 'BEGIN {\nfor (i = 1; i < ARGC; i++)\nprint ARGV[i] }' a b c\n```\nOutput field separator as a comma\n```\nawk 'BEGIN { FS=\":\";OFS=\",\"}\n{print $1,$2,$3,$4}' /etc/passwd\n```\nPosition of match\n```\nawk 'BEGIN {\nif (match(\"One Two Three\", \"Tw\"))\nprint RSTART }'\n```\nLength of match\n```\nawk 'BEGIN {\nif (match(\"One Two Three\", \"re\"))\nprint RLENGTH }'\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Environment Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Environment Variables",
+              "body": "| -         | -                                                         |\n| --------- | --------------------------------------------------------- |\n| `ARGC`    | Number or arguments                                       |\n| `ARGV`    | Array of arguments                                        |\n| `FNR`     | `F`ile `N`umber of `R`ecords                              |\n| `OFMT`    | Format for numbers <br> _(default \"%.6g\")_                |\n| `RSTART`  | Location in the string                                    |\n| `RLENGTH` | Length of match                                           |\n| `SUBSEP`  | Multi-dimensional array separator <br> _(default \"\\034\")_ |\n| `ARGIND`  | Argument Index                                            |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GNU awk only",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GNU awk only",
+              "body": "| -             | -                     |\n| ------------- | --------------------- |\n| `ENVIRON`     | Environment variables |\n| `IGNORECASE`  | Ignore case           |\n| `CONVFMT`     | Conversion format     |\n| `ERRNO`       | System errors         |\n| `FIELDWIDTHS` | Fixed width fields    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Defining variable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Defining variable",
+              "body": "```\nawk -v var1=\"Hello\" -v var2=\"Wold\" '\n    END {print var1, var2}\n' </dev/null\n```",
+              "footer": "#### Use shell variables\n\n```\nawk -v varName=\"$PWD\" '\n    END {print varName}' </dev/null\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Awk Operators",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operators",
+              "body": "| -                | -           |\n| ---------------- | ----------- |\n| `{print $1}`     | First field |\n| `$2 == \"foo\"`    | Equals      |\n| `$2 != \"foo\"`    | Not equals  |\n| `\"foo\" in array` | In array    |",
+              "footer": "#### Regular expression\n\n| -               | -                 |\n| --------------- | ----------------- |\n| `/regex/`       | Line matches      |\n| `!/regex/`      | Line not matches  |\n| `$1 ~ /regex/`  | Field matches     |\n| `$1 !~ /regex/` | Field not matches |\n\n#### More conditions\n\n| -                        | -   |\n| ------------------------ | --- |\n| `($2 <= 4 \\|\\| $3 < 20)` | Or  |\n| `($1 == 4 && $3 < 20)`   | And |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Operations",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operations",
+              "body": "",
+              "footer": "#### Arithmetic operations\n\n- `+`\n- `-`\n- `*`\n- `/`\n- `%`\n- `++`\n- `--`\n\n{.cols-3 .marker-none}\n\n#### Shorthand assignments\n\n- `+=`\n- `-=`\n- `*=`\n- `/=`\n- `%=`\n\n{.cols-3 .marker-none}\n\n#### Comparison operators\n\n- `==`\n- `!=`\n- `<`\n- `>`\n- `<=`\n- `>=`\n\n{.cols-3 .marker-none}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "```\nawk 'BEGIN {\n    if (\"foo\" ~ \"^fo+$\")\n        print \"Fooey!\";\n}'\n```",
+              "footer": "#### Not match\n\n```\nawk 'BEGIN {\n    if (\"boo\" !~ \"^fo+$\")\n        print \"Boo!\";\n}'\n```\n\n#### if in array\n\n```\nawk 'BEGIN {\n    assoc[\"foo\"] = \"bar\";\n    assoc[\"bar\"] = \"baz\";\n    if (\"foo\" in assoc)\n        print \"Fooey!\";\n}'\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Awk Functions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Common functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Common functions",
+              "body": "| Function              | Description                                                                     |\n| --------------------- | ------------------------------------------------------------------------------- |\n| `index(s,t)`          | Position in string s where string t occurs, 0 if not found                      |\n| `length(s)`           | Length of string s (or $0 if no arg)                                            |\n| `rand`                | Random number between 0 and 1                                                   |\n| `substr(s,index,len)` | Return len-char substring of s that begins at index (counted from 1)            |\n| `srand`               | Set seed for rand and return previous seed                                      |\n| `int(x)`              | Truncate x to integer value                                                     |\n| `split(s,a,fs)`       | Split string s into array a split by fs, returning length of a                  |\n| `match(s,r)`          | Position in string s where regex r occurs, or 0 if not found                    |\n| `sub(r,t,s)`          | Substitute t for first occurrence of regex r in string s (or $0 if s not given) |\n| `gsub(r,t,s)`         | Substitute t for all occurrences of regex r in string s                         |\n| `system(cmd)`         | Execute cmd and return exit status                                              |\n| `tolower(s)`          | String s to lowercase                                                           |\n| `toupper(s)`          | String s to uppercase                                                           |\n| `getline`             | Set $0 to next input record from current input file.                            |",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "User defined function",
+          "level": 3,
+          "cards": [
+            {
+              "title": "User defined function",
+              "body": "```\nawk '\n    # Returns minimum number\n    function find_min(num1, num2){\n       if (num1 < num2)\n       return num1\n       return num2\n    }\n    # Returns maximum number\n    function find_max(num1, num2){\n       if (num1 > num2)\n       return num1\n       return num2\n    }\n    # Main function\n    function main(num1, num2){\n       result = find_min(num1, num2)\n       print \"Minimum =\", result\n\n       result = find_max(num1, num2)\n       print \"Maximum =\", result\n    }\n    # Script execution starts here\n    BEGIN {\n       main(10, 60)\n    }\n'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Awk Arrays",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Array with index",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array with index",
+              "body": "```\nawk 'BEGIN {\n    arr[0] = \"foo\";\n    arr[1] = \"bar\";\n    print(arr[0]); # => foo\n    delete arr[0];\n    print(arr[0]); # => \"\"\n}'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array with key",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array with key",
+              "body": "```\nawk 'BEGIN {\n    assoc[\"foo\"] = \"bar\";\n    assoc[\"bar\"] = \"baz\";\n    print(\"baz\" in assoc); # => 0\n    print(\"foo\" in assoc); # => 1\n}'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array with split",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array with split",
+              "body": "```\nawk 'BEGIN {\n    split(\"foo:bar:baz\", arr, \":\");\n    for (key in arr)\n        print arr[key];\n}'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array with asort",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array with asort",
+              "body": "```\nawk 'BEGIN {\n    arr[0] = 3\n    arr[1] = 2\n    arr[2] = 4\n    n = asort(arr)\n    for (i = 1; i <= n ; i++)\n        print(arr[i])\n}'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multi-dimensional",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multi-dimensional",
+              "body": "```\nawk 'BEGIN {\n    multidim[0,0] = \"foo\";\n    multidim[0,1] = \"bar\";\n    multidim[1,0] = \"baz\";\n    multidim[1,1] = \"boo\";\n}'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multi-dimensional iteration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multi-dimensional iteration",
+              "body": "```\nawk 'BEGIN {\n    array[1,2]=3;\n    array[2,3]=5;\n    for (comb in array) {\n        split(comb,sep,SUBSEP);\n        print sep[1], sep[2],\n        array[sep[1],sep[2]]\n    }\n}'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Awk Conditions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "if-else statement",
+          "level": 3,
+          "cards": [
+            {
+              "title": "if-else statement",
+              "body": "```\nawk -v count=2 'BEGIN {\n    if (count == 1)\n        print \"Yes\";\n    else\n        print \"Huh?\";\n}'\n```",
+              "footer": "#### Ternary operator\n\n```\nawk -v count=2 'BEGIN {\n    print (count==1) ? \"Yes\" : \"Huh?\";\n}'\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Exists",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Exists",
+              "body": "```\nawk 'BEGIN {\n    assoc[\"foo\"] = \"bar\";\n    assoc[\"bar\"] = \"baz\";\n    if (\"foo\" in assoc)\n        print \"Fooey!\";\n}'\n```",
+              "footer": "#### Not exists\n\n```\nawk 'BEGIN {\n    assoc[\"foo\"] = \"bar\";\n    assoc[\"bar\"] = \"baz\";\n    if (\"Huh\" in assoc == 0 )\n        print \"Huh!\";\n}'\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "switch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "switch",
+              "body": "```\nawk -F: '{\n    switch (NR * 2 + 1) {\n        case 3:\n        case \"11\":\n            print NR - 1\n            break\n\n        case /2[[:digit:]]+/:\n            print NR\n\n        default:\n            print NR + 1\n\n        case -1:\n            print NR * -1\n    }\n}' /etc/passwd\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Awk Loops",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "for...i",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for...i",
+              "body": "```\nawk 'BEGIN {\n    for (i = 0; i < 10; i++)\n        print \"i=\" i;\n}'\n```",
+              "footer": "#### Powers of two between 1 and 100\n\n```\nawk 'BEGIN {\n    for (i = 1; i <= 100; i *= 2)\n        print i\n}'\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "for...in",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for...in",
+              "body": "```\nawk 'BEGIN {\n    assoc[\"key1\"] = \"val1\"\n    assoc[\"key2\"] = \"val2\"\n    for (key in assoc)\n        print assoc[key];\n}'\n```",
+              "footer": "#### Arguments\n\n```\nawk 'BEGIN {\n    for (argnum in ARGV)\n        print ARGV[argnum];\n}' a b c\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Examples",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Examples",
+              "body": "",
+              "footer": "#### Reverse records\n\n```\nawk -F: '{ x[NR] = $0 }\n    END {\n        for (i = NR; i > 0; i--)\n        print x[i]\n    }\n' /etc/passwd\n```\n\n#### Reverse fields\n\n```\nawk -F: '{\n    for (i = NF; i > 0; i--)\n        printf(\"%s \",$i);\n    print \"\"\n}' /etc/passwd\n```\n\n#### Sum by record\n\n```\nawk -F: '{\n    s=0;\n    for (i = 1; i <= NF; i++)\n        s += $i;\n    print s\n}' /etc/passwd\n```\n\n#### Sum whole file\n\n```\nawk -F: '\n    {for (i = 1; i <= NF; i++)\n        s += $i;\n    };\n    END{print s}\n' /etc/passwd\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "while",
+          "level": 3,
+          "cards": [
+            {
+              "title": "while",
+              "body": "```\nawk 'BEGIN {\n    while (a < 10) {\n        print \"- \" \" concatenation: \" a\n        a++;\n    }\n}'\n```",
+              "footer": "#### do...while\n\n```\nawk '{\n    i = 1\n    do {\n        print $0\n        i++\n    } while (i <= 5)\n}' /etc/passwd\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break",
+              "body": "```\nawk 'BEGIN {\n    break_num = 5\n    for (i = 0; i < 10; i++) {\n        print i\n        if (i == break_num)\n            break\n    }\n}'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Continue",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Continue",
+              "body": "```\nawk 'BEGIN {\n    for (x = 0; x <= 10; x++) {\n        if (x == 5 || x == 6)\n            continue\n        printf \"%d \", x\n    }\n    print \"\"\n}'\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Awk Formatted Printing",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Usage",
+              "body": "",
+              "footer": "#### Right align\n\n```\nawk 'BEGIN{printf \"|%10s|\\n\", \"hello\"}'\n\n|     hello|\n```\n\n#### Left align\n\n```\nawk 'BEGIN{printf \"|%-10s|\\n\", \"hello\"}'\n\n|hello     |\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Common specifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Common specifiers",
+              "body": "| Character     | Description           |\n| ------------- | --------------------- |\n| `c`           | ASCII character       |\n| `d`           | Decimal integer       |\n| `e`, `E`, `f` | Floating-point format |\n| `o`           | Unsigned octal value  |\n| `s`           | String                |\n| `%`           | Literal %             |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Space",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Space",
+              "body": "```\nawk -F: '{\n    printf \"%-10s %s\\n\", $1, $(NF-1)\n}' /etc/passwd | head -n 3\n```",
+              "footer": "Outputs\n```shell script\nroot       /root\nbin        /bin\ndaemon     /sbin\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Header",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Header",
+              "body": "```\nawk -F: 'BEGIN {\n    printf \"%-10s %s\\n\", \"User\", \"Home\"\n    printf \"%-10s %s\\n\", \"----\",\"----\"}\n    { printf \"%-10s %s\\n\", $1, $(NF-1) }\n' /etc/passwd | head -n 5\n```",
+              "footer": "Outputs\n```\nUser       Home\n----       ----\nroot       /root\nbin        /bin\ndaemon     /sbin\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Regex Metacharacters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Regex Metacharacters",
+              "body": "- `\\`\n- `^`\n- `$`\n- `.`\n- `[`\n- `]`\n- `|`\n- `(`\n- `)`\n- `*`\n- `+`\n- `?`\n\n{.cols-3 .marker-none}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Escape Sequences",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Escape Sequences",
+              "body": "| -    | -                   |\n| ---- | ------------------- |\n| `\\b` | Backspace           |\n| `\\f` | Form feed           |\n| `\\n` | Newline (line feed) |\n| `\\r` | Carriage return     |\n| `\\t` | Horizontal tab      |\n| `\\v` | Vertical tab        |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Run script",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Run script",
+              "body": "",
+              "footer": "```shell script\n$ cat demo.awk\n#!/usr/bin/awk -f\nBEGIN { x = 23 }\n      { x += 2 }\nEND   { print x }\n$ awk -f demo.awk /etc/passwd\n69\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [The GNU Awk User's Guide](https://www-zeuthen.desy.de/dv/documentation/unixguide/infohtml/gawk/gawk.html)\n  _(www-zeuthen.desy.de)_\n- [AWK cheatsheet](https://gist.github.com/Rafe/3102414) _(gist.github.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

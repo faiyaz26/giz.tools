@@ -1,0 +1,693 @@
+{
+  "id": "dart",
+  "metadata": {
+    "title": "Dart",
+    "date": "2021-11-04T10:12:25.000Z",
+    "background": "bg-[#58aee9]",
+    "tags": [
+      "dart",
+      "flutter"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "A Dart cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "hello.dart",
+          "level": 3,
+          "cards": [
+            {
+              "title": "hello.dart",
+              "body": "```dart\n// top-level function where app execution starts\nvoid main(){\n    print(\"Hello World!\"); // Print to console\n}\n```",
+              "footer": "Every app has a main() function",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```dart\nint x = 2; // explicitly typed\nvar p = 5; // type inferred - Generic var with type inference\n\ndynamic z = 8; // variable can take on any type\nz = \"cool\"; // cool\n\n// if you never intend to change a variable use final or const. Something like this:\n\nfinal email = \"temid@gmail.com\"; // Same as var but cannot be reassigned\nfinal String email = \"temid@gmail.com\"; // you can't change the value\n\nconst qty = 5; // Compile-time constant\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Datatypes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Datatypes",
+              "body": "```dart\nint age = 20; // integers, range -2^63 to 2^63 - 1\ndouble height = 1.85; // floating-point numbers\n\n// You can also declare a variable as a num\nnum x = 1;  // x can have both int and double values\nx += 2.5;\nprint(x); //Print: 3.5\n\nString name = \"Nicola\";\n\nbool isFavourite = true;\nbool isLoaded = false;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "String interpolation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String interpolation",
+              "body": "```dart\n// can use single or double qoutes for String type\nvar firstName = 'Nicola';\nvar lastName = \"Tesla\";\n\n//can embed variables in string with $\nString fullName = \"$firstName $lastName\";\n\n// concatenate with +\nvar name = \"Albert \" + \"Einstein\";\n\nString upperCase = '${firstName.toUpperCase()}';\nprint(upperCase); //Print: NICOLA\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```dart\n// This is a normal, one-line comment.\n\n/// This is a documentation comment, used to document libraries,\n/// classes, and their members. Tools like IDEs and dartdoc treat\n/// doc comments specially.\n\n/* Comments like these are also supported. */\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "multiline String",
+          "level": 3,
+          "cards": [
+            {
+              "title": "multiline String",
+              "body": "```dart\nFor multiline String we have to use ''' your text'''\nfor example\nprint('''My long string''');\n//this will show long string\n//this will help for only long strings\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Imports",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Imports",
+              "body": "```dart\n// Importing core libraries\nimport 'dart:math';\n\n// Importing libraries from external packages\nimport 'package:test/test.dart';\n\n// Importing files\nimport 'path/to/my_other_file.dart';\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Operators {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Arithmatic Operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arithmatic Operators",
+              "body": "```dart\nprint(2 + 3); //Print: 5\nprint(2 - 3); //Print: -1\nprint(2 * 3); //Print: 6\nprint(5 / 2);  //Print: 2.5 - Result is a double\nprint(5 ~/ 2); //Print: 2 - Result is an int\nprint(5 % 2); //Print: 1 - Remainder\n\nint a = 1, b;\n// Increment\nb = ++a; // preIncrement - Increment a before b gets its value.\nb = a++; // postIncrement - Increment a AFTER b gets its value.\n\n//Decrement\nb = --a; // predecrement - Decrement a before b gets its value.\nb = a--; // postdecrement - Decrement a AFTER b gets its value.\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Equality and relational operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Equality and relational operators",
+              "body": "```dart\nprint(2 == 2);  //Print: true - Equal\nprint(2 != 3); //Print: true - Not  Equal\nprint(3 > 2); //Print: true - Grater than\nprint(2 < 3); //Print: true - Less than\nprint(3 >= 3); //Print: true - Greater than or equal to\nprint(2 <= 3); //Print: true - Less than or equal to\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logical operators",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logical operators",
+              "body": "```dart\n// !expr inverts the expression (changes false to true, and vice versa)\n// ||\tlogical OR\n// &&\tlogical AND\nbool isOutOfStock = false;\nint quantity = 3;\nif (!isOutOfStock && (quantity == 2 || quantity == 3)) {\n  // ...Order the product...\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Control Flows : Conditionals {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "if and else if",
+          "level": 3,
+          "cards": [
+            {
+              "title": "if and else if",
+              "body": "```dart\nif(age < 18){\n    print(\"Teen\");\n} else if( age > 18 && age <60){\n    print(\"Adult\");\n} else {\n    print(\"Old\");\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "switch case",
+          "level": 3,
+          "cards": [
+            {
+              "title": "switch case",
+              "body": "```dart\nenum Pet {dog, cat}\nPet myPet = Pet.dog;\nswitch(myPet){\n    case Pet.dog:\n        print('My Pet is Dog.');\n        break;\n    case Pet.cat:\n        print('My Pet is Cat.');\n        break;\n    default:\n        print('I don\\'t have a Pet');\n}\n// Prints: My Pet is Dog.\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Control Flows : Loops",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "while loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "while loop",
+              "body": "```dart\nwhile (!dreamsAchieved) {\n  workHard();\n}\n```",
+              "footer": "while loop check condition before iteration of the loop",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "do-while loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "do-while loop",
+              "body": "```dart\ndo {\n  workHard();\n} while (!dreamsAchieved);\n```",
+              "footer": "do-while loop verifies the condition after the execution of the statements inside the loop",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "for loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for loop",
+              "body": "```dart\nfor(int i=0; i< 10; i++){\n    print(i);\n}\n\nvar numbers = [1,2,3];\n// for-in loop for lists\nfor(var number in numbers){\n    print(number);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "for in loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for in loop",
+              "body": "```dart\n// Define a list of numbers\n  var numbers = [1, 2, 3, 4, 5];\n\n  // Use a for-in loop to iterate over the list\n  for (var number in numbers) {\n    print(number);\n  }\n\n  // Define a list of strings\n  var fruits = ['Apple', 'Banana', 'Cherry'];\n\n  // Use a for-in loop to iterate over the list\n  for (var fruit in fruits) {\n    print(fruit);\n  }\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Collections {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Lists",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Lists",
+              "body": "```dart\n// ordered group of objects\nvar list = [1, 2, 3];\n\nprint(list.length); //Print: 3\nprint(list[1]); //Print: 2\n\n// other ways of list declaration and initializations\n\nList<String> cities = <String>[\"New York\", \"Mumbai\", \"Tokyo\"];\n\n// To create a list that’s a compile-time constant\nconst constantCities = const [\"New York\", \"Mumbai\", \"Tokyo\"];\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sets",
+              "body": "```dart\n// A set in Dart is an unordered collection of unique items.\nvar halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};\n\n// to create an empty set\nvar names = <String>{};\nSet<String> names = {}; // This works, too.\n//var names = {}; // Creates a map, not a set.\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Maps",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Maps",
+              "body": "```dart\n// a map is an object that associates keys and values\nvar person = Map<String, String>();\n// To initialize the map, do this:\n\nperson['lastName'] = 'Tesla';\n\nprint(person); //Print: {firstName: Nicola, lastName: Tesla}\nprint(person['lastName']); //Print: Tesla\n\nvar nobleGases = {\n  // Key: Value\n  2: 'helium',\n  10: 'neon',\n  18: 'argon',\n};\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Functions {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Functions",
+              "body": "```dart\n// functions in dart are objects and have a type\nint add(int a, int b){\n    return a+b;\n}\n\n// functions can be assigned to variables\nint sum = add(2,3); // returns: 5\n\n// can be passed as arguments to other functions\nint totalSum = add(2, add(2,3)); // returns : 7\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrow Syntax (=>)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrow Syntax (=>)",
+              "body": "```dart\n// functions that contain just one expression, you can use a shorthand syntax\nbool isFav(Product product) => favProductsList.contains(product);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Anonymous (lambda) functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Anonymous (lambda) functions",
+              "body": "```dart\n// small one line functions that dont have name\nint add(a,b) => a+b;\n\n// lambda functions mostly passed as parameter to other functions\nconst list = ['apples', 'bananas', 'oranges'];\nlist.forEach(\n(item) => print('${list.indexOf(item)}: $item'));\n//Prints: 0: apples 1: bananas 2: oranges\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Classes and Objects",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Class",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class",
+              "body": "```dart\nclass Cat {\n    String name;\n\n    // method\n    void voice(){\n        print(\"Meow\");\n    }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Object",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Object",
+              "body": "```dart\n// instance of a class\n// below myCat is Object of class Cat\n\nvoid main(){\n    Cat myCat = Cat();\n    myCat.name = \"Kitty\";\n    myCat.voice(); // Prints: Meow\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Constructors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Constructors",
+              "body": "```dart\nclass Cat {\n    String name;\n    Cat(this.name);\n}\nvoid main(){\n    Cat myCat = Cat(\"Kitty\");\n    print(myCat.name); // Prints: Kitty\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Abstract Classes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Abstract Classes",
+              "body": "```dart\n// abstract class—a class that can’t be instantiated\n// This class is declared abstract and thus can't be instantiated.\nabstract class AbstractContainer {\n  // Define constructors, fields, methods...\n\n  void updateChildren(); // Abstract method.\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Getters Setters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getters Setters",
+              "body": "```dart\n// provide read and write access to an object’s properties\nclass Cat {\n    String name;\n\n    // getter\n    String get catName {\n        return name;\n    }\n\n    // setter\n    void set catName(String name){\n        this.name = name;\n    }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Implicit interfaces {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "A basic interface",
+          "level": 3,
+          "cards": [
+            {
+              "title": "A basic interface",
+              "body": "```dart\n// A person. The implicit interface contains greet().\nclass Person {\n  // In the interface, but visible only in this library.\n  final String _name;\n\n  // Not in the interface, since this is a constructor.\n  Person(this._name);\n\n  // In the interface.\n  String greet(String who) => 'Hello, $who. I am $_name.';\n}\n\n// An implementation of the Person interface.\nclass Impostor implements Person {\n  String get _name => '';\n\n  String greet(String who) => 'Hi $who. Do you know who I am?';\n}\n\nString greetBob(Person person) => person.greet('Bob');\n\nvoid main() {\n  print(greetBob(Person('Kathy'))); // Hello, Bob. I am Kathy.\n  print(greetBob(Impostor())); // Hi Bob. Do you know who I am?\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extending a class",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extending a class",
+              "body": "```dart\nclass Phone {\n\n    void use(){\n        _call();\n        _sendMessage();\n    }\n}\n// Use extends to create a subclass\nclass SmartPhone extends Phone {\n    void use(){\n        // use super to refer to the superclass\n        super.use();\n        _takePhotos();\n        _playGames();\n    }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Exceptions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Throw",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Throw",
+              "body": "```dart\n// throws or raises and exception\nthrow IntegerDivisionByZeroException();\n\n// You can also throw arbitrary objects\nthrow \"Product out of stock!\";\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Catch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Catch",
+              "body": "```dart\ntry {\n    int c = 3/0;\n    print(c);\n} on IntegerDivisionByZeroException {\n    // A specific exception\n    print('Can not divide integer by 0.')\n} on Exception catch (e) {\n    // Anything else that is an exception\n    print('Unknown exception: $e');\n} catch (e) {\n    // No specified type, handles all\n    print('Something really unknown: $e');\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Finally",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Finally",
+              "body": "```dart\n// To ensure that some code runs whether or not an exception is thrown\ntry {\n  cookFood();\n} catch (e) {\n  print('Error: $e'); // Handle the exception first.\n} finally {\n  cleanKitchen(); // Then clean up.\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Futures",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Async Await",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Async Await",
+              "body": "```dart\n// functions which are asynchronous: they return after setting up a possibly time-consuming operation\n// The async and await keywords support asynchronous programming\n\nFuture<String> login() {\n String userName=\"Temidjoy\";\n return\n  Future.delayed(\n    Duration(seconds: 4), () => userName);\n}\n\n// Asynchronous\nmain() async {\n print('Authenticating please wait...');\n print(await login());\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Extensions {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Why use extensions?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Why use extensions?",
+              "body": "```dart\n// Extensions allow you to add methods to existing\n// classes without modifying them.\n\n// Instead of defining a util class.\nclass StringUtil {\n  static bool isValidEmail(String str) {\n    final emailRegExp = RegExp(r\"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z]+\");\n    return emailRegExp.hasMatch(str);\n  }\n}\n\nprint(StringUtil.isValidEmail('someString')); //Print: false\n\n// We can define an extension which will be applied\n// on a certain type.\n\nextension StringExtensions on String {\n  bool get isValidEmail {\n    final emailRegExp = RegExp(r\"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z]+\");\n    return emailRegExp.hasMatch(this);\n  }\n}\n\nprint('test@example.com'.isValidEmail); //Print: true\nprint('SomeString'.isValidEmail); //Print: false\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Generic Extensions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Generic Extensions",
+              "body": "```dart\n// allows you to apply the same logic to a range of types.\nextension NumGenericExtensions<T extends num> on T {\n  T addTwo() => this + 2 as T;\n}\n\nprint(7.addTwo()); // Print: 9\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dart Extensions in Flutter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dart Extensions in Flutter",
+              "body": "```dart\nextension ContextExtension on BuildContext {\n  double get screenHeight => MediaQuery.of(this).size.height;\n  double get screenWidth => MediaQuery.of(this).size.width;\n}\n\n// usage\n@override\nWidget build(BuildContext context) => MaterialApp(\n    home: Scaffold(\n      body: Container(\n        width: context.screenWidth * 0.5,\n        height: context.screenHeight * 0.3,\n        color: Colors.blue,\n        child: Text('Hello World!'),\n      ),\n    ),\n  );\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Null and Null aware",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Null and Null aware",
+              "body": "```dart\nint x; // The initial value of any object is null\n\n// ?? null aware operator\n\nx ??=6; // ??= assignment operator, which assigns a value of a variable only if that variable is currently null\nprint(x); //Print: 6\n\nx ??=3;\nprint(x); // Print: 6 - result is still 6\n\nprint(null ?? 10); // Prints: 10. Display the value on the left if it's not null else return the value on the right\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ternary Operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ternary Operator",
+              "body": "```dart\n// condition ? exprIfTrue : exprIfFalse\nbool isAvailable;\n\nisAvailable ? orderproduct() : addToFavourite();\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Spread Operator (...)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Spread Operator (...)",
+              "body": "```dart\n// to insert multiple values into a collection.\nvar list = [1, 2, 3];\nvar list2 = [0, ...list];\n\nprint(list2.length); //Print: 4\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cascade notation (..)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cascade notation (..)",
+              "body": "```dart\n// allows you to make a sequence of operations on the same object\n\n// rather than doing this\nvar user = User();\nuser.name = \"Nicola\";\nuser.email = \"nicola@g.c\";\nuser.age = 24;\n\n// you can do this\nvar user = User()\n  ..name = \"Nicola\"\n  ..email = \"nicola@g.c\"\n  ..age = 24;\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Conditional Property Access",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conditional Property Access",
+              "body": "```dart\nuserObject?.userName\n\n//The code snippet above is equivalent to following:\n(userObject != null) ? userObject.userName : null\n\n//You can chain multiple uses of ?. together in a single expression\nuserObject?.userName?.toString()\n\n// The preceeding code returns null and never calls toString() if either userObject or userObject.userName is null\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "enum in dart",
+          "level": 3,
+          "cards": [
+            {
+              "title": "enum in dart",
+              "body": "```dart\ndefination: An enum (short for \"enumeration\") is a special data type that enables a variable to be a set of predefined constants. Enums are used to define variables that can only take one out of a small set of possible values. They help make code more readable and less error-prone by providing meaningful names to these sets of values.\n\n// Define the enum\nenum TrafficLight {\n  red,\n  yellow,\n  green\n}\n\n// A function that prints a message based on the traffic light state\nvoid printTrafficLightMessage(TrafficLight light) {\n  switch (light) {\n    case TrafficLight.red:\n      print('Stop!');\n      break;\n    case TrafficLight.yellow:\n      print('Get ready...');\n      break;\n    case TrafficLight.green:\n      print('Go!');\n      break;\n  }\n}\n\nvoid main() {\n  // Example usage of the enum\n  TrafficLight currentLight = TrafficLight.green;\n\n  // Print the message for the current traffic light state\n  printTrafficLightMessage(currentLight);\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

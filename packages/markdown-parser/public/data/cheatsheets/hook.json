@@ -1,0 +1,1198 @@
+{
+  "id": "hook",
+  "metadata": {
+    "title": "Hook",
+    "date": "2024-03-13T18:20:00.000Z",
+    "icon": "icon-style",
+    "background": "bg-[#1131e2]",
+    "tags": [
+      "script",
+      "interpret"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "The [Hook](https://github.com/hook-lang/hook/) cheat sheet is a one-page reference sheet for the Hook programming language.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "- [GitHub](https://github.com/hook-lang/hook)\n- [Playground](https://hook-lang.github.io/hook-playground)\n- [Examples](https://github.com/hook-lang/hook/tree/main/examples)\n- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=fabiosvm.hook)",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "What does Hook look like?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "What does Hook look like?",
+              "body": "```rs\nfn factorial(n) {\n  if (n == 0)\n    return 1;\n  return n * factorial(n - 1);\n}\n```",
+              "footer": "Hook features a modern syntax similar to `C`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Hello, world!",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hello, world!",
+              "body": "```js\nprintln('Hello, World!');\n// Hello, World!\n```",
+              "footer": "The `Hello, World!` program in Hook.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Installing with Homebrew",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Installing with Homebrew",
+              "body": "```text\nbrew tap hook-lang/hook\nbrew install hook\nhook --help\n```",
+              "footer": "The interpreter is available on [`Homebrew`](https://brew.sh).",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Installing on Windows",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Installing on Windows",
+              "body": "```text\ncd %tmp%\ncurl -sSLO https://raw.githubusercontent.com/hook-lang/hook/main/scripts/install.bat\ninstall\n```",
+              "footer": "This is how you can install it on `Windows`.",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Types and Values",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Types",
+              "body": "|          |           |\n| -------- | :-------- |\n| `Nil`    | `Bool`    |\n| `Number` | `String`  |\n| `Range`  | `Array`   |\n| `Record` | `Closure` |\n\nList of basic types.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bool",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bool",
+              "body": "```js\nlet x = true;\nlet y = false;\n```",
+              "footer": "Bool is a boolean type. So, it can be `true` or `false`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Numbers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Numbers",
+              "body": "```js\nlet x = 0;\nlet degree = 45; // integer number\nlet pi = 3.14; // floating-point number\n```",
+              "footer": "Numbers can be integers or floating-point.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Strings",
+              "body": "```js\nlet empty = '';\n\nlet name = 'John';\n\nlet message = 'Hello, \"John\"!';\n```",
+              "footer": "Strings can be single or double-quoted.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ranges",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ranges",
+              "body": "```js\nlet range = 1..5;\n\nprintln(range);\n// 1..5\n```",
+              "footer": "Ranges are a sequence of integers.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arrays",
+              "body": "```js\nlet fruits = ['apple', 'banana', 'cherry'];\n\nprintln(fruits);\n// [\"apple\", \"banana\", \"cherry\"]\n```",
+              "footer": "Arrays are a sequence of elements.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Records",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Records",
+              "body": "```js\nlet p = { x: 5, y: 10 };\n\nprintln(p);\n// {x: 5, y: 10}\n```",
+              "footer": "Records maps fields to values.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "The **nil** value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "The **nil** value",
+              "body": "```swift\nlet x = nil;\nvar y;\n```",
+              "footer": "```js\nprintln(x); // nil\nprintln(y); // nil\n```\n`nil` is the absence of a value.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Falsy values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Falsy values",
+              "body": "```swift\nif (nil) \"true\" else \"false\";   // false\nif (false) \"true\" else \"false\"; // false\nif (true) \"true\" else \"false\";  // true\nif (0) \"true\" else \"false\";     // true\nif (1) \"true\" else \"false\";     // true\nif (\"\") \"true\" else \"false\";    // true\nif ([]) \"true\" else \"false\";    // true\nif ({}) \"true\" else \"false\";    // true\n```",
+              "footer": "Just `nil` and `false` are falsy.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Syntax",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Comments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comments",
+              "body": "```js\n// This is a single-line comment.\n\n// And this is\n// a multi-line\n// comment. ;)\n```",
+              "footer": "Hook supports single-line comments only. Sorry!",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Semi-colons",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Semi-colons",
+              "body": "```js\nprintln(1) ; println(2) ; println(3) ;\nprintln(4) ; println(5)\n; println(6) ;\n;                                      // error: unexpected token `;`\n```",
+              "footer": "Semi-colons are required and empty statements are not allowed.",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Blocks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Blocks",
+              "body": "```js\n{\n  println('Hello');\n  {\n    println('World');\n  }\n}\n```",
+              "footer": "Blocks are used to define a scope.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Reserved words",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Reserved words",
+              "body": "|         |          |            |         |\n| ------- | :------- | :--------- | :------ |\n| `as`    | `break`  | `continue` | `do`    |\n| `else`  | `false`  | `fn`       | `for`   |\n| `from`  | `if`     | `import`   | `in`    |\n| `inout` | `let`    | `loop`     | `match` |\n| `nil`   | `return` | `struct`   | `trait` |\n| `true`  | `var`    | `while`    |         |\n\nThere are few reserved words.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Identifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Identifiers",
+              "body": "```php\nvar lowercase;\nvar CAPS_LOCK;\nvar camelCase;\nvar PascalCase;\nvar snake_case;\nvar _123;\n```",
+              "footer": "Identifiers are case-sensitive.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Variables",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables",
+              "body": "```js\nvar x; // x contains nil\nx = 5; // now, x contains a number\nx = 'foo'; // a string\n\nprintln(x);\n```",
+              "footer": "Values have types, but variables don't.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Immutable variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Immutable variables",
+              "body": "```js\nlet x = 5;\n\nx = 10; // error: cannot assign to immutable variable `x`\n\nlet y; // error: unexpected token `;`\n```",
+              "footer": "Immutable variables must be initialized when declared.",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Scopes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Scopes",
+              "body": "```js\nlet x = 5;\n{\n  let y = 15;\n  println(x); // 10\n  println(y); // 15\n}\nprintln(x); // 5\nprintln(y); // error: variable `y` is used but not defined\n```",
+              "footer": "When a heap-allocated variable goes out of scope, it is automatically deallocated.",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Shadowing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shadowing",
+              "body": "```js\nlet x = 5;\n{\n  let x = 10; // shadows the outer `x`\n  println(x); // 10\n}\nprintln(x); // 5\n```",
+              "footer": "Variables can be shadowed.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Operators and Expressions",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Arithmetic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Arithmetic",
+              "body": "```js\nprintln(5 + 10); // 15\nprintln(5 - 10); // -5\nprintln(5 * 10); // 50\nprintln(5 / 10); // 0.5\nprintln(5 % 10); // 5\nprintln(-5); // -5\n```",
+              "footer": "The basic arithmetic operators.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comparison",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comparison",
+              "body": "```js\nprintln(5 == 10); // false\nprintln(5 != 10); // true\nprintln(5 < 10); // true\nprintln(5 > 10); // false\nprintln(5 <= 10); // true\nprintln(5 >= 10); // false\n```",
+              "footer": "The comparison operators.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Logical",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Logical",
+              "body": "```js\nprintln(true && false); // false\nprintln(true || false); // true\nprintln(!true); // false\n```",
+              "footer": "The logical operators.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Bitwise and shift",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Bitwise and shift",
+              "body": "```js\nprintln(5 & 10); // 0\nprintln(5 | 10); // 15\nprintln(5 ^ 10); // 15\nprintln(~5); // -6\nprintln(5 << 1); // 10\nprintln(5 >> 1); // 2\n```",
+              "footer": "The bitwise and shift operators.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Assignments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Assignments",
+              "body": "```js\nvar x = 5; // 5\nx += 10; // 15\nx -= 10; // 5\nx *= 10; // 50\nx /= 10; // 5\nx %= 10; // 5\nx &= 10; // 0\nx |= 10; // 10\nx ^= 5; // 15\nx <<= 5; // 480\nx >>= 5; // 15\nx++; // 16\nx--; // 15\n```",
+              "footer": "The assignment operators.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Teh ternary operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Teh ternary operator",
+              "body": "```js\nlet x = 5;\nlet y = if (x > 5) 10 else 20;\n\nprintln(y);\n// 20\n```",
+              "footer": "In Hook, the ternary operator is `if else`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Branching",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "If",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If",
+              "body": "```js\nlet x = 10;\n\nif (x > 5) {\n  println('x is greater than 5');\n}\n// x is greater than 5\n```",
+              "footer": "The `if` statement.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "If else",
+          "level": 3,
+          "cards": [
+            {
+              "title": "If else",
+              "body": "```js\nlet x = 11;\n\nif (x == 5) {\n  println('x is 5');\n} else if (x == 10) {\n  println('x is 10');\n} else {\n  println('x is neither 5 nor 10');\n}\n// x is neither 5 nor 10\n```",
+              "footer": "The `if else` statement.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Match",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Match",
+              "body": "```rs\nlet x = 5;\n\nmatch (x) {\n  1 => println(\"one\");\n  2 => println(\"two\");\n  3 => println(\"three\");\n  _ => println(\"other\");\n}\n// other\n```",
+              "footer": "The `match` statement.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Looping",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "While",
+          "level": 3,
+          "cards": [
+            {
+              "title": "While",
+              "body": "```js\nvar x = 0;\n\nwhile (x < 5) {\n  print(x);\n  x += 1;\n}\n// 01234\n```",
+              "footer": "The `while` loop.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Do while",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Do while",
+              "body": "```js\nvar x = 0;\n\ndo {\n  print(x);\n  x += 1;\n} while (x < 5);\n// 01234\n```",
+              "footer": "The `do while` loop.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "For",
+          "level": 3,
+          "cards": [
+            {
+              "title": "For",
+              "body": "```js\nfor (var i = 0; i < 5; i++) {\n  print(i);\n}\n// 01234\n```",
+              "footer": "The classic `for` loop.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loop",
+              "body": "```rs\nloop {\n  println(\"Press Ctrl+C to stop\");\n}\n```",
+              "footer": "The unconditional `loop`.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break",
+              "body": "```js\nvar i = 0;\n```",
+              "footer": "```rs\nloop {\nif (i == 5) break;\nprint(i);\ni += 1;\n}\n// 01234\n```\nUse `break` to exit a loop.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Continue",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Continue",
+              "body": "```js\nvar i = 0;\n```",
+              "footer": "```rs\nloop {\ni += 1;\nif (i % 2 == 0) continue;\nprint(i);\nif (i == 5) break;\n}\n// 135\n```\nUse `continue` to skip the rest of the loop body.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Strings",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Indexing a string",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Indexing a string",
+              "body": "```js\nlet s = 'Hello';\n\nprintln(s[0]); // H\nprintln(s[1]); // e\nprintln(s[4]); // o\n```",
+              "footer": "Indexing a string returns a 1-character string.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Slicing a string",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Slicing a string",
+              "body": "```js\nlet s = \"Hello, World!\";\n\nprintln(s[0..5]);        // Hello,\nprintln(s[7..12]);       // World!\n```",
+              "footer": "Pass a range to slice a string.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Concatening strings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Concatening strings",
+              "body": "```js\nlet greeting = 'Hi' + ' there!';\n\nprintln(greeting);\n// Hi there!\n```",
+              "footer": "Use the `+` operator to concatenate strings.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Arrays",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Indexing an array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Indexing an array",
+              "body": "```js\nlet a = [1, 2, 3];\n\nprintln(a[0]); // 1\nprintln(a[1]); // 2\nprintln(a[2]); // 3\n```",
+              "footer": "Indexing an array returns an element.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Slicing an array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Slicing an array",
+              "body": "```js\nlet a = [1, 2, 3, 4];\n\nprintln(a[0..2]);            // [1, 2, 3]\nprintln(a[1..3]);            // [2, 3, 4]\nprintln(a[2 .. len(a) - 1]); // [3, 4]\n```",
+              "footer": "Arrays are zero-indexed.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Appending an element",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Appending an element",
+              "body": "```js\nvar a = [1, 2];\n\na[] = 3;\n\nprintln(a);\n// [1, 2, 3]\n```",
+              "footer": "Arrays are mutable. Use `[]` to append an element.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Element assignment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Element assignment",
+              "body": "```js\nvar a = [1, 2, 3];\n\na[0] = 4;\n\nprintln(a);\n// [4, 2, 3]\n```",
+              "footer": "Update an element in an array.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Concatening arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Concatening arrays",
+              "body": "```js\nlet a = [1, 2];\nlet b = [3];\nlet c = a + b;\n\nprintln(c);\n// [1, 2, 3]\n```",
+              "footer": "Use the `+` operator to concatenate arrays.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Subtracting arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Subtracting arrays",
+              "body": "```js\nlet a = [1, 2, 2, 3];\nlet b = [2];\nlet c = a - b;\n\nprintln(c);\n// [1, 3]\n```",
+              "footer": "Get the difference between two arrays.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Functions and Closures",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Function declaration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function declaration",
+              "body": "```rs\nfn sum(a, b) {\n  return a + b;\n}\n\nprintln(sum(5, 10));\n// 15\n```",
+              "footer": "Functions are first-class citizens.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Function call",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Function call",
+              "body": "```rs\nfn greet(name) {\n  println(\"Hi, \" + name + \"!\");\n}\n\ngreet(\"John\", \"Doe\");\n// Hi, John!\n```",
+              "footer": "The number of arguments is adjusted.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Anonymous functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Anonymous functions",
+              "body": "```js\nlet sum = |a, b| {\n  return a + b;\n};\n\nprintln(sum(5, 10));\n// 15\n```",
+              "footer": "Anonymous functions are also supported.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Closures",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Closures",
+              "body": "```js\nlet pi = 3.14;\n```",
+              "footer": "```rs\nfn area(r) {\nreturn pi * r * r;\n}\nprintln(area(5));\n// 78.5\n```\nClosures in Hook capture values only.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Higher-order functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Higher-order functions",
+              "body": "```rs\nfn apply(f, x) {\n  return f(x);\n}\n\nfn double(x) {\n  return x * 2;\n}\n\nprintln(apply(double, 5));\n// 10\n```",
+              "footer": "Functions can be passed as arguments or returned.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Syntax sugar for functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Syntax sugar for functions",
+              "body": "```rs\nfn factorial(n) =>\n  if (n == 0) 1\n  else n * factorial(n - 1);\n\nprintln(factorial(5));\n// 120\n```",
+              "footer": "Use `=>` when the body is a single expression.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Recursion",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Recursion",
+              "body": "```rs\nfn fib(n) {\n  if (n < 2)\n    return n;\n  return fib(n - 1) + fib(n - 2);\n}\n\nprintln(fib(10));\n// 55\n```",
+              "footer": "Recursion is supported.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Built-in functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Built-in functions",
+              "body": "```js\nprintln(type(5));\n// number\nprintln('1' + to_string(2));\n// 12\nprintln(len('foo'));\n// 3\n```",
+              "footer": "There are many built-in functions.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "More built-in functions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "More built-in functions",
+              "body": "|             |           |             |\n| ----------- | :-------- | :---------- |\n| `print`     | `println` | `type`      |\n| `is_nil`    | `is_bool` | `to_number` |\n| `to_string` | `hex`     | `len`       |\n| `exit`      | `assert`  | `panic`     |\n\nSee: [Built-in Functions](https://github.com/hook-lang/hook/blob/main/docs/built-in.md)",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Structs",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Structs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Structs",
+              "body": "```rs\nstruct Point {\n  x, y\n}\n```",
+              "footer": "```js\nlet p = Point { 5, 10 };\nprintln(p);\n// {x: 5, y: 10}\n```\nA struct is a prototype for a record.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Accessing fields",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Accessing fields",
+              "body": "```js\nprintln(p.x); // 5\nprintln(p.y); // 10\n```",
+              "footer": "Use `.` to access a field in a record.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Field assignment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Field assignment",
+              "body": "```js\np.x = 10;\np.y = 20;\n\nprintln(p);\n// {x: 10, y: 20}\n```",
+              "footer": "Update a value of a field in a record.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Destructuring",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Destructuring an array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Destructuring an array",
+              "body": "```js\nlet a = [1, 2];\nlet [x, y] = a;\n\nprintln(x); // 1\nprintln(y); // 2\n```",
+              "footer": "Varuables are declared and assigned.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Destructuring a record",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Destructuring a record",
+              "body": "```js\nlet p = { x: 5, y: 10 };\nlet { x } = p;\n\nprintln(x);\n// 5\n```",
+              "footer": "Use `{}` to destructure a record.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Placeholder",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Placeholder",
+              "body": "```js\nlet a = [1, 2];\nlet [x] = a;\nlet [_, y] = a;\n\nprintln(x); // 1\nprintln(y); // 2\n```",
+              "footer": "Use `_` skip leading or middle elements.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Modularity",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Importing a module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Importing a module",
+              "body": "```js\nimport math;\n```",
+              "footer": "```js\nprintln(math.sqrt(25));\n// 5\n```\nUse `import` to bring a module into scope.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Exporting symbols",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Exporting symbols",
+              "body": "```rs\n// my_module.hk\nfn useful_fn() {\n  return \"Nothing\";\n}\n\nreturn { useful: useful_fn };\n```",
+              "footer": "Return a record with the symbols to export.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Importing local modules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Importing local modules",
+              "body": "```python\nimport \"./my_module.hk\" as my;\n```",
+              "footer": "```js\nprintln(my.useful());\n// Nothing\n```\nSpecify the path to the local module.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selective import",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selective import",
+              "body": "```js\nimport { pow, sqrt } from math;\n\nlet [ b, c ] = [ 4, 3 ];\nlet a = sqrt(pow(b, 2) + pow(c, 2));\n\nprintln(a);\n// 5\n```",
+              "footer": "Use `{}` to import specific symbols.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Core modules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Core modules",
+              "body": "|            |          |        |           |\n| ---------- | :------- | :----- | :-------- |\n| `math`     | `os`     | `io`   | `numbers` |\n| `strings`  | `arrays` | `utf8` | `hashing` |\n| `encoding` | `socket` | `json` | `lists`   |\n\nSee: [Core Modules](https://github.com/hook-lang/hook/blob/main/docs/core-modules.md)",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extension modules",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extension modules",
+              "body": "|           |           |         |           |\n| --------- | :-------- | :------ | :-------- |\n| `bigint`  | `crypto`  | `curl`  | `fastcgi` |\n| `geohash` | `leveldb` | `mysql` | `redis`   |\n| `regex`   | `sqlite`  | `uuid`  | `zeromq`  |\n\nThis is a list of extension modules.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "**io** module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "**io** module",
+              "body": "```js\nimport { stderr, writeln } from io;\n\nwriteln(stderr, \"Something went wrong\");\n// Something went wrong\n```",
+              "footer": "Printing to `stderr` using `io` module.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "**hashing** module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "**hashing** module",
+              "body": "```python\nimport hashing as h;\n```",
+              "footer": "```js\nlet d = h.sha256('Hello, world!');\nprintln(hex(d));\n// 315f5bdb76d078c43b8ac0064e4a...\n```\n`hashing` module provides hash functions.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "**json** module",
+          "level": 3,
+          "cards": [
+            {
+              "title": "**json** module",
+              "body": "```js\nimport json;\n```",
+              "footer": "```js\nlet j = '{\"x\": 1, \"y\": 2}';\nlet p = json.decode(j);\nprintln(p.x); // 1\nlet k = json.encode(p);\nprintln(type(k)); // string\n```\nUse `json` module for working with JSON.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Errors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Errors",
+              "body": "```js\nprintln(to_int('foo'));\n\n// runtime error: type error: argument #1 is not a convertible string\n//   at to_int() in <native>\n//   at main() in example.hk:1\n```",
+              "footer": "Hook uses panic mode for error handling. When an error occurs, the interpreter stops.",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Syntax error",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Syntax error",
+              "body": "```js\nprintln('Hello, World!');\n\n// syntax error: unexpected end of file\n//   at main() in example.hk:1,25\n```",
+              "footer": "Hook has a strict syntax.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Panic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Panic",
+              "body": "```js\npanic('Something went wrong');\n\n// panic: Something went wrong\n//   at main() in example.hk:1\n```",
+              "footer": "Use the `panic` built-in function to raise an error.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Assert",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Assert",
+              "body": "```js\nassert(5 > 10, '5 is not greater than 10');\n\n// assert: 5 is not greater than 10\n//   at main() in example.hk:1\n```",
+              "footer": "Use the `assert` built-in function to check a condition.",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Returning errors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Returning errors",
+              "body": "```rs\nfn divide(a, b) {\n  if (b == 0)\n    return [nil, \"division by zero\"];\n  return a / b;\n}\n\nif (let [ok, err] = divide(5, 0); ok) {\n  println(ok);\n} else {\n  println(err);\n}\n// division by zero\n```",
+              "footer": "Use a pair to return a value and an error.",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Passing errors",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Passing errors",
+              "body": "```rs\nif (let [ok, err] = divide(5, 0); err) {\n  return [nil, err];\n}\n```",
+              "footer": "Pass an error without handling it.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

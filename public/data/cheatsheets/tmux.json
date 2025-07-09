@@ -1,0 +1,425 @@
+{
+  "id": "tmux",
+  "metadata": {
+    "title": "Tmux",
+    "date": "2021-02-20T14:31:24.000Z",
+    "background": "bg-indigo-600",
+    "tags": [
+      "utility",
+      "terminal",
+      "session"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "The tmux cheat sheet quick reference of most commonly used shortcuts and commands\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Tmux CLI",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "New session",
+          "level": 3,
+          "cards": [
+            {
+              "title": "New session",
+              "body": "```\nStart a new named session\n```",
+              "footer": "shell script\n$ tmux new -s myname\n```\nShow all sessions\n```shell script\n$ tmux ls\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Attach session",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Attach session",
+              "body": "```\nAttach to named\n```",
+              "footer": "shell script\n$ tmux a -t myname\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Kill session",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Kill session",
+              "body": "```\nKill sessions but the current\n```",
+              "footer": "shell script\n$ tmux kill-ses -a\n```\nKill sessions but 'myname'\n```shell script\n$ tmux kill-ses -a -t myname\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tmux help",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tmux help",
+              "body": "",
+              "footer": "```shell script\n$ tmux info\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Config",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Config",
+              "body": "```\nShow config\n```",
+              "footer": "shell script\n$ tmux show-options -g\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Copy Mode",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Copy Mode",
+              "body": "| Command      | Description                |\n| ------------ | -------------------------- |\n| `Ctrl+b` `[` | Enter copy mode            |\n| `<Space>`    | Start selection            |\n| `Enter`      | Copy selection             |\n| `q`          | Quit copy mode             |\n| `Ctrl+b` `]` | Paste contents of buffer_0 |\n\nFor tmux version 3.5a on MacOS 15.3.1 Sequoia 'Copy Mode' functions lil bit differently Below I've written the\ndifferences | Command | Description | | ------------ | -------------------------- | | `Ctrl + <Space>` | Start selection\n| | `Ctrl + w` | Copy selection |\n\n{.shortcuts}\n\nMainly works like selecting text in [Vim](/vim#motions)",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Command",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `[`",
+                  "action": "Enter copy mode"
+                },
+                {
+                  "shortcut": "`<Space>`",
+                  "action": "Start selection"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Copy selection"
+                },
+                {
+                  "shortcut": "`q`",
+                  "action": "Quit copy mode"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `]`",
+                  "action": "Paste contents of buffer_0"
+                },
+                {
+                  "shortcut": "`Ctrl + w`",
+                  "action": "Copy selection"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Tmux shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Getting started",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting started",
+              "body": "",
+              "footer": "| Shortcuts    | Description        |\n| ------------ | ------------------ |\n| `Ctrl+b` `?` | List all shortcuts |\n\n{.shortcuts .show-header}\n\n<br/>\n\nShow every session, window, pane, etc.\n\n```shell script\n$ tmux info\n```",
+              "spanConfig": "secondary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Panes (Splits)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Panes (Splits)",
+              "body": "| Shortcuts              | Description        |\n| ---------------------- | ------------------ |\n| `Ctrl+b` `\"` _/_ `%`   | Split Horiz/Vert   |\n| `Ctrl+b` `!`           | Pane -> Window     |\n| `Ctrl+b` `x`           | Kill pane          |\n| `Ctrl+b` <Arrow\\>      | Navigate panes     |\n| `Ctrl+b` <Space\\>      | Toggle layouts     |\n| `Ctrl+b` `{` _/_ `}`   | Move to Left/Right |\n| `Ctrl+b` `o`           | Go to next panes   |\n| `Ctrl+b` `z`           | Toggle full-screen |\n| `Ctrl+b` `;`           | Toggle Last pane   |\n| `Ctrl+b` `q`           | Show numbers       |\n| `Ctrl+b` `q` `0`...`9` | Go to # pane       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Shortcuts",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `\"` _/_ `%`",
+                  "action": "Split Horiz/Vert"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `!`",
+                  "action": "Pane -> Window"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `x`",
+                  "action": "Kill pane"
+                },
+                {
+                  "shortcut": "`Ctrl+b` <Arrow\\>",
+                  "action": "Navigate panes"
+                },
+                {
+                  "shortcut": "`Ctrl+b` <Space\\>",
+                  "action": "Toggle layouts"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `{` _/_ `}`",
+                  "action": "Move to Left/Right"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `o`",
+                  "action": "Go to next panes"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `z`",
+                  "action": "Toggle full-screen"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `;`",
+                  "action": "Toggle Last pane"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `q`",
+                  "action": "Show numbers"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `q` `0`...`9`",
+                  "action": "Go to # pane"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Window (Tabs)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Window (Tabs)",
+              "body": "| -                    | -                    |\n| -------------------- | -------------------- |\n| `Ctrl+b` `c`         | Create window        |\n| `Ctrl+b` `p` _/_ `n` | Previous/Next window |\n| `Ctrl+b` `\"` _/_ `%` | Split Horiz/Vert     |\n| `Ctrl+b` `w`         | List window          |\n| `Ctrl+b` `,`         | Rename window        |\n| `Ctrl+b` `f`         | Find window          |\n| `Ctrl+b` `l`         | Last window          |\n| `Ctrl+b` `.`         | Move window          |\n| `Ctrl+b` `&`         | Close window         |\n| `Ctrl+b` `0`...`9`   | Go to # window       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `c`",
+                  "action": "Create window"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `p` _/_ `n`",
+                  "action": "Previous/Next window"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `\"` _/_ `%`",
+                  "action": "Split Horiz/Vert"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `w`",
+                  "action": "List window"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `,`",
+                  "action": "Rename window"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `f`",
+                  "action": "Find window"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `l`",
+                  "action": "Last window"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `.`",
+                  "action": "Move window"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `&`",
+                  "action": "Close window"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `0`...`9`",
+                  "action": "Go to # window"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Session (Set of Windows)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Session (Set of Windows)",
+              "body": "| -                    | -                              |\n| -------------------- | ------------------------------ |\n| `Ctrl+b` `d`         | <red>Detach from session</red> |\n| `Ctrl+b` `s`         | Show all sessions              |\n| `Ctrl+b` `$`         | Rename session                 |\n| `Ctrl+b` `(` _/_ `)` | Previous/Next session          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `d`",
+                  "action": "<red>Detach from session</red>"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `s`",
+                  "action": "Show all sessions"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `$`",
+                  "action": "Rename session"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `(` _/_ `)`",
+                  "action": "Previous/Next session"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Tmux Command Mode",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Usage",
+              "body": "| Command      | Description        |\n| ------------ | ------------------ |\n| `Ctrl+b` `:` | Enter command mode |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "secondary",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "Command",
+                  "action": "Description"
+                },
+                {
+                  "shortcut": "`Ctrl+b` `:`",
+                  "action": "Enter command mode"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Resizing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Resizing",
+              "body": "| Command             | Description  |\n| ------------------- | ------------ |\n| `resize-pane -D 20` | Resize down  |\n| `resize-pane -U 20` | Resize up    |\n| `resize-pane -L 20` | Resize left  |\n| `resize-pane -R 20` | Resize right |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Listing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Listing",
+              "body": "| Command        | Description  |\n| -------------- | ------------ |\n| `list-keys`    | All commands |\n| `list-panes`   | All panes    |\n| `list-windows` | All Windows  |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Copying",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Copying",
+              "body": "| Command              | Description      |\n| -------------------- | ---------------- |\n| `list-buffers`       | List all buffers |\n| `show-buffer`        | Show #0 contents |\n| `capture-pane`       | Copy of pane     |\n| `choose-buffer`      | Show and paste   |\n| `save-buffer a.txt`  | Save to file     |\n| `delete-buffer -b 1` | Delete buffer 1  |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Setting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Setting",
+              "body": "| Command                | Description          |\n| ---------------------- | -------------------- |\n| `set -g OPTION`        | Set for all sessions |\n| `setw -g OPTION`       | Set for all windows  |\n| `setw -g mode-keys vi` | Enable vi-mode       |\n| `set -g prefix C-a`    | Set prefix           |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Misc",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Misc",
+              "body": "| Command                  | Description  |\n| ------------------------ | ------------ |\n| `swap-pane -s 3 -t 1`    | Swap pane    |\n| `swap-window -t -1`      | Move to left |\n| `setw synchronize-panes` | Sync Panes   |\n| `join-pane -t :#`        | Join pane    |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

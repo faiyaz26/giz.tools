@@ -1,0 +1,196 @@
+{
+  "id": "skype",
+  "metadata": {
+    "title": "Skype",
+    "date": "2022-11-23T16:23:31.698Z",
+    "background": "bg-[#52ace2]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 31 keyboard shortcuts found in Skype\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General I",
+              "body": "| Shortcut            | Action                                    |\n| ------------------- | ----------------------------------------- |\n| `Ctrl` `Shift` `O`  | Open Notification panel                   |\n| `Ctrl` `,`          | Open app settings                         |\n| `Ctrl` `2`          | Launch main dial pad                      |\n| `Ctrl` `N`          | Start new conversation                    |\n| `Ctrl` `G`          | New group                                 |\n| `Ctrl` `F`          | Find in current conversation              |\n| `Shift` `Enter`     | Select next message in search results     |\n| `Enter`             | Select previous message in search results |\n| `Ctrl` `Shift` `E`  | Focus Message Composer                    |\n| `Ctrl` `Option` `S` | Search for People, Groups, and Messages   |\n| `Alt` `1`           | Navigate to recent chats                  |\n| `Ctrl` `Shift` `C`  | Open contacts                             |\n| `Ctrl` `Shift` `B`  | Open contact screen to bots               |\n| `Ctrl` `Alt` `O`    | Send feedback                             |\n| `Ctrl` `R`          | Refresh the app                           |\n| `Ctrl` `T`          | Open themes                               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `O`",
+                  "action": "Open Notification panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Open app settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Launch main dial pad"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Start new conversation"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "New group"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find in current conversation"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Select next message in search results"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Select previous message in search results"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Focus Message Composer"
+                },
+                {
+                  "shortcut": "`Ctrl` `Option` `S`",
+                  "action": "Search for People, Groups, and Messages"
+                },
+                {
+                  "shortcut": "`Alt` `1`",
+                  "action": "Navigate to recent chats"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Open contacts"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `B`",
+                  "action": "Open contact screen to bots"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `O`",
+                  "action": "Send feedback"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Refresh the app"
+                },
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Open themes"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General II",
+              "body": "| Shortcut           | Action                                   |\n| ------------------ | ---------------------------------------- |\n| `Ctrl` `Shift` `T` | Toggle between light and dark mode       |\n| `Ctrl` `+/-/0`     | Zoom in, out, or actual size             |\n| `Ctrl` `Shift` `E` | Edit the last message sent               |\n| `Ctrl` `I`         | Show conversation profile                |\n| `Ctrl` `Shift` `A` | Add people to conversation or call       |\n| `Ctrl` `E`         | Hide conversation                        |\n| `Ctrl` `Shift` `U` | Mark as unread                           |\n| `Ctrl` `Shift` `K` | Start video call or toggle video on/off  |\n| `Ctrl` `Shift` `L` | Select multiple messages in conversation |\n| `Ctrl` `Shift` `R` | Start or answer audio call               |\n| `Ctrl` `Shift` `F` | Send a file                              |\n| `Ctrl` `Shift` `G` | Open gallery                             |\n| `Ctrl` `S`         | Take a snapshot                          |\n| `Ctrl` `Shift` `H` | Hang up                                  |\n| `Ctrl` `Shift` `M` | Toggle mute                              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Toggle between light and dark mode"
+                },
+                {
+                  "shortcut": "`Ctrl` `+/-/0`",
+                  "action": "Zoom in, out, or actual size"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Edit the last message sent"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Show conversation profile"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Add people to conversation or call"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Hide conversation"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `U`",
+                  "action": "Mark as unread"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Start video call or toggle video on/off"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Select multiple messages in conversation"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Start or answer audio call"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Send a file"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Open gallery"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Take a snapshot"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "Hang up"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Toggle mute"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Skype](https://support.skype.com/en/faq/FA12025/what-are-keyboard-shortcuts-and-how-do-i-use-them-in-skype)\n  _(support.skype.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

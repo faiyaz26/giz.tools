@@ -1,0 +1,184 @@
+{
+  "id": "putty",
+  "metadata": {
+    "title": "PuTTy",
+    "date": "2022-11-23T16:23:31.701Z",
+    "background": "bg-[#0403ed]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 32 keyboard shortcuts found on the PuTTy app\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General Shortcuts",
+              "body": "| Shortcut               | Action                                               |\n| ---------------------- | ---------------------------------------------------- |\n| `Ctrl` `(right click)` | Open context menu                                    |\n| `Ctrl` `A`             | Jump to the start of the line                        |\n| `Ctrl` `B`             | Move back a character                                |\n| `Ctrl` `C`             | Terminal the command                                 |\n| `Ctrl` `D`             | Delete from under the cursor                         |\n| `Ctrl` `E`             | Jump to the end of the line                          |\n| `Ctrl` `F`             | Move forward a character                             |\n| `Ctrl` `K`             | Delete to end-of-line                                |\n| `Ctrl` `L`             | Clear the screen                                     |\n| `Ctrl` `R`             | Search the history backwards                         |\n| `Ctrl` `Shift` `R`     | Search the history backwards with multi occurrence   |\n| `Ctrl` `U`             | Delete backward from cursor                          |\n| `Ctrl` `X` `X`         | Move between end-of-line and current cursor position |\n| `Ctrl` `X` `@`         | Show possible hostname completions                   |\n| `Ctrl` `Z`             | Suspend or stop the command                          |\n| `Alt` `Left`           | Move to the first line in the history                |\n| `Alt` `Right`          | Move to the last line in the history                 |\n| `Alt` `?`              | Show current completion list                         |\n| `Alt` `*`              | Insert all possible completions                      |\n| `Alt` `/`              | Attempt to complete filename                         |\n| `Alt` `.`              | Yank last argument to previous command               |\n| `Alt` `B`              | Move backward                                        |\n| `Alt` `C`              | Capitalize the word                                  |\n| `Alt` `D`              | Delete word                                          |\n| `Alt` `F`              | Move forward                                         |\n| `Alt` `L`              | Make word lowercase                                  |\n| `Alt` `N`              | Search the history forwards non-incremental          |\n| `Alt` `P`              | Search the history backwards non-incremental         |\n| `Alt` `R`              | Recall command                                       |\n| `Alt` `T`              | Move words around                                    |\n| `Alt` `U`              | Make word uppercase                                  |\n| `Alt` `Backspace`      | Delete backwards from the cursor                     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `(right click)`",
+                  "action": "Open context menu"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Jump to the start of the line"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Move back a character"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Terminal the command"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Delete from under the cursor"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Jump to the end of the line"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Move forward a character"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Delete to end-of-line"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Clear the screen"
+                },
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Search the history backwards"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `R`",
+                  "action": "Search the history backwards with multi occurrence"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Delete backward from cursor"
+                },
+                {
+                  "shortcut": "`Ctrl` `X` `X`",
+                  "action": "Move between end-of-line and current cursor position"
+                },
+                {
+                  "shortcut": "`Ctrl` `X` `@`",
+                  "action": "Show possible hostname completions"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Suspend or stop the command"
+                },
+                {
+                  "shortcut": "`Alt` `Left`",
+                  "action": "Move to the first line in the history"
+                },
+                {
+                  "shortcut": "`Alt` `Right`",
+                  "action": "Move to the last line in the history"
+                },
+                {
+                  "shortcut": "`Alt` `?`",
+                  "action": "Show current completion list"
+                },
+                {
+                  "shortcut": "`Alt` `*`",
+                  "action": "Insert all possible completions"
+                },
+                {
+                  "shortcut": "`Alt` `/`",
+                  "action": "Attempt to complete filename"
+                },
+                {
+                  "shortcut": "`Alt` `.`",
+                  "action": "Yank last argument to previous command"
+                },
+                {
+                  "shortcut": "`Alt` `B`",
+                  "action": "Move backward"
+                },
+                {
+                  "shortcut": "`Alt` `C`",
+                  "action": "Capitalize the word"
+                },
+                {
+                  "shortcut": "`Alt` `D`",
+                  "action": "Delete word"
+                },
+                {
+                  "shortcut": "`Alt` `F`",
+                  "action": "Move forward"
+                },
+                {
+                  "shortcut": "`Alt` `L`",
+                  "action": "Make word lowercase"
+                },
+                {
+                  "shortcut": "`Alt` `N`",
+                  "action": "Search the history forwards non-incremental"
+                },
+                {
+                  "shortcut": "`Alt` `P`",
+                  "action": "Search the history backwards non-incremental"
+                },
+                {
+                  "shortcut": "`Alt` `R`",
+                  "action": "Recall command"
+                },
+                {
+                  "shortcut": "`Alt` `T`",
+                  "action": "Move words around"
+                },
+                {
+                  "shortcut": "`Alt` `U`",
+                  "action": "Make word uppercase"
+                },
+                {
+                  "shortcut": "`Alt` `Backspace`",
+                  "action": "Delete backwards from the cursor"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for PuTTy](http://rizwanansari.net/putty-shell-keyboard-shortcuts/) _(rizwanansari.net)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

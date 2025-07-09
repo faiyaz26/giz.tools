@@ -1,0 +1,2122 @@
+{
+  "id": "ruby",
+  "metadata": {
+    "title": "Ruby",
+    "date": "2024-04-25T09:50:25.000Z",
+    "background": "bg-red-500",
+    "tags": [
+      "script",
+      "interpret"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "The [Ruby](https://www.ruby-lang.org/) cheat sheet is a one-page reference sheet for the Ruby programming language.\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Install",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Install",
+              "body": "```bash\n# Debian, Ubuntu\n$ sudo apt-get install ruby-full\n# Windows\n$ winget install RubyInstallerTeam.Ruby\n$ brew install ruby # macOS\n$ docker run -it --rm ruby:latest # Docker\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "What is Gemfile and Gemfile.lock",
+          "level": 3,
+          "cards": [
+            {
+              "title": "What is Gemfile and Gemfile.lock",
+              "body": "```ruby\n# Specify gem in the Gemfile in the project root directory\nruby '3.1.2'\n\nsource 'https://rubygems.org'\ngem 'nokogiri'\ngem 'rack', '~>3.0.10'\ngem 'rspec', :require => 'spec'\n```",
+              "footer": "Install all gems in Gemfile\n```bash\n$ bundle install\n```\nSolve the problem of Gemfile.lock inconsistency between mac for development and linux for production\n```bash\nbundle lock --add-platform x86_64-linux\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Install a specific version of a specific ruby gem",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Install a specific version of a specific ruby gem",
+              "body": "```bash\n$ gem install bundler -v 2.4.20\n$ gem install minitest -v 5.22.3\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Update gems using Bundler",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Update gems using Bundler",
+              "body": "```bash\n# Updating a single gem using Bundler\n$ bundle update nokogiri\n# Use Bundler to update each gem in the Gemfile\n$ bundle update\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Comment",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Comment",
+              "body": "```ruby\n# This is a single line comments.\n=begin\nMulti-line\nComment\n=end\nputs \"Hello world!\"  # Inline comments for code\n```",
+              "footer": "",
+              "spanConfig": "row-span-1",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "reserved words",
+          "level": 3,
+          "cards": [
+            {
+              "title": "reserved words",
+              "body": "| Reserved words | Description                                                                                                |\n| :------------- | :--------------------------------------------------------------------------------------------------------- |\n| `__ENCODING__` | The script encoding of the current file                                                                    |\n| `__LINE__`     | The line number of this keyword in the current file                                                        |\n| `__FILE__`     | The path of the current file                                                                               |\n| `BEGIN`        | Code enclosed in { } is run before the program is run                                                      |\n| `END`          | Code enclosed in { } is run at the end of the program                                                      |\n| `alias`        | Create an alias for an existing method, operator, or global variable                                       |\n| `and`          | Logical AND operator                                                                                       |\n| `begin`        | Begin a block of code                                                                                      |\n| `break`        | Terminate a loop                                                                                           |\n| `case`         | Compare an expression with matching `when` clauses, terminated with <br/> `end`                            |\n| `class`        | Define a class                                                                                             |\n| `def`          | define a function/method                                                                                   |\n| `defined?`     | Check if a variable or function exist                                                                      |\n| `do`           | Start a block of code, terminated with the <br/> `end` keyword                                             |\n| `else`         | Execute the following code if previous conditions are not met                                              |\n| `elsif`        | Alternative condition for if expressions                                                                   |\n| `end`          | End blocks of code starting with keywords like `begin`, `class`,`def`,`do`,`if`, etc.                      |\n| `ensure`       | Always execute at the end of a block                                                                       |\n| `false`        | Logical boolean value false                                                                                |\n| `for`          | Start a `for` loop                                                                                         |\n| `if`           | Execute the code block `if` the condition is `true`                                                        |\n| `in`           | Used with `for` loop                                                                                       |\n| `module`       | Define a module                                                                                            |\n| `next`         | jump to the point before the evaluation of the loop condition                                              |\n| `nil`          | Stand for null, invalid, or always false                                                                   |\n| `not`          | Logical NOT operator                                                                                       |\n| `or`           | Logical OR operator                                                                                        |\n| `redo`         | Jump back to the loop condition evaluation                                                                 |\n| `rescue`       | Evaluate expressions after an exception is raised                                                          |\n| `retry`        | Repeat method calls when called outside `rescue`, jump to the top of the block when called inside `rescue` |\n| `return`       | Return a value from a method or block                                                                      |\n| `self`         | Refer to the current object                                                                                |\n| `super`        | Call the same-named method in the superclass                                                               |\n| `then`         | Used as a separator with`if`,`unless`,`when`,`case`,`rescue`                                               |\n| `true`         | Logical boolean value true                                                                                 |\n| `undef`        | Undefine methods/functions within the current class                                                        |\n| `until`        | Execute the code block until the condition is false                                                        |\n| `when`         | Begin a clause under a `case` statement                                                                    |\n| `while`        | Execute the code block while the condition is true                                                         |\n| `yield`        | Execute the code block passed to a method                                                                  |",
+              "footer": "",
+              "spanConfig": "col-span-1",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Operator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operator",
+              "body": "",
+              "footer": "#### Logical Operators\n\n- `and`\n- `or`\n- `not`\n- `&&`\n- `||`\n- `!`\n\n#### Bit operators\n\n- `&`\n- `|`\n- `^`\n- `~`\n- `<<`\n- `>>`\n\n#### Arithmetic operators\n\n- `+`\n- `-`\n- `*`\n- `/`\n- `%`\n- `**`\n\n#### Comparison operator\n\n- `==`\n- `!=`\n- `>`\n- `<`\n- `>=`\n- `<=`\n- `<=>`\n- `===`\n- `eql?`\n- `equal?`\n\n#### Operator examples\n\n```bash\n# Addition\n1 + 1   #=> 2\n# Subtraction\n2 - 1   #=> 1\n# Multiplication\n2 * 2   #=> 4\n# Division\n10 / 5  #=> 2\n17 / 5    #=> 3, not 3.4\n17 / 5.0  #=> 3.4\n# Exponentiation\n2 ** 2  #=> 4\n3 ** 4  #=> 81\n# Modulus (remainder of division)\n8 % 2   #=> 0  (8 / 2 = 4; no remainder)\n10 % 4  #=> 2  (10 / 4 = 2 remainder 2)\na = 10\nb = 20\na == b #=> false\na != b #=> true\na > b #=> false\na < b #=> true\na >= b #=> false\na <= b #=> true\n\n# Comparison operators\na <=> b #=> -1\nc = 20\nc <=> b #=> 0\nc <=> a  #=> 1\n# Equality used in when clauses for case statements\n(1...10) === 5 #=> true\n# True if the receiver and the argument have the same type and equal values\n1.eql?(1.0) #=> false\nc = a + b  #=> 30\nc += a #=> 40\nc -= a #=> 30\nc *= a #=> 300\nc /= a #=> 30\nc %= a #=> 3\nc **= a #=> 59049\n\n# Ruby parallel assignment\na = 10\nb = 20\nc = 30\na, b, c = 10, 20, 30\n# Ruby bitwise operators\na = 60\nb = 13\n# & Binary AND operator copies a bit to the result if it exists in both operands.\na & b #=> 12\n# | Binary OR operator copies a bit if it exists in either operand.\na | b #=> 61\n# ^ Binary XOR operator copies a bit if it is set in one operand but not both.\na ^ b #=> 49\n# ~ Binary Ones Complement is unary and has the effect of 'flipping' bits.\n~a\n# << Binary Left Shift Operator. The left operand's value is moved\n# left by the number of bits specified by the right operand.\na << 2\n# >> Binary Right Shift Operator. The left operand's value is moved\n# right by the number of bits specified by the right operand.\na >> 2\n\n# Ruby logical operators\na and b #=> true.\na or b #=> true.\na && b #=> true.\n(a || b) #=> true.\n!(a && b) #=> false.\nnot(a && b) #=> false.\n# Ruby ternary operator\n# ? :\n# If condition is true ? Then value X : Otherwise value Y\na == 10 ? puts 'Right' : puts 'Wrong'\n# Ruby range operators\n# .. Creates a range from the start point to the end point (inclusive)\n1..10 #=> Creates a range from 1 to 10 (inclusive of 1 and 10)\n# ... Creates an exclusive range from the start point to the end point\n1...10 #=> Creates an exclusive range from 1 to 10\n```",
+              "spanConfig": "row-span-7",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Operator precedence table",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Operator precedence table",
+              "body": "From highest to lowest, this is the precedence table for ruby. High precedence operations happen before low precedence\noperations.\n\n- !, ~, unary +\n- \\*\\*\n- unary -\n- \\*, /, %\n- +, -\n- <<, >>\n- &\n- |, ^\n- > , >=, <, <=\n- <=>, ==, ===, !=, =~, !~\n- &&\n- ||\n- .., ...\n- ?, :\n- modifier-rescue\n- =, +=, -=, etc.\n- defined?\n- not\n- or, and\n- modifier-if, modifier-unless, modifier-while, modifier-until\n- { } blocks",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Variables and scope",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Variables and scope",
+              "body": "| -              | -                 | -                             | -                                                                                                |\n| -------------- | ----------------- | ----------------------------- | :----------------------------------------------------------------------------------------------- |\n| Name           | Scope             | Example                       | Explanation                                                                                      |\n| `[a-z]` or `_` | Local             | `count = 10` or `_count = 10` | Local variables must be initialized                                                              |\n| `@`            | Instance variable | `@id = []`                    | Instance variables have a \"nil\" value before initialization                                      |\n| `@@`           | Class variable    | `@@name = []`                 | Class variables must be initialized                                                              |\n| `$`            | Global variable   | `$version = \"0.8.9\"`          | Global variables have a \"nil\" value before initialization                                        |\n| `[A-Z]`        | Constant          | `PI = 3.14`                   | Constant variables must be initialized, you can change constants, but you will receive a warning |\n\nThere are five different types of variables. The first character determines the range To read in deap about variables\ncheck [User Guide](https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/) cap 19,20,21,22,23\n[Pre-Defined Variables and Constants](https://ruby-doc.org/docs/ruby-doc-bundle/Manual/man-1.4/variable.html)",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check the scope of a variable",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check the scope of a variable",
+              "body": "```ruby\ndefined? count\n\"local-variable\"\ndefined? @id\n\"instance-variable\"\ndefined? @@name\n\"class variable\"\ndefined? $version\n\"global-variable\"\ndefined? PI\n\"constant\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Data Types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Data Types",
+              "body": "| -         | -                            | -                                                  | -                                                                                                               |\n| :-------- | :--------------------------- | :------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |\n| Type      | Example                      | Class                                              | Documentation                                                                                                   |\n| `Integer` | a = 17                       | a.class > Integer <br>a.class.superclass > Numeric | [#](<(https://ruby-doc.org/3.3.1/Integer.html)>)                                                                |\n| `Float`   | a = 87.23                    | a.class > Float <br>a.class.superclass > Numeric   | [#](https://ruby-doc.org/3.3.1/Float.html)                                                                      |\n| `String`  | a = \"Hello universe\"         | a.class > String                                   | [#](https://ruby-doc.org/3.3.1/String.html)                                                                     |\n| `Array`   | a = [12, 34]                 | a.class > Array                                    | [#](https://ruby-doc.org/3.3.1/Array.html)                                                                      |\n| `Hash`    | a = {type: \"tea\", count: 10} | a.class > Hash                                     | [#](https://ruby-doc.org/3.3.1/Hash.html)                                                                       |\n| `Boolean` | a = false<br>a = true        | a.class > FalseClass <br>a.class > TrueClass       | [TrueClass](https://ruby-doc.org/3.3.1/TrueClass.html) [FalseClass](https://ruby-doc.org/3.3.1/FalseClass.html) |\n| `Symbol`  | a = :status                  | a.class > Symbol                                   | [#](https://ruby-doc.org/3.3.1/Symbol.html)                                                                     |\n| `Range`   | a = 1..3                     | a.class > Range                                    | [#](https://ruby-doc.org/3.3.1/Range.html)                                                                      |\n| `Nil`     | a = nil                      | a.class > NilClass                                 | [#](https://ruby-doc.org/3.3.1/NilClass.html)                                                                   |\n\n[further reading](https://www.digitalocean.com/community/tutorials/understanding-data-types-in-ruby)",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check data type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check data type",
+              "body": "```ruby\n# Both are synonyms\na = 37\na.kind_of? Integer\n# true\na.is_a? Integer\n# true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Symbol",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Symbol",
+              "body": "```ruby\nweek_days = {sunday: 11, monday: 222}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Integer useful methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Integer useful methods",
+              "body": "```ruby\n2.even?\n# true\n3.even?\n# false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Range",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Range",
+              "body": "```ruby\nrange = 1..10\nrange.to_a\n# output => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n```",
+              "footer": "`...` Used to create exclusive ranges\n```ruby\nrange = 1...10\nrange.to_a\n```\nsome useful methods\n| Method name | Output                                |\n| :---------- | :------------------------------------ |\n| `cover?`    | `(1..5).cover?(5)` => `true`          |\n| `end`       | `('a'..'z').end` => `\"z\"`             |\n| `first`     | `(1..5).first` => `1`                 |\n| `first(3)`  | `('A'..'Z').first(2)` => `[\"A\", \"B\"]` |\n| `eql?`      | `((0..2).eql?(0..5)` => `false`       |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Using `step` in Range",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using `step` in Range",
+              "body": "```ruby\n(1..20).step(2) { |number| puts \"#{number}\"}\n# output\n# 1\n# 3\n# 5\n# 7\n# 9\n# 11\n# 13\n# 15\n# 17\n# 19\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Ruby Flow control",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "if",
+          "level": 3,
+          "cards": [
+            {
+              "title": "if",
+              "body": "```ruby\nnum = 2\nputs 'two' if num == 2\n```",
+              "footer": "If the condition is true, execute the code",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "if elsif else",
+          "level": 3,
+          "cards": [
+            {
+              "title": "if elsif else",
+              "body": "```ruby\ntemp = 19\nif temp >= 25\n  puts \"hot\"\nelsif temp < 25 && temp >= 18\n  puts \"normal\"\nelse\n  puts \"cold\"\nend\n# output => normal\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "unless",
+          "level": 3,
+          "cards": [
+            {
+              "title": "unless",
+              "body": "```ruby\n# Unless contrary to if , evaluates when the statement is false\nname = \"rob\"\n# if name != \"bob\"\nunless name == \"bob\"\n  puts \"hello stranger\"\nelse\n  puts \"hello bob\"\nend\n# output => hello stranger\nnum = 6\nputs 'not two' unless num == 2\n# output => not two\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "case",
+          "level": 3,
+          "cards": [
+            {
+              "title": "case",
+              "body": "```ruby\n# case returns the value of the last expression executed\ncase input\n# Check for an integer, 19\nwhen 19\n  puts \"It's 19\"\n  # Check for an exact string，“Zaman”\nwhen \"Zaman\"\n  puts \"Hi Zaman\"\nwhen 7..11\n  puts \"It's between 7 and 11\"\n  # Check multiple values, \"coffee\"\nwhen \"tea\", \"coffee\"\n  puts \"Happy days\"\nend\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "case( short syntax )",
+          "level": 3,
+          "cards": [
+            {
+              "title": "case( short syntax )",
+              "body": "```ruby\ncase input\n  when 19 then puts \"It's 19\"\nend\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "case( Optional failure )",
+          "level": 3,
+          "cards": [
+            {
+              "title": "case( Optional failure )",
+              "body": "```ruby\ncase input\n  when 19 then puts \"It's 19\"\nelse\n  puts \"It's not 19\"\nend\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "case( Get return value )",
+          "level": 3,
+          "cards": [
+            {
+              "title": "case( Get return value )",
+              "body": "```ruby\nmarks = 86\nresult = case marks\n        when 0..49 then \"Fail\"\n        when 50..64 then \"Pass\"\n        when 65..74 then \"Credit\"\n        when 75..84 then \"Distinction\"\n        when 85..100 then \"High Distinction\"\n        else \"Invalid marks\"\n        end\n\nputs result\n# High Distinction\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "String",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "String interpolation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "String interpolation",
+              "body": "```ruby\nname = \"World\"\nputs \"Hello #{name}\"\nputs \"The total is #{1+1}\"\n# \"the total is 2\"\n```",
+              "footer": "String interpolation allows you to combine strings together",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extract substring",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extract substring",
+              "body": "```ruby\nstring = \"abc123\"\nstring[0,3]\n# \"abc\"\nstring[3,3]\n# \"123\"\nstring[0..-2]\n# \"abc12\"\n#remove or replace the substring\nstring[0..2] = \"\"\nputs string\n# \"123\"\n```",
+              "footer": "A substring is a small part of a string, which is useful if you only want that specific part, like the beginning,\nmiddle, or end",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Convert a string to lowercase or uppercase",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Convert a string to lowercase or uppercase",
+              "body": "```ruby\n\"HELLO World\".downcase  # \"hello world\"\n\"hello worlD\".upcase    # \"HELLO WORLD\"\n\"hEllo wOrlD\".capitalize # \"Hello world\"\n\"hEllo WOrlD\".swapcase  # \"HeLLO woRLd\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "useful methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "useful methods",
+              "body": "| Function Name                  | Output                                                                                                | Note                                                                                                                                                                                |\n| :----------------------------- | :---------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| length or size                 | `\"HELLO World\".length` => `11` <br> `\"HELLO World\".size` => `11`                                      | Returns the length of the string                                                                                                                                                    |\n| reverse                        | `\"hello worlD\".reverse` => `\"Dlrow olleh\"`                                                            | Returns the reversed string                                                                                                                                                         |\n| include? other_str             | `\"hEllo wOrlD\".include? \"w\"` => `true`                                                                | Returns true if the string or character exists, otherwise returns false                                                                                                             |\n| gsub(pattern, replacement)     | `\"hEllo wOrlD\".gsub(\" \", \"_\")` => `\"hEllo_wOrlD\"`                                                     | gsub or global substitute replaces one or more strings with the provided string                                                                                                     |\n| gsub(pattern, hash)            | `\"organization\".gsub(\"z\", 'z' => 's')` => `\"organisation\"`                                            | gsub or global substitute replaces one or more strings with the provided hash                                                                                                       |\n| gsub(pattern) {\\|match\\|block} | `\"Price of the phone is 1000 AUD\".gsub(/\\d+/) {\\| s\\| '$'+s }`<br>`\"Price of the phone is $1000 AUD\"` | gsub or global substitute replaces one or more strings with the provided block                                                                                                      |\n| strip                          | `\" hEllo WOrlD \".strip` <br> `\"hEllo WOrlD\"`                                                          | It will remove (trim) any leading and trailing characters: null (“\\x00”), horizontal tab (“\\t”), newline (\\n), vertical tab (“\\v”), form feed (f), carriage return(\\r), space (\" \") |\n| prepend                        | `a = \"world\" <br> a.prepend(\"hello \")` <br> `\"hello world\"`                                           | Adds the string before another string                                                                                                                                               |\n| insert                         | `a = \"hello\" <br> a.insert(a.length, \" world\")` <br> `\"hello world\"`                                  | Inserts the string at a specific position                                                                                                                                           |\n| start_with?                    | `string = \"ruby programming\"` <br> `string.start_with? \"ruby\"` <br> `true`                            | Checks if the string starts with a specific prefix                                                                                                                                  |\n| end_with?                      | `string = \"ruby programming\"` <br> `string.end_with? \"ruby\"` <br> `false`                             | Checks if the string ends with a specific prefix                                                                                                                                    |\n| delete_suffix                  | `string = \"sausage is expensive\"` <br> `string.delete_suffix(\" is expensive\")` <br> `\"sausage\"`       | Deletes the suffix from the string                                                                                                                                                  |\n| delete_prefix                  | `string = \"sausage is expensive\"` <br> `string.delete_prefix(\"sausage\")` <br> `\" is expensive\"`       | Deletes the prefix from the string                                                                                                                                                  |\n| split                          | `string = \"a b c d\" <br> string.split` <br> `[\"a\", \"b\", \"c\", \"d\"]`                                    | Converts the string into an array of characters                                                                                                                                     |\n| join                           | `arr = ['a', 'b', 'c'] <br> arr.join` => `\"abc\"`                                                      | Converts an array into a string                                                                                                                                                     |\n| to_i                           | `a = \"49\" <br> a.to_i` => `49`                                                                        | Converts the string into an integer                                                                                                                                                 |\n| chop                           | `\"abcd?\".chop(\"?\")` => `\"abcd\"`                                                                       | Deletes the last character from the string                                                                                                                                          |\n| count                          | `str = \"aaab\" <br> str.count(\"a\")` <br> `3`                                                           | Counts the characters in the string                                                                                                                                                 |\n| to_f                           | `a = \"49\"` <br> `a.to_f` <br> `49.0`                                                                  | Converts the string into a floating point number                                                                                                                                    |\n| to_sym                         | `a = \"key\"` <br> `a.to_sym` <br> `:key`                                                               | Converts the string into a symbol                                                                                                                                                   |\n| match                          | `\"abcd?\".match(/ab/)` => `#<MatchData \"ab\">`                                                          | Converts the pattern into a regular expression and calls its match method on the string                                                                                             |\n| empty?                         | `\"hello\".empty?` => `false`                                                                           | Returns true if the length of the string is zero                                                                                                                                    |\n| squeeze                        | `\"Booook\".squeeze` => `\"Bok\"`                                                                         | Returns a copy of the string where runs of the same character are replaced by a single character                                                                                    |\n| \\*                             | `puts \"Ruby \" * 4` => `Ruby Ruby Ruby Ruby`                                                           | Returns the concatenation of multiple copies of self                                                                                                                                |\n| +                              | `\"sammy \" + \"shark\"` => `\"sammyshark\"`                                                                | Returns the concatenation of self and the given other string                                                                                                                        |\n| eql?                           | `s = 'foo'` => `true` <br> `s.eql?('foo')` => `true`                                                  | Returns true if the objects have the same length and content; false otherwise                                                                                                       |",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Methods",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Declare a method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Declare a method",
+              "body": "```ruby\ndef method_name(parameter1, parameter2)\n    puts \"#{parameter1} #{parameter2}\"\n    parameter1 + parameter2\nend\n```",
+              "footer": "```ruby\nres = method_name(20, 10)\ndef method_name(parameter1, parameter2)\nputs \"#{parameter1} #{parameter2}\"\nreturn parameter1 + parameter2\nend\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Call method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Call method",
+              "body": "```ruby\nres = method_name(parameter1, parameter2)\n# Methods can be called without parentheses\nres = method_name parameter1, parameter2\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Class method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Class method",
+              "body": "```ruby\nclass Mobile\n    def self.ring\n        \"ring ring ring...\"\n    end\nend\n\nMobile.ring\n```",
+              "footer": "```ruby\nclass Mobile\ndef Mobile.ring\n\"ring ring ring...\"\nend\nend\nMobile.ring\n```\n```ruby\nclass Mobile\nclass << self\ndef ring\n\"ring ring ring...\"\nend\nend\nend\nMobile.ring\n```\nClass methods are instance methods of class objects. When a new class is created, an object of type \"Class\" is\ninitialized and assigned to a global constant (in this case Mobile)\n```ruby\nMobile = Class.new do\ndef self.ring\n\"ring ring ring...\"\nend\nend\nMobile.ring\n```\n```ruby\nMobile = Class.new\nclass << Mobile\ndef ring\n\"ring ring ring...\"\nend\nend\nMobile.ring\n```",
+              "spanConfig": "row-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Use another parameter as default value",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Use another parameter as default value",
+              "body": "```ruby\ndef method_name(num1, num2 = num1)\n    return num1 + num2\nend\nres = method_name(10)\n# output => 20\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Define default values for method parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Define default values for method parameters",
+              "body": "```ruby\ndef method_name(parameter1, parameter2, type = \"ADD\")\n    puts \"#{parameter1} #{parameter2}\"\n    return parameter1 + parameter2 if type == \"ADD\"\n    return parameter1 - parameter2 if type == \"SUB\"\nend\nres = method_name(20, 10)\n# output => 30\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pass variable length arguments to method parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pass variable length arguments to method parameters",
+              "body": "```ruby\ndef method_name(type, *values)\n    return values.reduce(:+) if type == \"ADD\"\n    return values.reduce(:-) if type == \"SUB\"\nend\nnumbers = [2, 2, 2, 3, 3, 3]\nres = method_name(\"ADD\", *numbers)\n# output => 15\nres = method_name(\"SUB\", *numbers)\n# output => -11\n# Or you can provide a value like this\nres = method_name(\"ADD\", 2, 2, 2, 3, 3, 3)\n# output => 15\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Modify object",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Modify object",
+              "body": "```ruby\na = [\"Drama\", \"Mystery\", \"Crime\",\n\"Sci-fi\", \"Disaster\", \"Thriller\"]\na.sort\nputs a\n# We did not modify the object\n# Drama\n# Mystery\n# Crime\n# Sci-fi\n# Disaster\n# Thriller\na.sort!\nputs a\n# Modify object\n# Crime\n# Disaster\n# Drama\n# Mystery\n# Sci-fi\n# Thriller\n```",
+              "footer": "When you want to modify the object, use `!` after the method",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Boolean method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Boolean method",
+              "body": "```ruby\n\"some text\".nil?\n# false\nnil.nil?\n# true\n```",
+              "footer": "You can have your own boolean method\n```ruby\ndef is_vowel?(char)\n['a','e','i','o','u'].include? char\nend\nis_vowel? 'a'\nis_vowel? 'b'\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Blocks",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Block example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Block example",
+              "body": "```ruby\n# return value\ndef give_me_data\n    data = yield\n    puts \"data = #{data}\"\nend\ngive_me_data { \"Big data\" }\n# output => data = Big data\n```",
+              "footer": "The code between `do` and `end` (for multiple lines) or curly braces `{` and `}` (for a single line) is called a block,\nand they can define multiple parameters between two pipes `( |arg1, arg2|)`",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Single line block",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Single line block",
+              "body": "```ruby\nsalary = [399, 234, 566, 533, 233]\nsalary.each { |s| puts s }\n# puts s = block body\n# |s| = block arguments\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multi-line block",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multi-line block",
+              "body": "```ruby\nsalary.each do |s|\n    a = 10\n    res = a * s\n    puts res\nend\n# Block\n# a = 10\n# res = a * s\n# puts res\n# block parameters\n# |s|\n```",
+              "footer": "Blocks can be passed as method parameters or associated with method calls. block returns the last evaluated statement",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Implicitly passing a block",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Implicitly passing a block",
+              "body": "```ruby\ndef give_me_data\n    puts \"I am inside give_me_data method\"\n    yield\n    puts \"I am back in give_me_data method\"\nend\n\ngive_me_data { puts \"Big data\" }\n\n# output\n# I am inside give_me_data method\n# Big data\n# I am back in give_me_data method\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Called multiple times",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Called multiple times",
+              "body": "```ruby\ndef give_me_data\n    yield\n    yield\n    yield\nend\n\ngive_me_data { puts \"Big data\" }\n\n# output\n# Big data\n# Big data\n# Big data\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Called with block parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Called with block parameters",
+              "body": "```ruby\ndef give_me_data\n    yield 10\n    yield 100\n    yield 30\nend\n\ngive_me_data { |data| puts \"Big data #{data} TB\" }\n\n# output\n# Big data 10 TB\n# Big data 100 TB\n# Big data 30 TB\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Called with multiple block parameters",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Called with multiple block parameters",
+              "body": "```ruby\ndef give_me_data\n    yield \"Big data\", 10, \"TB\"\n    yield \"Big data\", 100, \"GB\"\n    yield \"Big data\", 30, \"MB\"\nend\n\ngive_me_data { |text, data, unit| puts \"#{text} #{data} #{unit}\" }\n\n# output\n# Big data 10 TB\n# Big data 100 GB\n# Big data 30 MB\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Block will attempt to return from the current context",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Block will attempt to return from the current context",
+              "body": "```ruby\ngive_me_data\n    puts \"I'm inside the give_me_data method\"\nend\n\ndef test\n  puts \"I'm inside the test method\"\n  give_me_data { return 10 } # Code returns from here\n  puts \"I am back in test method\"\nend\n\nreturn_value = test\n\n# output\n# I'm inside the test method\n# I'm inside the give_me_data method\n# 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pass the block explicitly by using the & parameter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pass the block explicitly by using the & parameter",
+              "body": "```ruby\ndef give_me_data(&block)\n    block.call\n    block.call\nend\n\ngive_me_data { puts \"Big data\" }\n\n# output\n# Big data\n# Big data\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check if block is given",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check if block is given",
+              "body": "```ruby\ndef give_me_data\n    yield\nend\n\ngive_me_data\n\n# output\n# LocalJumpError: no block given (yield)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Ways to handle exceptions and make blocks optional",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Ways to handle exceptions and make blocks optional",
+              "body": "```ruby\ndef give_me_data\n    return \"no block\" unless block_given?\n    yield\nend\n\ngive_me_data { puts \"Big data\" }\ngive_me_data\n\n# output\n# Big data\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Procs",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Procs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Procs",
+              "body": "```ruby\np = Proc.new { puts \"Hello World\" }\n\ndef give_me_data(proc)\n    proc.call\nend\n\ngive_me_data p\n\n# output\n# Hello World\n```",
+              "footer": "proc is like a block that can be stored in a variable",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "any parameter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "any parameter",
+              "body": "```ruby\np = Proc.new { |count| \"Hello World \" * count }\n\ndef give_me_data(proc)\n    proc.call 5, 2\nend\n\ngive_me_data p\n\n# output\n# \"Hello World Hello World Hello World Hello World Hello World \"\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "proc will attempt to return from the current context",
+          "level": 3,
+          "cards": [
+            {
+              "title": "proc will attempt to return from the current context",
+              "body": "```ruby\np = Proc.new { return 10 }\np.call\n# output\nLocalJumpError: unexpected return\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cannot return from top-level context",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cannot return from top-level context",
+              "body": "```ruby\ndef give_me_data\n    puts \"I'm inside the give_me_data method\"\n    p = Proc.new { return 10 }\n    p.call # Code returns from here\n    puts \"I am back in give_me_data method\"\nend\n\nreturn_value = give_me_data\nputs return_value\n\n# output\n# I'm inside the give_me_data method\n# 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Lambdas",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Declare a lambda",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Declare a lambda",
+              "body": "```ruby\nl = lambda { puts \"Hello World\" }\n# shorthand\nl = -> { puts \"Hello World\" }\n# transfer lambda\nl.call\n# output => Hello World\n```",
+              "footer": "There are multiple ways to call a lambda\n```ruby\nl.()\nl[]\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "strict arguments",
+          "level": 3,
+          "cards": [
+            {
+              "title": "strict arguments",
+              "body": "```ruby\nl = -> (count) { \"Hello World \" * count }\nl.call 5\n# output\n# \"Hello World Hello World Hello World Hello World Hello World \"\nl.call 5, 2\n# output\nwrong number of arguments (given 2, expected 1)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "declare a lambda in block",
+          "level": 3,
+          "cards": [
+            {
+              "title": "declare a lambda in block",
+              "body": "```ruby\ndef give_me_data\n    puts \"I am inside give_me_data method\"\n    l = -> { return 10 }\n    l.call\n    puts \"I am back in give_me_data method\"\nend\n\nreturn_value = give_me_data\nputs return_value\n\n# output\n# I am inside give_me_data method\n# I am back in give_me_data method\n# nil # because puts return nil\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "lambdas are returned from the lambda itself, just like regular methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "lambdas are returned from the lambda itself, just like regular methods",
+              "body": "```ruby\nl = -> { return 10 }\nl.call\n\n# output => 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Array",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Initialize an empty array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Initialize an empty array",
+              "body": "```ruby\narray = Array.new   #=> []\n# or\narray = []\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array containing objects of different types",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array containing objects of different types",
+              "body": "```ruby\narray = [1, \"two\", 3.0]\n#=> [1, \"two\", 3.0]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Fill array with initial size and default objects",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Fill array with initial size and default objects",
+              "body": "```ruby\nnumbers = Array.new(3)\n#=> [nil, nil, nil]\nnumbers = Array.new(3, 7)\n#=> [7, 7, 7]\nnumbers = Array.new(3, true)\n#=> [true, true, true]\nnumbers = []\nnumbers.fill(7, 0..2)   #=> [7, 7, 7]\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "array of different hashes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "array of different hashes",
+              "body": "```ruby\narray_with_hashes = Array.new(2) { {} } #=> [{}, {}]\narray_with_hashes[0][:name] = \"Bob\"\narray_with_hashes[0][:id] = 10          #=> [{:name=>\"Bob\", :id=>10}, {}]\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Two-dimensional array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Two-dimensional array",
+              "body": "```ruby\ntemperature_data = [\n              [\"A908\", 38],\n              [\"A909\", 37],\n              [\"A910\", 38],\n          ]\ntemperature_data[0]    #=> [\"A908\", 38]\ntemperature_data[0][0] #=> \"A908\"\ntemperature_data[0][1] #=> 38\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "array index",
+          "level": 3,
+          "cards": [
+            {
+              "title": "array index",
+              "body": "```ruby\nstr_array = [\n  \"This\", \"is\", \"a\", \"small\", \"array\"\n]\nstr_array[0]            #=> \"This\"\nstr_array[1]            #=> \"is\"\nstr_array[4]            #=> \"array\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "negative index",
+          "level": 3,
+          "cards": [
+            {
+              "title": "negative index",
+              "body": "```ruby\nstr_array = [\n  \"This\", \"is\", \"a\", \"small\", \"array\"\n]\n# Index -1 represents the last element\nstr_array[-1]        #=> \"array\"\n# Index -2 represents the second to last element\nstr_array[-2]        #=> \"small\"\nstr_array[-6]        #=> nil\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "array method at",
+          "level": 3,
+          "cards": [
+            {
+              "title": "array method at",
+              "body": "```ruby\nstr_array = [\n  \"This\", \"is\", \"a\", \"small\", \"array\"\n]\n\nputs str_array.at(0)      #=> \"This\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Range acquisition",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Range acquisition",
+              "body": "```ruby\narr = [1, 2, 3, 4, 5, 6]\narr[100]                  #=> nil\narr[-3]                   #=> 4\narr[2, 3]                 #=> [3, 4, 5]\narr[1..4]                 #=> [2, 3, 4, 5]\narr[1..-3]                #=> [2, 3, 4]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Array method fetch",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Array method fetch",
+              "body": "```ruby\narr = ['a', 'b', 'c', 'd', 'e', 'f']\narr.fetch(100)\n#=> IndexError: Index outside array bounds 100：-6...6\narr.fetch(100, \"oops\")    #=> \"oops\"\n```",
+              "footer": "Out of bounds, give default value",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Get array elements",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Get array elements",
+              "body": "```ruby\narr = [1, 2, 3, 4, 5, 6]\n\narr.first     # first value => 1\narr.last      # last value => 6\n# take Returns the first n elements\narr.take(3)   #=> [1, 2, 3]\n# drop after n elements have been deleted\narr.drop(3)   #=> [4, 5, 6]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Add value to end of array push",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Add value to end of array push",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.push(11)\n#=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\nnumbers.push(12, 13, 14)\n#=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Delete the value at the end of the array pop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delete the value at the end of the array pop",
+              "body": "```ruby\nnum_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnum_array.pop             #=> 10\nnum_array\n#=> [1, 2, 3, 4, 5, 6, 7, 8, 9]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Add value to beginning of array unshift",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Add value to beginning of array unshift",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.unshift(0)\n#=> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.unshift(-3, -2, -1)\n#=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Retrieve and simultaneously delete the first element shift",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Retrieve and simultaneously delete the first element shift",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.shift #=> 1\nnumbers\n#=> [2, 3, 4, 5, 6, 7, 8, 9, 10]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Remove element at specific index delete_at",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Remove element at specific index delete_at",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.delete_at(2) #=> 4\nnumbers\n#=> [2, 3, 5, 6, 7, 8, 9, 10]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Remove a specific element anywhere in an array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Remove a specific element anywhere in an array",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.delete(2) #=> 2\nnumbers           #=> [3, 5, 6, 7, 8, 9, 10]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Insert value at given index insert",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Insert value at given index insert",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.insert(0, 0)\n#=> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.insert(0, -3, -2, -1)\n#=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\nnumbers.insert(-1, 12, 13, 14)\n#=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14]\nnumbers.insert(-4, 11)\n#=> [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "A block to fill the array with values",
+          "level": 3,
+          "cards": [
+            {
+              "title": "A block to fill the array with values",
+              "body": "```ruby\nnumbers = Array.new(10) { |n| n = n * 2 }\n#=> [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Filling arrays becomes easier",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Filling arrays becomes easier",
+              "body": "```ruby\nnumbers = Array(100..110)\n#=> [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]\n\n# Or we can convert the range to an array\n(100..110).to_a\n#=> [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Remove nil value from array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Remove nil value from array",
+              "body": "```ruby\narr = ['foo', 0, nil, 'bar', 7, nil]\narr.compact  #=> ['foo', 0, 'bar', 7]\narr      #=> ['foo', 0, nil, 'bar', 7, nil]\narr.compact! #=> ['foo', 0, 'bar', 7]\narr      #=> ['foo', 0, 'bar', 7]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Remove duplicates uniq",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Remove duplicates uniq",
+              "body": "```ruby\narr = [2, 5, 6, 556, 6, 6, 8, 9, 0, 123, 556]\narr.uniq #=> [2, 5, 6, 556, 8, 9, 0, 123]\narr # => [2, 5, 6, 556, 6, 6, 8, 9, 0, 123, 556]\narr.uniq! #=> [2, 5, 6, 556, 8, 9, 0, 123]\narr #=> [2, 5, 6, 556, 8, 9, 0, 123]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check if a value exists in an array（`include？`）",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check if a value exists in an array（`include？`）",
+              "body": "```ruby\nplanets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\nplanets.include? \"Mars\"\n# output => true\nplanets.include? \"Pluto\"\n# output => false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Get array size",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Get array size",
+              "body": "```ruby\nplanets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\nplanets.size\n# output => 8\nplanets.length\n# output => 8\n```",
+              "footer": "You can use size or length, both are synonyms",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "clear array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "clear array",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.clear\n# output => []\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Get the first element of the array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Get the first element of the array",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers[0]\n# or\nnumbers.first\n# output => 1\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Get the last element of the array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Get the last element of the array",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers[-1]\n# or\nnumbers.last\n# output => 10\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Merge two arrays",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Merge two arrays",
+              "body": "```ruby\na = [\"tom\", \"mot\", \"otm\"]\nb = [2, 3, 5]\na.zip(b)\n# output\n# [[\"tom\", 2], [\"mot\", 3], [\"otm\", 5]]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Sort array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Sort array",
+              "body": "```ruby\nprimes = [7, 2, 3, 5]\nsorted_primes = primes.sort\nputs \"#{sorted_primes}\"\n# output => [2, 3, 5, 7]\n```",
+              "footer": "or in-place sort\n```ruby\nprimes = [7, 2, 3, 5]\nprimes.sort!\nputs \"#{primes}\"\n```\n```ruby\nplanets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\nplanets.sort\nplanets.sort_by { |p| p }\nplanets.sort_by { |p| p.length }\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Get maximum value from array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Get maximum value from array",
+              "body": "```ruby\nprimes = [7, 2, 3, 5]\nprimes.max_by { |p| p }\n# output => 7\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Get array elements using range",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Get array elements using range",
+              "body": "```ruby\n# numbers[start..end], both index are inclusive\nputs numbers[0..3]\n# 1\n# 2\n# 3\n# 4\n# numbers[start..end], end index is exclusive\nputs numbers[0...3]\n# 1\n# 2\n# 3\n# or numbers[start..length]\nputs numbers[0, 1]\n# 1\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Get the first n elements of the array",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Get the first n elements of the array",
+              "body": "```ruby\nprimes = [7, 2, 3, 5]\nprimes.take(3)\n# [7, 2, 3]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "access element",
+          "level": 3,
+          "cards": [
+            {
+              "title": "access element",
+              "body": "```ruby\nprimes = [7, 2, 3, 5]\nprimes.fetch(3)\n# 5\n# Fetch will throw an error if the element does not exist\nprimes.fetch(10)\n# (index 10 outside of array bounds: -4...4)\n# or get an default value\nprimes.fetch(10, -1)\n# -1\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Delete first n elements",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delete first n elements",
+              "body": "```ruby\nprimes = [7, 2, 3, 5]\nprimes.drop(3)\n# [5]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Delete the first element",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delete the first element",
+              "body": "```ruby\nprimes = [7, 2, 3, 5]\nprimes.shift\n# [2, 3, 5]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Remove last element",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Remove last element",
+              "body": "```ruby\nprimes = [7, 2, 3, 5]\nprimes.pop\n# [7, 2, 3]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Delete element with index",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Delete element with index",
+              "body": "```ruby\nprimes = [7, 2, 3, 5]\nprimes.delete_at(-1)\n# [7, 2, 3]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Remove all occurrences of elements",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Remove all occurrences of elements",
+              "body": "```ruby\nprimes = [7, 2, 3, 5, 5]\nprimes.delete(5)\n# [7, 2, 3]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "each",
+          "level": 3,
+          "cards": [
+            {
+              "title": "each",
+              "body": "```ruby\n# When you have single line blocks\nsalary = [399, 234, 566, 533, 233]\nsalary.each { |s| puts s }\n# output\n# 399\n# 234\n# 566\n# 533\n# 233\n```",
+              "footer": "When you have a multi-line block, you can replace the curly braces `{}` with `do` and `end`\n```ruby\nsalary.each do |s|\na = 10\nres = a * s\nputs res\nend\n```\nOr you can do the same thing using braces {} and semicolon as separator instead of newline\n```ruby\nsalary.each { |s| a = 10 ; res = a * s ; puts res }\n```",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "each_with_index",
+          "level": 3,
+          "cards": [
+            {
+              "title": "each_with_index",
+              "body": "```ruby\nsalary = [399, 234, 566, 533, 233]\nsalary.each_with_index { |value, index| puts \"#{index} #{value}\" }\n# output\n# 0 399\n# 1 234\n# 2 566\n# 3 533\n# 4 233\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "each_index",
+          "level": 3,
+          "cards": [
+            {
+              "title": "each_index",
+              "body": "```ruby\nsalary = [399, 234, 566, 533, 233]\nsalary.each_index { |i| puts i}\n# output\n# 0\n# 1\n# 2\n# 3\n# 4\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "map",
+          "level": 3,
+          "cards": [
+            {
+              "title": "map",
+              "body": "```ruby\nsalary = [399, 234, 566, 533, 233]\nsalary.map { |s|  s * 10  }\n# return\n# [3990, 2340, 5660, 5330, 2330]\n# On the other hand, each returns the original value\nsalary = [399, 234, 566, 533, 233]\nsalary.each { |s|  s * 10  }\n# return\n# [399, 234, 566, 533, 233]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "collect",
+          "level": 3,
+          "cards": [
+            {
+              "title": "collect",
+              "body": "```ruby\nsalary = [399, 234, 566, 533, 233]\nsalary.collect { |s| s > 400 }\n# output\n# [false, false, true, true, false]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "for",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for",
+              "body": "```ruby\nfor value in [2, 3, 5, 7]\n    puts value\nend\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "each_with_object",
+          "level": 3,
+          "cards": [
+            {
+              "title": "each_with_object",
+              "body": "```ruby\ncolors = [\n  {color: \"red\", count: 3}, {color: \"red\", count: 5}, {color: \"black\", count: 4}\n]\ncolors.each_with_object(Hash.new(0)) { |color, hash| hash[\"color_\"+color[:color]] = color[:color].upcase; hash[\"count_\"+color[:color]] += color[:count] }\n# output\n{\"color_red\"=>\"RED\", \"count_red\"=>8, \"color_black\"=>\"BLACK\", \"count_black\"=>4}\n\n[1, 2, 3].each_with_object(0) { |number, sum| sum += number}\n# output\n# 0\n# Because 0 is immutable, and since the initial object is 0, the method returns 0\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "while",
+          "level": 3,
+          "cards": [
+            {
+              "title": "while",
+              "body": "```ruby\nplanets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\nindex = 0\nwhile index < planets.size\n    puts \"#{planets[index]}\"\n    index += 1\nend\n```",
+              "footer": "```ruby\na = 1\nstar = '*'\nwhile a <= 10\nputs star\nstar += '*'\na += 1\nend\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "do while",
+          "level": 3,
+          "cards": [
+            {
+              "title": "do while",
+              "body": "```ruby\nplanets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\nindex = 0\nloop do\n    puts \"#{planets[index]}\"\n    index += 1\n    break if planets[index] == \"Mars\" or index > planets.size\nend\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "until",
+          "level": 3,
+          "cards": [
+            {
+              "title": "until",
+              "body": "```ruby\nplanets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\nindex = planets.size - 1\nuntil index < 0\n    puts \"#{planets[index]}\"\n    index -= 1\nend\n```",
+              "footer": "```ruby\na = 1\nstar = '*'\nuntil star.length > 10\nputs star\nstar += '*'\na += 1\nend\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "times",
+          "level": 3,
+          "cards": [
+            {
+              "title": "times",
+              "body": "```ruby\n10.times { puts \"#{rand(1..100)}\"}\n# output\n# will print 10 random numbers\n```",
+              "footer": "Just because you can doesn't mean you should iterate over an array like this\n```ruby\ndata_sample = [2, 3, 5, 7]\ndata_sample.size.times { |index| puts \"#{data_sample[index]}\" }\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "upto",
+          "level": 3,
+          "cards": [
+            {
+              "title": "upto",
+              "body": "```ruby\ndata_sample = [2, 3, 5, 7]\n0.upto((data_sample.size - 1) / 2) { |index| puts \"#{data_sample[index]}\" }\n# output\n# 2\n# 3\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "downto",
+          "level": 3,
+          "cards": [
+            {
+              "title": "downto",
+              "body": "```ruby\ndata_sample = [2, 3, 5, 7]\n(data_sample.size - 1).downto(data_sample.size / 2) { |index| puts \"#{data_sample[index]}\" }\n# output\n# 7\n# 5\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "step",
+          "level": 3,
+          "cards": [
+            {
+              "title": "step",
+              "body": "```ruby\n1.step(20, 2) { |number| puts \"#{number}\"}\n# output\n# 1\n# 3\n# 5\n# 7\n# 9\n# 11\n# 13\n# 15\n# 17\n# 19\n```",
+              "footer": "```ruby\n19.step(1, -2) { |number| puts \"#{number}\"}\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "inject",
+          "level": 3,
+          "cards": [
+            {
+              "title": "inject",
+              "body": "```ruby\nnumbers = [2, 2, 2, 2, 2]\nnumbers.inject{ |res, n| res + n }\n# The output is the sum of all numbers\n# If no initial value is set for res, the first element of the array is used as the initial value of res.\n#10\n# Now set the value of res to 11\nnumbers = [2, 2, 2, 2, 2]\nnumbers.inject(11) { |res, n| res + n }\n# so 11 + 2, 13 + 2, 15 + 2, 17 + 2 and 19 + 2\n# 21\n# using symbol\nnumbers = [2, 2, 2, 2, 2]\nnumbers.inject(:+)\n# output\n# 10\n```",
+              "footer": "Use initial values and symbols\n```ruby\nnumbers = [2, 2, 2, 2, 2]\nnumbers.inject(11, :+)\n```",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "reduce",
+          "level": 3,
+          "cards": [
+            {
+              "title": "reduce",
+              "body": "```ruby\nnumbers = [2, 2, 2, 2, 2]\nnumbers.reduce(11, :+)\n# output\n# 21\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "detect",
+          "level": 3,
+          "cards": [
+            {
+              "title": "detect",
+              "body": "```ruby\nplanets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\nplanets.detect { |name| name.start_with?(\"E\") and name.end_with?(\"h\") }\n# output\n# Earth\nsalary = [399, 234, 566, 533, 233]\nsalary.detect { |s| s > 1000 }\n# output\n# nil\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "find",
+          "level": 3,
+          "cards": [
+            {
+              "title": "find",
+              "body": "```ruby\nplanets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]\nplanets.find { |name| name.start_with?(\"E\") and name.end_with?(\"h\") }\n# output\n# Earth\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "select",
+          "level": 3,
+          "cards": [
+            {
+              "title": "select",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.select { |n| n % 2 == 0 }\n# Now you have an even array\n# [2, 4, 6, 8, 10]\n# If there are no values that satisfy your logic, return an empty array\n[1, 1, 1].select { |n| n % 2 == 0 }\n# no even numbers\n# []\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "reject",
+          "level": 3,
+          "cards": [
+            {
+              "title": "reject",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.reject { |n| n % 2 == 0 }\n# Reject if the number is even, so now we have an odd array\n# [1, 3, 5, 7, 9]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "keep_if",
+          "level": 3,
+          "cards": [
+            {
+              "title": "keep_if",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.keep_if { |n| n % 2 == 0 }\n# numbers Array contains only even numbers\n# [2, 4, 6, 8, 10]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "delete_if",
+          "level": 3,
+          "cards": [
+            {
+              "title": "delete_if",
+              "body": "```ruby\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nnumbers.delete_if { |n| n % 2 == 0 }\n# numbers Array contains only odd numbers\n# [1, 3, 5, 7, 9]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "drop_while",
+          "level": 3,
+          "cards": [
+            {
+              "title": "drop_while",
+              "body": "```ruby\nnumbers = [1, 2, 3, 1, 2, 3, 0]\nnumbers.drop_while { |n| n < 3 }\n# is 3 less than 3, returns false, so delete 1, 2\n# [3, 1, 2, 3, 0]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "reverse_each",
+          "level": 3,
+          "cards": [
+            {
+              "title": "reverse_each",
+              "body": "```ruby\nwords = %w[first second third fourth fifth sixth]\nstr = \"\"\nwords.reverse_each {|word| str += \"#{word} \"}\np str #=> \"sixth fifth fourth third second first \"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "boolean enumerable method",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "boolean enumerable method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "boolean enumerable method",
+              "body": "| Name       | When to use                                                              |\n| :--------- | :----------------------------------------------------------------------- |\n| `all?`     | When you want to check if all elements meet your condition               |\n| `any?`     | When you want to check if at least one item meets your condition         |\n| `one?`     | When you want to check if one element meets your requirement             |\n| `none?`    | When you want to check if no item meets your condition, the opposite of? |\n| `empty?`   | When you want to check if an object is empty                             |\n| `include?` | When you want to check if an element exists in the object                |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "all?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "all?",
+              "body": "```ruby\n[2, 4, 6, 8, 10].all? { |num| num % 2 == 0 }\n# true\n[1, 4, 6, 8, 10].all? { |num| num % 2 == 0 }\n# false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "any?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "any?",
+              "body": "```ruby\n[1, 3, 5, 7, 10].any? { |num| num % 2 == 0 }\n# true\n[1, 3, 5, 7, 19].any? { |num| num % 2 == 0 }\n# false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "one?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "one?",
+              "body": "```ruby\n[1, 3, 2, 5, 7].one? { |num| num % 2 == 0 }\n# true\n[1, 3, 2, 5, 4].one? { |num| num % 2 == 0 }\n# false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "none?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "none?",
+              "body": "```ruby\n[1, 3, 5, 7, 9].none? { |num| num % 2 == 0 }\n# true\n[2, 3, 5, 7, 9].none? { |num| num % 2 == 0 }\n# false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "empty?",
+          "level": 3,
+          "cards": [
+            {
+              "title": "empty?",
+              "body": "```ruby\n[].empty?\n# true\n[1, 3, 5, 7, 9].empty?\n# false\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Combination method",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Combination method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Combination method",
+              "body": "- `&` Returns a new array containing each element found in array and array other_array; duplicates are omitted; use eql?\n  to compare items\n- `intersection` Returns a new array containing each element found in self and all given arrays other_arrays; duplicates\n  are omitted; use eql? to compare items\n- `+` Returns an array containing all elements of self followed by all elements of the given array\n- `-` Returns an array containing all elements of self not found in the given array\n- `union` Returns an array containing all elements of self and all elements of the given array, with duplicates removed\n- `difference` Returns an array containing all elements of self not found in any given array\n- `product` self Returns or produces all combinations of elements from self and the given array",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "&",
+          "level": 3,
+          "cards": [
+            {
+              "title": "&",
+              "body": "```ruby\n[0, 1, 2, 3] & [1, 2] # => [1, 2]\n[0, 1, 0, 1] & [0, 1] # => [0, 1]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "intersection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "intersection",
+              "body": "```ruby\n[0, 1, 2, 3].intersection([0, 1, 2], [0, 1, 3])\n# => [0, 1]\n[0, 0, 1, 1, 2, 3].intersection([0, 1, 2], [0, 1, 3])\n# => [0, 1]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "+",
+          "level": 3,
+          "cards": [
+            {
+              "title": "+",
+              "body": "```ruby\na = [0, 1] + [2, 3]\na # => [0, 1, 2, 3]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "-",
+          "level": 3,
+          "cards": [
+            {
+              "title": "-",
+              "body": "```ruby\n[0, 1, 1, 2, 1, 1, 3, 1, 1] - [1]\n# => [0, 2, 3]\n[0, 1, 2, 3] - [3, 0]\n# => [1, 2]\n[0, 1, 2] - [4]\n# => [0, 1, 2]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "union",
+          "level": 3,
+          "cards": [
+            {
+              "title": "union",
+              "body": "```ruby\n[0, 1, 2, 3].union([4, 5], [6, 7])\n# => [0, 1, 2, 3, 4, 5, 6, 7]\n[0, 1, 1].union([2, 1], [3, 1])\n# => [0, 1, 2, 3]\n[0, 1, 2, 3].union([3, 2], [1, 0])\n# => [0, 1, 2, 3]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "difference",
+          "level": 3,
+          "cards": [
+            {
+              "title": "difference",
+              "body": "```ruby\n[0, 1, 1, 2, 1, 1, 3, 1, 1].difference([1])\n# => [0, 2, 3]\n[0, 1, 2, 3].difference([3, 0], [1, 3])\n# => [2]\n[0, 1, 2].difference([4])\n# => [0, 1, 2]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "product",
+          "level": 3,
+          "cards": [
+            {
+              "title": "product",
+              "body": "```ruby\na = [0, 1, 2]\na1 = [3, 4]\np = a.product(a1)\np.size # => 6 # a.size * a1.size\np # => [[0, 3], [0, 4], [1, 3], [1, 4], [2, 3], [2, 4]]\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Loops",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "while loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "while loop",
+              "body": "```ruby\n# variable count\ncount = 4\n# using while loop\n# here conditional is count i.e. 4\nwhile count >= 1\n  # statements to be executed\n  puts \"Ruby Cheatsheet\"\n  count = count - 1\n  # while loop ends here\nend\n```",
+              "footer": "output\n```\nRuby Cheatsheet\nRuby Cheatsheet\nRuby Cheatsheet\nRuby Cheatsheet\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "for loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "for loop",
+              "body": "```ruby\n# loop using range as expression\ntext = \"Ruby Cheatsheet\"\n# using for loop with the range\nfor count in 1..5 do\n  puts text\nend\n```",
+              "footer": "output\n```\nRuby Cheatsheet\nRuby Cheatsheet\nRuby Cheatsheet\nRuby Cheatsheet\nRuby Cheatsheet\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "do..while loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "do..while loop",
+              "body": "```ruby\n# starting of do..while loop\nloop do\n  puts \"Ruby Cheatsheet\"\n  val = '7'\n  # using boolean expressions\n  if val == '7'\n    break\n  end\n  # ending of ruby do..while loop\nend\n```",
+              "footer": "output\n```\nRuby Cheatsheet\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "until loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "until loop",
+              "body": "```ruby\nvar = 7\n# here do is optional\nuntil var == 11 do\n  # code to be executed\n  puts var * 10\n  var = var + 1\n  # here loop ends\nend\n```",
+              "footer": "output\n```\n70\n80\n90\n100\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Break out of loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Break out of loop",
+              "body": "```ruby\nsalary = [399, 234, 566, 533, 233]\nsalary.each do |s|\n  break if s == 566\n  puts s\nend\n# output\n# 399\n# 234\n```",
+              "footer": "By using the `break` keyword",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "skip within loop",
+          "level": 3,
+          "cards": [
+            {
+              "title": "skip within loop",
+              "body": "```ruby\nsalary = [399, 234, 566, 533, 233]\nsalary.each do |s|\n  next if s == 533\n  puts s\nend\n# output\n# 399\n# 234\n# 566\n# 233\n```",
+              "footer": "By using next keyword",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repeat current iteration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repeat current iteration",
+              "body": "```ruby\ndata = [456, 3000]\nretry_count = 0\nstatus = \"network failure\"\nsum = 0\ndata.each do |d|\n    if retry_count == 3\n        status = \"connection established\"\n        retry_count = 0\n        redo\n    elsif status == \"network failure\" and retry_count < 5\n        puts \"network failure #{retry_count}\"\n        retry_count += 1\n        redo\n    elsif status == \"connection established\"\n        puts d\n        sum += d\n    end\nend\n# output of sum\n# 3456\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Start the cycle again",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Start the cycle again",
+              "body": "```ruby\nnumbers = [2, 2, 44, 44]\nsum = 0\nbegin\n    numbers.each do |s|\n        if rand(1..10) == 5\n            puts \"hi 5, let's do it again!\"\n            sum = 0\n            raise \"hi 5\"\n        end\n        puts s\n        sum += s\n    end\nrescue\n    retry\nend\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Classes",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Classes Example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Classes Example",
+              "body": "```ruby\nclass Person\n    # when you create a new object, it looks for a method named initialize and executes it, like a constructor in java\n    # def initialize(name, number)\n    #    @name = name\n    #    @number = number\n    # end\n    # instance variable\n    # @name\n    # class variable\n    # @@count\n    # attr_accessor acts as a getter and setter for the following instance attributes\n    attr_accessor :name, :number\n    # class variable must be initialized\n    @@count = 0\n    def self.count\n        @@count\n    end\n    def self.count=(count)\n        @@count = count\n    end\n    def initialize\n        @@count += 1\n    end\nend\n# create an instance of the Person class\np1 = Person.new\n# set attributes of the Person class\np1.name = \"Yukihiro Matsumoto\"\np1.number = 9999999999\n# get attributes of the Person class\nputs \"#{p1.name}\"\nputs \"#{p1.number}\"\nputs \"#{Person.count}\"\n# Yukihiro Matsumoto\n# 9999999999\n# 1\np2 = Person.new\np2.name = \"Yukihiro Matsumoto\"\np2.number = 9999999999\n# get attributes of the Person class\nputs \"#{p2.name}\"\nputs \"#{p2.number}\"\nputs \"#{Person.count}\"\n# Yukihiro Matsumoto\n# 9999999999\n# 2\n# set class variable\nPerson.count = 3\nputs \"#{Person.count}\"\n# 3\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Inherit a class",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Inherit a class",
+              "body": "```ruby\nclass Person\n    attr_accessor :name, :number\nend\n# Inherit methods and properties from parent class using < symbol\nclass Student < Person\n    attr_accessor :id\nend\ns = Student.new\ns.name = \"James Bond\"\ns.number = 700\ns.id = 678\nputs \"#{p.name}\"\nJames Bond\nputs \"#{p.number}\"\n700\nputs \"#{p.id}\"\n678\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check instance type",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check instance type",
+              "body": "```ruby\nclass Vehicle; end\nclass Car < Vehicle; end\nclass Audi < Car; end\ncar = Car.new\ncar.instance_of? Vehicle\nfalse\ncar.instance_of? Car\ntrue\ncar.instance_of? Audi\nfalse\na = 7\na.instance_of? Integer\ntrue\na.instance_of? Numeric\nfalse\n```",
+              "footer": "Returns true if the object is an instance of the given class and not a subclass or superclass",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Print all method names of a class",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Print all method names of a class",
+              "body": "```ruby\nputs (String.methods).sort\n# Exclude methods inherited from Object class\nputs (String.methods - Object.public_instance_methods).sort\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Check if a class has a specific method",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Check if a class has a specific method",
+              "body": "```ruby\nString.respond_to?(:prepend)\ntrue\nString.respond_to?(:append)\nfalse\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "See Also",
+      "level": 2,
+      "cards": [
+        {
+          "title": "See Also",
+          "body": "- [Ruby](https://www.ruby-lang.org/en/) _(ruby-lang.org)_\n- [Ruby Cheatsheet](https://github.com/lifeparticle/Ruby-Cheatsheet) _(github.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

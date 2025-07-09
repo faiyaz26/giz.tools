@@ -1,0 +1,393 @@
+{
+  "id": "fastapi",
+  "metadata": {
+    "title": "FastAPI",
+    "date": "2025-06-07T18:40:00.000Z",
+    "background": "bg-[#3730a3]",
+    "tags": [
+      "web",
+      "python",
+      "backend"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "A concise cheatsheet for FastAPI, a fast and modern web framework for building APIs with Python 3.7+.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Install & Run",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Install & Run",
+              "body": "```bash\npip install fastapi uvicorn\nuvicorn main:app --reload\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Hello World",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hello World",
+              "body": "```python\nfrom fastapi import FastAPI\napp = FastAPI()\n\n@app.get(\"/\")\ndef root():\n    return {\"message\": \"Hello FastAPI\"}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "CLI Run Hint",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CLI Run Hint",
+              "body": "```bash\nuvicorn main:app --reload\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Routing & Parameters {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Path Parameter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Path Parameter",
+              "body": "```python\n@app.get(\"/items/{id}\")\ndef read(id: int):\n    return {\"id\": id}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Query Parameter",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Query Parameter",
+              "body": "```python\n@app.get(\"/search\")\ndef find(q: str = \"default\"):\n    return {\"q\": q}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Optional Query",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Optional Query",
+              "body": "```python\n@app.get(\"/filter\")\ndef filter_data(limit: int = 10, active: bool = True):\n    return {\"limit\": limit, \"active\": active}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Request Body & Validation {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Using Pydantic",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using Pydantic",
+              "body": "```python\nfrom pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    price: float\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "JSON Body",
+          "level": 3,
+          "cards": [
+            {
+              "title": "JSON Body",
+              "body": "```python\n@app.post(\"/items/\")\ndef create(item: Item):\n    return item\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Response Model",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Response Model",
+              "body": "```python\n@app.post(\"/items/\", response_model=Item)\ndef create(item: Item):\n    return item\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Forms, Files, Headers {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Form Input",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Form Input",
+              "body": "```python\nfrom fastapi import Form\n\n@app.post(\"/login\")\ndef login(user: str = Form(...)):\n    return {\"user\": user}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File Upload",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File Upload",
+              "body": "```python\nfrom fastapi import UploadFile, File\n\n@app.post(\"/upload\")\ndef upload(f: UploadFile = File(...)):\n    return {\"filename\": f.filename}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Headers / Cookies",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Headers / Cookies",
+              "body": "```python\nfrom fastapi import Header, Cookie\n\n@app.get(\"/info\")\ndef info(ua: str = Header(None)):\n    return {\"UA\": ua}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Middleware & Dependency {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Middleware",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Middleware",
+              "body": "```python\n@app.middleware(\"http\")\nasync def log_req(req, call_next):\n    res = await call_next(req)\n    return res\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dependency",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dependency",
+              "body": "```python\nfrom fastapi import Depends\n\ndef auth(token: str = \"\"):\n    if token != \"xyz\": raise HTTPException(401)\n    return True\n\n@app.get(\"/secure\")\ndef secure(_: bool = Depends(auth)):\n    return {\"secure\": True}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Errors & JSON API {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "HTTP Error",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HTTP Error",
+              "body": "```python\nfrom fastapi import HTTPException\n\n@app.get(\"/err\")\ndef error():\n    raise HTTPException(404, \"Not Found\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "JSON API",
+          "level": 3,
+          "cards": [
+            {
+              "title": "JSON API",
+              "body": "```python\nfrom fastapi import FastAPI\n\n@app.get(\"/json\")\ndef get_data():\n    return {\"status\": \"ok\"}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Templates & Static {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Mount Static",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Mount Static",
+              "body": "```python\nfrom fastapi.staticfiles import StaticFiles\napp.mount(\"/static\", StaticFiles(directory=\"static\"), name=\"static\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Jinja2 Support",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Jinja2 Support",
+              "body": "```python\nfrom fastapi.templating import Jinja2Templates\ntemplates = Jinja2Templates(\"templates\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Routers & Structure {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Routers (Blueprints)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Routers (Blueprints)",
+              "body": "```python\nfrom fastapi import APIRouter\nrouter = APIRouter()\n\n@router.get(\"/\")\ndef admin():\n    return {\"admin\": True}\n\napp.include_router(router, prefix=\"/admin\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Folder Layout",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Folder Layout",
+              "body": "```bash\nproject/\n├── main.py\n├── static/\n├── templates/\n├── routers/\n│   └── admin.py\n└── models/\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Docs & Status {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Built-in Docs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Built-in Docs",
+              "body": "- Swagger: `/docs`\n- ReDoc: `/redoc`",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Custom Status Code",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom Status Code",
+              "body": "```python\nfrom fastapi import status\n\n@app.post(\"/create\", status_code=status.HTTP_201_CREATED)\ndef create():\n    return {\"msg\": \"Created\"}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

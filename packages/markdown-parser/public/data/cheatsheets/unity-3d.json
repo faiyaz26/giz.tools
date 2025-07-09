@@ -1,0 +1,352 @@
+{
+  "id": "unity-3d",
+  "metadata": {
+    "title": "Unity 3D",
+    "date": "2022-11-23T16:23:31.692Z",
+    "background": "bg-[#7c7c7c]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 50 keyboard shortcuts found in Unity 3D\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Tools",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tools",
+              "body": "| Shortcut              | Action                |\n| --------------------- | --------------------- |\n| `Q`                   | Pan                   |\n| `W`                   | Move                  |\n| `E`                   | Rotate                |\n| `R`                   | Scale                 |\n| `T`                   | Rect tool             |\n| `Z`                   | Pivot mode toggle     |\n| `X`                   | Pivot rotation toggle |\n| `V`                   | Vertex snap           |\n| `Ctrl` `(left click)` | Snap                  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Q`",
+                  "action": "Pan"
+                },
+                {
+                  "shortcut": "`W`",
+                  "action": "Move"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Rotate"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Scale"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Rect tool"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Pivot mode toggle"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Pivot rotation toggle"
+                },
+                {
+                  "shortcut": "`V`",
+                  "action": "Vertex snap"
+                },
+                {
+                  "shortcut": "`Ctrl` `(left click)`",
+                  "action": "Snap"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GameObject",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GameObject",
+              "body": "| Shortcut           | Action                                                 |\n| ------------------ | ------------------------------------------------------ |\n| `Ctrl` `Shift` `N` | New empty game object                                  |\n| `Alt` `Shift` `N`  | New empty child to selected game object                |\n| `Ctrl` `Alt` `F`   | Move to view                                           |\n| `Ctrl` `Shift` `F` | Align with view                                        |\n| `Shift` `F`        | Locks the scene view camera to the selected GameObject |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "New empty game object"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `N`",
+                  "action": "New empty child to selected game object"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `F`",
+                  "action": "Move to view"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Align with view"
+                },
+                {
+                  "shortcut": "`Shift` `F`",
+                  "action": "Locks the scene view camera to the selected GameObject"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Window",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Window",
+              "body": "| Shortcut           | Action          |\n| ------------------ | --------------- |\n| `Ctrl` `1`         | Scene           |\n| `Ctrl` `2`         | Game            |\n| `Ctrl` `3`         | Inspector       |\n| `Ctrl` `4`         | Hierarchy       |\n| `Ctrl` `5`         | Project         |\n| `Ctrl` `6`         | Animation       |\n| `Ctrl` `7`         | Profiler        |\n| `Ctrl` `9`         | Asset store     |\n| `Ctrl` `0`         | Version control |\n| `Ctrl` `Shift` `C` | Console         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `1`",
+                  "action": "Scene"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Game"
+                },
+                {
+                  "shortcut": "`Ctrl` `3`",
+                  "action": "Inspector"
+                },
+                {
+                  "shortcut": "`Ctrl` `4`",
+                  "action": "Hierarchy"
+                },
+                {
+                  "shortcut": "`Ctrl` `5`",
+                  "action": "Project"
+                },
+                {
+                  "shortcut": "`Ctrl` `6`",
+                  "action": "Animation"
+                },
+                {
+                  "shortcut": "`Ctrl` `7`",
+                  "action": "Profiler"
+                },
+                {
+                  "shortcut": "`Ctrl` `9`",
+                  "action": "Asset store"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Version control"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Console"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Edit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Edit",
+              "body": "| Shortcut           | Action                 |\n| ------------------ | ---------------------- |\n| `Ctrl` `Z`         | Undo                   |\n| `Ctrl` `Shift` `Z` | Redo (MacOS)           |\n| `Ctrl` `Y`         | Redo (Windows)         |\n| `Ctrl` `X`         | Cut                    |\n| `Ctrl` `C`         | Copy                   |\n| `Ctrl` `V`         | Paste                  |\n| `Ctrl` `D`         | Duplicate              |\n| `Shift` `Del`      | Delete                 |\n| `F`                | Frame center selection |\n| `Ctrl` `F`         | Find                   |\n| `Ctrl` `A`         | Select all             |\n| `Ctrl` `P`         | Play                   |\n| `Ctrl` `Shift` `P` | Pause                  |\n| `Ctrl` `Alt` `P`   | Step                   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo (MacOS)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Redo (Windows)"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Duplicate"
+                },
+                {
+                  "shortcut": "`Shift` `Del`",
+                  "action": "Delete"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Frame center selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Play"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Pause"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `P`",
+                  "action": "Step"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selection",
+              "body": "| Shortcut             | Action             |\n| -------------------- | ------------------ |\n| `Ctrl` `Shift` `1-9` | Load selection 1-9 |\n| `Ctrl` `Alt` `1-9`   | Save selection 1-9 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `1-9`",
+                  "action": "Load selection 1-9"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `1-9`",
+                  "action": "Save selection 1-9"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Assets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Assets",
+              "body": "| Shortcut   | Action  |\n| ---------- | ------- |\n| `Ctrl` `R` | Refresh |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `R`",
+                  "action": "Refresh"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Animation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Animation",
+              "body": "| Shortcut    | Action            |\n| ----------- | ----------------- |\n| `Shift` `,` | First keyframe    |\n| `Shift` `K` | Key modified      |\n| `K`         | Key selected      |\n| `Shift` `.` | Last keyframe     |\n| `.`         | Next frame        |\n| `Alt` `.`   | Next keyframe     |\n| `Space`     | Play animation    |\n| `,`         | Previous frame    |\n| `Alt` `,`   | Previous keyframe |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `,`",
+                  "action": "First keyframe"
+                },
+                {
+                  "shortcut": "`Shift` `K`",
+                  "action": "Key modified"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Key selected"
+                },
+                {
+                  "shortcut": "`Shift` `.`",
+                  "action": "Last keyframe"
+                },
+                {
+                  "shortcut": "`.`",
+                  "action": "Next frame"
+                },
+                {
+                  "shortcut": "`Alt` `.`",
+                  "action": "Next keyframe"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Play animation"
+                },
+                {
+                  "shortcut": "`,`",
+                  "action": "Previous frame"
+                },
+                {
+                  "shortcut": "`Alt` `,`",
+                  "action": "Previous keyframe"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Unity 3D](https://docs.unity3d.com/2018.1/Documentation/Manual/UnityHotkeys.html)\n  _(docs.unity3d.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "id": "obsidian",
+  "metadata": {
+    "title": "Obsidian",
+    "date": "2022-11-23T16:23:31.700Z",
+    "background": "bg-[#463793]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 17 keyboard shortcuts found in the Obsidian knowledge base app.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Default Shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Default Shortcuts",
+              "body": "| Shortcut             | Action                      |\n| -------------------- | --------------------------- |\n| `Ctrl` `S`           | Save a file in the editor   |\n| `Ctrl` `N`           | Create a new note           |\n| `Ctrl` `P`           | Open the command palette    |\n| `Ctrl` `O`           | Open the quick switcher     |\n| `Ctrl` `Shift` `F`   | Search in all files         |\n| `Ctrl` `G`           | Open the graph view         |\n| `Ctrl` `Alt` `Left`  | Navigate backwards          |\n| `Ctrl` `Alt` `Right` | Navigate forwards           |\n| `Ctrl` `F`           | Search the current file     |\n| `Ctrl` `E`           | Toggle edit or preview mode |\n| `Ctrl` `,`           | Open settings               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save a file in the editor"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Create a new note"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Open the command palette"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open the quick switcher"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Search in all files"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Open the graph view"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Left`",
+                  "action": "Navigate backwards"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Right`",
+                  "action": "Navigate forwards"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Search the current file"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Toggle edit or preview mode"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "Open settings"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editing",
+              "body": "| Shortcut      | Action                          |\n| ------------- | ------------------------------- |\n| `Ctrl` `B`    | Bold selected text              |\n| `Ctrl` `I`    | Italic selected text            |\n| `Ctrl` `K`    | Insert an external link         |\n| `Ctrl` `]`    | Indent                          |\n| `Ctrl` `[`    | Unindent                        |\n| `Alt` `Enter` | Jump into the selected backlink |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bold selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Italic selected text"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Insert an external link"
+                },
+                {
+                  "shortcut": "`Ctrl` `]`",
+                  "action": "Indent"
+                },
+                {
+                  "shortcut": "`Ctrl` `[`",
+                  "action": "Unindent"
+                },
+                {
+                  "shortcut": "`Alt` `Enter`",
+                  "action": "Jump into the selected backlink"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Obsidian](https://help.obsidian.md/How+to/Keyboard+shortcuts) _(help.obsidian.md)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

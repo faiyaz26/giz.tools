@@ -1,0 +1,364 @@
+{
+  "id": "webflow",
+  "metadata": {
+    "title": "Webflow",
+    "date": "2022-11-23T16:23:31.703Z",
+    "background": "bg-[#4450ee]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 41 keyboard shortcuts found in Webflow\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "| Shortcut           | Action                   |\n| ------------------ | ------------------------ |\n| `Shift` `/`        | Show shortcut cheatsheet |\n| `Ctrl` `Shift` `S` | Save as a snapshot       |\n| `Esc`              | Deselect or abort        |\n| `Del`              | Delete element           |\n| `Shift` `P`        | Show publish dialog      |\n| `Shift` `E`        | Show export code dialog  |\n| `Enter`            | Edit element             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `/`",
+                  "action": "Show shortcut cheatsheet"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Save as a snapshot"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Deselect or abort"
+                },
+                {
+                  "shortcut": "`Del`",
+                  "action": "Delete element"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Show publish dialog"
+                },
+                {
+                  "shortcut": "`Shift` `E`",
+                  "action": "Show export code dialog"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Edit element"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "View",
+          "level": 3,
+          "cards": [
+            {
+              "title": "View",
+              "body": "| Shortcut           | Action             |\n| ------------------ | ------------------ |\n| `Ctrl` `Shift` `P` | Preview mode       |\n| `Ctrl` `Shift` `G` | Guide overlay      |\n| `Ctrl` `Shift` `E` | Show element edges |\n| `Ctrl` `Shift` `X` | X-ray mode         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Preview mode"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Guide overlay"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Show element edges"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "X-ray mode"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Left-hand Toolbar",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Left-hand Toolbar",
+              "body": "| Shortcut           | Action                         |\n| ------------------ | ------------------------------ |\n| `A`                | Show add panel                 |\n| `Z`                | Show navigator tab             |\n| `P`                | Show pages panel               |\n| `Shift` `A`        | Show symbols panel             |\n| `Ctrl` `Shift` `A` | Make selected element a symbol |\n| `J`                | Show asset manager             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`A`",
+                  "action": "Show add panel"
+                },
+                {
+                  "shortcut": "`Z`",
+                  "action": "Show navigator tab"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Show pages panel"
+                },
+                {
+                  "shortcut": "`Shift` `A`",
+                  "action": "Show symbols panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Make selected element a symbol"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Show asset manager"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Right-hand Tabs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Right-hand Tabs",
+              "body": "| Shortcut | Action                 |\n| -------- | ---------------------- |\n| `S`      | Show style tab         |\n| `D`      | Show settings tab      |\n| `G`      | Show style manager tab |\n| `H`      | Show interactions tab  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`S`",
+                  "action": "Show style tab"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Show settings tab"
+                },
+                {
+                  "shortcut": "`G`",
+                  "action": "Show style manager tab"
+                },
+                {
+                  "shortcut": "`H`",
+                  "action": "Show interactions tab"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Copy/Paste",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Copy/Paste",
+              "body": "| Shortcut       | Action    |\n| -------------- | --------- |\n| `Ctrl` `C`     | Copy      |\n| `Ctrl` `X`     | Cut       |\n| `Ctrl` `V`     | Paste     |\n| `Alt` `(drag)` | Duplicate |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Alt` `(drag)`",
+                  "action": "Duplicate"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Undo/Redo",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Undo/Redo",
+              "body": "| Shortcut           | Action |\n| ------------------ | ------ |\n| `Ctrl` `Z`         | Undo   |\n| `Ctrl` `Shift` `Z` | Redo   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Z`",
+                  "action": "Redo"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Device View",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Device View",
+              "body": "| Shortcut | Action            |\n| -------- | ----------------- |\n| `1`      | Desktop           |\n| `2`      | Tablet            |\n| `3`      | Phone (landscape) |\n| `4`      | Phone (portrait)  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`1`",
+                  "action": "Desktop"
+                },
+                {
+                  "shortcut": "`2`",
+                  "action": "Tablet"
+                },
+                {
+                  "shortcut": "`3`",
+                  "action": "Phone (landscape)"
+                },
+                {
+                  "shortcut": "`4`",
+                  "action": "Phone (portrait)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Style Panel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Style Panel",
+              "body": "| Shortcut               | Action                                                |\n| ---------------------- | ----------------------------------------------------- |\n| `Shift` `(drag)`       | Margin or padding (on all sides)                      |\n| `Alt` `(drag)`         | Margin or padding (top and bottom, or left and right) |\n| `Ctrl` `Enter`         | Add class to selected element                         |\n| `Ctrl` `Shift` `Enter` | Rename last class on selected element                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `(drag)`",
+                  "action": "Margin or padding (on all sides)"
+                },
+                {
+                  "shortcut": "`Alt` `(drag)`",
+                  "action": "Margin or padding (top and bottom, or left and right)"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Add class to selected element"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Enter`",
+                  "action": "Rename last class on selected element"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Find",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Find",
+              "body": "| Shortcut   | Action     |\n| ---------- | ---------- |\n| `Ctrl` `K` | Quick find |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Quick find"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Other",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Other",
+              "body": "| Shortcut           | Action                                   |\n| ------------------ | ---------------------------------------- |\n| `Alt` `(click)`    | Expand or collapse panel sections        |\n| `Up/Down`          | Select parent or child element           |\n| `Left/Right`       | Select sibling element                   |\n| `Alt` `Left/Right` | Select next or previous element          |\n| `Ctrl` `Shift` `L` | Toggle collaborators on selected element |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `(click)`",
+                  "action": "Expand or collapse panel sections"
+                },
+                {
+                  "shortcut": "`Up/Down`",
+                  "action": "Select parent or child element"
+                },
+                {
+                  "shortcut": "`Left/Right`",
+                  "action": "Select sibling element"
+                },
+                {
+                  "shortcut": "`Alt` `Left/Right`",
+                  "action": "Select next or previous element"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Toggle collaborators on selected element"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Webflow](https://university.webflow.com/article/keyboard-shortcuts-in-the-webflow-designer)\n  _(university.webflow.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

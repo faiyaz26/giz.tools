@@ -1,0 +1,83 @@
+{
+  "id": "color-picker",
+  "metadata": {},
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Color Basics",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Color Basics",
+              "body": "| **Category**                     | **Description**                                                                                                                                                                                                                                                                                |\r\n|:---------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\r\n| **Color Models**                 | **RGB**: Red, Green, Blue – additive model used in screens. <br> **HEX**: Hexadecimal color codes, e.g., #FFFFFF. <br> **HSL**: Hue, Saturation, Lightness – intuitive for color adjustments. <br> **HSV**: Hue, Saturation, Value – similar to HSL but with different brightness handling.    |\r\n| **Color Terminology**            | **Saturation**: Intensity or purity of a color. <br> **Hue**: The color type (e.g., red, blue). <br> **Lightness**: Brightness or darkness of a color. <br> **Opacity**: Transparency level of a color, often defined as alpha in RGBA.                                                        |\r\n| **Color Representation Formats** | **HEX**: `#RRGGBB` or `#RRGGBBAA` (with alpha). <br> **RGB**: `rgb(255, 255, 255)` <br> **RGBA**: `rgba(255, 255, 255, 0.5)` <br> **HSL**: `hsl(120, 100%, 50%)` <br> **HSLA**: `hsla(120, 100%, 50%, 0.5)`                                                                                    |",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Main Frameworks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Main Frameworks",
+              "body": "| **Framework**    | **Color Notation / Syntax**                                                                                                                                                     | **Description**                                             | **Documentation Link**                                                                     |\r\n|:-----------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------|:-------------------------------------------------------------------------------------------|\r\n| **CSS**          | `color: red;` <br> `color: #ff0000;` <br> `color: rgb(255, 0, 0);` <br> `color: rgba(255, 0, 0, 0.5);` <br> `color: hsl(0, 100%, 50%);` <br> `color: hsla(0, 100%, 50%, 0.5);`  | Standard CSS color properties and formats.                  | [CSS Color Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/color)          |\r\n| **SASS/SCSS**    | `$color: #ff0000;` <br> `color: $color;`                                                                                                                                        | Variables for colors, can use same formats as CSS.          | [SASS Color Documentation](https://sass-lang.com/documentation/values/colors)              |\r\n| **Tailwind CSS** | `class=\"bg-red-500\"` <br> `class=\"text-green-300\"`                                                                                                                              | Utility classes with predefined color shades.               | [Tailwind CSS Colors](https://tailwindcss.com/docs/customizing-colors)                     |\r\n| **Bootstrap**    | `class=\"text-primary\"` <br> `class=\"bg-success\"`                                                                                                                                | Named color classes for quick styling.                      | [Bootstrap Colors](https://getbootstrap.com/docs/5.0/getting-started/introduction/#colors) |\r\n| **Material UI**  | `style={{ color: 'primary' }}` or theme palette                                                                                                                                 | Uses theme palette, can override with specific color codes. | [Material UI Color](https://mui.com/customization/color/)                                  |",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Color Palette",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Tailwind Palette",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tailwind Palette",
+              "body": "<widget name=\"color-palette-tailwind\"/>",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Gradient CSS",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Gradient Maker",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Gradient Maker",
+              "body": "<widget name=\"gradient-maker\"/>\r\n\r\n\r\n| Parameter     | Description                       | Example                                        |\r\n|:--------------|:----------------------------------|:-----------------------------------------------|\r\n| **to right**  | Gradient goes from left to right  | `linear-gradient(to right, #ff7e5f, #feb47b)`  |\r\n| **to left**   | Gradient goes from right to left  | `linear-gradient(to left, #ff7e5f, #feb47b)`   |\r\n| **to bottom** | Gradient goes from top to bottom  | `linear-gradient(to bottom, #ff7e5f, #feb47b)` |\r\n| **to top**    | Gradient goes from bottom to top  | `linear-gradient(to top, #ff7e5f, #feb47b)`    |\r\n| **deg**       | Specify an angle in degrees       | `linear-gradient(45deg, ...)`                  |",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

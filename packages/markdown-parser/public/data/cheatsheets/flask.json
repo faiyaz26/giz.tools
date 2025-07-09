@@ -1,0 +1,407 @@
+{
+  "id": "flask",
+  "metadata": {
+    "title": "Flask",
+    "date": "2025-06-07T19:05:00.000Z",
+    "background": "bg-[#3598db]",
+    "tags": [
+      "web",
+      "python",
+      "backend"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "A concise cheatsheet for Flask, a lightweight WSGI web application framework for Python.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Install Flask",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Install Flask",
+              "body": "```bash\npip install flask\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Hello World",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Hello World",
+              "body": "```python\nfrom flask import Flask\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef hello():\n    return \"Hello, World!\"\n\napp.run(debug=True)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Flask CLI",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Flask CLI",
+              "body": "```bash\nexport FLASK_APP=app.py\nflask run\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "App Config & Environment {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "App Object",
+          "level": 3,
+          "cards": [
+            {
+              "title": "App Object",
+              "body": "```python\nfrom flask import Flask\napp = Flask(__name__)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Configuration",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Configuration",
+              "body": "```python\napp.config[\"DEBUG\"] = True\napp.config.from_pyfile(\"config.py\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Common Config Keys",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Common Config Keys",
+              "body": "| Key | Description |\n| | -- |\n| `DEBUG` | Enable debug mode |\n| `SECRET_KEY` | For sessions/cookies |\n| `ENV` | Set to 'development' |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Routing & Methods {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic Route",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Route",
+              "body": "```python\n@app.route(\"/\")\ndef home():\n    return \"Home\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Methods",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Methods",
+              "body": "```python\n@app.route(\"/login\", methods=[\"GET\", \"POST\"])\ndef login():\n    return \"Login\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Dynamic Routes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Dynamic Routes",
+              "body": "```python\n@app.route(\"/user/<name>\")\ndef user(name):\n    return f\"User: {name}\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Request & Response {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Request Object",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Request Object",
+              "body": "```python\nfrom flask import request\n\n@app.route(\"/data\", methods=[\"POST\"])\ndef data():\n    return request.json\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Request Attributes",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Request Attributes",
+              "body": "- `request.args`: Query params\n- `request.form`: Form data\n- `request.json`: JSON body",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Custom Response",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Custom Response",
+              "body": "```python\nfrom flask import make_response\n\n@app.route(\"/custom\")\ndef custom():\n    res = make_response(\"Custom\", 200)\n    res.headers[\"X-Test\"] = \"True\"\n    return res\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Templates & Static {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Render Template",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Render Template",
+              "body": "```python\nfrom flask import render_template\n\n@app.route(\"/\")\ndef page():\n    return render_template(\"index.html\", name=\"Flask\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Jinja Syntax",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Jinja Syntax",
+              "body": "```html\n<h1>Hello {{ name }}</h1>\n{% if name %}\n<p>Hi!</p>\n{% endif %}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Static Files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Static Files",
+              "body": "```html\n<link href=\"{{ url_for('static', filename='style.css') }}\" />\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Sessions & Cookies {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Using Sessions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Using Sessions",
+              "body": "```python\nfrom flask import session\napp.secret_key = \"secret\"\n\n@app.route(\"/login\")\ndef login():\n    session[\"user\"] = \"admin\"\n    return \"Logged in\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Access Cookies",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Access Cookies",
+              "body": "```python\nfrom flask import request, make_response\n\n@app.route(\"/cookie\")\ndef cookie():\n    resp = make_response(\"Set cookie\")\n    resp.set_cookie(\"site\", \"Flask\")\n    return resp\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "JSON API & Middleware {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "JSON Response",
+          "level": 3,
+          "cards": [
+            {
+              "title": "JSON Response",
+              "body": "```python\nfrom flask import jsonify\n\n@app.route(\"/api\")\ndef api():\n    return jsonify(message=\"Hello\")\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Middleware",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Middleware",
+              "body": "```python\n@app.before_request\ndef before():\n    print(\"Before\")\n\n@app.after_request\ndef after(res):\n    print(\"After\")\n    return res\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Error Handling & Blueprints {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Error Handling",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Error Handling",
+              "body": "```python\n@app.errorhandler(404)\ndef not_found(e):\n    return \"Page not found\", 404\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Blueprint",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Blueprint",
+              "body": "```python\nfrom flask import Blueprint\n\nadmin = Blueprint(\"admin\", __name__, url_prefix=\"/admin\")\n\n@admin.route(\"/\")\ndef dash():\n    return \"Admin\"\n\napp.register_blueprint(admin)\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Project Structure {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "File Structure",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File Structure",
+              "body": "```bash\nproject/\n├── app.py\n├── templates/\n│   └── index.html\n├── static/\n│   └── style.css\n└── config.py\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Run Server",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Run Server",
+              "body": "```bash\npython app.py\n# or using CLI\nexport FLASK_APP=app.py\nflask run\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "id": "telegram",
+  "metadata": {
+    "title": "Telegram Desktop",
+    "date": "2022-11-23T16:23:31.700Z",
+    "background": "bg-[#50a1dc]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 37 keyboard shortcuts found on the Telegram Desktop app\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Chats",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Chats",
+              "body": "| Shortcut             | Action                        |\n| -------------------- | ----------------------------- |\n| `Up/Down`            | In-Chat Navigation            |\n| `Up/Down/Left/Right` | Suggested Stickers Navigation |\n| `Left/Right`         | Suggested Emojis Navigation   |\n| `Ctrl` `Tab`         | Move to the Chat Below        |\n| `Ctrl` `Shift` `Tab` | Move to the Chat Above        |\n| `Esc`                | Exit                          |\n| `Esc`                | Go Back                       |\n| `Esc`                | Cancel Current Action         |\n| `Ctrl` `O`           | Send File                     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Up/Down`",
+                  "action": "In-Chat Navigation"
+                },
+                {
+                  "shortcut": "`Up/Down/Left/Right`",
+                  "action": "Suggested Stickers Navigation"
+                },
+                {
+                  "shortcut": "`Left/Right`",
+                  "action": "Suggested Emojis Navigation"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Move to the Chat Below"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Tab`",
+                  "action": "Move to the Chat Above"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Exit"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Go Back"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Cancel Current Action"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Send File"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Messages",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Messages",
+              "body": "| Shortcut              | Action                              |\n| --------------------- | ----------------------------------- |\n| `Ctrl` `Up/Down`      | Reply to a Message                  |\n| `Ctrl` `Down`         | Cancel Reply                        |\n| `Up`                  | Edit Last Message Sent              |\n| `Del`                 | Delete Currently Selected Message   |\n| `Ctrl` `E`            | Edit Media                          |\n| `Ctrl` `(click gif)`  | Send GIF Directly                   |\n| `Ctrl` `(click name)` | Open Bot Profile via Inline Message |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Up/Down`",
+                  "action": "Reply to a Message"
+                },
+                {
+                  "shortcut": "`Ctrl` `Down`",
+                  "action": "Cancel Reply"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Edit Last Message Sent"
+                },
+                {
+                  "shortcut": "`Del`",
+                  "action": "Delete Currently Selected Message"
+                },
+                {
+                  "shortcut": "`Ctrl` `E`",
+                  "action": "Edit Media"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click gif)`",
+                  "action": "Send GIF Directly"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click name)`",
+                  "action": "Open Bot Profile via Inline Message"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Search",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Search",
+              "body": "| Shortcut   | Action               |\n| ---------- | -------------------- |\n| `Ctrl` `F` | Search Selected Chat |\n| `Esc`      | Exit Search          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Search Selected Chat"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Exit Search"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "QuickShare Panel",
+          "level": 3,
+          "cards": [
+            {
+              "title": "QuickShare Panel",
+              "body": "| Shortcut       | Action       |\n| -------------- | ------------ |\n| `Up/Down`      | Navigate     |\n| `Enter`        | Select Chat  |\n| `Backspace`    | Remove Chat  |\n| `Ctrl` `Enter` | Send Message |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Up/Down`",
+                  "action": "Navigate"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Select Chat"
+                },
+                {
+                  "shortcut": "`Backspace`",
+                  "action": "Remove Chat"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Send Message"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Jump to",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Jump to",
+              "body": "| Shortcut              | Action                          |\n| --------------------- | ------------------------------- |\n| `Alt` `Enter`         | Jump to the bottom of the chat  |\n| `Alt` `Enter`         | Scroll the chat list to the top |\n| `Ctrl` `0`            | Jump to your saved messages     |\n| `Ctrl` `1-5`          | Jump between folders            |\n| `Ctrl` `Shift` `Down` | Jump to the next folder         |\n| `Ctrl` `Shift` `Up`   | Jump to the previous folder     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `Enter`",
+                  "action": "Jump to the bottom of the chat"
+                },
+                {
+                  "shortcut": "`Alt` `Enter`",
+                  "action": "Scroll the chat list to the top"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Jump to your saved messages"
+                },
+                {
+                  "shortcut": "`Ctrl` `1-5`",
+                  "action": "Jump between folders"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Down`",
+                  "action": "Jump to the next folder"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Up`",
+                  "action": "Jump to the previous folder"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Window Related",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Window Related",
+              "body": "| Shortcut   | Action                  |\n| ---------- | ----------------------- |\n| `Ctrl` `W` | Minimize to System Tray |\n| `Ctrl` `Q` | Quit Telegram           |\n| `Ctrl` `L` | Lock Telegram           |\n| `Ctrl` `M` | Minimize Telegram       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Minimize to System Tray"
+                },
+                {
+                  "shortcut": "`Ctrl` `Q`",
+                  "action": "Quit Telegram"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Lock Telegram"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Minimize Telegram"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Selected Text",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Selected Text",
+              "body": "| Shortcut           | Action            |\n| ------------------ | ----------------- |\n| `Ctrl` `B`         | Bold              |\n| `Ctrl` `I`         | Italic            |\n| `Ctrl` `K`         | Create Link       |\n| `Ctrl` `U`         | Underline         |\n| `Ctrl` `Shift` `M` | Monospace         |\n| `Ctrl` `Shift` `N` | Null / Plain Text |\n| `Ctrl` `Shift` `X` | Strikethrough     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Italic"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Create Link"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Underline"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Monospace"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "Null / Plain Text"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "Strikethrough"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Telegram Desktop](https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts)\n  _(github.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

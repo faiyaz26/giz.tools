@@ -1,0 +1,420 @@
+{
+  "id": "origami",
+  "metadata": {
+    "title": "Origami Studio",
+    "date": "2022-11-23T16:23:31.695Z",
+    "background": "bg-[#4a8eee]",
+    "label": "Mac",
+    "tags": [
+      null,
+      "mac"
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 71 keyboard shortcuts found in Origami Studio. This application is MacOS-only.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "| Shortcut      | Action        |\n| ------------- | ------------- |\n| `Opt` `Enter` | Insert patch  |\n| `Cmd` `Enter` | Insert layer  |\n| `Cmd` `/`     | Documentation |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Opt` `Enter`",
+                  "action": "Insert patch"
+                },
+                {
+                  "shortcut": "`Cmd` `Enter`",
+                  "action": "Insert layer"
+                },
+                {
+                  "shortcut": "`Cmd` `/`",
+                  "action": "Documentation"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Patches",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Patches",
+              "body": "| Shortcut    | Action               |\n| ----------- | -------------------- |\n| `I`         | Interaction          |\n| `S`         | Switch               |\n| `A`         | Pop animation        |\n| `C`         | Classic animation    |\n| `T`         | Transition           |\n| `K`         | Keyboard             |\n| `D`         | Delay                |\n| `Shift` `I` | Option switch        |\n| `O`         | Option picker        |\n| `X`         | Splitter             |\n| `W`         | Wireless broadcaster |\n| `Shift` `W` | Wireless receiver    |\n| `U`         | Pulse                |\n| `+`         | Add                  |\n| `-`         | Minus                |\n| `*`         | Multiply             |\n| `/`         | Divide               |\n| `%`         | Modulus or remainder |\n| `Shift` `A` | AND logic            |\n| `Shift` `O` | OR logic             |\n| `Shift` `N` | NOT logic            |\n| `E`         | Equals               |\n| `>`         | Greater than         |\n| `<`         | Less than            |\n| `Shift` `R` | Progress             |\n| `R`         | Reverse progress     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-3",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`I`",
+                  "action": "Interaction"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Switch"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Pop animation"
+                },
+                {
+                  "shortcut": "`C`",
+                  "action": "Classic animation"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Transition"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Keyboard"
+                },
+                {
+                  "shortcut": "`D`",
+                  "action": "Delay"
+                },
+                {
+                  "shortcut": "`Shift` `I`",
+                  "action": "Option switch"
+                },
+                {
+                  "shortcut": "`O`",
+                  "action": "Option picker"
+                },
+                {
+                  "shortcut": "`X`",
+                  "action": "Splitter"
+                },
+                {
+                  "shortcut": "`W`",
+                  "action": "Wireless broadcaster"
+                },
+                {
+                  "shortcut": "`Shift` `W`",
+                  "action": "Wireless receiver"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Pulse"
+                },
+                {
+                  "shortcut": "`+`",
+                  "action": "Add"
+                },
+                {
+                  "shortcut": "`-`",
+                  "action": "Minus"
+                },
+                {
+                  "shortcut": "`*`",
+                  "action": "Multiply"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Divide"
+                },
+                {
+                  "shortcut": "`%`",
+                  "action": "Modulus or remainder"
+                },
+                {
+                  "shortcut": "`Shift` `A`",
+                  "action": "AND logic"
+                },
+                {
+                  "shortcut": "`Shift` `O`",
+                  "action": "OR logic"
+                },
+                {
+                  "shortcut": "`Shift` `N`",
+                  "action": "NOT logic"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Equals"
+                },
+                {
+                  "shortcut": "`>`",
+                  "action": "Greater than"
+                },
+                {
+                  "shortcut": "`<`",
+                  "action": "Less than"
+                },
+                {
+                  "shortcut": "`Shift` `R`",
+                  "action": "Progress"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Reverse progress"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Organizing Patches",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Organizing Patches",
+              "body": "| Shortcut                | Action                               |\n| ----------------------- | ------------------------------------ |\n| `Shift` `Enter`         | Rename patch                         |\n| `Cmd` `[`               | Align patches left                   |\n| `Cmd` `]`               | Align patches right                  |\n| `Cmd` `Shift` `[`       | Align patches top                    |\n| `Cmd` `Shift` `]`       | Align patches bottom                 |\n| `Opt` `Ctrl` `C`        | Insert comment around patches        |\n| `Cmd` `Ctrl` `G`        | Create patch component               |\n| `Opt` `P`               | Publish input or output port         |\n| `Opt` `Down`            | Enter patch component                |\n| `Opt` `Up`              | Exit patch component                 |\n| `Cmd` `Shift` `I`       | Patch info                           |\n| `Cmd` `Opt` `L`         | Add patch component to user library  |\n| `Cmd` `Opt` `Shift` `L` | Add patch component to other library |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Rename patch"
+                },
+                {
+                  "shortcut": "`Cmd` `[`",
+                  "action": "Align patches left"
+                },
+                {
+                  "shortcut": "`Cmd` `]`",
+                  "action": "Align patches right"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `[`",
+                  "action": "Align patches top"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `]`",
+                  "action": "Align patches bottom"
+                },
+                {
+                  "shortcut": "`Opt` `Ctrl` `C`",
+                  "action": "Insert comment around patches"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `G`",
+                  "action": "Create patch component"
+                },
+                {
+                  "shortcut": "`Opt` `P`",
+                  "action": "Publish input or output port"
+                },
+                {
+                  "shortcut": "`Opt` `Down`",
+                  "action": "Enter patch component"
+                },
+                {
+                  "shortcut": "`Opt` `Up`",
+                  "action": "Exit patch component"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `I`",
+                  "action": "Patch info"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `L`",
+                  "action": "Add patch component to user library"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Shift` `L`",
+                  "action": "Add patch component to other library"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Layers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Layers",
+              "body": "| Shortcut                   | Action                     |\n| -------------------------- | -------------------------- |\n| `Shift` `Enter`            | Rename layer               |\n| `Cmd` `Shift` `H`          | Hide or show layer         |\n| `Cmd` `Shift` `L`          | Lock or unlock layer       |\n| `Cmd` `Opt` `Up`           | Bring forward              |\n| `Cmd` `Opt` `Down`         | Send backwards             |\n| `Cmd` `Opt` `Shift` `Up`   | Bring to front             |\n| `Cmd` `Opt` `Shift` `Down` | Send to back               |\n| `Cmd` `Opt` `M`            | Mask layer                 |\n| `Cmd` `Opt` `Shift` `M`    | Add to mask                |\n| `Cmd` `G`                  | Group layers               |\n| `Cmd` `Shift` `G`          | Ungroup layers             |\n| `Cmd` `Ctrl` `G`           | Create layer component     |\n| `Opt` `Down`               | Enter component            |\n| `Opt` `Up`                 | Exit component             |\n| `Cmd` `Shift` `I`          | Layer info                 |\n| `Cmd` `Opt` `L`            | Add layer to user library  |\n| `Cmd` `Opt` `Shift` `L`    | Add layer to other library |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Rename layer"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `H`",
+                  "action": "Hide or show layer"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `L`",
+                  "action": "Lock or unlock layer"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Up`",
+                  "action": "Bring forward"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Down`",
+                  "action": "Send backwards"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Shift` `Up`",
+                  "action": "Bring to front"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Shift` `Down`",
+                  "action": "Send to back"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `M`",
+                  "action": "Mask layer"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Shift` `M`",
+                  "action": "Add to mask"
+                },
+                {
+                  "shortcut": "`Cmd` `G`",
+                  "action": "Group layers"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `G`",
+                  "action": "Ungroup layers"
+                },
+                {
+                  "shortcut": "`Cmd` `Ctrl` `G`",
+                  "action": "Create layer component"
+                },
+                {
+                  "shortcut": "`Opt` `Down`",
+                  "action": "Enter component"
+                },
+                {
+                  "shortcut": "`Opt` `Up`",
+                  "action": "Exit component"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `I`",
+                  "action": "Layer info"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `L`",
+                  "action": "Add layer to user library"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `Shift` `L`",
+                  "action": "Add layer to other library"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Viewer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Viewer",
+              "body": "| Shortcut          | Action            |\n| ----------------- | ----------------- |\n| `Cmd` `R`         | Restart prototype |\n| `Opt` `D`         | Toggle device     |\n| `Opt` `H`         | Toggle hand       |\n| `Cmd` `Opt` `F`   | Mini viewer       |\n| `Cmd` `Shift` `F` | Fullscreen viewer |\n| `Cmd` `Opt` `0`   | 1:1 viewer        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Cmd` `R`",
+                  "action": "Restart prototype"
+                },
+                {
+                  "shortcut": "`Opt` `D`",
+                  "action": "Toggle device"
+                },
+                {
+                  "shortcut": "`Opt` `H`",
+                  "action": "Toggle hand"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `F`",
+                  "action": "Mini viewer"
+                },
+                {
+                  "shortcut": "`Cmd` `Shift` `F`",
+                  "action": "Fullscreen viewer"
+                },
+                {
+                  "shortcut": "`Cmd` `Opt` `0`",
+                  "action": "1:1 viewer"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Number Inputs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Number Inputs",
+              "body": "| Shortcut       | Action                 |\n| -------------- | ---------------------- |\n| `Up`           | Increase number by one |\n| `Down`         | Decrease number by one |\n| `Shift` `Up`   | Increase number by 10  |\n| `Shift` `Down` | Decrease number by 10  |\n| `Opt` `Up`     | Increase number by 0.1 |\n| `Opt` `Down`   | Decrease number by 0.1 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Up`",
+                  "action": "Increase number by one"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Decrease number by one"
+                },
+                {
+                  "shortcut": "`Shift` `Up`",
+                  "action": "Increase number by 10"
+                },
+                {
+                  "shortcut": "`Shift` `Down`",
+                  "action": "Decrease number by 10"
+                },
+                {
+                  "shortcut": "`Opt` `Up`",
+                  "action": "Increase number by 0.1"
+                },
+                {
+                  "shortcut": "`Opt` `Down`",
+                  "action": "Decrease number by 0.1"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Origami Studio](https://origami.design/documentation/workflow/KeyboardShortcuts.html)\n  _(origami.design)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

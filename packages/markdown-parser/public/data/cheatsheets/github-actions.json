@@ -1,0 +1,267 @@
+{
+  "id": "github-actions",
+  "metadata": {
+    "title": "Github Actions",
+    "date": "2023-11-28T00:00:00.000Z",
+    "icon": null,
+    "background": "bg-[#808080]",
+    "tags": [
+      "Github",
+      "CICD"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "A quick reference to Github Actions for the automation of software workflows, allowing developers to build, test, and deploy code right from their GitHub repositories.",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Introduction",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Introduction",
+              "body": "[GitHub Actions](https://docs.github.com/en/actions) is a CI/CD platform that enables automation of software workflows,\nallowing developers to build, test, and deploy code right from their GitHub repositories.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Workflow Files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Workflow Files",
+              "body": "```yaml\nname: hello-world\non: push\njobs:\n  hello-world-job:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Hello World\n        run: echo \"Hello World!\"\n```",
+              "footer": "**Viewing your workflow runs**\n- On GitHub.com, navigate to the main page of the repository.\n- Under your repository name, click `Actions`.\n- In the left sidebar, click the workflow you want to display, in this example \"hello-world\"",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Workflow Syntax",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Workflow Syntax",
+              "body": "```yaml\nname: learn-github-actions\nrun-name: ${{ github.actor }} is learning GitHub Actions\non: [push]\njobs:\n  check-bats-version:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v3\n        with:\n          node-version: '14'\n      - run: npm install -g bats\n      - run: bats -v\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Workflow Syntax Descriptions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Workflow Syntax Descriptions",
+              "body": "| Line                  | Description                                                                                                                                                                   |\n| :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `name:`               | Sets the name of the GitHub Actions workflow. It's a label used for identifying the workflow in the repository.                                                               |\n| `run-name:`           | Sets a custom name for the run, using a GitHub context `${{ github.actor }}` to include the name of the user who initiated the run.                                           |\n| `on:`                 | Specifies the event that triggers the workflow. In this case, the workflow is triggered on any `push` event to the repository.                                                |\n| `jobs:`               | Defines a group of jobs that will be executed as part of the workflow. Each job runs independently in the workflow.                                                           |\n| `check-bats-version:` | Identifier for a specific job within the workflow. This job is named `check-bats-version`.                                                                                    |\n| `runs-on:`            | Specifies the type of machine to run the job on. Here, it's set to run on the latest version of Ubuntu.                                                                       |\n| `steps:`              | Contains a sequence of tasks (steps) that will be executed as part of the job.                                                                                                |\n| `uses:`               | Used to specify an action to include as part of a step. For example, `actions/checkout@v4` checks out the repository, and `actions/setup-node@v3` sets up a Node environment. |\n| `with:`               | Specifies additional parameters for the action. It's used in conjunction with `uses` to configure the action.                                                                 |\n| `node-version:`       | Contains parameter under `with`, specifying the version of Node.js to be set up by the `setup-node` action. In this case, it's set to version '14'.                           |",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Events",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Events",
+              "body": "```yaml\nname: Event-trigger-on-push-example\n\non: [push] # event is defined here\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n      - name: Run a script\n        run: echo \"This workflow runs on every push to the repository.\"\n```",
+              "footer": "**Event Triggers**\n| Event Name                    | Description                                     |\n| :---------------------------- | :---------------------------------------------- |\n| `push`                        | Triggers on a push to the repository.           |\n| `pull_request`                | Triggers on pull request events.                |\n| `pull_request_review`         | Triggers on pull request review events.         |\n| `pull_request_review_comment` | Triggers on comments on pull request reviews.   |\n| `pull_request_target`         | For workflows in forked repositories.           |\n| `fork`                        | Triggers when a repository is forked.           |\n| `issue_comment`               | Triggers on issue and PR comments.              |\n| `issues`                      | Triggers on issue events.                       |\n| `label`                       | Triggers on label events.                       |\n| `milestone`                   | Triggers on milestone events.                   |\n| `deployment`                  | Triggers on deployment.                         |\n| `deployment_status`           | Triggers on deployment status updates.          |\n| `public`                      | Triggers when repo goes from private to public. |\n| `repository_dispatch`         | Triggers on a custom repository event.          |\n| `schedule`                    | Triggers on a defined schedule.                 |\n| `workflow_dispatch`           | Allows manual triggering of the workflow.       |\n| `workflow_run`                | Triggers on the completion of another workflow. |\n| `create`                      | Triggers when a branch or tag is created.       |\n| `delete`                      | Triggers when a branch or tag is deleted.       |\n| `page_build`                  | Triggers on GitHub Pages build events.          |\n| `release`                     | Triggers on release events.                     |\n| `watch`                       | Triggers when someone stars the repo.           |\n| `registry_package`            | Triggers on registry package events.            |\n| `status`                      | Triggers on status updates to a Git commit.     |\n| `project`                     | Triggers on project board events.               |\n| `project_card`                | Triggers on project card events.                |\n| `project_column`              | Triggers on project column events.              |\n| `member`                      | Triggers on collaborator events.                |\n| `gollum`                      | Triggers on wiki page updates.                  |",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Jobs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Jobs",
+              "body": "```yaml\nname: Single Job\non: [push]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n      - name: Run a build script\n        run: script/build\n```",
+              "footer": "Multiple Jobs:\n```yaml\nname: CI Workflow\non: [push]\njobs:\njob-1:\nruns-on: ubuntu-latest\nsteps:\n- uses: actions/checkout@v2\n- name: Runs job 1\nrun: echo \"Running Job 1\"\njob-2:\nruns-on: ubuntu-latest\nsteps:\n- uses: actions/checkout@v2\n- name: Runs job 2\nrun: echo \"Running Job 2\"\njob-3:\nruns-on: ubuntu-latest\nsteps:\n- uses: actions/checkout@v2\n- name: Runs job 3\nrun: echo \"Running Job 3\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Steps",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Steps",
+              "body": "```yaml\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      # step 1\n      - name: Check out repository\n        uses: actions/checkout@v2\n\n      # step 2\n      - name: Set up Node.js\n        uses: actions/setup-node@v2\n        with:\n          node-version: '14'\n\n      # step 3\n      - name: Install dependencies\n        run: npm install\n\n      # step 4\n      - name: Run tests\n        run: npm test\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Github Runners & Self Hosted Runners",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Github Runners & Self Hosted Runners",
+              "body": "```yaml\nname: Workflow\non: [push]\njobs:\n  build:\n    runs-on: ubuntu-latest # default runner\n    steps:\n      - uses: actions/checkout@v2\n      - name: Run a script\n        run: echo \"Hello, world!\"\n```",
+              "footer": "[Self Hosted Runner](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners)\n```yaml\nname: Workflow with Self-Hosted Runner\non: [push]\njobs:\nbuild:\nruns-on: self-hosted\nsteps:\n- uses: actions/checkout@v2\n- name: Run a script\nrun: echo \"Hello from self-hosted runner!\"\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Environment Variables",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Environment Variables",
+              "body": "```yaml\njobs:\n  build:\n    runs-on: ubuntu-latest\n    env:\n      CUSTOM_VARIABLE: 'Hello, World!' # Custom variable defined using env:\n    steps:\n      - name: Check environment variable\n        run: echo \"Value of CUSTOM_VAR is $CUSTOM_VAR\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Secrets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Secrets",
+              "body": "```yaml\nname: Workflow with Secrets\n\non: [push]\n\njobs:\n  example_job:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout repository\n        uses: actions/checkout@v2\n      - name: Use a secret\n        run: echo \"The secret is ${{ secrets.MY_SECRET }}\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Artifacts",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Artifacts",
+              "body": "```yaml\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Build project\n        run: make build\n      - name: Upload build artifact\n        uses: actions/upload-artifact@v3 # upload Artifacts prebuilt action\n        with:\n          name: my-artifact\n          path: path/to/artifact\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Caching Dependencies",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Caching Dependencies",
+              "body": "```yaml\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n      - name: Cache dependencies\n        uses: actions/cache@v2 # stores downloaded packages or compiled binaries\n        with:\n          path: |\n            path/to/dependencies\n            another/path\n          key: ${{ runner.os }}-deps-${{ hashFiles('**/lockfile') }} # hash of the dependency lock file is generated in the OS\n      - name: Install dependencies\n        run: install-command\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Matrix Strategies",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Matrix Strategies",
+              "body": "```yaml\njobs:\n  build:\n    runs-on: ubuntu-latest\n    strategy:\n      matrix:\n        node-version: [12.x, 14.x, 16.x]\n        # matrix strategy runs enables you to run jobs across multiple combinations of environments and OS's\n        os: [ubuntu-latest, windows-latest, macOS-latest]\n    steps:\n      - uses: actions/checkout@v2\n      - name: Use Node.js ${{ matrix.node-version }}\n        uses: actions/setup-node@v1\n        with:\n          node-version: ${{ matrix.node-version }}\n      - run: npm install\n      - run: npm test\n        env:\n          CI: true\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Conditions and Expressions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Conditions and Expressions",
+              "body": "```yaml\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout code\n        uses: actions/checkout@v2\n      - name: Run build\n        if: github.ref == 'refs/heads/main' # \"Run build\" step will only execute if the current branch is main.\n        run: make build\n```",
+              "footer": "Event Trigger Conditions:\n```yaml\njobs:\ntest:\nruns-on: ubuntu-latest\nsteps:\n- name: Checkout code\nuses: actions/checkout@v2\n- name: Run tests\nif: github.event_name == 'pull_request' # \"Run tests\" step is executed only when the workflow is triggered by a pull request event\nrun: npm test\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Workflow Commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Workflow Commands",
+              "body": "```yaml\nsteps:\n  - name: Set environment variable\n    run: echo \"NAME=value\" >> $GITHUB_ENV\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Concurrency",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Concurrency",
+              "body": "```yaml\njobs:\n  my_job:\n    runs-on: ubuntu-latest\n    concurrency:\n      group: ${{ github.head_ref }}\n      cancel-in-progress: true\n    steps:\n      - name: Run a script\n        run: echo \"Running script...\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [YAML](/yaml) _(cheatsheets.zip)_\n- [Github](/github) _(cheatsheets.zip)_\n- [Github Actions Documentation](https://docs.github.com/en/actions)_(docs.github.com/en/actions)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

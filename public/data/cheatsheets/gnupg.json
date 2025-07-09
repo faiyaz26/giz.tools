@@ -1,0 +1,180 @@
+{
+  "id": "gnupg",
+  "metadata": {
+    "title": "GnuPG",
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "A cheatsheet for GnuPG, the encryption and signing software."
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Software",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Software",
+              "body": "Gpg4win and the GPG Suite have OS-specific features.\n\n- [GnuPG](https://gnupg.org/)\n- [Gpg4win](https://www.gpg4win.org/) (Windows)\n- [GPG Suite](https://gpgtools.org/) (macOS)\n\nSometimes GPG keys are referred as PGP keys. They're interchangeable, as they follow the\n[OpenPGP Standard](https://www.rfc-editor.org/rfc/rfc9580.html).",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Create a key-pair",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create a key-pair",
+              "body": "```\n... or fully configure your keys.\n```",
+              "footer": "shell script\n$ gpg --generate-full-keys\n```\n**Note:** Choose a strong passphrase! The encryption is only as strong as your passphrase.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Key management",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Key management",
+              "body": "```\nList your secret keys:\n```",
+              "footer": "shell script\n$ gpg --list-secret-keys\n```\nExport your public key:\n```shell script\n$ gpg --export --armor <ID>\n```\nExport your secret key:\n```shell script\n$ gpg --export-secret-key --armor <ID>\n```\nDelete your public key:\n```shell script\n$ gpg --delete-key <ID>\n```\nDelete your secret key:\n```shell script\n$ gpg --delete-secret-key <ID>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Encryption",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Symmetric",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Symmetric",
+              "body": "```\nEncrypt as ASCII with `-a` flag:\n```",
+              "footer": "shell script\n$ gpg -ac <FILE>\n```\nSet output file path with `-o` flag:\n```shell script\n$ gpg -c <FILE> -o <PATH>\n```\nDecrypt with a passphrase:\n```shell script\n$ gpg <FILE>\n```\n**Note:** Choose a strong passphrase! The encryption is only as strong as your passphrase.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Asymmetric",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Asymmetric",
+              "body": "```\nEncrypt as ASCII output with `-a` flag:\n```",
+              "footer": "shell script\n$ gpg -ea -r <RECIPIENT> <FILE>\n```\nEncrypt and sign with `-s` flag:\n```shell script\n$ gpg -se -r <RECIPIENT> <FILE>\n```\nAdd multiple recipients:\n```shell script\n$ gpg -e -r <RECIPIENT1> -r <RECIPIENT2> <FILE>\n```\nSet output file path with `-o` flag:\n```shell script\n$ gpg -e -o <PATH> -r <RECIPIENT> <FILE>\n```\nDecrypt with your private key:\n```shell script\n$ gpg <FILE>\n```\nReplace `<RECIPIENT>` with your intended recipient's [imported public key](#importing-a-public-key) ID.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Importing a public key",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Importing a public key",
+              "body": "```\nImport using a link (macOS/Linux):\n```",
+              "footer": "shell script\n$ curl <WEBSITE> | gpg --import\n```\nDon't forget to sign the imported key:\n```shell script\n$ gpg --sign-key <ID>\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Commit Signing",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Local Git Setup",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Local Git Setup",
+              "body": "```\nSet the signing key:\n```",
+              "footer": "shell script\n$ git config --global user.signingkey <ID>\n```\nSet location of GPG:\n```shell script\n$ git config --global gpg.program <PROGRAM>\n```\n**Note:** Your name and email must match on Git and GnuPG.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "GPG Program List",
+          "level": 3,
+          "cards": [
+            {
+              "title": "GPG Program List",
+              "body": "Replace `<PROGRAM>` with one of the following:\n\n| Platform    | Value                                      |\n| ----------- | ------------------------------------------ |\n| Windows     | `C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe` |\n| macOS/Linux | /usr/local/bin/gpg                         |\n\n{.left-text}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Exporting your public key",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Exporting your public key",
+              "body": "",
+              "footer": "Export as ASCII:\n\n```shell script\n$ gpg --export --armor <ID>\n```\n\n**Note:** Platforms, like GitHub, may ask you to verify the email you set in Git and GnuPG.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Windows: Add to Startup Apps {.cols-1}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "PowerShell Commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "PowerShell Commands",
+              "body": "```\nStart up manually instead:\n```",
+              "footer": "shell script\n$ gpgconf --launch gpg-agent\n```\nCheck if it was successfully added [here](ms-settings:startupapps).",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "monday",
+  "metadata": {
+    "title": "Monday.com",
+    "date": "2022-11-23T16:23:31.694Z",
+    "background": "bg-[#f7ce46]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 24 keyboard shortcuts found on Monday.com\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "System",
+          "level": 3,
+          "cards": [
+            {
+              "title": "System",
+              "body": "| Shortcut   | Action                                    |\n| ---------- | ----------------------------------------- |\n| `Ctrl` `B` | Bolt Switch (quick switch between boards) |\n| `Esc`      | Close Item Page                           |\n| `Esc`      | Close Dialogs                             |\n| `Esc`      | Close Search                              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bolt Switch (quick switch between boards)"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close Item Page"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close Dialogs"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Close Search"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Board I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Board I",
+              "body": "| Shortcut      | Action                   |\n| ------------- | ------------------------ |\n| `Down`        | Navigate Down            |\n| `Up`          | Navigate Up              |\n| `Left`        | Navigate Left            |\n| `Right`       | Navigate Right           |\n| `Tab`         | Navigate to Next Cell    |\n| `Shift` `Tab` | Navigate to Previous Tab |\n| `Enter`       | Edit Cell Content        |\n| `Backspace`   | Clear Cell Content       |\n| `Space`       | Open Column View         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Down`",
+                  "action": "Navigate Down"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Navigate Up"
+                },
+                {
+                  "shortcut": "`Left`",
+                  "action": "Navigate Left"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Navigate Right"
+                },
+                {
+                  "shortcut": "`Tab`",
+                  "action": "Navigate to Next Cell"
+                },
+                {
+                  "shortcut": "`Shift` `Tab`",
+                  "action": "Navigate to Previous Tab"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Edit Cell Content"
+                },
+                {
+                  "shortcut": "`Backspace`",
+                  "action": "Clear Cell Content"
+                },
+                {
+                  "shortcut": "`Space`",
+                  "action": "Open Column View"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Board II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Board II",
+              "body": "| Shortcut           | Action                     |\n| ------------------ | -------------------------- |\n| `Ctrl` `F`         | Search Board               |\n| `Ctrl` `C`         | Copy Cell Content          |\n| `Ctrl` `V`         | Paste Cell Content         |\n| `Ctrl` `X`         | Cut Cell Content           |\n| `Ctrl` `Enter`     | Select Item                |\n| `Shift` `Enter`    | Select Range of Items      |\n| `Ctrl` `Shift` `G` | Create New Group           |\n| `Ctrl` `Shift` `C` | Create New Column          |\n| `Ctrl` `L`         | Open Activity Log          |\n| `Ctrl` `(click)`   | Sort Another Column        |\n| `Ctrl` `G`         | Collapse/Expand All Groups |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Search Board"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy Cell Content"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste Cell Content"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut Cell Content"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Select Item"
+                },
+                {
+                  "shortcut": "`Shift` `Enter`",
+                  "action": "Select Range of Items"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Create New Group"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `C`",
+                  "action": "Create New Column"
+                },
+                {
+                  "shortcut": "`Ctrl` `L`",
+                  "action": "Open Activity Log"
+                },
+                {
+                  "shortcut": "`Ctrl` `(click)`",
+                  "action": "Sort Another Column"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Collapse/Expand All Groups"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Monday.com](https://support.monday.com/hc/en-us/articles/115005339905-The-Spreadsheet-capabilities-shortcuts-)\n  _(support.monday.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

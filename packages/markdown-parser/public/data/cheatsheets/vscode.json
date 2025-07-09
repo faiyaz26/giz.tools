@@ -1,0 +1,1351 @@
+{
+  "id": "vscode",
+  "metadata": {
+    "title": "VSCode",
+    "date": "2021-12-16T13:41:00.000Z",
+    "background": "bg-[#5ba3e6]",
+    "tags": [
+      "text",
+      "editor",
+      "shortcut"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "This VSCode (Visual Studio Code) quick reference cheat sheet shows its keyboard shortcuts and commands.\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard shortcuts for Windows",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "| Shortcut              | Action                    |\n| --------------------- | ------------------------- |\n| `Ctrl` `Shift` `P`    | Show Command Palette      |\n| `Ctrl` `P`            | Quick Open, Go to File... |\n| `Ctrl` `Shift` `N`    | New window/instance       |\n| `Ctrl` `Shift` `W`    | Close window/instance     |\n| `Ctrl` `,`            | User Settings             |\n| `Ctrl` `K` `Ctrl` `S` | Keyboard Shortcuts        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Show Command Palette"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Quick Open, Go to File..."
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `N`",
+                  "action": "New window/instance"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `W`",
+                  "action": "Close window/instance"
+                },
+                {
+                  "shortcut": "`Ctrl` `,`",
+                  "action": "User Settings"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `S`",
+                  "action": "Keyboard Shortcuts"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic Editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Editing",
+              "body": "| Shortcut                | Action                             |\n| ----------------------- | ---------------------------------- |\n| `Ctrl` `X`              | Cut line (empty selection)         |\n| `Ctrl` `C`              | Copy line (empty selection)        |\n| `Alt` `Up/Down`         | Move line up/down                  |\n| `Shift` `Alt` `Up/Down` | Copy line up/down                  |\n| `Ctrl` `Shift` `K`      | Delete line                        |\n| `Ctrl` `Enter`          | Insert line below                  |\n| `Ctrl` `Shift` `Enter`  | Insert line above                  |\n| `Ctrl` `Shift` `\\`      | Jump to matching bracket           |\n| `Ctrl` `]/[`            | Indent/outdent line                |\n| `Home/End`              | Go to beginning/end of line        |\n| `Ctrl` `Home`           | Go to beginning of file            |\n| `Ctrl` `End`            | Go to end of file                  |\n| `Ctrl` `Up/Down`        | Scroll line up/down                |\n| `Alt` `PgUp/PgDown`     | Scroll page up/down                |\n| `Ctrl` `Shift` `[`      | Fold (collapse) region             |\n| `Ctrl` `Shift` `]`      | Unfold (uncollapse) region         |\n| `Ctrl` `K` `Ctrl` `[`   | Fold (collapse) all subregions     |\n| `Ctrl` `K` `Ctrl` `]`   | Unfold (uncollapse) all subregions |\n| `Ctrl` `K` `Ctrl` `0`   | Fold (collapse) all regions        |\n| `Ctrl` `K` `Ctrl` `J`   | Unfold (uncollapse) all regions    |\n| `Ctrl` `K` `Ctrl` `C`   | Add line comment                   |\n| `Ctrl` `K` `Ctrl` `U`   | Remove line comment                |\n| `Ctrl` `/`              | Toggle line comment                |\n| `Shift` `Alt` `A`       | Toggle block comment               |\n| `Alt` `Z`               | Toggle word wrap                   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut line (empty selection)"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy line (empty selection)"
+                },
+                {
+                  "shortcut": "`Alt` `Up/Down`",
+                  "action": "Move line up/down"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `Up/Down`",
+                  "action": "Copy line up/down"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `K`",
+                  "action": "Delete line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Insert line below"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Enter`",
+                  "action": "Insert line above"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `\\`",
+                  "action": "Jump to matching bracket"
+                },
+                {
+                  "shortcut": "`Ctrl` `]/[`",
+                  "action": "Indent/outdent line"
+                },
+                {
+                  "shortcut": "`Home/End`",
+                  "action": "Go to beginning/end of line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Home`",
+                  "action": "Go to beginning of file"
+                },
+                {
+                  "shortcut": "`Ctrl` `End`",
+                  "action": "Go to end of file"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up/Down`",
+                  "action": "Scroll line up/down"
+                },
+                {
+                  "shortcut": "`Alt` `PgUp/PgDown`",
+                  "action": "Scroll page up/down"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `[`",
+                  "action": "Fold (collapse) region"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `]`",
+                  "action": "Unfold (uncollapse) region"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `[`",
+                  "action": "Fold (collapse) all subregions"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `]`",
+                  "action": "Unfold (uncollapse) all subregions"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `0`",
+                  "action": "Fold (collapse) all regions"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `J`",
+                  "action": "Unfold (uncollapse) all regions"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `C`",
+                  "action": "Add line comment"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `U`",
+                  "action": "Remove line comment"
+                },
+                {
+                  "shortcut": "`Ctrl` `/`",
+                  "action": "Toggle line comment"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `A`",
+                  "action": "Toggle block comment"
+                },
+                {
+                  "shortcut": "`Alt` `Z`",
+                  "action": "Toggle word wrap"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut             | Action                          |\n| -------------------- | ------------------------------- |\n| `Ctrl` `T`           | Show all Symbols                |\n| `Ctrl` `G`           | Go to Line...                   |\n| `Ctrl` `P`           | Go to File...                   |\n| `Ctrl` `Shift` `O`   | Go to Symbol...                 |\n| `Ctrl` `Shift` `M`   | Show Problems panel             |\n| `F8`                 | Go to next error or warning     |\n| `Shift` `F8`         | Go to previous error or warning |\n| `Ctrl` `Shift` `Tab` | Navigate editor group history   |\n| `Alt` `Left/Right`   | Go back/forward                 |\n| `Ctrl` `M`           | Toggle Tab moves focus          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `T`",
+                  "action": "Show all Symbols"
+                },
+                {
+                  "shortcut": "`Ctrl` `G`",
+                  "action": "Go to Line..."
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Go to File..."
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `O`",
+                  "action": "Go to Symbol..."
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Show Problems panel"
+                },
+                {
+                  "shortcut": "`F8`",
+                  "action": "Go to next error or warning"
+                },
+                {
+                  "shortcut": "`Shift` `F8`",
+                  "action": "Go to previous error or warning"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Tab`",
+                  "action": "Navigate editor group history"
+                },
+                {
+                  "shortcut": "`Alt` `Left/Right`",
+                  "action": "Go back/forward"
+                },
+                {
+                  "shortcut": "`Ctrl` `M`",
+                  "action": "Toggle Tab moves focus"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Search and replace",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Search and replace",
+              "body": "| Shortcut              | Action                                 |\n| --------------------- | -------------------------------------- |\n| `Ctrl` `F`            | Find                                   |\n| `Ctrl` `H`            | Replace                                |\n| `F3`                  | Find next                              |\n| `Shift` `F3`          | Find previous                          |\n| `Alt` `Enter`         | Select all occurrences of Find match   |\n| `Ctrl` `D`            | Add selection to next Find match       |\n| `Ctrl` `K` `Ctrl` `D` | Move last selection to next Find match |\n| `Alt` `C/R/W`         | Toggle case-sensitive/regex/whole word |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Find"
+                },
+                {
+                  "shortcut": "`Ctrl` `H`",
+                  "action": "Replace"
+                },
+                {
+                  "shortcut": "`F3`",
+                  "action": "Find next"
+                },
+                {
+                  "shortcut": "`Shift` `F3`",
+                  "action": "Find previous"
+                },
+                {
+                  "shortcut": "`Alt` `Enter`",
+                  "action": "Select all occurrences of Find match"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Add selection to next Find match"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `D`",
+                  "action": "Move last selection to next Find match"
+                },
+                {
+                  "shortcut": "`Alt` `C/R/W`",
+                  "action": "Toggle case-sensitive/regex/whole word"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multi-cursor and selection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multi-cursor and selection",
+              "body": "| Shortcut                           | Action                                      |\n| ---------------------------------- | ------------------------------------------- |\n| `Alt` `Click`                      | Insert cursor                               |\n| `Ctrl` `Alt` `Up/Down`             | Insert cursor above/below                   |\n| `Ctrl` `U`                         | Undo last cursor operation                  |\n| `Shift` `Alt` `I`                  | Insert cursor at end of each line selected  |\n| `Ctrl` `I`                         | Select current line                         |\n| `Ctrl` `Shift` `L`                 | Select all occurrences of current selection |\n| `Ctrl` `F2`                        | Select all occurrences of current word      |\n| `Shift` `Alt` `Right`              | Expand selection                            |\n| `Shift` `Alt` `Left`               | Shrink selection                            |\n| `Shift` `Alt` `(drag mouse)`       | Column (box) selection                      |\n| `Ctrl` `Shift` `Alt` `(arrow key)` | Column (box) selection                      |\n| `Ctrl` `Shift` `Alt` `PgUp/PgDown` | Column (box) selection page up/down         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `Click`",
+                  "action": "Insert cursor"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `Up/Down`",
+                  "action": "Insert cursor above/below"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Undo last cursor operation"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `I`",
+                  "action": "Insert cursor at end of each line selected"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Select current line"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Select all occurrences of current selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `F2`",
+                  "action": "Select all occurrences of current word"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `Right`",
+                  "action": "Expand selection"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `Left`",
+                  "action": "Shrink selection"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `(drag mouse)`",
+                  "action": "Column (box) selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Alt` `(arrow key)`",
+                  "action": "Column (box) selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Alt` `PgUp/PgDown`",
+                  "action": "Column (box) selection page up/down"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Rich languages editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Rich languages editing",
+              "body": "| Shortcut               | Action                      |\n| ---------------------- | --------------------------- |\n| `Ctrl` `Space`         | Trigger suggestion          |\n| `Ctrl` `Shift` `Space` | Trigger parameter hints     |\n| `Shift` `Alt` `F`      | Format document             |\n| `Ctrl` `K` `Ctrl` `F`  | Format selection            |\n| `F12`                  | Go to Definition            |\n| `Alt` `F12`            | Peek Definition             |\n| `Ctrl` `K` `F12`       | Open Definition to the side |\n| `Ctrl` `.`             | Quick Fix                   |\n| `Shift` `F12`          | Show References             |\n| `F2`                   | Rename Symbol               |\n| `Ctrl` `K` `Ctrl` `X`  | Trim trailing whitespace    |\n| `Ctrl` `K` `M`         | Change file language        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Space`",
+                  "action": "Trigger suggestion"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Space`",
+                  "action": "Trigger parameter hints"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `F`",
+                  "action": "Format document"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `F`",
+                  "action": "Format selection"
+                },
+                {
+                  "shortcut": "`F12`",
+                  "action": "Go to Definition"
+                },
+                {
+                  "shortcut": "`Alt` `F12`",
+                  "action": "Peek Definition"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `F12`",
+                  "action": "Open Definition to the side"
+                },
+                {
+                  "shortcut": "`Ctrl` `.`",
+                  "action": "Quick Fix"
+                },
+                {
+                  "shortcut": "`Shift` `F12`",
+                  "action": "Show References"
+                },
+                {
+                  "shortcut": "`F2`",
+                  "action": "Rename Symbol"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `X`",
+                  "action": "Trim trailing whitespace"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `M`",
+                  "action": "Change file language"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editor management",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editor management",
+              "body": "| Shortcut                       | Action                                   |\n| ------------------------------ | ---------------------------------------- |\n| `Ctrl` `F4`                    | Close editor                             |\n| `Ctrl` `W`                     | Close editor                             |\n| `Ctrl` `K` `F`                 | Close folder                             |\n| `Ctrl` `\\`                     | Split editor                             |\n| `Ctrl` `1/2/3`                 | Focus into 1st, 2nd, or 3rd editor group |\n| `Ctrl` `K` `Ctrl` `Left/Right` | Focus into previous/next editor group    |\n| `Ctrl` `Shift` `PgUp/PgDown`   | Move editor left/right                   |\n| `Ctrl` `K` `Left/Right`        | Move active editor group                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `F4`",
+                  "action": "Close editor"
+                },
+                {
+                  "shortcut": "`Ctrl` `W`",
+                  "action": "Close editor"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `F`",
+                  "action": "Close folder"
+                },
+                {
+                  "shortcut": "`Ctrl` `\\`",
+                  "action": "Split editor"
+                },
+                {
+                  "shortcut": "`Ctrl` `1/2/3`",
+                  "action": "Focus into 1st, 2nd, or 3rd editor group"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `Left/Right`",
+                  "action": "Focus into previous/next editor group"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `PgUp/PgDown`",
+                  "action": "Move editor left/right"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Left/Right`",
+                  "action": "Move active editor group"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File management",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File management",
+              "body": "| Shortcut              | Action                                  |\n| --------------------- | --------------------------------------- |\n| `Ctrl` `N`            | New File                                |\n| `Ctrl` `O`            | Open File...                            |\n| `Ctrl` `S`            | Save                                    |\n| `Ctrl` `Shift` `S`    | Save As...                              |\n| `Ctrl` `K` `S`        | Save All                                |\n| `Ctrl` `F4`           | Close                                   |\n| `Ctrl` `K` `Ctrl` `W` | Close All                               |\n| `Ctrl` `Shift` `T`    | Reopen closed editor                    |\n| `Ctrl` `K` `Enter`    | Keep preview mode editor open           |\n| `Ctrl` `Tab`          | Open next                               |\n| `Ctrl` `Shift` `Tab`  | Open previous                           |\n| `Ctrl` `K` `P`        | Copy path of active file                |\n| `Ctrl` `K` `R`        | Reveal active file in Explorer          |\n| `Ctrl` `K` `O`        | Show active file in new window/instance |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New File"
+                },
+                {
+                  "shortcut": "`Ctrl` `O`",
+                  "action": "Open File..."
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `S`",
+                  "action": "Save As..."
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `S`",
+                  "action": "Save All"
+                },
+                {
+                  "shortcut": "`Ctrl` `F4`",
+                  "action": "Close"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `W`",
+                  "action": "Close All"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `T`",
+                  "action": "Reopen closed editor"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Enter`",
+                  "action": "Keep preview mode editor open"
+                },
+                {
+                  "shortcut": "`Ctrl` `Tab`",
+                  "action": "Open next"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `Tab`",
+                  "action": "Open previous"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `P`",
+                  "action": "Copy path of active file"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `R`",
+                  "action": "Reveal active file in Explorer"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `O`",
+                  "action": "Show active file in new window/instance"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Display",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Display",
+              "body": "| Shortcut           | Action                                     |\n| ------------------ | ------------------------------------------ |\n| `F11`              | Toggle full screen                         |\n| `Shift` `Alt` `0`  | Toggle editor layout (horizontal/vertical) |\n| `Ctrl` `=/-`       | Zoom in/out                                |\n| `Ctrl` `B`         | Toggle Sidebar visibility                  |\n| `Ctrl` `Shift` `E` | Show Explorer/Toggle focus                 |\n| `Ctrl` `Shift` `F` | Show Search                                |\n| `Ctrl` `Shift` `G` | Show Source Control                        |\n| `Ctrl` `Shift` `D` | Show Debug                                 |\n| `Ctrl` `Shift` `X` | Show Extensions                            |\n| `Ctrl` `Shift` `H` | Replace in files                           |\n| `Ctrl` `Shift` `J` | Toggle Search details                      |\n| `Ctrl` `Shift` `U` | Show Output panel                          |\n| `Ctrl` `Shift` `V` | Open Markdown preview                      |\n| `Ctrl` `K` `V`     | Open Markdown preview to the side          |\n| `Ctrl` `K` `Z`     | Zen Mode (Esc Esc to exit)                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F11`",
+                  "action": "Toggle full screen"
+                },
+                {
+                  "shortcut": "`Shift` `Alt` `0`",
+                  "action": "Toggle editor layout (horizontal/vertical)"
+                },
+                {
+                  "shortcut": "`Ctrl` `=/-`",
+                  "action": "Zoom in/out"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Toggle Sidebar visibility"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `E`",
+                  "action": "Show Explorer/Toggle focus"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `F`",
+                  "action": "Show Search"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `G`",
+                  "action": "Show Source Control"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `D`",
+                  "action": "Show Debug"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `X`",
+                  "action": "Show Extensions"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `H`",
+                  "action": "Replace in files"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `J`",
+                  "action": "Toggle Search details"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `U`",
+                  "action": "Show Output panel"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `V`",
+                  "action": "Open Markdown preview"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `V`",
+                  "action": "Open Markdown preview to the side"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Z`",
+                  "action": "Zen Mode (Esc Esc to exit)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Debug",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Debug",
+              "body": "| Shortcut              | Action            |\n| --------------------- | ----------------- |\n| `F9`                  | Toggle breakpoint |\n| `F5`                  | Start/Continue    |\n| `Shift` `F5`          | Stop              |\n| `F11`                 | Step into         |\n| `Shift` `F11`         | Step out          |\n| `F10`                 | Step over         |\n| `Ctrl` `K` `Ctrl` `I` | Show hover        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F9`",
+                  "action": "Toggle breakpoint"
+                },
+                {
+                  "shortcut": "`F5`",
+                  "action": "Start/Continue"
+                },
+                {
+                  "shortcut": "`Shift` `F5`",
+                  "action": "Stop"
+                },
+                {
+                  "shortcut": "`F11`",
+                  "action": "Step into"
+                },
+                {
+                  "shortcut": "`Shift` `F11`",
+                  "action": "Step out"
+                },
+                {
+                  "shortcut": "`F10`",
+                  "action": "Step over"
+                },
+                {
+                  "shortcut": "`Ctrl` `K` `Ctrl` `I`",
+                  "action": "Show hover"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Integrated terminal",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Integrated terminal",
+              "body": "| Shortcut                       | Action                     |\n| ------------------------------ | -------------------------- |\n| `Ctrl` <code>\\`</code>         | Show integrated terminal   |\n| `Ctrl` `Shift` <code>\\`</code> | Create new terminal        |\n| `Ctrl` `C`                     | Copy selection             |\n| `Ctrl` `V`                     | Paste into active terminal |\n| `Ctrl` `Up/Down`               | Scroll up/down             |\n| `Shift` `PgUp/PgDown`          | Scroll page up/down        |\n| `Ctrl` `Home/End`              | Scroll to top/bottom       |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` <code>\\`</code>",
+                  "action": "Show integrated terminal"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` <code>\\`</code>",
+                  "action": "Create new terminal"
+                },
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy selection"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste into active terminal"
+                },
+                {
+                  "shortcut": "`Ctrl` `Up/Down`",
+                  "action": "Scroll up/down"
+                },
+                {
+                  "shortcut": "`Shift` `PgUp/PgDown`",
+                  "action": "Scroll page up/down"
+                },
+                {
+                  "shortcut": "`Ctrl` `Home/End`",
+                  "action": "Scroll to top/bottom"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Keyboard shortcuts for MacOS",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General",
+              "body": "| Shortcut     | Action                  |\n| ------------ | ----------------------- |\n| `⇧⌘P` / `F1` | Show Command Palette    |\n| `⌘P`         | Quick Open, Go to File… |\n| `⇧⌘N`        | New window/instance     |\n| `⌘W`         | Close window/instance   |\n| `⌘,`         | User Settings           |\n| `⌘K` `⌘S`    | Keyboard Shortcuts      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`⇧⌘P` / `F1`",
+                  "action": "Show Command Palette"
+                },
+                {
+                  "shortcut": "`⌘P`",
+                  "action": "Quick Open, Go to File…"
+                },
+                {
+                  "shortcut": "`⇧⌘N`",
+                  "action": "New window/instance"
+                },
+                {
+                  "shortcut": "`⌘W`",
+                  "action": "Close window/instance"
+                },
+                {
+                  "shortcut": "`⌘,`",
+                  "action": "User Settings"
+                },
+                {
+                  "shortcut": "`⌘K` `⌘S`",
+                  "action": "Keyboard Shortcuts"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic editing",
+              "body": "| Shortcut             | Action                      |\n| -------------------- | --------------------------- |\n| `⌘X`                 | Cut line (empty selection)  |\n| `⌘C`                 | Copy line (empty selection) |\n| `⌥↓` / `⌥↑`          | Move line down/up           |\n| `⇧⌥↓` / `⇧⌥↑`        | Copy line down/up           |\n| `⇧⌘K`                | Delete line                 |\n| `⌘Enter` / `⇧⌘Enter` | Insert line below/above     |\n| `⇧⌘\\`                | Jump to matching bracket    |\n| `⌘]` / `⌘[`          | Indent/outdent line         |\n| `Home` / `End`       | Go to beginning/end of line |\n| `⌘↑` / `⌘↓`          | Go to beginning/end of file |\n| `⌃PgUp` / `⌃PgDn`    | Scroll line up/down         |\n| `⌘PgUp` `/⌘PgDn`     | Scroll page up/down         |\n| `⌥⌘[` / `⌥⌘]`        | Fold/unfold region          |\n| `⌘K ⌘[` / `⌘K ⌘]`    | Fold/unfold all subregions  |\n| `⌘K ⌘0` / `⌘K ⌘J`    | Fold/unfold all regions     |\n| `⌘K ⌘C`              | Add line comment            |\n| `⌘K ⌘U`              | Remove line comment         |\n| `⌘/`                 | Toggle line comment         |\n| `⇧⌥A`                | Toggle block comment        |\n| `⌥Z`                 | Toggle word wrap            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`⌘X`",
+                  "action": "Cut line (empty selection)"
+                },
+                {
+                  "shortcut": "`⌘C`",
+                  "action": "Copy line (empty selection)"
+                },
+                {
+                  "shortcut": "`⌥↓` / `⌥↑`",
+                  "action": "Move line down/up"
+                },
+                {
+                  "shortcut": "`⇧⌥↓` / `⇧⌥↑`",
+                  "action": "Copy line down/up"
+                },
+                {
+                  "shortcut": "`⇧⌘K`",
+                  "action": "Delete line"
+                },
+                {
+                  "shortcut": "`⌘Enter` / `⇧⌘Enter`",
+                  "action": "Insert line below/above"
+                },
+                {
+                  "shortcut": "`⇧⌘\\`",
+                  "action": "Jump to matching bracket"
+                },
+                {
+                  "shortcut": "`⌘]` / `⌘[`",
+                  "action": "Indent/outdent line"
+                },
+                {
+                  "shortcut": "`Home` / `End`",
+                  "action": "Go to beginning/end of line"
+                },
+                {
+                  "shortcut": "`⌘↑` / `⌘↓`",
+                  "action": "Go to beginning/end of file"
+                },
+                {
+                  "shortcut": "`⌃PgUp` / `⌃PgDn`",
+                  "action": "Scroll line up/down"
+                },
+                {
+                  "shortcut": "`⌘PgUp` `/⌘PgDn`",
+                  "action": "Scroll page up/down"
+                },
+                {
+                  "shortcut": "`⌥⌘[` / `⌥⌘]`",
+                  "action": "Fold/unfold region"
+                },
+                {
+                  "shortcut": "`⌘K ⌘[` / `⌘K ⌘]`",
+                  "action": "Fold/unfold all subregions"
+                },
+                {
+                  "shortcut": "`⌘K ⌘0` / `⌘K ⌘J`",
+                  "action": "Fold/unfold all regions"
+                },
+                {
+                  "shortcut": "`⌘K ⌘C`",
+                  "action": "Add line comment"
+                },
+                {
+                  "shortcut": "`⌘K ⌘U`",
+                  "action": "Remove line comment"
+                },
+                {
+                  "shortcut": "`⌘/`",
+                  "action": "Toggle line comment"
+                },
+                {
+                  "shortcut": "`⇧⌥A`",
+                  "action": "Toggle block comment"
+                },
+                {
+                  "shortcut": "`⌥Z`",
+                  "action": "Toggle word wrap"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multi-cursor and selection",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multi-cursor and selection",
+              "body": "| Shortcut          | Action                                      |\n| ----------------- | ------------------------------------------- |\n| `⌥ +`             | click Insert cursor                         |\n| `⌥⌘↑`             | Insert cursor above                         |\n| `⌥⌘↓`             | Insert cursor below                         |\n| `⌘U`              | Undo last cursor operation                  |\n| `⇧⌥I`             | Insert cursor at end of each line selected  |\n| `⌘L`              | Select current line                         |\n| `⇧⌘L`             | Select all occurrences of current selection |\n| `⌘F2`             | Select all occurrences of current word      |\n| `⌃⇧⌘→` / ←        | Expand / shrink selection                   |\n| `⇧⌥` + drag mouse | Column (box) selection                      |\n| `⇧⌥⌘↑` / ↓        | Column (box) selection up/down              |\n| `⇧⌥⌘←` / →        | Column (box) selection left/right           |\n| `⇧⌥⌘PgUp`         | Column (box) selection page up              |\n| `⇧⌥⌘PgDn`         | Column (box) selection page down            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`⌥ +`",
+                  "action": "click Insert cursor"
+                },
+                {
+                  "shortcut": "`⌥⌘↑`",
+                  "action": "Insert cursor above"
+                },
+                {
+                  "shortcut": "`⌥⌘↓`",
+                  "action": "Insert cursor below"
+                },
+                {
+                  "shortcut": "`⌘U`",
+                  "action": "Undo last cursor operation"
+                },
+                {
+                  "shortcut": "`⇧⌥I`",
+                  "action": "Insert cursor at end of each line selected"
+                },
+                {
+                  "shortcut": "`⌘L`",
+                  "action": "Select current line"
+                },
+                {
+                  "shortcut": "`⇧⌘L`",
+                  "action": "Select all occurrences of current selection"
+                },
+                {
+                  "shortcut": "`⌘F2`",
+                  "action": "Select all occurrences of current word"
+                },
+                {
+                  "shortcut": "`⌃⇧⌘→` / ←",
+                  "action": "Expand / shrink selection"
+                },
+                {
+                  "shortcut": "`⇧⌥` + drag mouse",
+                  "action": "Column (box) selection"
+                },
+                {
+                  "shortcut": "`⇧⌥⌘↑` / ↓",
+                  "action": "Column (box) selection up/down"
+                },
+                {
+                  "shortcut": "`⇧⌥⌘←` / →",
+                  "action": "Column (box) selection left/right"
+                },
+                {
+                  "shortcut": "`⇧⌥⌘PgUp`",
+                  "action": "Column (box) selection page up"
+                },
+                {
+                  "shortcut": "`⇧⌥⌘PgDn`",
+                  "action": "Column (box) selection page down"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Search and replace",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Search and replace",
+              "body": "| Shortcut     | Action                                 |\n| ------------ | -------------------------------------- |\n| `⌘F`         | Find                                   |\n| `⌥⌘F`        | Replace                                |\n| `⌘G` / `⇧⌘G` | Find next/previous                     |\n| `⌥Enter`     | Select all occurrences of Find match   |\n| `⌘D`         | Add selection to next Find match       |\n| `⌘K ⌘D`      | Move last selection to next Find match |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`⌘F`",
+                  "action": "Find"
+                },
+                {
+                  "shortcut": "`⌥⌘F`",
+                  "action": "Replace"
+                },
+                {
+                  "shortcut": "`⌘G` / `⇧⌘G`",
+                  "action": "Find next/previous"
+                },
+                {
+                  "shortcut": "`⌥Enter`",
+                  "action": "Select all occurrences of Find match"
+                },
+                {
+                  "shortcut": "`⌘D`",
+                  "action": "Add selection to next Find match"
+                },
+                {
+                  "shortcut": "`⌘K ⌘D`",
+                  "action": "Move last selection to next Find match"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Rich languages editing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Rich languages editing",
+              "body": "| Shortcut     | Action                      |\n| ------------ | --------------------------- |\n| `⌃Space, ⌘I` | Trigger suggestion          |\n| `⇧⌘Space`    | Trigger parameter hints     |\n| `⇧⌥F`        | Format document             |\n| `⌘K ⌘F`      | Format selection            |\n| `F12`        | Go to Definition            |\n| `⌥F12`       | Peek Definition             |\n| `⌘K F12`     | Open Definition to the side |\n| `⌘.`         | Quick Fix                   |\n| `⇧F12`       | Show References             |\n| `F2`         | Rename Symbol               |\n| `⌘K ⌘X`      | Trim trailing whitespace    |\n| `⌘K M`       | Change file language        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`⌃Space, ⌘I`",
+                  "action": "Trigger suggestion"
+                },
+                {
+                  "shortcut": "`⇧⌘Space`",
+                  "action": "Trigger parameter hints"
+                },
+                {
+                  "shortcut": "`⇧⌥F`",
+                  "action": "Format document"
+                },
+                {
+                  "shortcut": "`⌘K ⌘F`",
+                  "action": "Format selection"
+                },
+                {
+                  "shortcut": "`F12`",
+                  "action": "Go to Definition"
+                },
+                {
+                  "shortcut": "`⌥F12`",
+                  "action": "Peek Definition"
+                },
+                {
+                  "shortcut": "`⌘K F12`",
+                  "action": "Open Definition to the side"
+                },
+                {
+                  "shortcut": "`⌘.`",
+                  "action": "Quick Fix"
+                },
+                {
+                  "shortcut": "`⇧F12`",
+                  "action": "Show References"
+                },
+                {
+                  "shortcut": "`F2`",
+                  "action": "Rename Symbol"
+                },
+                {
+                  "shortcut": "`⌘K ⌘X`",
+                  "action": "Trim trailing whitespace"
+                },
+                {
+                  "shortcut": "`⌘K M`",
+                  "action": "Change file language"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Navigation",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Navigation",
+              "body": "| Shortcut     | Action                               |\n| ------------ | ------------------------------------ |\n| `⌘T`         | Show all Symbols                     |\n| `⌃G`         | Go to Line...                        |\n| `⌘P`         | Go to File...                        |\n| `⇧⌘O`        | Go to Symbol...                      |\n| `⇧⌘M`        | Show Problems panel                  |\n| `F8` / `⇧F8` | Go to next/previous error or warning |\n| `⌃⇧Tab`      | Navigate editor group history        |\n| `⌃-` / `⌃⇧-` | Go back/forward                      |\n| `⌃⇧M`        | Toggle Tab moves focus               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`⌘T`",
+                  "action": "Show all Symbols"
+                },
+                {
+                  "shortcut": "`⌃G`",
+                  "action": "Go to Line..."
+                },
+                {
+                  "shortcut": "`⌘P`",
+                  "action": "Go to File..."
+                },
+                {
+                  "shortcut": "`⇧⌘O`",
+                  "action": "Go to Symbol..."
+                },
+                {
+                  "shortcut": "`⇧⌘M`",
+                  "action": "Show Problems panel"
+                },
+                {
+                  "shortcut": "`F8` / `⇧F8`",
+                  "action": "Go to next/previous error or warning"
+                },
+                {
+                  "shortcut": "`⌃⇧Tab`",
+                  "action": "Navigate editor group history"
+                },
+                {
+                  "shortcut": "`⌃-` / `⌃⇧-`",
+                  "action": "Go back/forward"
+                },
+                {
+                  "shortcut": "`⌃⇧M`",
+                  "action": "Toggle Tab moves focus"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editor management",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editor management",
+              "body": "| Shortcut            | Action                                |\n| ------------------- | ------------------------------------- |\n| `⌘W`                | Close editor                          |\n| `⌘K` `F`            | Close folder                          |\n| `⌘\\`                | Split editor                          |\n| `⌘1` / `⌘2` / `⌘3`  | Focus into 1st, 2nd, 3rd editor group |\n| `⌘K ⌘←` / `⌘K ⌘→`   | Focus into previous/next editor group |\n| `⌘K ⇧⌘←` / `⌘K ⇧⌘→` | Move editor left/right                |\n| `⌘K ←` / `⌘K →`     | Move active editor group              |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`⌘W`",
+                  "action": "Close editor"
+                },
+                {
+                  "shortcut": "`⌘K` `F`",
+                  "action": "Close folder"
+                },
+                {
+                  "shortcut": "`⌘\\`",
+                  "action": "Split editor"
+                },
+                {
+                  "shortcut": "`⌘1` / `⌘2` / `⌘3`",
+                  "action": "Focus into 1st, 2nd, 3rd editor group"
+                },
+                {
+                  "shortcut": "`⌘K ⌘←` / `⌘K ⌘→`",
+                  "action": "Focus into previous/next editor group"
+                },
+                {
+                  "shortcut": "`⌘K ⇧⌘←` / `⌘K ⇧⌘→`",
+                  "action": "Move editor left/right"
+                },
+                {
+                  "shortcut": "`⌘K ←` / `⌘K →`",
+                  "action": "Move active editor group"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "File management",
+          "level": 3,
+          "cards": [
+            {
+              "title": "File management",
+              "body": "| Shortcut         | Action                                  |\n| ---------------- | --------------------------------------- |\n| `⌘N`             | New File                                |\n| `⌘O`             | Open File...                            |\n| `⌘S`             | Save                                    |\n| `⇧⌘S`            | Save As...                              |\n| `⌥⌘S`            | Save All                                |\n| `⌘W`             | Close                                   |\n| `⌘K ⌘W`          | Close All                               |\n| `⇧⌘T`            | Reopen closed editor                    |\n| `⌘K`             | Enter Keep preview mode editor open     |\n| `⌃Tab` / `⌃⇧Tab` | Open next / previous                    |\n| `⌘K P`           | Copy path of active file                |\n| `⌘K R`           | Reveal active file in Finder            |\n| `⌘K O`           | Show active file in new window/instance |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`⌘N`",
+                  "action": "New File"
+                },
+                {
+                  "shortcut": "`⌘O`",
+                  "action": "Open File..."
+                },
+                {
+                  "shortcut": "`⌘S`",
+                  "action": "Save"
+                },
+                {
+                  "shortcut": "`⇧⌘S`",
+                  "action": "Save As..."
+                },
+                {
+                  "shortcut": "`⌥⌘S`",
+                  "action": "Save All"
+                },
+                {
+                  "shortcut": "`⌘W`",
+                  "action": "Close"
+                },
+                {
+                  "shortcut": "`⌘K ⌘W`",
+                  "action": "Close All"
+                },
+                {
+                  "shortcut": "`⇧⌘T`",
+                  "action": "Reopen closed editor"
+                },
+                {
+                  "shortcut": "`⌘K`",
+                  "action": "Enter Keep preview mode editor open"
+                },
+                {
+                  "shortcut": "`⌃Tab` / `⌃⇧Tab`",
+                  "action": "Open next / previous"
+                },
+                {
+                  "shortcut": "`⌘K P`",
+                  "action": "Copy path of active file"
+                },
+                {
+                  "shortcut": "`⌘K R`",
+                  "action": "Reveal active file in Finder"
+                },
+                {
+                  "shortcut": "`⌘K O`",
+                  "action": "Show active file in new window/instance"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Display",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Display",
+              "body": "| Shortcut     | Action                                     |\n| ------------ | ------------------------------------------ |\n| `⌃⌘F`        | Toggle full screen                         |\n| `⌥⌘0`        | Toggle editor layout (horizontal/vertical) |\n| `⌘=` / `⇧⌘-` | Zoom in/out                                |\n| `⌘B`         | Toggle Sidebar visibility                  |\n| `⇧⌘E`        | Show Explorer / Toggle focus               |\n| `⇧⌘F`        | Show Search                                |\n| `⌃⇧G`        | Show Source Control                        |\n| `⇧⌘D`        | Show Debug                                 |\n| `⇧⌘X`        | Show Extensions                            |\n| `⇧⌘H`        | Replace in files                           |\n| `⇧⌘J`        | Toggle Search details                      |\n| `⇧⌘U`        | Show Output panel                          |\n| `⇧⌘V`        | Open Markdown preview                      |\n| `⌘K V`       | Open Markdown preview to the side          |\n| `⌘K Z`       | Zen Mode (Esc Esc to exit)                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`⌃⌘F`",
+                  "action": "Toggle full screen"
+                },
+                {
+                  "shortcut": "`⌥⌘0`",
+                  "action": "Toggle editor layout (horizontal/vertical)"
+                },
+                {
+                  "shortcut": "`⌘=` / `⇧⌘-`",
+                  "action": "Zoom in/out"
+                },
+                {
+                  "shortcut": "`⌘B`",
+                  "action": "Toggle Sidebar visibility"
+                },
+                {
+                  "shortcut": "`⇧⌘E`",
+                  "action": "Show Explorer / Toggle focus"
+                },
+                {
+                  "shortcut": "`⇧⌘F`",
+                  "action": "Show Search"
+                },
+                {
+                  "shortcut": "`⌃⇧G`",
+                  "action": "Show Source Control"
+                },
+                {
+                  "shortcut": "`⇧⌘D`",
+                  "action": "Show Debug"
+                },
+                {
+                  "shortcut": "`⇧⌘X`",
+                  "action": "Show Extensions"
+                },
+                {
+                  "shortcut": "`⇧⌘H`",
+                  "action": "Replace in files"
+                },
+                {
+                  "shortcut": "`⇧⌘J`",
+                  "action": "Toggle Search details"
+                },
+                {
+                  "shortcut": "`⇧⌘U`",
+                  "action": "Show Output panel"
+                },
+                {
+                  "shortcut": "`⇧⌘V`",
+                  "action": "Open Markdown preview"
+                },
+                {
+                  "shortcut": "`⌘K V`",
+                  "action": "Open Markdown preview to the side"
+                },
+                {
+                  "shortcut": "`⌘K Z`",
+                  "action": "Zen Mode (Esc Esc to exit)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Debug",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Debug",
+              "body": "| Shortcut       | Action            |\n| -------------- | ----------------- |\n| `F9`           | Toggle breakpoint |\n| `F5`           | Start/Continue    |\n| `F11` / `⇧F11` | Step into/ out    |\n| `F10`          | Step over         |\n| `⇧F5`          | Stop              |\n| `⌘K ⌘I`        | Show hover        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F9`",
+                  "action": "Toggle breakpoint"
+                },
+                {
+                  "shortcut": "`F5`",
+                  "action": "Start/Continue"
+                },
+                {
+                  "shortcut": "`F11` / `⇧F11`",
+                  "action": "Step into/ out"
+                },
+                {
+                  "shortcut": "`F10`",
+                  "action": "Step over"
+                },
+                {
+                  "shortcut": "`⇧F5`",
+                  "action": "Stop"
+                },
+                {
+                  "shortcut": "`⌘K ⌘I`",
+                  "action": "Show hover"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Integrated terminal",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Integrated terminal",
+              "body": "| Shortcut          | Action                   |\n| ----------------- | ------------------------ |\n| <code>⌃\\`</code>  | Show integrated terminal |\n| <code>⌃⇧\\`</code> | Create new terminal      |\n| `⌘C`              | Copy selection           |\n| `⌘↑` / `↓`        | Scroll up/down           |\n| `PgUp` / `PgDn`   | Scroll page up/down      |\n| `⌘Home` / `End`   | Scroll to top/bottom     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "<code>⌃\\`</code>",
+                  "action": "Show integrated terminal"
+                },
+                {
+                  "shortcut": "<code>⌃⇧\\`</code>",
+                  "action": "Create new terminal"
+                },
+                {
+                  "shortcut": "`⌘C`",
+                  "action": "Copy selection"
+                },
+                {
+                  "shortcut": "`⌘↑` / `↓`",
+                  "action": "Scroll up/down"
+                },
+                {
+                  "shortcut": "`PgUp` / `PgDn`",
+                  "action": "Scroll page up/down"
+                },
+                {
+                  "shortcut": "`⌘Home` / `End`",
+                  "action": "Scroll to top/bottom"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [VS Code Keyboard shortcuts for Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)\n  _(code.visualstudio.com)_\n- [VS Code Keyboard shortcuts for macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)\n  _(code.visualstudio.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

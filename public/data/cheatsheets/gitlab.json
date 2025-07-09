@@ -1,0 +1,416 @@
+{
+  "id": "gitlab",
+  "metadata": {
+    "title": "GitLab",
+    "date": "2022-11-23T16:23:31.693Z",
+    "background": "bg-[#e47030]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 58 keyboard shortcuts found in GitLab\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Global",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Global",
+              "body": "| Shortcut           | Action                                                                   |\n| ------------------ | ------------------------------------------------------------------------ |\n| `?`                | Show or hide the shortcut reference sheet                                |\n| `Shift` `P`        | Go to your projects page                                                 |\n| `Shift` `G`        | Go to your groups page                                                   |\n| `Shift` `A`        | Go to your activity page                                                 |\n| `Shift` `L`        | Go to your milestones page                                               |\n| `Shift` `S`        | Go to your snippets page                                                 |\n| `S`                | Put the cursor in the issues or merge requests search                    |\n| `Shift` `I`        | Go to your issues page                                                   |\n| `Shift` `T`        | Go to your merge requests page                                           |\n| `P` `B`            | Show or hide the performance bar                                         |\n| `Up`               | Edit your last comment, you must be in a blank text field below a thread |\n| `Ctrl` `Shift` `P` | Toggle markdown preview when editing text in a text field                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`?`",
+                  "action": "Show or hide the shortcut reference sheet"
+                },
+                {
+                  "shortcut": "`Shift` `P`",
+                  "action": "Go to your projects page"
+                },
+                {
+                  "shortcut": "`Shift` `G`",
+                  "action": "Go to your groups page"
+                },
+                {
+                  "shortcut": "`Shift` `A`",
+                  "action": "Go to your activity page"
+                },
+                {
+                  "shortcut": "`Shift` `L`",
+                  "action": "Go to your milestones page"
+                },
+                {
+                  "shortcut": "`Shift` `S`",
+                  "action": "Go to your snippets page"
+                },
+                {
+                  "shortcut": "`S`",
+                  "action": "Put the cursor in the issues or merge requests search"
+                },
+                {
+                  "shortcut": "`Shift` `I`",
+                  "action": "Go to your issues page"
+                },
+                {
+                  "shortcut": "`Shift` `T`",
+                  "action": "Go to your merge requests page"
+                },
+                {
+                  "shortcut": "`P` `B`",
+                  "action": "Show or hide the performance bar"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Edit your last comment, you must be in a blank text field below a thread"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Toggle markdown preview when editing text in a text field"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Project",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Project",
+              "body": "| Shortcut | Action                                                |\n| -------- | ----------------------------------------------------- |\n| `G` `P`  | Go to the project home page                           |\n| `G` `V`  | Go to the project activity feed                       |\n| `G` `R`  | Go to the project releases list                       |\n| `G` `F`  | Go to the project files list                          |\n| `T`      | Go to the project file search page                    |\n| `G` `C`  | Go to the project commits list                        |\n| `G` `N`  | Go to the repository graph page                       |\n| `G` `D`  | Go to the repository charts                           |\n| `G` `I`  | Go to the project issues list                         |\n| `I`      | Go to the new issue page                              |\n| `G` `B`  | Go to the project issues boards list                  |\n| `G` `M`  | Go to the project merge requests list                 |\n| `G` `J`  | Go to the CI/CD jobs list                             |\n| `G` `L`  | Go to the project metrics                             |\n| `G` `E`  | Go to the project environments                        |\n| `G` `K`  | Go to the project Kubernetes cluster integration page |\n| `G` `S`  | Go to the project snippets list                       |\n| `G` `W`  | Go to the project wiki, if enabled                    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`G` `P`",
+                  "action": "Go to the project home page"
+                },
+                {
+                  "shortcut": "`G` `V`",
+                  "action": "Go to the project activity feed"
+                },
+                {
+                  "shortcut": "`G` `R`",
+                  "action": "Go to the project releases list"
+                },
+                {
+                  "shortcut": "`G` `F`",
+                  "action": "Go to the project files list"
+                },
+                {
+                  "shortcut": "`T`",
+                  "action": "Go to the project file search page"
+                },
+                {
+                  "shortcut": "`G` `C`",
+                  "action": "Go to the project commits list"
+                },
+                {
+                  "shortcut": "`G` `N`",
+                  "action": "Go to the repository graph page"
+                },
+                {
+                  "shortcut": "`G` `D`",
+                  "action": "Go to the repository charts"
+                },
+                {
+                  "shortcut": "`G` `I`",
+                  "action": "Go to the project issues list"
+                },
+                {
+                  "shortcut": "`I`",
+                  "action": "Go to the new issue page"
+                },
+                {
+                  "shortcut": "`G` `B`",
+                  "action": "Go to the project issues boards list"
+                },
+                {
+                  "shortcut": "`G` `M`",
+                  "action": "Go to the project merge requests list"
+                },
+                {
+                  "shortcut": "`G` `J`",
+                  "action": "Go to the CI/CD jobs list"
+                },
+                {
+                  "shortcut": "`G` `L`",
+                  "action": "Go to the project metrics"
+                },
+                {
+                  "shortcut": "`G` `E`",
+                  "action": "Go to the project environments"
+                },
+                {
+                  "shortcut": "`G` `K`",
+                  "action": "Go to the project Kubernetes cluster integration page"
+                },
+                {
+                  "shortcut": "`G` `S`",
+                  "action": "Go to the project snippets list"
+                },
+                {
+                  "shortcut": "`G` `W`",
+                  "action": "Go to the project wiki, if enabled"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Issues and Merge Requests",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Issues and Merge Requests",
+              "body": "| Shortcut | Action                                                             |\n| -------- | ------------------------------------------------------------------ |\n| `E`      | Edit description                                                   |\n| `A`      | Change assignee                                                    |\n| `M`      | Change milestone                                                   |\n| `L`      | Change label                                                       |\n| `R`      | Start writing a comment, if any text is selected it will be quoted |\n| `N`      | Move to next unresolved discussion, merge requests only            |\n| `P`      | Move to previous unresolved discussion, merge requests only        |\n| `]`      | Move to next file, merge requests only                             |\n| `[`      | Move to previous file, merge requests only                         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`E`",
+                  "action": "Edit description"
+                },
+                {
+                  "shortcut": "`A`",
+                  "action": "Change assignee"
+                },
+                {
+                  "shortcut": "`M`",
+                  "action": "Change milestone"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Change label"
+                },
+                {
+                  "shortcut": "`R`",
+                  "action": "Start writing a comment, if any text is selected it will be quoted"
+                },
+                {
+                  "shortcut": "`N`",
+                  "action": "Move to next unresolved discussion, merge requests only"
+                },
+                {
+                  "shortcut": "`P`",
+                  "action": "Move to previous unresolved discussion, merge requests only"
+                },
+                {
+                  "shortcut": "`]`",
+                  "action": "Move to next file, merge requests only"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Move to previous file, merge requests only"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Project Files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Project Files",
+              "body": "| Shortcut | Action                                                      |\n| -------- | ----------------------------------------------------------- |\n| `Up`     | Move selection up                                           |\n| `Down`   | Move selection down                                         |\n| `Enter`  | Open selection                                              |\n| `Esc`    | Go back to file list screen, only while searching for files |\n| `Y`      | Go to file permalink, only while viewing a file             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Up`",
+                  "action": "Move selection up"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Move selection down"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "Open selection"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Go back to file list screen, only while searching for files"
+                },
+                {
+                  "shortcut": "`Y`",
+                  "action": "Go to file permalink, only while viewing a file"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Web IDE",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Web IDE",
+              "body": "| Shortcut       | Action                                              |\n| -------------- | --------------------------------------------------- |\n| `Ctrl` `P`     | Search for, and then open, another file for editing |\n| `Ctrl` `Enter` | Commit, when editing the commit message             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Search for, and then open, another file for editing"
+                },
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Commit, when editing the commit message"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repository Graph",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repository Graph",
+              "body": "| Shortcut       | Action           |\n| -------------- | ---------------- |\n| `Left`         | Scroll left      |\n| `Right`        | Scroll right     |\n| `Up`           | Scroll up        |\n| `Down`         | Scroll down      |\n| `Shift` `Up`   | Scroll to top    |\n| `Shift` `Down` | Scroll to bottom |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Left`",
+                  "action": "Scroll left"
+                },
+                {
+                  "shortcut": "`Right`",
+                  "action": "Scroll right"
+                },
+                {
+                  "shortcut": "`Up`",
+                  "action": "Scroll up"
+                },
+                {
+                  "shortcut": "`Down`",
+                  "action": "Scroll down"
+                },
+                {
+                  "shortcut": "`Shift` `Up`",
+                  "action": "Scroll to top"
+                },
+                {
+                  "shortcut": "`Shift` `Down`",
+                  "action": "Scroll to bottom"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Wiki Pages",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Wiki Pages",
+              "body": "| Shortcut | Action         |\n| -------- | -------------- |\n| `E`      | Edit wiki page |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`E`",
+                  "action": "Edit wiki page"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Filtered Search",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Filtered Search",
+              "body": "| Shortcut           | Action                     |\n| ------------------ | -------------------------- |\n| `Ctrl` `Backspace` | Clear entire search filter |\n| `Alt` `Backspace`  | Clear one token at a time  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Backspace`",
+                  "action": "Clear entire search filter"
+                },
+                {
+                  "shortcut": "`Alt` `Backspace`",
+                  "action": "Clear one token at a time"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Epics",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Epics",
+              "body": "| Shortcut | Action                                                             |\n| -------- | ------------------------------------------------------------------ |\n| `R`      | Start writing a comment, if any text is selected it will be quoted |\n| `E`      | Edit description                                                   |\n| `L`      | Change a label                                                     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`R`",
+                  "action": "Start writing a comment, if any text is selected it will be quoted"
+                },
+                {
+                  "shortcut": "`E`",
+                  "action": "Edit description"
+                },
+                {
+                  "shortcut": "`L`",
+                  "action": "Change a label"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for GitLab](https://docs.gitlab.com/ee/user/shortcuts.html) _(docs.gitlab.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

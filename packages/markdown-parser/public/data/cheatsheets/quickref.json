@@ -1,0 +1,1085 @@
+{
+  "id": "quickref",
+  "metadata": {
+    "title": "CheatSheets",
+    "date": "2020-11-25T18:28:43.000Z",
+    "background": "bg-gradient-to-l from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500",
+    "tags": [
+      "guide",
+      "reference"
+    ],
+    "categories": [
+      "Other"
+    ],
+    "intro": "This is the magic syntax variant manual that you can use on CheatSheets.zip, It's a good practice for contributors.",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Develop Setup",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Develop Setup",
+              "body": "",
+              "footer": "- Clone Repository [View on Github](https://github.com/Fechin/reference.git)\n  ```shell script {.wrap}\n  $ git clone https://github.com/Fechin/reference.git\n  ```\n- Install Dependencies in the project directory\n  ```shell script\n  $ npm install\n  ```\n- Start a Dev Server [http://localhost:4000](http://localhost:4000)\n  ```shell script\n  $ npm run dev\n  ```\n- Create or modify `source/_posts/{name}.md`\n- Send us pull request and chill {.marker-timeline}\n\nIt's a good practice to refer to the source code of the\n[CheatSheets reference](https://github.com/Fechin/reference/blob/main/source/_posts/quickref.md).",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Directory Structure",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Directory Structure",
+              "body": "```yaml\n.\n├── source\n│   ├── _posts   # Cheatsheet source files\n│   │   ├── awk.md\n│   │   ├── vim.md # => cheatsheets.zip/vim\n│   │   ├── php.md\n│   │   ├── css.md # => cheatsheets.zip/css\n│   │   ├── ...\n│   └── widget   # Widget files\n│       └── chmod.html\n├── public       # Distribution files\n├── _config.yml\n├── gulpfile.js\n├── package.json\n├── postcss.config.js\n├── tailwind.config.js\n└── themes\n    └── coo      # Theme files\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Cheatsheet Structure",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Cheatsheet Structure",
+              "body": "```yaml\n.\n├── Section 1   # Header\n│   ├── Card 1\n│   ├── Card 2\n│   ├── Card 3\n│   ├── ...\n├── Section 2\n│   ├── Card 1\n│   │   ├── Paragraph\n│   │   ├── Code\n│   │   ├── <hr/> (aka \"---\")\n│   │   ├── List\n│   │   │   ├── Paragraph\n│   │   │   └── Code\n│   │   └── Table\n│   │       ├── Paragraph\n│   │       └── Code\n│   ├── Card 2\n│   ├── Card 3\n│   └── ...\n├── Section 3\n├── Section 4\n└── ...\n```",
+              "footer": "- One cheatsheet contains multiple sections\n- One section contains multiple cards\n- One card can contain Code, Table, List and Paragraph\n- One list can contain Code and Paragraph\n- One table can contain Code and Paragraph",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Syntax Variants",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Syntax Variants",
+              "body": "- [Section Variants](#section-variants)\n- [Card Variants](#card-variants)\n- [Table Variants](#table-variants)\n- [List Variants](#list-variants)\n- [Code Variants](#code-variants)\n- [Paragraph Variants](#paragraph-variants)\n- [Cards Example](#cards-example)\n\nAll the magic variants supported by CheatSheets.zip",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Create source/\\_posts/demo.md",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Create source/\\_posts/demo.md",
+              "body": "",
+              "footer": "```markdown",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "List Card",
+          "level": 3,
+          "cards": [
+            {
+              "title": "List Card",
+              "body": "- Share quick reference\n- Cheatsheet for developers ... {.style-timeline}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Table Card",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Table Card",
+              "body": "",
+              "footer": "| id  | name    |\n| --- | ------- |\n| 1   | Roberta |\n\n{.show-header}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Section Variants",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Section Overview",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Section Overview",
+              "body": "| -           | -                               |\n| ----------- | ------------------------------- |\n| `{.cols-1}` | one-column layout               |\n| `{.cols-2}` | two-column layout               |\n| `{.cols-3}` | three-column layout _(default)_ |\n| ...         |                                 |\n| `{.cols-6}` | six-column layout               |\n\n- Section contains multiple cards\n- Use {.cols-`n`} to specify section as a `n`-column layout\n- Click the preview button below to focus on the section\n\n[Preview](/quickref#section-variants) {.link-arrow}",
+              "footer": "",
+              "spanConfig": "secondary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".cols-1",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".cols-1",
+              "body": "```text\n# One Column Example {.cols-1}\n╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮\n┆  1                                  ┆\n╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯\n╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮\n┆  2                                  ┆\n╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯\n```",
+              "footer": "#### ↓ Source Code\n\n```markdown",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "One Column Example {.cols-1}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "1",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "2",
+          "level": 3,
+          "cards": [
+            {
+              "title": "2",
+              "body": "",
+              "footer": "```\n\n[Preview](resolutions#lists-of-resolutions) {.link-arrow}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".cols-2",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".cols-2",
+              "body": "```text\n# Two Columns Example\n╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮\n┆  1              ┆ ┆  2              ┆\n╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯\n╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮\n┆  3              ┆\n╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯\n```",
+              "footer": "#### ↓ Source Code\n\n```markdown",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Two Columns Example {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "1",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "2",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "3",
+          "level": 3,
+          "cards": [
+            {
+              "title": "3",
+              "body": "",
+              "footer": "```\n\n[Preview](resolutions#getting-started) {.link-arrow}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".cols-3 (default)",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".cols-3 (default)",
+              "body": "```text\n# Default\n╭┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈╮\n┆  1       ┆ ┆  2       ┆ ┆  3       ┆\n╰┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈╯\n╭┈┈┈┈┈┈┈┈┈┈╮\n┆  4       ┆\n╰┈┈┈┈┈┈┈┈┈┈╯\n```",
+              "footer": "#### ↓ Source Code\n\n```markdown",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Default",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "1",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "2",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "3",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "4",
+          "level": 3,
+          "cards": [
+            {
+              "title": "4",
+              "body": "",
+              "footer": "```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Card Variants",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Card Overview",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Card Overview",
+              "body": "",
+              "footer": "#### Specifies the number of columns the card spans\n\n| -               | -                      |\n| --------------- | ---------------------- |\n| `{.col-span-2}` | [Example](#col-span-2) |\n| `{.col-span-3}` |                        |\n| ...             |                        |\n| `.col-span-6}`  |                        |\n\n#### Specifies the number of rows the card spans {.text-left}\n\n| -               | -                      |\n| --------------- | ---------------------- |\n| `{.row-span-2}` | [Example](#row-span-2) |\n| `{.row-span-3}` |                        |\n| ...             |                        |\n| `{.row-span-6}` |                        |\n\n#### Emphasize card (aka `H3` Section)\n\n| -              | -                                         |\n| -------------- | ----------------------------------------- |\n| `{.primary}`   | Red titles, [Example](#primary-card)      |\n| `{.secondary}` | Yellow titles, [Example](#secondary-card) |\n\nA complete example: [Cards Example](#cards-example)",
+              "spanConfig": "secondary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".col-span-2",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".col-span-2",
+              "body": "",
+              "footer": "#### The fifth card spans two columns\n\n```text\n╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮\n┆  1      ┆ ┆  2      ┆ ┆  3      ┆\n╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯\n╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮\n┆  4      ┆ ┆  5                  ┆\n╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯\n```\n\n```markdown",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "1",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "2",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "3",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "4",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "5",
+          "level": 3,
+          "cards": [
+            {
+              "title": "5",
+              "body": "```",
+              "footer": "#### The second card spans two columns\n\n```text\n╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮\n┆  1      ┆ ┆  2                  ┆\n╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯\n╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮\n┆  3      ┆ ┆  4      ┆ ┆  5      ┆\n╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯\n```\n\n```markdown",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "1",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "2",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "3",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "4",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "5",
+          "level": 3,
+          "cards": [
+            {
+              "title": "5",
+              "body": "```",
+              "footer": "#### The fourth card spans two columns\n\n```text\n╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮\n┆  1      ┆ ┆  2      ┆ ┆  3      ┆\n╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯\n╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮\n┆  4                  ┆ ┆  5      ┆\n╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯\n```\n\n```markdown",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "1",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "2",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "3",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "4",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "5",
+          "level": 3,
+          "cards": [
+            {
+              "title": "5",
+              "body": "",
+              "footer": "```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".row-span-2",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".row-span-2",
+              "body": "",
+              "footer": "#### The first card spans two rows\n\n```text\n╭┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮\n┆ 1      ┆ ┆ 2       ┆ ┆ 3       ┆\n┆        ┆ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯\n┆        ┆ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮\n┆        ┆ ┆ 4       ┆ ┆ 5       ┆\n╰┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯\n```\n\n```markdown",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "1",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "2",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "3",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "4",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "5",
+          "level": 3,
+          "cards": [
+            {
+              "title": "5",
+              "body": "```",
+              "footer": "#### The second card spans two rows\n\n```text\n╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮\n┆ 1       ┆ ┆ 2      ┆ ┆ 3       ┆\n╰┈┈┈┈┈┈┈┈┈╯ ┆        ┆ ╰┈┈┈┈┈┈┈┈┈╯\n╭┈┈┈┈┈┈┈┈┈╮ ┆        ┆ ╭┈┈┈┈┈┈┈┈┈╮\n┆ 4       ┆ ┆        ┆ ┆ 5       ┆\n╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯\n```\n\n```markdown",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "1",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "2",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "3",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "4",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "5",
+          "level": 3,
+          "cards": [
+            {
+              "title": "5",
+              "body": "```",
+              "footer": "#### The third card spans two rows\n\n```text\n╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈╮\n┆ 1       ┆ ┆ 2       ┆ ┆ 3      ┆\n╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ┆        ┆\n╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ┆        ┆\n┆ 4       ┆ ┆ 5       ┆ ┆        ┆\n╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈╯\n```\n\n```markdown",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "1",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "2",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "3",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "4",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "5",
+          "level": 3,
+          "cards": [
+            {
+              "title": "5",
+              "body": "",
+              "footer": "```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".col-span-2 .row-span-2",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".col-span-2 .row-span-2",
+              "body": "```text\n╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮\n┆ 1                   ┆ ┆ 2       ┆\n┆                     ┆ ╰┈┈┈┈┈┈┈┈┈╯\n┆                     ┆ ╭┈┈┈┈┈┈┈┈┈╮\n┆                     ┆ ┆ 3       ┆\n╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯\n╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮ ╭┈┈┈┈┈┈┈┈┈╮\n┆ 4       ┆ ┆ 5       ┆ ┆ 6       ┆\n╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯ ╰┈┈┈┈┈┈┈┈┈╯\n```",
+              "footer": "#### ↓ Source Code\n\n```markdown",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "1",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "2",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "3",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "4",
+          "level": 3,
+          "cards": [],
+          "subsections": []
+        },
+        {
+          "title": "5",
+          "level": 3,
+          "cards": [
+            {
+              "title": "5",
+              "body": "",
+              "footer": "```\n\nSpans rows and columns at the same time",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Table Variants",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Table Overview",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Table Overview",
+              "body": "| -                | -                            |\n| ---------------- | ---------------------------- |\n| `{.show-header}` | Show the header of the table |\n| `{.shortcuts}`   | Render shortcut key style    |\n| `{.bold-first}`  | Bold first column            |\n| `{.plus-first}`  | Plus first column            |\n| `{.show-header}` | Show headers                 |\n| `{.left-text}`   | Align the last column left   |\n| `{.no-wrap}`     | Don't wrap text              |",
+              "footer": "",
+              "spanConfig": "secondary",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`{.show-header}`",
+                  "action": "Show the header of the table"
+                },
+                {
+                  "shortcut": "``",
+                  "action": "Render shortcut key style"
+                },
+                {
+                  "shortcut": "`{.bold-first}`",
+                  "action": "Bold first column"
+                },
+                {
+                  "shortcut": "`{.plus-first}`",
+                  "action": "Plus first column"
+                },
+                {
+                  "shortcut": "`{.show-header}`",
+                  "action": "Show headers"
+                },
+                {
+                  "shortcut": "`{.left-text}`",
+                  "action": "Align the last column left"
+                },
+                {
+                  "shortcut": "`{.no-wrap}`",
+                  "action": "Don't wrap text"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic table",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic table",
+              "body": "| Pattern  | Description            |\n| -------- | ---------------------- |\n| `[abc]`  | Match a, b or c        |\n| `[^abc]` | Match except a, b or c |\n| `[a-z]`  | Match a to z           |",
+              "footer": "#### ↓ Source Code\n\n```markdown\n| Pattern  | Description            |\n| -------- | ---------------------- |\n| `[abc]`  | Match a, b or c        |\n| `[^abc]` | Match except a, b or c |\n| `[a-z]`  | Match a to z           |\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".shortcuts",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".shortcuts",
+              "body": "| -          | -        |\n| ---------- | -------- |\n| `Ctrl` `N` | New File |\n| `Ctrl` `S` | Save     |\n\n{.shortcuts}",
+              "footer": "#### ↓ Source Code\n\n```markdown\n| -          | -        |\n| ---------- | -------- |\n| `Ctrl` `N` | New File |\n| `Ctrl` `S` | Save     |\n\n{.shortcuts}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "New File"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Save"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".show-header",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".show-header",
+              "body": "| Pattern  | Description            |\n| -------- | ---------------------- |\n| `[abc]`  | Match a, b or c        |\n| `[^abc]` | Match except a, b or c |\n| `[a-z]`  | Match a to z           |\n\n{.show-header}",
+              "footer": "#### ↓ Source Code\n\n```markdown\n| Pattern  | Description            |\n| -------- | ---------------------- |\n| `[abc]`  | Match a, b or c        |\n| `[^abc]` | Match except a, b or c |\n| `[a-z]`  | Match a to z           |\n\n{.show-header}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".left-text",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".left-text",
+              "body": "| Pattern  | Description            |\n| -------- | ---------------------- |\n| `[abc]`  | Match a, b or c        |\n| `[^abc]` | Match except a, b or c |\n| `[a-z]`  | Match a to z           |\n\n{.left-text}",
+              "footer": "#### ↓ Source Code\n\n```markdown\n| Pattern  | Description            |\n| -------- | ---------------------- |\n| `[abc]`  | Match a, b or c        |\n| `[^abc]` | Match except a, b or c |\n| `[a-z]`  | Match a to z           |\n\n{.left-text}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".bold-first",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".bold-first",
+              "body": "| Pattern  | Description            |\n| -------- | ---------------------- |\n| `[abc]`  | Match a, b or c        |\n| `[^abc]` | Match except a, b or c |\n| `[a-z]`  | Match a to z           |\n\n{.bold-first}",
+              "footer": "#### ↓ Source Code\n\n```markdown\n| Pattern  | Description            |\n| -------- | ---------------------- |\n| `[abc]`  | Match a, b or c        |\n| `[^abc]` | Match except a, b or c |\n| `[a-z]`  | Match a to z           |\n\n{.bold-first}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "List Variants",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "List Overview",
+          "level": 3,
+          "cards": [
+            {
+              "title": "List Overview",
+              "body": "List columns\n\n| -           | -                      |\n| ----------- | ---------------------- |\n| `{.cols-1}` | one column _(default)_ |\n| `{.cols-2}` | two columns            |\n| ...         |                        |\n| `{.cols-6}` |                        |\n\nList markers\n\n| -                    | -                          |\n| -------------------- | -------------------------- |\n| `{.marker-none}`     | Marker is not set          |\n| `{.marker-timeline}` | Marker style like timeline |\n| `{.marker-round}`    | Round marker               |",
+              "footer": "",
+              "spanConfig": "secondary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "One Column (Default)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "One Column (Default)",
+              "body": "- Share quick reference.\n- cheat sheet for developers.\n- Contributed by open source angels.\n- Manage your code snippets.",
+              "footer": "#### ↓ Source Code\n\n```markdown\n- Share quick reference.\n- cheat sheet for developers.\n- Contributed by open source angels.\n- Manage your code snippets.\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".cols-3",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".cols-3",
+              "body": "- Share\n- Quick\n- Reference\n- And\n- Cheat Sheet\n- For\n- Developers\n\n{.cols-3}",
+              "footer": "#### ↓ Source Code\n\n```markdown\n- Share\n- Quick\n- Reference\n- And\n- Cheat Sheet\n- For\n- Developers\n\n{.cols-3}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".marker-timeline",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".marker-timeline",
+              "body": "- **Renamed** to `new_name`\n  ```shell script\n  $ git branch -m <new_name>\n  ```\n- **Push** and reset\n  ```shell script\n  $ git push origin -u <new_name>\n  ```\n- **Delete** remote branch `shell script     $ git push origin --delete <old>     `\n\n{.marker-timeline}",
+              "footer": "#### ↓ Source Code\n\n````markdown\n- **Renamed** to `new_name`\n  ```shell script\n  $ git branch -m <new_name>\n  ```\n- **Push** and reset\n  ```shell script\n  $ git push origin -u <new_name>\n  ```\n- **Delete** remote branch `shell script     $ git push origin --delete <old>     `\n\n{.marker-timeline}\n````",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".marker-none",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".marker-none",
+              "body": "- Share\n- Quick\n- Reference\n- And\n- Cheat Sheet\n\n{.cols-2 .marker-none}",
+              "footer": "#### ↓ Source Code\n\n```markdown\n- Share\n- Quick\n- Reference\n- And\n- Cheat Sheet\n\n{.cols-2 .marker-none}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": ".marker-round",
+          "level": 3,
+          "cards": [
+            {
+              "title": ".marker-round",
+              "body": "- Share\n- Quick\n- Reference\n\n{.marker-round}",
+              "footer": "#### ↓ Source Code\n\n```markdown\n- Share\n- Quick\n- Reference\n\n{.marker-round}\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Code Variants",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Basic code",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic code",
+              "body": "```js\ncheatsheets.zip.is(() => {\n  awesome.site();\n});\n```",
+              "footer": "#### ↓ Source Code\n\n`````markdown\n````js\ncheatsheets.zip.is(() => {\n  awesome.site()\n})\n\\```\n\n```js\nhere.is.some.more()\n\\```\n````\n`````\n\nCode blocks can be placed one after the other.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Code with headings",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Code with headings",
+              "body": "",
+              "footer": "#### index.js\n\n```js\ncheatsheets.zip.is(() => {\n  awesome.site();\n});\n```\n\n#### other.js\n\n```js\nhere.is.some.more();\n```\n\n#### ↓ Source Code\n\n````markdown\n#### index.js\n\n```js\ncheatsheets.zip.is(() => {\n  awesome.site();\n});\n```\n\n#### other.js\n\n```js\nhere.is.some.more();\n```\n````\n\nCode blocks can have headings.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Line wrapping",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Line wrapping",
+              "body": "```js {.wrap}\n<script>(function(d,s){if(window.Promise&&[].includes&&Object.assign&&window.Map)return;var js,sc=d.getElementsByTagName(s)[0];js=d.createElement(s);js.src='https://cdn.polyfill.io/v2/polyfill.min.js';sc.parentNode.insertBefore(js, sc);}(document,'script'))</script>\n```",
+              "footer": "#### ↓ Source Code\n\n````markdown {.wrap}\n```js {.wrap}\n<script>(function(d,s){if(window.Promise&&[].includes&&Object.assign&&window.Map)return;var js,sc=d.getElementsByTagName(s)[0];js=d.createElement(s);js.src='https://cdn.polyfill.io/v2/polyfill.min.js';sc.parentNode.insertBefore(js, sc);}(document,'script'))</script>\n```\n````\n\nAdd `{.wrap}` to wrap long lines.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Long lines (default)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Long lines (default)",
+              "body": "```js\nfunction createNode(nodeName: string, options: { key: string }) {\n  return true\n}\n```",
+              "footer": "Long lines will have scrollbars.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Paragraph Variants",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Header paragraphs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Header paragraphs",
+              "body": "The text that appears in the header",
+              "footer": "#### ↓ Source Code\n\n```markdown {.wrap}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic paragraphs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic paragraphs",
+              "body": "",
+              "footer": "The text that appears in the header\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Middle paragraphs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Middle paragraphs",
+              "body": "- This is a list\n\nThis paragraph will appear in the middle\n\n```js\ncheatsheets.is(() => {\n  awesome.site();\n});\n```",
+              "footer": "#### ↓ Source Code\n\n````markdown",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Middle paragraphs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Middle paragraphs",
+              "body": "```js\ncheatsheets.is(() => {\n  awesome.site();\n});\n```",
+              "footer": "````",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Footer paragraphs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Footer paragraphs",
+              "body": "```js\ncheatsheets.is(() => {\n  awesome.site();\n});\n```",
+              "footer": "#### ↓ Source Code\n\n````markdown\n```js\ncheatsheets.is(() => {\n  awesome.site();\n});\n```\n\nThis paragraph will appear in the footer\n````\n\nThis paragraph will appear in the footer",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Crosslink",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Crosslink",
+              "body": "```js\n[Home](/) {.link-arrow}\n```",
+              "footer": "[Home](/) {.link-arrow}",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Cards Example",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "row-span-2",
+          "level": 3,
+          "cards": [
+            {
+              "title": "row-span-2",
+              "body": "```\n1\n```",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "col-span-2",
+          "level": 3,
+          "cards": [
+            {
+              "title": "col-span-2",
+              "body": "```\n2\n```",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Primary Card",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Primary Card",
+              "body": "```\n3\n```",
+              "footer": "Add `{.primary}` to make the title red.",
+              "spanConfig": "primary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Secondary Card",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Secondary Card",
+              "body": "```\n4\n```",
+              "footer": "Add `{.secondary}` to make the title yellow.",
+              "spanConfig": "secondary",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "col-span-3",
+          "level": 3,
+          "cards": [
+            {
+              "title": "col-span-3",
+              "body": "```\n5\n```",
+              "footer": "",
+              "spanConfig": "col-span-3",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

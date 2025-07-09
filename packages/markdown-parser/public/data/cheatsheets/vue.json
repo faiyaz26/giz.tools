@@ -1,0 +1,379 @@
+{
+  "id": "vue",
+  "metadata": {
+    "title": "Vue",
+    "date": "2025-06-13T14:45:00.000Z",
+    "background": "bg-[#43CF96]",
+    "tags": [
+      "vue",
+      "web"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "A Vue 3 cheat sheet with the most important concepts, reactivity, component system, routing, and more. Updated for the latest version and perfect for both beginners and advanced users.\n",
+    "plugins": [
+      "copyCode",
+      "runCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "📘 Vue.js 3 Cheatsheet – Beginner to Advanced",
+      "level": 2,
+      "cards": [
+        {
+          "title": "📘 Vue.js 3 Cheatsheet – Beginner to Advanced",
+          "body": "> The ultimate reference for mastering Vue 3.",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "⚙️ 1. Setup",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "CDN (Quick Start)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CDN (Quick Start)",
+              "body": "```html\n<script src=\"https://unpkg.com/vue@3\"></script>\n<div id=\"app\">{{ message }}</div>\n<script>\n  Vue.createApp({\n    data() {\n      return { message: \"Hello Vue!\" };\n    }\n  }).mount(\"#app\");\n</script>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Vite + Vue",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Vite + Vue",
+              "body": "```bash\nnpm create vite@latest my-vue-app --template vue\ncd my-vue-app\nnpm install\nnpm run dev\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "🧠 2. App Structure",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🧠 2. App Structure",
+          "body": "```\nsrc/\n├─ components/\n├─ views/\n├─ App.vue\n├─ main.js\n```",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "📦 3. Data, Methods, Template",
+      "level": 2,
+      "cards": [
+        {
+          "title": "📦 3. Data, Methods, Template",
+          "body": "```js\ndata() {\n  return {\n    count: 0,\n    message: \"Welcome!\"\n  };\n},\nmethods: {\n  increment() {\n    this.count++;\n  }\n}\n```",
+          "footer": "```html\n<h1>{{ message }}</h1>\n<button @click=\"increment\">+</button>\n```",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🧰 4. Directives",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Example",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Example",
+              "body": "```html\n<input v-model=\"name\" />\n<p v-if=\"name\">Hi, {{ name }}!</p>\n<ul>\n  <li v-for=\"item in list\" :key=\"item.id\">{{ item }}</li>\n</ul>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "🪝 5. Lifecycle Hooks",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🪝 5. Lifecycle Hooks",
+          "body": "```js\ncreated() {},\nmounted() {},\nupdated() {},\nunmounted() {}\n```",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🎯 6. Events",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🎯 6. Events",
+          "body": "```html\n<button @click=\"sayHi\">Click</button>\n<input @keyup.enter=\"submit\" />\n```",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🔁 7. Computed & Watch",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🔁 7. Computed & Watch",
+          "body": "```js\ncomputed: {\n  reversed() {\n    return this.message.split('').reverse().join('');\n  }\n},\nwatch: {\n  count(newVal, oldVal) {\n    console.log(`Count changed from ${oldVal} to ${newVal}`);\n  }\n}\n```",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🧱 8. Components",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Register + Use",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Register + Use",
+              "body": "```js\napp.component(\"Greeting\", {\n  props: [\"name\"],\n  template: `<h1>Hello, {{ name }}!</h1>`\n});\n```",
+              "footer": "```html\n<Greeting name=\"Sumangal\" />\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "🔗 9. Props & Emits",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Props",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Props",
+              "body": "```js\nprops: {\n  title: String,\n  age: {\n    type: Number,\n    default: 18\n  }\n}\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Emit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Emit",
+              "body": "```js\nthis.$emit(\"custom-event\", payload);\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "🔄 10. v-model with Components",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🔄 10. v-model with Components",
+          "body": "```js\nprops: ['modelValue'],\nemits: ['update:modelValue']\n```",
+          "footer": "```html\n<input\n:value=\"modelValue\"\n@input=\"$emit('update:modelValue', $event.target.value)\"\n/>\n```",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "⚒ 11. Composition API",
+      "level": 2,
+      "cards": [
+        {
+          "title": "⚒ 11. Composition API",
+          "body": "```js\nimport { ref, computed } from \"vue\";\n\nexport default {\n  setup() {\n    const count = ref(0);\n    const double = computed(() => count.value * 2);\n\n    const increment = () => count.value++;\n\n    return { count, double, increment };\n  }\n};\n```",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🌐 12. Vue Router",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "router.js",
+          "level": 3,
+          "cards": [
+            {
+              "title": "router.js",
+              "body": "```js\nimport { createRouter, createWebHistory } from \"vue-router\";\nimport Home from \"./views/Home.vue\";\nimport About from \"./views/About.vue\";\n\nconst routes = [\n  { path: \"/\", component: Home },\n  { path: \"/about\", component: About }\n];\n\nexport default createRouter({\n  history: createWebHistory(),\n  routes\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "main.js",
+          "level": 3,
+          "cards": [
+            {
+              "title": "main.js",
+              "body": "```js\nimport { createApp } from \"vue\";\nimport App from \"./App.vue\";\nimport router from \"./router\";\n\nconst app = createApp(App);\napp.use(router).mount(\"#app\");\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "📦 13. Pinia (Vuex Alternative)",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "store/counter.js",
+          "level": 3,
+          "cards": [
+            {
+              "title": "store/counter.js",
+              "body": "```js\nimport { defineStore } from \"pinia\";\n\nexport const useCounterStore = defineStore(\"counter\", {\n  state: () => ({ count: 0 }),\n  actions: {\n    increment() {\n      this.count++;\n    }\n  }\n});\n```",
+              "footer": "```js\nconst counter = useCounterStore();\ncounter.increment();\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "🎨 14. Slots",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🎨 14. Slots",
+          "body": "```html\n<!-- Default -->\n<slot></slot>\n\n<!-- Named -->\n<slot name=\"header\"></slot>\n\n<!-- Scoped -->\n<slot :user=\"user\"></slot>\n```",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🧪 15. Testing",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Vitest + Vue Test Utils",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Vitest + Vue Test Utils",
+              "body": "```bash\nnpm install vitest @vue/test-utils\n```",
+              "footer": "```js\nimport { mount } from \"@vue/test-utils\";\nimport MyComponent from \"@/components/MyComponent.vue\";\ntest(\"renders\", () => {\nconst wrapper = mount(MyComponent);\nexpect(wrapper.text()).toContain(\"Hello\");\n});\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "🧼 16. Best Practices",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🧼 16. Best Practices",
+          "body": "* Use `ref()` for primitives, `reactive()` for objects\n* Use `<script setup>` syntax in SFCs\n* Break UI into small, reusable components\n* Always define `key` in `v-for`\n* Use slots for flexible composition",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "🛠 17. Dev Tools",
+      "level": 2,
+      "cards": [
+        {
+          "title": "🛠 17. Dev Tools",
+          "body": "* 🧩 [Vue DevTools](https://devtools.vuejs.org/)\n* 🧠 [Volar](https://github.com/vuejs/language-tools) for VSCode\n* ⚡ [Vite](https://vitejs.dev) for fast dev environment",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "📚 18. Official Resources",
+      "level": 2,
+      "cards": [
+        {
+          "title": "📚 18. Official Resources",
+          "body": "* 📘 [Vue Docs](https://vuejs.org)\n* 🧭 [Router Docs](https://router.vuejs.org)\n* 📦 [Pinia Docs](https://pinia.vuejs.org)\n* 🧪 [Composition API FAQ](https://vuejs.org/guide/extras/composition-api-faq.html)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

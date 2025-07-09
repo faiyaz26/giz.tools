@@ -1,0 +1,292 @@
+{
+  "id": "bitbucket",
+  "metadata": {
+    "title": "Bitbucket",
+    "date": "2022-11-23T16:23:31.699Z",
+    "background": "bg-[#4382f7]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 35 keyboard shortcuts found on Bitbucket\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "All pages",
+          "level": 3,
+          "cards": [
+            {
+              "title": "All pages",
+              "body": "| Shortcut | Action                              |\n| -------- | ----------------------------------- |\n| `?`      | Display keyboard shortcuts          |\n| `[`      | Expand and collapse left navigation |\n| `/`      | Focus the site search               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`?`",
+                  "action": "Display keyboard shortcuts"
+                },
+                {
+                  "shortcut": "`[`",
+                  "action": "Expand and collapse left navigation"
+                },
+                {
+                  "shortcut": "`/`",
+                  "action": "Focus the site search"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Most pages (except Your Work and Source)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Most pages (except Your Work and Source)",
+              "body": "| Shortcut | Action                         |\n| -------- | ------------------------------ |\n| `.`      | Open the Omnibar               |\n| `J`      | Select next item               |\n| `K`      | Select previous item           |\n| `Enter`  | View selected item             |\n| `G` `D`  | Go to Your Work dashboard      |\n| `G` `A`  | Go to your Personal Settings   |\n| `Esc`    | Dismiss dialog or remove focus |\n| `U`      | Go back                        |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`.`",
+                  "action": "Open the Omnibar"
+                },
+                {
+                  "shortcut": "`J`",
+                  "action": "Select next item"
+                },
+                {
+                  "shortcut": "`K`",
+                  "action": "Select previous item"
+                },
+                {
+                  "shortcut": "`Enter`",
+                  "action": "View selected item"
+                },
+                {
+                  "shortcut": "`G` `D`",
+                  "action": "Go to Your Work dashboard"
+                },
+                {
+                  "shortcut": "`G` `A`",
+                  "action": "Go to your Personal Settings"
+                },
+                {
+                  "shortcut": "`Esc`",
+                  "action": "Dismiss dialog or remove focus"
+                },
+                {
+                  "shortcut": "`U`",
+                  "action": "Go back"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repository pages (except for Source)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repository pages (except for Source)",
+              "body": "| Shortcut | Action                        |\n| -------- | ----------------------------- |\n| `C` `R`  | Create a repository           |\n| `I` `R`  | Import a repository           |\n| `R` `S`  | Open repository source        |\n| `R` `C`  | Open repository commits       |\n| `R` `B`  | Open repository branches      |\n| `R` `P`  | Open repository pull requests |\n| `R` `I`  | Open repository issues        |\n| `R` `W`  | Open repository wiki          |\n| `R` `D`  | Open repository downloads     |\n| `R` `A`  | Open repository settings      |\n| `F`      | Search for file               |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`C` `R`",
+                  "action": "Create a repository"
+                },
+                {
+                  "shortcut": "`I` `R`",
+                  "action": "Import a repository"
+                },
+                {
+                  "shortcut": "`R` `S`",
+                  "action": "Open repository source"
+                },
+                {
+                  "shortcut": "`R` `C`",
+                  "action": "Open repository commits"
+                },
+                {
+                  "shortcut": "`R` `B`",
+                  "action": "Open repository branches"
+                },
+                {
+                  "shortcut": "`R` `P`",
+                  "action": "Open repository pull requests"
+                },
+                {
+                  "shortcut": "`R` `I`",
+                  "action": "Open repository issues"
+                },
+                {
+                  "shortcut": "`R` `W`",
+                  "action": "Open repository wiki"
+                },
+                {
+                  "shortcut": "`R` `D`",
+                  "action": "Open repository downloads"
+                },
+                {
+                  "shortcut": "`R` `A`",
+                  "action": "Open repository settings"
+                },
+                {
+                  "shortcut": "`F`",
+                  "action": "Search for file"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repository pages (except for Source and Settings)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repository pages (except for Source and Settings)",
+              "body": "| Shortcut | Action                   |\n| -------- | ------------------------ |\n| `X` `F`  | Fork repository          |\n| `X` `B`  | Create branch            |\n| `X` `C`  | Compare branches or tags |\n| `X` `P`  | Create pull request      |\n| `X` `I`  | Create issue             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`X` `F`",
+                  "action": "Fork repository"
+                },
+                {
+                  "shortcut": "`X` `B`",
+                  "action": "Create branch"
+                },
+                {
+                  "shortcut": "`X` `C`",
+                  "action": "Compare branches or tags"
+                },
+                {
+                  "shortcut": "`X` `P`",
+                  "action": "Create pull request"
+                },
+                {
+                  "shortcut": "`X` `I`",
+                  "action": "Create issue"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Pull requests",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Pull requests",
+              "body": "| Shortcut       | Action                                  |\n| -------------- | --------------------------------------- |\n| `Ctrl` `Enter` | Submit a comment                        |\n| `T` `C`        | Toggle display of inline comments       |\n| `P` `D`        | Switch to the pull request diff tab     |\n| `P` `C`        | Switch to the pull request commits tab  |\n| `P` `A`        | Switch to the pull request activity tab |\n| `Shift` `T`    | Show the list of tasks                  |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Enter`",
+                  "action": "Submit a comment"
+                },
+                {
+                  "shortcut": "`T` `C`",
+                  "action": "Toggle display of inline comments"
+                },
+                {
+                  "shortcut": "`P` `D`",
+                  "action": "Switch to the pull request diff tab"
+                },
+                {
+                  "shortcut": "`P` `C`",
+                  "action": "Switch to the pull request commits tab"
+                },
+                {
+                  "shortcut": "`P` `A`",
+                  "action": "Switch to the pull request activity tab"
+                },
+                {
+                  "shortcut": "`Shift` `T`",
+                  "action": "Show the list of tasks"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repository pages with sidebar",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repository pages with sidebar",
+              "body": "| Shortcut | Action                            |\n| -------- | --------------------------------- |\n| `]`      | Expand and collapse right sidebar |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`]`",
+                  "action": "Expand and collapse right sidebar"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Repository source",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Repository source",
+              "body": "| Shortcut | Action                |\n| -------- | --------------------- |\n| `F`      | Focus the file filter |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`F`",
+                  "action": "Focus the file filter"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for Bitbucket](https://confluence.atlassian.com/bitbucket/keyboard-shortcuts-269980511.html)\n  _(confluence.atlassian.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

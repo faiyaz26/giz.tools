@@ -1,0 +1,351 @@
+{
+  "id": "htmx",
+  "metadata": {
+    "title": "HTMX",
+    "date": "2025-06-07T19:30:00.000Z",
+    "background": "bg-[#ff5f4d]",
+    "tags": [
+      "frontend",
+      "javascript",
+      "htmx"
+    ],
+    "categories": [
+      "Programming"
+    ],
+    "intro": "A modern, minimal JavaScript library that allows you to create dynamic web interfaces using HTML attributes.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting Started {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "CDN Import",
+          "level": 3,
+          "cards": [
+            {
+              "title": "CDN Import",
+              "body": "```html\n<script src=\"https://unpkg.com/htmx.org@1.9.2\"></script>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Basic Usage",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Basic Usage",
+              "body": "```html\n<button hx-get=\"/hello\" hx-target=\"#result\">Say Hi</button>\n<div id=\"result\"></div>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Server Response",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Server Response",
+              "body": "```html\n<!-- /hello response -->\n<p>Hello from server</p>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Core Attributes {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "`hx-get`, `hx-post`, etc.",
+          "level": 3,
+          "cards": [
+            {
+              "title": "`hx-get`, `hx-post`, etc.",
+              "body": "```html\n<a hx-get=\"/page\">Load Page</a>\n<form hx-post=\"/submit\"></form>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "`hx-target`",
+          "level": 3,
+          "cards": [
+            {
+              "title": "`hx-target`",
+              "body": "```html\n<button hx-get=\"/data\" hx-target=\"#box\"></button>\n<div id=\"box\"></div>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "`hx-trigger`",
+          "level": 3,
+          "cards": [
+            {
+              "title": "`hx-trigger`",
+              "body": "```html\n<input\n  hx-get=\"/search\"\n  hx-trigger=\"keyup changed delay:300ms\"\n  hx-target=\"#results\"\n/>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Swap & Out of Band {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "`hx-swap`",
+          "level": 3,
+          "cards": [
+            {
+              "title": "`hx-swap`",
+              "body": "```html\n<div hx-get=\"/frag\" hx-swap=\"innerHTML\"></div>\n```",
+              "footer": "- `outerHTML`\n- `innerHTML`\n- `beforebegin`, `afterbegin`, etc.",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "`hx-swap-oob`",
+          "level": 3,
+          "cards": [
+            {
+              "title": "`hx-swap-oob`",
+              "body": "```html\n<div hx-swap-oob=\"true\" id=\"msg\"></div>\n```",
+              "footer": "_Useful for global updates from partials._",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Swap Modifiers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Swap Modifiers",
+              "body": "```html\nhx-swap=\"outerHTML transition:true swap:1s\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Forms & Events {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Auto POST on Submit",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Auto POST on Submit",
+              "body": "```html\n<form hx-post=\"/submit\" hx-target=\"#status\">\n  <input name=\"name\" />\n  <button type=\"submit\">Send</button>\n</form>\n<div id=\"status\"></div>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "`hx-include`",
+          "level": 3,
+          "cards": [
+            {
+              "title": "`hx-include`",
+              "body": "```html\n<input id=\"user-id\" name=\"id\" />\n<button hx-post=\"/update\" hx-include=\"#user-id\">Update</button>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "`hx-vals`",
+          "level": 3,
+          "cards": [
+            {
+              "title": "`hx-vals`",
+              "body": "```html\n<button hx-post=\"/save\" hx-vals='{\"id\": 42, \"active\": true}'>Save</button>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Advanced Features {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Loading Indicator",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Loading Indicator",
+              "body": "```html\n<button hx-get=\"/load\" hx-indicator=\"#spinner\">Load</button>\n<div id=\"spinner\" class=\"htmx-indicator\">Loading...</div>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "`hx-push-url`",
+          "level": 3,
+          "cards": [
+            {
+              "title": "`hx-push-url`",
+              "body": "```html\n<a hx-get=\"/page\" hx-push-url=\"true\">Go</a>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Polling",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Polling",
+              "body": "```html\n<div hx-get=\"/time\" hx-trigger=\"every 5s\"></div>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Events & Extensions {.cols-3}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Listen to Events",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Listen to Events",
+              "body": "```js\ndocument.body.addEventListener('htmx:afterSwap', (e) => {\n  console.log('Swap complete');\n});\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Event Hooks",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Event Hooks",
+              "body": "- `htmx:beforeRequest`\n- `htmx:afterSwap`\n- `htmx:responseError`",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Extensions",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Extensions",
+              "body": "```html\n<script src=\"https://unpkg.com/htmx.org/dist/ext/json-enc.js\"></script>\n<form hx-post=\"/api\" hx-ext=\"json-enc\"></form>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Example Use Case {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Python Backend (Flask)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Python Backend (Flask)",
+              "body": "```python\n@app.route(\"/hello\")\ndef hello():\n    return \"<p>Hello, HTMX!</p>\"\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "HTML Client",
+          "level": 3,
+          "cards": [
+            {
+              "title": "HTML Client",
+              "body": "```html\n<button hx-get=\"/hello\" hx-target=\"#msg\">Click</button>\n<div id=\"msg\"></div>\n```",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "id": "ticktick",
+  "metadata": {
+    "title": "TickTick",
+    "date": "2022-11-23T16:23:31.696Z",
+    "background": "bg-[#526ac9]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 25 keyboard shortcuts found in the TickTick desktop app\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "General I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General I",
+              "body": "| Shortcut           | Action                   |\n| ------------------ | ------------------------ |\n| `Ctrl` `Shift` `A` | Show quick add bar       |\n| `Ctrl` `Shift` `L` | Show or hide mini window |\n| `Ctrl` `Shift` `P` | Start or abandon pomo    |\n| `Ctrl` `S`         | Sync task                |\n| `Ctrl` `F`         | Search for a task        |\n| `Ctrl` `N`         | Add task                 |\n| `Ctrl` `Shift` `M` | Complete task            |\n| `Ctrl` `0`         | Clear date               |\n| `Ctrl` `D`         | Set date                 |\n| `Ctrl` `1`         | Set today                |\n| `Ctrl` `2`         | Set tomorrow             |\n| `Ctrl` `3`         | Set next week            |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `Shift` `A`",
+                  "action": "Show quick add bar"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `L`",
+                  "action": "Show or hide mini window"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `P`",
+                  "action": "Start or abandon pomo"
+                },
+                {
+                  "shortcut": "`Ctrl` `S`",
+                  "action": "Sync task"
+                },
+                {
+                  "shortcut": "`Ctrl` `F`",
+                  "action": "Search for a task"
+                },
+                {
+                  "shortcut": "`Ctrl` `N`",
+                  "action": "Add task"
+                },
+                {
+                  "shortcut": "`Ctrl` `Shift` `M`",
+                  "action": "Complete task"
+                },
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Clear date"
+                },
+                {
+                  "shortcut": "`Ctrl` `D`",
+                  "action": "Set date"
+                },
+                {
+                  "shortcut": "`Ctrl` `1`",
+                  "action": "Set today"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Set tomorrow"
+                },
+                {
+                  "shortcut": "`Ctrl` `3`",
+                  "action": "Set next week"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "General II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "General II",
+              "body": "| Shortcut         | Action                       |\n| ---------------- | ---------------------------- |\n| `Ctrl` `0`       | Set no priority              |\n| `Ctrl` `1`       | Set low priority             |\n| `Ctrl` `2`       | Set medium priority          |\n| `Ctrl` `3`       | Set high priority            |\n| `Ctrl` `P`       | Print                        |\n| `Ctrl` `Alt` `T` | Open today's list            |\n| `Ctrl` `Opt` `T` | Open tomorrow's list         |\n| `Ctrl` `Alt` `N` | Open next 7 days list        |\n| `Ctrl` `Alt` `A` | Open all list                |\n| `Ctrl` `Alt` `C` | Open the calendar view       |\n| `Ctrl` `Alt` `A` | Open the assigned to me list |\n| `Ctrl` `Alt` `1` | Open the inbox               |\n| `Ctrl` `Alt` `C` | Open completed tasks         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `0`",
+                  "action": "Set no priority"
+                },
+                {
+                  "shortcut": "`Ctrl` `1`",
+                  "action": "Set low priority"
+                },
+                {
+                  "shortcut": "`Ctrl` `2`",
+                  "action": "Set medium priority"
+                },
+                {
+                  "shortcut": "`Ctrl` `3`",
+                  "action": "Set high priority"
+                },
+                {
+                  "shortcut": "`Ctrl` `P`",
+                  "action": "Print"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `T`",
+                  "action": "Open today's list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Opt` `T`",
+                  "action": "Open tomorrow's list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `N`",
+                  "action": "Open next 7 days list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `A`",
+                  "action": "Open all list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `C`",
+                  "action": "Open the calendar view"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `A`",
+                  "action": "Open the assigned to me list"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `1`",
+                  "action": "Open the inbox"
+                },
+                {
+                  "shortcut": "`Ctrl` `Alt` `C`",
+                  "action": "Open completed tasks"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for TickTick](https://support.ticktick.com/hc/en-us/articles/360016272252-Shortcuts)\n  _(support.ticktick.com)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

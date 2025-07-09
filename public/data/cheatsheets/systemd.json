@@ -1,0 +1,204 @@
+{
+  "id": "systemd",
+  "metadata": {
+    "title": "Systemd",
+    "date": "02-07-2025",
+    "icon": "icon-systemd",
+    "background": "bg-[#00ADEF]",
+    "tags": [
+      "systemd",
+      "linux"
+    ],
+    "categories": [
+      "Linux Command"
+    ],
+    "intro": "systemd is the init system and service manager used by most modern Linux distributions.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "systemd Core Utilities{.cols-4}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "systemd utility List",
+          "level": 3,
+          "cards": [
+            {
+              "title": "systemd utility List",
+              "body": "| Utility                               | Description                                                    |\n| ------------------------------------- | -------------------------------------------------------------- |\n| [`systemctl`](#systemctl)             | Manages services (start, stop, restart, enable, disable, etc.) |\n| [`journalctl`](#journalctl)           | Views and filters logs collected by the systemd journal        |\n| [`loginctl`](#loginctl)               | Manages user logins and sessions                               |\n| [`hostnamectl`](#hostnamectl)         | Sets or queries the hostname and related machine metadata      |\n| [`timedatectl`](#timedatectl)         | Sets or queries the system date, time, and NTP settings        |\n| [`systemd-analyze`](#systemd-analyze) | Analyzes system boot-up performance                            |\n| [`systemd-cgtop`](#systemd-cgtop)     | Monitors control group resource usage in real time             |\n| [`systemd-run`](#systemd-run)         | Runs a command as a transient service or scope                 |\n| [`resolvectl`](#resolvectl)           | Resolves domain names using the systemd-resolved service       |\n| [`busctl`](#busctl)                   | Interacts with the D-Bus message bus system                    |\n\n{.left-text}",
+              "footer": "",
+              "spanConfig": "col-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Utility Commands {.cols-4}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "systemctl {#systemctl}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "systemctl {#systemctl}",
+              "body": "",
+              "footer": "#### systemctl - System Commands\n\n- Manage systemd units and control system services (start, stop, enable, etc.).\n\n| Command               | Description                                                        |\n| --------------------- | ------------------------------------------------------------------ |\n| `systemctl halt`      | Stop all running software, leave the hardware powered on.          |\n| `systemctl hibernate` | Save contents of system memory to disk and power off the hardware. |\n| `systemctl poweroff`  | Halt and power off the system.                                     |\n| `systemctl reboot`    | Reboot the system.                                                 |\n\n{.left-text}\n\n#### systemctl - Service Commands\n\n| Command                       | Description                                  |\n| ----------------------------- | -------------------------------------------- |\n| `systemctl start <service>`   | Start a service immediately                  |\n| `systemctl stop <service>`    | Stop a running service                       |\n| `systemctl restart <service>` | Restart a service                            |\n| `systemctl reload <service>`  | Reload service configuration without restart |\n| `systemctl enable <service>`  | Enable service to start at boot              |\n| `systemctl disable <service>` | Disable boot-time start                      |\n| `systemctl status <service>`  | Show current status and recent logs          |\n| `systemctl mask <service>`    | Prevent service from being started           |\n| `systemctl unmask <service>`  | Remove mask so it can start again            |\n| `systemctl list-units`        | List active units                            |\n| `systemctl list-unit-files`   | List all unit files and their enabled state  |\n\n{.left-text}",
+              "spanConfig": "col-span-2 .row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "journalctl {#journalctl}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "journalctl {#journalctl}",
+              "body": "- Query and filter logs from the systemd journal.\n\n| Command                    | Description                               |\n| -------------------------- | ----------------------------------------- |\n| `journalctl`               | Show entire journal                       |\n| `journalctl -b`            | Show logs from current boot               |\n| `journalctl --list-boots`  | List all boot sessions                    |\n| `journalctl -b -1`         | Logs from previous boot                   |\n| `journalctl -u <service>`  | Show logs for a specific unit/service     |\n| `journalctl -n 100`        | Show the last 100 log entries             |\n| `journalctl -f`            | Follow new log entries (tail -f style)    |\n| `journalctl -p err..emerg` | Show only error (and above) priority logs |\n| `journalctl --disk-usage`  | Show disk usage of journal                |\n| `journalctl --since today` | Show logs since today                     |\n\n{.left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "busctl {#busctl}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "busctl {#busctl}",
+              "body": "- Inspect and monitor D-Bus (Desktop Bus) for debugging or introspection.\n\n| Command                        | Description                                        |\n| ------------------------------ | -------------------------------------------------- |\n| `busctl list`                  | List all services/peers on the bus                 |\n| `busctl status [SERVICE\\|PID]` | Show process info & credentials for service or PID |\n| `busctl monitor [SERVICE...]`  | Dump live message traffic, Ctrl+C to stop          |\n| `busctl capture [SERVICE...]`  | Capture bus traffic to a pcap file                 |\n| `busctl tree [SERVICE...]`     | Show object tree exported by service(s)            |\n\n{.left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "loginctl{#loginctl}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "loginctl{#loginctl}",
+              "body": "- Manages user sessions and login-related settings.\n\n| Command                           | Description                                    |\n| --------------------------------- | ---------------------------------------------- |\n| `loginctl list-sessions`          | List all active sessions                       |\n| `loginctl list-users`             | List logged-in users                           |\n| `loginctl user-status <UID>`      | Show all sessions & processes for user `<UID>` |\n| `loginctl session-status <ID>`    | Show detailed info and logs for session `<ID>` |\n| `loginctl show-session <ID>`      | Show machine-parsable properties of a session  |\n| `loginctl terminate-session <ID>` | End all processes in session `<ID>`            |\n| `loginctl lock-session <ID>`      | Lock the specified session                     |\n| `loginctl unlock-session <ID>`    | Unlock the specified session                   |\n\n{.left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2 .row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "systemd-analyze{#systemd-analyze}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "systemd-analyze{#systemd-analyze}",
+              "body": "- Analyze system boot performance and unit dependencies.\n\n| Command                           | Description                           |\n| --------------------------------- | ------------------------------------- |\n| `systemd-analyze`                 | Show total boot time breakdown        |\n| `systemd-analyze blame`           | List services ordered by startup time |\n| `systemd-analyze plot > boot.svg` | Generate SVG visual of boot sequence  |\n\n{.left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "systemd-cgtop{#systemd-cgtop}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "systemd-cgtop{#systemd-cgtop}",
+              "body": "- Real-time monitoring of resource usage by cgroups (CPU, memory, I/O).\n\n| Command                    | Description                        |\n| -------------------------- | ---------------------------------- |\n| `systemd-cgtop`            | Monitor top cgroups resource usage |\n| `systemd-cgtop -c`         | Sort cgroups by CPU usage          |\n| `systemd-cgtop -d <delay>` | Change refresh delay interval      |\n\n{.left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "timedatectl{#timedatectl}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "timedatectl{#timedatectl}",
+              "body": "- Manage system date, time, timezone, and NTP synchronization.\n\n| Command                             | Description                     |\n| ----------------------------------- | ------------------------------- |\n| `timedatectl status`                | Show current date/time settings |\n| `timedatectl list-timezones`        | List all available timezones    |\n| `timedatectl set-timezone <Zone>`   | Set system timezone             |\n| `timedatectl set-time \"YYYY-MM-DD\"` | Manually set date               |\n| `timedatectl set-time \"HH:MM:SS\"`   | Manually set time               |\n| `timedatectl set-ntp true`          | Enable NTP sync                 |\n| `timedatectl set-ntp false`         | Disable NTP sync                |\n\n{.left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "resolvectl{#resolvectl}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "resolvectl{#resolvectl}",
+              "body": "- Interact with systemd-resolved DNS resolver service.\n\n| Command                                | Description                                     |\n| -------------------------------------- | ----------------------------------------------- |\n| `resolvectl status`                    | Show DNS configuration and link info            |\n| `resolvectl query <hostname>`          | Resolve hostname via systemd-resolved           |\n| `resolvectl dns <interface> <IP>`      | Set DNS server(s) for a specific interface      |\n| `resolvectl domain <interface> <name>` | Set search domain(s) for an interface           |\n| `resolvectl flush-caches`              | Clear the DNS cache managed by systemd-resolved |\n| `resolvectl reset-statistics`          | Reset all DNS resolution statistics             |\n\n{.left-text}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "hostnamectl{#hostnamectl}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "hostnamectl{#hostnamectl}",
+              "body": "- Query and set the system hostname (static, transient, pretty) and related metadata.",
+              "footer": "#### ↓ Commands\n\n| Command                                       | Description                                      |\n| --------------------------------------------- | ------------------------------------------------ |\n| `hostnamectl status`                          | Show current hostname & system info              |\n| `hostnamectl hostname <NAME>`                 | Set the static/transient/pretty hostname         |\n| `hostnamectl set-hostname <NAME> --static`    | Set only the static hostname                     |\n| `hostnamectl set-hostname <NAME> --transient` | Set only the transient hostname                  |\n| `hostnamectl set-hostname <NAME> --pretty`    | Set the pretty (user-friendly) hostname          |\n| `hostnamectl set-chassis <TYPE>`              | Set chassis type (e.g., desktop, laptop, server) |\n\n{.left-text}\n\n#### ↓ Description\n\n```markdown\n- Static - The permanent hostname stored in `/etc/hostname`. Used at boot time.\n- Transient - Temporary hostname set at runtime (often by DHCP or manually). Lost on reboot.\n- Pretty - A user-friendly, display name (can include spaces and special characters).\n```\n\n{.left-text}",
+              "spanConfig": "col-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "systemd-run{#systemd-run}",
+          "level": 3,
+          "cards": [
+            {
+              "title": "systemd-run{#systemd-run}",
+              "body": "- Run a command as a transient systemd unit (service, scope, timer, etc.).\n\n| Command                                                  | Description                                        |\n| -------------------------------------------------------- | -------------------------------------------------- |\n| `systemd-run <command>`                                  | Run command as a transient `.service` unit         |\n| `systemd-run -p BlockIOWeight=10 updatedb`               | Run with a specific resource limit property        |\n| `systemd-run -p MemoryMax=100M script.sh`                | Run a memory-hungry task with a memory usage limit |\n| `systemd-run --on-calendar='YYYY-MM-DD HH:MM' script.sh` | Schedule script to run at a specific date and time |\n| `systemd-run -E VAR=value script.sh`                     | Run a script with environment variables set        |\n\n{.left-text}",
+              "footer": "#### Types of systemd limits{.col-span-3}\n\n```markdown\nThere are different kinds of limit that can be imposed:\n\n- CPU Limits\n- Memory Limits\n- I/O Limits\n- Task/Thread Limits\n- Security/Isolation\n- Execution/Environment\n```\n\nExample\n\n```bash\nsystemd-run -p MemoryMax=100M -p CPUQuota=50% scriptFile.sh\n```",
+              "spanConfig": "col-span-4",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also See",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also See",
+          "body": "- [linux training academy](https://www.linuxtrainingacademy.com/systemd-cheat-sheet/)\n- [linux Audit Cheat Sheet](https://linux-audit.com/cheat-sheets/systemd/)\n- [RedHat Reference](https://www.redhat.com/en/blog/systemd-commands)",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

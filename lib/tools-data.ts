@@ -19,6 +19,7 @@ import {
   FileImage,
   QrCode,
   KeyRound,
+  Code,
 } from "lucide-react";
 
 export interface Tool {
@@ -566,6 +567,21 @@ export const quickActions = [
     icon: FileText,
     category: "Navigation",
     keywords: ["tools", "all", "browse", "list", "overview"],
+  },
+  {
+    name: "Cheatsheets",
+    description: "Browse productivity cheatsheets and quick references",
+    href: "/cheatsheets",
+    icon: Code,
+    category: "Navigation",
+    keywords: [
+      "cheatsheets",
+      "reference",
+      "quick",
+      "guide",
+      "syntax",
+      "commands",
+    ],
   },
   {
     name: "Articles",

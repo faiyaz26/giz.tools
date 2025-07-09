@@ -1,0 +1,208 @@
+{
+  "id": "wordpress",
+  "metadata": {
+    "title": "WordPress",
+    "date": "2022-11-23T16:23:31.697Z",
+    "background": "bg-[#434140]",
+    "label": null,
+    "tags": [
+      null,
+      null
+    ],
+    "categories": [
+      "Keyboard Shortcuts"
+    ],
+    "intro": "A visual cheat-sheet for the 34 keyboard shortcuts found in the WordPress visual editor\n"
+  },
+  "sections": [
+    {
+      "title": "Keyboard Shortcuts {.cols-2}",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Editor I",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editor I",
+              "body": "| Shortcut          | Action                                 |\n| ----------------- | -------------------------------------- |\n| `Ctrl` `C`        | Copy                                   |\n| `Ctrl` `V`        | Paste                                  |\n| `Ctrl` `A`        | Select all                             |\n| `Ctrl` `X`        | Cut                                    |\n| `Ctrl` `Z`        | Undo                                   |\n| `Ctrl` `Y`        | Redo                                   |\n| `Ctrl` `B`        | Bold                                   |\n| `Ctrl` `I`        | Italic                                 |\n| `Ctrl` `U`        | Underline                              |\n| `Ctrl` `K`        | Insert or edit a link                  |\n| `Alt` `Shift` `N` | Check spelling, this requires a plugin |\n| `Alt` `Shift` `L` | Align text left                        |\n| `Alt` `Shift` `J` | Justify text                           |\n| `Alt` `Shift` `C` | Align text center                      |\n| `Alt` `Shift` `D` | Strikethrough                          |\n| `Alt` `Shift` `R` | Align text right                       |\n| `Alt` `Shift` `U` | Unordered list                         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Ctrl` `C`",
+                  "action": "Copy"
+                },
+                {
+                  "shortcut": "`Ctrl` `V`",
+                  "action": "Paste"
+                },
+                {
+                  "shortcut": "`Ctrl` `A`",
+                  "action": "Select all"
+                },
+                {
+                  "shortcut": "`Ctrl` `X`",
+                  "action": "Cut"
+                },
+                {
+                  "shortcut": "`Ctrl` `Z`",
+                  "action": "Undo"
+                },
+                {
+                  "shortcut": "`Ctrl` `Y`",
+                  "action": "Redo"
+                },
+                {
+                  "shortcut": "`Ctrl` `B`",
+                  "action": "Bold"
+                },
+                {
+                  "shortcut": "`Ctrl` `I`",
+                  "action": "Italic"
+                },
+                {
+                  "shortcut": "`Ctrl` `U`",
+                  "action": "Underline"
+                },
+                {
+                  "shortcut": "`Ctrl` `K`",
+                  "action": "Insert or edit a link"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `N`",
+                  "action": "Check spelling, this requires a plugin"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `L`",
+                  "action": "Align text left"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `J`",
+                  "action": "Justify text"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `C`",
+                  "action": "Align text center"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `D`",
+                  "action": "Strikethrough"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `R`",
+                  "action": "Align text right"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `U`",
+                  "action": "Unordered list"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Editor II",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Editor II",
+              "body": "| Shortcut          | Action                        |\n| ----------------- | ----------------------------- |\n| `Alt` `Shift` `A` | Insert a link                 |\n| `Alt` `Shift` `O` | Ordered list                  |\n| `Alt` `Shift` `S` | Remove a link                 |\n| `Alt` `Shift` `Q` | Quote                         |\n| `Alt` `Shift` `M` | Insert an image               |\n| `Alt` `Shift` `W` | Distraction free writing mode |\n| `Alt` `Shift` `T` | Insert a more tag             |\n| `Alt` `Shift` `P` | Insert a page break tag       |\n| `Alt` `Shift` `H` | Help                          |\n| `Alt` `Shift` `X` | Add or remove a code tag      |\n| `Alt` `Shift` `1` | Heading one                   |\n| `Alt` `Shift` `2` | Heading two                   |\n| `Alt` `Shift` `3` | Heading three                 |\n| `Alt` `Shift` `4` | Heading four                  |\n| `Alt` `Shift` `5` | Heading five                  |\n| `Alt` `Shift` `6` | Heading six                   |\n| `Alt` `Shift` `9` | Insert an address             |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "`Alt` `Shift` `A`",
+                  "action": "Insert a link"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `O`",
+                  "action": "Ordered list"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `S`",
+                  "action": "Remove a link"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `Q`",
+                  "action": "Quote"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `M`",
+                  "action": "Insert an image"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `W`",
+                  "action": "Distraction free writing mode"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `T`",
+                  "action": "Insert a more tag"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `P`",
+                  "action": "Insert a page break tag"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `H`",
+                  "action": "Help"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `X`",
+                  "action": "Add or remove a code tag"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `1`",
+                  "action": "Heading one"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `2`",
+                  "action": "Heading two"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `3`",
+                  "action": "Heading three"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `4`",
+                  "action": "Heading four"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `5`",
+                  "action": "Heading five"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `6`",
+                  "action": "Heading six"
+                },
+                {
+                  "shortcut": "`Alt` `Shift` `9`",
+                  "action": "Insert an address"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Also see",
+      "level": 2,
+      "cards": [
+        {
+          "title": "Also see",
+          "body": "- [Keyboard shortcuts for WordPress](https://wordpress.org/support/article/keyboard-shortcuts/) _(wordpress.org)_",
+          "footer": "",
+          "spanConfig": "",
+          "isShortcutsCard": false
+        }
+      ],
+      "subsections": []
+    }
+  ]
+}

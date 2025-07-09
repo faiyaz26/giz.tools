@@ -1,0 +1,1239 @@
+{
+  "id": "emacs",
+  "metadata": {
+    "title": "Emacs",
+    "date": "2020-12-17T16:21:49.000Z",
+    "background": "bg-[#7752a9]",
+    "tags": [
+      "editor",
+      "text",
+      "shortcut"
+    ],
+    "categories": [
+      "Toolkit"
+    ],
+    "intro": "[Emacs](https://www.gnu.org/software/emacs) is the extensible, customizable, self-documenting real time display text editor.\nThis reference was made for Emacs 27.\n",
+    "plugins": [
+      "copyCode"
+    ]
+  },
+  "sections": [
+    {
+      "title": "Getting started",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Starting Emacs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Starting Emacs",
+              "body": "```shell\n$ emacs\n```",
+              "footer": "| -           | -                      |\n| ----------- | :--------------------- |\n| `C-z`       | Suspend Emacs          |\n| `C-x` `C-c` | Exit Emacs permanently |\n{.shortcuts}",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-z`",
+                  "action": "Suspend Emacs"
+                },
+                {
+                  "shortcut": "`C-x` `C-c`",
+                  "action": "Exit Emacs permanently"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Global Description",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Global Description",
+              "body": "| -         | -                                           |\n| --------- | :------------------------------------------ |\n| `C-<key>` | Means hold the control, and press `<key>`   |\n| `M-<key>` | Means press the Esc once, and press `<key>` |\n\n{.shortcuts}\n\nNOTICE: This cheatsheet follows the above rules.",
+              "footer": "",
+              "spanConfig": "secondary",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-<key>`",
+                  "action": "Means hold the control, and press `<key>`"
+                },
+                {
+                  "shortcut": "`M-<key>`",
+                  "action": "Means press the Esc once, and press `<key>`"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Motion",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Motion",
+              "body": "| Backward  | Forward   | Entity to move over            |\n| --------- | --------- | :----------------------------- |\n| `C-b`     | `C-f`     | Haracter                       |\n| `M-b`     | `M-f`     | Word                           |\n| `C-p`     | `C-n`     | Line                           |\n| `C-a`     | `C-e`     | Line beginning<br/>_(or end)_  |\n| `M-a`     | `M-e`     | Sentence                       |\n| `M-{`     | `M-}`     | Paragraph                      |\n| `C-x` `[` | `C-x` `]` | Page                           |\n| `C-M-b`   | `C-M-f`   | Sexp                           |\n| `C-M-a`   | `C-M-e`   | Function                       |\n| `M-<`     | `M->`     | Buffer beginning<br>_(or end)_ |\n\n{.shortcuts .show-header}",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Case Change",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Case Change",
+              "body": "| -           | -                |\n| ----------- | :--------------- |\n| `M-u`       | Uppercase word   |\n| `M-l`       | Lowercase word   |\n| `M-c`       | Capitalize word  |\n| `C-x` `C-u` | Uppercase region |\n| `C-x` `C-l` | Lowercase region |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`M-u`",
+                  "action": "Uppercase word"
+                },
+                {
+                  "shortcut": "`M-l`",
+                  "action": "Lowercase word"
+                },
+                {
+                  "shortcut": "`M-c`",
+                  "action": "Capitalize word"
+                },
+                {
+                  "shortcut": "`C-x` `C-u`",
+                  "action": "Uppercase region"
+                },
+                {
+                  "shortcut": "`C-x` `C-l`",
+                  "action": "Lowercase region"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Files",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Files",
+              "body": "| -           | -                                                |\n| ----------- | :----------------------------------------------- |\n| `C-x` `C-f` | Read a file into Emacs                           |\n| `C-x` `C-s` | Save a file back to disk                         |\n| `C-x` `s`   | Save all files                                   |\n| `C-x` `i`   | Insert contents of another file into this buffer |\n| `C-x` `C-v` | Replace this file with your file                 |\n| `C-x` `C-w` | Write buffer to a specified file                 |\n| `C-x` `C-q` | Toggle read-only status of buffer                |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-x` `C-f`",
+                  "action": "Read a file into Emacs"
+                },
+                {
+                  "shortcut": "`C-x` `C-s`",
+                  "action": "Save a file back to disk"
+                },
+                {
+                  "shortcut": "`C-x` `s`",
+                  "action": "Save all files"
+                },
+                {
+                  "shortcut": "`C-x` `i`",
+                  "action": "Insert contents of another file into this buffer"
+                },
+                {
+                  "shortcut": "`C-x` `C-v`",
+                  "action": "Replace this file with your file"
+                },
+                {
+                  "shortcut": "`C-x` `C-w`",
+                  "action": "Write buffer to a specified file"
+                },
+                {
+                  "shortcut": "`C-x` `C-q`",
+                  "action": "Toggle read-only status of buffer"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Error Recovery",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Error Recovery",
+              "body": "| -                           | -                                          |\n| --------------------------- | :----------------------------------------- |\n| `C-g`                       | Abort partially typed or executing command |\n| `M-x` recover-session       | Recover files lost by a system crash       |\n| `C-x` `u`<br>`C-_`<br>`C-/` | Undo an unwanted change                    |\n| `M-x` revert-buffer         | Restore a buffer to its original contents  |\n| `C-l`                       | Redraw garbaged screen                     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-g`",
+                  "action": "Abort partially typed or executing command"
+                },
+                {
+                  "shortcut": "`M-x` recover-session",
+                  "action": "Recover files lost by a system crash"
+                },
+                {
+                  "shortcut": "`C-x` `u`<br>`C-_`<br>`C-/`",
+                  "action": "Undo an unwanted change"
+                },
+                {
+                  "shortcut": "`M-x` revert-buffer",
+                  "action": "Restore a buffer to its original contents"
+                },
+                {
+                  "shortcut": "`C-l`",
+                  "action": "Redraw garbaged screen"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Transposing",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Transposing",
+              "body": "| -           | -                    |\n| ----------- | :------------------- |\n| `C-t`       | Transpose characters |\n| `M-t`       | Transpose words      |\n| `C-x` `C-t` | Transpose lines      |\n| `C-M-t`     | Transpose sexps      |\n\n{.shortcuts .table-fixed}",
+              "footer": "#### Scroll\n\n| -         | -                                              |\n| --------- | :--------------------------------------------- |\n| `C-v`     | Scroll to next screen                          |\n| `M-v`     | Scroll to previous screen                      |\n| `C-x` `<` | Scroll left                                    |\n| `C-x` `>` | Scroll right                                   |\n| `C-l`     | Scroll current line to <br>center, top, bottom |\n\n{.shortcuts .table-fixed}\n\n#### Goto\n\n| -         | -                   |\n| --------- | :------------------ |\n| `M-g` `g` | Goto line           |\n| `M-g` `c` | Goto char           |\n| `M-m`     | Back to indentation |\n\n{.shortcuts .table-fixed}",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Marking",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Marking",
+              "body": "| -                 | -                       |\n| ----------------- | :---------------------- |\n| `C-@`<br/>`C-SPC` | Uet mark here           |\n| `C-x` `C-x`       | Exchange point and mark |\n| `M-@`             | Set mark arg words away |\n| `M-h`             | Mark paragraph          |\n| `C-x` `C-p`       | Mark page               |\n| `C-M-@`           | Mark sexp               |\n| `C-M-h`           | Mark function           |\n| `C-x` `h`         | Mark entire buffer      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-@`<br/>`C-SPC`",
+                  "action": "Uet mark here"
+                },
+                {
+                  "shortcut": "`C-x` `C-x`",
+                  "action": "Exchange point and mark"
+                },
+                {
+                  "shortcut": "`M-@`",
+                  "action": "Set mark arg words away"
+                },
+                {
+                  "shortcut": "`M-h`",
+                  "action": "Mark paragraph"
+                },
+                {
+                  "shortcut": "`C-x` `C-p`",
+                  "action": "Mark page"
+                },
+                {
+                  "shortcut": "`C-M-@`",
+                  "action": "Mark sexp"
+                },
+                {
+                  "shortcut": "`C-M-h`",
+                  "action": "Mark function"
+                },
+                {
+                  "shortcut": "`C-x` `h`",
+                  "action": "Mark entire buffer"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Killing and Deleting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Killing and Deleting",
+              "body": "| Backward      | Forward | Entity to kill           |\n| ------------- | ------- | :----------------------- |\n| `DEL`         | `C-d`   | Character <br>_(delete)_ |\n| `M-DEL`       | `M-d`   | Word                     |\n| `M-0` `C-k`   | `C-k`   | Line <br/> _(to end of)_ |\n| `C-x` `DEL`   | `M-k`   | Sentence                 |\n| `M--` `C-M-k` | `C-M-k` | Sexp                     |\n\n{.shortcuts .show-header}",
+              "footer": "#### Killing\n\n| -          | -                                    |\n| ---------- | :----------------------------------- |\n| `C-W`      | Kill region C-w                      |\n| `M-w`      | Copy region to kill ring             |\n| `M-z` char | Kill through next occurrence of char |\n| `C-y`      | Yank back last thing killed          |\n| `M-y`      | Replace last yank with previous kill |\n\n{.shortcuts}",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-W`",
+                  "action": "Kill region C-w"
+                },
+                {
+                  "shortcut": "`M-w`",
+                  "action": "Copy region to kill ring"
+                },
+                {
+                  "shortcut": "`M-z` char",
+                  "action": "Kill through next occurrence of char"
+                },
+                {
+                  "shortcut": "`C-y`",
+                  "action": "Yank back last thing killed"
+                },
+                {
+                  "shortcut": "`M-y`",
+                  "action": "Replace last yank with previous kill"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Getting Help",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Getting Help",
+              "body": "| -         | -                                        |\n| --------- | :--------------------------------------- |\n| `C-x` `1` | Remove help window                       |\n| `C-M-v`   | Scroll help window                       |\n| `C-h` `a` | Apropos: show commands matching a string |\n| `C-h` `k` | Describe the function a key runs         |\n| `C-h` `f` | Describe a function                      |\n| `C-h` `m` | Get mode-specific information            |\n\n{.shortcuts}\n\nThe help system is simple. Type `C-h` (or `F1`) and follow the directions. If you are a first-time user, type `C-h` `t`\nfor a tutorial.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-x` `1`",
+                  "action": "Remove help window"
+                },
+                {
+                  "shortcut": "`C-M-v`",
+                  "action": "Scroll help window"
+                },
+                {
+                  "shortcut": "`C-h` `a`",
+                  "action": "Apropos: show commands matching a string"
+                },
+                {
+                  "shortcut": "`C-h` `k`",
+                  "action": "Describe the function a key runs"
+                },
+                {
+                  "shortcut": "`C-h` `f`",
+                  "action": "Describe a function"
+                },
+                {
+                  "shortcut": "`C-h` `m`",
+                  "action": "Get mode-specific information"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Multiple Windows",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Multiple Windows",
+              "body": "When two commands are shown, the second is a similar command for a frame instead of a window.\n\n| -               | -               | -                                   |\n| --------------- | --------------- | :---------------------------------- |\n| `C-x` `5` `1`   | `C-x` `1`       | Delete all other windows            |\n| `C-x` `5` `2`   | `C-x` `2`       | Split window, above and below       |\n| `C-x` `5` `0`   | `C-x` `0`       | Delete this window                  |\n| `C-x` `3`       |                 | Split window, side by side          |\n| `C-M-v`         |                 | Scroll other window                 |\n| `C-x` `5` `o`   | `C-x` `o`       | Switch cursor to another window     |\n| `C-x` `5` `b`   | `C-x` `4` `b`   | Select buffer in other window       |\n| `C-x` `5` `C-o` | `C-x` `4` `C-o` | Display buffer in other window      |\n| `C-x` `5` `f`   | `C-x` `4` `f`   | Find file in other window           |\n| `C-x` `5` `r`   | `C-x` `4` `r`   | Find file read-only in other window |\n| `C-x` `5` `d`   | `C-x` `4` `d`   | Run Dired in other window           |\n| `C-x` `5` `.`   | `C-x` `4` `.`   | Find tag in other window            |\n| `C-x` `^`       |                 | Grow window taller                  |\n| `C-x` `{`       |                 | Shrink window narrower              |\n| `C-x` `}`       |                 | Grow window wider                   |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-x` `5` `1`",
+                  "action": "`C-x` `1`"
+                },
+                {
+                  "shortcut": "`C-x` `5` `2`",
+                  "action": "`C-x` `2`"
+                },
+                {
+                  "shortcut": "`C-x` `5` `0`",
+                  "action": "`C-x` `0`"
+                },
+                {
+                  "shortcut": "`C-x` `3`",
+                  "action": "Split window, side by side"
+                },
+                {
+                  "shortcut": "`C-M-v`",
+                  "action": "Scroll other window"
+                },
+                {
+                  "shortcut": "`C-x` `5` `o`",
+                  "action": "`C-x` `o`"
+                },
+                {
+                  "shortcut": "`C-x` `5` `b`",
+                  "action": "`C-x` `4` `b`"
+                },
+                {
+                  "shortcut": "`C-x` `5` `C-o`",
+                  "action": "`C-x` `4` `C-o`"
+                },
+                {
+                  "shortcut": "`C-x` `5` `f`",
+                  "action": "`C-x` `4` `f`"
+                },
+                {
+                  "shortcut": "`C-x` `5` `r`",
+                  "action": "`C-x` `4` `r`"
+                },
+                {
+                  "shortcut": "`C-x` `5` `d`",
+                  "action": "`C-x` `4` `d`"
+                },
+                {
+                  "shortcut": "`C-x` `5` `.`",
+                  "action": "`C-x` `4` `.`"
+                },
+                {
+                  "shortcut": "`C-x` `^`",
+                  "action": "Grow window taller"
+                },
+                {
+                  "shortcut": "`C-x` `{`",
+                  "action": "Shrink window narrower"
+                },
+                {
+                  "shortcut": "`C-x` `}`",
+                  "action": "Grow window wider"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Formatting",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Formatting",
+              "body": "| -           | -                                        |\n| ----------- | :--------------------------------------- |\n| `TAB`       | Indent current line (mode-dependent)     |\n| `C-M-\\`     | Indent region (mode-dependent)           |\n| `C-M-q`     | Indent sexp (mode-dependent)             |\n| `C-x` `TAB` | Indent region rigidly arg columns        |\n| `M-;`       | Indent for comment                       |\n| `C-o`       | Insert newline after point               |\n| `C-M-o`     | Move rest of line vertically down        |\n| `C-x` `C-o` | Delete blank lines around point          |\n| `M-^`       | Join line with previous (with arg, next) |\n| `M-\\`       | Delete all white space around point      |\n| `M-SPC`     | Put exactly one space at point           |\n| `M-q`       | Fill paragraph                           |\n| `C-x` `f`   | Set fill column to arg                   |\n| `C-x` `.`   | Set prefix each line starts with         |\n| `M-o`       | Set face                                 |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`TAB`",
+                  "action": "Indent current line (mode-dependent)"
+                },
+                {
+                  "shortcut": "`C-M-\\`",
+                  "action": "Indent region (mode-dependent)"
+                },
+                {
+                  "shortcut": "`C-M-q`",
+                  "action": "Indent sexp (mode-dependent)"
+                },
+                {
+                  "shortcut": "`C-x` `TAB`",
+                  "action": "Indent region rigidly arg columns"
+                },
+                {
+                  "shortcut": "`M-;`",
+                  "action": "Indent for comment"
+                },
+                {
+                  "shortcut": "`C-o`",
+                  "action": "Insert newline after point"
+                },
+                {
+                  "shortcut": "`C-M-o`",
+                  "action": "Move rest of line vertically down"
+                },
+                {
+                  "shortcut": "`C-x` `C-o`",
+                  "action": "Delete blank lines around point"
+                },
+                {
+                  "shortcut": "`M-^`",
+                  "action": "Join line with previous (with arg, next)"
+                },
+                {
+                  "shortcut": "`M-\\`",
+                  "action": "Delete all white space around point"
+                },
+                {
+                  "shortcut": "`M-SPC`",
+                  "action": "Put exactly one space at point"
+                },
+                {
+                  "shortcut": "`M-q`",
+                  "action": "Fill paragraph"
+                },
+                {
+                  "shortcut": "`C-x` `f`",
+                  "action": "Set fill column to arg"
+                },
+                {
+                  "shortcut": "`C-x` `.`",
+                  "action": "Set prefix each line starts with"
+                },
+                {
+                  "shortcut": "`M-o`",
+                  "action": "Set face"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Info",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Info",
+              "body": "| -         | -                                           |\n| --------- | :------------------------------------------ |\n| `C-h` `i` | Enter the Info documentation reader         |\n| `C-h` `S` | Find specified function or variable in Info |\n\n{.shortcuts .table-fixed}",
+              "footer": "#### Moving within a node\n\n| -     | -                 |\n| ----- | :---------------- |\n| `SPC` | Scroll forward    |\n| `DEL` | Scroll reverse    |\n| `b`   | Beginning of node |\n\n{.shortcuts .table-fixed}\n\n#### Moving between nodes\n\n| -   | -                                      |\n| --- | :------------------------------------- |\n| `n` | Next node                              |\n| `p` | Previous node                          |\n| `u` | Move up                                |\n| `m` | Select menu item by name               |\n| `n` | Select nth menu item by number (1–9)   |\n| `f` | Follow cross reference (return with l) |\n| `l` | Return to last node you saw            |\n| `d` | Return to directory node               |\n| `t` | Go to top node of Info file            |\n| `g` | Go to any node by name                 |\n\n{.shortcuts .table-fixed}\n\n#### Other\n\n| -   | -                                |\n| --- | :------------------------------- |\n| `h` | Run Info tutorial                |\n| `i` | Look up a subject in the indices |\n| `s` | Search nodes for regexp          |\n| `q` | Quit Info                        |\n\n{.shortcuts .table-fixed}",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Minibuffer",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Minibuffer",
+              "body": "The following keys are defined in the minibuffer.\n\n| -     | -                                       |\n| ----- | :-------------------------------------- |\n| `TAB` | Complete as much as possible            |\n| `SPC` | Complete up to one word                 |\n| `RET` | Complete and execute                    |\n| `?`   | Show possible completions               |\n| `M-p` | Fetch previous minibuffer input         |\n| `M-n` | Fetch later minibuffer input or default |\n| `M-r` | Regexp search backward through history  |\n| `M-s` | Regexp search forward through history   |\n| `C-g` | Abort command                           |\n\n{.shortcuts}\n\nType `C-x` `ESC` `ESC` to edit and repeat the last command that used the minibuffer. Type `F10` to activate menu bar\nitems on text terminals.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`TAB`",
+                  "action": "Complete as much as possible"
+                },
+                {
+                  "shortcut": "`SPC`",
+                  "action": "Complete up to one word"
+                },
+                {
+                  "shortcut": "`RET`",
+                  "action": "Complete and execute"
+                },
+                {
+                  "shortcut": "`?`",
+                  "action": "Show possible completions"
+                },
+                {
+                  "shortcut": "`M-p`",
+                  "action": "Fetch previous minibuffer input"
+                },
+                {
+                  "shortcut": "`M-n`",
+                  "action": "Fetch later minibuffer input or default"
+                },
+                {
+                  "shortcut": "`M-r`",
+                  "action": "Regexp search backward through history"
+                },
+                {
+                  "shortcut": "`M-s`",
+                  "action": "Regexp search forward through history"
+                },
+                {
+                  "shortcut": "`C-g`",
+                  "action": "Abort command"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Tags",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Tags",
+              "body": "| -                        | -                                          |\n| ------------------------ | :----------------------------------------- |\n| `M-.`                    | Find a tag (a definition)                  |\n| `C-u` `M-.`              | Find next occurrence of tag                |\n| `M-x` visit-tags-table   | Specify a new tags file                    |\n| `M-x` tags-search        | Regexp search on all files in tags table   |\n| `M-x` tags-query-replace | Run query-replace on all the files         |\n| `M-,`                    | Continue last tags search or query-replace |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`M-.`",
+                  "action": "Find a tag (a definition)"
+                },
+                {
+                  "shortcut": "`C-u` `M-.`",
+                  "action": "Find next occurrence of tag"
+                },
+                {
+                  "shortcut": "`M-x` visit-tags-table",
+                  "action": "Specify a new tags file"
+                },
+                {
+                  "shortcut": "`M-x` tags-search",
+                  "action": "Regexp search on all files in tags table"
+                },
+                {
+                  "shortcut": "`M-x` tags-query-replace",
+                  "action": "Run query-replace on all the files"
+                },
+                {
+                  "shortcut": "`M-,`",
+                  "action": "Continue last tags search or query-replace"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Rectangles",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Rectangles",
+              "body": "| -             | -                                   |\n| ------------- | :---------------------------------- |\n| `C-x` `r` `r` | Copy rectangle to register          |\n| `C-x` `r` `k` | Kill rectangle                      |\n| `C-x` `r` `y` | Yank rectangle                      |\n| `C-x` `r` `o` | Open rectangle, shifting text right |\n| `C-x` `r` `c` | Blank out rectangle                 |\n| `C-x` `r` `t` | Prefix each line with a string      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-x` `r` `r`",
+                  "action": "Copy rectangle to register"
+                },
+                {
+                  "shortcut": "`C-x` `r` `k`",
+                  "action": "Kill rectangle"
+                },
+                {
+                  "shortcut": "`C-x` `r` `y`",
+                  "action": "Yank rectangle"
+                },
+                {
+                  "shortcut": "`C-x` `r` `o`",
+                  "action": "Open rectangle, shifting text right"
+                },
+                {
+                  "shortcut": "`C-x` `r` `c`",
+                  "action": "Blank out rectangle"
+                },
+                {
+                  "shortcut": "`C-x` `r` `t`",
+                  "action": "Prefix each line with a string"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Keyboard Macros",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Keyboard Macros",
+              "body": "| -                         | -                                   |\n| ------------------------- | :---------------------------------- |\n| `C-x` `(`                 | Start defining a keyboard macro     |\n| `C-x` `)`                 | End keyboard macro definition       |\n| `C-x` `e`                 | Execute last-defined keyboard macro |\n| `C-u` `C-x` `(`           | Append to last keyboard macro       |\n| `M-x` name-last-kbd-macro | Name last keyboard macro            |\n| `M-x` insert-kbd-macro    | Insert Lisp definition in buffer    |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-x` `(`",
+                  "action": "Start defining a keyboard macro"
+                },
+                {
+                  "shortcut": "`C-x` `)`",
+                  "action": "End keyboard macro definition"
+                },
+                {
+                  "shortcut": "`C-x` `e`",
+                  "action": "Execute last-defined keyboard macro"
+                },
+                {
+                  "shortcut": "`C-u` `C-x` `(`",
+                  "action": "Append to last keyboard macro"
+                },
+                {
+                  "shortcut": "`M-x` name-last-kbd-macro",
+                  "action": "Name last keyboard macro"
+                },
+                {
+                  "shortcut": "`M-x` insert-kbd-macro",
+                  "action": "Insert Lisp definition in buffer"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Buffers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Buffers",
+              "body": "| -           | -                     |\n| ----------- | :-------------------- |\n| `C-x` `b`   | Select another buffer |\n| `C-x` `C-b` | List all buffers      |\n| `C-x` `k`   | Kill a buffer         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-x` `b`",
+                  "action": "Select another buffer"
+                },
+                {
+                  "shortcut": "`C-x` `C-b`",
+                  "action": "List all buffers"
+                },
+                {
+                  "shortcut": "`C-x` `k`",
+                  "action": "Kill a buffer"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Emacs Search",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Regex (common)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Regex (common)",
+              "body": "| -             | -                                            |\n| ------------- | :------------------------------------------- |\n| `.` `(dot)`   | Any single character except a newline        |\n| `*`           | Zero or more repeats                         |\n| `+`           | One or more repeats                          |\n| `?`           | Zero or one repeat                           |\n| `\\`           | Quote special characters                     |\n| `\\c`          | Quote regular expression special character c |\n| `\\|`          | Alternative (“or”)                           |\n| `\\(...\\)`     | Grouping                                     |\n| `\\(:?...\\)`   | Shy grouping                                 |\n| `\\(:NUM...\\)` | Explicit numbered grouping                   |\n| `\\n`          | Same text as nth group                       |\n| `\\b`          | At word break                                |\n| `\\B`          | Not at word break                            |",
+              "footer": "",
+              "spanConfig": "row-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Regex (entry)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Regex (entry)",
+              "body": "| Start | End   | Entity |\n| ----- | ----- | :----- |\n| `^`   | `$`   | Line   |\n| `\\<`  | `\\>`  | Word   |\n| `\\_<` | `\\_>` | Symbol |\n| `\\‘`  | `\\’`  | Buffer |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Regex (conflict)",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Regex (conflict)",
+              "body": "| These   | Others   | class                     |\n| ------- | -------- | :------------------------ |\n| `[...]` | `[^...]` | Explicit set              |\n| `\\w`    | `\\W`     | Word-syntax character     |\n| `\\sc`   | `\\Sc`    | Character with syntax c   |\n| `\\cc`   | `\\Cc`    | Character with category c |\n\n{.show-header}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Incremental Search",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Incremental Search",
+              "body": "| -       | -                                 |\n| ------- | :-------------------------------- |\n| `C-s`   | Search forward                    |\n| `C-r`   | Search backward                   |\n| `C-M-s` | Regular expression search         |\n| `C-M-r` | Reverse regular expression search |\n| `M-p`   | Select previous search string     |\n| `M-n`   | Select next later search string   |\n| `RET`   | Exit incremental search           |\n| `DEL`   | Undo effect of last character     |\n| `C-g`   | Abort current search              |\n\n{.shortcuts}\n\nUse `C-s` or `C-r` again to repeat the search in either direction. If Emacs is still searching, `C-g` cancels only the\npart not matched.",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-s`",
+                  "action": "Search forward"
+                },
+                {
+                  "shortcut": "`C-r`",
+                  "action": "Search backward"
+                },
+                {
+                  "shortcut": "`C-M-s`",
+                  "action": "Regular expression search"
+                },
+                {
+                  "shortcut": "`C-M-r`",
+                  "action": "Reverse regular expression search"
+                },
+                {
+                  "shortcut": "`M-p`",
+                  "action": "Select previous search string"
+                },
+                {
+                  "shortcut": "`M-n`",
+                  "action": "Select next later search string"
+                },
+                {
+                  "shortcut": "`RET`",
+                  "action": "Exit incremental search"
+                },
+                {
+                  "shortcut": "`DEL`",
+                  "action": "Undo effect of last character"
+                },
+                {
+                  "shortcut": "`C-g`",
+                  "action": "Abort current search"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Query Replace",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Query Replace",
+              "body": "| -            | -                                    |\n| ------------ | :----------------------------------- |\n| `M-%`        | Interactively replace a text string  |\n| `M-x` regexp | Using regular expressions            |\n| `SPC` / `y`  | Replace this one, go on to next      |\n| `,`          | Replace this one, don’t move         |\n| `DEL` / `n`  | Skip to next without replacing       |\n| `!`          | Replace all remaining matches        |\n| `^`          | Back up to the previous match        |\n| `RET`        | Exit query-replace                   |\n| `C-r`        | Enter recursive edit (C-M-c to exit) |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`M-%`",
+                  "action": "Interactively replace a text string"
+                },
+                {
+                  "shortcut": "`M-x` regexp",
+                  "action": "Using regular expressions"
+                },
+                {
+                  "shortcut": "`SPC` / `y`",
+                  "action": "Replace this one, go on to next"
+                },
+                {
+                  "shortcut": "`,`",
+                  "action": "Replace this one, don’t move"
+                },
+                {
+                  "shortcut": "`DEL` / `n`",
+                  "action": "Skip to next without replacing"
+                },
+                {
+                  "shortcut": "`!`",
+                  "action": "Replace all remaining matches"
+                },
+                {
+                  "shortcut": "`^`",
+                  "action": "Back up to the previous match"
+                },
+                {
+                  "shortcut": "`RET`",
+                  "action": "Exit query-replace"
+                },
+                {
+                  "shortcut": "`C-r`",
+                  "action": "Enter recursive edit (C-M-c to exit)"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "Misc",
+      "level": 2,
+      "cards": [],
+      "subsections": [
+        {
+          "title": "Shells",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Shells",
+              "body": "| -           | -                                      |\n| ----------- | :------------------------------------- |\n| `M-!`       | Execute a shell command                |\n| `M-&`       | Execute a shell command asynchronously |\n| `M-`        | Run a shell command on the region      |\n| `C-u` `M-`  | Filter region through a shell command  |\n| `M-x` shell | Start a shell in window shell          |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`M-!`",
+                  "action": "Execute a shell command"
+                },
+                {
+                  "shortcut": "`M-&`",
+                  "action": "Execute a shell command asynchronously"
+                },
+                {
+                  "shortcut": "`M-`",
+                  "action": "Run a shell command on the region"
+                },
+                {
+                  "shortcut": "`C-u` `M-`",
+                  "action": "Filter region through a shell command"
+                },
+                {
+                  "shortcut": "`M-x` shell",
+                  "action": "Start a shell in window shell"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "International Character Sets",
+          "level": 3,
+          "cards": [
+            {
+              "title": "International Character Sets",
+              "body": "| -                          | -                                  |\n| -------------------------- | :--------------------------------- |\n| `C-x` `RET` `l`            | specify principal language         |\n| `M-x` list-input-methods   | show all input methods             |\n| `C-\\`                      | enable or disable input method     |\n| `C-x` `RET` `c`            | set coding system for next command |\n| `M-x` list-coding-systems  | show all coding systems            |\n| `M-x` prefer-coding-system | choose preferred coding system     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-x` `RET` `l`",
+                  "action": "specify principal language"
+                },
+                {
+                  "shortcut": "`M-x` list-input-methods",
+                  "action": "show all input methods"
+                },
+                {
+                  "shortcut": "`C-\\`",
+                  "action": "enable or disable input method"
+                },
+                {
+                  "shortcut": "`C-x` `RET` `c`",
+                  "action": "set coding system for next command"
+                },
+                {
+                  "shortcut": "`M-x` list-coding-systems",
+                  "action": "show all coding systems"
+                },
+                {
+                  "shortcut": "`M-x` prefer-coding-system",
+                  "action": "choose preferred coding system"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Registers",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Registers",
+              "body": "| -               | -                                    |\n| --------------- | :----------------------------------- |\n| `C-x` `r` `s`   | Save region in register              |\n| `C-x` `r` `i`   | Insert register contents into buffer |\n| `C-x` `r` `SPC` | Save value of point in register      |\n| `C-x` `r` `j`   | Jump to point saved in register      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-x` `r` `s`",
+                  "action": "Save region in register"
+                },
+                {
+                  "shortcut": "`C-x` `r` `i`",
+                  "action": "Insert register contents into buffer"
+                },
+                {
+                  "shortcut": "`C-x` `r` `SPC`",
+                  "action": "Save value of point in register"
+                },
+                {
+                  "shortcut": "`C-x` `r` `j`",
+                  "action": "Jump to point saved in register"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Miscellaneous",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Miscellaneous",
+              "body": "| -          | -                 |\n| ---------- | :---------------- |\n| `C-u` num  | Numeric argument  |\n| `M--`      | Negative argument |\n| `C-q` char | Quoted insert     |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-u` num",
+                  "action": "Numeric argument"
+                },
+                {
+                  "shortcut": "`M--`",
+                  "action": "Negative argument"
+                },
+                {
+                  "shortcut": "`C-q` char",
+                  "action": "Quoted insert"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Commands Dealing with Emacs Lisp",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Commands Dealing with Emacs Lisp",
+              "body": "| -                  | -                                  |\n| ------------------ | :--------------------------------- |\n| `C-x` `C-e`        | Eval sexp before point             |\n| `C-M-x`            | Eval current defun                 |\n| `M-x` eval-region  | Eval region                        |\n| `M-:`              | Read and eval minibuffer           |\n| `M-x` load-library | Load a Lisp library from load-path |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-x` `C-e`",
+                  "action": "Eval sexp before point"
+                },
+                {
+                  "shortcut": "`C-M-x`",
+                  "action": "Eval current defun"
+                },
+                {
+                  "shortcut": "`M-x` eval-region",
+                  "action": "Eval region"
+                },
+                {
+                  "shortcut": "`M-:`",
+                  "action": "Read and eval minibuffer"
+                },
+                {
+                  "shortcut": "`M-x` load-library",
+                  "action": "Load a Lisp library from load-path"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Simple Customization",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Simple Customization",
+              "body": "",
+              "footer": "| -                 | -                             |\n| ----------------- | :---------------------------- |\n| `M-x` `customize` | customize variables and faces |\n\nMaking global key bindings in Emacs Lisp:\n\n```{.wrap}\n(global-set-key (kbd \"C-c g\") ’search-forward)\n(global-set-key (kbd \"M-#\") ’query-replace-regexp)\n```",
+              "spanConfig": "",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Abbrevs",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Abbrevs",
+              "body": "| -                 | -                                        |\n| ----------------- | :--------------------------------------- |\n| `C-x` `a` `g`     | Add global abbrev                        |\n| `C-x` `a` `l`     | Add mode-local abbrev                    |\n| `C-x` `a` `i` `g` | Add global expansion for this abbrev     |\n| `C-x` `a` `i` `l` | Add mode-local expansion for this abbrev |\n| `C-x` `a` `e`     | Explicitly expand abbrev                 |\n| `M-/`             | Expand previous word dynamically         |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`C-x` `a` `g`",
+                  "action": "Add global abbrev"
+                },
+                {
+                  "shortcut": "`C-x` `a` `l`",
+                  "action": "Add mode-local abbrev"
+                },
+                {
+                  "shortcut": "`C-x` `a` `i` `g`",
+                  "action": "Add global expansion for this abbrev"
+                },
+                {
+                  "shortcut": "`C-x` `a` `i` `l`",
+                  "action": "Add mode-local expansion for this abbrev"
+                },
+                {
+                  "shortcut": "`C-x` `a` `e`",
+                  "action": "Explicitly expand abbrev"
+                },
+                {
+                  "shortcut": "`M-/`",
+                  "action": "Expand previous word dynamically"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Spelling Check",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Spelling Check",
+              "body": "| -                   | -                                     |\n| ------------------- | :------------------------------------ |\n| `M-$`               | Check spelling of current word        |\n| `M-x` ispell-region | Check spelling of all words in region |\n| `M-x` ispell-buffer | Check spelling of entire buffer       |\n| `M-x` flyspell-mode | Toggle on-the-fly spell checking      |\n\n{.shortcuts}",
+              "footer": "",
+              "spanConfig": "",
+              "isShortcutsCard": true,
+              "shortcuts": [
+                {
+                  "shortcut": "-",
+                  "action": "-"
+                },
+                {
+                  "shortcut": "`M-$`",
+                  "action": "Check spelling of current word"
+                },
+                {
+                  "shortcut": "`M-x` ispell-region",
+                  "action": "Check spelling of all words in region"
+                },
+                {
+                  "shortcut": "`M-x` ispell-buffer",
+                  "action": "Check spelling of entire buffer"
+                },
+                {
+                  "shortcut": "`M-x` flyspell-mode",
+                  "action": "Toggle on-the-fly spell checking"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Writing Commands",
+          "level": 3,
+          "cards": [
+            {
+              "title": "Writing Commands",
+              "body": "",
+              "footer": "#### Syntax\n\n```lisp\n(defun command-name (args)\n\"documentation\" (interactive \"template\")\nbody)\n```\n\n#### Example\n\n```lisp\n(defun this-line-to-top-of-window (line)\n    \"Reposition current line to top of window.\nWith prefix argument LINE, put point on LINE.\"\n    (interactive \"P\")\n    (recenter (if (null line)\n                  0\n              (prefix-numeric-value line))))\n```\n\nThe interactive spec says how to read arguments interactively. Type `C-h` `f` interactive `RET` for more details.",
+              "spanConfig": "col-span-2",
+              "isShortcutsCard": false
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ]
+}
