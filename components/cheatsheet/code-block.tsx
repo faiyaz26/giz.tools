@@ -85,7 +85,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({ code, language }) => {
           customStyle={{
             fontSize: "13px",
             lineHeight: "1.4",
-            padding: "16px",
+            padding: "8px",
             margin: 0,
           }}
         >

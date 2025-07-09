@@ -27,7 +27,7 @@ export const ShortcutsCard: React.FC<ShortcutsCardProps> = ({
   return (
     <Card
       className={cn(
-        "bg-card border-border h-fit overflow-hidden transition-all duration-200 hover:shadow-md hover:shadow-primary/20",
+        "bg-white dark:bg-slate-800 border-gray-200 dark:border-gray-700 h-full overflow-hidden transition-all duration-200 hover:shadow-md hover:shadow-primary/20 flex flex-col",
         spanConfig?.className
       )}
       style={{
@@ -35,13 +35,13 @@ export const ShortcutsCard: React.FC<ShortcutsCardProps> = ({
         gridRow: spanConfig?.gridRow,
       }}
     >
-      <CardHeader className="bg-card/50 border-b border-border pb-3">
-        <CardTitle className="text-card-foreground text-lg flex items-center gap-2">
+      <CardHeader className="bg-gray-50 dark:bg-slate-700/50 border-b border-gray-200 dark:border-gray-700 pb-3">
+        <CardTitle className="text-gray-900 dark:text-white text-lg flex items-center gap-2">
           <Command className="h-4 w-4 text-blue-500 dark:text-blue-400" />
           {card.title}
         </CardTitle>
       </CardHeader>
-      <CardContent className="pt-4">
+      <CardContent className="pt-4 flex-1">
         <div className="space-y-2">
           {card.shortcuts.map((shortcut, index) => (
             <div

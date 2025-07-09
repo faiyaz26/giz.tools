@@ -22,12 +22,15 @@ interface DynamicCheatsheetPageProps {
 export const DynamicCheatsheetPage: React.FC<DynamicCheatsheetPageProps> = ({ cheatsheetId }) => {
   const router = useRouter();
   const [cheatsheet, setCheatsheet] = useState<CheatsheetData | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [activeSection, setActiveSection] = useState('');
 
   // Load cheatsheet data
   useEffect(() => {
+    setIsLoading(true);
     const loadedCheatsheet = getCheatsheetById(cheatsheetId);
     setCheatsheet(loadedCheatsheet);
+    setIsLoading(false);
     
     if (loadedCheatsheet && loadedCheatsheet.sections.length > 0) {
       const firstSectionId = loadedCheatsheet.sections[0].title
@@ -92,7 +95,19 @@ export const DynamicCheatsheetPage: React.FC<DynamicCheatsheetPageProps> = ({ ch
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection, router, cheatsheet, cheatsheetId]);
 
-  // If the cheatsheet is not found, show an error message
+  // Show loading state while data is being loaded
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Loading cheatsheet...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // If the cheatsheet is not found after loading, show an error message
   if (!cheatsheet) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex items-center justify-center">
@@ -130,12 +145,12 @@ export const DynamicCheatsheetPage: React.FC<DynamicCheatsheetPageProps> = ({ ch
               {(() => {
                 const isTwoColumnSection = section.title.includes('{.cols-2}');
                 const gridClass = isTwoColumnSection 
-                  ? "grid grid-cols-1 lg:grid-cols-2 gap-6 auto-rows-auto"
-                  : "grid grid-cols-1 xl:grid-cols-3 gap-6 auto-rows-auto";
+                  ? "grid grid-cols-1 lg:grid-cols-2 gap-2"
+                  : "grid grid-cols-1 xl:grid-cols-3 gap-2";
                 
                 return (
                   <div className={gridClass}
-                       style={{ gridAutoRows: 'minmax(200px, auto)' }}>
+                       style={{ gridAutoRows: 'auto' }}>
                     {(() => {
                       // Combine section-level cards and subsection cards
                       const allCards = [
