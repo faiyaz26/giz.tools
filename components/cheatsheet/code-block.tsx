@@ -60,41 +60,33 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({ code, language }) => {
 
   return (
     <div className="relative group rounded-lg overflow-hidden border border-border bg-muted/30">
-      <div className="flex items-center justify-between px-4 py-2 bg-muted/50 border-b border-border">
-        <span className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-          {language || "code"}
-        </span>
-        <div className="flex items-center gap-2">
-          <Button
-            size="sm"
-            variant="ghost"
-            onClick={copyCode}
-            className="h-7 px-2 text-xs opacity-70 hover:opacity-100 transition-opacity"
-          >
-            {copied ? (
-              <>
-                <Check className="w-3 h-3 mr-1" />
-                Copied!
-              </>
-            ) : (
-              <>
-                <Copy className="w-3 h-3 mr-1" />
-                Copy
-              </>
-            )}
-          </Button>
-        </div>
-      </div>
+      {/* Copy button positioned in top right */}
+      <Button
+        size="sm"
+        variant="ghost"
+        onClick={copyCode}
+        className="absolute top-2 right-2 z-10 h-8 px-3 text-xs opacity-0 group-hover:opacity-100 transition-opacity bg-background/80 backdrop-blur-sm border border-border/50 hover:bg-background"
+      >
+        {copied ? (
+          <>
+            <Check className="w-3 h-3 mr-1" />
+            Copied!
+          </>
+        ) : (
+          <>
+            <Copy className="w-3 h-3 mr-1" />
+            Copy
+          </>
+        )}
+      </Button>
       <div className="overflow-x-auto">
         <ClientOnlySyntaxHighlighter
           language={mappedLanguage}
-          showLineNumbers={code.split("\n").length > 3}
           customStyle={{
             fontSize: "13px",
             lineHeight: "1.4",
             padding: "16px",
             margin: 0,
-            background: "transparent",
           }}
         >
           {code}

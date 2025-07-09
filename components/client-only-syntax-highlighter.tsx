@@ -51,21 +51,21 @@ export function ClientOnlySyntaxHighlighter({
     );
   }
 
-  // Client-side render with proper styling
-  const baseTheme = theme === "dark" ? vscDarkPlus : vs;
+  // Client-side render with proper styling - default to dark theme
+  const baseTheme = theme !== "light" ? vscDarkPlus : vs;
 
   // Override background colors to match the rest of the site
   const modifiedTheme = {
     ...baseTheme,
     'pre[class*="language-"]': {
       ...baseTheme['pre[class*="language-"]'],
-      background: theme === "dark" ? "#0f172a" : "#ffffff", // Dark: slate-900, Light: white
-      color: theme === "dark" ? "#d4d4d4" : "#393a34", // Text colors that match the site theme
+      background: theme !== "light" ? "#0f172a" : "#ffffff", // Default dark, light only when explicitly set
+      color: theme !== "light" ? "#d4d4d4" : "#393a34", // Text colors that match the site theme
     },
     'code[class*="language-"]': {
       ...baseTheme['code[class*="language-"]'],
       background: "transparent",
-      color: theme === "dark" ? "#d4d4d4" : "#393a34",
+      color: theme !== "light" ? "#d4d4d4" : "#393a34",
     },
   };
 
@@ -75,8 +75,8 @@ export function ClientOnlySyntaxHighlighter({
       style={modifiedTheme}
       customStyle={{
         ...customStyle,
-        background: theme === "dark" ? "#0f172a" : "#ffffff",
-        border: theme === "dark" ? "1px solid #334155" : "1px solid #e2e8f0",
+        background: theme !== "light" ? "#0f172a" : "#ffffff",
+        border: theme !== "light" ? "1px solid #334155" : "1px solid #e2e8f0",
       }}
       showLineNumbers={showLineNumbers}
       wrapLongLines={wrapLongLines}
