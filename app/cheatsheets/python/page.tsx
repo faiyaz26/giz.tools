@@ -504,9 +504,9 @@ export default function PythonCheatsheetPage() {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 mb-4">
-            # {pythonCheatsheet.metadata.title}
+        <div className="text-center mb-20">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 mb-6">
+            {pythonCheatsheet.metadata.title}
           </h1>
           <div className="text-xl text-muted-foreground max-w-3xl mx-auto prose prose-neutral dark:prose-invert prose-xl">
             <ReactMarkdown
