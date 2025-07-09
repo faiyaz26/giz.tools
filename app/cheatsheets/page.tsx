@@ -78,6 +78,14 @@ export default function CheatsheetIndexPage() {
   const [availableCheatsheets, setAvailableCheatsheets] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // Scroll to top when component mounts, unless there's a hash
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, []);
+
   // Load cheatsheets on component mount
   useEffect(() => {
     loadCheatsheetsIndex()

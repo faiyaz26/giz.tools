@@ -26,6 +26,14 @@ export const DynamicCheatsheetPage: React.FC<DynamicCheatsheetPageProps> = ({ ch
   const [notFound, setNotFound] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
+  // Scroll to top when component mounts or cheatsheetId changes, unless there's a hash
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [cheatsheetId]);
+
   // Load cheatsheet data
   useEffect(() => {
     const loadCheatsheetData = async () => {
@@ -70,20 +78,22 @@ export const DynamicCheatsheetPage: React.FC<DynamicCheatsheetPageProps> = ({ ch
     }
   };
   
-  // Initialize from URL hash on component mount
+  // Initialize from URL hash on component mount and when cheatsheet data loads
   useEffect(() => {
+    if (!cheatsheet) return;
+    
     const hash = window.location.hash.slice(1); // Remove the '#'
     if (hash) {
-      const element = document.getElementById(hash);
-      if (element) {
-        setActiveSection(hash);
-        // Small delay to ensure the page is rendered
-        setTimeout(() => {
+      setActiveSection(hash);
+      // Small delay to ensure the page is rendered
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      }
+        }
+      }, 200);
     }
-  }, []);
+  }, [cheatsheet]); // Depend on cheatsheet data being loaded
   
   // Update active section based on scroll position
   useEffect(() => {
