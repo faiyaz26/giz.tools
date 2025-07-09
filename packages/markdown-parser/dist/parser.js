@@ -6,10 +6,10 @@ import * as yaml from "js-yaml";
  */
 export class MarkdownParser {
     constructor() {
-        this.yamlPattern = /^---\n(.*?)\n---\n/ms;
+        this.yamlPattern = new RegExp("^---\\n([\\s\\S]*?)\\n---\\n", "m");
         this.h2Pattern = /^## (.+)$/gm;
         this.h3Pattern = /^### (.+?)(\s*\{[^}]+\})?\s*$/gm;
-        this.codeBlockPattern = /```(\w+)?\n(.*?)\n```/gs;
+        this.codeBlockPattern = new RegExp("```(\\w+)?\\n([\\s\\S]*?)\\n```", "g");
     }
     /**
      * Parse a markdown file and return structured data
@@ -43,8 +43,10 @@ export class MarkdownParser {
         const contentWithoutYaml = this.yamlPattern.test(content)
             ? content.replace(this.yamlPattern, "")
             : content;
+        // Clean and normalize content
+        const cleanedContent = this.cleanMarkdownContent(contentWithoutYaml);
         // Parse sections
-        const sections = this.parseSections(contentWithoutYaml, {
+        const sections = this.parseSections(cleanedContent, {
             preserveCodeBlocks,
             extractSpanConfig,
         });
@@ -130,22 +132,82 @@ export class MarkdownParser {
         return subsections;
     }
     /**
-     * Parse cards from section content
+     * Parse cards from section content with enhanced subsection handling
      */
     parseCards(content, sectionTitle, spanClass, options) {
         const cards = [];
-        // Split content into potential cards
-        const parts = this.splitContentIntoParts(content, options);
-        if (parts.code || parts.footer) {
+        // Clean the content first
+        const cleanedContent = this.cleanMarkdownContent(content);
+        // Check if content has #### subsections
+        const h4Pattern = /^#### (.+)$/gm;
+        const h4Matches = Array.from(cleanedContent.matchAll(h4Pattern));
+        if (h4Matches.length > 0) {
+            // Content has subsections - parse with enhanced structure
+            const parts = this.parseEnhancedContent(cleanedContent, options);
             const card = {
                 title: sectionTitle,
-                body: parts.code,
+                body: parts.body,
                 footer: parts.footer,
                 spanConfig: spanClass,
             };
             cards.push(card);
         }
+        else {
+            // No subsections - use original parsing
+            const parts = this.splitContentIntoParts(cleanedContent, options);
+            if (parts.code || parts.footer) {
+                const card = {
+                    title: sectionTitle,
+                    body: parts.code,
+                    footer: parts.footer,
+                    spanConfig: spanClass,
+                };
+                cards.push(card);
+            }
+        }
         return cards;
+    }
+    /**
+     * Parse content with enhanced subsection structure
+     */
+    parseEnhancedContent(content, options) {
+        const h4Pattern = /^#### (.+)$/gm;
+        const h4Matches = Array.from(content.matchAll(h4Pattern));
+        if (h4Matches.length === 0) {
+            // No subsections, use original parsing
+            const parts = this.splitContentIntoParts(content, options);
+            return { body: parts.code, footer: parts.footer };
+        }
+        // Find content before first #### (this becomes the body)
+        const firstH4Index = h4Matches[0].index;
+        const beforeH4 = content.slice(0, firstH4Index).trim();
+        // Everything from first #### onwards becomes the footer
+        const afterH4 = content.slice(firstH4Index).trim();
+        // Parse the body part (content before first ####)
+        let body = "";
+        if (beforeH4) {
+            const bodyParts = this.splitContentIntoParts(beforeH4, options);
+            // Combine any text and code in the body section
+            const bodyText = beforeH4.replace(/```[\w]*\n[\s\S]*?\n```/g, "").trim();
+            const bodyCode = bodyParts.code;
+            if (bodyText && bodyCode) {
+                body = options.preserveCodeBlocks
+                    ? `${bodyText}\n\n${bodyCode}`
+                    : `${bodyText}\n\n\`\`\`\n${bodyCode}\n\`\`\``;
+            }
+            else if (bodyCode) {
+                body = options.preserveCodeBlocks
+                    ? bodyCode
+                    : `\`\`\`\n${bodyCode}\n\`\`\``;
+            }
+            else if (bodyText) {
+                body = bodyText;
+            }
+        }
+        return {
+            body: body,
+            footer: afterH4,
+        };
     }
     /**
      * Split content into code blocks and text parts
@@ -155,8 +217,10 @@ export class MarkdownParser {
             code: "",
             footer: "",
         };
+        // Clean the content first
+        const cleanedContent = this.cleanMarkdownContent(content);
         // Find code blocks
-        const codeBlocks = Array.from(content.matchAll(this.codeBlockPattern));
+        const codeBlocks = Array.from(cleanedContent.matchAll(this.codeBlockPattern));
         if (codeBlocks.length > 0) {
             // Get the first code block as the main content
             const firstCodeBlock = codeBlocks[0];
@@ -173,7 +237,7 @@ export class MarkdownParser {
             }
             // Get text after the code block as footer
             const afterCodeIndex = firstCodeBlock.index + firstCodeBlock[0].length;
-            const afterCode = content.slice(afterCodeIndex).trim();
+            const afterCode = cleanedContent.slice(afterCodeIndex).trim();
             if (afterCode) {
                 // Clean up the footer text
                 const footerLines = afterCode
@@ -185,12 +249,40 @@ export class MarkdownParser {
         }
         else {
             // No code blocks, treat all content as footer
-            const cleanContent = content.trim();
+            const cleanContent = cleanedContent.trim();
             if (cleanContent) {
                 parts.footer = cleanContent;
             }
         }
         return parts;
+    }
+    /**
+     * Clean up markdown content to fix common parsing issues
+     */
+    cleanMarkdownContent(content) {
+        // Remove standalone horizontal rules at the beginning of content
+        let cleaned = content.replace(/^---\s*\n\n/gm, "");
+        // Remove standalone horizontal rules throughout the content
+        // This removes lines that are just --- or *** (horizontal rules)
+        // but preserves table separator lines (which are part of table structure)
+        cleaned = cleaned.replace(/^(\*{3,}|-{3,}|_{3,})\s*$/gm, (match, separator, offset, string) => {
+            // Check if this horizontal rule is part of a table
+            const beforeMatch = string.substring(0, offset);
+            const afterMatch = string.substring(offset + match.length);
+            // Look for table markers (|) in nearby lines
+            const linesBefore = beforeMatch.split("\n").slice(-3);
+            const linesAfter = afterMatch.split("\n").slice(0, 3);
+            const hasTableMarkers = [...linesBefore, ...linesAfter].some((line) => line.trim().includes("|") && !line.trim().startsWith("#"));
+            // If surrounded by table content, keep the separator
+            if (hasTableMarkers && separator.startsWith("-")) {
+                return match;
+            }
+            // Otherwise, remove the horizontal rule
+            return "";
+        });
+        // Clean up excessive whitespace
+        cleaned = cleaned.replace(/\n{3,}/g, "\n\n");
+        return cleaned.trim();
     }
     /**
      * Convert parsed document to JSON string

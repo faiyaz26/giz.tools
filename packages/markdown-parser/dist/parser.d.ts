@@ -30,13 +30,21 @@ export declare class MarkdownParser {
      */
     private parseH3Sections;
     /**
-     * Parse cards from section content
+     * Parse cards from section content with enhanced subsection handling
      */
     private parseCards;
+    /**
+     * Parse content with enhanced subsection structure
+     */
+    private parseEnhancedContent;
     /**
      * Split content into code blocks and text parts
      */
     private splitContentIntoParts;
+    /**
+     * Clean up markdown content to fix common parsing issues
+     */
+    private cleanMarkdownContent;
     /**
      * Convert parsed document to JSON string
      */
