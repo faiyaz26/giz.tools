@@ -53,5 +53,9 @@ export declare class MarkdownParser {
      * Parse multiple files in batch
      */
     parseFiles(filePaths: string[], options?: ParserOptions): Promise<ParseResult[]>;
+    /**
+     * Parse keyboard shortcuts from markdown table content
+     */
+    private parseShortcutsFromContent;
 }
 //# sourceMappingURL=parser.d.ts.map

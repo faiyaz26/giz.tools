@@ -1,11 +1,17 @@
 /**
  * Core types for the markdown parser
  */
+export interface KeyboardShortcut {
+    shortcut: string;
+    action: string;
+}
 export interface Card {
     title: string;
     body: string;
     footer: string;
     spanConfig: string;
+    shortcuts?: KeyboardShortcut[];
+    isShortcutsCard?: boolean;
 }
 export interface Section {
     title: string;

@@ -3,6 +3,11 @@ import path from "path";
 import pythonCheatsheetData from "./python-cheatsheet.json";
 
 // Type definitions for the parsed cheatsheet data
+export interface KeyboardShortcut {
+  shortcut: string;
+  action: string;
+}
+
 export interface CheatsheetCardSubsection {
   title: string;
   content: string;
@@ -15,6 +20,8 @@ export interface CheatsheetCard {
   footer: string;
   spanConfig: string;
   subsections?: CheatsheetCardSubsection[];
+  shortcuts?: KeyboardShortcut[]; // For keyboard shortcut tables
+  isShortcutsCard?: boolean; // Flag to identify shortcut cards
 }
 
 export interface CheatsheetSubsection {
@@ -38,7 +45,8 @@ export interface CheatsheetMetadata {
   tags: string[];
   categories: string[];
   intro: string;
-  plugins: string[];
+  plugins?: string[];
+  label?: string;
 }
 
 export interface CheatsheetData {
@@ -48,9 +56,18 @@ export interface CheatsheetData {
 
 // Load parsed cheatsheet data
 export function loadCheatsheetData(filename: string): CheatsheetData {
-  // For now, we only support the python cheatsheet
   if (filename === "python-cheatsheet-parsed.json") {
     return pythonCheatsheetData as CheatsheetData;
+  }
+
+  if (filename === "finder-cheatsheet.json") {
+    try {
+      const finderData = require("./finder-cheatsheet.json");
+      return finderData as CheatsheetData;
+    } catch (error) {
+      console.error("Failed to load finder cheatsheet:", error);
+      throw new Error("Finder cheatsheet data not found");
+    }
   }
 
   throw new Error(`Cheatsheet data not found: ${filename}`);

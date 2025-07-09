@@ -8,6 +8,7 @@ import {
   ParsedContent,
   ParserOptions,
   ParseResult,
+  KeyboardShortcut,
 } from "./types.js";
 
 /**
@@ -201,6 +202,10 @@ export class MarkdownParser {
     // Clean the content first
     const cleanedContent = this.cleanMarkdownContent(content);
 
+    // Check if this is a shortcuts section
+    const isShortcutsSection =
+      spanClass === "shortcuts" || content.includes("{.shortcuts}");
+
     // Check if content has #### subsections
     const h4Pattern = /^#### (.+)$/gm;
     const h4Matches = Array.from(cleanedContent.matchAll(h4Pattern));
@@ -214,6 +219,10 @@ export class MarkdownParser {
         body: parts.body,
         footer: parts.footer,
         spanConfig: spanClass,
+        isShortcutsCard: isShortcutsSection,
+        shortcuts: isShortcutsSection
+          ? this.parseShortcutsFromContent(parts.footer || parts.body)
+          : undefined,
       };
       cards.push(card);
     } else {
@@ -226,6 +235,10 @@ export class MarkdownParser {
           body: parts.code,
           footer: parts.footer,
           spanConfig: spanClass,
+          isShortcutsCard: isShortcutsSection,
+          shortcuts: isShortcutsSection
+            ? this.parseShortcutsFromContent(parts.footer || parts.code)
+            : undefined,
         };
         cards.push(card);
       }
@@ -403,5 +416,53 @@ export class MarkdownParser {
       this.parseFile(filePath, options)
     );
     return Promise.all(promises);
+  }
+
+  /**
+   * Parse keyboard shortcuts from markdown table content
+   */
+  private parseShortcutsFromContent(content: string): KeyboardShortcut[] {
+    const shortcuts: KeyboardShortcut[] = [];
+
+    if (!content) return shortcuts;
+
+    // Remove {.shortcuts} class marker
+    const cleanContent = content.replace(/\{\.shortcuts\}/g, "").trim();
+
+    // Split content into lines and find table rows
+    const lines = cleanContent.split("\n");
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+
+      // Skip header line, separator line, and empty lines
+      if (!line || line.startsWith("|") === false || line.includes("---"))
+        continue;
+
+      // Parse table row
+      const cells = line
+        .split("|")
+        .map((cell) => cell.trim())
+        .filter((cell) => cell);
+
+      if (cells.length >= 2) {
+        const shortcut = cells[0];
+        const action = cells[1];
+
+        // Skip header row
+        if (
+          shortcut.toLowerCase().includes("shortcut") &&
+          action.toLowerCase().includes("action")
+        )
+          continue;
+
+        shortcuts.push({
+          shortcut: shortcut,
+          action: action,
+        });
+      }
+    }
+
+    return shortcuts;
   }
 }

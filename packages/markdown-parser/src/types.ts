@@ -2,11 +2,18 @@
  * Core types for the markdown parser
  */
 
+export interface KeyboardShortcut {
+  shortcut: string;
+  action: string;
+}
+
 export interface Card {
   title: string;
   body: string;
   footer: string;
   spanConfig: string; // e.g., "row-span-2", "col-span-2"
+  shortcuts?: KeyboardShortcut[]; // For keyboard shortcut tables
+  isShortcutsCard?: boolean; // Flag to identify shortcut cards
 }
 
 export interface Section {
