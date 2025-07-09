@@ -150,83 +150,102 @@ export default function CheatsheetIndexPage() {
             const IconComponent = sheet.icon;
             const isAvailable = sheet.href !== "#";
 
+            const CardWrapper = ({
+              children,
+            }: {
+              children: React.ReactNode;
+            }) => {
+              if (isAvailable) {
+                return (
+                  <Link href={sheet.href} className="block h-full">
+                    {children}
+                  </Link>
+                );
+              }
+              return <>{children}</>;
+            };
+
             return (
-              <Card
-                key={index}
-                className={cn(
-                  "group relative overflow-hidden border-gray-200 bg-white hover:shadow-xl transition-all duration-300 hover:scale-105 dark:border-slate-800/50 dark:bg-slate-900/50 dark:backdrop-blur-sm",
-                  isAvailable
-                    ? "hover:border-blue-300 hover:shadow-blue-100/50 dark:hover:border-blue-500/50 dark:hover:shadow-lg dark:hover:shadow-blue-500/10"
-                    : "opacity-75"
-                )}
-              >
-                <div
+              <CardWrapper key={index}>
+                <Card
                   className={cn(
-                    "absolute inset-0 bg-gradient-to-br opacity-5 group-hover:opacity-10 transition-opacity",
-                    sheet.color
+                    "group relative overflow-hidden border-gray-200 bg-white hover:shadow-xl transition-all duration-300 hover:scale-105 dark:border-slate-800/50 dark:bg-slate-900/50 dark:backdrop-blur-sm flex flex-col h-full",
+                    isAvailable
+                      ? "hover:border-blue-300 hover:shadow-blue-100/50 dark:hover:border-blue-500/50 dark:hover:shadow-lg dark:hover:shadow-blue-500/10 cursor-pointer"
+                      : "opacity-75"
                   )}
-                />
-                <CardHeader className="relative">
-                  <div className="flex items-center justify-between mb-3">
-                    <div
-                      className={cn(
-                        "p-3 rounded-lg bg-gradient-to-br",
-                        sheet.color
-                      )}
-                    >
-                      <IconComponent className="h-6 w-6 text-white" />
+                >
+                  <div
+                    className={cn(
+                      "absolute inset-0 bg-gradient-to-br opacity-5 group-hover:opacity-10 transition-opacity",
+                      sheet.color
+                    )}
+                  />
+                  <CardHeader className="relative">
+                    <div className="flex items-center justify-between mb-3">
+                      <div
+                        className={cn(
+                          "p-3 rounded-lg bg-gradient-to-br",
+                          sheet.color
+                        )}
+                      >
+                        <IconComponent className="h-6 w-6 text-white" />
+                      </div>
+                      <Badge
+                        variant={isAvailable ? "default" : "secondary"}
+                        className={cn(
+                          isAvailable
+                            ? "bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-600/20 dark:text-blue-400 dark:border-blue-500/30"
+                            : "bg-gray-100 text-gray-600 border-gray-200 dark:bg-slate-700/50 dark:text-slate-400 dark:border-slate-600/30"
+                        )}
+                      >
+                        {sheet.badge}
+                      </Badge>
                     </div>
-                    <Badge
-                      variant={isAvailable ? "default" : "secondary"}
-                      className={cn(
-                        isAvailable
-                          ? "bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-600/20 dark:text-blue-400 dark:border-blue-500/30"
-                          : "bg-gray-100 text-gray-600 border-gray-200 dark:bg-slate-700/50 dark:text-slate-400 dark:border-slate-600/30"
-                      )}
-                    >
-                      {sheet.badge}
-                    </Badge>
-                  </div>
-                  <CardTitle className="text-gray-900 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400">
-                    {sheet.title}
-                  </CardTitle>
-                  <CardDescription className="text-gray-600 line-clamp-2 dark:text-slate-400">
-                    {sheet.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="relative">
-                  <div className="space-y-3 mb-6">
-                    <h4 className="text-sm font-medium text-gray-700 dark:text-slate-300">
-                      Key Topics:
-                    </h4>
-                    <div className="flex flex-wrap gap-1">
-                      {sheet.items
-                        .slice(0, 5)
-                        .map((item: string, itemIndex: number) => (
-                          <Badge
-                            key={itemIndex}
-                            variant="outline"
-                            className="text-xs text-gray-600 border-gray-300 dark:text-slate-400 dark:border-slate-700/50"
-                          >
-                            {item}
-                          </Badge>
-                        ))}
+                    <CardTitle className="text-gray-900 group-hover:text-blue-600 transition-colors dark:text-white dark:group-hover:text-blue-400">
+                      {sheet.title}
+                    </CardTitle>
+                    <CardDescription className="text-gray-600 line-clamp-2 dark:text-slate-400">
+                      {sheet.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="relative flex-1 flex flex-col">
+                    <div className="space-y-3 mb-6 flex-1">
+                      <h4 className="text-sm font-medium text-gray-700 dark:text-slate-300">
+                        Key Topics:
+                      </h4>
+                      <div className="flex flex-wrap gap-1">
+                        {sheet.items
+                          .slice(0, 5)
+                          .map((item: string, itemIndex: number) => (
+                            <Badge
+                              key={itemIndex}
+                              variant="outline"
+                              className="text-xs text-gray-600 border-gray-300 dark:text-slate-400 dark:border-slate-700/50"
+                            >
+                              {item}
+                            </Badge>
+                          ))}
+                      </div>
                     </div>
-                  </div>
-                  {isAvailable ? (
-                    <Link href={sheet.href}>
-                      <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 group">
-                        Explore Cheatsheet
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    {isAvailable ? (
+                      <Button
+                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 group/button mt-auto"
+                        asChild
+                      >
+                        <span>
+                          Explore Cheatsheet
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
+                        </span>
                       </Button>
-                    </Link>
-                  ) : (
-                    <Button disabled className="w-full">
-                      Coming Soon
-                    </Button>
-                  )}
-                </CardContent>
-              </Card>
+                    ) : (
+                      <Button disabled className="w-full mt-auto">
+                        Coming Soon
+                      </Button>
+                    )}
+                  </CardContent>
+                </Card>
+              </CardWrapper>
             );
           })}
         </div>
