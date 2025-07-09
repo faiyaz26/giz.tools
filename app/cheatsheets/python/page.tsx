@@ -2,13 +2,15 @@
 
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Copy, Play, ExternalLink, Check } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { vscDarkPlus, vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -29,6 +31,7 @@ const pythonCheatsheet: CheatsheetData = loadCheatsheetData('python-cheatsheet-p
 
 // Component for rendering code blocks with syntax highlighting
 const CodeBlock = ({ code, language }: { code: string, language: string }) => {
+  const { theme } = useTheme();
   const [copied, setCopied] = useState(false);
 
   const copyCode = async () => {
@@ -68,22 +71,32 @@ const CodeBlock = ({ code, language }: { code: string, language: string }) => {
     return langMap[lang.toLowerCase()] || lang.toLowerCase() || 'text';
   };
 
+  const isDark = theme === 'dark';
+  const baseStyle = isDark ? vscDarkPlus : vs;
+  
   const customStyle = {
-    ...oneDark,
+    ...baseStyle,
     'pre[class*="language-"]': {
-      ...oneDark['pre[class*="language-"]'],
-      background: 'rgb(2 6 23)', // slate-950
+      ...baseStyle['pre[class*="language-"]'],
+      background: isDark ? 'rgb(2 6 23)' : 'rgb(255 255 255)', // slate-950 : white
       margin: 0,
-      padding: '1rem',
+      padding: '0.75rem',
       borderRadius: '0.375rem',
-      fontSize: '0.875rem',
-      lineHeight: '1.25rem',
+      fontSize: '0.8125rem',
+      lineHeight: '1.2rem',
+      whiteSpace: 'pre-wrap' as const,
+      wordBreak: 'break-word' as const,
+      overflowWrap: 'break-word' as const,
+      border: isDark ? '1px solid rgb(51 65 85)' : '1px solid rgb(226 232 240)', // slate-600 : slate-200
     },
     'code[class*="language-"]': {
-      ...oneDark['code[class*="language-"]'],
+      ...baseStyle['code[class*="language-"]'],
       background: 'transparent',
-      fontSize: '0.875rem',
-      lineHeight: '1.25rem',
+      fontSize: '0.8125rem',
+      lineHeight: '1.2rem',
+      whiteSpace: 'pre-wrap' as const,
+      wordBreak: 'break-word' as const,
+      overflowWrap: 'break-word' as const,
     }
   };
 
@@ -93,7 +106,7 @@ const CodeBlock = ({ code, language }: { code: string, language: string }) => {
         language={getLanguage(language)}
         style={customStyle}
         customStyle={{
-          background: 'rgb(2 6 23)',
+          background: isDark ? 'rgb(2 6 23)' : 'rgb(255 255 255)', // slate-950 : white
           margin: 0,
           padding: '1rem',
           borderRadius: '0.375rem',
@@ -110,8 +123,8 @@ const CodeBlock = ({ code, language }: { code: string, language: string }) => {
         className={cn(
           "absolute top-2 right-2 p-2 rounded-md transition-all duration-200",
           copied 
-            ? "bg-green-700 text-green-100" 
-            : "bg-slate-800 text-slate-300 opacity-0 group-hover:opacity-100 hover:bg-slate-700"
+            ? "bg-green-600 text-green-100 dark:bg-green-700 dark:text-green-100" 
+            : "bg-background/80 text-foreground/60 opacity-0 group-hover:opacity-100 hover:bg-background/60 border border-border"
         )}
         aria-label="Copy code"
       >
@@ -127,8 +140,8 @@ const Table = ({ rows }: { rows: { key: string, value: string }[] }) => {
     <div className="grid grid-cols-2 gap-2">
       {rows.map((row, index) => (
         <React.Fragment key={index}>
-          <div className="font-mono text-blue-400">{row.key}</div>
-          <div className="text-slate-200">{row.value}</div>
+          <div className="font-mono text-blue-600 dark:text-blue-400">{row.key}</div>
+          <div className="text-foreground">{row.value}</div>
         </React.Fragment>
       ))}
     </div>
@@ -183,7 +196,7 @@ const MarkdownContent = ({ content }: { content: string }) => {
             // This is inline code
             return (
               <code 
-                className="bg-slate-800 text-blue-300 px-1 py-0.5 rounded text-sm font-mono" 
+                className="bg-muted text-blue-600 dark:text-blue-400 px-1 py-0.5 rounded text-sm font-mono border" 
                 {...props}
               >
                 {children}
@@ -196,7 +209,7 @@ const MarkdownContent = ({ content }: { content: string }) => {
               return (
                 <button
                   onClick={() => handleInternalNavigation(href.slice(1))}
-                  className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit"
+                  className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit"
                 >
                   {children}
                 </button>
@@ -208,7 +221,7 @@ const MarkdownContent = ({ content }: { content: string }) => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 underline inline-flex items-center gap-1"
+                  className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 underline inline-flex items-center gap-1"
                   {...props}
                 >
                   {children}
@@ -221,7 +234,7 @@ const MarkdownContent = ({ content }: { content: string }) => {
             return (
               <div className="overflow-x-auto my-4">
                 <table 
-                  className="border-collapse border border-slate-600 w-full" 
+                  className="border-collapse border border-border w-full" 
                   {...props}
                 >
                   {children}
@@ -290,7 +303,7 @@ const MarkdownContent = ({ content }: { content: string }) => {
           th({ children, ...props }) {
             return (
               <th 
-                className="border border-slate-600 px-3 py-2 bg-slate-700 font-semibold text-left text-slate-200" 
+                className="border border-border px-3 py-2 bg-muted font-semibold text-left text-foreground" 
                 {...props}
               >
                 {children}
@@ -300,7 +313,7 @@ const MarkdownContent = ({ content }: { content: string }) => {
           td({ children, ...props }) {
             return (
               <td 
-                className="border border-slate-600 px-3 py-2 text-slate-300" 
+                className="border border-border px-3 py-2 text-muted-foreground" 
                 {...props}
               >
                 {children}
@@ -309,21 +322,21 @@ const MarkdownContent = ({ content }: { content: string }) => {
           },
           p({ children, ...props }) {
             return (
-              <p className="mb-2 text-slate-300" {...props}>
+              <p className="mb-2 text-foreground" {...props}>
                 {children}
               </p>
             );
           },
           ul({ children, ...props }) {
             return (
-              <ul className="list-disc list-inside mb-2 space-y-1 text-slate-300" {...props}>
+              <ul className="list-disc list-inside mb-2 space-y-1 text-foreground" {...props}>
                 {children}
               </ul>
             );
           },
           ol({ children, ...props }) {
             return (
-              <ol className="list-decimal list-inside mb-2 space-y-1 text-slate-300" {...props}>
+              <ol className="list-decimal list-inside mb-2 space-y-1 text-foreground" {...props}>
                 {children}
               </ol>
             );
@@ -337,14 +350,14 @@ const MarkdownContent = ({ content }: { content: string }) => {
           },
           strong({ children, ...props }) {
             return (
-              <strong className="font-bold text-slate-100" {...props}>
+              <strong className="font-bold text-foreground" {...props}>
                 {children}
               </strong>
             );
           },
           em({ children, ...props }) {
             return (
-              <em className="italic text-slate-200" {...props}>
+              <em className="italic text-muted-foreground" {...props}>
                 {children}
               </em>
             );
@@ -378,8 +391,8 @@ const EnhancedMarkdownContent = ({ content }: { content: string }) => {
           const restContent = lines.slice(1).join('\n').trim();
           
           return (
-            <div key={index} className="border-l-2 border-blue-200 pl-4">
-              <h4 className="font-semibold text-blue-400 mb-2">{title}</h4>
+            <div key={index} className="border-l-2 border-blue-300 dark:border-blue-600 pl-4">
+              <h4 className="font-semibold text-blue-600 dark:text-blue-400 mb-2">{title}</h4>
               {restContent && <MarkdownContent content={restContent} />}
             </div>
           );
@@ -404,14 +417,14 @@ const CheatsheetCard = ({ card, subsection }: { card: CheatsheetCard, subsection
   return (
     <Card 
       className={cn(
-        "bg-slate-800 border-slate-700 overflow-hidden transition-all duration-200 hover:shadow-md hover:shadow-blue-900/20",
+        "bg-card border-border overflow-hidden transition-all duration-200 hover:shadow-md hover:shadow-primary/20",
         spanConfig.className
       )}
       style={gridStyle}
     >
-      <CardHeader className="bg-slate-800/50 border-b border-slate-700 pb-3">
+      <CardHeader className="bg-card/50 border-b border-border pb-3">
         <div className="flex justify-between items-center">
-          <CardTitle className="text-slate-100 text-lg">{card.title}</CardTitle>
+          <CardTitle className="text-card-foreground text-lg">{card.title}</CardTitle>
         </div>
       </CardHeader>
       <CardContent className="pt-4 space-y-4">
@@ -420,7 +433,7 @@ const CheatsheetCard = ({ card, subsection }: { card: CheatsheetCard, subsection
         )}
         
         {card.footer && (
-          <div className="border-t border-slate-700 pt-4">
+          <div className="border-t border-border pt-4">
             <EnhancedMarkdownContent content={card.footer} />
           </div>
         )}
@@ -430,9 +443,36 @@ const CheatsheetCard = ({ card, subsection }: { card: CheatsheetCard, subsection
 };
 
 export default function PythonCheatsheetPage() {
+  const router = useRouter();
   const [activeSection, setActiveSection] = useState(
     pythonCheatsheet.sections[0]?.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || ''
   );
+  
+  // Function to navigate to a section and update URL
+  const navigateToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(sectionId);
+      // Update URL with hash
+      router.replace(`/cheatsheets/python#${sectionId}`, { scroll: false });
+    }
+  };
+  
+  // Initialize from URL hash on component mount
+  useEffect(() => {
+    const hash = window.location.hash.slice(1); // Remove the '#'
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        setActiveSection(hash);
+        // Small delay to ensure the page is rendered
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, []);
   
   // Update active section based on scroll position
   useEffect(() => {
@@ -445,7 +485,11 @@ export default function PythonCheatsheetPage() {
         if (section) {
           const rect = section.getBoundingClientRect();
           if (rect.top <= 100) {
-            setActiveSection(sectionId);
+            if (activeSection !== sectionId) {
+              setActiveSection(sectionId);
+              // Update URL when scrolling to a new section
+              router.replace(`/cheatsheets/python#${sectionId}`, { scroll: false });
+            }
             break;
           }
         }
@@ -454,22 +498,50 @@ export default function PythonCheatsheetPage() {
     
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [activeSection, router]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 pb-24">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 mb-4">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 mb-4">
             # {pythonCheatsheet.metadata.title}
           </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            {pythonCheatsheet.metadata.intro}
-          </p>
+          <div className="text-xl text-muted-foreground max-w-3xl mx-auto prose prose-neutral dark:prose-invert prose-xl">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                p({ children, ...props }) {
+                  return (
+                    <p className="mb-2 text-muted-foreground text-xl" {...props}>
+                      {children}
+                    </p>
+                  );
+                },
+                a({ href, children, ...props }) {
+                  // External links
+                  return (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 underline inline-flex items-center gap-1"
+                      {...props}
+                    >
+                      {children}
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  );
+                }
+              }}
+            >
+              {pythonCheatsheet.metadata.intro}
+            </ReactMarkdown>
+          </div>
           <div className="flex justify-center gap-2 mt-4">
             {pythonCheatsheet.metadata.tags.map((tag) => (
-              <Badge key={tag} variant="outline" className="bg-blue-900/30 text-blue-300 border-blue-800">
+              <Badge key={tag} variant="outline" className="bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800">
                 {tag}
               </Badge>
             ))}
@@ -483,12 +555,15 @@ export default function PythonCheatsheetPage() {
             
             return (
               <section key={sectionId} id={sectionId} className="scroll-mt-20">
-                <h2 className="text-3xl font-bold text-indigo-400 mb-6 flex items-center">
+                <h2 
+                  className="text-3xl font-bold text-blue-600 dark:text-indigo-400 mb-6 flex items-center cursor-pointer hover:text-blue-500 dark:hover:text-indigo-300 transition-colors"
+                  onClick={() => navigateToSection(sectionId)}
+                >
                   # {section.title}
                 </h2>
                 
                 {/* Grid for subsection cards - responsive grid that adapts to span configs */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto"
+                <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 auto-rows-auto"
                      style={{ gridAutoRows: 'minmax(200px, auto)' }}>
                   {section.subsections.map((subsection, subsectionIndex) => (
                     subsection.cards.map((card, cardIndex) => (
@@ -509,7 +584,7 @@ export default function PythonCheatsheetPage() {
         <FloatingNavBar 
           sections={pythonCheatsheet.sections}
           activeSection={activeSection}
-          setActiveSection={setActiveSection}
+          setActiveSection={navigateToSection}
         />
       </div>
     </div>
